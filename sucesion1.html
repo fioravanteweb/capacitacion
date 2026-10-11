@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>El proceso sucesorio en simple: arts. 2335 a 2362 del CCyC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F5F6FA;--surface:#fff;--ink:#1B2236;--muted:#58627D;--line:#DEE3EF;
+--a:#3D4FD9;--at:#E9ECFD;--ad:#2A39B0;--b:#08806F;--bt:#DDF3EE;--bd:#05604F;--c:#C42A62;--ct:#FCE5ED;--cd:#9C1F4C;--on:#fff;
+--fd:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;--fb:"Public Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);box-sizing:border-box}
+:root[data-theme="dark"]{--paper:#0F1424;--surface:#171E36;--ink:#E9EDF9;--muted:#A8B1CB;--line:#28314F;--a:#97A3FF;--at:#1F2757;--ad:#B9C1FF;--b:#4DD6BE;--bt:#0F3B36;--bd:#8FE8D6;--c:#FF86AB;--ct:#4A1A2F;--cd:#FFB0C8;--on:#0F1424}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#0F1424;--surface:#171E36;--ink:#E9EDF9;--muted:#A8B1CB;--line:#28314F;--a:#97A3FF;--at:#1F2757;--ad:#B9C1FF;--b:#4DD6BE;--bt:#0F3B36;--bd:#8FE8D6;--c:#FF86AB;--ct:#4A1A2F;--cd:#FFB0C8;--on:#0F1424}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px;height:auto}
+body{margin:0;background:var(--paper);color:var(--ink);font:1.0625rem/1.65 var(--fb);-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--fd);margin:0;line-height:1.12;letter-spacing:-.02em;text-wrap:balance}
+p{margin:0 0 1em}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--paper);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;gap:6px;align-items:center;overflow-x:auto;padding-top:9px;padding-bottom:9px;scrollbar-width:none}
+.brand{font:800 1.05rem var(--fd);margin-right:12px;white-space:nowrap}
+.top a{padding:7px 12px;border-radius:99px;color:var(--muted);text-decoration:none;font-weight:600;font-size:.9rem;white-space:nowrap}
+.top a:hover{background:var(--surface);color:var(--ink)}
+.hero{padding:56px 0 64px}
+.kicker{color:var(--muted);font-weight:500;font-size:.95rem;margin:0 0 18px}
+h1{font-weight:800;font-size:clamp(2.4rem,6vw,4.2rem);line-height:1;letter-spacing:-.03em;max-width:16ch;margin-bottom:22px}
+.lead{font-size:1.2rem;color:var(--muted);max-width:56ch}.lead strong{color:var(--ink)}
+.chev{list-style:none;margin:40px 0 0;padding:0;display:grid;grid-template-columns:repeat(6,1fr);gap:0}
+.chev li{padding:18px 14px 18px 22px;background:var(--bg);color:var(--fg);clip-path:polygon(0 0,calc(100% - 14px) 0,100% 50%,calc(100% - 14px) 100%,0 100%,14px 50%);margin-left:-6px;font-size:.88rem;line-height:1.3}
+.chev li:first-child{margin-left:0;clip-path:polygon(0 0,calc(100% - 14px) 0,100% 50%,calc(100% - 14px) 100%,0 100%)}
+.chev b{display:block;font:800 1.5rem var(--fd)}
+.chev a{color:inherit;text-decoration:none}
+.s1{--bg:var(--at);--fg:var(--ad)}.s2{--bg:var(--bt);--fg:var(--bd)}.s3{--bg:var(--ct);--fg:var(--cd)}
+.band{padding:76px 0;border-top:1px solid var(--line)}
+.band:nth-of-type(even){background:var(--surface)}
+.band.s1{--m:var(--a);--mt:var(--at);--md:var(--ad)}.band.s2{--m:var(--b);--mt:var(--bt);--md:var(--bd)}.band.s3{--m:var(--c);--mt:var(--ct);--md:var(--cd)}
+.num{display:inline-flex;align-items:center;gap:10px;font-weight:700;color:var(--md);background:var(--mt);padding:5px 14px;border-radius:99px;font-size:.88rem;margin-bottom:16px}
+h2{font-weight:800;font-size:clamp(1.8rem,3.6vw,2.6rem);margin-bottom:12px;max-width:22ch}
+.sub{color:var(--muted);max-width:62ch;margin-bottom:30px;font-size:1.08rem}
+h3{font-size:1.2rem;font-weight:700;margin-bottom:8px}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px;border-top:5px solid var(--m)}
+.band:nth-of-type(even) .card{background:var(--paper)}
+.card p{color:var(--muted);margin:0;font-size:.98rem}
+.law{display:inline-block;margin-top:12px;font-size:.82rem;font-weight:700;color:var(--md);background:var(--mt);padding:2px 10px;border-radius:99px}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:12px;counter-reset:s}
+.steps li{counter-increment:s;display:grid;grid-template-columns:42px 1fr;gap:14px;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px 18px}
+.band:nth-of-type(even) .steps li{background:var(--paper)}
+.steps li::before{content:counter(s);width:42px;height:42px;border-radius:50%;background:var(--m);color:var(--on);display:grid;place-items:center;font:800 1.1rem var(--fd)}
+.steps b{display:block}
+.steps span{color:var(--muted);font-size:.97rem}
+.note{margin-top:26px;background:var(--mt);color:var(--md);border-radius:16px;padding:18px 22px;font-weight:500}
+.note strong{font-weight:700}
+.pick{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 18px}
+.pick button{font:600 .95rem var(--fb);padding:10px 18px;border-radius:99px;border:2px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer}
+.pick button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.res{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px;min-height:150px}
+.res h3{color:var(--md)}
+.ord{margin:0;padding-left:0;list-style:none;display:grid;gap:10px}
+.ord li{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.band:nth-of-type(even) .ord li{background:var(--paper)}
+.ord i{font:800 .8rem var(--fd);font-style:normal;background:var(--m);color:var(--on);border-radius:8px;padding:4px 10px;white-space:nowrap}
+.ideas{counter-reset:i;list-style:none;margin:0;padding:0;display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.ideas li{counter-increment:i;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px 20px}
+.ideas li::before{content:counter(i);display:block;font:800 2rem var(--fd);color:var(--a);line-height:1}
+dl{display:grid;gap:12px;margin:0}dt{font:700 1.05rem var(--fd)}dd{margin:0 0 4px;color:var(--muted)}
+footer{padding:40px 0 60px;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+:focus-visible{outline:3px solid var(--a);outline-offset:3px;border-radius:6px}
+@media(max-width:800px){.chev{grid-template-columns:1fr 1fr}.chev li,.chev li:first-child{clip-path:none;margin:0;border-radius:12px}.band{padding:56px 0}}
+</style>
+</head>
+<body>
+<nav class="top"><div class="wrap"><span class="brand">Sucesión en simple</span>
+<a href="#c1">Objeto</a><a href="#c2">Investidura</a><a href="#c3">Inventario</a><a href="#c4">Administración</a><a href="#c5">Deudas y legados</a><a href="#c6">Cuentas</a><a href="#ideas">Ocho ideas</a></div></nav>
+
+<header class="hero"><div class="wrap">
+<p class="kicker">Código Civil y Comercial · Libro Quinto · Título VII · arts. 2335 a 2362</p>
+<h1>El proceso sucesorio, paso a paso</h1>
+<p class="lead">Cuando una persona fallece, alguien tiene que <strong>saber quiénes heredan, qué hay, qué se debe</strong> y repartir lo que queda. Eso es el proceso sucesorio. Acá lo vemos en seis etapas, con palabras de todos los días.</p>
+<ol class="chev">
+<li class="s1"><a href="#c1"><b>1</b>Objeto y juez</a></li>
+<li class="s2"><a href="#c2"><b>2</b>Quién es heredero</a></li>
+<li class="s3"><a href="#c3"><b>3</b>Qué bienes hay</a></li>
+<li class="s1"><a href="#c4"><b>4</b>Quién administra</a></li>
+<li class="s2"><a href="#c5"><b>5</b>Se paga lo que se debe</a></li>
+<li class="s3"><a href="#c6"><b>6</b>Se rinden cuentas</a></li>
+</ol>
+</div></header>
+
+<section class="band s1" id="c1"><div class="wrap">
+<span class="num">Capítulo 1 · arts. 2335 y 2336</span>
+<h2>Para qué sirve y qué juez interviene</h2>
+<p class="sub">El juicio sucesorio es el lugar donde se ordena todo lo que dejó una persona al morir.</p>
+<div class="grid">
+<div class="card"><h3>Seis tareas</h3><p>Identificar a los sucesores, determinar qué contiene la herencia, cobrar los créditos, pagar deudas, legados y cargas, rendir cuentas y entregar los bienes.</p><span class="law">art. 2335</span></div>
+<div class="card"><h3>Un solo juez</h3><p>Interviene el juez del <b>último domicilio</b> de la persona fallecida. Ese mismo juez resuelve los conflictos que surjan por la herencia: petición de herencia, nulidad de testamento, entre otros.</p><span class="law">art. 2336</span></div>
+</div>
+<p class="note"><strong>En simple:</strong> el juicio concentra todo en un solo lugar, para que haya orden y seguridad para herederos y acreedores.</p>
+</div></section>
+
+<section class="band s2" id="c2"><div class="wrap">
+<span class="num">Capítulo 2 · arts. 2337 a 2340</span>
+<h2>Quién es heredero y cómo se reconoce</h2>
+<p class="sub">Ser heredero no siempre requiere al juez. Depende de quién sea. Elegí un caso:</p>
+<div class="pick" role="group" aria-label="Tipo de heredero">
+<button aria-pressed="true" data-k="0">Hijo/a, padres o cónyuge</button>
+<button aria-pressed="false" data-k="1">Hermano/a u otro pariente colateral</button>
+<button aria-pressed="false" data-k="2">Hay testamento</button>
+</div>
+<div class="res" id="res" aria-live="polite"></div>
+<p class="note" style="margin-top:22px"><strong>Ojo con los bienes registrables:</strong> aunque sea heredero desde el día de la muerte, para transferir inmuebles o autos necesita la <b>declaratoria judicial de herederos</b> (art. 2337).</p>
+</div></section>
+
+<section class="band s3" id="c3"><div class="wrap">
+<span class="num">Capítulo 3 · arts. 2341 a 2344</span>
+<h2>Inventario y avalúo: qué hay y cuánto vale</h2>
+<p class="sub">Antes de repartir hay que saber con qué se cuenta.</p>
+<div class="grid">
+<div class="card"><h3>Inventario</h3><p>Lista de los bienes. Se hace citando a herederos, acreedores y legatarios de domicilio conocido, en un plazo de <b>tres meses</b> desde que acreedores o legatarios lo exigen judicialmente.</p><span class="law">art. 2341</span></div>
+<div class="card"><h3>Denuncia de bienes</h3><p>Si todos los herederos están de acuerdo, pueden reemplazar el inventario por una denuncia de bienes. No vale si lo pidieron los acreedores o la ley lo impone.</p><span class="law">art. 2342</span></div>
+<div class="card"><h3>Avalúo</h3><p>Ponerle valor a los bienes. Lo hace quien elijan los herederos (si todos son plenamente capaces y coinciden) o quien designe el juez. Se valúa lo más cerca posible de la partición.</p><span class="law">art. 2343</span></div>
+<div class="card"><h3>Impugnaciones</h3><p>Herederos, acreedores y legatarios pueden cuestionar el inventario, el avalúo o la denuncia. Si el valor no es correcto, se ordena una nueva tasación.</p><span class="law">art. 2344</span></div>
+</div>
+</div></section>
+
+<section class="band s1" id="c4"><div class="wrap">
+<span class="num">Capítulo 4 · arts. 2345 a 2355</span>
+<h2>El administrador de la herencia</h2>
+<p class="sub">Mientras la herencia está indivisa, alguien debe cuidarla y manejarla.</p>
+<h3>¿Quién puede ser y cómo se elige?</h3>
+<ol class="ord" style="margin-bottom:28px">
+<li><i>1.º</i><span><b>El testador</b> puede haber nombrado uno o varios administradores (art. 2347).</span></li>
+<li><i>2.º</i><span><b>Los herederos</b> lo eligen entre ellos por mayoría (art. 2346).</span></li>
+<li><i>3.º</i><span><b>El juez</b>, si no hay mayoría: prefiere al cónyuge sobreviviente; si no, a un heredero; y solo por razones especiales, a un tercero.</span></li>
+</ol>
+<div class="grid">
+<div class="card"><h3>Quién puede serlo</h3><p>Personas humanas plenamente capaces, o personas jurídicas autorizadas a administrar bienes ajenos.</p><span class="law">art. 2345</span></div>
+<div class="card"><h3>Qué hace</h3><p>Conserva los bienes y sigue el giro normal de los negocios del fallecido. Vende por sí solo lo que se echa a perder; para lo demás necesita acuerdo unánime o permiso del juez.</p><span class="law">art. 2353</span></div>
+<div class="card"><h3>Cobra y litiga</h3><p>Con autorización judicial (o de los herederos capaces y presentes) cobra créditos, continúa juicios y se presenta en los que demandaron al fallecido.</p><span class="law">art. 2354</span></div>
+<div class="card"><h3>Qué recibe</h3><p>Reembolso de gastos necesarios y útiles, y una remuneración. Si nadie la fijó, la determina el juez.</p><span class="law">art. 2349</span></div>
+<div class="card"><h3>Garantías y remoción</h3><p>No debe dar garantía salvo que se la exijan. Cualquier interesado puede pedir su remoción por imposibilidad o mal desempeño.</p><span class="law">arts. 2350 y 2351</span></div>
+<div class="card"><h3>Cada tres meses</h3><p>Rinde cuentas trimestralmente, salvo que la mayoría de los herederos acuerde otro plazo o el juez fije otro.</p><span class="law">art. 2355</span></div>
+</div>
+<p class="note"><strong>¿Todavía no hay administrador?</strong> Cualquier interesado puede pedir medidas urgentes: inventario, depósito de bienes o un administrador provisional (art. 2352). Si hay varios administradores, actúan por orden de designación, salvo que deban actuar juntos (art. 2348).</p>
+</div></section>
+
+<section class="band s2" id="c5"><div class="wrap">
+<span class="num">Capítulo 5 · arts. 2356 a 2360</span>
+<h2>Pagar deudas y legados</h2>
+<p class="sub">Primero se paga a quienes le debían al fallecido. Después, los legados. Recién entonces se entrega lo que queda.</p>
+<ol class="steps">
+<li><div><b>Los acreedores se presentan</b><span>Los que no tienen garantía real deben presentarse y denunciar sus créditos. Si el monto no es definitivo, se denuncia de forma provisoria con una estimación. (art. 2356)</span></div></li>
+<li><div><b>Legítimo abono</b><span>Los herederos pueden reconocer un crédito y pedir al juez que lo declare de legítimo abono. Sin reconocimiento expreso y unánime, el acreedor puede iniciar sus propias acciones. (art. 2357)</span></div></li>
+<li><div><b>Se paga a los acreedores</b><span>Según el orden de preferencia de la ley de concursos. (art. 2358)</span></div></li>
+<li><div><b>Se cumplen los legados</b><span>Dentro de la porción disponible y en este orden: los preferidos por el testamento, los de cosa cierta y determinada, y los demás. Dentro de cada grupo, a prorrata. (art. 2358)</span></div></li>
+</ol>
+<div class="grid" style="margin-top:22px">
+<div class="card"><h3>Freno a la entrega</h3><p>Acreedores del fallecido, acreedores por cargas de la masa y legatarios pueden oponerse a que se entreguen bienes a los herederos hasta cobrar.</p><span class="law">art. 2359</span></div>
+<div class="card"><h3>Si no alcanza</h3><p>Si el activo es insuficiente, herederos o acreedores pueden pedir el concurso preventivo o la quiebra de la masa indivisa.</p><span class="law">art. 2360</span></div>
+</div>
+</div></section>
+
+<section class="band s3" id="c6"><div class="wrap">
+<span class="num">Capítulo 6 · arts. 2361 y 2362</span>
+<h2>Cerrar la administración: la cuenta final</h2>
+<p class="sub">Al terminar, el administrador muestra qué hizo con los bienes.</p>
+<div class="grid">
+<div class="card"><h3>Cuenta definitiva</h3><p>Concluida la administración, el administrador debe presentar la cuenta definitiva.</p><span class="law">art. 2361</span></div>
+<div class="card"><h3>Puede ser privada</h3><p>Si todos los herederos son plenamente capaces y están de acuerdo, la rendición se hace de forma privada, y los gastos los paga la masa.</p><span class="law">art. 2362</span></div>
+</div>
+</div></section>
+
+<section class="band s1" id="ideas"><div class="wrap">
+<span class="num">Resumen</span>
+<h2>Lo esencial en ocho ideas</h2>
+<p class="sub"></p>
+<ol class="ideas">
+<li>El juicio sucesorio ordena la herencia: identifica herederos, cobra, paga y entrega.</li>
+<li>Interviene el juez del último domicilio del fallecido.</li>
+<li>Hijos, padres y cónyuge son herederos desde el día de la muerte, sin trámite.</li>
+<li>Colaterales y herederos por testamento necesitan que el juez los reconozca.</li>
+<li>El inventario y el avalúo muestran qué hay y cuánto vale; se pueden impugnar.</li>
+<li>El administrador cuida los bienes y rinde cuentas cada tres meses.</li>
+<li>Primero se paga a los acreedores, luego los legados, y recién después se entrega.</li>
+<li>Si la herencia no alcanza, se puede pedir el concurso o la quiebra de la masa.</li>
+</ol>
+<h3 style="margin:44px 0 14px">Palabras clave</h3>
+<dl>
+<dt>Causante</dt><dd>La persona fallecida cuya herencia se reparte.</dd>
+<dt>Masa indivisa</dt><dd>El conjunto de bienes de la herencia mientras no se reparte; los herederos son sus copropietarios.</dd>
+<dt>Declaratoria de herederos</dt><dd>Resolución del juez que reconoce quiénes son los herederos.</dd>
+<dt>Legatario</dt><dd>Persona que recibe un bien determinado por testamento.</dd>
+<dt>Prorrata</dt><dd>Reparto proporcional cuando no alcanza para todos por igual.</dd>
+</dl>
+</div></section>
+
+<footer><div class="wrap">Resumen didáctico basado en el Código Civil y Comercial de la Nación Comentado, Tomo VI, Libro Quinto, Título VII (arts. 2335 a 2362). No reemplaza el texto legal ni el asesoramiento profesional.</div></footer>
+
+<script>
+var D=[
+["Herederos de pleno derecho","Si heredan descendientes, ascendientes o el cónyuge, quedan investidos <b>desde el día de la muerte</b>, aunque no sepan que murió la persona. No hace falta ningún trámite ni juez. Pueden ejercer las acciones que le correspondían al fallecido.","art. 2337"],
+["Herederos que necesita el juez","En la sucesión de colaterales, el juez los inviste después de comprobar el fallecimiento y el título invocado. Si no hay testamento (o no abarca todo), se declara a los herederos tras notificar a los denunciados y publicar <b>un edicto por un día</b>: quienes se consideren con derecho tienen <b>30 días</b> para acreditarlo.","arts. 2338 y 2340"],
+["Con testamento","Si es por acto público, se lo presenta o se indica dónde está. Si es ológrafo (escrito a mano), se presenta al juez, que lo abre si está cerrado, comprueba letra y firma con pericia caligráfica, rubrica cada página y ordena protocolizarlo. La investidura sale de la <b>declaración de validez formal</b> del testamento. Aun así, se puede impugnar en juicio.","arts. 2338 y 2339"]];
+var bs=document.querySelectorAll('.pick button'),r=document.getElementById('res');
+function show(k){var d=D[k];r.innerHTML='<h3>'+d[0]+'</h3><p>'+d[1]+'</p><span class="law">'+d[2]+'</span>';for(var i=0;i<bs.length;i++)bs[i].setAttribute('aria-pressed',i==k)}
+for(var i=0;i<bs.length;i++)bs[i].onclick=function(){show(+this.getAttribute('data-k'))};
+show(0);
+</script>
+</body>
+</html>

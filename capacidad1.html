@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Capacidad en simple: resumen gráfico de los arts. 22, 23 y 24 del CCyC</title>
+<meta name="description" content="Resumen gráfico y en lenguaje sencillo del Capítulo 2 Capacidad, Sección 1ª Principios generales (arts. 22, 23 y 24) del Código Civil y Comercial comentado.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F4F7FC; --surface:#FFFFFF; --ink:#16213A; --muted:#55607C; --line:#DCE3F0;
+  --c22:#3D4FD9; --c22t:#E9ECFD; --c22d:#2A39B0;
+  --c23:#08806F; --c23t:#DDF3EE; --c23d:#05604F;
+  --c24:#C42A62; --c24t:#FCE5ED; --c24d:#9C1F4C;
+  --amber:#B7790A; --ambert:#FDF1D6;
+  --on:#FFFFFF;
+  --radius:18px;
+  --font-d:"Bricolage Grotesque","Segoe UI Variable Display","Segoe UI",system-ui,sans-serif;
+  --font-b:"Public Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#0E1424; --surface:#161E36; --ink:#E9EDF9; --muted:#A8B1CB; --line:#27304F;
+    --c22:#97A3FF; --c22t:#1F2757; --c22d:#B9C1FF;
+    --c23:#4DD6BE; --c23t:#0F3B36; --c23d:#8FE8D6;
+    --c24:#FF86AB; --c24t:#4A1A2F; --c24d:#FFB0C8;
+    --amber:#FFC24D; --ambert:#3F3010;
+    --on:#0E1424;
+  }
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-b);font-size:1.0625rem;line-height:1.65;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:var(--font-d);margin:0;line-height:1.12;letter-spacing:-.015em;text-wrap:balance}
+p{margin:0 0 1em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--c22);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:var(--paper);padding:10px 16px;border-radius:10px;z-index:50}
+.skip:focus{left:12px}
+.i{width:26px;height:26px;flex:none}
+.diagram{display:block;width:100%;height:auto}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- navegación ---------- */
+.top{position:sticky;top:0;z-index:20;background:var(--paper);background:color-mix(in srgb,var(--paper) 90%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top-in{max-width:1180px;margin:0 auto;display:flex;align-items:center;gap:20px;padding:10px 24px}
+.brand{font-family:var(--font-d);font-weight:800;font-size:1.08rem;white-space:nowrap}
+.nav{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav a{display:inline-flex;align-items:center;gap:8px;padding:8px 13px;border-radius:999px;color:var(--muted);text-decoration:none;font-weight:600;font-size:.92rem;white-space:nowrap}
+.nav a:hover{color:var(--ink);background:var(--surface)}
+.nav a.on{color:var(--ink);background:var(--surface);box-shadow:inset 0 0 0 1px var(--line)}
+.dot{width:10px;height:10px;border-radius:50%;display:inline-block}
+
+/* ---------- bandas ---------- */
+.band{--panel:var(--surface);padding:84px 0}
+.band.alt{--panel:var(--paper);background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.band h2.sec{font-weight:800;font-size:clamp(1.8rem,3.6vw,2.7rem);letter-spacing:-.025em;max-width:22ch;margin-bottom:12px}
+.band .sec-sub{color:var(--muted);max-width:64ch;font-size:1.08rem;margin-bottom:36px}
+
+/* ---------- hero ---------- */
+.hero{padding:52px 0 84px}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:56px;align-items:center}
+.kicker{margin:0 0 20px;color:var(--muted);font-size:.95rem;font-weight:500;max-width:46ch}
+h1{font-weight:800;font-size:clamp(2.5rem,5.6vw,4.3rem);line-height:1;letter-spacing:-.03em;max-width:15ch;margin-bottom:24px}
+.lead{font-size:1.2rem;max-width:54ch;color:var(--muted)}
+.lead strong{color:var(--ink)}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:13px 22px;border-radius:14px;font-family:var(--font-b);font-size:1rem;font-weight:700;line-height:1.2;text-decoration:none;cursor:pointer;border:2px solid var(--ink);background:transparent;color:var(--ink)}
+.btn.primary{background:var(--ink);color:var(--paper)}
+.btn:hover{transform:translateY(-1px)}
+.legend{list-style:none;margin:30px 0 0;padding:0;display:grid;gap:12px;max-width:56ch}
+.legend li{display:grid;grid-template-columns:18px 1fr;gap:12px;font-size:.98rem;line-height:1.5}
+.legend i{width:18px;height:18px;border-radius:50%;margin-top:3px}
+.hero-svg{max-width:470px;margin:0 auto}
+.hero-svg .ring{transform-box:fill-box;transform-origin:center;animation:grow .9s cubic-bezier(.2,.8,.2,1) both}
+.hero-svg .mid{animation-delay:.15s}
+.hero-svg .pop{transform-box:fill-box;transform-origin:center;animation:grow .6s cubic-bezier(.2,.8,.2,1) .7s both}
+@keyframes grow{from{opacity:0;transform:scale(.86)}to{opacity:1;transform:scale(1)}}
+.ring.out{fill:var(--c22t);stroke:var(--c22);stroke-width:3}
+.ring.mid{fill:var(--c23t);stroke:var(--c23);stroke-width:3}
+.ex{fill:var(--c24);stroke:var(--paper);stroke-width:4}
+.t{font-family:var(--font-d);fill:var(--ink)}
+.t.b{font-weight:800}
+.t.c22{fill:var(--c22d)} .t.c23{fill:var(--c23d)} .t.c24{fill:var(--c24d)}
+.t.w{fill:var(--on);font-weight:800}
+.t.m{fill:var(--muted)}
+
+/* ---------- recorrido en chevrones ---------- */
+.chev{list-style:none;margin:0;padding:0;display:grid;grid-auto-flow:column;grid-auto-columns:1fr}
+.chev>li{background:var(--bg);color:var(--fg);padding:26px 34px 26px 46px;margin-left:-16px;clip-path:polygon(0 0,calc(100% - 22px) 0,100% 50%,calc(100% - 22px) 100%,0 100%,22px 50%)}
+.chev>li:first-child{margin-left:0;padding-left:28px;clip-path:polygon(0 0,calc(100% - 22px) 0,100% 50%,calc(100% - 22px) 100%,0 100%)}
+.chev>li:last-child{padding-right:26px;clip-path:polygon(0 0,100% 0,100% 100%,0 100%,22px 50%)}
+.chev h3{font-size:1.2rem;margin-bottom:8px;color:inherit}
+.chev p{font-size:.95rem;line-height:1.5;margin:0 0 .6em;color:inherit}
+.chev .tag{display:inline-block;font-weight:700;font-size:.82rem;margin-bottom:10px;opacity:.9}
+.pills{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.pills span{background:color-mix(in srgb,var(--fg) 18%,transparent);border-radius:999px;padding:3px 11px;font-size:.84rem;font-weight:600;line-height:1.4}
+
+/* ---------- tabla comparativa ---------- */
+.cmp{width:100%;border-collapse:separate;border-spacing:0;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.cmp th,.cmp td{padding:16px 20px;text-align:left;vertical-align:top;border-top:1px solid var(--line);font-size:.98rem;line-height:1.55}
+.cmp thead th{border-top:0;font-family:var(--font-d);font-size:1.2rem;font-weight:800;padding:20px}
+.cmp thead .h22{background:var(--c22);color:var(--on)}
+.cmp thead .h23{background:var(--c23);color:var(--on)}
+.cmp thead th small{display:block;font-family:var(--font-b);font-weight:500;font-size:.85rem;opacity:.92;margin-top:2px}
+.cmp tbody th{width:19%;font-weight:700;color:var(--muted);font-size:.92rem}
+.cmp td.no{background:var(--c24t)}
+.cmp td.si{background:var(--c23t)}
+
+/* ---------- cabecera de cada artículo ---------- */
+.a22{--ac:var(--c22);--act:var(--c22t);--acd:var(--c22d)}
+.a23{--ac:var(--c23);--act:var(--c23t);--acd:var(--c23d)}
+.a24{--ac:var(--c24);--act:var(--c24t);--acd:var(--c24d)}
+.art-head{display:grid;grid-template-columns:auto 1fr;gap:6px 32px;align-items:end;margin-bottom:34px}
+.numeral{grid-row:span 2;font-family:var(--font-d);font-weight:800;font-size:clamp(5.5rem,14vw,10rem);line-height:.78;letter-spacing:-.06em;color:var(--ac)}
+.art-head h2{font-weight:800;font-size:clamp(1.9rem,4vw,3rem);letter-spacing:-.025em;align-self:end}
+.art-head .tagline{font-size:1.2rem;color:var(--muted);max-width:52ch;margin:0;align-self:start}
+.pages{display:inline-block;margin-top:10px;font-size:.88rem;color:var(--muted);font-weight:500}
+.law{margin:0;border-left:6px solid var(--ac);background:var(--panel);border-radius:0 14px 14px 0;padding:20px 24px;font-size:1.04rem;line-height:1.65;max-width:78ch}
+.law .lbl{display:block;font-family:var(--font-d);font-weight:800;color:var(--acd);font-size:.95rem;margin-bottom:6px}
+.law ol{margin:8px 0 0;padding-left:1.4em;list-style:lower-alpha}
+.simple{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;background:var(--act);border-radius:var(--radius);padding:22px 26px;margin-top:20px;max-width:78ch}
+.simple .badge{display:flex;align-items:center;gap:8px;font-family:var(--font-d);font-weight:800;color:var(--acd);white-space:nowrap}
+.simple .badge svg{width:22px;height:22px}
+.simple p{margin:0}
+
+/* ---------- bloques internos ---------- */
+.blk{margin-top:64px}
+.blk h3{font-weight:800;font-size:clamp(1.35rem,2.4vw,1.8rem);letter-spacing:-.02em;margin-bottom:8px}
+.blk .sub{color:var(--muted);max-width:66ch;margin-bottom:26px}
+.blk h4{font-size:1.1rem;font-weight:700}
+.note{font-size:.92rem;color:var(--muted)}
+
+/* reglas con iconos */
+.rules{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 40px}
+.rule{display:grid;grid-template-columns:54px 1fr;gap:16px;align-items:start}
+.rule .ico{width:54px;height:54px;border-radius:50%;background:var(--ac);color:var(--on);display:grid;place-items:center}
+.rule h4{margin:2px 0 4px}
+.rule p{margin:0;color:var(--muted);font-size:.98rem;line-height:1.55}
+
+/* euler */
+.split{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:44px;align-items:center}
+.eu-o{fill:var(--act);stroke:var(--ac);stroke-width:3}
+.eu-i{fill:var(--ac);fill-opacity:.2;stroke:var(--ac);stroke-width:3}
+.defs{display:grid;gap:18px}
+.def{padding-left:18px;border-left:5px solid var(--ac)}
+.def h4{margin-bottom:2px}
+.def p{margin:0;font-size:.98rem;line-height:1.55;color:var(--muted)}
+.def p strong{color:var(--ink)}
+.ex-tag{display:inline-block;margin-top:6px;font-size:.84rem;font-weight:700;color:var(--acd);background:var(--act);border-radius:999px;padding:2px 11px}
+
+/* chips */
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{padding:9px 16px;border-radius:999px;background:var(--act);color:var(--acd);font-weight:600;font-size:.95rem;line-height:1.35}
+.chip.line{background:transparent;border:2px solid var(--ac)}
+
+/* carriles */
+.lanes{display:grid;gap:16px}
+.lane{border-radius:var(--radius);padding:22px 24px;background:var(--panel);border:1px solid var(--line)}
+.lane h4{margin-bottom:14px}
+.lane.l22{--act:var(--c22t);--acd:var(--c22d)}
+.lane.l23{--act:var(--c23t);--acd:var(--c23d)}
+.lane-row{display:grid;grid-template-columns:1fr auto 1fr;gap:14px;align-items:stretch}
+.node{padding:14px 16px;border-radius:12px;background:var(--act);color:var(--acd);font-weight:600;font-size:.95rem;line-height:1.45;display:flex;align-items:center}
+.wall{width:12px;border-radius:6px;background:var(--c24)}
+.bridge{display:flex;align-items:center;justify-content:center;min-width:160px;background:linear-gradient(var(--c23),var(--c23)) center/100% 3px no-repeat}
+.bridge b{background:var(--c23);color:var(--on);padding:6px 14px;border-radius:999px;font-size:.85rem}
+.lane .why{margin:14px 0 0;font-size:.95rem;color:var(--muted)}
+
+/* árbol regla y excepciones */
+.tree-top{background:var(--ac);color:var(--on);border-radius:var(--radius);padding:26px 30px;font-family:var(--font-d);font-weight:800;font-size:clamp(1.25rem,2.4vw,1.75rem);line-height:1.2;text-align:center}
+.tree-branches{display:grid;grid-template-columns:1fr 1fr;padding-top:38px;
+  background:linear-gradient(var(--c24),var(--c24)) calc(25% - 1.5px) 0/3px 38px no-repeat,linear-gradient(var(--c24),var(--c24)) calc(75% - 1.5px) 0/3px 38px no-repeat}
+.branch{margin:0 10px;border:3px solid var(--c24);border-radius:var(--radius);padding:22px 24px;background:var(--panel)}
+.branch h4{color:var(--c24d);margin-bottom:8px}
+.branch p{margin:0 0 .6em;font-size:.98rem;line-height:1.55}
+.branch .note{margin:0}
+
+/* antes y ahora */
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.ba>div{border-radius:var(--radius);padding:26px}
+.ba .old{background:var(--panel);border:2px dashed var(--line)}
+.ba .new{background:var(--act)}
+.ba h4{font-size:1.2rem;margin-bottom:4px}
+.ba .when{display:block;font-size:.88rem;color:var(--muted);margin-bottom:16px;font-weight:500}
+.ba ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.ba li{padding-left:22px;position:relative;font-size:.98rem;line-height:1.55}
+.ba li::before{content:"";position:absolute;left:0;top:.6em;width:9px;height:9px;border-radius:50%;background:var(--muted)}
+.ba .new li::before{background:var(--ac)}
+.ba li b{display:block}
+
+/* dos paneles */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.pan{background:var(--panel);border:1px solid var(--line);border-top:6px solid var(--ac);border-radius:var(--radius);padding:26px}
+.pan h4{font-size:1.25rem;margin-bottom:10px}
+.pan p{font-size:.98rem;line-height:1.55}
+.pan .norms{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.pan .norms span{font-size:.84rem;font-weight:600;background:var(--act);color:var(--acd);border-radius:8px;padding:3px 10px}
+
+/* organismos */
+.orgs{display:grid;gap:14px}
+.org{display:grid;grid-template-columns:220px 1fr;gap:20px;padding:20px 22px;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius)}
+.org b{font-family:var(--font-d);color:var(--acd);line-height:1.2;font-size:1.08rem}
+.org b small{display:block;font-family:var(--font-b);font-weight:500;color:var(--muted);font-size:.82rem;margin-top:5px;line-height:1.35}
+.org p{margin:0;font-size:.98rem;line-height:1.55}
+.org p+p{margin-top:.5em}
+
+/* gradiente autonomía */
+.grad{display:flex;justify-content:space-between;gap:12px;border-radius:999px;padding:16px 26px;background:linear-gradient(90deg,var(--c23t),var(--c23));font-weight:700;font-size:.95rem;line-height:1.3}
+.grad span:first-child{color:var(--c23d)}
+.grad span:last-child{color:var(--on);text-align:right}
+
+/* escalera */
+.axis{display:flex;align-items:center;gap:14px;font-size:.88rem;font-weight:700;color:var(--muted);margin-bottom:12px}
+.axis i{flex:1;height:3px;background:linear-gradient(90deg,var(--c24t),var(--c24));border-radius:3px}
+.stairs{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;align-items:end}
+.stair{border-radius:var(--radius);padding:24px;display:flex;flex-direction:column}
+.stair h4{font-size:1.3rem;margin-bottom:8px;color:inherit}
+.stair p{font-size:.96rem;line-height:1.55;margin:0 0 .6em;color:inherit}
+.stair small{margin-top:auto;font-weight:700;font-size:.84rem}
+.s1{background:var(--c24t);color:var(--ink);min-height:200px}
+.s2{background:color-mix(in srgb,var(--c24) 45%,var(--c24t));color:var(--ink);min-height:270px}
+.s3{background:var(--c24);color:var(--on);min-height:350px}
+
+/* venn y cadenas */
+.venn-c{fill:var(--ac);fill-opacity:.22;stroke:var(--ac);stroke-width:3}
+.chain{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.chain li{display:flex;align-items:center;gap:8px;font-weight:700;font-family:var(--font-d);font-size:1.05rem;background:var(--act);color:var(--acd);border-radius:999px;padding:8px 18px}
+.chain li+li::before{content:"";width:8px;height:8px;border-right:2.5px solid var(--ac);border-top:2.5px solid var(--ac);transform:rotate(45deg);margin-right:4px}
+.neq{display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+.neq b{font-family:var(--font-d);font-size:1.5rem;color:var(--ac)}
+.bar-old1{fill:var(--line)} .bar-old2{fill:var(--muted);fill-opacity:.4}
+.bar-new1{fill:var(--c24t)} .bar-new2{fill:var(--c24)}
+
+/* balanza */
+.bal{display:grid;grid-template-columns:1fr 1.3fr 1fr;align-items:stretch}
+.bal>div{padding:24px;background:var(--panel);border:1px solid var(--line);font-size:.96rem;line-height:1.55}
+.bal h4{font-size:1.08rem;margin-bottom:8px;color:inherit}
+.bal p{margin:0}
+.bal>div:first-child{border-radius:var(--radius) 0 0 var(--radius)}
+.bal>div:last-child{border-radius:0 var(--radius) var(--radius) 0}
+.bal .mid{background:var(--ac);color:var(--on);border-color:var(--ac);border-radius:var(--radius);margin:-14px 0;z-index:1;display:flex;flex-direction:column;justify-content:center}
+.bal .mid h4{font-size:1.25rem}
+
+/* casos (art. 24) */
+.cases{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.case{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:26px;display:flex;flex-direction:column;gap:14px}
+.case .letter{width:44px;height:44px;border-radius:12px;background:var(--ac);color:var(--on);display:grid;place-items:center;font-family:var(--font-d);font-weight:800;font-size:1.4rem}
+.case h4{font-size:1.3rem}
+.case p{margin:0;font-size:.97rem;line-height:1.55}
+.case .who{background:var(--act);border-radius:12px;padding:12px 14px}
+.case .who b{display:block;color:var(--acd);font-size:.85rem;margin-bottom:2px}
+.case .fine{color:var(--muted);font-size:.9rem}
+
+/* representar y escuchar */
+.vs{display:grid;grid-template-columns:1fr auto 1fr;gap:18px;align-items:stretch}
+.vs>div{border-radius:var(--radius);padding:24px}
+.vs .old{background:var(--panel);border:2px dashed var(--line)}
+.vs .new{background:var(--act)}
+.vs .arrow{align-self:center;width:46px;height:46px;border-radius:50%;background:var(--ac);color:var(--on);display:grid;place-items:center;font-weight:800;font-size:1.3rem}
+.vs h4{margin-bottom:6px}
+.vs p{margin:0;font-size:.97rem;line-height:1.55}
+
+/* detalles desplegables */
+details.more{margin-top:28px;border:1px solid var(--line);border-radius:var(--radius);background:var(--panel)}
+details.more>summary{cursor:pointer;list-style:none;padding:16px 22px;font-weight:700;display:flex;align-items:center;gap:14px}
+details.more>summary::-webkit-details-marker{display:none}
+details.more>summary::before{content:"";width:9px;height:9px;border-right:3px solid var(--ac);border-bottom:3px solid var(--ac);transform:rotate(-45deg);transition:transform .2s;flex:none}
+details.more[open]>summary::before{transform:rotate(45deg)}
+details.more .in{padding:2px 24px 22px}
+details.more .in ul{margin:0;padding-left:1.25em;display:grid;gap:10px}
+details.more .in li{line-height:1.55;font-size:.98rem}
+
+/* lo esencial */
+.take{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 44px}
+.take li{display:grid;grid-template-columns:40px 1fr;gap:14px;align-items:start;font-size:1.02rem;line-height:1.5}
+.take .ck{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--k);color:var(--on)}
+.take .ck svg{width:22px;height:22px}
+.take small{display:block;color:var(--muted);font-size:.84rem;margin-top:2px}
+.t22{--k:var(--c22)} .t23{--k:var(--c23)} .t24{--k:var(--c24)}
+.next{margin-top:56px}
+.next h3{font-weight:800;font-size:1.5rem;margin-bottom:6px}
+.next p{color:var(--muted);max-width:62ch}
+.next .chip{background:var(--surface);border:1px solid var(--line);color:var(--ink)}
+
+/* glosario */
+.gloss{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 44px;margin:0}
+.gloss div{padding:16px 0;border-top:1px solid var(--line)}
+.gloss dt{font-family:var(--font-d);font-weight:700;font-size:1.08rem;margin-bottom:2px}
+.gloss dd{margin:0;color:var(--muted);font-size:.98rem;line-height:1.55}
+
+/* pie */
+.foot{padding:56px 0 72px;color:var(--muted);font-size:.92rem}
+.foot p{max-width:80ch}
+.foot strong{color:var(--ink)}
+
+/* ---------- responsive ---------- */
+@media (max-width:960px){
+  .hero-grid,.split,.duo,.ba,.cases,.rules,.take,.gloss{grid-template-columns:1fr}
+  .hero-grid{gap:36px}
+  .stairs{grid-template-columns:1fr;gap:10px}
+  .stair{min-height:0!important}
+  .s2{margin-left:24px}.s3{margin-left:48px}
+  .bal{grid-template-columns:1fr;gap:12px}
+  .bal>div,.bal>div:first-child,.bal>div:last-child{border-radius:var(--radius)}
+  .bal .mid{margin:0}
+  .vs{grid-template-columns:1fr}
+  .vs .arrow{transform:rotate(90deg);justify-self:center}
+}
+@media (max-width:860px){
+  .chev{grid-auto-flow:row}
+  .chev>li,.chev>li:first-child,.chev>li:last-child{margin:-14px 0 0;padding:28px 24px 38px;clip-path:polygon(0 0,50% 16px,100% 0,100% calc(100% - 18px),50% 100%,0 calc(100% - 18px))}
+  .chev>li:first-child{margin-top:0;padding-top:24px;clip-path:polygon(0 0,100% 0,100% calc(100% - 18px),50% 100%,0 calc(100% - 18px))}
+  .chev>li:last-child{padding-bottom:26px;clip-path:polygon(0 0,50% 16px,100% 0,100% 100%,0 100%)}
+}
+@media (max-width:760px){
+  .band{padding:60px 0}
+  .brand{display:none}
+  .wrap,.top-in{padding-left:18px;padding-right:18px}
+  .cmp thead{display:none}
+  .cmp,.cmp tbody,.cmp tr,.cmp th,.cmp td{display:block;width:100%}
+  .cmp tbody th{width:100%;background:var(--paper);padding:12px 18px}
+  .cmp td::before{content:attr(data-h);display:block;font-weight:700;font-size:.8rem;color:var(--muted);margin-bottom:2px}
+  .art-head{grid-template-columns:1fr;gap:6px}
+  .numeral{grid-row:auto;font-size:6.5rem}
+  .simple{grid-template-columns:1fr}
+  .lane-row{grid-template-columns:1fr}
+  .wall{width:auto;height:12px}
+  .bridge{min-height:52px;background:linear-gradient(var(--c23),var(--c23)) center/3px 100% no-repeat}
+  .tree-branches{grid-template-columns:1fr;padding-top:18px;background:none;gap:14px}
+  .branch{margin:0}
+  .org{grid-template-columns:1fr;gap:8px}
+  .grad{flex-direction:column;border-radius:var(--radius);gap:6px}
+  .grad span:last-child{text-align:left}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+}
+@media print{
+  .top,.hero-actions,.skip{display:none}
+  body{background:#fff}
+  .band{padding:28px 0;break-inside:avoid-page}
+  .hero-svg .ring,.hero-svg .pop{animation:none}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-flag" viewBox="0 0 24 24"><path d="M5 21V4M5 4h11l-2 4 2 4H5"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></symbol>
+  <symbol id="i-noteq" viewBox="0 0 24 24"><path d="M5 9h14M5 15h14M7 20L17 4"/></symbol>
+  <symbol id="i-half" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3v18"/><path d="M12 3a9 9 0 010 18z" fill="currentColor" stroke="none" opacity=".35"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.4-3.2 7.8-8 9-4.8-1.2-8-4.6-8-9V6z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></symbol>
+</svg>
+
+<a class="skip" href="#panorama">Saltar al contenido</a>
+
+<header class="top">
+  <div class="top-in">
+    <div class="brand">Capacidad, en simple</div>
+    <nav class="nav" aria-label="Secciones de la página">
+      <a href="#panorama">Panorama</a>
+      <a href="#art22"><i class="dot" style="background:var(--c22)"></i>Art. 22</a>
+      <a href="#art23"><i class="dot" style="background:var(--c23)"></i>Art. 23</a>
+      <a href="#art24"><i class="dot" style="background:var(--c24)"></i>Art. 24</a>
+      <a href="#esencial">Lo esencial</a>
+      <a href="#glosario">Glosario</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ==================== PANORAMA ==================== -->
+<section id="panorama">
+
+  <div class="hero band">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="kicker">Código Civil y Comercial de la Nación comentado. Libro Primero, Título I, Capítulo 2: Capacidad</p>
+        <h1>La capacidad es la regla. Limitarla es la excepción.</h1>
+        <p class="lead">Resumen gráfico, en lenguaje sencillo, de la <strong>Sección 1ª: Principios generales</strong> (arts. 22, 23 y 24). Responde dos preguntas básicas: <strong>¿quién puede tener derechos?</strong> y <strong>¿quién puede usarlos por sí mismo?</strong></p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#camino">Ver el recorrido</a>
+          <button class="btn" id="toggleAll" type="button">Abrir todos los detalles</button>
+        </div>
+        <ul class="legend">
+          <li><i style="background:var(--c22)"></i><span><strong>Círculo grande, art. 22.</strong> Capacidad de derecho: toda persona humana puede ser titular de derechos y deberes.</span></li>
+          <li><i style="background:var(--c23)"></i><span><strong>Círculo del centro, art. 23.</strong> Capacidad de ejercicio: es la regla, la persona actúa por sí misma.</span></li>
+          <li><i style="background:var(--c24)"></i><span><strong>Puntos del borde, art. 24.</strong> Las excepciones: persona por nacer, sin edad y madurez suficiente, declarada incapaz por sentencia.</span></li>
+        </ul>
+      </div>
+
+      <svg class="diagram hero-svg" viewBox="0 0 420 420" role="img" aria-labelledby="hsT hsD">
+        <title id="hsT">Esquema de la capacidad</title>
+        <desc id="hsD">Un círculo grande representa la capacidad de derecho de toda persona. Dentro hay un círculo que representa la capacidad de ejercicio, que es la regla. Tres puntos en su borde marcan las excepciones del artículo 24.</desc>
+        <circle class="ring out" cx="210" cy="210" r="190"/>
+        <circle class="ring mid" cx="210" cy="270" r="120"/>
+        <text class="t b c22" x="210" y="92" text-anchor="middle" font-size="20">Capacidad de derecho</text>
+        <text class="t" x="210" y="114" text-anchor="middle" font-size="13">art. 22: toda persona humana</text>
+        <text class="t b c23" x="210" y="262" text-anchor="middle" font-size="18">Capacidad</text>
+        <text class="t b c23" x="210" y="284" text-anchor="middle" font-size="18">de ejercicio</text>
+        <text class="t" x="210" y="308" text-anchor="middle" font-size="13">art. 23: la regla</text>
+        <text class="t b c24" x="210" y="346" text-anchor="middle" font-size="14">Excepciones: a, b y c</text>
+        <g class="pop">
+          <circle class="ex" cx="106" cy="210" r="19"/>
+          <circle class="ex" cx="210" cy="150" r="19"/>
+          <circle class="ex" cx="314" cy="210" r="19"/>
+          <text class="t w" x="106" y="216" text-anchor="middle" font-size="17">a</text>
+          <text class="t w" x="210" y="156" text-anchor="middle" font-size="17">b</text>
+          <text class="t w" x="314" y="216" text-anchor="middle" font-size="17">c</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <!-- recorrido -->
+  <div class="band alt" id="camino">
+    <div class="wrap">
+      <h2 class="sec">El recorrido de una persona frente a un acto</h2>
+      <p class="sec-sub">Antes de actuar (firmar, comprar, decidir), la ley hace estas preguntas. Las tres normas de la sección se entienden mejor si se leen en este orden.</p>
+
+      <ol class="chev">
+        <li style="--bg:var(--c22);--fg:var(--on)">
+          <span class="tag">Art. 22</span>
+          <h3>Es una persona humana</h3>
+          <p>Tiene <strong>capacidad de derecho</strong>: puede ser titular de derechos y deberes. La ley solo la limita para actos concretos.</p>
+        </li>
+        <li style="--bg:var(--c23);--fg:var(--on)">
+          <span class="tag">Art. 23</span>
+          <h3>¿Puede actuar por sí misma?</h3>
+          <p>Sí: es la <strong>regla</strong>. Solo hay excepciones si las prevé el Código o si las fija una sentencia judicial.</p>
+        </li>
+        <li style="--bg:var(--c24);--fg:var(--on)">
+          <span class="tag">Art. 24</span>
+          <h3>¿Está en una excepción?</h3>
+          <p>Estos son los tres casos:</p>
+          <div class="pills"><span>Persona por nacer</span><span>Sin edad y madurez suficiente</span><span>Declarada incapaz por sentencia</span></div>
+        </li>
+        <li style="--bg:var(--ink);--fg:var(--paper)">
+          <span class="tag">Arts. 100 y siguientes</span>
+          <h3>Entonces actúa con representación</h3>
+          <p>Padres, tutor u otra figura de representación. Y se la escucha: tiene derecho a ser oída y a participar en lo posible.</p>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- cara a cara -->
+  <div class="band" id="comparacion">
+    <div class="wrap">
+      <h2 class="sec">Dos capacidades, cara a cara</h2>
+      <p class="sec-sub">Se parecen en el nombre pero responden a preguntas distintas. Esta es la diferencia más importante de toda la sección.</p>
+
+      <table class="cmp">
+        <thead>
+          <tr>
+            <th scope="col"><span class="sr-only">Aspecto</span></th>
+            <th scope="col" class="h22">Capacidad de derecho<small>Artículo 22</small></th>
+            <th scope="col" class="h23">Capacidad de ejercicio<small>Artículo 23</small></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">En simple</th>
+            <td data-h="Capacidad de derecho (art. 22)">Poder <strong>tener</strong> derechos y deberes.</td>
+            <td data-h="Capacidad de ejercicio (art. 23)">Poder <strong>usar</strong> esos derechos uno mismo, actuando por sí.</td>
+          </tr>
+          <tr>
+            <th scope="row">Otros nombres</th>
+            <td data-h="Capacidad de derecho (art. 22)">Aptitud para ser titular de derechos.</td>
+            <td data-h="Capacidad de ejercicio (art. 23)">También se la llama capacidad de hecho o de obrar.</td>
+          </tr>
+          <tr>
+            <th scope="row">Quién la tiene</th>
+            <td data-h="Capacidad de derecho (art. 22)">Toda persona humana, solo por serlo.</td>
+            <td data-h="Capacidad de ejercicio (art. 23)">Toda persona humana, salvo las excepciones previstas.</td>
+          </tr>
+          <tr>
+            <th scope="row">Quién puede limitarla</th>
+            <td data-h="Capacidad de derecho (art. 22)">La ley, y solo para hechos, simples actos o actos jurídicos determinados.</td>
+            <td data-h="Capacidad de ejercicio (art. 23)">El Código (niñez y adolescencia) y una sentencia judicial (personas adultas).</td>
+          </tr>
+          <tr>
+            <th scope="row">Cómo se llama la limitación</th>
+            <td data-h="Capacidad de derecho (art. 22)">Incapacidad de derecho.</td>
+            <td data-h="Capacidad de ejercicio (art. 23)">Incapacidad de ejercicio (o de hecho).</td>
+          </tr>
+          <tr>
+            <th scope="row">¿Otra persona puede actuar en su lugar?</th>
+            <td class="no" data-h="Capacidad de derecho (art. 22)"><strong>No.</strong> Protege el orden público: no se suple con la actuación de otra persona.</td>
+            <td class="si" data-h="Capacidad de ejercicio (art. 23)"><strong>Sí.</strong> Interviene un representante, porque la limitación protege a la propia persona.</td>
+          </tr>
+          <tr>
+            <th scope="row">Ejemplos del comentario</th>
+            <td data-h="Capacidad de derecho (art. 22)">Ciertos contratos prohibidos (compraventa, donación), entre padres e hijos, entre tutor y pupilo; inhabilidades para suceder.</td>
+            <td data-h="Capacidad de ejercicio (art. 23)">Una persona menor de edad sin edad y madurez suficiente: actúan por ella sus padres o tutores.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== ARTÍCULO 22 ==================== -->
+<section id="art22" class="band a22">
+  <div class="wrap">
+    <div class="art-head">
+      <div class="numeral" aria-hidden="true">22</div>
+      <h2>Capacidad de derecho</h2>
+      <p class="tagline">Todas las personas pueden tener derechos y deberes, solo por ser personas.<br><span class="pages">Artículo 22, páginas 55 a 57 del comentario</span></p>
+    </div>
+
+    <blockquote class="law">
+      <span class="lbl">Lo que dice la ley</span>
+      Toda persona humana goza de la aptitud para ser titular de derechos y deberes jurídicos. La ley puede privar o limitar esta capacidad respecto de hechos, simples actos, o actos jurídicos determinados.
+    </blockquote>
+
+    <div class="simple">
+      <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-chat"/></svg>En simple</div>
+      <p>Ser persona alcanza para tener derechos y obligaciones, aunque no se pueda actuar sin ayuda. La ley puede poner límites, pero solo para situaciones concretas y nunca para dejar a alguien sin ser considerado persona.</p>
+    </div>
+
+    <!-- cinco reglas -->
+    <div class="blk">
+      <h3>Cinco reglas que cuidan la capacidad</h3>
+      <p class="sub">El comentario explica que la capacidad hoy se considera un verdadero derecho humano. Por eso sus límites están muy controlados.</p>
+      <div class="rules">
+        <div class="rule">
+          <div class="ico"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-flag"/></svg></div>
+          <div><h4>La capacidad es la regla</h4><p>Las incapacidades son excepcionales y restrictivas. Se admiten solo para proteger un interés determinado.</p></div>
+        </div>
+        <div class="rule">
+          <div class="ico"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-lock"/></svg></div>
+          <div><h4>Solo la ley puede limitarla</h4><p>El reconocimiento de la capacidad está ligado a la dignidad y a la libertad personal. Por eso sus límites deben estar fijados por ley.</p></div>
+        </div>
+        <div class="rule">
+          <div class="ico"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-noteq"/></svg></div>
+          <div><h4>No se amplían por analogía</h4><p>Si la ley no estableció una incapacidad de forma expresa, no se la puede crear por una interpretación extensiva.</p></div>
+        </div>
+        <div class="rule">
+          <div class="ico"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-half"/></svg></div>
+          <div><h4>Nunca puede ser total</h4><p>Ninguna limitación puede eliminar la condición de persona ni producir una &ldquo;muerte civil&rdquo;.</p></div>
+        </div>
+        <div class="rule">
+          <div class="ico"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-shield"/></svg></div>
+          <div><h4>Es de orden público</h4><p>Las personas no pueden pactar nada que desconozca estas normas imperativas.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- hecho, simple acto, acto jurídico -->
+    <div class="blk">
+      <h3>¿Sobre qué cosas puede limitar la ley?</h3>
+      <p class="sub">El artículo dice &ldquo;hechos, simples actos o actos jurídicos determinados&rdquo;. Son tres ideas del Código, que están una dentro de la otra.</p>
+      <div class="split">
+        <svg class="diagram" viewBox="0 0 460 360" role="img" aria-labelledby="euT euD">
+          <title id="euT">Hechos, simples actos y actos jurídicos</title>
+          <desc id="euD">Un círculo grande, el hecho jurídico, contiene dos círculos separados: el simple acto lícito y el acto jurídico.</desc>
+          <circle class="eu-o" cx="230" cy="180" r="165"/>
+          <circle class="eu-i" cx="150" cy="215" r="76"/>
+          <circle class="eu-i" cx="310" cy="215" r="76"/>
+          <text class="t b c22" x="230" y="64" text-anchor="middle" font-size="20">Hecho jurídico</text>
+          <text class="t" x="230" y="86" text-anchor="middle" font-size="13">art. 257</text>
+          <text class="t b" x="150" y="208" text-anchor="middle" font-size="16">Simple acto</text>
+          <text class="t b" x="150" y="228" text-anchor="middle" font-size="16">lícito</text>
+          <text class="t" x="150" y="250" text-anchor="middle" font-size="13">art. 258</text>
+          <text class="t b" x="310" y="208" text-anchor="middle" font-size="16">Acto</text>
+          <text class="t b" x="310" y="228" text-anchor="middle" font-size="16">jurídico</text>
+          <text class="t" x="310" y="250" text-anchor="middle" font-size="13">art. 259</text>
+        </svg>
+        <div class="defs">
+          <div class="def">
+            <h4>Hecho jurídico</h4>
+            <p>Un <strong>acontecimiento</strong> al que el ordenamiento le atribuye efectos: hace nacer, cambiar o terminar una relación jurídica.</p>
+            <span class="ex-tag">Ejemplo: un nacimiento</span>
+          </div>
+          <div class="def">
+            <h4>Simple acto lícito</h4>
+            <p>Una <strong>acción voluntaria que la ley no prohíbe</strong> y de la que resulta algún efecto jurídico. El efecto no es el fin inmediato de la acción.</p>
+          </div>
+          <div class="def">
+            <h4>Acto jurídico</h4>
+            <p>Una <strong>acción voluntaria y lícita hecha justamente para producir un efecto</strong>: adquirir, modificar o terminar relaciones o situaciones jurídicas.</p>
+            <span class="ex-tag">Ejemplo: firmar un contrato</span>
+          </div>
+          <p class="note">Los ejemplos de las etiquetas son ilustrativos y no figuran en el comentario.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ejemplos de limitaciones -->
+    <div class="blk">
+      <h3>Ejemplos de limitaciones concretas</h3>
+      <p class="sub">El comentario las llama incapacidades de derecho. Nunca se aplican a una persona &ldquo;en general&rdquo;: miran actos puntuales.</p>
+      <div class="chips">
+        <span class="chip">Ciertos contratos: compraventa, donación</span>
+        <span class="chip">Contratos prohibidos entre padres e hijos (en el ejercicio de la responsabilidad parental)</span>
+        <span class="chip">Contratos prohibidos entre tutor y pupilo</span>
+        <span class="chip">Inhabilidades para suceder (heredar)</span>
+      </div>
+    </div>
+
+    <!-- carriles -->
+    <div class="blk">
+      <h3>¿Otra persona puede actuar en su lugar?</h3>
+      <p class="sub">Esta es la diferencia práctica entre los dos tipos de limitación.</p>
+      <div class="lanes">
+        <div class="lane l22">
+          <h4>Incapacidad de derecho (art. 22)</h4>
+          <div class="lane-row">
+            <div class="node">Una persona quiere hacer un acto determinado</div>
+            <div class="wall" role="img" aria-label="Barrera"></div>
+            <div class="node">La ley lo impide, y nadie puede hacerlo en su lugar</div>
+          </div>
+          <p class="why">Se funda en la protección del orden público, por eso no se suple con la actuación de otra persona.</p>
+        </div>
+        <div class="lane l23">
+          <h4>Incapacidad de ejercicio (arts. 23 y 24)</h4>
+          <div class="lane-row">
+            <div class="node">Una persona no puede actuar por sí misma</div>
+            <div class="bridge"><b>Representante</b></div>
+            <div class="node">El acto se hace por medio de su representante</div>
+          </div>
+          <p class="why">Acá la limitación protege a la propia persona, y la ley prevé que alguien la represente.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- modelo social -->
+    <div class="blk">
+      <h3>La mirada actual: el modelo social de la discapacidad</h3>
+      <p class="sub">El comentario cierra el artículo con la Convención sobre los Derechos de las Personas con Discapacidad (CDPD). Para ese modelo, la discapacidad es una construcción que resulta de una sociedad que no tiene en cuenta a las personas con discapacidad.</p>
+      <ol class="chev">
+        <li style="--bg:var(--c22t);--fg:var(--c22d)">
+          <h3>Quitar barreras</h3>
+          <p>Eliminar cualquier tipo de barrera social y material.</p>
+        </li>
+        <li style="--bg:color-mix(in srgb,var(--c22) 35%,var(--c22t));--fg:var(--ink)">
+          <h3>Nombrar apoyos y salvaguardias</h3>
+          <p>Es lo que establece la CDPD cuando la ley restringe la capacidad.</p>
+        </li>
+        <li style="--bg:var(--c22);--fg:var(--on)">
+          <h3>Fortalecer la autonomía</h3>
+          <p>Que cada persona tome sus propias decisiones, con igualdad de oportunidades.</p>
+        </li>
+      </ol>
+      <p class="note" style="margin-top:16px">Por eso una restricción a la capacidad debe entenderse como una forma de posibilitar y fortalecer el ejercicio de la capacidad jurídica, no de quitarla.</p>
+    </div>
+
+    <details class="more">
+      <summary>Más detalle: cómo se entiende la capacidad</summary>
+      <div class="in">
+        <ul>
+          <li>En términos generales, la capacidad es la aptitud de la persona para ser titular de derechos, adquirir obligaciones y ejercer esos derechos por sí misma.</li>
+          <li>El derecho civil tradicional la veía como un atributo de la persona; hoy se la considera un verdadero derecho humano, ligado al respeto de la dignidad y la libertad personal.</li>
+          <li>El Código mantiene la división clásica entre capacidad de derecho y capacidad de hecho (de obrar o de ejercicio), pero la redacta de manera más clara y exacta.</li>
+          <li>La capacidad de derecho es la aptitud que toda persona tiene, solo por serlo, para adquirir derechos y contraer obligaciones, ya sea que actúe ella misma o por medio de un tercero. La capacidad de hecho es la aptitud para adquirir o ejercer esos derechos por sí misma.</li>
+          <li>Una incapacidad de derecho jamás puede recaer sobre la persona en general, porque eso negaría que es sujeto de derecho: apunta siempre a actos concretos.</li>
+          <li>Los conceptos de hecho jurídico, simple acto lícito y acto jurídico se desarrollan a partir del art. 257 del Código.</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- ==================== ARTÍCULO 23 ==================== -->
+<section id="art23" class="band alt a23">
+  <div class="wrap">
+    <div class="art-head">
+      <div class="numeral" aria-hidden="true">23</div>
+      <h2>Capacidad de ejercicio</h2>
+      <p class="tagline">Cada persona puede actuar por sí misma. Las excepciones tienen que estar escritas.<br><span class="pages">Artículo 23, páginas 57 a 61 del comentario</span></p>
+    </div>
+
+    <blockquote class="law">
+      <span class="lbl">Lo que dice la ley</span>
+      Toda persona humana puede ejercer por sí misma sus derechos, excepto las limitaciones expresamente previstas en este Código y en una sentencia judicial.
+    </blockquote>
+
+    <div class="simple">
+      <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-chat"/></svg>En simple</div>
+      <p>Se parte de que cada persona puede hacer valer sus derechos por sí misma. Solo se la limita si el Código lo prevé de forma expresa o si una sentencia judicial así lo decide. Este principio conecta con la idea actual de la capacidad como derecho humano, y por eso exige mucho para admitir una restricción.</p>
+    </div>
+
+    <!-- regla y excepciones -->
+    <div class="blk">
+      <h3>Una regla y dos excepciones</h3>
+      <p class="sub">Las limitaciones &ldquo;expresamente previstas&rdquo; son solo estas dos.</p>
+      <div class="tree">
+        <div class="tree-top">Regla: toda persona humana puede ejercer por sí misma sus derechos</div>
+        <div class="tree-branches">
+          <div class="branch">
+            <h4>Excepción 1: lo que prevé el Código</h4>
+            <p>Niños, niñas y adolescentes que no tienen la edad y la madurez suficientes.</p>
+            <p class="note">Se desarrolla en la Sección 2ª: arts. 25, 26 y 100.</p>
+          </div>
+          <div class="branch">
+            <h4>Excepción 2: lo que dispone una sentencia judicial</h4>
+            <p>Personas mayores de edad con una restricción a su capacidad, decidida tras un proceso judicial que cumpla los requisitos del Código.</p>
+            <p class="note">Arts. 31, 32 y 38.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- antes y ahora -->
+    <div class="blk">
+      <h3>Antes y ahora</h3>
+      <p class="sub">El Código Civil anterior seguía la clasificación de Freitas, que tomó Vélez Sarsfield. El nuevo Código cambia el punto de partida.</p>
+      <div class="ba">
+        <div class="old">
+          <h4>Antes</h4>
+          <span class="when">Código Civil anterior (arts. 54 y 55)</span>
+          <ul>
+            <li><b>Incapaces absolutos</b>Privación total de la aptitud de ejercer derechos: personas por nacer, menores impúberes (menores de 14 años), &ldquo;dementes&rdquo; y &ldquo;sordomudos que no saben darse a entender por escrito&rdquo;. Son términos del Código derogado.</li>
+            <li><b>Incapaces relativos</b>Los &ldquo;menores adultos&rdquo; (mayores de 14 años), que podían hacer ciertos actos reconocidos por la ley.</li>
+            <li><b>El representante reemplazaba a la persona</b>Sustituía su voluntad y su participación en el acto.</li>
+          </ul>
+        </div>
+        <div class="new">
+          <h4>Ahora</h4>
+          <span class="when">Código Civil y Comercial</span>
+          <ul>
+            <li><b>La regla es la capacidad</b>Toda persona puede ejercer por sí los actos jurídicos, con las únicas excepciones que fija la norma.</li>
+            <li><b>La incapacidad ya no se impone en bloque</b>No hay incapacidad civil automática por una discapacidad mental: las restricciones salen de una sentencia y son puntuales.</li>
+            <li><b>Cuando hay representación, no se silencia a la persona</b>Se reconoce su condición de sujeto de derecho (se amplía en el art. 24).</li>
+          </ul>
+        </div>
+      </div>
+      <details class="more">
+        <summary>Más detalle: ¿por qué existen las restricciones?</summary>
+        <div class="in">
+          <ul>
+            <li>Tradicionalmente, las restricciones se justifican por la <strong>protección</strong> de la persona: ciertas condiciones (como la minoría de edad y la salud mental) la tornan vulnerable frente a terceros y la exponen a perjuicios o abusos en el tráfico jurídico.</li>
+            <li>Así, la restricción aparece como una forma de auxiliar la realización de los actos mediante mecanismos de asistencia.</li>
+            <li>Como respuesta a la incapacidad, se establece una figura que representa a quien no puede obrar: los representantes legales (padres o tutores) en el caso de menores de edad, y el curador en el caso de personas mayores de edad, según el régimen tradicional.</li>
+            <li>Las excepciones del art. 23 son las que el mismo Código consigna: el ejercicio de derechos de personas menores con escasa edad y débil autonomía (arts. 26 y 100) y las limitaciones por sentencia para personas con discapacidad (arts. 31, 32 y 38).</li>
+          </ul>
+        </div>
+      </details>
+    </div>
+
+    <!-- dos grupos -->
+    <div class="blk">
+      <h3>Dos grupos de personas, dos fuentes que respaldan el principio</h3>
+      <p class="sub">El principio de capacidad se aplica a quienes podrían recibir restricciones: niñez y adolescencia, y personas con discapacidad intelectual o psicosocial.</p>
+      <div class="duo">
+        <div class="pan">
+          <h4>Niños, niñas y adolescentes</h4>
+          <p>Son sujetos de derecho y necesitan la orientación de los adultos responsables para ejercerlos. Su <strong>autonomía progresiva</strong> se mide según el acto concreto que quieran hacer.</p>
+          <div class="norms"><span>Convención sobre los Derechos del Niño, art. 5</span><span>Ley 26.061, art. 3</span><span>CCyC arts. 25, 26 y 100</span></div>
+        </div>
+        <div class="pan">
+          <h4>Personas adultas con discapacidad intelectual o psicosocial</h4>
+          <p>Tienen capacidad jurídica. Si hay una restricción, viene de una sentencia, es puntual y está dicha expresamente: <strong>la capacidad sigue en todo lo que no se limitó</strong>.</p>
+          <div class="norms"><span>CDPD (ley 26.378), art. 12</span><span>Ley 26.657 de Salud Mental, arts. 3 y 5</span><span>CCyC arts. 31, 32 y 38</span></div>
+        </div>
+      </div>
+      <p class="note" style="margin-top:16px">Se habla de discapacidad &ldquo;psicosocial&rdquo; y no &ldquo;mental&rdquo; por adhesión al modelo social de la discapacidad de la CDPD, que tiene rango constitucional en la Argentina.</p>
+    </div>
+
+    <!-- cómo se limita en personas adultas -->
+    <div class="blk">
+      <h3>Cómo se limita la capacidad de una persona adulta</h3>
+      <p class="sub">Solo por una sentencia, y solo en lo que la sentencia dice.</p>
+      <ol class="chev">
+        <li style="--bg:var(--c23t);--fg:var(--c23d)"><h3>Proceso judicial</h3><p>Debe cumplir los requisitos generales del Código.</p></li>
+        <li style="--bg:color-mix(in srgb,var(--c23) 35%,var(--c23t));--fg:var(--ink)"><h3>Sentencia</h3><p>Es la única vía para restringir la capacidad de una persona mayor de edad.</p></li>
+        <li style="--bg:var(--c23);--fg:var(--on)"><h3>Límite puntual y expreso</h3><p>La sentencia enuncia qué actos concretos se limitan.</p></li>
+        <li style="--bg:var(--ink);--fg:var(--paper)"><h3>Todo lo demás se mantiene</h3><p>La persona sigue siendo capaz en lo que no fue limitado.</p></li>
+      </ol>
+    </div>
+
+    <!-- derecho humano -->
+    <div class="blk">
+      <h3>La capacidad como derecho humano</h3>
+      <p class="sub">El comentario se apoya en la Observación General 1 del Comité de Derechos de las Personas con Discapacidad, sobre el art. 12 de la CDPD.</p>
+      <div class="duo">
+        <div class="pan">
+          <h4>Lo que dice el Comité</h4>
+          <p>El derecho a ser reconocida como persona ante la ley rige <strong>&ldquo;en todas partes&rdquo;</strong>: ninguna circunstancia permite privarlo o limitarlo, ni siquiera en situaciones excepcionales.</p>
+          <p>Todas las personas con discapacidad tienen plena capacidad jurídica.</p>
+          <p style="margin:0">La capacidad jurídica es indispensable para ejercer los derechos civiles, políticos, económicos, sociales y culturales, y pesa especialmente en las decisiones sobre <strong>salud, educación y trabajo</strong>.</p>
+        </div>
+        <div class="pan">
+          <h4>A quiénes se les negó, de forma discriminatoria</h4>
+          <p>A lo largo de la historia, a muchos grupos: las <strong>mujeres</strong> (sobre todo al casarse), las <strong>minorías étnicas</strong> y, hasta hoy y más que a nadie, las <strong>personas con discapacidad</strong>.</p>
+          <p style="margin:0">Es un atributo universal de todas las personas por su condición humana, y debe mantenerse para las personas con discapacidad en igualdad de condiciones con las demás.</p>
+        </div>
+      </div>
+      <h4 style="margin:28px 0 12px">Derechos que se pierden cuando se niega la capacidad jurídica</h4>
+      <div class="chips">
+        <span class="chip">Votar</span>
+        <span class="chip">Casarse y formar una familia</span>
+        <span class="chip">Derechos reproductivos</span>
+        <span class="chip">Responsabilidad parental (patria potestad)</span>
+        <span class="chip">Consentir relaciones íntimas</span>
+        <span class="chip">Consentir un tratamiento médico</span>
+        <span class="chip">La libertad</span>
+      </div>
+
+      <details class="more">
+        <summary>Más detalle: qué dijeron otros organismos</summary>
+        <div class="in">
+          <div class="orgs">
+            <div class="org">
+              <b>Alto Comisionado de Derechos Humanos de la ONU<small>¿Quién debe decidir? (2012)</small></b>
+              <div>
+                <p>La capacidad jurídica es más que la posibilidad de tomar decisiones por sí o por un tercero: tiene que ver con <strong>ser persona</strong>.</p>
+                <p>Sus restricciones deben valorarse con sumo cuidado y de modo excepcional, porque limitan un derecho humano. Una limitación total por la sola existencia de una discapacidad intelectual o psicosocial viola los principios de la Convención.</p>
+              </div>
+            </div>
+            <div class="org">
+              <b>Tribunal Europeo de Derechos Humanos<small>Shtukaturov c. Rusia, 2010</small></b>
+              <div>
+                <p>Declarar incapaz a una persona de forma total es una injerencia <strong>&ldquo;muy grave&rdquo;</strong> en su vida privada: supone depender de un tutor en todos los ámbitos, por un periodo indefinido y sin poder impugnarlo.</p>
+                <p>Un trastorno mental, aunque sea grave, no puede ser la única razón para una incapacitación total. Hace falta una respuesta a medida, que no limite la vida privada más de lo estrictamente necesario.</p>
+              </div>
+            </div>
+            <div class="org">
+              <b>Comité de la CDPD<small>Observación General 1</small></b>
+              <div>
+                <p>Los Estados deben revisar toda su legislación para que la capacidad jurídica de las personas con discapacidad no se limite de forma distinta a la de las demás.</p>
+                <p>Los regímenes de <strong>sustitución en la toma de decisiones</strong> (tutela, curaduría, leyes de salud mental que permiten el tratamiento forzoso) deben abolirse. El CCyC se pone a tono con esa exigencia al dejar atrás la incapacidad impuesta sin distinción por una discapacidad mental.</p>
+              </div>
+            </div>
+            <div class="org">
+              <b>Acceso a la justicia<small>Art. 13 de la CDPD</small></b>
+              <div>
+                <p>Las personas con discapacidad deben acceder a la justicia en igualdad de condiciones: procedimientos con ajustes razonables y adecuados a la edad.</p>
+                <p>Ese acceso va unido al reconocimiento de una capacidad de ejercicio amplia. La CDPD tiene jerarquía constitucional (art. 75, inc. 22 de la Constitución Nacional; ley 27.044).</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </details>
+    </div>
+
+    <!-- autonomía progresiva -->
+    <div class="blk">
+      <h3>Niñez y adolescencia: la autonomía progresiva</h3>
+      <p class="sub">La Convención sobre los Derechos del Niño pone como principio central que los niños y niñas ejercen sus derechos con una autonomía que crece de a poco, guiados por sus padres, representantes, guardadores o cuidadores.</p>
+      <div class="grad" role="img" aria-label="De más orientación de las personas adultas a más autonomía"><span>Más orientación de las personas adultas</span><span>Más autonomía propia</span></div>
+      <p class="note" style="margin:10px 0 28px">El punto de referencia es el acto concreto y la madurez para ese acto, no solo la edad.</p>
+      <div class="rules">
+        <div class="rule">
+          <div class="ico"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-chat"/></svg></div>
+          <div><h4>Se escucha su opinión</h4><p>Respetar su condición de sujeto de derecho implica oírlos y darle a su opinión el peso que corresponda. Participar es, en sí, ejercer un derecho humano.</p></div>
+        </div>
+        <div class="rule">
+          <div class="ico"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-shield"/></svg></div>
+          <div><h4>Protección que promueve</h4><p>No hay derechos distintos para niños y adultos: todos son sujetos de derecho. Los niños reciben medidas especiales de protección, y esas medidas promueven sus derechos, no los recortan.</p></div>
+        </div>
+        <div class="rule">
+          <div class="ico"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-noteq"/></svg></div>
+          <div><h4>Distinguir por edad, solo con razones</h4><p>Según la Corte Interamericana (Opinión Consultiva 17/2002), solo se admite si responde a criterios razonables y objetivos y es proporcional.</p></div>
+        </div>
+        <div class="rule">
+          <div class="ico"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-check"/></svg></div>
+          <div><h4>El diseño del Código cumple</h4><p>Según el comentario, la reforma respeta el derecho convencional de los derechos humanos y supera el control de constitucionalidad y convencionalidad (Corte IDH, Almonacid Arellano vs. Chile).</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== ARTÍCULO 24 ==================== -->
+<section id="art24" class="band a24">
+  <div class="wrap">
+    <div class="art-head">
+      <div class="numeral" aria-hidden="true">24</div>
+      <h2>Personas incapaces de ejercicio</h2>
+      <p class="tagline">Quiénes necesitan que alguien actúe con ellas y por ellas, y cómo se las protege sin silenciarlas.<br><span class="pages">Artículo 24, páginas 61 a 64 del comentario</span></p>
+    </div>
+
+    <blockquote class="law">
+      <span class="lbl">Lo que dice la ley</span>
+      Son incapaces de ejercicio:
+      <ol>
+        <li>la persona por nacer;</li>
+        <li>la persona que no cuenta con la edad y grado de madurez suficiente, con el alcance dispuesto en la Sección 2ª de este Capítulo;</li>
+        <li>la persona declarada incapaz por sentencia judicial, en la extensión dispuesta en esa decisión.</li>
+      </ol>
+    </blockquote>
+
+    <div class="simple">
+      <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-chat"/></svg>En simple</div>
+      <p>Es la lista corta de excepciones al principio del art. 23. Para esos tres casos la ley prevé la figura de la <strong>representación</strong>, pero con un cambio de enfoque: se tiene siempre presente que quien no puede actuar por sí sigue siendo una persona.</p>
+    </div>
+
+    <!-- tres casos -->
+    <div class="blk">
+      <h3>Los tres casos</h3>
+      <p class="sub">Cada caso tiene su razón de ser y su forma de representación.</p>
+      <div class="cases">
+        <article class="case">
+          <div class="letter">a</div>
+          <h4>La persona por nacer</h4>
+          <p>Es clara su imposibilidad de ejercer derechos. Pero es persona humana: su existencia comienza con la concepción (art. 19 y siguientes).</p>
+          <div class="who"><b>Quién actúa</b>Sus padres (art. 101, inc. a).</div>
+          <p>Los derechos y obligaciones adquiridos a su favor quedan firmes si nace con vida (art. 21). Por eso se pueden hacer actos jurídicos en su nombre durante ese período.</p>
+          <p class="fine">Sobre qué es la &ldquo;concepción&rdquo;, el comentario recuerda el caso Artavia Murillo vs. Costa Rica (Corte IDH, 2012), que entendió que ocurre cuando el embrión se implanta en el útero.</p>
+        </article>
+        <article class="case">
+          <div class="letter">b</div>
+          <h4>La persona sin edad y madurez suficiente</h4>
+          <p>Quien no tiene la edad y el grado de madurez que el acto concreto exige, con el alcance de la Sección 2ª (persona menor de edad).</p>
+          <div class="who"><b>Quién actúa</b>Sus padres, en ejercicio de la responsabilidad parental; y supletoriamente, un tutor (art. 101, inc. b).</div>
+          <p class="fine">No hay una edad mágica: ver el bloque &ldquo;Edad y madurez&rdquo; más abajo.</p>
+        </article>
+        <article class="case">
+          <div class="letter">c</div>
+          <h4>La persona declarada incapaz por sentencia</h4>
+          <p>Una persona a la que un juez declaró incapaz, y solo en la extensión que dispuso esa decisión.</p>
+          <div class="who"><b>Quién actúa</b>Un representante (art. 100 y siguientes).</div>
+          <p>Es una respuesta residual, excepcional y restrictiva (art. 31, inc. b): solo procede si las alternativas menos gravosas no alcanzan.</p>
+          <p class="fine">Ver la escalera de intervención más abajo.</p>
+        </article>
+      </div>
+    </div>
+
+    <!-- representar sin silenciar -->
+    <div class="blk">
+      <h3>Representar sin silenciar</h3>
+      <p class="sub">El Código regula la tradicional &ldquo;representación de los incapaces&rdquo; en el Capítulo 10 (Representación y asistencia. Tutela y curatela) e introduce un giro conceptual.</p>
+      <div class="vs">
+        <div class="old">
+          <h4>Antes</h4>
+          <p>El representante sustituía la voluntad de la persona y su participación en el acto.</p>
+        </div>
+        <div class="arrow" aria-hidden="true">&rarr;</div>
+        <div class="new">
+          <h4>Ahora</h4>
+          <p>Se considera siempre la condición de persona humana de quien no puede ejercer por sí. Tiene derecho a <strong>ser oída y a participar</strong>, en la medida posible, en las decisiones.</p>
+        </div>
+      </div>
+      <p class="note" style="margin-top:14px">Normas citadas: CCyC arts. 104, 113 y 117; ley 26.061, arts. 3, 19, 24 y 27; Convención sobre los Derechos del Niño, arts. 5 y 12.</p>
+    </div>
+
+    <!-- escalera -->
+    <div class="blk">
+      <h3>Personas adultas: la escalera de intervención</h3>
+      <p class="sub">Para el caso c, el Código prueba primero lo menos restrictivo. La incapacidad está al final, como último recurso.</p>
+      <div class="axis" aria-hidden="true"><span>Menos restrictivo</span><i></i><span>Más restrictivo</span></div>
+      <div class="stairs">
+        <div class="stair s1">
+          <h4>Apoyos</h4>
+          <p>Son el auxilio inicial para que la persona pueda ejercer su capacidad.</p>
+          <small>Art. 43 y siguientes</small>
+        </div>
+        <div class="stair s2">
+          <h4>Restricción de la capacidad</h4>
+          <p>Una sentencia limita actos puntuales. Es la alternativa menos gravosa que la incapacidad.</p>
+          <small>Art. 32</small>
+        </div>
+        <div class="stair s3">
+          <h4>Incapacidad</h4>
+          <p>Último recurso, y solo en la extensión que fije la sentencia. Procede si la restricción resulta inadecuada frente a la absoluta imposibilidad de la persona de interactuar con su entorno y expresar su voluntad, y los apoyos son insuficientes.</p>
+          <small>Arts. 31, inc. b, y 32</small>
+        </div>
+      </div>
+    </div>
+
+    <!-- edad y madurez -->
+    <div class="blk">
+      <h3>Edad y madurez: se mira el acto concreto</h3>
+      <p class="sub">El caso b mezcla dos requisitos. El Código se aleja de las reglas rígidas y evalúa cada situación.</p>
+      <div class="split">
+        <svg class="diagram" viewBox="0 0 380 240" role="img" aria-labelledby="veT veD">
+          <title id="veT">Edad y madurez suficiente</title>
+          <desc id="veD">Dos círculos que se cruzan: edad y madurez suficiente. La parte común es la aptitud para ese acto.</desc>
+          <circle class="venn-c" cx="150" cy="120" r="95"/>
+          <circle class="venn-c" cx="230" cy="120" r="95"/>
+          <text class="t b c24" x="97" y="126" text-anchor="middle" font-size="17">Edad</text>
+          <text class="t b c24" x="283" y="115" text-anchor="middle" font-size="14">Madurez</text>
+          <text class="t b c24" x="283" y="133" text-anchor="middle" font-size="14">suficiente</text>
+          <text class="t b" x="190" y="108" text-anchor="middle" font-size="14">Aptitud</text>
+          <text class="t b" x="190" y="126" text-anchor="middle" font-size="14">para ese</text>
+          <text class="t b" x="190" y="144" text-anchor="middle" font-size="14">acto</text>
+        </svg>
+        <div class="defs">
+          <div class="def"><h4>Ya no hay &ldquo;púberes&rdquo; e &ldquo;impúberes&rdquo;</h4><p>El Código elimina esa clasificación y su línea de corte a los 14 años.</p></div>
+          <div class="def"><h4>Un solo corte por edad: los 13 años</h4><p>Separa a niños y niñas de adolescentes. Tener 13 o más aporta presunciones (por ejemplo, actuar con patrocinio letrado), pero no alcanza por sí solo para definir la capacidad en todos los casos.</p></div>
+          <div class="def"><h4>&ldquo;Suficiente&rdquo; depende del acto</h4><p>La madurez puede alcanzar para un acto y faltar para otro. El sistema es más subjetivo: se evalúa el caso concreto.</p></div>
+        </div>
+      </div>
+
+      <div class="neq" style="margin-top:34px">
+        <span class="chip">Aptitud para un acto personal</span><b aria-label="no es lo mismo que">&ne;</b><span class="chip">Aptitud para un acto patrimonial</span>
+      </div>
+      <p class="note" style="margin-top:8px">El comentario da este ejemplo: la aptitud que se exige para los actos personales es distinta de la que se exige para los patrimoniales.</p>
+
+      <h4 style="margin:34px 0 12px">Se parece a la &ldquo;competencia&rdquo; de la bioética: poder, para ese acto concreto, &hellip;</h4>
+      <ol class="chain">
+        <li>comprender</li><li>razonar</li><li>evaluar</li><li>decidir</li>
+      </ol>
+      <p style="margin-top:16px;max-width:72ch">Una persona puede ser capaz en términos generales y, sin embargo, no tener competencia para ciertas decisiones. Y al revés: quien carece de la capacidad civil tradicional puede demostrar que comprende, razona y define opciones para un acto concreto.</p>
+
+      <h4 style="margin:34px 0 14px">Cómo cambió el corte por edad</h4>
+      <svg class="diagram" viewBox="0 0 700 185" role="img" aria-labelledby="tlT tlD">
+        <title id="tlT">Antes y ahora: cortes por edad</title>
+        <desc id="tlD">Ahora el corte es a los 13 años, entre niños y niñas y adolescentes. Antes era a los 14 años, entre impúberes y menores adultos. La escala llega hasta los 18 años.</desc>
+        <text class="t b" x="0" y="63" font-size="14">Ahora (CCyC)</text>
+        <rect class="bar-new1" x="160" y="40" width="361" height="36" rx="8"/>
+        <rect class="bar-new2" x="521" y="40" width="139" height="36" rx="8"/>
+        <text class="t b c24" x="340" y="63" text-anchor="middle" font-size="14">Niños y niñas</text>
+        <text class="t w" x="590" y="63" text-anchor="middle" font-size="14">Adolescentes</text>
+        <text class="t b" x="0" y="119" font-size="13">Antes (Código anterior)</text>
+        <rect class="bar-old1" x="160" y="96" width="389" height="36" rx="8"/>
+        <rect class="bar-old2" x="549" y="96" width="111" height="36" rx="8"/>
+        <text class="t m" x="354" y="119" text-anchor="middle" font-size="14">Menores impúberes</text>
+        <text class="t m" x="604" y="119" text-anchor="middle" font-size="12">Menores adultos</text>
+        <line x1="521" y1="30" x2="521" y2="40" stroke="var(--c24)" stroke-width="3"/>
+        <text class="t b c24" x="521" y="22" text-anchor="middle" font-size="14">13 años</text>
+        <line x1="549" y1="132" x2="549" y2="142" stroke="var(--muted)" stroke-width="3"/>
+        <text class="t m" x="549" y="158" text-anchor="middle" font-size="14">14 años</text>
+        <text class="t m" x="160" y="176" text-anchor="middle" font-size="12">0</text>
+        <text class="t m" x="660" y="176" text-anchor="end" font-size="12">18 años: mayoría de edad (Sección 2ª)</text>
+      </svg>
+    </div>
+
+    <!-- balanza -->
+    <div class="blk">
+      <h3>Ni todo menor incapaz, ni todo niño capaz para todo</h3>
+      <p class="sub">El comentario explica por qué el Código eligió un punto medio.</p>
+      <div class="bal">
+        <div>
+          <h4>Un extremo: el Código anterior</h4>
+          <p>Todo menor de edad era incapaz. Una solución intransigente.</p>
+        </div>
+        <div class="mid">
+          <h4>El CCyC: edad y madurez suficiente</h4>
+          <p>Se evalúa cada acto. Es un sistema más justo y más cercano al respeto de la persona humana.</p>
+        </div>
+        <div>
+          <h4>El otro extremo</h4>
+          <p>Todo niño o niña capaz para todos los actos. Sería dejar a las personas menores de edad sin protección, y contradice la doctrina de la Corte IDH.</p>
+        </div>
+      </div>
+      <p style="margin-top:22px;max-width:76ch">La Corte IDH (Opinión Consultiva 17/2002) explicó que <strong>no toda distinción de trato es discriminatoria</strong>: ciertas desigualdades de hecho pueden traducirse, legítimamente, en un trato jurídico distinto. Ese trato sirve para proteger a quienes lo necesitan y permite el pleno ejercicio de los derechos reconocidos a la niñez.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== LO ESENCIAL ==================== -->
+<section id="esencial" class="band alt">
+  <div class="wrap">
+    <h2 class="sec">Lo esencial en ocho ideas</h2>
+    <p class="sec-sub">El color indica el artículo: azul, art. 22; verde, art. 23; rosa, art. 24.</p>
+    <ul class="take">
+      <li class="t22"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-check"/></svg></span><span>Toda persona humana puede ser titular de derechos y deberes.<small>Art. 22</small></span></li>
+      <li class="t22"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-check"/></svg></span><span>La ley solo puede limitar esa capacidad para hechos, simples actos o actos jurídicos determinados, y nunca de forma total.<small>Art. 22</small></span></li>
+      <li class="t22"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-check"/></svg></span><span>Las incapacidades de derecho protegen el orden público y no se suplen con la actuación de otra persona.<small>Art. 22</small></span></li>
+      <li class="t23"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-check"/></svg></span><span>Toda persona puede ejercer por sí misma sus derechos. Esa es la regla.<small>Art. 23</small></span></li>
+      <li class="t23"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-check"/></svg></span><span>Solo hay excepciones si el Código las prevé o si una sentencia judicial las dispone, y deben estar dichas de forma expresa.<small>Art. 23</small></span></li>
+      <li class="t24"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-check"/></svg></span><span>Son incapaces de ejercicio: la persona por nacer, la que no tiene edad y madurez suficiente y la declarada incapaz por sentencia, en la extensión que esta fije.<small>Art. 24</small></span></li>
+      <li class="t24"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-check"/></svg></span><span>En la niñez y la adolescencia se mira la edad y la madurez suficiente para cada acto (autonomía progresiva).<small>Arts. 23 y 24</small></span></li>
+      <li class="t24"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-check"/></svg></span><span>En las personas adultas, primero los apoyos, luego la restricción puntual y la incapacidad solo como último recurso. Quien representa debe escuchar a la persona.<small>Arts. 23 y 24</small></span></li>
+    </ul>
+
+    <div class="next">
+      <h3>Dónde seguir leyendo</h3>
+      <p>Normas del Código que el comentario cita y que continúan estos principios.</p>
+      <div class="chips">
+        <span class="chip">Sección 2ª: persona menor de edad, arts. 25 y siguientes</span>
+        <span class="chip">Arts. 31, 32 y 38: restricciones a la capacidad por sentencia</span>
+        <span class="chip">Art. 43: sistema de apoyos</span>
+        <span class="chip">Arts. 100 y 101: representantes</span>
+        <span class="chip">Capítulo 10: representación y asistencia, tutela y curatela</span>
+        <span class="chip">Arts. 257 a 259: hechos y actos jurídicos</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== GLOSARIO ==================== -->
+<section id="glosario" class="band">
+  <div class="wrap">
+    <h2 class="sec">Glosario sin vueltas</h2>
+    <p class="sec-sub">Las palabras difíciles de esta sección, explicadas en pocas líneas.</p>
+    <dl class="gloss">
+      <div><dt>Capacidad de derecho</dt><dd>Poder ser titular de derechos y deberes. La tiene toda persona humana.</dd></div>
+      <div><dt>Capacidad de ejercicio</dt><dd>Poder actuar por sí mismo para ejercer los derechos. También se llama capacidad de hecho o de obrar.</dd></div>
+      <div><dt>Incapacidad de derecho</dt><dd>Prohibición puntual de la ley para ciertos actos. No se arregla con un representante.</dd></div>
+      <div><dt>Incapacidad de ejercicio</dt><dd>No poder actuar por sí mismo en los casos previstos. Se suple con representación.</dd></div>
+      <div><dt>Restricción a la capacidad</dt><dd>Limitación puntual fijada por una sentencia. La persona conserva su capacidad en todo lo demás.</dd></div>
+      <div><dt>Representación</dt><dd>Otra persona (padres, tutor y otras figuras) actúa en nombre de quien no puede ejercer por sí sus derechos.</dd></div>
+      <div><dt>Apoyos y salvaguardias</dt><dd>Los apoyos son ayudas para que la persona ejerza su capacidad. Las salvaguardias son protecciones para que esa ayuda no derive en abusos.</dd></div>
+      <div><dt>Autonomía progresiva</dt><dd>La participación de niños, niñas y adolescentes en las decisiones crece de a poco, según su edad, su madurez y el acto de que se trate.</dd></div>
+      <div><dt>Madurez suficiente (competencia)</dt><dd>Poder comprender, razonar, evaluar y decidir sobre un acto concreto.</dd></div>
+      <div><dt>Orden público</dt><dd>Reglas que las personas no pueden dejar sin efecto por un acuerdo entre ellas.</dd></div>
+      <div><dt>Sentencia judicial</dt><dd>Decisión de un juez, tomada tras un proceso, que puede limitar la capacidad de una persona adulta.</dd></div>
+      <div><dt>Modelo social de la discapacidad</dt><dd>Enfoque que entiende la discapacidad como el resultado de barreras de la sociedad, y no solo como algo de la persona.</dd></div>
+      <div><dt>CDPD</dt><dd>Convención sobre los Derechos de las Personas con Discapacidad (ley 26.378), con jerarquía constitucional (ley 27.044).</dd></div>
+      <div><dt>CDN</dt><dd>Convención sobre los Derechos del Niño, base del principio de autonomía progresiva.</dd></div>
+    </dl>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p><strong>Fuente.</strong> Código Civil y Comercial de la Nación Comentado, Tomo I (arts. 1 a 400), Infojus, Sistema Argentino de Información Jurídica. Libro Primero, Título I, Capítulo 2, Sección 1ª: arts. 22 a 24, páginas 55 a 64. Comentarios a los arts. 22 a 50 de Silvia E. Fernández.</p>
+    <p>Este resumen es una guía de estudio con fines didácticos: reformula el comentario en lenguaje sencillo y no reemplaza el texto de la ley ni el asesoramiento profesional. Los ejemplos marcados como ilustrativos no figuran en el comentario.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn=document.getElementById('toggleAll');
+  var all=function(){return Array.prototype.slice.call(document.querySelectorAll('details.more'));};
+  btn.addEventListener('click',function(){
+    var open=all().some(function(d){return !d.open;});
+    all().forEach(function(d){d.open=open;});
+    btn.textContent=open?'Cerrar todos los detalles':'Abrir todos los detalles';
+  });
+  window.addEventListener('beforeprint',function(){all().forEach(function(d){d.open=true;});});
+
+  var links=Array.prototype.slice.call(document.querySelectorAll('.nav a'));
+  var byId={};
+  links.forEach(function(a){byId[a.getAttribute('href').slice(1)]=a;});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){
+          links.forEach(function(l){l.classList.remove('on');});
+          if(byId[e.target.id]){byId[e.target.id].classList.add('on');}
+        }
+      });
+    },{rootMargin:'-40% 0px -55% 0px'});
+    Array.prototype.slice.call(document.querySelectorAll('main > section[id]')).forEach(function(s){io.observe(s);});
+  }
+})();
+</script>
+</body>
+</html>

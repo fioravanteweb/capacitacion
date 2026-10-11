@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Disolución del matrimonio en simple: resumen gráfico de los arts. 435 a 445 del CCyC</title>
+<meta name="description" content="Resumen gráfico y en lenguaje sencillo del Capítulo 8, Disolución del matrimonio (arts. 435 a 445) del Código Civil y Comercial comentado, Tomo II.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500..800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F2F5F9;--surface:#fff;--ink:#1C2230;--muted:#586075;--line:#DCE2EC;--on:#fff;
+--c1:#2563C9;--c2:#0F7B63;--c3:#B8480E;--c4:#7B3FC7;--c5:#B5205A;
+--fd:"Fraunces",Georgia,"Times New Roman",serif;--fb:"Source Sans 3",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--r:16px}
+@media (prefers-color-scheme:dark){:root{--paper:#12151D;--surface:#1A1F2B;--ink:#ECEEF4;--muted:#A7AEC0;--line:#2B3242;--on:#12151D;
+--c1:#7DB0FF;--c2:#55D3B2;--c3:#FFA169;--c4:#BE9BFF;--c5:#FF8DB4}}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:1.0625rem/1.65 var(--fb);-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--fd);margin:0;line-height:1.1;letter-spacing:-.015em;text-wrap:balance}
+p{margin:0 0 1em}
+:focus-visible{outline:3px solid var(--c1);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:var(--paper);padding:10px 16px;border-radius:10px;z-index:50}
+.skip:focus{left:12px}
+.s1{--ac:var(--c1)}.s2{--ac:var(--c2)}.s3{--ac:var(--c3)}.s4{--ac:var(--c4)}.s5{--ac:var(--c5)}
+.s1,.s2,.s3,.s4,.s5{--t:color-mix(in srgb,var(--ac) 13%,var(--surface));--d:color-mix(in srgb,var(--ac) 78%,var(--ink))}
+
+/* navegación */
+.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 90%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top-in{max-width:1120px;margin:0 auto;display:flex;align-items:center;gap:18px;padding:10px 24px}
+.brand{font-family:var(--fd);font-weight:700;white-space:nowrap}
+.nav{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav a{display:inline-flex;align-items:center;gap:8px;padding:7px 13px;border-radius:999px;color:var(--muted);text-decoration:none;font-weight:600;font-size:.92rem;white-space:nowrap}
+.nav a:hover{color:var(--ink);background:var(--surface)}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--ac)}
+
+/* hero */
+.hero{padding:56px 0 40px}
+.kicker{color:var(--muted);font-size:.95rem;font-weight:600;max-width:60ch;margin-bottom:18px}
+h1{font-weight:800;font-size:clamp(2.2rem,5.4vw,4rem);line-height:1.02;letter-spacing:-.03em;max-width:18ch;margin-bottom:22px}
+.lead{font-size:1.18rem;max-width:62ch;color:var(--muted)}
+.lead strong{color:var(--ink)}
+.stats{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 0;padding:0;list-style:none}
+.stats li{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px 18px;font-size:.95rem}
+.stats b{font-family:var(--fd);font-size:1.5rem;margin-right:6px}
+
+/* recorrido */
+.band{padding:64px 0}
+.band.alt{background:var(--surface);border-block:1px solid var(--line)}
+.sec{font-weight:800;font-size:clamp(1.7rem,3.4vw,2.5rem);letter-spacing:-.025em;margin-bottom:10px}
+.sub{color:var(--muted);max-width:64ch;margin-bottom:30px}
+.route{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.route a{display:flex;flex-direction:column;gap:6px;height:100%;padding:18px;border-radius:var(--r);background:var(--ac);color:var(--on);text-decoration:none;position:relative}
+.route a:hover{transform:translateY(-2px)}
+.route .k{font-size:.82rem;font-weight:700;opacity:.9}
+.route h3{font-size:1.15rem;color:inherit}
+.route p{margin:0;font-size:.9rem;line-height:1.45;opacity:.95}
+
+/* tabla */
+.cmp{width:100%;border-collapse:separate;border-spacing:0;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.cmp th,.cmp td{padding:15px 20px;text-align:left;vertical-align:top;border-top:1px solid var(--line);font-size:.98rem;line-height:1.55}
+.cmp thead th{border-top:0;font-family:var(--fd);font-size:1.15rem;color:var(--on)}
+.cmp thead .a{background:var(--muted)}.cmp thead .b{background:var(--c2)}.cmp td.new{background:color-mix(in srgb,var(--c2) 10%,var(--surface))}
+.cmp tbody th{width:20%;color:var(--muted);font-size:.92rem}
+
+/* buscador */
+.tools{position:sticky;top:57px;z-index:15;background:var(--paper);padding:14px 0;border-bottom:1px solid var(--line)}
+.tools .wrap{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.tools input{flex:1 1 260px;font:inherit;padding:11px 16px;border-radius:12px;border:2px solid var(--line);background:var(--surface);color:var(--ink)}
+.tools input:focus{border-color:var(--c1);outline:0}
+.btn{font:700 .95rem var(--fb);padding:11px 18px;border-radius:12px;border:2px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer}
+.count{color:var(--muted);font-size:.9rem}
+
+/* secciones por parágrafo */
+.art-head{display:grid;grid-template-columns:auto 1fr;gap:4px 28px;align-items:end;margin-bottom:30px}
+.numeral{grid-row:span 2;font-family:var(--fd);font-weight:800;font-size:clamp(4.5rem,11vw,8rem);line-height:.8;letter-spacing:-.05em;color:var(--ac)}
+.art-head h2{font-weight:800;font-size:clamp(1.8rem,3.6vw,2.7rem);letter-spacing:-.025em}
+.tagline{color:var(--muted);font-size:1.1rem;max-width:56ch;margin:0}
+.rng{display:inline-block;margin-top:8px;font-size:.88rem;font-weight:700;color:var(--d);background:var(--t);border-radius:999px;padding:2px 12px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-top:6px solid var(--ac);border-radius:var(--r);padding:22px 24px;display:flex;flex-direction:column;gap:12px}
+.alt .card{background:var(--paper)}
+.card .hd{display:flex;align-items:center;gap:14px}
+.n{flex:none;min-width:56px;text-align:center;padding:6px 10px;border-radius:12px;background:var(--ac);color:var(--on);font-family:var(--fd);font-weight:800;font-size:1.35rem}
+.card h3{font-size:1.25rem;line-height:1.2}
+.card p{margin:0;font-size:.99rem;line-height:1.6}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}
+.chips span{padding:4px 12px;border-radius:999px;background:var(--t);color:var(--d);font-weight:600;font-size:.85rem;line-height:1.35}
+.empty{display:none;color:var(--muted);padding:24px 0}
+
+details.law{border-top:1px dashed var(--line);padding-top:10px}
+details.law summary{cursor:pointer;list-style:none;font-weight:700;font-size:.93rem;color:var(--d)}
+details.law summary::-webkit-details-marker{display:none}
+details.law summary::before{content:"";display:inline-block;width:8px;height:8px;border-right:2.5px solid var(--ac);border-bottom:2.5px solid var(--ac);transform:rotate(-45deg);margin-right:10px;transition:transform .2s}
+details.law[open] summary::before{transform:rotate(45deg)}
+details.law blockquote{margin:10px 0 0;padding:12px 16px;border-left:5px solid var(--ac);background:var(--t);border-radius:0 12px 12px 0;font-size:.95rem;line-height:1.65}
+/* lo esencial */
+.take{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 40px;counter-reset:t}
+.take li{display:grid;grid-template-columns:40px 1fr;gap:14px;align-items:start;counter-increment:t}
+.take li::before{content:"✓";width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--ink);color:var(--paper);font-family:var(--fd);font-weight:800}
+.foot{padding:48px 0 64px;color:var(--muted);font-size:.92rem}
+.foot p{max-width:80ch}
+
+@media (max-width:960px){.route{grid-template-columns:1fr}.grid,.take{grid-template-columns:1fr}}
+@media (max-width:760px){
+  .band{padding:48px 0}.brand{display:none}.wrap,.top-in{padding-inline:18px}
+  .route{grid-template-columns:1fr}
+  .art-head{grid-template-columns:1fr}.numeral{grid-row:auto}
+  .cmp thead{display:none}.cmp,.cmp tbody,.cmp tr,.cmp th,.cmp td{display:block;width:100%}
+  .cmp tbody th{width:100%;background:var(--paper);padding:10px 18px}
+  .cmp td::before{content:attr(data-h);display:block;font-weight:700;font-size:.8rem;color:var(--muted)}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+@media print{details.law>*{display:block}.top,.tools,.skip{display:none}body{background:#fff}.band{padding:24px 0}.card{break-inside:avoid}}
+</style>
+</head>
+<body>
+<a class="skip" href="#panorama">Saltar al contenido</a>
+<header class="top"><div class="top-in">
+  <div class="brand">Divorcio, en simple</div>
+  <nav class="nav" aria-label="Secciones de la página">
+    <a href="#panorama">Panorama</a>
+    <a class="s1" href="#p1"><i class="dot"></i>Causales</a>
+    <a class="s2" href="#p2"><i class="dot"></i>Proceso</a>
+    <a class="s3" href="#p3"><i class="dot"></i>Efectos</a>
+    <a href="#esencial">Lo esencial</a>
+  </nav>
+</div></header>
+
+<main>
+<section id="panorama">
+  <div class="hero"><div class="wrap">
+    <p class="kicker">Código Civil y Comercial de la Nación comentado, Tomo II. Libro Segundo: Relaciones de familia. Título I: Matrimonio. Capítulo 8: Disolución del matrimonio</p>
+    <h1>Para divorciarse no hace falta una causa ni esperar un plazo.</h1>
+    <p class="lead">Resumen gráfico, en lenguaje sencillo, del <strong>Capítulo 8: Disolución del matrimonio</strong> (arts. 435 a 445). Responde: <strong>¿cómo termina el matrimonio?</strong>, <strong>¿cómo se tramita el divorcio?</strong> y <strong>¿qué pasa después con la vivienda, los bienes y la compensación económica?</strong></p>
+    <ul class="stats"><li><b>11</b>artículos</li><li><b>3</b>secciones</li><li><b>6 meses</b>para reclamar la compensación económica</li></ul>
+  </div></div>
+
+  <div class="band alt"><div class="wrap">
+    <h2 class="sec">El recorrido del capítulo</h2>
+    <p class="sub">Tres secciones, en el orden en que suceden las cosas. Tocá una para ir a sus artículos.</p>
+    <ol class="route">
+      <li class="s1"><a href="#p1"><span class="k">Art. 435</span><h3>Causales</h3><p>Muerte, ausencia con presunción de fallecimiento o divorcio.</p></a></li>
+      <li class="s2"><a href="#p2"><span class="k">Arts. 436 a 438</span><h3>Proceso de divorcio</h3><p>No se renuncia al divorcio; lo pide uno o ambos, con una propuesta.</p></a></li>
+      <li class="s3"><a href="#p3"><span class="k">Arts. 439 a 445</span><h3>Efectos del divorcio</h3><p>Convenio regulador, compensación económica y uso de la vivienda.</p></a></li>
+    </ol>
+  </div></div>
+
+  <div class="band"><div class="wrap">
+    <h2 class="sec">Divorcio antes y ahora</h2>
+    <p class="sub">El Código Civil y Comercial reemplazó el sistema de causales y plazos por un divorcio único, sencillo y judicial.</p>
+    <table class="cmp">
+      <thead><tr><th scope="col"><span class="sr-only">Aspecto</span></th><th scope="col" class="a">Código Civil anterior</th><th scope="col" class="b">Código Civil y Comercial</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Causas</th><td data-h="Código Civil anterior">Causales subjetivas y objetivas, además del pedido por mutuo consentimiento.</td><td class="new" data-h="Código Civil y Comercial">Un solo divorcio, el incausado, a pedido de uno o de ambos (art. 437).</td></tr>
+        <tr><th scope="row">Separación personal</th><td data-h="Código Civil anterior">Existía.</td><td class="new" data-h="Código Civil y Comercial">Se elimina la figura.</td></tr>
+        <tr><th scope="row">Plazos</th><td data-h="Código Civil anterior">Plazo desde la celebración del matrimonio y plazos de falta de convivencia.</td><td class="new" data-h="Código Civil y Comercial">Puede pedirse en cualquier momento.</td></tr>
+        <tr><th scope="row">Trámite</th><td data-h="Código Civil anterior">Doble audiencia.</td><td class="new" data-h="Código Civil y Comercial">Una audiencia para evaluar las propuestas; el desacuerdo no suspende la sentencia (art. 438).</td></tr>
+        <tr><th scope="row">Ausencia con presunción de fallecimiento</th><td data-h="Código Civil anterior">No disolvía el matrimonio; si reaparecía el ausente, seguían casados.</td><td class="new" data-h="Código Civil y Comercial">La sentencia firme disuelve el matrimonio (art. 435, inc. b).</td></tr>
+      </tbody>
+    </table>
+  </div></div>
+</section>
+
+<div class="tools"><div class="wrap">
+  <label class="sr-only" for="q">Buscar en los artículos</label>
+  <input id="q" type="search" placeholder="Buscar: compensación, vivienda, convenio, art. 441…" autocomplete="off">
+  <span class="count" id="cnt" aria-live="polite"></span>
+  <button class="btn" type="button" id="tg">Abrir todos los textos</button>
+  <button class="btn" type="button" onclick="window.print()">Imprimir</button>
+</div></div>
+
+<div id="arts"></div>
+<p class="empty wrap" id="none">No hay artículos que coincidan con la búsqueda.</p>
+
+<section id="esencial" class="band alt"><div class="wrap">
+  <h2 class="sec">Lo esencial en seis ideas</h2>
+  <p class="sub">Si solo te quedás con esto, ya tenés el esquema del capítulo.</p>
+  <ol class="take">
+    <li><span><strong>Tres causas de disolución:</strong> muerte, sentencia firme de ausencia con presunción de fallecimiento y divorcio judicial (art. 435).</span></li>
+    <li><span><strong>No se puede renunciar a pedir el divorcio:</strong> el pacto que lo restrinja se tiene por no escrito (art. 436).</span></li>
+    <li><span><strong>Un solo divorcio:</strong> judicial, incausado, a pedido de uno o de ambos y sin plazos (art. 437).</span></li>
+    <li><span><strong>Toda petición lleva una propuesta:</strong> sin ella no se da trámite, y el desacuerdo no frena la sentencia (art. 438).</span></li>
+    <li><span><strong>El convenio regulador</strong> cubre vivienda, bienes, compensaciones y responsabilidad parental, y puede revisarse si la situación cambia (arts. 439 y 440).</span></li>
+    <li><span><strong>Efectos económicos:</strong> la compensación económica caduca a los 6 meses de la sentencia y el uso de la vivienda tiene plazo y causas de cese (arts. 441 a 445).</span></li>
+  </ol>
+</div></section>
+</main>
+
+<footer class="foot"><div class="wrap">
+  <p><strong>Fuente:</strong> Código Civil y Comercial de la Nación comentado, Tomo II (Infojus - SAIJ), Capítulo 8: Disolución del matrimonio, arts. 435 a 445.</p>
+  <p>Resumen didáctico en lenguaje sencillo. No reemplaza el texto de la ley ni el asesoramiento profesional: para citar o litigar, consultá el artículo completo.</p>
+</div></footer>
+
+<script>
+const P=[{"id": 1, "t": "Causales", "r": "Art. 435", "g": "Cómo se disuelve el matrimonio.", "a": [[435, "Causas de disolución del matrimonio", "El matrimonio se disuelve por tres causas: la muerte de uno de los cónyuges, la sentencia firme de ausencia con presunción de fallecimiento y el divorcio declarado judicialmente. Antes, la ausencia no lo disolvía: el vínculo terminaba recién cuando el otro cónyuge contraía un nuevo matrimonio.", ["Muerte", "Ausencia con presunción de fallecimiento (sentencia firme)", "Divorcio judicial"], "El matrimonio se disuelve por:<br>a. muerte de uno de los cónyuges;<br>b. sentencia firme de ausencia con presunción de fallecimiento;<br>c. divorcio declarado judicialmente."]]}, {"id": 2, "t": "Proceso de divorcio", "r": "Arts. 436 a 438", "g": "Quién puede pedirlo, qué hay que presentar y cómo sigue el trámite.", "a": [[436, "Nulidad de la renuncia", "Nadie puede renunciar a pedir el divorcio. Si hay un pacto o cláusula que lo restrinja, se tiene por no escrito. Se funda en la libertad y la autonomía personal (art. 19 CN) y en el derecho a casarse (art. 20 CN).", ["Irrenunciable", "El pacto se tiene por no escrito"], "Es nula la renuncia de cualquiera de los cónyuges a la facultad de pedir el divorcio; el pacto o cláusula que restrinja la facultad de solicitarlo se tiene por no escrito."], [437, "Divorcio. Legitimación", "El divorcio lo decreta el juez, a pedido de ambos cónyuges o de uno solo. Hay un único tipo, el incausado: no hay causas, ni separación personal, ni plazos, ni doble audiencia. No existe el divorcio administrativo.", ["Siempre judicial", "Incausado", "Lo pide uno o ambos"], "El divorcio se decreta judicialmente a petición de ambos o de uno solo de los cónyuges."], [438, "Requisitos y procedimiento del divorcio", "Toda petición va acompañada de una propuesta que regule los efectos del divorcio; sin propuesta no se da trámite. Si pide uno solo, el otro puede ofrecer una propuesta distinta. Se acompañan las pruebas en que se fundan, el juez evalúa las propuestas y convoca a una audiencia. El desacuerdo en el convenio nunca suspende la sentencia.", ["Propuesta obligatoria", "Audiencia con los cónyuges", "El desacuerdo no frena el divorcio"], "Toda petición de divorcio debe ser acompañada de una propuesta que regule los efectos derivados de éste; la omisión de la propuesta impide dar trámite a la petición. Si el divorcio es peticionado por uno solo de los cónyuges, el otro puede ofrecer una propuesta reguladora distinta. Al momento de formular las propuestas, las partes deben acompañar los elementos en que se fundan; el juez puede ordenar, de oficio o a petición de las partes, que se incorporen otros que se estiman pertinentes. Las propuestas deben ser evaluadas por el juez, debiendo convocar a los cónyuges a una audiencia. En ningún caso el desacuerdo en el convenio suspende el dictado de la sentencia de divorcio."]]}, {"id": 3, "t": "Efectos del divorcio", "r": "Arts. 439 a 445", "g": "Convenio regulador, compensación económica y uso de la vivienda familiar.", "a": [[439, "Convenio regulador. Contenido", "Los cónyuges pueden pactar las consecuencias del divorcio. El convenio debe contener lo relativo a la vivienda, la distribución de los bienes, las compensaciones económicas y el ejercicio de la responsabilidad parental, en especial los alimentos, cuando se den esos presupuestos. Pueden sumar otras cuestiones de su interés.", ["Vivienda", "Bienes", "Compensaciones", "Responsabilidad parental y alimentos"], "El convenio regulador debe contener las cuestiones relativas a la atribución de la vivienda, la distribución de los bienes, y las eventuales compensaciones económicas entre los cónyuges; al ejercicio de la responsabilidad parental, en especial, la prestación alimentaria; todo siempre que se den los presupuestos fácticos contemplados en esta Sección, en consonancia con lo establecido en este Título y en el Título VII de este Libro. Lo dispuesto en el párrafo anterior no impide que se propongan otras cuestiones de interés de los cónyuges."], [440, "Eficacia y modificación del convenio regulador", "El juez puede exigir al obligado garantías reales o personales como requisito para aprobar el convenio. Si la situación cambia sustancialmente, el convenio homologado o la decisión judicial pueden revisarse.", ["Garantías reales o personales", "Revisable si cambia la situación"], "El juez puede exigir que el obligado otorgue garantías reales o personales como requisito para la aprobación del convenio. El convenio homologado o la decisión judicial pueden ser revisados si la situación se ha modificado sustancialmente."], [441, "Compensación económica", "Tiene derecho a una compensación el cónyuge a quien el divorcio le produce un desequilibrio manifiesto que empeora su situación y que tiene por causa adecuada el matrimonio y su ruptura. Puede ser una prestación única, una renta por tiempo determinado o, excepcionalmente, indeterminado, en dinero, usufructo de bienes u otra forma acordada o decidida por el juez. No depende de la culpa.", ["Desequilibrio manifiesto", "Pago único o renta", "No depende de la culpa"], "El cónyuge a quien el divorcio produce un desequilibrio manifiesto que signifique un empeoramiento de su situación y que tiene por causa adecuada el vínculo matrimonial y su ruptura, tiene derecho a una compensación. Esta puede consistir en una prestación única, en una renta por tiempo determinado o, excepcionalmente, por plazo indeterminado. Puede pagarse con dinero, con el usufructo de determinados bienes o de cualquier otro modo que acuerden las partes o decida el juez."], [442, "Fijación judicial de la compensación económica. Caducidad", "Si no hay acuerdo, el juez decide si procede y cuánto, según pautas como el estado patrimonial de cada uno al inicio y al final del matrimonio, la dedicación a la familia y a los hijos, la edad y la salud, la capacitación laboral, la colaboración en las actividades del otro y la atribución de la vivienda. La acción caduca a los seis meses de la sentencia de divorcio.", ["Pautas del art. 442 (incs. a a f)", "Caduca a los 6 meses de la sentencia"], "A falta de acuerdo de los cónyuges en el convenio regulador, el juez debe determinar la procedencia y el monto de la compensación económica sobre la base de diversas circunstancias, entre otras:<br>a. el estado patrimonial de cada uno de los cónyuges al inicio y a la finalización de la vida matrimonial;<br>b. la dedicación que cada cónyuge brindó a la familia y a la crianza y educación de los hijos durante la convivencia y la que debe prestar con posterioridad al divorcio;<br>c. la edad y el estado de salud de los cónyuges y de los hijos;<br>d. la capacitación laboral y la posibilidad de acceder a un empleo del cónyuge que solicita la compensación económica;<br>e. la colaboración prestada a las actividades mercantiles, industriales o profesionales del otro cónyuge;<br>f. la atribución de la vivienda familiar, y si recae sobre un bien ganancial, un bien propio, o un inmueble arrendado. En este último caso, quién abona el canon locativo. La acción para reclamar la compensación económica caduca a los seis meses de haberse dictado la sentencia de divorcio."], [443, "Atribución del uso de la vivienda. Pautas", "Un cónyuge puede pedir que se le atribuya la vivienda familiar, sea propia de cualquiera de ellos o ganancial. El juez decide si procede, por cuánto tiempo y con qué efectos, según quién cuida a los hijos, quién está en situación económica más desventajosa, la salud y la edad de los cónyuges y los intereses de otras personas del grupo familiar.", ["Propio o ganancial", "Cuidado de los hijos", "Plazo fijado por el juez"], "Uno de los cónyuges puede pedir la atribución de la vivienda familiar, sea el inmueble propio de cualquiera de los cónyuges o ganancial. El juez determina la procedencia, el plazo de duración y efectos del derecho sobre la base de las siguientes pautas, entre otras:<br>a. la persona a quien se atribuye el cuidado de los hijos;<br>b. la persona que está en situación económica más desventajosa para proveerse de una vivienda por sus propios medios;<br>c. el estado de salud y edad de los cónyuges;<br>d. los intereses de otras personas que integran el grupo familiar."], [444, "Efectos de la atribución del uso de la vivienda familiar", "A pedido de parte, el juez puede fijar una renta compensatoria a favor del cónyuge a quien no se atribuye la vivienda, disponer que el inmueble no se enajene sin el acuerdo expreso de ambos o que el inmueble en condominio no se parta ni liquide. Frente a terceros, la decisión rige desde su inscripción registral.", ["Renta compensatoria", "No se enajena sin acuerdo", "Oponible desde la inscripción"], "A petición de parte interesada, el juez puede establecer: una renta compensatoria por el uso del inmueble a favor del cónyuge a quien no se atribuye la vivienda; que el inmueble no sea enajenado sin el acuerdo expreso de ambos; que el inmueble ganancial o propio en condominio de los cónyuges no sea partido ni liquidado. La decisión produce efectos frente a terceros a partir de su inscripción registral."], [445, "Cese", "El derecho de uso de la vivienda cesa por cumplimiento del plazo fijado por el juez, por cambio de las circunstancias tenidas en cuenta o por las mismas causas de indignidad de la sucesión (art. 2281). No puede ser indefinido: afectaría el derecho de propiedad del otro y configuraría un abuso de derecho.", ["Vence el plazo", "Cambian las circunstancias", "Indignidad (art. 2281)"], "El derecho de atribución del uso de la vivienda familiar cesa:<br>a. por cumplimiento del plazo fijado por el juez;<br>b. por cambio de las circunstancias que se tuvieron en cuenta para su fijación;<br>c. por las mismas causas de indignidad previstas en materia sucesoria."]]}];
+const root=document.getElementById("arts");
+root.innerHTML=P.map((p,i)=>`<section id="p${p.id}" class="band s${p.id}${i%2?"":" alt"}"><div class="wrap">
+<div class="art-head"><div class="numeral" aria-hidden="true">§${p.id}</div><h2>${p.t}</h2><p class="tagline">${p.g}<br><span class="rng">${p.r}</span></p></div>
+<div class="grid">${p.a.map(a=>`<article class="card" id="art${a[0]}" data-t="${(a[0]+" "+a[1]+" "+a[2]+" "+a[3].join(" ")+" "+a[4].replace(/<[^>]+>/g," ")).toLowerCase().replace(/"/g,"")}"><div class="hd"><span class="n">${a[0]}</span><h3>${a[1]}</h3></div><p>${a[2]}</p><div class="chips">${a[3].map(c=>`<span>${c}</span>`).join("")}</div><details class="law"><summary>Lo que dice la ley</summary><blockquote>${a[4]}</blockquote></details></article>`).join("")}</div></div></section>`).join("");
+const q=document.getElementById("q"),cnt=document.getElementById("cnt"),none=document.getElementById("none"),tg=document.getElementById("tg");
+function f(){const v=q.value.trim().toLowerCase().replace(/^art\.?\s*/,"");let tot=0;
+document.querySelectorAll("#arts section").forEach(s=>{let n=0;s.querySelectorAll(".card").forEach(c=>{const ok=!v||c.dataset.t.includes(v);c.style.display=ok?"":"none";if(ok)n++});s.style.display=n?"":"none";tot+=n});
+cnt.textContent=tot+" de 11 artículos";none.style.display=tot?"none":"block"}
+q.addEventListener("input",f);f();
+let open=false;tg.addEventListener("click",()=>{open=!open;document.querySelectorAll("details.law").forEach(d=>d.open=open);tg.textContent=open?"Cerrar todos los textos":"Abrir todos los textos"});
+</script>
+</body>
+</html>

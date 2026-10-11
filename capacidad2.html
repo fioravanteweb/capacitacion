@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Restricciones a la capacidad en simple: resumen gráfico de los arts. 31 a 50 del CCyC</title>
+<meta name="description" content="Resumen gráfico y en lenguaje sencillo de la Sección 3ª Restricciones a la capacidad (arts. 31 a 50) del Código Civil y Comercial comentado.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F4F7FC; --surface:#FFFFFF; --ink:#16213A; --muted:#55607C; --line:#DCE3F0;
+  --c22:#3D4FD9; --c22t:#E9ECFD; --c22d:#2A39B0;
+  --c23:#08806F; --c23t:#DDF3EE; --c23d:#05604F;
+  --c24:#C42A62; --c24t:#FCE5ED; --c24d:#9C1F4C;
+  --amber:#B7790A; --ambert:#FDF1D6;
+  --on:#FFFFFF;
+  --radius:18px;
+  --font-d:"Bricolage Grotesque","Segoe UI Variable Display","Segoe UI",system-ui,sans-serif;
+  --font-b:"Public Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#0E1424; --surface:#161E36; --ink:#E9EDF9; --muted:#A8B1CB; --line:#27304F;
+    --c22:#97A3FF; --c22t:#1F2757; --c22d:#B9C1FF;
+    --c23:#4DD6BE; --c23t:#0F3B36; --c23d:#8FE8D6;
+    --c24:#FF86AB; --c24t:#4A1A2F; --c24d:#FFB0C8;
+    --amber:#FFC24D; --ambert:#3F3010;
+    --on:#0E1424;
+  }
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-b);font-size:1.0625rem;line-height:1.65;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:var(--font-d);margin:0;line-height:1.12;letter-spacing:-.015em;text-wrap:balance}
+p{margin:0 0 1em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--c22);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:var(--paper);padding:10px 16px;border-radius:10px;z-index:50}
+.skip:focus{left:12px}
+.i{width:26px;height:26px;flex:none}
+.diagram{display:block;width:100%;height:auto}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- navegación ---------- */
+.top{position:sticky;top:0;z-index:20;background:var(--paper);background:color-mix(in srgb,var(--paper) 90%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top-in{max-width:1180px;margin:0 auto;display:flex;align-items:center;gap:20px;padding:10px 24px}
+.brand{font-family:var(--font-d);font-weight:800;font-size:1.08rem;white-space:nowrap}
+.nav{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav a{display:inline-flex;align-items:center;gap:8px;padding:8px 13px;border-radius:999px;color:var(--muted);text-decoration:none;font-weight:600;font-size:.92rem;white-space:nowrap}
+.nav a:hover{color:var(--ink);background:var(--surface)}
+.nav a.on{color:var(--ink);background:var(--surface);box-shadow:inset 0 0 0 1px var(--line)}
+.dot{width:10px;height:10px;border-radius:50%;display:inline-block}
+
+/* ---------- bandas ---------- */
+.band{--panel:var(--surface);padding:84px 0}
+.band.alt{--panel:var(--paper);background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.band h2.sec{font-weight:800;font-size:clamp(1.8rem,3.6vw,2.7rem);letter-spacing:-.025em;max-width:22ch;margin-bottom:12px}
+.band .sec-sub{color:var(--muted);max-width:64ch;font-size:1.08rem;margin-bottom:36px}
+
+/* ---------- hero ---------- */
+.hero{padding:52px 0 84px}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:56px;align-items:center}
+.kicker{margin:0 0 20px;color:var(--muted);font-size:.95rem;font-weight:500;max-width:46ch}
+h1{font-weight:800;font-size:clamp(2.5rem,5.6vw,4.3rem);line-height:1;letter-spacing:-.03em;max-width:15ch;margin-bottom:24px}
+.lead{font-size:1.2rem;max-width:54ch;color:var(--muted)}
+.lead strong{color:var(--ink)}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:13px 22px;border-radius:14px;font-family:var(--font-b);font-size:1rem;font-weight:700;line-height:1.2;text-decoration:none;cursor:pointer;border:2px solid var(--ink);background:transparent;color:var(--ink)}
+.btn.primary{background:var(--ink);color:var(--paper)}
+.btn:hover{transform:translateY(-1px)}
+.legend{list-style:none;margin:30px 0 0;padding:0;display:grid;gap:12px;max-width:56ch}
+.legend li{display:grid;grid-template-columns:18px 1fr;gap:12px;font-size:.98rem;line-height:1.5}
+.legend i{width:18px;height:18px;border-radius:50%;margin-top:3px}
+.hero-svg{max-width:470px;margin:0 auto}
+.hero-svg .ring{transform-box:fill-box;transform-origin:center;animation:grow .9s cubic-bezier(.2,.8,.2,1) both}
+.hero-svg .mid{animation-delay:.15s}
+.hero-svg .pop{transform-box:fill-box;transform-origin:center;animation:grow .6s cubic-bezier(.2,.8,.2,1) .7s both}
+@keyframes grow{from{opacity:0;transform:scale(.86)}to{opacity:1;transform:scale(1)}}
+.ring.out{fill:var(--c22t);stroke:var(--c22);stroke-width:3}
+.ring.mid{fill:var(--c23t);stroke:var(--c23);stroke-width:3}
+.ex{fill:var(--c24);stroke:var(--paper);stroke-width:4}
+.t{font-family:var(--font-d);fill:var(--ink)}
+.t.b{font-weight:800}
+.t.c22{fill:var(--c22d)} .t.c23{fill:var(--c23d)} .t.c24{fill:var(--c24d)}
+.t.w{fill:var(--on);font-weight:800}
+.t.m{fill:var(--muted)}
+
+/* ---------- recorrido en chevrones ---------- */
+.chev{list-style:none;margin:0;padding:0;display:grid;grid-auto-flow:column;grid-auto-columns:1fr}
+.chev>li{background:var(--bg);color:var(--fg);padding:26px 34px 26px 46px;margin-left:-16px;clip-path:polygon(0 0,calc(100% - 22px) 0,100% 50%,calc(100% - 22px) 100%,0 100%,22px 50%)}
+.chev>li:first-child{margin-left:0;padding-left:28px;clip-path:polygon(0 0,calc(100% - 22px) 0,100% 50%,calc(100% - 22px) 100%,0 100%)}
+.chev>li:last-child{padding-right:26px;clip-path:polygon(0 0,100% 0,100% 100%,0 100%,22px 50%)}
+.chev h3{font-size:1.2rem;margin-bottom:8px;color:inherit}
+.chev p{font-size:.95rem;line-height:1.5;margin:0 0 .6em;color:inherit}
+.chev .tag{display:inline-block;font-weight:700;font-size:.82rem;margin-bottom:10px;opacity:.9}
+.pills{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.pills span{background:color-mix(in srgb,var(--fg) 18%,transparent);border-radius:999px;padding:3px 11px;font-size:.84rem;font-weight:600;line-height:1.4}
+
+/* ---------- tabla comparativa ---------- */
+.cmp{width:100%;border-collapse:separate;border-spacing:0;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.cmp th,.cmp td{padding:16px 20px;text-align:left;vertical-align:top;border-top:1px solid var(--line);font-size:.98rem;line-height:1.55}
+.cmp thead th{border-top:0;font-family:var(--font-d);font-size:1.2rem;font-weight:800;padding:20px}
+.cmp thead .h22{background:var(--c22);color:var(--on)}
+.cmp thead .h23{background:var(--c23);color:var(--on)}
+.cmp thead th small{display:block;font-family:var(--font-b);font-weight:500;font-size:.85rem;opacity:.92;margin-top:2px}
+.cmp tbody th{width:19%;font-weight:700;color:var(--muted);font-size:.92rem}
+.cmp td.no{background:var(--c24t)}
+.cmp td.si{background:var(--c23t)}
+
+/* ---------- cabecera de cada artículo ---------- */
+.a22{--ac:var(--c22);--act:var(--c22t);--acd:var(--c22d)}
+.a23{--ac:var(--c23);--act:var(--c23t);--acd:var(--c23d)}
+.a24{--ac:var(--c24);--act:var(--c24t);--acd:var(--c24d)}
+.art-head{display:grid;grid-template-columns:auto 1fr;gap:6px 32px;align-items:end;margin-bottom:34px}
+.numeral{grid-row:span 2;font-family:var(--font-d);font-weight:800;font-size:clamp(5.5rem,14vw,10rem);line-height:.78;letter-spacing:-.06em;color:var(--ac)}
+.art-head h2{font-weight:800;font-size:clamp(1.9rem,4vw,3rem);letter-spacing:-.025em;align-self:end}
+.art-head .tagline{font-size:1.2rem;color:var(--muted);max-width:52ch;margin:0;align-self:start}
+.pages{display:inline-block;margin-top:10px;font-size:.88rem;color:var(--muted);font-weight:500}
+.law{margin:0;border-left:6px solid var(--ac);background:var(--panel);border-radius:0 14px 14px 0;padding:20px 24px;font-size:1.04rem;line-height:1.65;max-width:78ch}
+.law .lbl{display:block;font-family:var(--font-d);font-weight:800;color:var(--acd);font-size:.95rem;margin-bottom:6px}
+.law ol{margin:8px 0 0;padding-left:1.4em;list-style:lower-alpha}
+.simple{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;background:var(--act);border-radius:var(--radius);padding:22px 26px;margin-top:20px;max-width:78ch}
+.simple .badge{display:flex;align-items:center;gap:8px;font-family:var(--font-d);font-weight:800;color:var(--acd);white-space:nowrap}
+.simple .badge svg{width:22px;height:22px}
+.simple p{margin:0}
+
+/* ---------- bloques internos ---------- */
+.blk{margin-top:64px}
+.blk h3{font-weight:800;font-size:clamp(1.35rem,2.4vw,1.8rem);letter-spacing:-.02em;margin-bottom:8px}
+.blk .sub{color:var(--muted);max-width:66ch;margin-bottom:26px}
+.blk h4{font-size:1.1rem;font-weight:700}
+.note{font-size:.92rem;color:var(--muted)}
+
+/* reglas con iconos */
+.rules{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 40px}
+.rule{display:grid;grid-template-columns:54px 1fr;gap:16px;align-items:start}
+.rule .ico{width:54px;height:54px;border-radius:50%;background:var(--ac);color:var(--on);display:grid;place-items:center}
+.rule h4{margin:2px 0 4px}
+.rule p{margin:0;color:var(--muted);font-size:.98rem;line-height:1.55}
+
+/* euler */
+.split{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:44px;align-items:center}
+.eu-o{fill:var(--act);stroke:var(--ac);stroke-width:3}
+.eu-i{fill:var(--ac);fill-opacity:.2;stroke:var(--ac);stroke-width:3}
+.defs{display:grid;gap:18px}
+.def{padding-left:18px;border-left:5px solid var(--ac)}
+.def h4{margin-bottom:2px}
+.def p{margin:0;font-size:.98rem;line-height:1.55;color:var(--muted)}
+.def p strong{color:var(--ink)}
+.ex-tag{display:inline-block;margin-top:6px;font-size:.84rem;font-weight:700;color:var(--acd);background:var(--act);border-radius:999px;padding:2px 11px}
+
+/* chips */
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{padding:9px 16px;border-radius:999px;background:var(--act);color:var(--acd);font-weight:600;font-size:.95rem;line-height:1.35}
+.chip.line{background:transparent;border:2px solid var(--ac)}
+
+/* carriles */
+.lanes{display:grid;gap:16px}
+.lane{border-radius:var(--radius);padding:22px 24px;background:var(--panel);border:1px solid var(--line)}
+.lane h4{margin-bottom:14px}
+.lane.l22{--act:var(--c22t);--acd:var(--c22d)}
+.lane.l23{--act:var(--c23t);--acd:var(--c23d)}
+.lane-row{display:grid;grid-template-columns:1fr auto 1fr;gap:14px;align-items:stretch}
+.node{padding:14px 16px;border-radius:12px;background:var(--act);color:var(--acd);font-weight:600;font-size:.95rem;line-height:1.45;display:flex;align-items:center}
+.wall{width:12px;border-radius:6px;background:var(--c24)}
+.bridge{display:flex;align-items:center;justify-content:center;min-width:160px;background:linear-gradient(var(--c23),var(--c23)) center/100% 3px no-repeat}
+.bridge b{background:var(--c23);color:var(--on);padding:6px 14px;border-radius:999px;font-size:.85rem}
+.lane .why{margin:14px 0 0;font-size:.95rem;color:var(--muted)}
+
+/* árbol regla y excepciones */
+.tree-top{background:var(--ac);color:var(--on);border-radius:var(--radius);padding:26px 30px;font-family:var(--font-d);font-weight:800;font-size:clamp(1.25rem,2.4vw,1.75rem);line-height:1.2;text-align:center}
+.tree-branches{display:grid;grid-template-columns:1fr 1fr;padding-top:38px;
+  background:linear-gradient(var(--c24),var(--c24)) calc(25% - 1.5px) 0/3px 38px no-repeat,linear-gradient(var(--c24),var(--c24)) calc(75% - 1.5px) 0/3px 38px no-repeat}
+.branch{margin:0 10px;border:3px solid var(--c24);border-radius:var(--radius);padding:22px 24px;background:var(--panel)}
+.branch h4{color:var(--c24d);margin-bottom:8px}
+.branch p{margin:0 0 .6em;font-size:.98rem;line-height:1.55}
+.branch .note{margin:0}
+
+/* antes y ahora */
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.ba>div{border-radius:var(--radius);padding:26px}
+.ba .old{background:var(--panel);border:2px dashed var(--line)}
+.ba .new{background:var(--act)}
+.ba h4{font-size:1.2rem;margin-bottom:4px}
+.ba .when{display:block;font-size:.88rem;color:var(--muted);margin-bottom:16px;font-weight:500}
+.ba ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.ba li{padding-left:22px;position:relative;font-size:.98rem;line-height:1.55}
+.ba li::before{content:"";position:absolute;left:0;top:.6em;width:9px;height:9px;border-radius:50%;background:var(--muted)}
+.ba .new li::before{background:var(--ac)}
+.ba li b{display:block}
+
+/* dos paneles */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.pan{background:var(--panel);border:1px solid var(--line);border-top:6px solid var(--ac);border-radius:var(--radius);padding:26px}
+.pan h4{font-size:1.25rem;margin-bottom:10px}
+.pan p{font-size:.98rem;line-height:1.55}
+.pan .norms{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.pan .norms span{font-size:.84rem;font-weight:600;background:var(--act);color:var(--acd);border-radius:8px;padding:3px 10px}
+
+/* organismos */
+.orgs{display:grid;gap:14px}
+.org{display:grid;grid-template-columns:220px 1fr;gap:20px;padding:20px 22px;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius)}
+.org b{font-family:var(--font-d);color:var(--acd);line-height:1.2;font-size:1.08rem}
+.org b small{display:block;font-family:var(--font-b);font-weight:500;color:var(--muted);font-size:.82rem;margin-top:5px;line-height:1.35}
+.org p{margin:0;font-size:.98rem;line-height:1.55}
+.org p+p{margin-top:.5em}
+
+/* gradiente autonomía */
+.grad{display:flex;justify-content:space-between;gap:12px;border-radius:999px;padding:16px 26px;background:linear-gradient(90deg,var(--c23t),var(--c23));font-weight:700;font-size:.95rem;line-height:1.3}
+.grad span:first-child{color:var(--c23d)}
+.grad span:last-child{color:var(--on);text-align:right}
+
+/* escalera */
+.axis{display:flex;align-items:center;gap:14px;font-size:.88rem;font-weight:700;color:var(--muted);margin-bottom:12px}
+.axis i{flex:1;height:3px;background:linear-gradient(90deg,var(--c24t),var(--c24));border-radius:3px}
+.stairs{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;align-items:end}
+.stair{border-radius:var(--radius);padding:24px;display:flex;flex-direction:column}
+.stair h4{font-size:1.3rem;margin-bottom:8px;color:inherit}
+.stair p{font-size:.96rem;line-height:1.55;margin:0 0 .6em;color:inherit}
+.stair small{margin-top:auto;font-weight:700;font-size:.84rem}
+.s1{background:var(--c24t);color:var(--ink);min-height:200px}
+.s2{background:color-mix(in srgb,var(--c24) 45%,var(--c24t));color:var(--ink);min-height:270px}
+.s3{background:var(--c24);color:var(--on);min-height:350px}
+
+/* venn y cadenas */
+.venn-c{fill:var(--ac);fill-opacity:.22;stroke:var(--ac);stroke-width:3}
+.chain{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.chain li{display:flex;align-items:center;gap:8px;font-weight:700;font-family:var(--font-d);font-size:1.05rem;background:var(--act);color:var(--acd);border-radius:999px;padding:8px 18px}
+.chain li+li::before{content:"";width:8px;height:8px;border-right:2.5px solid var(--ac);border-top:2.5px solid var(--ac);transform:rotate(45deg);margin-right:4px}
+.neq{display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+.neq b{font-family:var(--font-d);font-size:1.5rem;color:var(--ac)}
+.bar-old1{fill:var(--line)} .bar-old2{fill:var(--muted);fill-opacity:.4}
+.bar-new1{fill:var(--c24t)} .bar-new2{fill:var(--c24)}
+
+/* balanza */
+.bal{display:grid;grid-template-columns:1fr 1.3fr 1fr;align-items:stretch}
+.bal>div{padding:24px;background:var(--panel);border:1px solid var(--line);font-size:.96rem;line-height:1.55}
+.bal h4{font-size:1.08rem;margin-bottom:8px;color:inherit}
+.bal p{margin:0}
+.bal>div:first-child{border-radius:var(--radius) 0 0 var(--radius)}
+.bal>div:last-child{border-radius:0 var(--radius) var(--radius) 0}
+.bal .mid{background:var(--ac);color:var(--on);border-color:var(--ac);border-radius:var(--radius);margin:-14px 0;z-index:1;display:flex;flex-direction:column;justify-content:center}
+.bal .mid h4{font-size:1.25rem}
+
+/* casos (art. 24) */
+.cases{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.case{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:26px;display:flex;flex-direction:column;gap:14px}
+.case .letter{width:44px;height:44px;border-radius:12px;background:var(--ac);color:var(--on);display:grid;place-items:center;font-family:var(--font-d);font-weight:800;font-size:1.4rem}
+.case h4{font-size:1.3rem}
+.case p{margin:0;font-size:.97rem;line-height:1.55}
+.case .who{background:var(--act);border-radius:12px;padding:12px 14px}
+.case .who b{display:block;color:var(--acd);font-size:.85rem;margin-bottom:2px}
+.case .fine{color:var(--muted);font-size:.9rem}
+
+/* representar y escuchar */
+.vs{display:grid;grid-template-columns:1fr auto 1fr;gap:18px;align-items:stretch}
+.vs>div{border-radius:var(--radius);padding:24px}
+.vs .old{background:var(--panel);border:2px dashed var(--line)}
+.vs .new{background:var(--act)}
+.vs .arrow{align-self:center;width:46px;height:46px;border-radius:50%;background:var(--ac);color:var(--on);display:grid;place-items:center;font-weight:800;font-size:1.3rem}
+.vs h4{margin-bottom:6px}
+.vs p{margin:0;font-size:.97rem;line-height:1.55}
+
+/* detalles desplegables */
+details.more{margin-top:28px;border:1px solid var(--line);border-radius:var(--radius);background:var(--panel)}
+details.more>summary{cursor:pointer;list-style:none;padding:16px 22px;font-weight:700;display:flex;align-items:center;gap:14px}
+details.more>summary::-webkit-details-marker{display:none}
+details.more>summary::before{content:"";width:9px;height:9px;border-right:3px solid var(--ac);border-bottom:3px solid var(--ac);transform:rotate(-45deg);transition:transform .2s;flex:none}
+details.more[open]>summary::before{transform:rotate(45deg)}
+details.more .in{padding:2px 24px 22px}
+details.more .in ul{margin:0;padding-left:1.25em;display:grid;gap:10px}
+details.more .in li{line-height:1.55;font-size:.98rem}
+
+/* lo esencial */
+.take{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 44px}
+.take li{display:grid;grid-template-columns:40px 1fr;gap:14px;align-items:start;font-size:1.02rem;line-height:1.5}
+.take .ck{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--k);color:var(--on)}
+.take .ck svg{width:22px;height:22px}
+.take small{display:block;color:var(--muted);font-size:.84rem;margin-top:2px}
+.t22{--k:var(--c22)} .t23{--k:var(--c23)} .t24{--k:var(--c24)}
+.next{margin-top:56px}
+.next h3{font-weight:800;font-size:1.5rem;margin-bottom:6px}
+.next p{color:var(--muted);max-width:62ch}
+.next .chip{background:var(--surface);border:1px solid var(--line);color:var(--ink)}
+
+/* glosario */
+.gloss{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 44px;margin:0}
+.gloss div{padding:16px 0;border-top:1px solid var(--line)}
+.gloss dt{font-family:var(--font-d);font-weight:700;font-size:1.08rem;margin-bottom:2px}
+.gloss dd{margin:0;color:var(--muted);font-size:.98rem;line-height:1.55}
+
+/* pie */
+.foot{padding:56px 0 72px;color:var(--muted);font-size:.92rem}
+.foot p{max-width:80ch}
+.foot strong{color:var(--ink)}
+
+/* ---------- responsive ---------- */
+@media (max-width:960px){
+  .hero-grid,.split,.duo,.ba,.cases,.rules,.take,.gloss{grid-template-columns:1fr}
+  .hero-grid{gap:36px}
+  .stairs{grid-template-columns:1fr;gap:10px}
+  .stair{min-height:0!important}
+  .s2{margin-left:24px}.s3{margin-left:48px}
+  .bal{grid-template-columns:1fr;gap:12px}
+  .bal>div,.bal>div:first-child,.bal>div:last-child{border-radius:var(--radius)}
+  .bal .mid{margin:0}
+  .vs{grid-template-columns:1fr}
+  .vs .arrow{transform:rotate(90deg);justify-self:center}
+}
+@media (max-width:860px){
+  .chev{grid-auto-flow:row}
+  .chev>li,.chev>li:first-child,.chev>li:last-child{margin:-14px 0 0;padding:28px 24px 38px;clip-path:polygon(0 0,50% 16px,100% 0,100% calc(100% - 18px),50% 100%,0 calc(100% - 18px))}
+  .chev>li:first-child{margin-top:0;padding-top:24px;clip-path:polygon(0 0,100% 0,100% calc(100% - 18px),50% 100%,0 calc(100% - 18px))}
+  .chev>li:last-child{padding-bottom:26px;clip-path:polygon(0 0,50% 16px,100% 0,100% 100%,0 100%)}
+}
+@media (max-width:760px){
+  .band{padding:60px 0}
+  .brand{display:none}
+  .wrap,.top-in{padding-left:18px;padding-right:18px}
+  .cmp thead{display:none}
+  .cmp,.cmp tbody,.cmp tr,.cmp th,.cmp td{display:block;width:100%}
+  .cmp tbody th{width:100%;background:var(--paper);padding:12px 18px}
+  .cmp td::before{content:attr(data-h);display:block;font-weight:700;font-size:.8rem;color:var(--muted);margin-bottom:2px}
+  .art-head{grid-template-columns:1fr;gap:6px}
+  .numeral{grid-row:auto;font-size:6.5rem}
+  .simple{grid-template-columns:1fr}
+  .lane-row{grid-template-columns:1fr}
+  .wall{width:auto;height:12px}
+  .bridge{min-height:52px;background:linear-gradient(var(--c23),var(--c23)) center/3px 100% no-repeat}
+  .tree-branches{grid-template-columns:1fr;padding-top:18px;background:none;gap:14px}
+  .branch{margin:0}
+  .org{grid-template-columns:1fr;gap:8px}
+  .grad{flex-direction:column;border-radius:var(--radius);gap:6px}
+  .grad span:last-child{text-align:left}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+}
+@media print{
+  .top,.hero-actions,.skip{display:none}
+  body{background:#fff}
+  .band{padding:28px 0;break-inside:avoid-page}
+  .hero-svg .ring,.hero-svg .pop{animation:none}
+}
+
+/* ---------- ampliación de la paleta y componentes de esta página ---------- */
+:root{--c3:#7A44D1;--c3t:#EFE6FB;--c3d:#5A2BA8;--c4:#0B72B5;--c4t:#DDEFFA;--c4d:#085789;--ambd:#7A5006}
+@media (prefers-color-scheme:dark){:root{--c3:#BD9BFF;--c3t:#2D1D4E;--c3d:#D8C4FF;--c4:#6CC4FF;--c4t:#0F3550;--c4d:#A9DCFF;--ambd:#FFD27A}}
+.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ck .i{stroke-width:2.4}
+.a31{--ac:var(--c22);--act:var(--c22t);--acd:var(--c22d)}
+.a34{--ac:var(--c23);--act:var(--c23t);--acd:var(--c23d)}
+.a38{--ac:var(--c24);--act:var(--c24t);--acd:var(--c24d)}
+.a41{--ac:var(--amber);--act:var(--ambert);--acd:var(--ambd)}
+.a43{--ac:var(--c3);--act:var(--c3t);--acd:var(--c3d)}
+.a44{--ac:var(--c4);--act:var(--c4t);--acd:var(--c4d)}
+.t31{--k:var(--c22)}.t34{--k:var(--c23)}.t38{--k:var(--c24)}.t41{--k:var(--amber)}.t43{--k:var(--c3)}.t44{--k:var(--c4)}
+.numeral.rg{font-size:clamp(3.6rem,9.5vw,6.8rem);line-height:.9;letter-spacing:-.05em}
+.cmp thead .h24{background:var(--c24);color:var(--on)}
+.tile{fill:var(--c23t);stroke:var(--c23);stroke-width:2}
+.tile.r{fill:var(--c24t);stroke:var(--c24);stroke-width:3}
+.apoyo{fill:none;stroke:var(--c22);stroke-width:4}
+.lane.l41{--act:var(--ambert);--acd:var(--ambd)}
+.a43 .s1{background:var(--c3t)}
+.a43 .s2{background:color-mix(in srgb,var(--c3) 45%,var(--c3t))}
+.a43 .s3{background:var(--c3)}
+.a43 .axis i{background:linear-gradient(90deg,var(--c3t),var(--c3))}
+@media (max-width:760px){.numeral.rg{font-size:4.2rem}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-flag" viewBox="0 0 24 24"><path d="M5 21V4M5 4h11l-2 4 2 4H5"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></symbol>
+  <symbol id="i-noteq" viewBox="0 0 24 24"><path d="M5 9h14M5 15h14M7 20L17 4"/></symbol>
+  <symbol id="i-half" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3v18"/><path d="M12 3a9 9 0 010 18z" fill="currentColor" stroke="none" opacity=".35"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.4-3.2 7.8-8 9-4.8-1.2-8-4.6-8-9V6z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></symbol>
+<symbol id="i-team" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20v-1a5 5 0 015-5h2a5 5 0 015 5v1"/><circle cx="17" cy="9" r="2.4"/><path d="M17.5 14.2A4 4 0 0121 18v1.5"/></symbol>
+</svg>
+
+<a class="skip" href="#panorama">Saltar al contenido</a>
+<header class="top"><div class="top-in">
+  <div class="brand">Restricciones, en simple</div>
+  <nav class="nav" aria-label="Secciones de la página">
+    <a href="#panorama">Panorama</a>
+    <a href="#art31"><i class="dot" style="background:var(--c22)"></i>Arts. 31–33</a>
+    <a href="#art34"><i class="dot" style="background:var(--c23)"></i>Arts. 34–37</a>
+    <a href="#art38"><i class="dot" style="background:var(--c24)"></i>Arts. 38–40</a>
+    <a href="#art41"><i class="dot" style="background:var(--amber)"></i>Arts. 41–42</a>
+    <a href="#art43"><i class="dot" style="background:var(--c3)"></i>Art. 43</a>
+    <a href="#art44"><i class="dot" style="background:var(--c4)"></i>Arts. 44–50</a>
+    <a href="#esencial">Lo esencial</a>
+    <a href="#glosario">Glosario</a>
+  </nav>
+</div></header>
+
+<main>
+<section id="panorama">
+  <div class="hero band"><div class="wrap hero-grid">
+    <div>
+      <p class="kicker">Código Civil y Comercial de la Nación comentado. Libro Primero, Título I, Capítulo 2: Capacidad</p>
+      <h1>Restringir la capacidad es la excepción, y se hace a medida.</h1>
+      <p class="lead">Resumen gráfico, en lenguaje sencillo, de la <strong>Sección 3ª: Restricciones a la capacidad</strong> (arts. 31 a 50). Responde dos preguntas: <strong>¿cuándo puede un juez limitar la capacidad de una persona adulta?</strong> y <strong>¿cómo se la acompaña después?</strong></p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#camino">Ver el recorrido</a>
+        <button class="btn" id="toggleAll" type="button">Abrir todos los detalles</button>
+      </div>
+      <ul class="legend">
+        <li><i style="background:var(--c23)"></i><span><strong>Casilla clara.</strong> Un acto que la persona sigue haciendo por sí misma: la capacidad se presume (art. 31, inc. a).</span></li>
+        <li><i style="background:var(--c24)"></i><span><strong>Casilla marcada.</strong> Un acto concreto que la sentencia limita, y solo ese (arts. 32 y 38).</span></li>
+        <li><i style="background:var(--c22)"></i><span><strong>Círculo sobre la casilla.</strong> El apoyo designado para ese acto (arts. 32 y 43).</span></li>
+      </ul>
+    </div>
+    <svg class="diagram hero-svg" viewBox="0 0 420 420" role="img" aria-labelledby="hsT hsD">
+      <title id="hsT">Esquema de una restricción a la capacidad</title>
+      <desc id="hsD">Una grilla de veinte casillas representa los actos de la vida. Casi todas conservan la capacidad. Dos casillas marcadas son los actos que la sentencia limita, y cada una tiene un círculo que representa al apoyo.</desc>
+      <text class="t b c23" x="210" y="44" text-anchor="middle" font-size="21">Todos los actos de la vida</text>
+      <text class="t m" x="210" y="66" text-anchor="middle" font-size="13">Cada casilla es un acto</text>
+      <g class="ring">
+        <rect class="tile" x="45" y="95" width="60" height="50" rx="9"/><rect class="tile" x="115" y="95" width="60" height="50" rx="9"/><rect class="tile" x="185" y="95" width="60" height="50" rx="9"/><rect class="tile" x="255" y="95" width="60" height="50" rx="9"/><rect class="tile" x="325" y="95" width="60" height="50" rx="9"/>
+        <rect class="tile" x="45" y="155" width="60" height="50" rx="9"/><rect class="tile" x="185" y="155" width="60" height="50" rx="9"/><rect class="tile" x="255" y="155" width="60" height="50" rx="9"/><rect class="tile" x="325" y="155" width="60" height="50" rx="9"/>
+        <rect class="tile" x="45" y="215" width="60" height="50" rx="9"/><rect class="tile" x="115" y="215" width="60" height="50" rx="9"/><rect class="tile" x="185" y="215" width="60" height="50" rx="9"/><rect class="tile" x="255" y="215" width="60" height="50" rx="9"/>
+        <rect class="tile" x="45" y="275" width="60" height="50" rx="9"/><rect class="tile" x="115" y="275" width="60" height="50" rx="9"/><rect class="tile" x="185" y="275" width="60" height="50" rx="9"/><rect class="tile" x="255" y="275" width="60" height="50" rx="9"/><rect class="tile" x="325" y="275" width="60" height="50" rx="9"/>
+      </g>
+      <g class="pop">
+        <rect class="tile r" x="115" y="155" width="60" height="50" rx="9"/><rect class="tile r" x="325" y="215" width="60" height="50" rx="9"/>
+        <circle class="apoyo" cx="145" cy="180" r="11"/><circle class="apoyo" cx="355" cy="240" r="11"/>
+      </g>
+      <text class="t b c24" x="210" y="357" text-anchor="middle" font-size="15">La sentencia limita solo algunas casillas</text>
+      <text class="t m" x="210" y="380" text-anchor="middle" font-size="13">El resto sigue igual</text>
+    </svg>
+  </div></div>
+
+  <div class="band alt" id="camino"><div class="wrap">
+    <h2 class="sec">El recorrido de una restricción a la capacidad</h2>
+    <p class="sec-sub">Estas son las etapas que el Código ordena, desde el punto de partida hasta la revisión.</p>
+    <ol class="chev">
+      <li style="--bg:var(--c22);--fg:var(--on)"><span class="tag">Art. 31</span><h3>Se presume capaz</h3><p>Aun si está internada. Restringir es excepcional y siempre en beneficio de la persona.</p></li>
+      <li style="--bg:var(--c23);--fg:var(--on)"><span class="tag">Arts. 33 a 37</span><h3>Proceso con garantías</h3><p>La persona es parte, tiene abogado, la entrevista el juez y opina un equipo interdisciplinario.</p></li>
+      <li style="--bg:var(--c24);--fg:var(--on)"><span class="tag">Arts. 32, 38 y 43</span><h3>Sentencia a medida</h3><p>Dice qué actos se limitan y designa apoyos. La incapacidad es el último recurso.</p></li>
+      <li style="--bg:var(--ink);--fg:var(--paper)"><span class="tag">Arts. 39, 40 y 47</span><h3>Registro y revisión</h3><p>Se inscribe, se revisa como máximo cada tres años y puede ampliarse o cesar.</p></li>
+    </ol>
+  </div></div>
+
+  <div class="band" id="comparacion"><div class="wrap">
+    <h2 class="sec">Capacidad restringida e incapacidad, cara a cara</h2>
+    <p class="sec-sub">El art. 32 prevé las dos. Se parecen por el nombre, pero la segunda es una excepción dentro de la excepción.</p>
+    <table class="cmp">
+      <thead><tr>
+        <th scope="col"><span class="sr-only">Aspecto</span></th>
+        <th scope="col" class="h22">Capacidad restringida<small>Regla del art. 32</small></th>
+        <th scope="col" class="h24">Incapacidad<small>Excepción del art. 32</small></th>
+      </tr></thead>
+      <tbody>
+        <tr><th scope="row">En simple</th><td data-h="Capacidad restringida">La persona <strong>conserva su capacidad</strong>. Se limitan actos determinados.</td><td data-h="Incapacidad">La persona no puede <strong>interactuar con su entorno ni expresar su voluntad</strong> por ningún modo.</td></tr>
+        <tr><th scope="row">Cuándo procede</th><td data-h="Capacidad restringida">Persona mayor de 13 años con adicción o alteración mental permanente o prolongada, de suficiente gravedad, si su plena capacidad puede causarle daño a ella o a sus bienes.</td><td data-h="Incapacidad">Imposibilidad <strong>absoluta</strong> de interactuar y expresar la voluntad por cualquier modo, medio o formato adecuado, y el sistema de apoyos resulta ineficaz.</td></tr>
+        <tr><th scope="row">Qué se mira</th><td data-h="Capacidad restringida">La situación de la persona, no su diagnóstico ni su pertenencia a un grupo.</td><td data-h="Incapacidad">Una situación objetiva y total. No alcanza con cualquier dificultad o complejidad.</td></tr>
+        <tr><th scope="row">Quién la acompaña</th><td data-h="Capacidad restringida">Uno o varios <strong>apoyos</strong> (art. 43), con funciones precisas y ajustes razonables.</td><td data-h="Incapacidad">Un <strong>curador</strong> que la representa (art. 138 y siguientes).</td></tr>
+        <tr><th scope="row">Alcance</th><td data-h="Capacidad restringida">Actos personales y/o patrimoniales puntuales, fijados en la sentencia.</td><td data-h="Incapacidad">Efecto global, en la extensión que fije la sentencia.</td></tr>
+      </tbody>
+    </table>
+  </div></div>
+</section>
+
+<!-- ============ ARTS. 31 A 33 ============ -->
+<section id="art31" class="band alt a31"><div class="wrap">
+  <div class="art-head">
+    <div class="numeral rg" aria-hidden="true">31–33</div>
+    <h2>Reglas, requisitos y quién puede pedirlo</h2>
+    <p class="tagline">Seis principios que valen para todo el régimen, a quién se puede restringir y quién inicia el proceso.<br><span class="pages">Artículos 31 a 33, páginas 78 a 89 del comentario</span></p>
+  </div>
+  <blockquote class="law"><span class="lbl">Lo que dice el art. 31</span>
+    La restricción al ejercicio de la capacidad jurídica se rige por estas reglas:
+    <ol><li>la capacidad general de ejercicio se presume, aun si la persona está internada en un establecimiento asistencial;</li><li>las limitaciones son excepcionales y se imponen siempre en beneficio de la persona;</li><li>la intervención estatal es siempre interdisciplinaria, en el tratamiento y en el proceso judicial;</li><li>la persona tiene derecho a recibir información por medios y tecnologías adecuados para su comprensión;</li><li>tiene derecho a participar en el proceso con asistencia letrada, que el Estado debe dar si no tiene medios;</li><li>deben priorizarse las alternativas terapéuticas menos restrictivas de sus derechos y libertades.</li></ol>
+  </blockquote>
+  <div class="simple"><div class="badge"><svg class="i" aria-hidden="true"><use href="#i-chat"/></svg>En simple</div>
+    <p>Desde el art. 31 el Código arma el régimen para personas mayores de edad. El punto de partida es la capacidad: las restricciones son puntuales, las decide un juez con ayuda de un equipo de varias disciplinas y buscan promover la autonomía.</p></div>
+
+  <div class="blk">
+    <h3>Seis reglas, seis cuidados</h3>
+    <p class="sub">El comentario las apoya en el modelo social de la discapacidad de la CDPD (art. 12) y en la Ley de Salud Mental 26.657 (arts. 3 y 5).</p>
+    <div class="rules">
+      <div class="rule"><div class="ico"><svg class="i" aria-hidden="true"><use href="#i-flag"/></svg></div><div><h4>La capacidad se presume</h4><p>Para restringirla hay que probar rigurosamente lo contrario. La aclaración sobre la internación evita confundir “internada” con “incapaz”.</p></div></div>
+      <div class="rule"><div class="ico"><svg class="i" aria-hidden="true"><use href="#i-lock"/></svg></div><div><h4>Excepcional y en beneficio de la persona</h4><p>La excepción no nace de “su discapacidad” sino de una situación concreta. El único fin es respetar sus derechos y promover su autonomía.</p></div></div>
+      <div class="rule"><div class="ico"><svg class="i" aria-hidden="true"><use href="#i-team"/></svg></div><div><h4>Intervención interdisciplinaria</h4><p>Ya no manda solo la mirada médico-psiquiátrica: el eje pasa a ser el equipo. Un historial de tratamiento no alcanza por sí solo.</p></div></div>
+      <div class="rule"><div class="ico"><svg class="i" aria-hidden="true"><use href="#i-chat"/></svg></div><div><h4>Información que se entienda</h4><p>Comunicación accesible: lenguaje sencillo, lengua de señas, Braille y otros formatos. La sordomudez dejó de ser causal de restricción.</p></div></div>
+      <div class="rule"><div class="ico"><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg></div><div><h4>Participar con abogado</h4><p>La persona interviene en el proceso con asistencia letrada. Si no tiene medios, la provee el Estado.</p></div></div>
+      <div class="rule"><div class="ico"><svg class="i" aria-hidden="true"><use href="#i-half"/></svg></div><div><h4>Lo menos restrictivo primero</h4><p>Vale también para el control de la internación y para cualquier otro proceso en que se decida sobre la persona.</p></div></div>
+    </div>
+  </div>
+
+  <div class="blk">
+    <h3>Cuándo se puede restringir (art. 32)</h3>
+    <p class="sub">Son condiciones objetivas, y se evalúan en el proceso.</p>
+    <ol class="chain"><li>Mayor de 13 años</li><li>Adicción o alteración mental permanente o prolongada, de suficiente gravedad</li><li>Riesgo de daño a su persona o a sus bienes</li><li>Apoyos designados para esos actos</li></ol>
+    <p class="note" style="margin-top:14px;max-width:72ch">El piso de 13 años sigue la categoría de adolescente (art. 25). Desaparecen las etiquetas “demente”, “sordomudo” y “disminuido en sus facultades”. Si la persona puede comprender y expresar su voluntad con medios adecuados, el juez no puede ver riesgo de daño.</p>
+  </div>
+
+  <div class="blk">
+    <h3>Quiénes pueden pedirlo (art. 33)</h3>
+    <p class="sub">Las mismas personas pueden pedir la incapacidad o la capacidad restringida.</p>
+    <div class="chips"><span class="chip line">La propia persona interesada</span><span class="chip">Cónyuge no separado de hecho</span><span class="chip">Conviviente, mientras la convivencia no haya cesado</span><span class="chip">Parientes hasta el cuarto grado (por afinidad, hasta el segundo)</span><span class="chip">Ministerio Público</span></div>
+    <details class="more"><summary>Más detalle: qué cambió respecto del Código anterior</summary><div class="in"><ul>
+      <li>La gran novedad es la legitimación de la <strong>propia persona</strong>: alcanza con que se presente ante el juez. Si no tiene abogado, el juez le avisa que puede designarlo y, si no lo hace, se le nombra uno.</li>
+      <li>Se agregó al conviviente y se fijó un tope de grado para los parientes.</li>
+      <li>Se eliminó a “cualquier persona del pueblo” y al cónsul. Quien no está legitimado puede plantearlo al Ministerio Público, que decide si promueve el proceso.</li>
+      <li>El Ministerio Público debe garantizar la participación de la persona y los ajustes razonables, e incluso pedir apoyos provisorios durante el proceso.</li></ul></div></details>
+  </div>
+</div></section>
+
+<!-- ============ ARTS. 34 A 37 ============ -->
+<section id="art34" class="band a34"><div class="wrap">
+  <div class="art-head">
+    <div class="numeral rg" aria-hidden="true">34–37</div>
+    <h2>El proceso, con la persona como protagonista</h2>
+    <p class="tagline">Medidas urgentes, entrevista con el juez, carácter de parte y contenido de la sentencia.<br><span class="pages">Artículos 34 a 37, páginas 89 a 98 del comentario</span></p>
+  </div>
+  <div class="simple"><div class="badge"><svg class="i" aria-hidden="true"><use href="#i-chat"/></svg>En simple</div>
+    <p>El proceso no se hace sobre la persona sino con ella: es parte, la escucha el juez, la defiende un abogado y opina un equipo interdisciplinario. Y el juez adapta el procedimiento a cada caso.</p></div>
+
+  <div class="blk">
+    <h3>Cuatro momentos del proceso</h3>
+    <p class="sub">Cada artículo suma una garantía.</p>
+    <ol class="chev">
+      <li style="--bg:var(--c23t);--fg:var(--c23d)"><span class="tag">Art. 34</span><h3>Medidas durante el proceso</h3><p>El juez ordena lo necesario para proteger derechos personales y patrimoniales, y define qué actos requieren apoyo y cuáles curador. Pueden dictarse de oficio y no exigen contracautela.</p></li>
+      <li style="--bg:color-mix(in srgb,var(--c23) 35%,var(--c23t));--fg:var(--ink)"><span class="tag">Art. 35</span><h3>Entrevista personal</h3><p>El juez entrevista a la persona antes de resolver, con accesibilidad y ajustes razonables. Están presentes el Ministerio Público y al menos un abogado.</p></li>
+      <li style="--bg:var(--c23);--fg:var(--on)"><span class="tag">Art. 36</span><h3>La persona es parte</h3><p>Puede aportar toda su prueba. Si comparece sin abogado, se le nombra uno. Interviene el juez de su domicilio o del lugar de internación.</p></li>
+      <li style="--bg:var(--ink);--fg:var(--paper)"><span class="tag">Art. 37</span><h3>La sentencia</h3><p>Se pronuncia sobre cuatro aspectos y exige el dictamen de un equipo interdisciplinario.</p></li>
+    </ol>
+  </div>
+
+  <div class="blk">
+    <h3>Qué debe decir la sentencia (art. 37)</h3>
+    <p class="sub">El diagnóstico es solo uno de los aspectos. No alcanza para declarar una restricción.</p>
+    <div class="chips"><span class="chip">Diagnóstico y pronóstico, con mirada interdisciplinaria y no solo médica</span><span class="chip">Época en que la situación se manifestó</span><span class="chip">Recursos personales, familiares y sociales existentes</span><span class="chip">Régimen de protección, asistencia y promoción de la mayor autonomía posible</span></div>
+    <p class="note" style="margin-top:12px">La “época” importa para la nulidad de los actos anteriores a la inscripción (arts. 44 y siguientes).</p>
+  </div>
+
+  <div class="blk">
+    <h3>Abogado de la persona, no curador ad litem</h3>
+    <p class="sub">Para el art. 36 el letrado cumple una función distinta de la figura tradicional.</p>
+    <div class="vs">
+      <div class="old"><h4>Curador ad litem (antes)</h4><p>Busca la sentencia que, a su entender, mejor satisface el interés de la persona, incluso con su oposición.</p></div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="new"><h4>Abogado de la persona (ahora)</h4><p>Sigue <strong>los intereses y deseos de la persona</strong>, como cualquier letrado patrocinante.</p></div>
+    </div>
+  </div>
+
+  <div class="blk">
+    <h3>Accesibilidad y ajustes razonables</h3>
+    <p class="sub">Son el modo concreto de hacer real la participación (art. 13 de la CDPD).</p>
+    <div class="defs" style="max-width:76ch">
+      <div class="def"><h4>Accesibilidad</h4><p>Poder participar sin barreras: del edificio, de la comunicación y de las actitudes de quienes intervienen.</p></div>
+      <div class="def"><h4>Ajustes razonables</h4><p>Adaptaciones <strong>“a medida”</strong> del procedimiento, que no impongan una carga desproporcionada. Por ejemplo, notificaciones y resoluciones en un lenguaje que la persona comprenda.</p></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- ============ ARTS. 38 A 40 ============ -->
+<section id="art38" class="band alt a38"><div class="wrap">
+  <div class="art-head">
+    <div class="numeral rg" aria-hidden="true">38–40</div>
+    <h2>La sentencia, su registro y su revisión</h2>
+    <p class="tagline">Una sentencia “a medida”, inscripta para valer frente a terceros y revisable en cualquier momento.<br><span class="pages">Artículos 38 a 40, páginas 98 a 105 del comentario</span></p>
+  </div>
+  <blockquote class="law"><span class="lbl">Lo que dice el art. 38</span>
+    La sentencia debe determinar la extensión y alcance de la restricción y especificar las funciones y actos que se limitan, procurando que la afectación de la autonomía personal sea la menor posible. Debe designar una o más personas de apoyo o curadores y señalar las condiciones de validez de los actos sujetos a restricción, con indicación de quiénes intervienen y cómo.
+  </blockquote>
+  <div class="simple"><div class="badge"><svg class="i" aria-hidden="true"><use href="#i-chat"/></svg>En simple</div>
+    <p>La sentencia es un traje a medida: dice qué actos se limitan, quién apoya y de qué manera. Lo que no dice, la persona lo sigue haciendo por sí misma.</p></div>
+
+  <div class="blk">
+    <h3>Del curador sustituto al apoyo</h3>
+    <p class="sub">La consecuencia de la restricción cambió, siguiendo el art. 12 de la CDPD.</p>
+    <div class="vs">
+      <div class="old"><h4>Antes</h4><p>Un curador sustituía a la persona “por su bien”, sin consultarla ni hacerla partícipe.</p></div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="new"><h4>Ahora</h4><p>Una persona o red de <strong>apoyo</strong> la asiste para ejercer su capacidad. El modelo de sustitución pura es inadmisible.</p></div>
+    </div>
+    <p class="note" style="margin-top:14px">Hay apoyos para actos de negocios, para la vida cotidiana y para actos personalísimos (votar, casarse, ejercer la responsabilidad parental). Cada sentencia debe diferenciarlos.</p>
+  </div>
+
+  <div class="blk">
+    <h3>Después de la sentencia (art. 39)</h3>
+    <p class="sub">La inscripción en el Registro de Estado Civil y Capacidad de las Personas es lo que la hace valer frente a terceros.</p>
+    <ol class="chain"><li>Sentencia a medida</li><li>Se inscribe y queda constancia al margen del acta de nacimiento</li><li>Produce efectos contra terceros desde la inscripción</li><li>Si las restricciones desaparecen, se cancela de inmediato</li></ol>
+  </div>
+
+  <div class="blk">
+    <h3>Revisión de la sentencia (art. 40)</h3>
+    <p class="sub">Dejó de ser una “rehabilitación” que dependía de que alguien la pidiera.</p>
+    <div class="duo">
+      <div class="pan"><h4>Cuándo</h4><p>En <strong>cualquier momento</strong>, a pedido de la persona. Y, en el caso del art. 32, en un plazo no mayor a <strong>tres años</strong>, con nuevos dictámenes interdisciplinarios y audiencia personal.</p><div class="norms"><span>No es un proceso nuevo</span><span>No exige invocar un motivo</span></div></div>
+      <div class="pan"><h4>Quién vela</h4><p>Es un <strong>deber del juez</strong>. El Ministerio Público debe controlar que se cumpla e instar la revisión si el juez no la hizo en plazo.</p><p>La revisión puede terminar en la restitución plena de la capacidad, pero no es requisito que la persona “mejore”.</p></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- ============ ARTS. 41 Y 42 ============ -->
+<section id="art41" class="band a41"><div class="wrap">
+  <div class="art-head">
+    <div class="numeral rg" aria-hidden="true">41–42</div>
+    <h2>Internación y traslado</h2>
+    <p class="tagline">La internación sin consentimiento es el último recurso y tiene control judicial. Estar internada no es estar restringida.<br><span class="pages">Artículos 41 y 42, páginas 105 a 114 del comentario</span></p>
+  </div>
+  <div class="simple"><div class="badge"><svg class="i" aria-hidden="true"><use href="#i-chat"/></svg>En simple</div>
+    <p>El Código fija solo las reglas básicas. Los detalles están en la Ley de Salud Mental 26.657, y la internación jamás implica por sí misma una restricción a la capacidad.</p></div>
+
+  <div class="blk">
+    <h3>Seis condiciones de la internación sin consentimiento (art. 41)</h3>
+    <p class="sub">Procede solo si se cumplen todas, además de lo que exige la ley especial.</p>
+    <div class="rules">
+      <div class="rule"><div class="ico"><svg class="i" aria-hidden="true"><use href="#i-team"/></svg></div><div><h4>Evaluación interdisciplinaria</h4><p>Con los motivos y la ausencia de una alternativa eficaz menos restrictiva de su libertad.</p></div></div>
+      <div class="rule"><div class="ico"><svg class="i" aria-hidden="true"><use href="#i-flag"/></svg></div><div><h4>Riesgo cierto e inminente</h4><p>De un daño de entidad para la persona o para terceros. Un diagnóstico, por sí solo, no alcanza.</p></div></div>
+      <div class="rule"><div class="ico"><svg class="i" aria-hidden="true"><use href="#i-half"/></svg></div><div><h4>Recurso restrictivo y breve</h4><p>Por el tiempo más corto posible y con supervisión periódica.</p></div></div>
+      <div class="rule"><div class="ico"><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg></div><div><h4>Debido proceso</h4><p>Control judicial inmediato y derecho de defensa con asistencia jurídica.</p></div></div>
+      <div class="rule"><div class="ico"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></div><div><h4>Sentencia que la aprueba</h4><p>Debe decir su finalidad, su duración y cada cuánto se revisa.</p></div></div>
+      <div class="rule"><div class="ico"><svg class="i" aria-hidden="true"><use href="#i-lock"/></svg></div><div><h4>Derechos intactos</h4><p>Toda persona con padecimientos mentales, esté o no internada, goza de los derechos fundamentales.</p></div></div>
+    </div>
+  </div>
+
+  <div class="blk">
+    <h3>Traslado dispuesto por una autoridad (art. 42)</h3>
+    <div class="lanes"><div class="lane l41">
+      <div class="lane-row">
+        <div class="node">Una persona está en riesgo cierto e inminente de daño, y su estado no admite dilaciones</div>
+        <div class="bridge"><b>Traslado</b></div>
+        <div class="node">Un centro de salud la evalúa. Si se admite la internación, rigen los plazos de la ley especial</div>
+      </div>
+      <p class="why">Las fuerzas de seguridad y los servicios públicos de salud deben prestar auxilio inmediato.</p>
+    </div></div>
+  </div>
+
+  <div class="blk">
+    <h3>Quién decide y qué controla el juez</h3>
+    <div class="duo">
+      <div class="pan"><h4>La decisión es del equipo de salud</h4><p>Desde la ley 26.657 el juez no ordena internar a pedido de un interesado. Internar lo decide el equipo interdisciplinario sanitario. Hay una excepción: si los servicios de salud se niegan a recibir a la persona.</p></div>
+      <div class="pan"><h4>El juez controla</h4><p>Revisa que la internación sea legal y razonable, que se justifique y que no se prolongue sin motivo. También puede disponer la externación en cualquier momento.</p></div>
+    </div>
+    <details class="more"><summary>Más detalle: tipos de internación y plazos</summary><div class="in"><ul>
+      <li><strong>Voluntaria:</strong> con consentimiento informado, prestado con lucidez y comprensión. Si la persona lo pierde, pasa a ser involuntaria. Si pasa de 60 días corridos, el juez evalúa en cinco días cuál es su carácter.</li>
+      <li><strong>Involuntaria:</strong> dictamen de dos profesionales de distintas disciplinas, uno psicólogo o psiquiatra, sin vínculos con la persona.</li>
+      <li>Se notifica al juez y al órgano de revisión dentro de 10 horas, y las constancias se agregan dentro de 48 horas. El juez resuelve en tres días corridos como máximo.</li>
+      <li>Luego pide informes al menos cada 30 días. Pasados 90 días y el tercer informe, se pide una nueva evaluación a un equipo que no haya intervenido, y se opta por la opinión que menos restrinja la libertad.</li></ul></div></details>
+  </div>
+</div></section>
+
+<!-- ============ ART. 43 ============ -->
+<section id="art43" class="band alt a43"><div class="wrap">
+  <div class="art-head">
+    <div class="numeral" aria-hidden="true">43</div>
+    <h2>Sistemas de apoyo</h2>
+    <p class="tagline">El apoyo promueve la autonomía. No reemplaza a la persona.<br><span class="pages">Artículo 43, páginas 114 a 117 del comentario</span></p>
+  </div>
+  <blockquote class="law"><span class="lbl">Lo que dice la ley</span>
+    Se entiende por apoyo cualquier medida, judicial o extrajudicial, que facilite a la persona que lo necesite la toma de decisiones para dirigir su persona, administrar sus bienes y celebrar actos jurídicos en general. Su función es promover la autonomía y facilitar la comunicación, la comprensión y la manifestación de voluntad. El interesado puede proponer personas de su confianza, y el juez debe protegerla de conflictos de intereses o influencia indebida.
+  </blockquote>
+  <div class="simple"><div class="badge"><svg class="i" aria-hidden="true"><use href="#i-chat"/></svg>En simple</div>
+    <p>Apoyo es cualquier ayuda para decidir y comunicarse: una persona de confianza, un familiar, un equipo, una tecnología. El objetivo no es protegerla sino promover sus derechos.</p></div>
+
+  <div class="blk">
+    <h3>Tres niveles de apoyo</h3>
+    <p class="sub">El comentario los describe según cuánto se gradúa la asistencia, no la capacidad.</p>
+    <div class="axis" aria-hidden="true"><span>Menos intenso</span><i></i><span>Más intenso</span></div>
+    <div class="stairs">
+      <div class="stair s1"><h4>Apoyos mínimos</h4><p>Lenguaje o tecnología que facilitan la comunicación.</p><small>Primer nivel</small></div>
+      <div class="stair s2"><h4>Decisiones asistidas</h4><p>La persona decide con ayuda de un tercero de su confianza, elegido por ella.</p><small>Segundo nivel</small></div>
+      <div class="stair s3"><h4>Decisiones facilitadas</h4><p>Para casos extremos en que la voluntad y las preferencias no pueden conocerse de manera fehaciente. Es la última instancia.</p><small>Tercer nivel</small></div>
+    </div>
+  </div>
+
+  <div class="blk">
+    <h3>Apoyo y curador no son lo mismo</h3>
+    <div class="vs">
+      <div class="old"><h4>Curador</h4><p>Actúa en el momento de celebrar el acto: lo hace en lugar de la persona o junto con ella.</p></div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="new"><h4>Apoyo</h4><p>Actúa antes: informa, ayuda a comprender y a razonar. Si la persona ya decidió, puede ni estar al firmar. Cubre <strong>todos los actos de la vida</strong>, no solo los jurídicos.</p></div>
+    </div>
+  </div>
+
+  <div class="blk">
+    <h3>Cómo se designa</h3>
+    <ol class="chain"><li>La persona propone a alguien de su confianza</li><li>El juez evalúa alcances y riesgos</li><li>Si nadie propone, el juez designa</li><li>La resolución fija condición y calidad del apoyo, y se inscribe si hace falta</li></ol>
+    <p class="note" style="margin-top:14px;max-width:72ch">Puede ser una persona o varias: familiares, operadores, trabajadores sociales o instituciones. También pueden proponerlas quienes están legitimados para pedir la restricción (art. 33).</p>
+  </div>
+</div></section>
+
+<!-- ============ ARTS. 44 A 50 ============ -->
+<section id="art44" class="band a44"><div class="wrap">
+  <div class="art-head">
+    <div class="numeral rg" aria-hidden="true">44–50</div>
+    <h2>Actos, cese e inhabilitación</h2>
+    <p class="tagline">Qué pasa con los actos según la inscripción, cómo termina la restricción y el caso de la prodigalidad.<br><span class="pages">Artículos 44 a 50, páginas 117 a 126 del comentario</span></p>
+  </div>
+  <div class="simple"><div class="badge"><svg class="i" aria-hidden="true"><use href="#i-chat"/></svg>En simple</div>
+    <p>La inscripción en el Registro es el punto de corte. Después de ella, un acto que contraría la sentencia es nulo. Antes, puede anularse solo si perjudica a la persona y se da alguna de las condiciones de la ley.</p></div>
+
+  <div class="blk">
+    <h3>Los actos, antes y después de la inscripción (arts. 44 a 46)</h3>
+    <svg class="diagram" viewBox="0 0 700 150" role="img" aria-labelledby="tlT tlD">
+      <title id="tlT">Línea de tiempo de los actos</title>
+      <desc id="tlD">Antes de la inscripción, los actos pueden anularse si perjudican a la persona y se cumple una condición. Después, son nulos si contrarían la sentencia. Tras el fallecimiento, los actos anteriores no se impugnan salvo excepciones.</desc>
+      <line x1="20" y1="70" x2="360" y2="70" stroke="var(--c24)" stroke-width="10" stroke-linecap="round"/>
+      <line x1="360" y1="70" x2="680" y2="70" stroke="var(--c4)" stroke-width="10" stroke-linecap="round"/>
+      <circle cx="360" cy="70" r="15" fill="var(--ink)" stroke="var(--paper)" stroke-width="4"/>
+      <text class="t b" x="360" y="30" text-anchor="middle" font-size="15">Inscripción de la sentencia</text>
+      <text class="t b c24" x="190" y="108" text-anchor="middle" font-size="15">Antes: anulables (art. 45)</text>
+      <text class="t m" x="190" y="128" text-anchor="middle" font-size="12.5">si perjudican y se cumple una condición</text>
+      <text class="t b c4" x="520" y="108" text-anchor="middle" font-size="15">Después: nulos (art. 44)</text>
+      <text class="t m" x="520" y="128" text-anchor="middle" font-size="12.5">si contrarían lo que dice la sentencia</text>
+    </svg>
+    <div class="cases" style="margin-top:26px">
+      <article class="case"><div class="letter" style="font-size:1.05rem">44</div><h4>Después de la inscripción</h4><p>Son nulos los actos que contrarían lo dispuesto en la sentencia. En los actos no vedados rige la capacidad.</p><div class="who"><b>Qué se mira</b>Si el acto contradice las condiciones fijadas por el juez.</div><p class="fine">Antes, todo acto del incapaz era “de ningún valor” (art. 472 del Código anterior).</p></article>
+      <article class="case"><div class="letter" style="font-size:1.05rem">45</div><h4>Antes de la inscripción</h4><p>Pueden declararse nulos si <strong>perjudican a la persona</strong> y se cumple <strong>una</strong> de estas condiciones:</p><div class="who"><b>Alcanza con una</b>La enfermedad mental era ostensible en esa época. Quien contrató actuó de mala fe. El acto es a título gratuito.</div><p class="fine">Quien alega la nulidad debe probar la condición.</p></article>
+      <article class="case"><div class="letter" style="font-size:1.05rem">46</div><h4>Después del fallecimiento</h4><p>Los actos entre vivos anteriores a la inscripción no pueden impugnarse, salvo que:</p><div class="who"><b>Excepciones (basta una)</b>La enfermedad mental resulta del acto mismo. La muerte ocurrió luego de iniciada la acción. El acto es gratuito. Se prueba mala fe de quien contrató.</div><p class="fine">Se protege la seguridad jurídica de quienes contrataron.</p></article>
+    </div>
+  </div>
+
+  <div class="blk">
+    <h3>Cuándo termina la restricción (art. 47)</h3>
+    <p class="sub">El régimen pasó de ser binario, “capaces” o “incapaces”, a ser gradual. El art. 50 aplica lo mismo a la inhabilitación.</p>
+    <div class="ba">
+      <div class="old"><h4>Antes</h4><span class="when">Rehabilitación (Código anterior)</span><ul><li><b>Un proceso aparte</b>Lo promovían los interesados, y si nadie lo hacía la sentencia podía quedar sin cambios.</li><li><b>Un solo resultado posible</b>Volver a la plena capacidad.</li></ul></div>
+      <div class="new"><h4>Ahora</h4><span class="when">Cese o ampliación</span><ul><li><b>Lo decreta el juez que la declaró</b>Previo examen interdisciplinario sobre el restablecimiento de la persona. Puede pedirlo cualquier legitimado, y la propia persona.</li><li><b>Si el restablecimiento no es total</b>El juez amplía los actos que la persona puede hacer por sí o con apoyo. El cese se inscribe en el Registro.</li></ul></div>
+    </div>
+  </div>
+
+  <div class="blk">
+    <h3>Inhabilitación del pródigo (arts. 48 a 50)</h3>
+    <p class="sub">Es la única inhabilitación que quedó. Ya no hay inhabilitación por disminución mental ni por adicciones: eso se canaliza por el art. 32.</p>
+    <div class="duo">
+      <div class="pan"><h4>Cuándo (art. 48)</h4><p>Puede inhabilitarse a quien, por <strong>prodigalidad en la gestión de sus bienes</strong>, expone a su cónyuge, conviviente o hijos menores o con discapacidad a perder el patrimonio.</p><p style="margin:0">Pueden pedirla el cónyuge, el conviviente, los ascendientes y los descendientes. Protege a la familia más que a la persona inhabilitada.</p><div class="norms"><span>Definición de discapacidad: ley 22.431</span></div></div>
+      <div class="pan"><h4>Efectos y cese (arts. 49 y 50)</h4><p>Se designa un <strong>apoyo</strong> que asiste en los actos de disposición entre vivos y en los demás que fije el juez. Nunca se afectan derechos personales.</p><p style="margin:0">El cese lo decreta el juez, previo examen interdisciplinario. Aunque la persona lo pida, el juez evalúa la situación objetiva, porque están en juego los derechos de terceros.</p></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- ============ LO ESENCIAL ============ -->
+<section id="esencial" class="band alt"><div class="wrap">
+  <h2 class="sec">Lo esencial en diez ideas</h2>
+  <p class="sec-sub">El color indica el bloque: índigo, arts. 31 a 33; verde, 34 a 37; rosa, 38 a 40; ocre, 41 y 42; violeta, art. 43; celeste, 44 a 50.</p>
+  <ul class="take">
+    <li class="t31"><span class="ck"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><span>La capacidad se presume, aun si la persona está internada.<small>Art. 31</small></span></li>
+    <li class="t31"><span class="ck"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><span>Restringirla es excepcional, siempre en beneficio de la persona y con intervención interdisciplinaria.<small>Art. 31</small></span></li>
+    <li class="t31"><span class="ck"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><span>La regla es la capacidad restringida, con apoyos. La incapacidad, con curador, solo procede ante la imposibilidad absoluta de interactuar y expresar la voluntad.<small>Art. 32</small></span></li>
+    <li class="t34"><span class="ck"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><span>La persona es parte, tiene abogado y el juez debe entrevistarla personalmente antes de resolver.<small>Arts. 35 y 36</small></span></li>
+    <li class="t38"><span class="ck"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><span>La sentencia limita actos concretos, designa apoyos o curador, se inscribe y se revisa como máximo cada tres años.<small>Arts. 38 a 40</small></span></li>
+    <li class="t41"><span class="ck"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><span>La internación sin consentimiento es el último recurso: riesgo cierto e inminente, equipo interdisciplinario y control judicial.<small>Arts. 41 y 42</small></span></li>
+    <li class="t43"><span class="ck"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><span>El apoyo promueve la autonomía y se hace a medida: no reemplaza a la persona.<small>Art. 43</small></span></li>
+    <li class="t44"><span class="ck"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><span>Después de la inscripción, el acto que contraría la sentencia es nulo. Antes, puede anularse si perjudica y se cumple una condición.<small>Arts. 44 y 45</small></span></li>
+    <li class="t44"><span class="ck"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><span>La restricción puede cesar o ampliarse tras una nueva evaluación interdisciplinaria. No hace falta un proceso aparte.<small>Art. 47</small></span></li>
+    <li class="t44"><span class="ck"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><span>La inhabilitación quedó solo para el pródigo, con un apoyo para los actos de disposición.<small>Arts. 48 a 50</small></span></li>
+  </ul>
+  <div class="next">
+    <h3>Dónde seguir leyendo</h3>
+    <p>Normas que el comentario cita y que continúan estas reglas.</p>
+    <div class="chips">
+      <span class="chip">Arts. 22 a 24: principios generales de la capacidad</span>
+      <span class="chip">Arts. 100 y 101: representantes</span>
+      <span class="chip">Arts. 138 y siguientes: curatela</span>
+      <span class="chip">Arts. 260 y 261: discernimiento</span>
+      <span class="chip">Arts. 386 y 388: nulidad relativa</span>
+      <span class="chip">Ley 26.657 de Salud Mental</span>
+    </div>
+  </div>
+</div></section>
+
+<!-- ============ GLOSARIO ============ -->
+<section id="glosario" class="band"><div class="wrap">
+  <h2 class="sec">Glosario sin vueltas</h2>
+  <p class="sec-sub">Las palabras difíciles de esta sección, explicadas en pocas líneas.</p>
+  <dl class="gloss">
+    <div><dt>Capacidad restringida</dt><dd>La persona conserva su capacidad y una sentencia limita solo actos determinados.</dd></div>
+    <div><dt>Incapacidad</dt><dd>Excepción para quien no puede interactuar ni expresar su voluntad por ningún modo. Se designa un curador.</dd></div>
+    <div><dt>Apoyo</dt><dd>Ayuda, judicial o extrajudicial, para decidir, comunicarse y comprender. No reemplaza a la persona.</dd></div>
+    <div><dt>Curador</dt><dd>Quien representa a la persona declarada incapaz y cuida de su persona y sus bienes.</dd></div>
+    <div><dt>Ajustes razonables</dt><dd>Adaptaciones “a medida” que permiten participar en igualdad de condiciones, sin una carga desproporcionada.</dd></div>
+    <div><dt>Salvaguardias</dt><dd>Protecciones para que el apoyo respete la voluntad de la persona y no derive en abusos o influencia indebida.</dd></div>
+    <div><dt>Equipo interdisciplinario</dt><dd>Profesionales de varias disciplinas que evalúan juntos la situación. Ninguna manda sobre las otras.</dd></div>
+    <div><dt>Inmediación</dt><dd>Contacto directo del juez con la persona durante todo el proceso, y no solo en un momento.</dd></div>
+    <div><dt>Riesgo cierto e inminente</dt><dd>Daño ya conocido como seguro y próximo para la vida o integridad de la persona o de terceros.</dd></div>
+    <div><dt>Ostensible</dt><dd>Claro y manifiesto, fácil de advertir para quien contrata con la persona.</dd></div>
+    <div><dt>Prodigalidad</dt><dd>Gestión de los bienes que expone a la familia a perder el patrimonio.</dd></div>
+    <div><dt>Cese</dt><dd>Fin de la incapacidad o la restricción, o ampliación de los actos que la persona puede hacer.</dd></div>
+  </dl>
+</div></section>
+</main>
+
+<footer class="foot"><div class="wrap">
+  <p><strong>Fuente.</strong> Código Civil y Comercial de la Nación Comentado, Tomo I (arts. 1 a 400), Infojus, Sistema Argentino de Información Jurídica. Libro Primero, Título I, Capítulo 2, Sección 3ª: arts. 31 a 50, páginas 78 a 126. Comentarios de Silvia E. Fernández.</p>
+  <p>Este resumen es una guía de estudio con fines didácticos: reformula el comentario en lenguaje sencillo y no reemplaza el texto de la ley ni el asesoramiento profesional.</p>
+</div></footer>
+
+<script>
+(function(){
+  var btn=document.getElementById('toggleAll');
+  var all=function(){return Array.prototype.slice.call(document.querySelectorAll('details.more'));};
+  btn.addEventListener('click',function(){
+    var open=all().some(function(d){return !d.open;});
+    all().forEach(function(d){d.open=open;});
+    btn.textContent=open?'Cerrar todos los detalles':'Abrir todos los detalles';
+  });
+  window.addEventListener('beforeprint',function(){all().forEach(function(d){d.open=true;});});
+
+  var links=Array.prototype.slice.call(document.querySelectorAll('.nav a'));
+  var byId={};
+  links.forEach(function(a){byId[a.getAttribute('href').slice(1)]=a;});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){
+          links.forEach(function(l){l.classList.remove('on');});
+          if(byId[e.target.id]){byId[e.target.id].classList.add('on');}
+        }
+      });
+    },{rootMargin:'-40% 0px -55% 0px'});
+    Array.prototype.slice.call(document.querySelectorAll('main > section[id]')).forEach(function(s){io.observe(s);});
+  }
+})();
+</script>
+</body>
+</html>

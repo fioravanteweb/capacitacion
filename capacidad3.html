@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Representación y asistencia en simple: resumen gráfico de los arts. 100 a 103 del CCyC</title>
+<meta name="description" content="Resumen gráfico y en lenguaje sencillo del Capítulo 10, Sección 1ª Representación y asistencia (arts. 100 a 103) del Código Civil y Comercial comentado.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F4F7FC; --surface:#FFFFFF; --ink:#16213A; --muted:#55607C; --line:#DCE3F0;
+  --c22:#3D4FD9; --c22t:#E9ECFD; --c22d:#2A39B0;
+  --c23:#08806F; --c23t:#DDF3EE; --c23d:#05604F;
+  --c24:#C42A62; --c24t:#FCE5ED; --c24d:#9C1F4C;
+  --amber:#B7790A; --ambert:#FDF1D6;
+  --on:#FFFFFF;
+  --radius:18px;
+  --font-d:"Bricolage Grotesque","Segoe UI Variable Display","Segoe UI",system-ui,sans-serif;
+  --font-b:"Public Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#0E1424; --surface:#161E36; --ink:#E9EDF9; --muted:#A8B1CB; --line:#27304F;
+    --c22:#97A3FF; --c22t:#1F2757; --c22d:#B9C1FF;
+    --c23:#4DD6BE; --c23t:#0F3B36; --c23d:#8FE8D6;
+    --c24:#FF86AB; --c24t:#4A1A2F; --c24d:#FFB0C8;
+    --amber:#FFC24D; --ambert:#3F3010;
+    --on:#0E1424;
+  }
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-b);font-size:1.0625rem;line-height:1.65;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:var(--font-d);margin:0;line-height:1.12;letter-spacing:-.015em;text-wrap:balance}
+p{margin:0 0 1em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--c22);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:var(--paper);padding:10px 16px;border-radius:10px;z-index:50}
+.skip:focus{left:12px}
+.i{width:26px;height:26px;flex:none}
+.diagram{display:block;width:100%;height:auto}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- navegación ---------- */
+.top{position:sticky;top:0;z-index:20;background:var(--paper);background:color-mix(in srgb,var(--paper) 90%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top-in{max-width:1180px;margin:0 auto;display:flex;align-items:center;gap:20px;padding:10px 24px}
+.brand{font-family:var(--font-d);font-weight:800;font-size:1.08rem;white-space:nowrap}
+.nav{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav a{display:inline-flex;align-items:center;gap:8px;padding:8px 13px;border-radius:999px;color:var(--muted);text-decoration:none;font-weight:600;font-size:.92rem;white-space:nowrap}
+.nav a:hover{color:var(--ink);background:var(--surface)}
+.nav a.on{color:var(--ink);background:var(--surface);box-shadow:inset 0 0 0 1px var(--line)}
+.dot{width:10px;height:10px;border-radius:50%;display:inline-block}
+
+/* ---------- bandas ---------- */
+.band{--panel:var(--surface);padding:84px 0}
+.band.alt{--panel:var(--paper);background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.band h2.sec{font-weight:800;font-size:clamp(1.8rem,3.6vw,2.7rem);letter-spacing:-.025em;max-width:22ch;margin-bottom:12px}
+.band .sec-sub{color:var(--muted);max-width:64ch;font-size:1.08rem;margin-bottom:36px}
+
+/* ---------- hero ---------- */
+.hero{padding:52px 0 84px}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:56px;align-items:center}
+.kicker{margin:0 0 20px;color:var(--muted);font-size:.95rem;font-weight:500;max-width:46ch}
+h1{font-weight:800;font-size:clamp(2.5rem,5.6vw,4.3rem);line-height:1;letter-spacing:-.03em;max-width:15ch;margin-bottom:24px}
+.lead{font-size:1.2rem;max-width:54ch;color:var(--muted)}
+.lead strong{color:var(--ink)}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:13px 22px;border-radius:14px;font-family:var(--font-b);font-size:1rem;font-weight:700;line-height:1.2;text-decoration:none;cursor:pointer;border:2px solid var(--ink);background:transparent;color:var(--ink)}
+.btn.primary{background:var(--ink);color:var(--paper)}
+.btn:hover{transform:translateY(-1px)}
+.legend{list-style:none;margin:30px 0 0;padding:0;display:grid;gap:12px;max-width:56ch}
+.legend li{display:grid;grid-template-columns:18px 1fr;gap:12px;font-size:.98rem;line-height:1.5}
+.legend i{width:18px;height:18px;border-radius:50%;margin-top:3px}
+.hero-svg{max-width:470px;margin:0 auto}
+.hero-svg .ring{transform-box:fill-box;transform-origin:center;animation:grow .9s cubic-bezier(.2,.8,.2,1) both}
+.hero-svg .mid{animation-delay:.15s}
+.hero-svg .pop{transform-box:fill-box;transform-origin:center;animation:grow .6s cubic-bezier(.2,.8,.2,1) .7s both}
+@keyframes grow{from{opacity:0;transform:scale(.86)}to{opacity:1;transform:scale(1)}}
+.ring.out{fill:var(--c22t);stroke:var(--c22);stroke-width:3}
+.ring.mid{fill:var(--c23t);stroke:var(--c23);stroke-width:3}
+.ex{fill:var(--c24);stroke:var(--paper);stroke-width:4}
+.t{font-family:var(--font-d);fill:var(--ink)}
+.t.b{font-weight:800}
+.t.c22{fill:var(--c22d)} .t.c23{fill:var(--c23d)} .t.c24{fill:var(--c24d)}
+.t.w{fill:var(--on);font-weight:800}
+.t.m{fill:var(--muted)}
+
+/* ---------- recorrido en chevrones ---------- */
+.chev{list-style:none;margin:0;padding:0;display:grid;grid-auto-flow:column;grid-auto-columns:1fr}
+.chev>li{background:var(--bg);color:var(--fg);padding:26px 34px 26px 46px;margin-left:-16px;clip-path:polygon(0 0,calc(100% - 22px) 0,100% 50%,calc(100% - 22px) 100%,0 100%,22px 50%)}
+.chev>li:first-child{margin-left:0;padding-left:28px;clip-path:polygon(0 0,calc(100% - 22px) 0,100% 50%,calc(100% - 22px) 100%,0 100%)}
+.chev>li:last-child{padding-right:26px;clip-path:polygon(0 0,100% 0,100% 100%,0 100%,22px 50%)}
+.chev h3{font-size:1.2rem;margin-bottom:8px;color:inherit}
+.chev p{font-size:.95rem;line-height:1.5;margin:0 0 .6em;color:inherit}
+.chev .tag{display:inline-block;font-weight:700;font-size:.82rem;margin-bottom:10px;opacity:.9}
+.pills{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.pills span{background:color-mix(in srgb,var(--fg) 18%,transparent);border-radius:999px;padding:3px 11px;font-size:.84rem;font-weight:600;line-height:1.4}
+
+/* ---------- tabla comparativa ---------- */
+.cmp{width:100%;border-collapse:separate;border-spacing:0;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.cmp th,.cmp td{padding:16px 20px;text-align:left;vertical-align:top;border-top:1px solid var(--line);font-size:.98rem;line-height:1.55}
+.cmp thead th{border-top:0;font-family:var(--font-d);font-size:1.2rem;font-weight:800;padding:20px}
+.cmp thead .h22{background:var(--c22);color:var(--on)}
+.cmp thead .h23{background:var(--c23);color:var(--on)}
+.cmp thead th small{display:block;font-family:var(--font-b);font-weight:500;font-size:.85rem;opacity:.92;margin-top:2px}
+.cmp tbody th{width:19%;font-weight:700;color:var(--muted);font-size:.92rem}
+.cmp td.no{background:var(--c24t)}
+.cmp td.si{background:var(--c23t)}
+
+/* ---------- cabecera de cada artículo ---------- */
+.a22{--ac:var(--c22);--act:var(--c22t);--acd:var(--c22d)}
+.a23{--ac:var(--c23);--act:var(--c23t);--acd:var(--c23d)}
+.a24{--ac:var(--c24);--act:var(--c24t);--acd:var(--c24d)}
+.art-head{display:grid;grid-template-columns:auto 1fr;gap:6px 32px;align-items:end;margin-bottom:34px}
+.numeral{grid-row:span 2;font-family:var(--font-d);font-weight:800;font-size:clamp(5.5rem,14vw,10rem);line-height:.78;letter-spacing:-.06em;color:var(--ac)}
+.art-head h2{font-weight:800;font-size:clamp(1.9rem,4vw,3rem);letter-spacing:-.025em;align-self:end}
+.art-head .tagline{font-size:1.2rem;color:var(--muted);max-width:52ch;margin:0;align-self:start}
+.pages{display:inline-block;margin-top:10px;font-size:.88rem;color:var(--muted);font-weight:500}
+.law{margin:0;border-left:6px solid var(--ac);background:var(--panel);border-radius:0 14px 14px 0;padding:20px 24px;font-size:1.04rem;line-height:1.65;max-width:78ch}
+.law .lbl{display:block;font-family:var(--font-d);font-weight:800;color:var(--acd);font-size:.95rem;margin-bottom:6px}
+.law ol{margin:8px 0 0;padding-left:1.4em;list-style:lower-alpha}
+.simple{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;background:var(--act);border-radius:var(--radius);padding:22px 26px;margin-top:20px;max-width:78ch}
+.simple .badge{display:flex;align-items:center;gap:8px;font-family:var(--font-d);font-weight:800;color:var(--acd);white-space:nowrap}
+.simple .badge svg{width:22px;height:22px}
+.simple p{margin:0}
+
+/* ---------- bloques internos ---------- */
+.blk{margin-top:64px}
+.blk h3{font-weight:800;font-size:clamp(1.35rem,2.4vw,1.8rem);letter-spacing:-.02em;margin-bottom:8px}
+.blk .sub{color:var(--muted);max-width:66ch;margin-bottom:26px}
+.blk h4{font-size:1.1rem;font-weight:700}
+.note{font-size:.92rem;color:var(--muted)}
+
+/* reglas con iconos */
+.rules{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 40px}
+.rule{display:grid;grid-template-columns:54px 1fr;gap:16px;align-items:start}
+.rule .ico{width:54px;height:54px;border-radius:50%;background:var(--ac);color:var(--on);display:grid;place-items:center}
+.rule h4{margin:2px 0 4px}
+.rule p{margin:0;color:var(--muted);font-size:.98rem;line-height:1.55}
+
+/* euler */
+.split{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:44px;align-items:center}
+.eu-o{fill:var(--act);stroke:var(--ac);stroke-width:3}
+.eu-i{fill:var(--ac);fill-opacity:.2;stroke:var(--ac);stroke-width:3}
+.defs{display:grid;gap:18px}
+.def{padding-left:18px;border-left:5px solid var(--ac)}
+.def h4{margin-bottom:2px}
+.def p{margin:0;font-size:.98rem;line-height:1.55;color:var(--muted)}
+.def p strong{color:var(--ink)}
+.ex-tag{display:inline-block;margin-top:6px;font-size:.84rem;font-weight:700;color:var(--acd);background:var(--act);border-radius:999px;padding:2px 11px}
+
+/* chips */
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{padding:9px 16px;border-radius:999px;background:var(--act);color:var(--acd);font-weight:600;font-size:.95rem;line-height:1.35}
+.chip.line{background:transparent;border:2px solid var(--ac)}
+
+/* carriles */
+.lanes{display:grid;gap:16px}
+.lane{border-radius:var(--radius);padding:22px 24px;background:var(--panel);border:1px solid var(--line)}
+.lane h4{margin-bottom:14px}
+.lane.l22{--act:var(--c22t);--acd:var(--c22d)}
+.lane.l23{--act:var(--c23t);--acd:var(--c23d)}
+.lane-row{display:grid;grid-template-columns:1fr auto 1fr;gap:14px;align-items:stretch}
+.node{padding:14px 16px;border-radius:12px;background:var(--act);color:var(--acd);font-weight:600;font-size:.95rem;line-height:1.45;display:flex;align-items:center}
+.wall{width:12px;border-radius:6px;background:var(--c24)}
+.bridge{display:flex;align-items:center;justify-content:center;min-width:160px;background:linear-gradient(var(--c23),var(--c23)) center/100% 3px no-repeat}
+.bridge b{background:var(--c23);color:var(--on);padding:6px 14px;border-radius:999px;font-size:.85rem}
+.lane .why{margin:14px 0 0;font-size:.95rem;color:var(--muted)}
+
+/* árbol regla y excepciones */
+.tree-top{background:var(--ac);color:var(--on);border-radius:var(--radius);padding:26px 30px;font-family:var(--font-d);font-weight:800;font-size:clamp(1.25rem,2.4vw,1.75rem);line-height:1.2;text-align:center}
+.tree-branches{display:grid;grid-template-columns:1fr 1fr;padding-top:38px;
+  background:linear-gradient(var(--c24),var(--c24)) calc(25% - 1.5px) 0/3px 38px no-repeat,linear-gradient(var(--c24),var(--c24)) calc(75% - 1.5px) 0/3px 38px no-repeat}
+.branch{margin:0 10px;border:3px solid var(--c24);border-radius:var(--radius);padding:22px 24px;background:var(--panel)}
+.branch h4{color:var(--c24d);margin-bottom:8px}
+.branch p{margin:0 0 .6em;font-size:.98rem;line-height:1.55}
+.branch .note{margin:0}
+
+/* antes y ahora */
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.ba>div{border-radius:var(--radius);padding:26px}
+.ba .old{background:var(--panel);border:2px dashed var(--line)}
+.ba .new{background:var(--act)}
+.ba h4{font-size:1.2rem;margin-bottom:4px}
+.ba .when{display:block;font-size:.88rem;color:var(--muted);margin-bottom:16px;font-weight:500}
+.ba ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.ba li{padding-left:22px;position:relative;font-size:.98rem;line-height:1.55}
+.ba li::before{content:"";position:absolute;left:0;top:.6em;width:9px;height:9px;border-radius:50%;background:var(--muted)}
+.ba .new li::before{background:var(--ac)}
+.ba li b{display:block}
+
+/* dos paneles */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.pan{background:var(--panel);border:1px solid var(--line);border-top:6px solid var(--ac);border-radius:var(--radius);padding:26px}
+.pan h4{font-size:1.25rem;margin-bottom:10px}
+.pan p{font-size:.98rem;line-height:1.55}
+.pan .norms{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.pan .norms span{font-size:.84rem;font-weight:600;background:var(--act);color:var(--acd);border-radius:8px;padding:3px 10px}
+
+/* organismos */
+.orgs{display:grid;gap:14px}
+.org{display:grid;grid-template-columns:220px 1fr;gap:20px;padding:20px 22px;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius)}
+.org b{font-family:var(--font-d);color:var(--acd);line-height:1.2;font-size:1.08rem}
+.org b small{display:block;font-family:var(--font-b);font-weight:500;color:var(--muted);font-size:.82rem;margin-top:5px;line-height:1.35}
+.org p{margin:0;font-size:.98rem;line-height:1.55}
+.org p+p{margin-top:.5em}
+
+/* gradiente autonomía */
+.grad{display:flex;justify-content:space-between;gap:12px;border-radius:999px;padding:16px 26px;background:linear-gradient(90deg,var(--c23t),var(--c23));font-weight:700;font-size:.95rem;line-height:1.3}
+.grad span:first-child{color:var(--c23d)}
+.grad span:last-child{color:var(--on);text-align:right}
+
+/* escalera */
+.axis{display:flex;align-items:center;gap:14px;font-size:.88rem;font-weight:700;color:var(--muted);margin-bottom:12px}
+.axis i{flex:1;height:3px;background:linear-gradient(90deg,var(--c24t),var(--c24));border-radius:3px}
+.stairs{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;align-items:end}
+.stair{border-radius:var(--radius);padding:24px;display:flex;flex-direction:column}
+.stair h4{font-size:1.3rem;margin-bottom:8px;color:inherit}
+.stair p{font-size:.96rem;line-height:1.55;margin:0 0 .6em;color:inherit}
+.stair small{margin-top:auto;font-weight:700;font-size:.84rem}
+.s1{background:var(--c24t);color:var(--ink);min-height:200px}
+.s2{background:color-mix(in srgb,var(--c24) 45%,var(--c24t));color:var(--ink);min-height:270px}
+.s3{background:var(--c24);color:var(--on);min-height:350px}
+
+/* venn y cadenas */
+.venn-c{fill:var(--ac);fill-opacity:.22;stroke:var(--ac);stroke-width:3}
+.chain{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.chain li{display:flex;align-items:center;gap:8px;font-weight:700;font-family:var(--font-d);font-size:1.05rem;background:var(--act);color:var(--acd);border-radius:999px;padding:8px 18px}
+.chain li+li::before{content:"";width:8px;height:8px;border-right:2.5px solid var(--ac);border-top:2.5px solid var(--ac);transform:rotate(45deg);margin-right:4px}
+.neq{display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+.neq b{font-family:var(--font-d);font-size:1.5rem;color:var(--ac)}
+.bar-old1{fill:var(--line)} .bar-old2{fill:var(--muted);fill-opacity:.4}
+.bar-new1{fill:var(--c24t)} .bar-new2{fill:var(--c24)}
+
+/* balanza */
+.bal{display:grid;grid-template-columns:1fr 1.3fr 1fr;align-items:stretch}
+.bal>div{padding:24px;background:var(--panel);border:1px solid var(--line);font-size:.96rem;line-height:1.55}
+.bal h4{font-size:1.08rem;margin-bottom:8px;color:inherit}
+.bal p{margin:0}
+.bal>div:first-child{border-radius:var(--radius) 0 0 var(--radius)}
+.bal>div:last-child{border-radius:0 var(--radius) var(--radius) 0}
+.bal .mid{background:var(--ac);color:var(--on);border-color:var(--ac);border-radius:var(--radius);margin:-14px 0;z-index:1;display:flex;flex-direction:column;justify-content:center}
+.bal .mid h4{font-size:1.25rem}
+
+/* casos (art. 24) */
+.cases{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.case{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:26px;display:flex;flex-direction:column;gap:14px}
+.case .letter{width:44px;height:44px;border-radius:12px;background:var(--ac);color:var(--on);display:grid;place-items:center;font-family:var(--font-d);font-weight:800;font-size:1.4rem}
+.case h4{font-size:1.3rem}
+.case p{margin:0;font-size:.97rem;line-height:1.55}
+.case .who{background:var(--act);border-radius:12px;padding:12px 14px}
+.case .who b{display:block;color:var(--acd);font-size:.85rem;margin-bottom:2px}
+.case .fine{color:var(--muted);font-size:.9rem}
+
+/* representar y escuchar */
+.vs{display:grid;grid-template-columns:1fr auto 1fr;gap:18px;align-items:stretch}
+.vs>div{border-radius:var(--radius);padding:24px}
+.vs .old{background:var(--panel);border:2px dashed var(--line)}
+.vs .new{background:var(--act)}
+.vs .arrow{align-self:center;width:46px;height:46px;border-radius:50%;background:var(--ac);color:var(--on);display:grid;place-items:center;font-weight:800;font-size:1.3rem}
+.vs h4{margin-bottom:6px}
+.vs p{margin:0;font-size:.97rem;line-height:1.55}
+
+/* detalles desplegables */
+details.more{margin-top:28px;border:1px solid var(--line);border-radius:var(--radius);background:var(--panel)}
+details.more>summary{cursor:pointer;list-style:none;padding:16px 22px;font-weight:700;display:flex;align-items:center;gap:14px}
+details.more>summary::-webkit-details-marker{display:none}
+details.more>summary::before{content:"";width:9px;height:9px;border-right:3px solid var(--ac);border-bottom:3px solid var(--ac);transform:rotate(-45deg);transition:transform .2s;flex:none}
+details.more[open]>summary::before{transform:rotate(45deg)}
+details.more .in{padding:2px 24px 22px}
+details.more .in ul{margin:0;padding-left:1.25em;display:grid;gap:10px}
+details.more .in li{line-height:1.55;font-size:.98rem}
+
+/* lo esencial */
+.take{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 44px}
+.take li{display:grid;grid-template-columns:40px 1fr;gap:14px;align-items:start;font-size:1.02rem;line-height:1.5}
+.take .ck{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--k);color:var(--on)}
+.take .ck svg{width:22px;height:22px}
+.take small{display:block;color:var(--muted);font-size:.84rem;margin-top:2px}
+.t22{--k:var(--c22)} .t23{--k:var(--c23)} .t24{--k:var(--c24)}
+.next{margin-top:56px}
+.next h3{font-weight:800;font-size:1.5rem;margin-bottom:6px}
+.next p{color:var(--muted);max-width:62ch}
+.next .chip{background:var(--surface);border:1px solid var(--line);color:var(--ink)}
+
+/* glosario */
+.gloss{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 44px;margin:0}
+.gloss div{padding:16px 0;border-top:1px solid var(--line)}
+.gloss dt{font-family:var(--font-d);font-weight:700;font-size:1.08rem;margin-bottom:2px}
+.gloss dd{margin:0;color:var(--muted);font-size:.98rem;line-height:1.55}
+
+/* pie */
+.foot{padding:56px 0 72px;color:var(--muted);font-size:.92rem}
+.foot p{max-width:80ch}
+.foot strong{color:var(--ink)}
+
+/* ---------- responsive ---------- */
+@media (max-width:960px){
+  .hero-grid,.split,.duo,.ba,.cases,.rules,.take,.gloss{grid-template-columns:1fr}
+  .hero-grid{gap:36px}
+  .stairs{grid-template-columns:1fr;gap:10px}
+  .stair{min-height:0!important}
+  .s2{margin-left:24px}.s3{margin-left:48px}
+  .bal{grid-template-columns:1fr;gap:12px}
+  .bal>div,.bal>div:first-child,.bal>div:last-child{border-radius:var(--radius)}
+  .bal .mid{margin:0}
+  .vs{grid-template-columns:1fr}
+  .vs .arrow{transform:rotate(90deg);justify-self:center}
+}
+@media (max-width:860px){
+  .chev{grid-auto-flow:row}
+  .chev>li,.chev>li:first-child,.chev>li:last-child{margin:-14px 0 0;padding:28px 24px 38px;clip-path:polygon(0 0,50% 16px,100% 0,100% calc(100% - 18px),50% 100%,0 calc(100% - 18px))}
+  .chev>li:first-child{margin-top:0;padding-top:24px;clip-path:polygon(0 0,100% 0,100% calc(100% - 18px),50% 100%,0 calc(100% - 18px))}
+  .chev>li:last-child{padding-bottom:26px;clip-path:polygon(0 0,50% 16px,100% 0,100% 100%,0 100%)}
+}
+@media (max-width:760px){
+  .band{padding:60px 0}
+  .brand{display:none}
+  .wrap,.top-in{padding-left:18px;padding-right:18px}
+  .cmp thead{display:none}
+  .cmp,.cmp tbody,.cmp tr,.cmp th,.cmp td{display:block;width:100%}
+  .cmp tbody th{width:100%;background:var(--paper);padding:12px 18px}
+  .cmp td::before{content:attr(data-h);display:block;font-weight:700;font-size:.8rem;color:var(--muted);margin-bottom:2px}
+  .art-head{grid-template-columns:1fr;gap:6px}
+  .numeral{grid-row:auto;font-size:6.5rem}
+  .simple{grid-template-columns:1fr}
+  .lane-row{grid-template-columns:1fr}
+  .wall{width:auto;height:12px}
+  .bridge{min-height:52px;background:linear-gradient(var(--c23),var(--c23)) center/3px 100% no-repeat}
+  .tree-branches{grid-template-columns:1fr;padding-top:18px;background:none;gap:14px}
+  .branch{margin:0}
+  .org{grid-template-columns:1fr;gap:8px}
+  .grad{flex-direction:column;border-radius:var(--radius);gap:6px}
+  .grad span:last-child{text-align:left}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+}
+@media print{
+  .top,.hero-actions,.skip{display:none}
+  body{background:#fff}
+  .band{padding:28px 0;break-inside:avoid-page}
+  .hero-svg .ring,.hero-svg .pop{animation:none}
+}
+
+/* ---------- ampliación de la paleta y componentes de esta página ---------- */
+:root{--c3:#7A44D1;--c3t:#EFE6FB;--c3d:#5A2BA8;--c4:#0B72B5;--c4t:#DDEFFA;--c4d:#085789;--ambd:#7A5006}
+@media (prefers-color-scheme:dark){:root{--c3:#BD9BFF;--c3t:#2D1D4E;--c3d:#D8C4FF;--c4:#6CC4FF;--c4t:#0F3550;--c4d:#A9DCFF;--ambd:#FFD27A}}
+.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ck .i{stroke-width:2.4}
+.a31{--ac:var(--c22);--act:var(--c22t);--acd:var(--c22d)}
+.a34{--ac:var(--c23);--act:var(--c23t);--acd:var(--c23d)}
+.a38{--ac:var(--c24);--act:var(--c24t);--acd:var(--c24d)}
+.a41{--ac:var(--amber);--act:var(--ambert);--acd:var(--ambd)}
+.a43{--ac:var(--c3);--act:var(--c3t);--acd:var(--c3d)}
+.a44{--ac:var(--c4);--act:var(--c4t);--acd:var(--c4d)}
+.t31{--k:var(--c22)}.t34{--k:var(--c23)}.t38{--k:var(--c24)}.t41{--k:var(--amber)}.t43{--k:var(--c3)}.t44{--k:var(--c4)}
+.numeral.rg{font-size:clamp(3.6rem,9.5vw,6.8rem);line-height:.9;letter-spacing:-.05em}
+.cmp thead .h24{background:var(--c24);color:var(--on)}
+.tile{fill:var(--c23t);stroke:var(--c23);stroke-width:2}
+.tile.r{fill:var(--c24t);stroke:var(--c24);stroke-width:3}
+.apoyo{fill:none;stroke:var(--c22);stroke-width:4}
+.lane.l41{--act:var(--ambert);--acd:var(--ambd)}
+.a43 .s1{background:var(--c3t)}
+.a43 .s2{background:color-mix(in srgb,var(--c3) 45%,var(--c3t))}
+.a43 .s3{background:var(--c3)}
+.a43 .axis i{background:linear-gradient(90deg,var(--c3t),var(--c3))}
+@media (max-width:760px){.numeral.rg{font-size:4.2rem}}
+
+.tri-r{fill:var(--c22t);stroke:var(--c22);stroke-width:3}
+.tri-a{fill:var(--c23t);stroke:var(--c23);stroke-width:3}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-flag" viewBox="0 0 24 24"><path d="M5 21V4M5 4h11l-2 4 2 4H5"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></symbol>
+  <symbol id="i-noteq" viewBox="0 0 24 24"><path d="M5 9h14M5 15h14M7 20L17 4"/></symbol>
+  <symbol id="i-half" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3v18"/><path d="M12 3a9 9 0 010 18z" fill="currentColor" stroke="none" opacity=".35"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.4-3.2 7.8-8 9-4.8-1.2-8-4.6-8-9V6z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></symbol>
+<symbol id="i-team" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20v-1a5 5 0 015-5h2a5 5 0 015 5v1"/><circle cx="17" cy="9" r="2.4"/><path d="M17.5 14.2A4 4 0 0121 18v1.5"/></symbol>
+</svg>
+
+<a class="skip" href="#panorama">Saltar al contenido</a>
+<header class="top"><div class="top-in">
+  <div class="brand">Representación, en simple</div>
+  <nav class="nav" aria-label="Secciones de la página">
+    <a href="#panorama">Panorama</a>
+    <a href="#art100"><i class="dot" style="background:var(--c22)"></i>Art. 100</a>
+    <a href="#art101"><i class="dot" style="background:var(--c23)"></i>Art. 101</a>
+    <a href="#art102"><i class="dot" style="background:var(--c24)"></i>Art. 102</a>
+    <a href="#art103"><i class="dot" style="background:var(--amber)"></i>Art. 103</a>
+    <a href="#esencial">Lo esencial</a>
+    <a href="#glosario">Glosario</a>
+  </nav>
+</div></header>
+
+<main>
+<section id="panorama">
+  <div class="hero band"><div class="wrap hero-grid">
+    <div>
+      <p class="kicker">Código Civil y Comercial de la Nación comentado. Libro Primero, Título I, Capítulo 10: Representación y asistencia. Tutela y curatela</p>
+      <h1>Representar es actuar para la persona, no sobre ella.</h1>
+      <p class="lead">Resumen gráfico, en lenguaje sencillo, de la <strong>Sección 1ª: Representación y asistencia</strong> (arts. 100 a 103). Responde: <strong>¿quién actúa por quien no puede ejercer sus derechos?</strong> y <strong>¿quién ayuda a quien sí puede, pero con apoyo?</strong></p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#camino">Ver el recorrido</a>
+        <button class="btn" id="toggleAll" type="button">Abrir todos los detalles</button>
+      </div>
+      <ul class="legend">
+        <li><i style="background:var(--c22)"></i><span><strong>Triángulo de abajo, arts. 100 y 101.</strong> Representación: otra persona actúa por quien no puede ejercer sus derechos.</span></li>
+        <li><i style="background:var(--c23)"></i><span><strong>Triángulo de arriba, art. 102.</strong> Autonomía y asistencia: la persona actúa y un apoyo la acompaña.</span></li>
+        <li><i style="background:var(--amber)"></i><span><strong>Art. 103.</strong> El Ministerio Público interviene como segunda representación, complementaria o principal.</span></li>
+      </ul>
+    </div>
+    <svg class="diagram hero-svg" viewBox="0 0 420 330" role="img" aria-labelledby="hsT hsD">
+      <title id="hsT">A mayor autonomía, menor representación</title>
+      <desc id="hsD">Un rectángulo dividido en diagonal. A la izquierda, donde hay menos autonomía, predomina la representación. A la derecha, con más autonomía, la representación se achica y predomina la autonomía.</desc>
+      <text class="t b" x="210" y="36" text-anchor="middle" font-size="19">A mayor autonomía, menor representación</text>
+      <g class="ring">
+        <polygon class="tri-r" points="30,60 30,230 390,230"/>
+        <polygon class="tri-a" points="30,60 390,60 390,230"/>
+      </g>
+      <text class="t b c22" x="105" y="205" text-anchor="middle" font-size="18">Representación</text>
+      <text class="t b c23" x="318" y="110" text-anchor="middle" font-size="18">Autonomía</text>
+            <line x1="30" y1="262" x2="388" y2="262" stroke="var(--muted)" stroke-width="3"/>
+      <path d="M380 255l10 7-10 7" fill="none" stroke="var(--muted)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <text class="t m" x="30" y="290" font-size="13">Menos autonomía</text>
+      <text class="t m" x="390" y="290" text-anchor="end" font-size="13">Más autonomía</text>
+    </svg>
+  </div></div>
+
+  <div class="band alt" id="camino"><div class="wrap">
+    <h2 class="sec">El recorrido de la representación</h2>
+    <p class="sec-sub">Desde que la ley reconoce que alguien no puede ejercer por sí sus derechos hasta el control de quien lo representa.</p>
+    <ol class="chev">
+      <li style="--bg:var(--c22);--fg:var(--on)"><span class="tag">Art. 24</span><h3>Hay incapacidad de ejercicio</h3><p>Persona por nacer, persona sin edad y madurez suficiente, o declarada incapaz por sentencia.</p></li>
+      <li style="--bg:var(--c23);--fg:var(--on)"><span class="tag">Art. 100</span><h3>Actúa un representante</h3><p>La persona ejerce por su medio los derechos que no puede ejercer por sí.</p></li>
+      <li style="--bg:var(--c24);--fg:var(--on)"><span class="tag">Art. 101</span><h3>La ley dice quién es</h3><p>Padres, tutor, apoyo con facultades de representar o curador, según el caso.</p></li>
+      <li style="--bg:var(--ink);--fg:var(--paper)"><span class="tag">Art. 103</span><h3>Interviene el Ministerio Público</h3><p>Junto con el representante o en su lugar, y bajo control judicial.</p></li>
+    </ol>
+  </div></div>
+
+  <div class="band" id="comparacion"><div class="wrap">
+    <h2 class="sec">Representación y asistencia, cara a cara</h2>
+    <p class="sec-sub">Son las dos formas de acompañar que prevé la sección. Se distinguen por quién realiza el acto.</p>
+    <table class="cmp">
+      <thead><tr>
+        <th scope="col"><span class="sr-only">Aspecto</span></th>
+        <th scope="col" class="h22">Representación<small>Arts. 100 y 101</small></th>
+        <th scope="col" class="h23">Asistencia<small>Art. 102</small></th>
+      </tr></thead>
+      <tbody>
+        <tr><th scope="row">En simple</th><td data-h="Representación">Otra persona <strong>actúa por</strong> quien no puede ejercer sus derechos.</td><td data-h="Asistencia">La persona <strong>actúa ella misma</strong> y un apoyo la acompaña en ciertos actos.</td></tr>
+        <tr><th scope="row">Para quién</th><td data-h="Representación">Personas por nacer, menores de edad no emancipados, personas con capacidad restringida cuando el apoyo representa, e incapaces del art. 32.</td><td data-h="Asistencia">Personas con capacidad restringida e inhabilitadas.</td></tr>
+        <tr><th scope="row">Quién interviene</th><td data-h="Representación">Padres, tutor, apoyo con facultades representativas o curador.</td><td data-h="Asistencia">Los apoyos designados en la sentencia y en leyes especiales.</td></tr>
+        <tr><th scope="row">Qué pasa con su voluntad</th><td data-h="Representación">No se la excluye ni se la reemplaza: el representante debe atender sus deseos.</td><td data-h="Asistencia">Decide la persona. Los actos fijados por la sentencia requieren la asistencia, bajo pena de nulidad.</td></tr>
+        <tr><th scope="row">Cómo se origina</th><td data-h="Representación">Por la ley, y no puede sustituirse por la voluntad de las partes.</td><td data-h="Asistencia">Por la sentencia que designa los apoyos y fija sus funciones.</td></tr>
+      </tbody>
+    </table>
+  </div></div>
+</section>
+
+<!-- ============ ART. 100 ============ -->
+<section id="art100" class="band alt a31"><div class="wrap">
+  <div class="art-head">
+    <div class="numeral" aria-hidden="true">100</div>
+    <h2>Regla general</h2>
+    <p class="tagline">Quien no puede ejercer sus derechos por sí, los ejerce por medio de un representante.<br><span class="pages">Artículo 100, páginas 205 a 210 del comentario</span></p>
+  </div>
+  <blockquote class="law"><span class="lbl">Lo que dice la ley</span>
+    Las personas incapaces ejercen por medio de sus representantes los derechos que no pueden ejercer por sí.
+  </blockquote>
+  <div class="simple"><div class="badge"><svg class="i" aria-hidden="true"><use href="#i-chat"/></svg>En simple</div>
+    <p>La representación es un sistema de protección para quienes la ley limita (art. 24). Se presume la capacidad de todos, y la representación solo aparece donde esa capacidad está limitada. Se adapta a cada caso y existe en beneficio de la persona representada.</p></div>
+
+  <div class="blk">
+    <h3>Seis características de la representación</h3>
+    <p class="sub">El comentario las enumera al explicar cómo funciona el sistema.</p>
+    <div class="rules">
+      <div class="rule"><div class="ico"><svg class="i" aria-hidden="true"><use href="#i-lock"/></svg></div><div><h4>Legal</h4><p>La determina la ley. Las partes no pueden reemplazarla por su voluntad.</p></div></div>
+      <div class="rule"><div class="ico"><svg class="i" aria-hidden="true"><use href="#i-half"/></svg></div><div><h4>Gradual y revisable</h4><p>Se modifica mediante sentencia judicial y debe revisarse periódicamente.</p></div></div>
+      <div class="rule"><div class="ico"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></div><div><h4>Flexible y proporcional</h4><p>Se ajusta a la extensión de la limitación de capacidad de cada persona.</p></div></div>
+      <div class="rule"><div class="ico"><svg class="i" aria-hidden="true"><use href="#i-flag"/></svg></div><div><h4>Excepcional en la incapacidad</h4><p>Para mayores de 13 años declarados incapaces por sentencia, y reservada a supuestos extremos.</p></div></div>
+      <div class="rule"><div class="ico"><svg class="i" aria-hidden="true"><use href="#i-team"/></svg></div><div><h4>Doble</h4><p>Actúa el representante y, además, el Ministerio Público (art. 103).</p></div></div>
+      <div class="rule"><div class="ico"><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg></div><div><h4>Con control judicial</h4><p>Por ejemplo, para disponer de bienes de hijos menores o tutelados, o para actos de administración extraordinaria del tutor.</p></div></div>
+    </div>
+  </div>
+
+  <div class="blk">
+    <h3>Un cambio en la relación entre representante y representado</h3>
+    <div class="vs">
+      <div class="old"><h4>Antes</h4><p>Un sistema rígido y hermético: el representante decidía a partir de su propia iniciativa.</p></div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="new"><h4>Ahora</h4><p>El representante actúa <strong>exclusivamente para</strong> los intereses y la persona del representado. Su voluntad tiene un peso primordial. <strong>A mayor autonomía, menor representación.</strong></p></div>
+    </div>
+  </div>
+
+  <div class="blk">
+    <h3>Lo que la representación no alcanza</h3>
+    <div class="chips"><span class="chip line">Decisiones sobre derechos personalísimos o de la personalidad</span></div>
+    <p class="note" style="margin-top:12px;max-width:70ch">Son derechos de carácter estrictamente personal y el representante no puede suplirlos.</p>
+    <details class="more"><summary>Más detalle: otros casos de representación necesaria que cita el comentario</summary><div class="in"><ul>
+      <li>Art. 103: el Ministerio Público debe proveer representación a quien no la tiene.</li>
+      <li>Art. 104: el guardador es representante legal del niño en lo patrimonial. El comentario propone asimilar al progenitor afín, cuando se le delega el ejercicio de la responsabilidad parental (art. 674).</li>
+      <li>Art. 109: tutores especiales. Art. 111: quiénes deben denunciar la falta de representación de un niño, dentro de los diez días.</li>
+      <li>Arts. 139 y 140: curadores designados por la propia persona o por sus padres, y el curador como tutor de los hijos menores de la persona protegida.</li>
+      <li>Arts. 646, 657, 696 y 703: representación de los hijos por sus progenitores, guarda a un pariente, remoción de la administración y privación o suspensión de la responsabilidad parental.</li></ul></div></details>
+  </div>
+</div></section>
+
+<!-- ============ ART. 101 ============ -->
+<section id="art101" class="band a34"><div class="wrap">
+  <div class="art-head">
+    <div class="numeral" aria-hidden="true">101</div>
+    <h2>Enumeración: quiénes representan</h2>
+    <p class="tagline">La ley dice quién representa a cada persona incapaz de ejercicio.<br><span class="pages">Artículo 101, páginas 210 a 213 del comentario</span></p>
+  </div>
+  <blockquote class="law"><span class="lbl">Lo que dice la ley</span>
+    Son representantes:
+    <ol><li>de las personas por nacer, sus padres;</li><li>de las personas menores de edad no emancipadas, sus padres. Si faltan, o ambos son incapaces, o están privados de la responsabilidad parental o suspendidos en su ejercicio, el tutor que se les designe;</li><li>de las personas con capacidad restringida, el o los apoyos designados cuando, conforme a la sentencia, tengan representación para determinados actos; de las personas incapaces en los términos del último párrafo del art. 32, el curador que se les nombre.</li></ol>
+  </blockquote>
+  <div class="simple"><div class="badge"><svg class="i" aria-hidden="true"><use href="#i-chat"/></svg>En simple</div>
+    <p>Cada caso tiene su representante: los padres, el tutor, el apoyo con facultades de representar o el curador. Todos actúan bajo control del juez y atentos a lo más beneficioso para la persona.</p></div>
+
+  <div class="blk">
+    <h3>Tres casos, tres representantes</h3>
+    <div class="cases">
+      <article class="case"><div class="letter">a</div><h4>Personas por nacer</h4>
+        <p>Son titulares de derechos, pero no pueden ejercerlos. La representación se usa cuando hace falta un acto jurídico concreto.</p>
+        <div class="who"><b>Quién actúa</b>Sus padres, sin necesidad de que lo disponga un juez.</div>
+        <p class="fine">Termina al nacer con vida: pasa a regir la responsabilidad parental.</p></article>
+      <article class="case"><div class="letter">b</div><h4>Menores de edad no emancipados</h4>
+        <p>Cuanto mayor es su autonomía, menor es la representación. Un adolescente con madurez suficiente puede presentarse con abogado propio.</p>
+        <div class="who"><b>Quién actúa</b>Sus padres. Si faltan, son incapaces o están privados de la responsabilidad parental o suspendidos, el tutor designado.</div>
+        <p class="fine">Ante un conflicto con sus representantes, el niño menor de 13 años actúa por un tutor especial que designa el juez.</p></article>
+      <article class="case"><div class="letter">c</div><h4>Capacidad restringida e incapaces</h4>
+        <p>El apoyo solo representa si la sentencia lo faculta para ciertos actos. La incapacidad es la excepción del art. 32.</p>
+        <div class="who"><b>Quién actúa</b>El apoyo designado, con facultades de representar. En la incapacidad, el curador.</div>
+        <p class="fine">El curador representa y sustituye la voluntad, pero debe promover la autonomía y la recuperación de la interacción con su entorno.</p></article>
+    </div>
+  </div>
+
+  <div class="blk">
+    <h3>Tres rangos de edad</h3>
+    <p class="sub">El Código usa estas edades para decidir cuánta representación hace falta.</p>
+    <svg class="diagram" viewBox="0 0 700 110" role="img" aria-labelledby="edT edD">
+      <title id="edT">Rangos de edad</title>
+      <desc id="edD">Niños y niñas hasta los 13 años, adolescentes entre 13 y 18 años, y mayores de edad desde los 18 años con capacidad jurídica plena.</desc>
+      <rect x="20" y="30" width="260" height="40" rx="8" fill="var(--c23t)"/><rect x="280" y="30" width="100" height="40" fill="var(--c23)"/><rect x="380" y="30" width="300" height="40" rx="8" fill="var(--ink)"/>
+      <text class="t b c23" x="150" y="56" text-anchor="middle" font-size="15">Niños y niñas</text>
+      <text class="t w" x="330" y="56" text-anchor="middle" font-size="14">Adolescentes</text>
+      <text x="530" y="56" text-anchor="middle" font-size="15" font-weight="800" font-family="var(--font-d)" fill="var(--paper)">Mayores de edad</text>
+      <text class="t b" x="280" y="20" text-anchor="middle" font-size="14">13 años</text><text class="t b" x="380" y="20" text-anchor="middle" font-size="14">18 años</text>
+      <text class="t m" x="530" y="94" text-anchor="middle" font-size="13">Capacidad jurídica plena</text>
+    </svg>
+  </div>
+
+  <div class="blk">
+    <h3>Cuatro rasgos del sistema</h3>
+    <div class="chips"><span class="chip">Legal: no se sustituye por la voluntad de las partes</span><span class="chip">Necesario: son normas imperativas, con nulidad si se las ignora</span><span class="chip">Doble: el representante y el Ministerio Público</span><span class="chip">Con control judicial: el juez decide lo más beneficioso para la persona</span></div>
+    <details class="more"><summary>Más detalle: el apoyo con función representativa</summary><div class="in"><ul>
+      <li>Es excepcional y se otorga para determinados actos, en beneficio de la persona. Lo fija el juez en la sentencia que restringe la capacidad.</li>
+      <li>El comentario lo vincula con el “apoyo más intenso” del Preámbulo de la CDPD (inc. j).</li>
+      <li>Aun con facultades de representar, el apoyo debe promover la autonomía y favorecer las decisiones que respondan a las preferencias de la persona.</li>
+      <li>Los representantes de personas con capacidad restringida o incapaces deben actuar conforme a los principios de la responsabilidad parental (art. 639).</li></ul></div></details>
+  </div>
+</div></section>
+
+<!-- ============ ART. 102 ============ -->
+<section id="art102" class="band alt a38"><div class="wrap">
+  <div class="art-head">
+    <div class="numeral" aria-hidden="true">102</div>
+    <h2>Asistencia</h2>
+    <p class="tagline">Quien conserva su capacidad actúa por sí, y un apoyo lo asiste en los actos que fija la sentencia.<br><span class="pages">Artículo 102, páginas 213 a 216 del comentario</span></p>
+  </div>
+  <blockquote class="law"><span class="lbl">Lo que dice la ley</span>
+    Las personas con capacidad restringida y las inhabilitadas son asistidas por los apoyos designados en la sentencia respectiva y en otras leyes especiales.
+  </blockquote>
+  <div class="simple"><div class="badge"><svg class="i" aria-hidden="true"><use href="#i-chat"/></svg>En simple</div>
+    <p>Acá no hay reemplazo: la persona sigue siendo capaz y el apoyo la acompaña en los actos que determine el juez. El apoyo debe fomentar su autonomía, no apagarla.</p></div>
+
+  <div class="blk">
+    <h3>A quiénes asiste</h3>
+    <div class="duo">
+      <div class="pan"><h4>Personas con capacidad restringida</h4><p>Conservan su capacidad. Para los actos que menciona la sentencia necesitan la asistencia del apoyo, <strong>bajo pena de nulidad</strong>. En todo lo demás actúan por sí mismas.</p></div>
+      <div class="pan"><h4>Personas inhabilitadas</h4><p>Hoy solo por prodigalidad (art. 48). No cambia su condición de persona capaz. El apoyo las asiste en los actos que fije la sentencia.</p></div>
+    </div>
+    <p class="note" style="margin-top:14px;max-width:72ch">Para los inhabilitados el art. 102 es una excepción al art. 31, inc. b): la limitación no se impone en beneficio de la persona sino para proteger a su familia.</p>
+  </div>
+
+  <div class="blk">
+    <h3>Quién puede ser apoyo</h3>
+    <p class="sub">El Código admite un amplio abanico. El juez fija en la sentencia la modalidad y las funciones.</p>
+    <div class="chips"><span class="chip">Una sola persona</span><span class="chip">Una red de personas</span><span class="chip">Una asociación u organización comunitaria</span></div>
+    <p class="note" style="margin-top:12px">Su función puede ser la de asesor, consejero o asistente. El comentario menciona también la asistencia personal, los equipos y dispositivos tecnológicos y otros recursos auxiliares.</p>
+  </div>
+
+  <div class="blk">
+    <h3>Del apoyo que asiste a la representación</h3>
+    <p class="sub">El sistema crece en intensidad solo cuando hace falta.</p>
+    <div class="axis" aria-hidden="true"><span>Menos sustitución</span><i></i><span>Más sustitución</span></div>
+    <div class="stairs">
+      <div class="stair s1"><h4>Apoyo que asiste</h4><p>La persona decide y firma, con ayuda en los actos que fija la sentencia.</p><small>Art. 102</small></div>
+      <div class="stair s2"><h4>Apoyo con función representativa</h4><p>Excepcional: la sentencia lo faculta a representar en determinados actos, si el sistema de apoyos resulta insuficiente. Interviene el Ministerio Público.</p><small>Art. 101, inc. c</small></div>
+      <div class="stair s3"><h4>Curador</h4><p>Representa a la persona declarada incapaz, solo en la extensión que fije la sentencia.</p><small>Art. 101, inc. c, y art. 32</small></div>
+    </div>
+  </div>
+
+  <div class="blk">
+    <h3>Reglas del sistema de apoyos</h3>
+    <div class="rules">
+      <div class="rule"><div class="ico"><svg class="i" aria-hidden="true"><use href="#i-half"/></svg></div><div><h4>Proporcional</h4><p>El juez no debe quitar más capacidades que las necesarias para proteger los intereses de la persona.</p></div></div>
+      <div class="rule"><div class="ico"><svg class="i" aria-hidden="true"><use href="#i-flag"/></svg></div><div><h4>Por el menor tiempo posible</h4><p>Se debe verificar con regularidad que las medidas sigan siendo actuales y útiles.</p></div></div>
+      <div class="rule"><div class="ico"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></div><div><h4>Fomenta la capacidad natural</h4><p>Permite una participación gradual en la gestión del patrimonio y la autodeterminación en los derechos personalísimos, incluidos los familiares.</p></div></div>
+      <div class="rule"><div class="ico"><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg></div><div><h4>Con registro, si hace falta</h4><p>La resolución fija la condición y calidad del apoyo y, de ser necesario, se inscribe en el Registro de Estado Civil y Capacidad de las Personas.</p></div></div>
+    </div>
+    <details class="more"><summary>Más detalle: un fallo anterior al Código</summary><div class="in"><ul>
+      <li>Tribunal de Familia n° 1 de Mar del Plata, “B. L. s/ inhabilitación” (06/05/2009). Declaró inconstitucional la norma del Código anterior y resolvió que el Sr. B. L. decidiera por sí sobre su patrimonio, con el apoyo de su abuela y su hermano.</li>
+      <li>Fijó salvaguardias: los familiares debían rendir cuentas cada seis meses ante el tribunal e informar sobre los actos de disposición.</li></ul></div></details>
+  </div>
+</div></section>
+
+<!-- ============ ART. 103 ============ -->
+<section id="art103" class="band a41"><div class="wrap">
+  <div class="art-head">
+    <div class="numeral" aria-hidden="true">103</div>
+    <h2>Actuación del Ministerio Público</h2>
+    <p class="tagline">La segunda representación: junto al representante o en su lugar, siempre para proteger a la persona.<br><span class="pages">Artículo 103, páginas 216 a 220 del comentario</span></p>
+  </div>
+  <blockquote class="law"><span class="lbl">Lo que dice la ley</span>
+    La actuación del Ministerio Público respecto de personas menores de edad, incapaces y con capacidad restringida, y de aquellas cuyo ejercicio de capacidad requiera un sistema de apoyos, puede ser, en el ámbito judicial, complementaria o principal. En el ámbito extrajudicial, actúa ante la ausencia, carencia o inacción de los representantes legales, cuando están comprometidos los derechos sociales, económicos y culturales.
+  </blockquote>
+  <div class="simple"><div class="badge"><svg class="i" aria-hidden="true"><use href="#i-chat"/></svg>En simple</div>
+    <p>El Ministerio Público <strong>representa</strong> a la persona con todas sus facultades y deberes. No es solo una asistencia, y por eso se distingue del abogado defensor. Su representación cesa de pleno derecho a los 18 años o cuando se rehabilita a la persona declarada incapaz.</p></div>
+
+  <div class="blk">
+    <h3>Tres formas de actuar</h3>
+    <div class="cases">
+      <article class="case"><div class="letter">a</div><h4>Complementaria</h4>
+        <p>En todos los procesos en que hay intereses de personas menores de edad, incapaces o con capacidad restringida. Actúa junto con padres, tutores, curadores o apoyos con facultades de representar.</p>
+        <div class="who"><b>Si falta su intervención</b>El acto es relativamente nulo.</div></article>
+      <article class="case"><div class="letter">b</div><h4>Principal</h4>
+        <p>Actúa en primer lugar en estos tres casos:</p>
+        <div class="who"><b>Cuándo</b>Los derechos están comprometidos y los representantes no hacen nada. El proceso busca exigir los deberes de los representantes. No hay representante legal y hay que proveerlo.</div></article>
+      <article class="case"><div class="letter">ex</div><h4>Extrajudicial</h4>
+        <p>Fuera de un proceso, ante la ausencia, carencia o inacción de los representantes legales.</p>
+        <div class="who"><b>Cuándo</b>Están comprometidos los derechos sociales, económicos y culturales de la persona.</div></article>
+    </div>
+  </div>
+
+  <div class="blk">
+    <h3>Nulidad por falta de intervención</h3>
+    <p class="sub">Es relativa: puede confirmarse, y solo se declara a pedido de quienes la ley protege.</p>
+    <div class="vs">
+      <div class="old"><h4>Si el acto perjudicó a la persona</h4><p>El Ministerio Público, al enterarse, debe pedir la nulidad de lo actuado sin su intervención.</p></div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="new"><h4>Si el acto fue favorable</h4><p>No corresponde oponer la nulidad. Su intervención posterior <strong>convalida</strong> los actos anteriores que no la perjudican (art. 388).</p></div>
+    </div>
+  </div>
+
+  <div class="blk">
+    <h3>Qué puede hacer cuando hay inacción</h3>
+    <div class="chips"><span class="chip">Reclamar alimentos a los progenitores y exigirles cumplir sus deberes (art. 646)</span><span class="chip">Responsabilizar al tutor o curador por los daños (art. 118)</span><span class="chip">Pedir su remoción o suspensión provisoria (arts. 136 y 137)</span><span class="chip">Exigir rendición de cuentas (art. 130)</span><span class="chip">Pedir un curador provisorio (art. 109, inc. g)</span></div>
+    <details class="more"><summary>Más detalle: qué es el Ministerio Público y qué exige a los representantes</summary><div class="in"><ul>
+      <li>Es un órgano independiente, con autonomía funcional y autarquía financiera. Promueve la actuación de la justicia en defensa de la legalidad y de los intereses generales de la sociedad.</li>
+      <li>Debe exigir a los representantes de personas con capacidad restringida o incapaces que respeten el art. 31 y los estándares de derechos humanos: participación en el proceso, accesibilidad, ajustes razonables e información.</li>
+      <li>Se mantiene la doble representación, pero se modifica el concepto de “representación promiscua”.</li>
+      <li>Los niños, niñas y adolescentes son sujetos de derecho y pueden ejercer su defensa activa mediante el abogado del niño.</li></ul></div></details>
+  </div>
+</div></section>
+
+<!-- ============ LO ESENCIAL ============ -->
+<section id="esencial" class="band alt"><div class="wrap">
+  <h2 class="sec">Lo esencial en ocho ideas</h2>
+  <p class="sec-sub">El color indica el artículo: índigo, art. 100; verde, art. 101; rosa, art. 102; ocre, art. 103.</p>
+  <ul class="take">
+    <li class="t31"><span class="ck"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><span>Las personas incapaces de ejercicio ejercen por medio de representantes los derechos que no pueden ejercer por sí.<small>Art. 100</small></span></li>
+    <li class="t31"><span class="ck"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><span>La representación es legal, gradual, proporcional, revisable y con control judicial. En la incapacidad, es excepcional.<small>Art. 100</small></span></li>
+    <li class="t31"><span class="ck"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><span>El representante actúa para la persona, no sobre ella. Su voluntad cuenta, y a mayor autonomía, menor representación.<small>Art. 100</small></span></li>
+    <li class="t31"><span class="ck"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><span>Las decisiones sobre derechos personalísimos quedan fuera de las funciones del representante.<small>Art. 100</small></span></li>
+    <li class="t34"><span class="ck"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><span>Representan: los padres (a quien está por nacer y a menores), el tutor, el apoyo con facultades de representar y el curador.<small>Art. 101</small></span></li>
+    <li class="t34"><span class="ck"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><span>El apoyo solo representa si la sentencia lo faculta para determinados actos. El curador queda para la incapacidad del art. 32.<small>Art. 101</small></span></li>
+    <li class="t38"><span class="ck"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><span>Las personas con capacidad restringida e inhabilitadas son asistidas por apoyos. Sin asistencia, los actos limitados son nulos.<small>Art. 102</small></span></li>
+    <li class="t41"><span class="ck"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><span>El Ministerio Público actúa como complemento o como parte principal, y fuera de juicio si hay derechos sociales, económicos y culturales en juego.<small>Art. 103</small></span></li>
+  </ul>
+  <div class="next">
+    <h3>Dónde seguir leyendo</h3>
+    <p>Normas que el comentario cita y que continúan esta sección.</p>
+    <div class="chips">
+      <span class="chip">Arts. 24 y 26: incapaces de ejercicio y personas menores de edad</span>
+      <span class="chip">Arts. 31 a 50: restricciones a la capacidad</span>
+      <span class="chip">Art. 104 y siguientes: tutela</span>
+      <span class="chip">Art. 138 y siguientes: curatela</span>
+      <span class="chip">Art. 639: principios de la responsabilidad parental</span>
+      <span class="chip">Art. 388: nulidad relativa</span>
+    </div>
+  </div>
+</div></section>
+
+<!-- ============ GLOSARIO ============ -->
+<section id="glosario" class="band"><div class="wrap">
+  <h2 class="sec">Glosario sin vueltas</h2>
+  <p class="sec-sub">Las palabras difíciles de esta sección, explicadas en pocas líneas.</p>
+  <dl class="gloss">
+    <div><dt>Representación</dt><dd>Otra persona actúa en nombre de quien no puede ejercer por sí sus derechos.</dd></div>
+    <div><dt>Asistencia</dt><dd>La persona actúa y un apoyo la acompaña en los actos que fija la sentencia.</dd></div>
+    <div><dt>Representante legal</dt><dd>Quien la ley designa para actuar por una persona: padres, tutor, curador o apoyo con facultades de representar.</dd></div>
+    <div><dt>Apoyo</dt><dd>Ayuda para decidir y comunicarse. Puede ser una persona, una red o una organización.</dd></div>
+    <div><dt>Apoyo intenso</dt><dd>Apoyo con función representativa, excepcional y fijado por la sentencia para determinados actos.</dd></div>
+    <div><dt>Curador</dt><dd>Representa a la persona declarada incapaz, en la extensión que fije la sentencia.</dd></div>
+    <div><dt>Tutor</dt><dd>Representa a un menor de edad cuando faltan los padres, son incapaces o están privados de la responsabilidad parental.</dd></div>
+    <div><dt>Tutor especial</dt><dd>Lo designa el juez en casos puntuales, por ejemplo ante un conflicto entre el niño y sus representantes.</dd></div>
+    <div><dt>Capacidad progresiva</dt><dd>A medida que crece la edad y la madurez, la persona ejerce más derechos por sí y se necesita menos representación.</dd></div>
+    <div><dt>Derechos personalísimos</dt><dd>Derechos estrictamente personales, que el representante no puede ejercer en lugar de la persona.</dd></div>
+    <div><dt>Actuación complementaria</dt><dd>El Ministerio Público actúa junto con el representante legal en los procesos que involucran a la persona.</dd></div>
+    <div><dt>Actuación principal</dt><dd>El Ministerio Público actúa en primer lugar si el representante no actúa, debe ser exigido o no existe.</dd></div>
+    <div><dt>Nulidad relativa</dt><dd>Un acto viciado que puede confirmarse y que solo pueden invocar quienes la ley quiere proteger.</dd></div>
+    <div><dt>Inhabilitado</dt><dd>Hoy solo por prodigalidad: persona capaz que necesita un apoyo en ciertos actos de disposición.</dd></div>
+  </dl>
+</div></section>
+</main>
+
+<footer class="foot"><div class="wrap">
+  <p><strong>Fuente.</strong> Código Civil y Comercial de la Nación Comentado, Tomo I (arts. 1 a 400), Infojus, Sistema Argentino de Información Jurídica. Libro Primero, Título I, Capítulo 10, Sección 1ª: arts. 100 a 103, páginas 205 a 220. Comentarios a los arts. 100 a 137 de Ángeles Baliero de Burundarena.</p>
+  <p>Este resumen es una guía de estudio con fines didácticos: reformula el comentario en lenguaje sencillo y no reemplaza el texto de la ley ni el asesoramiento profesional.</p>
+</div></footer>
+
+<script>
+(function(){
+  var btn=document.getElementById('toggleAll');
+  var all=function(){return Array.prototype.slice.call(document.querySelectorAll('details.more'));};
+  btn.addEventListener('click',function(){
+    var open=all().some(function(d){return !d.open;});
+    all().forEach(function(d){d.open=open;});
+    btn.textContent=open?'Cerrar todos los detalles':'Abrir todos los detalles';
+  });
+  window.addEventListener('beforeprint',function(){all().forEach(function(d){d.open=true;});});
+
+  var links=Array.prototype.slice.call(document.querySelectorAll('.nav a'));
+  var byId={};
+  links.forEach(function(a){byId[a.getAttribute('href').slice(1)]=a;});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){
+          links.forEach(function(l){l.classList.remove('on');});
+          if(byId[e.target.id]){byId[e.target.id].classList.add('on');}
+        }
+      });
+    },{rootMargin:'-40% 0px -55% 0px'});
+    Array.prototype.slice.call(document.querySelectorAll('main > section[id]')).forEach(function(s){io.observe(s);});
+  }
+})();
+</script>
+</body>
+</html>

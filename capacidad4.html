@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tutela en simple: resumen gráfico de los arts. 104 a 137 del CCyC</title>
+<meta name="description" content="Resumen gráfico y en lenguaje sencillo de la Sección 2ª Tutela (arts. 104 a 137) del Código Civil y Comercial comentado.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500..800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F6F5F1;--surface:#fff;--ink:#1C2230;--muted:#586075;--line:#E1DED5;--on:#fff;
+--c1:#2563C9;--c2:#0F7B63;--c3:#B8480E;--c4:#7B3FC7;--c5:#B5205A;
+--fd:"Fraunces",Georgia,"Times New Roman",serif;--fb:"Source Sans 3",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--r:16px}
+@media (prefers-color-scheme:dark){:root{--paper:#12151D;--surface:#1A1F2B;--ink:#ECEEF4;--muted:#A7AEC0;--line:#2B3242;--on:#12151D;
+--c1:#7DB0FF;--c2:#55D3B2;--c3:#FFA169;--c4:#BE9BFF;--c5:#FF8DB4}}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:1.0625rem/1.65 var(--fb);-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--fd);margin:0;line-height:1.1;letter-spacing:-.015em;text-wrap:balance}
+p{margin:0 0 1em}
+:focus-visible{outline:3px solid var(--c1);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:var(--paper);padding:10px 16px;border-radius:10px;z-index:50}
+.skip:focus{left:12px}
+.s1{--ac:var(--c1)}.s2{--ac:var(--c2)}.s3{--ac:var(--c3)}.s4{--ac:var(--c4)}.s5{--ac:var(--c5)}
+.s1,.s2,.s3,.s4,.s5{--t:color-mix(in srgb,var(--ac) 13%,var(--surface));--d:color-mix(in srgb,var(--ac) 78%,var(--ink))}
+
+/* navegación */
+.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 90%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top-in{max-width:1120px;margin:0 auto;display:flex;align-items:center;gap:18px;padding:10px 24px}
+.brand{font-family:var(--fd);font-weight:700;white-space:nowrap}
+.nav{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav a{display:inline-flex;align-items:center;gap:8px;padding:7px 13px;border-radius:999px;color:var(--muted);text-decoration:none;font-weight:600;font-size:.92rem;white-space:nowrap}
+.nav a:hover{color:var(--ink);background:var(--surface)}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--ac)}
+
+/* hero */
+.hero{padding:56px 0 40px}
+.kicker{color:var(--muted);font-size:.95rem;font-weight:600;max-width:60ch;margin-bottom:18px}
+h1{font-weight:800;font-size:clamp(2.2rem,5.4vw,4rem);line-height:1.02;letter-spacing:-.03em;max-width:18ch;margin-bottom:22px}
+.lead{font-size:1.18rem;max-width:62ch;color:var(--muted)}
+.lead strong{color:var(--ink)}
+.stats{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 0;padding:0;list-style:none}
+.stats li{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px 18px;font-size:.95rem}
+.stats b{font-family:var(--fd);font-size:1.5rem;margin-right:6px}
+
+/* recorrido */
+.band{padding:64px 0}
+.band.alt{background:var(--surface);border-block:1px solid var(--line)}
+.sec{font-weight:800;font-size:clamp(1.7rem,3.4vw,2.5rem);letter-spacing:-.025em;margin-bottom:10px}
+.sub{color:var(--muted);max-width:64ch;margin-bottom:30px}
+.route{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.route a{display:flex;flex-direction:column;gap:6px;height:100%;padding:18px;border-radius:var(--r);background:var(--ac);color:var(--on);text-decoration:none;position:relative}
+.route a:hover{transform:translateY(-2px)}
+.route .k{font-size:.82rem;font-weight:700;opacity:.9}
+.route h3{font-size:1.15rem;color:inherit}
+.route p{margin:0;font-size:.9rem;line-height:1.45;opacity:.95}
+
+/* tabla */
+.cmp{width:100%;border-collapse:separate;border-spacing:0;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.cmp th,.cmp td{padding:15px 20px;text-align:left;vertical-align:top;border-top:1px solid var(--line);font-size:.98rem;line-height:1.55}
+.cmp thead th{border-top:0;font-family:var(--fd);font-size:1.15rem;color:var(--on)}
+.cmp thead .a{background:var(--muted)}.cmp thead .b{background:var(--c2)}
+.cmp tbody th{width:20%;color:var(--muted);font-size:.92rem}
+
+/* buscador */
+.tools{position:sticky;top:57px;z-index:15;background:var(--paper);padding:14px 0;border-bottom:1px solid var(--line)}
+.tools .wrap{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.tools input{flex:1 1 260px;font:inherit;padding:11px 16px;border-radius:12px;border:2px solid var(--line);background:var(--surface);color:var(--ink)}
+.tools input:focus{border-color:var(--c1);outline:0}
+.btn{font:700 .95rem var(--fb);padding:11px 18px;border-radius:12px;border:2px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer}
+.count{color:var(--muted);font-size:.9rem}
+
+/* secciones por parágrafo */
+.art-head{display:grid;grid-template-columns:auto 1fr;gap:4px 28px;align-items:end;margin-bottom:30px}
+.numeral{grid-row:span 2;font-family:var(--fd);font-weight:800;font-size:clamp(4.5rem,11vw,8rem);line-height:.8;letter-spacing:-.05em;color:var(--ac)}
+.art-head h2{font-weight:800;font-size:clamp(1.8rem,3.6vw,2.7rem);letter-spacing:-.025em}
+.tagline{color:var(--muted);font-size:1.1rem;max-width:56ch;margin:0}
+.rng{display:inline-block;margin-top:8px;font-size:.88rem;font-weight:700;color:var(--d);background:var(--t);border-radius:999px;padding:2px 12px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-top:6px solid var(--ac);border-radius:var(--r);padding:22px 24px;display:flex;flex-direction:column;gap:12px}
+.alt .card{background:var(--paper)}
+.card .hd{display:flex;align-items:center;gap:14px}
+.n{flex:none;min-width:56px;text-align:center;padding:6px 10px;border-radius:12px;background:var(--ac);color:var(--on);font-family:var(--fd);font-weight:800;font-size:1.35rem}
+.card h3{font-size:1.25rem;line-height:1.2}
+.card p{margin:0;font-size:.99rem;line-height:1.6}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}
+.chips span{padding:4px 12px;border-radius:999px;background:var(--t);color:var(--d);font-weight:600;font-size:.85rem;line-height:1.35}
+.empty{display:none;color:var(--muted);padding:24px 0}
+
+/* lo esencial */
+.take{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 40px;counter-reset:t}
+.take li{display:grid;grid-template-columns:40px 1fr;gap:14px;align-items:start;counter-increment:t}
+.take li::before{content:counter(t);width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--ink);color:var(--paper);font-family:var(--fd);font-weight:800}
+.foot{padding:48px 0 64px;color:var(--muted);font-size:.92rem}
+.foot p{max-width:80ch}
+
+@media (max-width:960px){.route{grid-template-columns:1fr 1fr}.grid,.take{grid-template-columns:1fr}}
+@media (max-width:760px){
+  .band{padding:48px 0}.brand{display:none}.wrap,.top-in{padding-inline:18px}
+  .route{grid-template-columns:1fr}
+  .art-head{grid-template-columns:1fr}.numeral{grid-row:auto}
+  .cmp thead{display:none}.cmp,.cmp tbody,.cmp tr,.cmp th,.cmp td{display:block;width:100%}
+  .cmp tbody th{width:100%;background:var(--paper);padding:10px 18px}
+  .cmp td::before{content:attr(data-h);display:block;font-weight:700;font-size:.8rem;color:var(--muted)}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+@media print{.top,.tools,.skip{display:none}body{background:#fff}.band{padding:24px 0}.card{break-inside:avoid}}
+</style>
+</head>
+<body>
+<a class="skip" href="#panorama">Saltar al contenido</a>
+<header class="top"><div class="top-in">
+  <div class="brand">Tutela, en simple</div>
+  <nav class="nav" aria-label="Secciones de la página">
+    <a href="#panorama">Panorama</a>
+    <a class="s1" href="#p1"><i class="dot"></i>Disposiciones</a>
+    <a class="s2" href="#p2"><i class="dot"></i>Discernimiento</a>
+    <a class="s3" href="#p3"><i class="dot"></i>Ejercicio</a>
+    <a class="s4" href="#p4"><i class="dot"></i>Cuentas</a>
+    <a class="s5" href="#p5"><i class="dot"></i>Terminación</a>
+    <a href="#esencial">Lo esencial</a>
+  </nav>
+</div></header>
+
+<main>
+<section id="panorama">
+  <div class="hero"><div class="wrap">
+    <p class="kicker">Código Civil y Comercial de la Nación comentado. Libro Primero, Título I, Capítulo 10: Representación y asistencia. Tutela y curatela</p>
+    <h1>La tutela protege a quien no tiene quién ejerza la responsabilidad parental.</h1>
+    <p class="lead">Resumen gráfico, en lenguaje sencillo, de la <strong>Sección 2ª: Tutela</strong> (arts. 104 a 137). Responde: <strong>¿quién cuida a un niño, niña o adolescente sin progenitores que ejerzan la responsabilidad parental?</strong> y <strong>¿cómo se controla a quien administra sus bienes?</strong></p>
+    <ul class="stats"><li><b>34</b>artículos</li><li><b>5</b>parágrafos</li><li><b>1</b>regla de oro: el interés superior</li></ul>
+  </div></div>
+
+  <div class="band alt"><div class="wrap">
+    <h2 class="sec">El recorrido de la tutela</h2>
+    <p class="sub">Cinco parágrafos, en el orden en que suceden las cosas. Tocá uno para ir a sus artículos.</p>
+    <ol class="route">
+      <li class="s1"><a href="#p1"><span class="k">Arts. 104 a 111</span><h3>Disposiciones generales</h3><p>Qué es la tutela, quién puede ser tutor y quién debe denunciar.</p></a></li>
+      <li class="s2"><a href="#p2"><span class="k">Arts. 112 a 116</span><h3>Discernimiento</h3><p>El juez nombra al tutor, oye al niño y manda hacer el inventario.</p></a></li>
+      <li class="s3"><a href="#p3"><span class="k">Arts. 117 a 129</span><h3>Ejercicio</h3><p>Qué puede hacer el tutor y qué actos necesitan autorización judicial.</p></a></li>
+      <li class="s4"><a href="#p4"><span class="k">Arts. 130 a 134</span><h3>Cuentas</h3><p>Rendición anual y final, gastos y daños por mala administración.</p></a></li>
+      <li class="s5"><a href="#p5"><span class="k">Arts. 135 a 137</span><h3>Terminación</h3><p>Cuándo termina la tutela y cuándo se remueve al tutor.</p></a></li>
+    </ol>
+  </div></div>
+
+  <div class="band"><div class="wrap">
+    <h2 class="sec">Responsabilidad parental y tutela, cara a cara</h2>
+    <p class="sub">La tutela es subsidiaria: reemplaza las funciones de la responsabilidad parental cuando los progenitores no pueden ejercerla.</p>
+    <table class="cmp">
+      <thead><tr><th scope="col"><span class="sr-only">Aspecto</span></th><th scope="col" class="a">Responsabilidad parental</th><th scope="col" class="b">Tutela</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Cuándo actúa</th><td data-h="Responsabilidad parental">Mientras los progenitores pueden ejercerla.</td><td data-h="Tutela">Cuando no hay persona que ejerza la responsabilidad parental (art. 104).</td></tr>
+        <tr><th scope="row">Quién la ejerce</th><td data-h="Responsabilidad parental">Los progenitores, por su vínculo de filiación.</td><td data-h="Tutela">Uno o más tutores: designados por los padres o por el juez. Siempre se discierne judicialmente (arts. 105 a 107 y 112).</td></tr>
+        <tr><th scope="row">Qué abarca</th><td data-h="Responsabilidad parental">Crianza, cuidado y representación de los hijos.</td><td data-h="Tutela">Protección de la persona y de los bienes del niño; el tutor es su representante legal en lo patrimonial (arts. 104 y 117).</td></tr>
+        <tr><th scope="row">Control</th><td data-h="Responsabilidad parental">Judicial en los actos que lo requiere la ley.</td><td data-h="Tutela">Inventario, autorización judicial para actos importantes, rendición de cuentas e intervención del Ministerio Público.</td></tr>
+      </tbody>
+    </table>
+    <p class="sub" style="margin:16px 0 0">El Código derogó la tutela legal: ya no hay una lista legal de personas preferidas, y el juez elige al más idóneo en cada caso.</p>
+  </div></div>
+</section>
+
+<div class="tools"><div class="wrap">
+  <label class="sr-only" for="q">Buscar en los artículos</label>
+  <input id="q" type="search" placeholder="Buscar: inventario, retribución, remoción, art. 121…" autocomplete="off">
+  <span class="count" id="cnt" aria-live="polite"></span>
+  <button class="btn" type="button" onclick="window.print()">Imprimir</button>
+</div></div>
+
+<div id="arts"></div>
+<p class="empty wrap" id="none">No hay artículos que coincidan con la búsqueda.</p>
+
+<section id="esencial" class="band alt"><div class="wrap">
+  <h2 class="sec">Lo esencial en seis ideas</h2>
+  <p class="sub">Si solo te quedás con esto, ya tenés el esquema de la tutela.</p>
+  <ol class="take">
+    <li><span><strong>Es subsidiaria.</strong> Opera cuando no hay quien ejerza la responsabilidad parental (art. 104).</span></li>
+    <li><span><strong>Siempre la discierne un juez</strong>, el del centro de vida del niño, que debe oírlo antes de decidir (arts. 112 y 113).</span></li>
+    <li><span><strong>Tres vías:</strong> tutor designado por los padres, tutela dativa por el juez, o tutela especial para un asunto puntual (arts. 106, 107 y 109).</span></li>
+    <li><span><strong>El tutor representa en lo patrimonial</strong>, pero el niño es oído y su capacidad progresiva se reconoce (art. 117).</span></li>
+    <li><span><strong>Hay controles:</strong> inventario, autorización judicial para actos importantes y rendición de cuentas anual y final (arts. 115, 121, 130 y 131).</span></li>
+    <li><span><strong>Termina y puede removerse:</strong> por causas del niño o del tutor; durante el juicio de remoción se lo puede suspender (arts. 135 a 137).</span></li>
+  </ol>
+</div></section>
+</main>
+
+<footer class="foot"><div class="wrap">
+  <p><strong>Fuente:</strong> Código Civil y Comercial de la Nación comentado, Tomo I (Infojus - SAIJ), Sección 2ª: Tutela, arts. 104 a 137.</p>
+  <p>Resumen didáctico en lenguaje sencillo. No reemplaza el texto de la ley ni el asesoramiento profesional: para citar o litigar, consultá el artículo completo.</p>
+</div></footer>
+
+<script>
+const P=[
+{id:1,t:"Disposiciones generales",r:"Arts. 104 a 111",g:"Qué es la tutela, quién puede ser tutor y quién debe avisar que un niño quedó sin referente adulto.",a:[
+[104,"Concepto y principios generales","La tutela protege la persona y los bienes de un niño, niña o adolescente cuando no hay quien ejerza la responsabilidad parental. Se rige por el interés superior, la autonomía progresiva y el derecho a ser oído. Si hay un pariente guardador o delegado, el juez puede encargarle la protección; en lo patrimonial es su representante legal.",["Subsidiaria","Interés superior","Guardador: representante patrimonial"]],
+[105,"Caracteres","Puede ejercerla una o más personas, según lo que más beneficie al niño. Si son varias y discrepan, decide el juez que discernió la tutela, con intervención del Ministerio Público. El cargo es intransmisible.",["Uno o varios tutores","Las diferencias las dirime el juez","Intransmisible"]],
+[106,"Tutor designado por los padres","Cualquier progenitor no privado ni suspendido en la responsabilidad parental puede nombrar tutor por testamento o escritura pública, y el juez debe aprobarlo. Se tienen por no escritas las cláusulas que eximen de inventario o de rendir cuentas. Si delegaron el ejercicio en un pariente, se presume que lo quieren como tutor.",["Testamento o escritura pública","Aprobación judicial","No se exime de inventario ni de cuentas"]],
+[107,"Tutela dativa","Si los padres no designaron tutor, o el designado se excusa, es rechazado o no puede ejercer, el juez otorga la tutela a la persona más idónea para proteger al niño y debe fundar razonablemente esa idoneidad.",["Subsidiaria","Idoneidad fundada","Solo personas humanas"]],
+[108,"Prohibiciones para ser tutor dativo","El juez no puede nombrar a su cónyuge o conviviente, a sus parientes (hasta el 4º grado o 2º por afinidad), amigos íntimos, personas con intereses comunes, deudores o acreedores, integrantes de los tribunales del lugar, ni a quien ya es tutor de otro menor, salvo hermanos o causa que lo justifique.",["Imparcialidad del juez","Excepción: hermanos"]],
+[109,"Tutela especial","Se nombra un tutor especial para asuntos puntuales: conflicto de intereses con los representantes, padres sin administración de los bienes, oposición entre varios representados, bienes con condición de administración, bienes de otra jurisdicción, conocimientos específicos o urgencia. Un adolescente puede actuar por sí con asistencia letrada y el juez puede evitar el tutor especial.",["Excepcional","Siete supuestos (incs. a a g)","Adolescente con asistencia letrada"]],
+[110,"Personas excluidas","No pueden ser tutores, entre otros: quien no tiene domicilio en el país, el quebrado no rehabilitado, el privado o suspendido de la responsabilidad parental, el condenado por delito doloso a pena privativa de la libertad, el deudor o acreedor importante del tutelado, quien litiga con él y los inhabilitados, incapaces o con capacidad restringida.",["11 causales (incs. a a k)","Excluido por los padres: el juez puede igual designarlo si conviene al niño"]],
+[111,"Obligados a denunciar","Los parientes obligados a dar alimentos, el guardador, los tutores designados por los padres y los funcionarios públicos (incluido el Registro Civil) deben denunciar que el niño no tiene referente adulto. El plazo es de 10 días desde que lo supieron. Si no lo hacen, pierden la posibilidad de ser tutores y responden por los daños. El juez actúa de oficio.",["10 días","Pierden la chance de ser tutores","Responden por daños"]]]},
+{id:2,t:"Discernimiento de la tutela",r:"Arts. 112 a 116",g:"El juez nombra al tutor, escucha al niño y ordena el inventario de sus bienes.",a:[
+[112,"Discernimiento judicial. Competencia","La tutela siempre la discierne un juez: el del lugar donde el niño, niña o adolescente tiene su centro de vida.",["Siempre judicial","Juez del centro de vida"]],
+[113,"Audiencia con la persona menor de edad","Para discernir la tutela, y para cualquier otra decisión sobre el niño, el juez debe oírlo antes, tener en cuenta lo que dice según su edad y madurez, y decidir atendiendo a su interés superior.",["Oírlo","Valorar su opinión","Interés superior"]],
+[114,"Actos anteriores al discernimiento","Los actos del tutor anteriores al discernimiento quedan confirmados por el nombramiento, salvo que resulte un perjuicio para el niño.",["Se confirman","Salvo perjuicio"]],
+[115,"Inventario y avalúo","Discernida la tutela, los bienes se entregan al tutor previo inventario y avalúo hechos por quien designe el juez. Si el tutor tiene un crédito contra el niño, debe hacerlo constar o no podrá reclamarlo luego, salvo que ignorara su existencia. Hasta el inventario solo toma medidas urgentes y necesarias.",["Inventario obligatorio","Declarar el crédito","Solo medidas urgentes"]],
+[116,"Rendición de cuentas del anterior","Si el tutor sucede a uno de los padres o a otro tutor, debe pedir de inmediato la rendición judicial de cuentas y la entrega de los bienes, al sustituido o a sus herederos.",["Inmediata","Judicial"]]]},
+{id:3,t:"Ejercicio de la tutela",r:"Arts. 117 a 129",g:"Qué puede y qué no puede hacer el tutor con la persona y los bienes del niño.",a:[
+[117,"Ejercicio","El tutor es representante legal del niño en todas las cuestiones patrimoniales. Eso no impide que el niño actúe personalmente en ejercicio de su derecho a ser oído y de su capacidad progresiva, reconocida por la ley o autorizada por el juez.",["Representante patrimonial","Capacidad progresiva"]],
+[118,"Responsabilidad","El tutor responde por el daño que cause al tutelado por su culpa, por acción u omisión, en ejercicio o con ocasión de sus funciones. Pueden pedir las medidas necesarias el tutelado, sus parientes o el Ministerio Público, o el juez de oficio.",["Responde por culpa","Pueden pedirlo: tutelado, parientes, MP"]],
+[119,"Educación y alimentos","El juez fija las sumas para educación y alimentos según los bienes del niño y la renta que producen. Si no alcanzan, el tutor puede, con autorización judicial, demandar alimentos a los obligados a prestarlos.",["Las fija el juez","Alimentos a los obligados"]],
+[120,"Actos prohibidos","El tutor no puede, ni con autorización judicial, celebrar con el tutelado los actos prohibidos a los padres respecto de sus hijos. Antes de aprobada la cuenta final tampoco puede contratar con el pupilo, aunque haya cesado la incapacidad.",["Ni con autorización judicial","Hasta aprobar la cuenta final"]],
+[121,"Actos que requieren autorización judicial","Además de los actos que lo requieren para los padres, necesita autorización para: adquirir inmuebles o bienes no útiles para alimentos, prestar dinero del tutelado (con garantías reales suficientes), alquilar sus bienes por más de tres años, tomar en locación inmuebles que no sean la casa habitación, contraer deudas, repudiar herencias o donaciones, transar, remitir créditos, hacer gastos extraordinarios y actos en que tengan interés sus parientes cercanos, socios o amigos íntimos.",["Locación por más de 3 años","Préstamo con garantía real","Repudiar herencias o donaciones"]],
+[122,"Derechos reales sobre bienes del tutelado","El juez solo autoriza transmitir, constituir o modificar derechos reales sobre los bienes del niño si media conveniencia evidente. Los bienes con valor afectivo o cultural solo se venden en caso de absoluta necesidad.",["Conveniencia evidente","Bienes de valor afectivo o cultural"]],
+[123,"Forma de la venta","La venta se hace en subasta pública. Se exceptúan los muebles de escaso valor y la venta extrajudicial que el juez considere más conveniente, siempre que el precio ofrecido supere la tasación.",["Subasta pública","Precio superior a la tasación"]],
+[124,"Dinero","Cubiertos los gastos de la tutela, el dinero del niño se coloca a interés en bancos de reconocida solvencia o se invierte en títulos públicos, a su nombre y a la orden del juez. El tutor no retira fondos, títulos ni valores sin autorización judicial.",["Bancos solventes o títulos públicos","A la orden del juez"]],
+[125,"Fideicomiso y otras inversiones seguras","El juez puede autorizar que los bienes se transmitan en fideicomiso a una entidad autorizada a ofrecerse públicamente como fiduciaria, siendo el niño el beneficiario. También puede disponer otras inversiones seguras, previo dictamen técnico.",["Fiduciario autorizado","El niño es beneficiario"]],
+[126,"Sociedad","Si el niño tiene parte en una sociedad, el tutor ejerce los derechos del socio al que sucedió. Si hay que optar entre continuar o disolver, decide el juez previo informe del tutor.",["Ejerce los derechos del socio","Continuar o disolver: decide el juez"]],
+[127,"Fondo de comercio","El tutor puede hacer los actos de administración ordinaria del establecimiento; los que la exceden requieren autorización judicial. Si seguir explotándolo es perjudicial, el juez autoriza el cese y la venta, previa tasación, en subasta o venta privada.",["Administración ordinaria","Cese del negocio con autorización"]],
+[128,"Retribución del tutor","El tutor cobra la retribución que fije el juez según la importancia de los bienes y el trabajo de cada período. Si son dos tutores, la remuneración es única y se reparte. No puede exceder la décima parte de los frutos líquidos. El guardador que ejerce funciones de tutela también la cobra.",["La fija el juez","Tope: 1/10 de los frutos líquidos"]],
+[129,"Cese del derecho a la retribución","No cobra si fue nombrado por testamento con un legado que pueda considerarse remuneratorio (puede renunciar al legado y cobrar), si las rentas no alcanzan para alimentos y educación, si fue removido por su culpa o dolo, o si se casa con el tutelado sin dispensa judicial.",["Cuatro supuestos"]]]},
+{id:4,t:"Cuentas de la tutela",r:"Arts. 130 a 134",g:"Cómo y cuándo rinde cuentas el tutor, y qué pasa si administra mal.",a:[
+[130,"Deber de rendir cuentas. Periodicidad","El tutor lleva cuenta fiel y documentada de entradas y gastos. Rinde cuentas al terminar cada año, al cesar en el cargo y cuando el juez lo ordena, de oficio o a pedido del Ministerio Público. La obligación es individual: la aprobación libera solo a quien rindió.",["Anual","Al cesar","Cuando lo ordena el juez"]],
+[131,"Rendición final","Terminada la tutela, el tutor o sus herederos entregan los bienes de inmediato e informan de la gestión en el plazo que fije el juez, aunque el tutelado lo haya eximido en su testamento. Las cuentas se rinden judicialmente con intervención del Ministerio Público.",["Entrega inmediata","Con el Ministerio Público"]],
+[132,"Gastos de la rendición","El tutor adelanta los gastos de la rendición de cuentas y el tutelado se los reembolsa si fueron rendidas en debida forma.",["Los adelanta el tutor","Reembolso si rinde bien"]],
+[133,"Gastos de la gestión","El tutor recupera los gastos razonables de su gestión, aunque de ellos no resulte utilidad para el tutelado. Los saldos de la cuenta devengan intereses.",["Gastos razonables","Saldos con intereses"]],
+[134,"Daños","Si el tutor no rinde cuentas, no lo hace debidamente o se comprueba su mala administración por dolo o culpa, debe indemnizar el daño. La indemnización no puede ser menor a lo que los bienes pudieron razonablemente producir.",["Piso: lo que los bienes pudieron producir"]]]},
+{id:5,t:"Terminación de la tutela",r:"Arts. 135 a 137",g:"Cuándo termina la tutela y cuándo se puede remover o suspender al tutor.",a:[
+[135,"Causas de terminación de la tutela","Termina por la muerte del tutelado, su emancipación o la desaparición de la causa que la originó; o por muerte, incapacidad, capacidad restringida, remoción o renuncia aceptada del tutor. Si había dos tutores, la causa de uno no afecta al otro, salvo decisión judicial fundada. Si muere el tutor, debe avisarse de inmediato al juez.",["Causas del tutelado","Causas del tutor","Dos tutores: sigue el otro"]],
+[136,"Remoción del tutor","Se lo remueve si incurre en una causal que impide ser tutor, si no hace el inventario o no lo hace fielmente, si incumple debidamente sus deberes o tiene graves y continuados problemas de convivencia. Pueden demandarla el tutelado y el Ministerio Público.",["Tres causas","Legitimados: tutelado y MP"]],
+[137,"Suspensión provisoria","Mientras se tramita el proceso de remoción, el juez puede suspender al tutor y nombrar provisoriamente a otro.",["Medida provisoria"]]]}
+];
+const esc=s=>s.replace(/&/g,"&amp;").replace(/</g,"&lt;");
+const root=document.getElementById("arts");
+root.innerHTML=P.map((p,i)=>`<section id="p${p.id}" class="band s${p.id}${i%2?"":" alt"}"><div class="wrap">
+<div class="art-head"><div class="numeral" aria-hidden="true">§${p.id}</div><h2>${p.t}</h2><p class="tagline">${p.g}<br><span class="rng">${p.r}</span></p></div>
+<div class="grid">${p.a.map(a=>`<article class="card" id="art${a[0]}" data-t="${esc((a[0]+" "+a[1]+" "+a[2]+" "+a[3].join(" ")).toLowerCase())}"><div class="hd"><span class="n">${a[0]}</span><h3>${esc(a[1])}</h3></div><p>${esc(a[2])}</p><div class="chips">${a[3].map(c=>`<span>${esc(c)}</span>`).join("")}</div></article>`).join("")}</div></div></section>`).join("");
+const q=document.getElementById("q"),cnt=document.getElementById("cnt"),none=document.getElementById("none");
+function f(){const v=q.value.trim().toLowerCase().replace(/^art\.?\s*/,"");let tot=0;
+document.querySelectorAll("#arts section").forEach(s=>{let n=0;s.querySelectorAll(".card").forEach(c=>{const ok=!v||c.dataset.t.includes(v);c.style.display=ok?"":"none";if(ok)n++});s.style.display=n?"":"none";tot+=n});
+cnt.textContent=tot+" de 34 artículos";none.style.display=tot?"none":"block"}
+q.addEventListener("input",f);f();
+</script>
+</body>
+</html>

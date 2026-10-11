@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Código Procesal de Misiones en simple: títulos y capítulos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F5F6FA;--surface:#fff;--ink:#1B2236;--muted:#58627D;--line:#DEE3EF;
+--a:#3D4FD9;--at:#E9ECFD;--ad:#2A39B0;--b:#08806F;--bt:#DDF3EE;--bd:#05604F;--c:#C42A62;--ct:#FCE5ED;--cd:#9C1F4C;
+--fd:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;--fb:"Public Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);box-sizing:border-box}
+:root[data-theme="dark"]{--paper:#0F1424;--surface:#171E36;--ink:#E9EDF9;--muted:#A8B1CB;--line:#28314F;--a:#97A3FF;--at:#1F2757;--ad:#B9C1FF;--b:#4DD6BE;--bt:#0F3B36;--bd:#8FE8D6;--c:#FF86AB;--ct:#4A1A2F;--cd:#FFB0C8}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#0F1424;--surface:#171E36;--ink:#E9EDF9;--muted:#A8B1CB;--line:#28314F;--a:#97A3FF;--at:#1F2757;--ad:#B9C1FF;--b:#4DD6BE;--bt:#0F3B36;--bd:#8FE8D6;--c:#FF86AB;--ct:#4A1A2F;--cd:#FFB0C8}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--paper);color:var(--ink);font:1.0625rem/1.6 var(--fb);-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--fd);margin:0;line-height:1.12;letter-spacing:-.02em;text-wrap:balance}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--paper);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;gap:4px;align-items:center;overflow-x:auto;padding-top:9px;padding-bottom:9px;scrollbar-width:none}
+.brand{font:800 1.05rem var(--fd);margin-right:10px;white-space:nowrap}
+.top a{padding:6px 11px;border-radius:99px;color:var(--muted);text-decoration:none;font-weight:600;font-size:.88rem;white-space:nowrap}
+.top a:hover{background:var(--surface);color:var(--ink)}
+.hero{padding:52px 0 36px}
+.kicker{color:var(--muted);font-weight:500;font-size:.95rem;margin:0 0 16px}
+h1{font-weight:800;font-size:clamp(2.2rem,5.6vw,3.8rem);line-height:1;letter-spacing:-.03em;max-width:18ch;margin-bottom:20px}
+.lead{font-size:1.15rem;color:var(--muted);max-width:60ch;margin:0 0 24px}
+#q{width:100%;max-width:460px;font:500 1rem var(--fb);padding:12px 18px;border-radius:14px;border:2px solid var(--line);background:var(--surface);color:var(--ink)}
+.parte{font:800 .85rem var(--fd);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding:34px 0 0}
+.band{padding:56px 0;border-top:1px solid var(--line)}
+.band.s1{--m:var(--a);--mt:var(--at);--md:var(--ad)}.band.s2{--m:var(--b);--mt:var(--bt);--md:var(--bd)}.band.s3{--m:var(--c);--mt:var(--ct);--md:var(--cd)}
+.band:nth-of-type(even){background:var(--surface)}
+.num{display:inline-block;font-weight:700;color:var(--md);background:var(--mt);padding:4px 14px;border-radius:99px;font-size:.86rem;margin-bottom:14px}
+h2{font-weight:800;font-size:clamp(1.7rem,3.4vw,2.4rem);margin-bottom:10px}
+.sub{color:var(--muted);max-width:62ch;margin:0 0 26px}
+.tit{margin:0 0 28px}
+.tit>h3{font-size:1.25rem;font-weight:700;display:flex;flex-wrap:wrap;gap:8px 12px;align-items:baseline}
+.tit>h3 small{font:700 .8rem var(--fb);color:var(--md);background:var(--mt);padding:2px 10px;border-radius:99px}
+.tit>p{margin:4px 0 14px;color:var(--muted)}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(240px,1fr))}
+.card{background:var(--surface);border:1px solid var(--line);border-top:4px solid var(--m);border-radius:16px;padding:16px 18px}
+.band:nth-of-type(even) .card{background:var(--paper)}
+.card h4{font:700 1rem var(--fd);margin:0 0 4px}
+.card p{margin:0;color:var(--muted);font-size:.94rem;line-height:1.5}
+.law{display:inline-block;margin-top:10px;font-size:.78rem;font-weight:700;color:var(--md);background:var(--mt);padding:2px 9px;border-radius:99px}
+.hide{display:none!important}
+footer{padding:36px 0 56px;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+:focus-visible{outline:3px solid var(--a);outline-offset:3px;border-radius:6px}
+</style>
+</head>
+<body>
+<nav class="top"><div class="wrap" id="nav"><span class="brand">Código Procesal</span></div></nav>
+<header class="hero"><div class="wrap">
+<p class="kicker">Ley XII – N.º 27 · Provincia de Misiones</p>
+<h1>Código Procesal de Misiones</h1>
+<p class="lead">Código Procesal Civil, Comercial, de Familia y Violencia Familiar. Acá está el mapa completo: qué trata cada parte, en una frase y con los artículos donde la encontrás.</p>
+<input id="q" type="search" placeholder="Buscar un tema: costas, desalojo, alimentos…" aria-label="Buscar">
+</div></header>
+<main id="m"></main>
+<footer><div class="wrap">Guía didáctica basada en la Ley XII – N.º 27 (Código Procesal Civil, Comercial, de Familia y Violencia Familiar de Misiones). Es un resumen orientativo: no reemplaza el texto de la ley ni el asesoramiento profesional.</div></footer>
+<script>
+var B=[
+["PARTE GENERAL"],
+["Libro Primero","Disposiciones generales","Las reglas básicas que valen para cualquier juicio: quién juzga, quiénes participan, cómo se hacen los actos y cómo termina el proceso.",[
+["Título I · Órgano judicial","Quién es el juez y qué puede y debe hacer.","arts. 1–39",[
+["Competencia","1–6","Qué juez puede intervenir en cada caso, según el tema y el lugar."],
+["Cuestiones de competencia","7–13","Cómo se resuelve cuando se discute qué juez debe llevar el caso."],
+["Recusaciones y excusaciones","14–33","Cuándo un juez no puede intervenir y las partes lo apartan, o se aparta él mismo."],
+["Deberes y facultades de los jueces","34–37","Lo que el juez está obligado a hacer y lo que puede hacer para dirigir el juicio."],
+["Secretarios. Oficiales primeros","38–39","El trabajo de quienes colaboran con el juez en el trámite."]]],
+["Título II · Partes","Quiénes participan en el juicio y cómo lo hacen.","arts. 40–114",[
+["Reglas generales","40–45","Quiénes pueden ser parte y las normas básicas para actuar en juicio."],
+["Representación procesal","46–55","Cómo actuar por medio de un apoderado y qué poder hace falta."],
+["Patrocinio letrado","56–58","La firma y la asistencia del abogado en los escritos."],
+["Rebeldía","59–67","Qué pasa si la persona citada no se presenta al juicio."],
+["Costas","68–77","Quién paga los gastos del juicio."],
+["Beneficio de litigar sin gastos","78–86","Permite iniciar o seguir un juicio sin pagar gastos a quien no tiene recursos."],
+["Acumulación de acciones y litisconsorcio","87–89","Varios reclamos en una demanda, o varias personas del mismo lado en un juicio."],
+["Intervención de terceros","90–96","Cuándo alguien ajeno al juicio puede o debe sumarse."],
+["Tercerías","97–104","Cuando un tercero reclama algo sobre bienes embargados o un mejor derecho a cobrar."],
+["Citación de evicción","105–110","Llamar al vendedor para que ayude a defender lo que vendió."],
+["Acción subrogatoria","111–114","El acreedor actúa en lugar de su deudor cuando éste no ejerce sus derechos."]]],
+["Título III · Actos procesales","Cómo se hacen y se comunican los actos del juicio.","arts. 115–175",[
+["Actuaciones en general","115–117","Las reglas generales para realizar los actos del proceso."],
+["Escritos","118–125","Cómo deben presentarse los escritos ante el juzgado."],
+["Audiencias","126–127","Las reuniones del juez con las partes: cómo se desarrollan."],
+["Expedientes","128–131","Cómo se arma, se consulta y se conserva el expediente."],
+["Oficios y exhortos","132–133","Pedidos escritos a otras autoridades o a jueces de otros lugares."],
+["Notificaciones","134–151","Las formas de avisar a las partes de lo que ocurre en el juicio."],
+["Vistas y traslados","152","Dar a una parte la oportunidad de responder a lo que presentó otra."],
+["El tiempo de los actos procesales","153–160","Los plazos, y los días y horas en que se pueden hacer los actos."],
+["Resoluciones judiciales","161–169","Las decisiones del juez, desde simples providencias hasta la sentencia."],
+["Nulidad de los actos procesales","170–175","Cuándo un acto con defectos graves puede anularse."]]],
+["Título IV · Contingencias generales","Situaciones que pueden aparecer durante cualquier juicio.","arts. 176–305",[
+["Incidentes","176–188","Cuestiones secundarias que surgen dentro del juicio y se resuelven aparte."],
+["Acumulación de procesos","189–195","Unir varios juicios relacionados para que los decida un solo juez."],
+["Medidas cautelares","196–243","Medidas de protección mientras dura el juicio, como embargos, para asegurar el resultado."],
+["Recursos","244–285","Cómo pedir que se revise una decisión del juez."],
+["Recursos extraordinarios","286–305","Los recursos especiales ante el Superior Tribunal contra ciertas sentencias."]]],
+["Título V · Modos anormales de terminación del proceso","Formas de terminar un juicio sin que llegue a sentencia.","arts. 306–320",[
+["Desistimiento","306–308","Abandonar el proceso o el derecho reclamado."],
+["Allanamiento","309","El demandado acepta lo que se le reclama."],
+["Transacción","310","Las partes arreglan el conflicto cediéndose algo."],
+["Conciliación","311","Las partes llegan a un acuerdo con ayuda del juez."],
+["Caducidad de la instancia","312–320","El juicio se cierra si nadie lo impulsa durante cierto tiempo."]]]]],
+["PARTE ESPECIAL"],
+["Libro Segundo","Procesos de conocimiento","Los juicios donde el juez analiza hechos y pruebas para dictar sentencia.",[
+["Título I · Disposiciones generales","Qué tipos de juicio de conocimiento existen y cómo empezar.","arts. 321–331",[
+["Clases","321–324","Los tipos de proceso de conocimiento."],
+["Diligencias preliminares","325–331","Pasos previos que se pueden pedir antes de iniciar el juicio."]]],
+["Título II · Proceso ordinario","El juicio más completo y general, paso a paso.","arts. 332–465",[
+["Demanda","332–339","El escrito con el que se inicia el juicio."],
+["Citación del demandado","340–346","Cómo se avisa a la persona demandada para que se defienda."],
+["Excepciones previas","347–356","Defensas que se plantean al comienzo, antes de discutir el fondo."],
+["Contestación a la demanda y reconvención","357–361","La respuesta del demandado, y su propio reclamo contra quien lo demandó."],
+["Prueba","362–465","Audiencia preliminar, medios de prueba (documentos, testigos, pericias), alegatos y sentencia."]]],
+["Título III · Proceso sumarísimo","Un trámite más breve para casos que lo permiten.","art. 466",[]]]],
+["Libro Tercero","Procesos de ejecución","Los juicios para hacer cumplir lo que ya está decidido o consta en un documento.",[
+["Título I · Ejecución de sentencias","Hacer cumplir una sentencia firme.","arts. 467–488",[
+["Sentencias de tribunales provinciales","467–484","Cómo se ejecuta una sentencia dictada en la provincia."],
+["Sentencias de tribunales extranjeros","485–488","Cuándo y cómo se puede ejecutar una sentencia de otro país."]]],
+["Título II · Juicio ejecutivo","Cobro rápido de deudas que constan en un documento.","arts. 489–564",[
+["Disposiciones generales","489–499","Cuándo procede y cómo se inicia."],
+["Embargo y excepciones","500–528","La traba de bienes y las defensas que puede plantear el deudor."],
+["Cumplimiento de la sentencia de remate","529–564","Cómo se venden los bienes y se paga al acreedor."]]],
+["Título III · Ejecuciones especiales","Ejecuciones con reglas propias.","arts. 565–575",[
+["Disposiciones generales","565–566","Reglas comunes a estas ejecuciones."],
+["Disposiciones específicas","567–575","Reglas para cada tipo de ejecución especial."]]]]],
+["Libro Cuarto","Procesos especiales","Juicios con trámite propio para situaciones concretas.",[
+["Título I · Interdictos y acciones posesorias","Proteger o recuperar la posesión de un bien.","arts. 576–595",[
+["Interdictos","576","Qué son y cuáles existen."],
+["Interdicto de adquirir","577–579","Para obtener la posesión de una cosa."],
+["Interdicto de retener","580–583","Para conservar la posesión ante una perturbación."],
+["Interdicto de recobrar","584–588","Para recuperar la posesión perdida."],
+["Interdicto de obra nueva","589–590","Para frenar una obra que perjudica a un vecino."],
+["Disposiciones comunes a los interdictos","591–592","Reglas que valen para todos los interdictos."],
+["Acciones posesorias","593","El juicio para defender la posesión."],
+["Denuncia de daño temido","594–595","Pedir medidas ante un riesgo de daño a causa de un inmueble vecino."]]],
+["Título II · Rendición de cuentas","Exigir o presentar cuentas de una administración.","arts. 596–601",[]],
+["Título III · Mensura y deslinde","Medir y fijar los límites de un terreno.","arts. 602–619",[
+["Mensura","602–616","La medición de un inmueble."],
+["Deslinde","617–619","Determinar los límites entre inmuebles vecinos."]]],
+["Título IV · División de cosas comunes","Repartir bienes que pertenecen a varias personas.","arts. 620–622",[]],
+["Título V · Desalojo","Recuperar un inmueble de quien lo ocupa sin derecho.","arts. 623–635",[]],
+["Título VI · Procesos urgentes","Respuestas rápidas ante necesidades urgentes.","arts. 636–639",[
+["Disposiciones generales","636–639","Medidas autosatisfactivas: cuándo proceden, trámite y recursos."]]]]],
+["Libro Quinto","Procesos de familia y violencia familiar","Los juicios sobre vínculos familiares y la protección ante la violencia.",[
+["Título I · Principios y reglas","Las bases del trabajo de los juzgados de familia.","arts. 640–653",[
+["Principios generales","640–643","Criterios que guían estos procesos y qué causas resuelven los juzgados de familia."],
+["Reglas de procedimiento","644–652","Cómo se tramitan los casos de familia."],
+["Etapa prejudicial de avenimiento","653","Instancia previa para intentar un acuerdo."]]],
+["Título II · Procesos especiales","Casos de familia con trámite propio.","arts. 654–710",[
+["Procesos con fines de adopción","654","Los procesos de adopción."],
+["Violencia familiar","655–658","Denuncia, medidas urgentes y excepcionales de protección."],
+["Declaración de incapacidad y de inhabilitación","659–678","Cómo se tramitan los procesos sobre capacidad de las personas."],
+["Restitución de menores y restauración del régimen","679–695","Casos de traslado o retención de niños, y su regreso o el cumplimiento del régimen de comunicación."],
+["Alimentos y litisexpensas","696–710","Reclamo de la cuota alimentaria y de los gastos del juicio."]]],
+["Título III · Procesos voluntarios","Trámites donde no hay un conflicto entre partes.","arts. 711–714",[
+["Autorización para contraer matrimonio","711–712","Cuando se necesita permiso judicial para casarse."],
+["Tutela. Curatela","713–714","Los trámites para designar y controlar a tutores y curadores."]]],
+["Título IV · Divorcio. Nulidad de matrimonio","Deberes del juez y vista en estos juicios.","arts. 715–716",[]]]],
+["Libro Sexto","Proceso sucesorio","El trámite judicial para ordenar la herencia de una persona fallecida.",[
+["Título I · Proceso sucesorio","Del inicio del juicio a la entrega de los bienes.","arts. 717–763",[
+["Disposiciones generales","717–726","Reglas básicas para iniciar y llevar la sucesión."],
+["Sucesiones ab-intestato","727–731","Cuando no hay testamento."],
+["Sucesión testamentaria","732–736","Cuando hay testamento."],
+["Administración","737–743","Quién cuida y maneja los bienes mientras se resuelve."],
+["Inventario y avalúo","744–753","Listar los bienes y ponerles valor."],
+["Partición y adjudicación","754–760","Repartir los bienes entre los herederos."],
+["Herencia vacante","761–763","Cuando no aparecen herederos."]]]]],
+["Libro Séptimo","Proceso arbitral","Resolver conflictos con árbitros en lugar de un juez.",[
+["Título I · Juicio arbitral","Cómo funciona el arbitraje.","arts. 764–793",[]],
+["Título II · Juicio de amigables componedores","Un arbitraje más flexible, por equidad.","arts. 794–800",[]],
+["Título III · Pericia arbitral","Dejar una cuestión técnica en manos de un perito.","art. 801",[]]]],
+["Libro Octavo","Procesos voluntarios","Trámites sin conflicto entre partes.",[
+["Título I · Copia y renovación de títulos","Obtener copias o renovar títulos.","arts. 802–803",[]],
+["Título II · Examen de los libros por el socio","El socio revisa los libros de la sociedad.","art. 804",[]],
+["Título III · Reconocimiento, adquisición y venta de mercaderías","Trámites sobre mercaderías.","arts. 805–807",[]]]],
+["Libro Noveno","Inconstitucionalidad y conflicto de poderes","Procesos ante el Superior Tribunal sobre la Constitución provincial.",[
+["Título I · Declaración de inconstitucionalidad","Pedir que se declare que una norma contradice la Constitución.","arts. 808–813",[]],
+["Título II · Conflicto de poderes","Cuando los poderes del Estado discuten sus competencias.","arts. 814–815",[]]]],
+["Libro Décimo","Disposiciones especiales","Cierre del código.",[
+["Título único","Actualización, vigencia y abrogación de la ley anterior.","arts. 816–819",[]]]]];
+var m=document.getElementById('m'),nav=document.getElementById('nav'),h='',k=0;
+function e(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;')}
+B.forEach(function(x){
+ if(x.length==1){h+='<div class="wrap parte">'+e(x[0])+'</div>';return}
+ var s='s'+(k%3+1),id='l'+k;k++;
+ nav.insertAdjacentHTML('beforeend','<a href="#'+id+'">'+x[0].replace('Libro ','L. ')+'</a>');
+ h+='<section class="band '+s+'" id="'+id+'"><div class="wrap"><span class="num">'+x[0]+'</span><h2>'+e(x[1])+'</h2><p class="sub">'+e(x[2])+'</p>';
+ x[3].forEach(function(t){
+  h+='<div class="tit"><h3>'+e(t[0])+' <small>'+t[2]+'</small></h3><p>'+e(t[1])+'</p>';
+  if(t[3].length){h+='<div class="grid">';t[3].forEach(function(c){h+='<div class="card"><h4>'+e(c[0])+'</h4><p>'+e(c[2])+'</p><span class="law">'+(/^\d+$/.test(c[1])?'art. ':'arts. ')+c[1]+'</span></div>'});h+='</div>'}
+  h+='</div>'});
+ h+='</div></section>'});
+m.innerHTML=h;
+document.getElementById('q').oninput=function(){
+ var v=this.value.toLowerCase().trim();
+ m.querySelectorAll('.card').forEach(function(c){c.classList.toggle('hide',!!v&&c.textContent.toLowerCase().indexOf(v)<0)});
+ m.querySelectorAll('.tit').forEach(function(t){var n=t.querySelector('.card:not(.hide)'),hit=t.querySelector('h3').textContent.toLowerCase().indexOf(v)>=0;
+  if(v&&hit)t.querySelectorAll('.card').forEach(function(c){c.classList.remove('hide')});
+  t.classList.toggle('hide',!!v&&!n&&!hit)});
+ m.querySelectorAll('.band').forEach(function(b){b.classList.toggle('hide',!!v&&!b.querySelector('.tit:not(.hide)'))})};
+</script>
+</body>
+</html>

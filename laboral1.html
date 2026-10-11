@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Modernización Laboral en simple: Ley 27.802</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F4F6FA;--surface:#fff;--ink:#14263B;--muted:#53607A;--line:#DAE1EC;--a:#1D5FD0;--at:#E3EDFC;--g:#12805C;--gt:#DAF2E8;--v:#C0343F;--vt:#FBE5E7;--p:#B85A00;--pt:#FDEBD3;--o:#7A3FC9;--ot:#EEE4FA;--on:#fff;--fd:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;--fb:"Public Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#0D1522;--surface:#152033;--ink:#E8EEF8;--muted:#A7B3C9;--line:#26344D;--a:#8FB4FF;--at:#18305E;--g:#4DD6A4;--gt:#0F3A2C;--v:#FF8E96;--vt:#4A1B20;--p:#FFB45A;--pt:#3E2A0E;--o:#C7A3FF;--ot:#2D1F52;--on:#0D1522}}
+:root[data-theme="dark"]{--paper:#0D1522;--surface:#152033;--ink:#E8EEF8;--muted:#A7B3C9;--line:#26344D;--a:#8FB4FF;--at:#18305E;--g:#4DD6A4;--gt:#0F3A2C;--v:#FF8E96;--vt:#4A1B20;--p:#FFB45A;--pt:#3E2A0E;--o:#C7A3FF;--ot:#2D1F52;--on:#0D1522}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(70px + env(safe-area-inset-top,0px));height:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:1.0625rem/1.65 var(--fb);min-height:100%}
+h1,h2,h3{font-family:var(--fd);margin:0;line-height:1.1;letter-spacing:-.02em;text-wrap:balance}
+p{margin:0 0 .9em}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--paper);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:18px;padding-top:9px;padding-bottom:9px}
+.brand{font:800 1.05rem var(--fd);white-space:nowrap}
+.nav{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.nav a{padding:7px 13px;border-radius:99px;color:var(--muted);text-decoration:none;font-weight:600;font-size:.92rem;white-space:nowrap}
+.nav a.on{color:var(--ink);background:var(--surface);box-shadow:inset 0 0 0 1px var(--line)}
+.band{padding:68px 0;--panel:var(--surface)}
+.band.alt{background:var(--surface);border-block:1px solid var(--line);--panel:var(--paper)}
+.sa{--c:var(--a);--ct:var(--at)}.sg{--c:var(--g);--ct:var(--gt)}.sv{--c:var(--v);--ct:var(--vt)}.sp{--c:var(--p);--ct:var(--pt)}.so{--c:var(--o);--ct:var(--ot)}
+h2.sec{font-weight:800;font-size:clamp(1.8rem,3.6vw,2.6rem);max-width:22ch;margin-bottom:10px;color:var(--c)}
+.sub{color:var(--muted);max-width:62ch;margin-bottom:30px}
+.hero{padding:44px 0 70px}
+.hg{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:44px;align-items:center}
+h1{font-weight:800;font-size:clamp(2.3rem,5.2vw,3.8rem);line-height:1;letter-spacing:-.03em;max-width:15ch;margin-bottom:20px}
+.kick{color:var(--muted);font-weight:600;font-size:.95rem;margin-bottom:14px}
+.lead{font-size:1.15rem;color:var(--muted);max-width:52ch}.lead b{color:var(--ink)}
+.btn{display:inline-block;margin-top:10px;padding:12px 22px;border-radius:13px;background:var(--ink);color:var(--paper);font-weight:700;text-decoration:none}
+.t{font-family:var(--fd);fill:#fff;font-weight:800}.t.s{font-weight:600;font-size:12.5px;opacity:.95}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.card{background:var(--panel);border:1px solid var(--line);border-left:6px solid var(--c);border-radius:14px;padding:16px 18px}
+.card h3{font-size:1.12rem;margin-bottom:6px}.card p{font-size:.97rem;margin:0}
+.ar{font-size:.76rem;font-weight:700;color:var(--c);background:var(--ct);border-radius:6px;padding:1px 7px;white-space:nowrap;margin-left:4px}
+h3.h{font-size:1.3rem;margin:38px 0 8px}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.pills span{background:var(--ct);color:var(--c);border-radius:99px;padding:6px 14px;font-weight:600;font-size:.92rem}
+.strip{display:grid;grid-template-columns:repeat(12,1fr);gap:4px;max-width:640px;margin:10px 0 6px;text-align:center;font:700 .85rem var(--fd)}
+.strip span{padding:12px 0;border-radius:8px;background:var(--panel);border:1px solid var(--line);color:var(--muted)}
+.strip .on{background:var(--c);border-color:var(--c);color:var(--on)}
+.bars{display:grid;gap:12px;max-width:760px}
+.bar{display:grid;grid-template-columns:minmax(150px,250px) 1fr;gap:14px;align-items:center;font-weight:600;font-size:.95rem}
+.trk{background:var(--panel);border:1px solid var(--line);border-radius:99px;height:30px;overflow:hidden}
+.fill{height:100%;background:var(--c);color:var(--on);font:800 .85rem/30px var(--fd);padding-left:12px;white-space:nowrap}
+.note{font-size:.88rem;color:var(--muted);margin-top:8px}
+.cmp{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.cmp article{background:var(--panel);border:1px solid var(--line);border-top:6px solid var(--c);border-radius:14px;padding:18px}
+.cmp h3{font-size:1.2rem;margin-bottom:8px}.cmp p{font-size:.96rem;margin:0 0 .6em}
+.chev{list-style:none;margin:0 0 22px;padding:0;display:grid;grid-auto-flow:column;grid-auto-columns:1fr}
+.chev li{background:var(--ct);padding:20px 30px 20px 40px;margin-left:-14px;clip-path:polygon(0 0,calc(100% - 20px) 0,100% 50%,calc(100% - 20px) 100%,0 100%,20px 50%)}
+.chev li:first-child{margin-left:0;padding-left:22px;clip-path:polygon(0 0,calc(100% - 20px) 0,100% 50%,calc(100% - 20px) 100%,0 100%)}
+.chev li:last-child{clip-path:polygon(0 0,100% 0,100% 100%,0 100%,20px 50%)}
+.chev b{display:block;font:800 1.08rem var(--fd);color:var(--c)}.chev span{font-size:.92rem;line-height:1.45;display:block}
+.take{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px}
+.take li{display:flex;gap:12px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-size:.97rem}
+.take li::before{content:"✓";flex:none;width:26px;height:26px;border-radius:50%;background:var(--g);color:var(--on);font-weight:800;text-align:center;line-height:26px}
+.gloss{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px 24px;margin:0}
+.gloss dt{font:800 1rem var(--fd);color:var(--c)}.gloss dd{margin:0 0 6px;font-size:.95rem;color:var(--muted)}
+.foot{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:.9rem}
+:focus-visible{outline:3px solid var(--a);outline-offset:3px}
+@media (max-width:820px){.hg{grid-template-columns:1fr}.chev{grid-auto-flow:row}.chev li,.chev li:first-child,.chev li:last-child{margin:0 0 -8px;clip-path:none;border-radius:12px;padding:16px 20px}.bar{grid-template-columns:1fr;gap:4px}.band{padding:52px 0}.brand{display:none}.strip{font-size:.7rem}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap"><span class="brand">Modernización Laboral en simple</span>
+<nav class="nav" aria-label="Secciones"><a href="#contrato">Contrato</a><a href="#despido">Despido y fondo</a><a href="#colectivo">Huelgas</a><a href="#plataformas">Plataformas</a><a href="#incentivos">Incentivos</a><a href="#cierre">Impuestos y derogaciones</a><a href="#glosario">Glosario</a></nav></div></header>
+<main>
+<section class="hero sa"><div class="wrap hg"><div>
+<p class="kick">Ley 27.802, sancionada el 27 de febrero de 2026 y publicada el 6 de marzo de 2026</p>
+<h1>Ley de Modernización Laboral, explicada en simple</h1>
+<p class="lead">Son <b>218 artículos y 26 títulos</b>. Cambian la Ley de Contrato de Trabajo, crean un fondo para pagar indemnizaciones, regulan a quienes trabajan con plataformas y suman incentivos para <b>registrar empleo</b> e invertir.</p>
+<a class="btn" href="#contrato">Empezar por el contrato</a></div>
+<svg viewBox="0 0 480 330" role="img" aria-label="Mapa de la ley en seis bloques: contrato de trabajo, fondo de asistencia laboral, justicia convenios y sindicatos, regímenes especiales, incentivos, impuestos y derogaciones." style="width:100%;height:auto;max-width:500px;margin:auto">
+<rect x="0" y="0" width="236" height="150" rx="16" fill="var(--a)"/><text class="t" x="16" y="34" font-size="19">Contrato de trabajo</text><text class="t s" x="16" y="58">Título I</text><text class="t s" x="16" y="84">Salario, jornada, vacaciones,</text><text class="t s" x="16" y="102">indemnización, registro</text>
+<rect x="244" y="0" width="236" height="70" rx="16" fill="var(--p)"/><text class="t" x="260" y="30" font-size="17">Fondo de Asistencia Laboral</text><text class="t s" x="260" y="52">Título II</text>
+<rect x="244" y="78" width="236" height="72" rx="16" fill="var(--o)"/><text class="t" x="260" y="108" font-size="17">Regímenes especiales</text><text class="t s" x="260" y="130">Plataformas, agrario, casas particulares</text>
+<rect x="0" y="158" width="236" height="82" rx="16" fill="var(--v)"/><text class="t" x="16" y="190" font-size="17">Justicia, convenios y sindicatos</text><text class="t s" x="16" y="212">Títulos III, IV, VII, XIV y XV</text>
+<rect x="244" y="158" width="236" height="82" rx="16" fill="var(--g)"/><text class="t" x="260" y="190" font-size="17">Incentivos</text><text class="t s" x="260" y="212">RIFL, PER y RIMI</text>
+<rect x="0" y="248" width="480" height="76" rx="16" fill="var(--ink)"/><text class="t" x="16" y="282" font-size="17" style="fill:var(--paper)">Impuestos y derogaciones</text><text class="t s" x="16" y="304" style="fill:var(--paper)">Títulos XXIV, XXV y XXVI</text>
+</svg></div></section>
+
+<section id="contrato" class="band alt sa"><div class="wrap">
+<h2 class="sec">Qué cambia en el contrato de trabajo</h2>
+<p class="sub">El Título I modifica la Ley de Contrato de Trabajo (LCT, ley 20.744).</p>
+<div class="cards">
+<div class="card"><h3>A quién no se aplica <span class="ar">art. 2 LCT</span></h3><p>Empleo público (salvo inclusión expresa), casas particulares, trabajo agrario (rige de forma supletoria), independientes y sus colaboradores, prestadores de plataformas, personal embarcado y personas privadas de libertad.</p></div>
+<div class="card"><h3>Reglas que siguen <span class="ar">arts. 9, 12 y 15</span></h3><p>Ante la duda rige la norma más favorable al trabajador. Los derechos son irrenunciables. Los acuerdos para cerrar un reclamo solo valen con intervención de autoridad judicial o administrativa.</p></div>
+<div class="card"><h3>Sin registro, se presume a favor del trabajador <span class="ar">art. 55</span></h3><p>Si el empleador no registró la relación, se presume cierto lo que el trabajador afirme sobre lo que debió constar.</p></div>
+<div class="card"><h3>Cambios en el trabajo <span class="ar">art. 66</span></h3><p>El empleador puede cambiar la forma y modalidades de la tarea si no altera aspectos esenciales ni causa perjuicio material. Si lo hace, el trabajador puede considerarse despedido sin causa, tras intimar.</p></div>
+<div class="card"><h3>Tiempo parcial <span class="ar">art. 92 ter</span></h3><p>La paga no puede ser menor a la proporcional de un trabajador de tiempo completo. Las horas extra en exceso de la jornada legal no se permiten, salvo excepciones.</p></div>
+<div class="card"><h3>Beneficios sociales <span class="ar">art. 103 bis</span></h3><p>Comedor, reintegros médicos, ropa de trabajo, guardería (hijos hasta 6 años) y útiles escolares no son salario y no pagan aportes ni contribuciones.</p></div>
+<div class="card"><h3>Más formas de pago <span class="ar">arts. 104 bis y 105</span></h3><p>Se pueden sumar componentes variables o transitorios por mérito, que no se vuelven permanentes por costumbre. El salario puede pagarse en moneda nacional o extranjera.</p></div>
+<div class="card"><h3>Banco de horas <span class="ar">arts. 197 bis y 198</span></h3><p>Régimen voluntario y por escrito, con control de horas y respeto de los descansos mínimos. Los convenios pueden calcular la jornada máxima por promedio.</p></div>
+</div>
+<h3 class="h">Vacaciones: cuándo se pueden tomar <span class="ar">art. 154</span></h3>
+<div class="strip" role="img" aria-label="Período de vacaciones: de octubre a abril"><span class="on">Oct</span><span class="on">Nov</span><span class="on">Dic</span><span class="on">Ene</span><span class="on">Feb</span><span class="on">Mar</span><span class="on">Abr</span><span>May</span><span>Jun</span><span>Jul</span><span>Ago</span><span>Sep</span></div>
+<p class="note">En color: del 1 de octubre al 30 de abril. Por acuerdo pueden ser fuera de ese período.</p>
+<div class="pills"><span>Aviso por escrito con 30 días</span><span>Se pueden dividir en tramos de al menos 7 días</span><span>Al menos una vez cada 3 años en verano</span></div>
+</div></section>
+
+<section id="despido" class="band sp"><div class="wrap">
+<h2 class="sec">Si termina la relación: indemnización y fondo</h2>
+<p class="sub">Cómo se calcula el despido sin causa y qué es el Fondo de Asistencia Laboral.</p>
+<h3 class="h" style="margin-top:0">Cálculo de la indemnización <span class="ar">art. 245 LCT</span></h3>
+<ol class="chev" aria-label="Pasos del cálculo">
+<li><b>1 sueldo por año</b><span>O fracción mayor de 3 meses.</span></li>
+<li><b>Base mensual</b><span>La mejor remuneración mensual, normal y habitual del último año. No cuentan aguinaldo ni vacaciones.</span></li>
+<li><b>Tope</b><span>Hasta 3 veces el salario promedio del convenio.</span></li>
+<li><b>Piso</b><span>Nunca menos del 67% de esa remuneración ni de 1 mes de sueldo.</span></li></ol>
+<p class="note" style="margin-bottom:22px">Un convenio colectivo puede reemplazar este régimen por un fondo o sistema de cese a cargo del empleador.</p>
+<div class="cards">
+<div class="card"><h3>Mutuo acuerdo y abandono <span class="ar">art. 241</span></h3><p>El acuerdo exige escritura pública o intervención de la autoridad, con el trabajador presente. Se considera abandono cuando pasan 2 meses calendario sin que alguna parte manifieste continuar.</p></div>
+<div class="card"><h3>Deudas laborales al día <span class="ar">art. 276</span></h3><p>Los créditos laborales se actualizan por inflación (IPC) más 3% anual, desde que se deben hasta que se pagan.</p></div>
+</div>
+<h3 class="h">Fondo de Asistencia Laboral (FAL) <span class="ar">arts. 58 a 60</span></h3>
+<p>Cada empleador del sector privado tiene una cuenta propia en un fondo para ayudar a pagar indemnizaciones. No cambia el régimen indemnizatorio y solo cubre a trabajadores registrados con 12 meses o más de antelación.</p>
+<div class="bars" role="img" aria-label="Contribución mensual: grandes empresas 1% (hasta 1,5%), MiPyMEs 2,5% (hasta 3%)">
+<div class="bar">Grandes empresas<div class="trk"><div class="fill" style="width:33%">1%</div></div></div>
+<div class="bar">Podría subir hasta<div class="trk"><div class="fill" style="width:50%">1,5%</div></div></div>
+<div class="bar">MiPyMEs<div class="trk"><div class="fill" style="width:83%">2,5%</div></div></div>
+<div class="bar">Podría subir hasta<div class="trk"><div class="fill" style="width:100%">3%</div></div></div></div>
+<p class="note">Contribución mensual sobre las remuneraciones que sirven de base a las contribuciones patronales.</p>
+</div></section>
+
+<section id="colectivo" class="band alt sv"><div class="wrap">
+<h2 class="sec">Huelgas y servicios mínimos</h2>
+<p class="sub">Cuando un conflicto colectivo puede afectar servicios esenciales o actividades de importancia trascendental, hay una cobertura mínima garantizada (Título VII, art. 24 de la ley 25.877).</p>
+<div class="bars" role="img" aria-label="Servicios esenciales: mínimo 75%. Actividades de importancia trascendental: mínimo 50%.">
+<div class="bar">Servicios esenciales<div class="trk"><div class="fill" style="width:75%">mínimo 75%</div></div></div>
+<div class="bar">Importancia trascendental<div class="trk"><div class="fill" style="width:50%">mínimo 50%</div></div></div></div>
+<p class="note">Un organismo independiente puede calificar otras actividades si afectan la vida, la seguridad, la salud, el abastecimiento o generan una crisis nacional aguda.</p>
+<p style="margin-top:20px">La ley también modifica la normativa de convenciones colectivas (Título XIV) y de asociaciones sindicales (Título XV).</p>
+</div></section>
+
+<section id="plataformas" class="band so"><div class="wrap">
+<h2 class="sec">Plataformas y regímenes especiales</h2>
+<p class="sub">El Título XII regula el reparto y la movilidad de personas por aplicaciones, con prestadores independientes.</p>
+<div class="cards">
+<div class="card"><h3>Libertad de conexión <span class="ar">art. 121</span></h3><p>El prestador puede conectarse a cualquier plataforma, elegir horarios y aceptar o rechazar pedidos según su conveniencia.</p></div>
+<div class="card"><h3>Quién es prestador independiente <span class="ar">art. 120</span></h3><p>Persona humana que convino el servicio de reparto o de traslado de personas de forma independiente a través de una plataforma.</p></div>
+<div class="card"><h3>Fuera de la LCT <span class="ar">art. 2 LCT</span></h3><p>Los prestadores independientes de plataformas quedan excluidos de la Ley de Contrato de Trabajo.</p></div>
+</div>
+<p class="note" style="margin-top:14px">También se modifican los regímenes de casas particulares, trabajo agrario, trabajo a domicilio y pymes, y se crean las Bolsas de Trabajo.</p>
+</div></section>
+
+<section id="incentivos" class="band alt sg"><div class="wrap">
+<h2 class="sec">Incentivos para emplear e invertir</h2>
+<p class="sub">Tres regímenes con beneficios para registrar trabajadores y para invertir.</p>
+<div class="cmp">
+<article><h3>RIFL <span class="ar">arts. 156 a 159</span></h3><p><b>Formalización laboral.</b> Por cada nuevo trabajador registrado que antes no tenía empleo registrado, estaba desempleado 6 meses, era monotributista o venía del sector público.</p><p>Contribuciones patronales de 2% total en SIPA, Fondo Nacional de Empleo y asignaciones familiares, durante 48 meses.</p></article>
+<article><h3>PER <span class="ar">arts. 168 y 169</span></h3><p><b>Promoción del Empleo Registrado.</b> Permite regularizar relaciones laborales no registradas o mal registradas, iniciadas hasta la promulgación.</p><p>Según la reglamentación, puede extinguir acciones penales, condonar multas y dar de baja del REPSAL.</p></article>
+<article><h3>RIMI <span class="ar">arts. 177 a 182</span></h3><p><b>Medianas Inversiones.</b> Para inversiones productivas hechas en los dos primeros años de vigencia del régimen.</p><p>Permite optar por amortización acelerada en el impuesto a las Ganancias.</p></article>
+</div>
+<h3 class="h">Cuánto duran los beneficios del RIFL</h3>
+<div class="bars" role="img" aria-label="El régimen dura 12 meses; la contribución reducida dura 48 meses por trabajador.">
+<div class="bar">Plazo del régimen<div class="trk"><div class="fill" style="width:25%">12 meses</div></div></div>
+<div class="bar">Contribución reducida<div class="trk"><div class="fill" style="width:100%">48 meses por trabajador</div></div></div></div>
+</div></section>
+
+<section id="cierre" class="band sv"><div class="wrap">
+<h2 class="sec">Impuestos, derogaciones y vigencia</h2>
+<p class="sub">Salvo disposición en contrario, los artículos rigen desde la publicación en el Boletín Oficial (art. 217).</p>
+<div class="cmp">
+<article><h3>Impuestos</h3><p>Se deja sin efecto el impuesto interno sobre seguros, telefonía celular y satelital, objetos suntuarios, autos, embarcaciones de recreo y aeronaves (art. 195).</p><p>Se exime del IVA la electricidad para riego del sector agroindustrial (art. 189). Los quebrantos de Ganancias se actualizan por IPC (art. 190).</p></article>
+<article><h3>Derogaciones desde 2027</h3><p>Desde el 1 de enero de 2027: leyes 12.908, 14.546, 27.555, 23.947, 23.472 y 12.867, y los decretos-ley 13.839/46 y 14.954/46.</p><p>Desde el 1 de enero de 2028: partes de las leyes 17.741 (cine) y 26.522 (medios).</p></article>
+<article><h3>Otras derogaciones</h3><p>Leyes 23.759, 24.493 y 20.657, y los artículos 28, 54, 61, 113, 174, 175, 176, 216 y 275 de la LCT (arts. 202 a 207).</p></article>
+</div></div></section>
+
+<section class="band alt sg"><div class="wrap">
+<h2 class="sec">Lo esencial en seis ideas</h2>
+<p class="sub">Para quedarte con lo central.</p>
+<ul class="take">
+<li>Modifica la Ley de Contrato de Trabajo y excluye a plataformas, independientes y empleo público, entre otros.</li>
+<li>Los beneficios sociales no son salario ni pagan aportes.</li>
+<li>Banco de horas voluntario, vacaciones en tramos de 7 días o más y jornada por promedio vía convenios.</li>
+<li>La indemnización tiene base, tope de 3 veces el promedio del convenio y piso del 67%.</li>
+<li>El FAL aporta 1% (grandes) o 2,5% (MiPyMEs) de las remuneraciones.</li>
+<li>RIFL, PER y RIMI buscan registrar empleo e impulsar inversiones.</li></ul>
+</div></section>
+
+<section id="glosario" class="band so"><div class="wrap">
+<h2 class="sec">Glosario sin vueltas</h2>
+<p class="sub">Las palabras difíciles, explicadas en una línea.</p>
+<dl class="gloss">
+<div><dt>LCT</dt><dd>Ley de Contrato de Trabajo (20.744): la norma básica de los empleos en relación de dependencia.</dd></div>
+<div><dt>Irrenunciabilidad</dt><dd>El trabajador no puede renunciar a derechos que la ley le reconoce.</dd></div>
+<div><dt>Beneficio social</dt><dd>Prestación del empleador que mejora la calidad de vida y no se considera salario.</dd></div>
+<div><dt>Banco de horas</dt><dd>Sistema para compensar horas extra con francos u otro descanso.</dd></div>
+<div><dt>Convenio colectivo</dt><dd>Acuerdo entre sindicato y empleadores que fija condiciones de una actividad.</dd></div>
+<div><dt>Indemnización por antigüedad</dt><dd>Pago por despido sin causa, según años de servicio.</dd></div>
+<div><dt>FAL</dt><dd>Fondo de Asistencia Laboral: cuentas del empleador para cubrir indemnizaciones.</dd></div>
+<div><dt>Prestador independiente</dt><dd>Quien ofrece un servicio por una plataforma sin relación de dependencia.</dd></div>
+<div><dt>REPSAL</dt><dd>Registro de Empleadores con Sanciones Laborales.</dd></div>
+<div><dt>Amortización acelerada</dt><dd>Descontar de Ganancias el costo de una inversión en menos tiempo que lo habitual.</dd></div>
+<div><dt>IPC</dt><dd>Índice de Precios al Consumidor, que mide la inflación y publica el INDEC.</dd></div>
+</dl></div></section>
+</main>
+<footer class="foot"><div class="wrap">
+<p><strong>Fuente.</strong> Ley 27.802, Ley de Modernización Laboral, Boletín Oficial del 6 de marzo de 2026 (aviso 339128).</p>
+<p>Guía de estudio con fines didácticos. Resume los artículos principales y no cubre toda la ley (por ejemplo, los Títulos III, IV, XVI, XVII, XVIII, XIX y XXI). No reemplaza el texto de la norma ni el asesoramiento profesional.</p></div></footer>
+<script>
+(function(){var l=[].slice.call(document.querySelectorAll('.nav a')),m={};l.forEach(function(a){m[a.hash.slice(1)]=a});
+if('IntersectionObserver' in window){var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting&&m[x.target.id]){l.forEach(function(a){a.classList.remove('on')});m[x.target.id].classList.add('on')}})},{rootMargin:'-40% 0px -55% 0px'});
+[].slice.call(document.querySelectorAll('main section[id]')).forEach(function(s){o.observe(s)})}})();
+</script>
+</body>
+</html>
