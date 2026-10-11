@@ -64,6 +64,7 @@ main{padding:0;max-width:100%;width:100%;display:flex;flex-direction:column}
   color:var(--accent);display:grid;place-items:center;font-weight:800;font-size:18px}
 .brand b{font:700 15.5px/1.15 "Bricolage Grotesque",sans-serif;display:block}
 .brand small{color:var(--mut);font-size:12px}
+[data-home]{cursor:pointer}
 
 /* ---------- Navegación lateral ---------- */
 .nav-all{display:flex;align-items:center;gap:9px;width:100%;text-align:left;
@@ -269,7 +270,7 @@ main{padding:0;max-width:100%;width:100%;display:flex;flex-direction:column}
   <aside class="side" id="side" aria-label="Índice de cursos">
     <div class="brand">
       <div class="logo">D</div>
-      <div><b>Capacitación Jurídica</b><small>Defensoría Oficial 6</small></div>
+      <div><b data-home role="button" tabindex="0" title="Volver al inicio">Capacitación Jurídica</b><small>Defensoría Oficial 6</small></div>
       <button class="side-close" id="btn-close" type="button" aria-label="Cerrar índice">✕</button>
     </div>
 
@@ -291,7 +292,7 @@ main{padding:0;max-width:100%;width:100%;display:flex;flex-direction:column}
               aria-controls="side" aria-expanded="false">
         <span class="burger" aria-hidden="true"></span><span>Cursos</span>
       </button>
-      <div class="m-title"><b>Capacitación Jurídica</b><small>Defensoría Oficial 6</small></div>
+      <div class="m-title"><b data-home role="button" tabindex="0" title="Volver al inicio">Capacitación Jurídica</b><small>Defensoría Oficial 6</small></div>
       <span class="m-pct" id="mPct" aria-hidden="true">0%</span>
     </header>
 
@@ -445,6 +446,13 @@ function closeDrawer(devolverFoco){
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') closeDrawer(true);
 });
+document.addEventListener('keydown', e => {
+  const h = e.target.closest && e.target.closest('[data-home]');
+  if (h && (e.key === 'Enter' || e.key === ' ')){
+    e.preventDefault();
+    h.click();
+  }
+});
 const mqEscritorio = window.matchMedia('(min-width:861px)');
 mqEscritorio.addEventListener('change', e => { if (e.matches) closeDrawer(); });
 
@@ -474,6 +482,25 @@ function loadCourse(id){
   refreshSidebar();
 }
 
+/* Volver a la pantalla de inicio (sin curso abierto) */
+const WELCOME_HTML = $('#frame-wrap').innerHTML;
+
+function goHome(){
+  cur = 'all';
+  curId = null;
+  openArea = null;
+
+  $('#content-bar').hidden = true;
+  $('#cur-title').textContent = '';
+
+  const wrap = $('#frame-wrap');
+  wrap.className = 'welcome';
+  wrap.innerHTML = WELCOME_HTML;   // reemplaza el iframe del curso
+
+  window.scrollTo(0, 0);
+  refreshSidebar();
+}
+
 function refreshSidebar(){
   stats();
   syncNav();
@@ -484,6 +511,13 @@ document.addEventListener('click', e => {
   // Abrir / cerrar el índice (móvil y tablet)
   if (e.target.closest('#btn-menu')){ openDrawer(); return; }
   if (e.target.closest('#btn-close') || e.target.closest('#scrim')){ closeDrawer(true); return; }
+
+  // Título "Capacitación Jurídica" o "Todos los cursos": volver al inicio
+  if (e.target.closest('[data-home]') || e.target.closest('.nav-all')){
+    goHome();
+    closeDrawer();
+    return;
+  }
 
   // Acordeón
   const head = e.target.closest('[data-head]');
