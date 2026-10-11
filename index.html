@@ -17,16 +17,19 @@
   --accent:#1D4ED8;
   --soft:#EAF2FE;
   --on-accent:#FFFFFF;
+  --ok:#16783C;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
     --bg:#08111F; --surf:#0E1B31; --ink:#DCE8FA; --mut:#8FAAD2;
     --line:#27436E; --accent:#7FA9F0; --soft:#132340; --on-accent:#08111F;
+    --ok:#4ADE80;
   }
 }
 :root[data-theme="dark"]{
   --bg:#08111F; --surf:#0E1B31; --ink:#DCE8FA; --mut:#8FAAD2;
   --line:#27436E; --accent:#7FA9F0; --soft:#132340; --on-accent:#08111F;
+  --ok:#4ADE80;
 }
 
 /* ---------- Base ---------- */
@@ -90,12 +93,19 @@ main{padding:0;max-width:100%;width:100%;display:flex;flex-direction:column}
 .sub span{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .sub em{font-style:normal;font-size:11.5px;color:var(--accent);font-variant-numeric:tabular-nums}
 .sub:hover{background:var(--surf);color:var(--ink)}
-.sub.done span{color:var(--accent)}
+/* Tema completo: verde y negrita */
+.sub.done span{color:var(--ok);font-weight:700}
+.sub.done em{color:var(--ok);font-weight:700}
 
 /* ---------- Progreso lateral ---------- */
 .me{margin-top:auto;padding:14px;border:1px solid var(--line);border-radius:12px;font-size:13px}
 .me b{font:800 20px "Bricolage Grotesque",sans-serif}
 .me small{display:block;color:var(--mut);font-size:12px;margin-top:6px}
+/* Mensaje al completar todos los temas */
+.me small.ok{
+  color:var(--ok);font-weight:800;font-size:13px;line-height:1.4;
+  overflow-wrap:anywhere;text-wrap:balance;
+}
 .bar{height:6px;border-radius:99px;background:var(--soft);border:1px solid var(--line);overflow:hidden}
 .bar u{display:block;height:100%;background:var(--accent);border-radius:99px;transition:width .35s}
 
@@ -135,12 +145,120 @@ main{padding:0;max-width:100%;width:100%;display:flex;flex-direction:column}
   padding:6px 14px;font-size:13.5px;color:var(--mut)}
 .chip[aria-pressed="true"]{border-color:var(--accent);color:var(--accent);font-weight:600}
 
-/* ---------- Responsive ---------- */
+/* ---------- Elementos solo para móvil y tablet (ocultos en escritorio) ---------- */
+.m-bar,.side-close,.scrim{display:none}
+
+/* ---------- Tablet horizontal (escritorio chico) ---------- */
+@media (min-width:861px) and (max-width:1100px){
+  .app{grid-template-columns:260px 1fr}
+  .content-bar{padding:12px 18px}
+}
+/* Pantallas táctiles grandes: áreas de toque cómodas */
+@media (pointer:coarse) and (min-width:861px){
+  .acc-head,.nav-all{padding-top:11px;padding-bottom:11px}
+  .sub{padding-top:8px;padding-bottom:8px}
+}
+
+/* ---------- Responsive: tablet vertical y móvil ---------- */
 @media (max-width:860px){
-  .app{display:block}
-  .side{display:none}
-  .chips{display:flex}
-  .content-bar{padding:10px 16px}
+  .app{display:block;min-height:0}
+
+  /* Barra superior fija con acceso al índice */
+  .m-bar{
+    display:flex;align-items:center;gap:12px;
+    position:sticky;top:env(safe-area-inset-top,0px);z-index:30;
+    height:64px;padding:0 16px;
+    background:var(--surf);border-bottom:1px solid var(--line);
+  }
+  .m-menu{
+    display:inline-flex;align-items:center;gap:10px;flex:none;
+    min-height:44px;padding:0 14px;border:1px solid var(--accent);border-radius:10px;
+    color:var(--accent);font-weight:600;
+  }
+  .m-menu:hover{background:var(--soft)}
+  .burger{position:relative;display:block;width:16px;height:2px;border-radius:2px;background:currentColor}
+  .burger::before,.burger::after{content:"";position:absolute;left:0;width:100%;height:2px;
+    border-radius:2px;background:currentColor}
+  .burger::before{top:-5px}
+  .burger::after{top:5px}
+  .m-title{flex:1;min-width:0}
+  .m-title b{display:block;font:700 15px/1.2 "Bricolage Grotesque",sans-serif;
+    overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .m-title small{display:block;color:var(--mut);font-size:12px;line-height:1.3;
+    overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .m-pct{flex:none;font:800 15px "Bricolage Grotesque",sans-serif;color:var(--accent);
+    font-variant-numeric:tabular-nums}
+
+  /* El panel lateral pasa a ser un cajón deslizable */
+  .side{
+    display:flex;position:fixed;z-index:50;top:0;left:0;bottom:0;height:auto;
+    width:min(88vw,340px);
+    padding-top:calc(22px + env(safe-area-inset-top,0px));
+    padding-bottom:calc(22px + env(safe-area-inset-bottom,0px));
+    overscroll-behavior:contain;
+    transform:translateX(-102%);visibility:hidden;
+    transition:transform .25s ease,visibility 0s linear .25s;
+  }
+  .side.open{
+    transform:none;visibility:visible;
+    transition:transform .25s ease,visibility 0s;
+    box-shadow:0 0 0 1px var(--line),14px 0 40px rgba(8,17,31,.35);
+  }
+  .side-close{
+    display:grid;place-items:center;flex:none;margin-left:auto;
+    width:40px;height:40px;border:1px solid var(--line);border-radius:10px;
+    color:var(--mut);font-size:16px;line-height:1;
+  }
+  .side-close:hover{background:var(--soft);color:var(--ink)}
+  .brand{padding-bottom:14px}
+  .scrim{
+    position:fixed;inset:0;z-index:40;background:rgba(8,17,31,.5);
+  }
+  .scrim.show{display:block}
+  body.drawer-open{overflow:hidden}
+
+  /* Títulos completos y áreas de toque cómodas dentro del cajón */
+  .acc-head,.nav-all{padding-top:11px;padding-bottom:11px}
+  .sub{padding:10px 8px;font-size:14.5px}
+  .sub span{overflow:visible;text-overflow:clip;white-space:normal}
+
+  /* Chips de áreas */
+  .chips{display:flex;padding:12px 16px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .chips::-webkit-scrollbar{display:none}
+  .chip{min-height:38px;padding:6px 16px}
+
+  /* Barra del tema */
+  .content-bar{
+    position:sticky;top:calc(env(safe-area-inset-top,0px) + 64px);z-index:20;
+    padding:10px 16px;
+  }
+  .content-bar[hidden]{display:none}
+  .content-bar h2{font-size:17px}
+  .content-frame{min-height:calc(100vh - 130px);min-height:calc(100dvh - 130px)}
+
+  /* Pantalla inicial */
+  .welcome{min-height:60vh;padding:32px 20px}
+  .welcome h2{font-size:22px}
+}
+
+/* ---------- Móvil ---------- */
+@media (max-width:560px){
+  .m-bar{padding:0 12px;gap:10px}
+  .m-menu{padding:0 12px}
+  .chips{padding:10px 12px}
+  .content-bar{flex-wrap:nowrap;gap:10px;padding:8px 12px}
+  .content-bar h2{
+    flex:1;min-width:0;font-size:14.5px;line-height:1.25;
+    display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+  }
+  .content-bar .actions{flex:none}
+  .btn{min-height:40px;padding:6px 12px;font-size:13.5px;white-space:nowrap}
+  .welcome h2{font-size:20px}
+}
+@media (max-width:380px){
+  .m-title small{display:none}
+  .m-menu span:last-child{display:none}
+  .m-menu{padding:0 14px}
 }
 </style>
 </head>
@@ -148,10 +266,11 @@ main{padding:0;max-width:100%;width:100%;display:flex;flex-direction:column}
 <div class="app">
 
   <!-- ============ PANEL LATERAL ============ -->
-  <aside class="side" aria-label="Índice de cursos">
+  <aside class="side" id="side" aria-label="Índice de cursos">
     <div class="brand">
       <div class="logo">D</div>
       <div><b>Capacitación Jurídica</b><small>Defensoría Oficial 6</small></div>
+      <button class="side-close" id="btn-close" type="button" aria-label="Cerrar índice">✕</button>
     </div>
 
     <nav id="nav"></nav>
@@ -159,12 +278,23 @@ main{padding:0;max-width:100%;width:100%;display:flex;flex-direction:column}
     <div class="me">
       <b id="mePct">0%</b> completado
       <div class="bar" style="margin-top:8px"><u id="meBar" style="width:0"></u></div>
-      <small id="meTxt"></small>
+      <small id="meTxt" aria-live="polite"></small>
     </div>
   </aside>
 
+  <div class="scrim" id="scrim"></div>
+
   <!-- ============ CONTENIDO PRINCIPAL ============ -->
   <main>
+    <header class="m-bar" id="m-bar">
+      <button class="m-menu" id="btn-menu" type="button" aria-label="Abrir índice de cursos"
+              aria-controls="side" aria-expanded="false">
+        <span class="burger" aria-hidden="true"></span><span>Cursos</span>
+      </button>
+      <div class="m-title"><b>Capacitación Jurídica</b><small>Defensoría Oficial 6</small></div>
+      <span class="m-pct" id="mPct" aria-hidden="true">0%</span>
+    </header>
+
     <div class="chips" id="chips" role="group" aria-label="Áreas"></div>
 
     <div id="content-bar" class="content-bar" hidden>
@@ -214,7 +344,7 @@ const C = [
 
 /* ==================== ESTADO ==================== */
 const $ = s => document.querySelector(s);
-let P = {}, cur = null, openArea = null;
+let P = {}, cur = null, curId = null, openArea = null;
 try { P = JSON.parse(localStorage.getItem('campus-jur') || '{}'); } catch (e) {}
 const save = () => { try { localStorage.setItem('campus-jur', JSON.stringify(P)); } catch (e) {} };
 const isDone = id => P[id] === true;
@@ -224,9 +354,15 @@ function stats(){
   const total = C.length;
   const hechas = C.filter(c => isDone(c.id)).length;
   const p = total ? Math.round(hechas / total * 100) : 0;
+  const todos = total > 0 && hechas === total;
   $('#mePct').textContent = p + '%';
+  $('#mPct').textContent = p + '%';
   $('#meBar').style.width = p + '%';
-  $('#meTxt').textContent = hechas + ' de ' + total + ' cursos completos';
+  const txt = $('#meTxt');
+  txt.classList.toggle('ok', todos);
+  txt.textContent = todos
+    ? '✓ Has completado todos los temas'
+    : hechas + ' de ' + total + ' cursos completos';
 }
 
 /* ==================== NAVEGACIÓN (ACORDEÓN) ==================== */
@@ -258,6 +394,12 @@ function buildChips(){
   $('#chips').innerHTML = h;
 }
 
+/* Número junto al título = temas pendientes (baja al marcar completos) */
+function setCount(el, pendientes){
+  el.textContent = pendientes;
+  el.title = pendientes === 1 ? '1 tema pendiente' : pendientes + ' temas pendientes';
+}
+
 function syncNav(){
   document.querySelectorAll('#nav .sub').forEach(b => {
     const c = C.find(x => x.id === b.dataset.id);
@@ -265,6 +407,7 @@ function syncNav(){
     b.classList.toggle('done', done);
     b.querySelector('em').textContent = done ? 'Completo' : '';
   });
+  setCount($('.nav-all em'), C.filter(c => !isDone(c.id)).length);
   $('.nav-all').setAttribute('aria-pressed', cur === 'all');
   document.querySelectorAll('.chip').forEach(b =>
     b.setAttribute('aria-pressed', b.dataset.k === cur));
@@ -272,8 +415,38 @@ function syncNav(){
     const on = a.dataset.area === openArea;
     a.classList.toggle('open', on);
     a.querySelector('.acc-head').setAttribute('aria-expanded', on);
+    setCount(a.querySelector('.acc-head em'),
+             C.filter(c => c.a === a.dataset.area && !isDone(c.id)).length);
   });
 }
+
+/* ==================== ÍNDICE DESLIZABLE (MÓVIL Y TABLET) ==================== */
+const isDrawerOpen = () => $('#side').classList.contains('open');
+
+function openDrawer(){
+  $('#side').classList.add('open');
+  $('#scrim').classList.add('show');
+  document.body.classList.add('drawer-open');
+  $('main').inert = true;
+  $('#btn-menu').setAttribute('aria-expanded', 'true');
+  $('#btn-close').focus();
+}
+
+function closeDrawer(devolverFoco){
+  if (!isDrawerOpen()) return;
+  $('#side').classList.remove('open');
+  $('#scrim').classList.remove('show');
+  document.body.classList.remove('drawer-open');
+  $('main').inert = false;
+  $('#btn-menu').setAttribute('aria-expanded', 'false');
+  if (devolverFoco) $('#btn-menu').focus();
+}
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeDrawer(true);
+});
+const mqEscritorio = window.matchMedia('(min-width:861px)');
+mqEscritorio.addEventListener('change', e => { if (e.matches) closeDrawer(); });
 
 /* ==================== CARGA DE CONTENIDO ==================== */
 function loadCourse(id){
@@ -281,6 +454,7 @@ function loadCourse(id){
   if (!c) return;
 
   cur = c.id;
+  curId = c.id;
 
   // Barra superior
   $('#content-bar').hidden = false;
@@ -307,6 +481,10 @@ function refreshSidebar(){
 
 /* ==================== EVENTOS ==================== */
 document.addEventListener('click', e => {
+  // Abrir / cerrar el índice (móvil y tablet)
+  if (e.target.closest('#btn-menu')){ openDrawer(); return; }
+  if (e.target.closest('#btn-close') || e.target.closest('#scrim')){ closeDrawer(true); return; }
+
   // Acordeón
   const head = e.target.closest('[data-head]');
   if (head){
@@ -323,6 +501,7 @@ document.addEventListener('click', e => {
     cur = k.dataset.k;
     openArea = cur === 'all' ? null : cur;
     refreshSidebar();
+    if (k.classList.contains('chip')) openDrawer();
     return;
   }
 
@@ -330,13 +509,14 @@ document.addEventListener('click', e => {
   const sub = e.target.closest('.sub');
   if (sub){
     loadCourse(sub.dataset.id);
+    closeDrawer();
     return;
   }
 
   // Botón completo
   if (e.target.closest('#btn-complete')){
-    if (!cur) return;
-    P[cur] = true;
+    if (!curId) return;
+    P[curId] = true;
     save();
     // Actualizar botón
     const btn = $('#btn-complete');
