@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Capacitación Jurídica · Defensoría Oficial</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ---------- Tokens ---------- */
+:root{
+  --bg:#F5F9FF;
+  --surf:#FFFFFF;
+  --ink:#0B2545;          /* texto azul oscuro */
+  --mut:#4B6A99;
+  --line:#B9D2F2;         /* bordes azules */
+  --accent:#1D4ED8;
+  --soft:#EAF2FE;
+  --on-accent:#FFFFFF;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#08111F; --surf:#0E1B31; --ink:#DCE8FA; --mut:#8FAAD2;
+    --line:#27436E; --accent:#7FA9F0; --soft:#132340; --on-accent:#08111F;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#08111F; --surf:#0E1B31; --ink:#DCE8FA; --mut:#8FAAD2;
+  --line:#27436E; --accent:#7FA9F0; --soft:#132340; --on-accent:#08111F;
+}
+
+/* ---------- Base ---------- */
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font:400 15.5px/1.65 "Plus Jakarta Sans",system-ui,sans-serif;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+h1,h2,h3{font-family:"Bricolage Grotesque","Plus Jakarta Sans",sans-serif;
+  font-weight:700;line-height:1.2;margin:0;letter-spacing:-.01em}
+button{font:inherit;color:inherit;cursor:pointer;background:none;border:0}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+/* ---------- Layout ---------- */
+.app{display:grid;grid-template-columns:286px 1fr;min-height:100vh}
+.side{
+  position:sticky;top:0;height:100vh;overflow:auto;
+  padding:22px 16px;background:var(--surf);
+  border-right:1px solid var(--line);
+  display:flex;flex-direction:column;gap:6px;
+}
+main{padding:32px clamp(16px,4vw,48px) 56px;max-width:1180px;width:100%}
+
+/* ---------- Marca ---------- */
+.brand{display:flex;gap:10px;align-items:center;padding:0 6px 16px;margin-bottom:6px;
+  border-bottom:1px solid var(--line)}
+.logo{width:36px;height:36px;border-radius:10px;border:1.5px solid var(--accent);
+  color:var(--accent);display:grid;place-items:center;font-size:17px}
+.brand b{font:700 15.5px/1.15 "Bricolage Grotesque",sans-serif;display:block}
+.brand small{color:var(--mut);font-size:12px}
+
+/* ---------- Navegación lateral ---------- */
+.nav-all{display:flex;align-items:center;gap:9px;width:100%;text-align:left;
+  border:1px solid transparent;border-radius:10px;padding:8px 10px;font-weight:600}
+.nav-all span{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.nav-all em{font-style:normal;font-size:12px;color:var(--mut);font-variant-numeric:tabular-nums}
+.nav-all:hover{border-color:var(--line);background:var(--soft)}
+.nav-all[aria-pressed="true"]{border-color:var(--accent);background:var(--soft)}
+
+.acc{border:1px solid transparent;border-radius:10px;transition:border-color .18s,background .18s}
+.acc.open{border-color:var(--line);background:var(--soft)}
+.acc-head{display:flex;align-items:center;gap:9px;width:100%;text-align:left;
+  border-radius:9px;padding:8px 10px;font-weight:600}
+.acc-head i{font-style:normal;font-size:15px;color:var(--c)}
+.acc-head span{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.acc-head em{font-style:normal;font-size:12px;color:var(--mut);font-variant-numeric:tabular-nums}
+.acc-head:hover{background:var(--soft)}
+.caret{font-size:9px;line-height:1;color:var(--mut);transition:transform .2s}
+.acc.open .caret{transform:rotate(90deg)}
+
+.acc-body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .24s ease}
+.acc.open .acc-body{grid-template-rows:1fr}
+.acc-inner{overflow:hidden}
+.subs{margin:2px 8px 8px 20px;padding-left:10px;border-left:1px solid var(--line)}
+.sub{display:flex;align-items:center;gap:8px;width:100%;text-align:left;
+  font-size:13.5px;color:var(--mut);padding:5px 8px;border-radius:7px;line-height:1.35}
+.sub span{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sub em{font-style:normal;font-size:11.5px;color:var(--accent);font-variant-numeric:tabular-nums}
+.sub:hover{background:var(--surf);color:var(--ink)}
+.sub.done span{color:var(--accent)}
+
+/* ---------- Progreso lateral ---------- */
+.me{margin-top:auto;padding:14px;border:1px solid var(--line);border-radius:12px;font-size:13px}
+.me b{font:800 20px "Bricolage Grotesque",sans-serif}
+.me small{display:block;color:var(--mut);font-size:12px;margin-top:6px}
+.bar{height:6px;border-radius:99px;background:var(--soft);border:1px solid var(--line);overflow:hidden}
+.bar u{display:block;height:100%;background:var(--accent);border-radius:99px;transition:width .35s}
+
+/* ---------- Hero ---------- */
+.hero{display:grid;grid-template-columns:1fr 200px;gap:28px;align-items:center;
+  padding:28px;background:var(--surf);border:1px solid var(--line);border-radius:18px}
+.hero h1{font-size:clamp(24px,3.6vw,36px);font-weight:800}
+.hero p{margin:10px 0 18px;color:var(--mut);max-width:56ch}
+.search{display:flex;max-width:440px;padding:4px;
+  background:var(--surf);border:1px solid var(--line);border-radius:12px}
+.search input{flex:1;min-width:0;border:0;background:none;padding:10px 12px;
+  font:inherit;color:var(--ink);outline-offset:-2px}
+.ring{text-align:center}
+.ring svg{width:118px;height:118px}
+.ring b{display:block;font:800 26px "Bricolage Grotesque",sans-serif}
+.ring small{color:var(--mut);font-size:12.5px}
+
+/* ---------- Chips (móvil) ---------- */
+.chips{display:none;gap:8px;overflow-x:auto;padding:14px 0 2px}
+.chip{flex:none;border:1px solid var(--line);background:var(--surf);border-radius:99px;
+  padding:6px 14px;font-size:13.5px;color:var(--mut)}
+.chip[aria-pressed="true"]{border-color:var(--accent);color:var(--accent);font-weight:600}
+
+/* ---------- Tarjetas ---------- */
+h2.sec{font-size:22px;margin:34px 0 14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.card{display:flex;flex-direction:column;text-align:left;padding:0;overflow:hidden;
+  background:var(--surf);border:1px solid var(--line);border-radius:14px;
+  transition:border-color .15s,transform .15s}
+.card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.top{display:flex;justify-content:space-between;align-items:center;gap:10px;
+  padding:12px 16px;border-bottom:1px solid var(--line);
+  color:var(--c);font-weight:600;font-size:13px}
+.top i{font-style:normal;font-size:18px}
+.body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card h3{font-size:17px}
+.card small{color:var(--mut);font-size:12.5px}
+.card p{margin:0;font-size:14px;color:var(--mut);flex:1}
+.meta{display:flex;justify-content:space-between;font-size:12.5px;color:var(--mut);margin-top:6px}
+.empty{grid-column:1/-1;padding:40px;text-align:center;color:var(--mut);
+  border:1px dashed var(--line);border-radius:14px}
+
+/* ---------- Continuar ---------- */
+.cont{display:flex;gap:14px;align-items:center;width:100%;text-align:left;padding:14px 18px;
+  background:var(--surf);border:1px solid var(--line);border-radius:14px}
+.cont:hover{border-color:var(--accent)}
+.cont b{font-weight:600}
+.cont .bar{flex:0 0 120px}
+.cont span:last-child{font-size:13px;color:var(--mut);font-variant-numeric:tabular-nums}
+
+/* ---------- Panel ---------- */
+#shade{position:fixed;inset:0;background:rgba(11,37,69,.35);opacity:0;pointer-events:none;
+  transition:opacity .2s;z-index:5}
+#panel{position:fixed;top:0;right:0;bottom:0;width:min(600px,100%);
+  background:var(--bg);border-left:1px solid var(--line);z-index:6;
+  transform:translateX(102%);transition:transform .28s;overflow:auto;
+  padding-bottom:env(safe-area-inset-bottom,0px)}
+body.open #shade{opacity:1;pointer-events:auto}
+body.open #panel{transform:none}
+.ph{position:relative;padding:calc(18px + env(safe-area-inset-top,0px)) 70px 18px 24px;
+  background:var(--surf);border-bottom:1px solid var(--line)}
+.ph .eyebrow{color:var(--c);font-weight:600;font-size:12px;letter-spacing:.04em;text-transform:uppercase}
+.ph h2{font-size:26px;margin:6px 0 4px}
+.ph p{margin:6px 0 0;color:var(--mut);font-size:14.5px}
+.x{position:absolute;top:calc(18px + env(safe-area-inset-top,0px));right:20px;
+  width:34px;height:34px;display:grid;place-items:center;font-size:17px;line-height:1;
+  background:var(--surf);border:1px solid var(--line);border-radius:9px;color:var(--ink)}
+.x:hover{border-color:var(--accent);color:var(--accent)}
+.pb{padding:6px 24px 30px}
+.pb h3{font-size:18px;margin:24px 0 10px}
+.les{display:flex;gap:12px;align-items:center;padding:10px 14px;margin-bottom:8px;
+  background:var(--surf);border:1px solid var(--line);border-radius:10px;cursor:pointer}
+.les:hover{border-color:var(--accent)}
+.les input{width:18px;height:18px;accent-color:var(--accent);flex:none}
+.les.done span{color:var(--mut);text-decoration:line-through}
+.idea{padding:10px 14px;margin-bottom:8px;font-size:14.5px;
+  background:var(--surf);border:1px solid var(--line);border-left:3px solid var(--c);
+  border-radius:0 10px 10px 0}
+.btn{margin-top:14px;padding:11px 18px;font-weight:600;border-radius:10px;
+  background:var(--accent);color:var(--on-accent);border:1px solid var(--accent);
+  transition:background .15s,color .15s}
+.btn:hover{background:transparent;color:var(--accent)}
+
+footer{margin-top:44px;font-size:13px;color:var(--mut);max-width:70ch}
+
+/* ---------- Responsive ---------- */
+@media (max-width:860px){
+  .app{display:block}
+  .side{display:none}
+  .chips{display:flex}
+  .hero{grid-template-columns:1fr;padding:22px}
+  .ring{display:flex;gap:16px;align-items:center;text-align:left}
+  .ring svg{width:76px;height:76px}
+  .cont .bar{display:none}
+}
+</style>
+</head>
+<body>
+<div class="app">
+
+  <!-- ============ PANEL LATERAL ============ -->
+  <aside class="side" aria-label="Índice de cursos">
+    <div class="brand">
+      <div class="logo">⚖️</div>
+      <div><b>Capacitación Jurídica</b><small>Defensoría Oficial 6</small></div>
+    </div>
+
+    <nav id="nav"></nav>
+
+    <div class="me">
+      <b id="mePct">0%</b> completado
+      <div class="bar" style="margin-top:8px"><u id="meBar" style="width:0"></u></div>
+      <small id="meTxt"></small>
+    </div>
+  </aside>
+
+  <!-- ============ CONTENIDO ============ -->
+  <main>
+    <section class="hero">
+      <div>
+        <h1>Capacitación jurídica para la Defensoría Oficial</h1>
+        <p>Normas de familia, niñez, capacidad, sucesiones, procesos de Misiones y trabajo, explicadas en simple. Elegí un curso, recorré las lecciones y marcá tu avance.</p>
+        <label class="search">
+          <input id="q" type="search" placeholder="Buscar un tema: alimentos, tutela, desalojo…" aria-label="Buscar cursos">
+        </label>
+      </div>
+      <div class="ring">
+        <svg viewBox="0 0 80 80" aria-hidden="true">
+          <circle cx="40" cy="40" r="34" fill="none" stroke="var(--line)" stroke-width="6"/>
+          <circle id="rc" cx="40" cy="40" r="34" fill="none" stroke="var(--accent)" stroke-width="6"
+                  stroke-linecap="round" stroke-dasharray="213.6" stroke-dashoffset="213.6"
+                  transform="rotate(-90 40 40)"/>
+        </svg>
+        <div><b id="rp">0%</b><small>de tu recorrido</small></div>
+      </div>
+    </section>
+
+    <div class="chips" id="chips" role="group" aria-label="Áreas"></div>
+    <div id="cont"></div>
+
+    <h2 class="sec" id="ttl">Todos los cursos</h2>
+    <div class="grid" id="grid"></div>
+
+    <footer>Material didáctico orientativo, elaborado a partir de guías en lenguaje simple de cada norma. No reemplaza el texto de la ley ni el criterio profesional: ante la duda, consultá la norma vigente.</footer>
+  </main>
+</div>
+
+<div id="shade"></div>
+<aside id="panel" role="dialog" aria-modal="true" aria-label="Detalle del curso"></aside>
+
+<script>
+/* ==================== DATOS ==================== */
+const A = {
+  cap:['Capacidad y personas','#1E3A8A','👤'],
+  fam:['Familia','#1D4ED8','👪'],
+  nin:['Niñez y adolescencia','#0E7490','🧒'],
+  pro:['Procesos en Misiones','#0369A1','📑'],
+  suc:['Sucesiones','#4338CA','📜'],
+  lab:['Derecho laboral','#6D28D9','🛠️']
+};
+
+const C = [
+{id:'cap1',a:'cap',t:'Capacidad: principios generales',n:'CCyC, arts. 22 a 24',d:'Quién puede tener derechos y quién puede ejercerlos por sí mismo.',l:['Es una persona humana','¿Puede actuar por sí misma?','¿Está en una excepción?','Actúa con representación'],i:['La capacidad es la regla; limitarla, la excepción (art. 22).','La ley solo puede limitarla para actos determinados, nunca de forma total.','Toda persona ejerce por sí sus derechos; las excepciones deben ser expresas (art. 23).','Son incapaces de ejercicio: la persona por nacer, quien no tiene edad y madurez suficiente y quien fue declarado incapaz por sentencia (art. 24).','En la niñez se mira la edad y la madurez para cada acto: autonomía progresiva.']},
+{id:'cap3',a:'cap',t:'Restricciones a la capacidad',n:'CCyC, arts. 31 a 50',d:'Cuándo un juez puede limitar la capacidad de una persona adulta y cómo se la acompaña.',l:['Se presume capaz','Proceso con garantías','Sentencia a medida','Registro y revisión'],i:['La capacidad se presume, aun si la persona está internada (art. 31).','La regla es la capacidad restringida con apoyos; la incapacidad con curador, solo ante imposibilidad absoluta de interactuar (art. 32).','La persona es parte, tiene abogado y el juez debe entrevistarla personalmente (arts. 35 y 36).','La sentencia se inscribe y se revisa como máximo cada tres años (arts. 38 a 40).','La internación sin consentimiento es el último recurso: riesgo cierto e inminente (arts. 41 y 42).','El apoyo promueve la autonomía y se hace a medida (art. 43).']},
+{id:'rep',a:'cap',t:'Representación y asistencia',n:'CCyC, arts. 100 a 103',d:'Quién actúa por quien no puede ejercer sus derechos y quién ayuda a quien sí puede.',l:['Hay incapacidad de ejercicio','Actúa un representante','La ley dice quién es','Interviene el Ministerio Público'],i:['Representar es actuar para la persona, no sobre ella; su voluntad cuenta (art. 100).','La representación es legal, gradual, proporcional, revisable y con control judicial.','Los derechos personalísimos quedan fuera de las funciones del representante.','Representan: los padres, el tutor, el apoyo con facultades de representar y el curador (art. 101).','Las personas con capacidad restringida e inhabilitadas son asistidas; sin asistencia, los actos limitados son nulos (art. 102).']},
+{id:'tut',a:'cap',t:'Tutela',n:'CCyC, arts. 104 a 137',d:'Quién cuida a un niño, niña o adolescente sin progenitores que ejerzan la responsabilidad parental.',l:['Disposiciones generales','Discernimiento','Ejercicio','Cuentas','Terminación'],i:['Es subsidiaria: opera cuando no hay quien ejerza la responsabilidad parental (art. 104).','Siempre la discierne un juez, el del centro de vida, que debe oír al niño (arts. 112 y 113).','Tres vías: tutor designado por los padres, tutela dativa o tutela especial (arts. 106, 107 y 109).','Hay controles: inventario, autorización judicial y rendición de cuentas anual y final.','El tutor puede ser removido y, durante el juicio, suspendido (arts. 135 a 137).']},
+{id:'rp',a:'fam',t:'Responsabilidad parental',n:'CCyC, arts. 638 a 704',d:'Quién cuida y decide por los hijos, y qué se debe en alimentos y hasta cuándo.',l:['Principios generales','Titularidad y ejercicio','Cuidado de los hijos','Alimentos','Deberes de los hijos','Hijos afines','Extinción y suspensión'],i:['Tres principios: interés superior, autonomía progresiva y derecho a ser oído (art. 639).','A mayor autonomía del hijo, menor representación de los progenitores.','Si hay desacuerdo, decide el juez por el procedimiento más breve (art. 642).','Tras la separación, la primera alternativa es el cuidado compartido indistinto (art. 651).','Los alimentos se deben hasta los 21 años, y hasta los 25 si el hijo estudia o se capacita (arts. 658 y 663).','Aunque la responsabilidad se extinga, se prive o se suspenda, el deber alimentario subsiste (arts. 699 a 704).']},
+{id:'div',a:'fam',t:'Disolución del matrimonio',n:'CCyC, arts. 435 a 445',d:'Cómo termina el matrimonio y cómo se tramita el divorcio.',l:['Causales','Proceso de divorcio','Efectos del divorcio'],i:['Tres causas: muerte, ausencia con presunción de fallecimiento y divorcio judicial (art. 435).','No se puede renunciar a pedir el divorcio (art. 436).','Un solo divorcio: judicial, incausado, a pedido de uno o ambos y sin plazos (art. 437).','Toda petición lleva una propuesta; el desacuerdo no frena la sentencia (art. 438).','El convenio regulador cubre vivienda, bienes, compensaciones y responsabilidad parental (arts. 439 y 440).','La compensación económica caduca a los 6 meses de la sentencia (arts. 441 a 445).']},
+{id:'ley16',a:'nin',t:'Protección integral de la niñez',n:'Ley II – N.º 16 (Misiones)',d:'La ley completa: 3 libros y 136 artículos, con la Ley 27.801 incorporada.',l:['Principios (arts. 1 a 10)','Derechos y garantías (11 a 32)','Sistema de protección (33 a 66)','Fuero de familia y penal','Disposiciones finales','Ley 27.801: penal juvenil'],i:['Busca garantizar el goce, el ejercicio y la protección integral de los derechos de niños, niñas y adolescentes (art. 1).','Medidas de protección de derechos: arts. 36 a 42.','Diseño organizacional: arts. 43 a 57; fondo especial: arts. 58 a 62.','Incluye organismos de atención y su supervisión (arts. 64 a 66).','Abarca justicia de familia y justicia penal de niños, niñas y adolescentes.']},
+{id:'ley52',a:'nin',t:'Defensor de los Derechos de Niños, Niñas y Adolescentes',n:'Ley IV – N.º 52 (Misiones)',d:'Qué es, quién lo elige y cómo trabaja esta figura, en 25 artículos.',l:['Qué es y qué hace','Cómo se elige','Cómo trabaja','Registro de niños institucionalizados'],i:['Se crea la figura para velar por la protección de esos derechos y darlos a conocer (art. 1).','La ley regula requisitos, mandato, incompatibilidades, remuneración y presupuesto.','Hay defensores adjuntos e informes a la Cámara.','Crea el Registro de niños institucionalizados, con legajos e inscripción.']},
+{id:'pj',a:'nin',t:'Régimen Penal Juvenil',n:'Ley 27.801',d:'Responsabilidad penal de adolescentes: alcance, garantías, sanciones y alternativas.',l:['Alcance','Garantías','Víctimas','Sanciones','Alternativas'],i:['Se aplica desde los 14 años hasta las 0 h del día en que cumple 18, según la edad al momento del hecho.','Busca educar, resocializar e integrar, protegiendo también a la víctima y a la sociedad.','El adolescente tiene defensa desde el inicio, identidad reservada y juicio sin demoras.','Penas alternativas de hasta 3 años; privación de libertad hasta 15 años, sin perpetuas.','Oportunidad, mediación y suspensión a prueba permiten cerrar casos con reparación.','Entra en vigencia a los 180 días de su publicación (art. 52).']},
+{id:'map',a:'pro',t:'Mapa del Código Procesal de Misiones',n:'Ley XII – N.º 27',d:'Código Procesal Civil, Comercial, de Familia y Violencia Familiar: qué trata cada parte.',l:['Título I: Órgano judicial (arts. 1 a 39)','Título II: Partes (arts. 40 a 114)','Título III: Actos procesales (arts. 115 a 175)','Título IV: Contingencias generales (arts. 176 a 305)'],i:['El Libro Primero reúne las reglas básicas de cualquier juicio: quién juzga, quiénes participan, cómo se hacen los actos y cómo termina.','Título I: competencia, recusaciones y deberes de los jueces.','Título II: patrocinio letrado, rebeldía, costas y beneficio de litigar sin gastos.','Título III: escritos, audiencias, notificaciones, plazos y nulidades.','Título IV: incidentes y medidas cautelares.']},
+{id:'ali',a:'pro',t:'Juicio de alimentos',n:'Código Procesal, arts. 696 a 710',d:'Del reclamo a la sentencia y al cobro, paso a paso.',l:['Demanda con prueba','Cuota provisoria','Audiencia (10 días)','Sentencia (5 días)','Cobro o ejecución'],i:['Alimentos y litisexpensas siguen el trámite de los procesos especiales (art. 696).','Quien reclama debe presentar todo junto en la demanda.','Mientras dura el juicio se pueden fijar alimentos provisorios.','La ley prevé efectos distintos según quién falta a la audiencia y si la ausencia está justificada.','Regula el cobro de alimentos atrasados y los cambios y el fin de la cuota.']},
+{id:'dvm',a:'pro',t:'Juicio de divorcio',n:'Código Procesal, arts. 715 y 716',d:'Los dos artículos propios del divorcio: la audiencia y la vista al Ministerio Público.',l:['Demanda y traslado','Audiencia personal','Reconciliar y acordar','Vista al Ministerio Público'],i:['Al dar traslado de la demanda, el juez debe fijar audiencia con las partes (art. 715).','En la audiencia se busca reconciliar y acordar sobre los hijos y la vivienda.','Interviene el Ministerio Público mediante vista (art. 716).','Normas relacionadas: competencia, tipo de proceso, mediación previa y alimentos.']},
+{id:'vio',a:'pro',t:'Violencia familiar',n:'Ley XIV – N.º 6 y arts. 655 a 658',d:'8 artículos de la ley y 4 del Código Procesal que la complementan.',l:['Denuncia','Medidas de protección','Audiencias y sanciones','Juez competente y urgencias'],i:['Cualquier persona víctima puede denunciar; hay supuestos de denuncia obligatoria.','El juez puede dictar medidas cautelares de protección.','La ley prevé audiencias y sanciones.','Incluye prevención, asistencia, patrocinio gratuito y registro.']},
+{id:'des',a:'pro',t:'Juicio de desalojo',n:'Código Procesal, arts. 623 a 635',d:'Los 13 artículos del desalojo, desde la demanda hasta el lanzamiento.',l:['Demanda (juicio ordinario)','Notificación a ocupantes','Prueba y sentencia','Lanzamiento'],i:['El desalojo de inmuebles urbanos y rurales sigue el trámite del juicio ordinario (art. 623).','Se debe denunciar la existencia de sublocatarios u ocupantes.','Hay reglas sobre la localización del inmueble y los deberes del notificador.','Medidas rápidas: entrega del inmueble, reconocimiento judicial y desocupación inmediata.']},
+{id:'succ',a:'suc',t:'El proceso sucesorio',n:'CCyC, arts. 2335 a 2362',d:'Cómo se ordena la herencia: identificar herederos, cobrar, pagar y entregar.',l:['Objeto','Investidura','Inventario','Administración','Deudas y legados'],i:['Interviene el juez del último domicilio del fallecido.','Hijos, padres y cónyuge son herederos desde la muerte, sin trámite.','Colaterales y herederos por testamento necesitan que el juez los reconozca.','El inventario y el avalúo se pueden impugnar.','El administrador cuida los bienes y rinde cuentas cada tres meses.','Primero se paga a los acreedores, luego los legados y recién después se entrega.']},
+{id:'sucm',a:'suc',t:'Proceso sucesorio en Misiones',n:'Código Procesal, arts. 717 a 763',d:'Los 47 artículos del trámite, de la apertura a la partición.',l:['Se abre la sucesión','Declaratoria o testamento','Administración','Inventario y avalúo','Partición'],i:['Para abrir, quien pide debe justificar a primera vista su derecho (art. 717).','Prevé medidas preliminares, administrador provisional y sucesión extrajudicial.','Regula la intervención de interesados y acreedores, la acumulación y la audiencia.','Distingue sucesión ab-intestato y testamentaria; incluye herencia vacante.']},
+{id:'lab',a:'lab',t:'Modernización Laboral',n:'Ley 27.802',d:'218 artículos y 26 títulos que reforman el contrato de trabajo y la indemnización.',l:['Contrato de trabajo','Indemnización y fondo','Huelgas y servicios mínimos','Plataformas y regímenes especiales','Incentivos para emplear'],i:['Modifica la Ley de Contrato de Trabajo; excluye a plataformas, independientes y empleo público.','Los beneficios sociales no son salario ni pagan aportes.','Banco de horas voluntario y vacaciones en tramos de 7 días o más.','La indemnización tiene tope de 3 veces el promedio del convenio y piso del 67%.','El FAL aporta 1% (grandes) o 2,5% (MiPyMEs) de las remuneraciones.','RIFL, PER y RIMI buscan registrar empleo e impulsar inversiones.']}
+];
+
+/* ==================== ESTADO ==================== */
+const $ = s => document.querySelector(s);
+let P = {}, cur = 'all', qs = '', openArea = null;
+try { P = JSON.parse(localStorage.getItem('campus-jur') || '{}'); } catch (e) {}
+const save = () => { try { localStorage.setItem('campus-jur', JSON.stringify(P)); } catch (e) {} };
+const done = c => (P[c.id] || []).length;
+const pct  = c => Math.round(done(c) / c.l.length * 100);
+const byTitle = (a, b) => a.t.localeCompare(b.t, 'es');
+
+/* ==================== RENDER: PROGRESO ==================== */
+function stats(){
+  const total = C.reduce((s, c) => s + c.l.length, 0);
+  const hechas = C.reduce((s, c) => s + done(c), 0);
+  const p = Math.round(hechas / total * 100);
+  $('#mePct').textContent = p + '%';
+  $('#rp').textContent = p + '%';
+  $('#meBar').style.width = p + '%';
+  $('#rc').style.strokeDashoffset = 213.6 * (1 - p / 100);
+  const completos = C.filter(c => pct(c) === 100).length;
+  $('#meTxt').textContent = completos + ' de ' + C.length + ' cursos completos';
+}
+
+/* ==================== RENDER: NAVEGACIÓN (ACORDEÓN) ==================== */
+function buildNav(){
+  let h = `<button class="nav-all" data-k="all" aria-pressed="true">
+             <i>🎓</i><span>Todos los cursos</span><em>${C.length}</em>
+           </button>`;
+
+  for (const k in A){
+    const [nombre, color, icono] = A[k];
+    const lista = C.filter(c => c.a === k).sort(byTitle);
+    h += `<div class="acc" data-area="${k}">
+            <button class="acc-head" data-head="${k}" aria-expanded="false" style="--c:${color}">
+              <i>${icono}</i><span>${nombre}</span><em>${lista.length}</em><b class="caret">▸</b>
+            </button>
+            <div class="acc-body"><div class="acc-inner"><div class="subs">
+              ${lista.map(c => `<button class="sub" data-id="${c.id}">
+                                  <span>${c.t}</span><em></em>
+                                </button>`).join('')}
+            </div></div></div>
+          </div>`;
+  }
+  $('#nav').innerHTML = h;
+}
+
+function buildChips(){
+  let h = `<button class="chip" data-k="all" aria-pressed="true">Todos</button>`;
+  for (const k in A) h += `<button class="chip" data-k="${k}">${A[k][0]}</button>`;
+  $('#chips').innerHTML = h;
+}
+
+function syncNav(){
+  document.querySelectorAll('#nav .sub').forEach(b => {
+    const c = C.find(x => x.id === b.dataset.id);
+    const p = pct(c);
+    b.classList.toggle('done', p === 100);
+    b.querySelector('em').textContent = p ? p + '%' : '';
+  });
+  $('.nav-all').setAttribute('aria-pressed', cur === 'all');
+  document.querySelectorAll('.chip').forEach(b =>
+    b.setAttribute('aria-pressed', b.dataset.k === cur));
+  document.querySelectorAll('#nav .acc').forEach(a => {
+    const on = a.dataset.area === openArea;
+    a.classList.toggle('open', on);
+    a.querySelector('.acc-head').setAttribute('aria-expanded', on);
+  });
+}
+
+/* ==================== RENDER: TARJETAS ==================== */
+function cards(){
+  const q = qs.toLowerCase();
+  const lista = C.filter(c =>
+    (cur === 'all' || c.a === cur) &&
+    (!q || (c.t + c.n + c.d + c.i.join(' ') + c.l.join(' ')).toLowerCase().includes(q))
+  );
+
+  $('#ttl').textContent = cur === 'all' ? 'Todos los cursos' : A[cur][0];
+
+  $('#grid').innerHTML = lista.length
+    ? lista.map(c => `
+      <button class="card" data-id="${c.id}" style="--c:${A[c.a][1]}">
+        <div class="top"><span>${A[c.a][0]}</span><i>${A[c.a][2]}</i></div>
+        <div class="body">
+          <small>${c.n}</small>
+          <h3>${c.t}</h3>
+          <p>${c.d}</p>
+          <div class="bar"><u style="width:${pct(c)}%"></u></div>
+          <div class="meta">
+            <span>${c.l.length} lecciones</span>
+            <span>${pct(c) === 100 ? 'Completo' : done(c) ? pct(c) + '%' : 'Sin empezar'}</span>
+          </div>
+        </div>
+      </button>`).join('')
+    : `<div class="empty">No hay cursos con ese tema. Probá con otra palabra o elegí un área.</div>`;
+
+  const ultimo = C.filter(c => done(c) && pct(c) < 100).sort((a, b) => pct(b) - pct(a))[0];
+  $('#cont').innerHTML = ultimo
+    ? `<h2 class="sec">Continuá tu curso</h2>
+       <button class="cont" data-id="${ultimo.id}">
+         <b>${ultimo.t}</b>
+         <span class="bar" style="--c:${A[ultimo.a][1]}"><u style="width:${pct(ultimo)}%"></u></span>
+         <span>${pct(ultimo)}%</span>
+       </button>`
+    : '';
+}
+
+/* ==================== PANEL DE CURSO ==================== */
+function open(id){
+  const c = C.find(x => x.id === id);
+  const col = A[c.a][1];
+  const marcadas = P[c.id] || [];
+
+  $('#panel').style.setProperty('--c', col);
+  $('#panel').innerHTML = `
+    <div class="ph">
+      <button class="x" aria-label="Cerrar" data-x>×</button>
+      <span class="eyebrow">${A[c.a][0]} · ${c.n}</span>
+      <h2>${c.t}</h2>
+      <p>${c.d}</p>
+      <div class="bar" style="margin-top:14px"><u style="width:${pct(c)}%"></u></div>
+    </div>
+    <div class="pb">
+      <h3>Lecciones</h3>
+      ${c.l.map((l, k) => `
+        <label class="les ${marcadas.includes(k) ? 'done' : ''}">
+          <input type="checkbox" data-id="${c.id}" data-k="${k}" ${marcadas.includes(k) ? 'checked' : ''}>
+          <span>${l}</span>
+        </label>`).join('')}
+      <h3>Lo esencial</h3>
+      ${c.i.map(t => `<div class="idea">${t}</div>`).join('')}
+      <button class="btn" data-all="${c.id}">
+        ${pct(c) === 100 ? 'Reiniciar curso' : 'Marcar curso completo'}
+      </button>
+    </div>`;
+
+  document.body.classList.add('open');
+  $('#panel').scrollTop = 0;
+  $('#panel .x').focus();
+}
+
+function close(){ document.body.classList.remove('open'); }
+
+/* ==================== ACCIONES ==================== */
+function toggleArea(k){
+  if (openArea === k){ openArea = null; cur = 'all'; }
+  else { openArea = k; cur = k; }
+  refresh();
+}
+
+function refresh(){ stats(); syncNav(); cards(); }
+
+/* ==================== EVENTOS ==================== */
+document.addEventListener('click', e => {
+  if (e.target.matches('input[type="checkbox"]')) return;
+
+  const head = e.target.closest('[data-head]');
+  if (head){ toggleArea(head.dataset.head); return; }
+
+  if (e.target.closest('[data-x]')){ close(); return; }
+
+  const k = e.target.closest('[data-k]');
+  if (k){
+    cur = k.dataset.k;
+    openArea = cur === 'all' ? null : cur;
+    refresh();
+    return;
+  }
+
+  const allBtn = e.target.closest('[data-all]');
+  if (allBtn){
+    const c = C.find(x => x.id === allBtn.dataset.all);
+    P[c.id] = pct(c) === 100 ? [] : c.l.map((_, i) => i);
+    save(); refresh(); open(c.id);
+    return;
+  }
+
+  const item = e.target.closest('[data-id]');
+  if (item){ open(item.dataset.id); }
+});
+
+document.addEventListener('change', e => {
+  const t = e.target;
+  if (t.type !== 'checkbox') return;
+  const arr = P[t.dataset.id] || [];
+  const k = +t.dataset.k;
+  P[t.dataset.id] = t.checked ? [...new Set([...arr, k])] : arr.filter(x => x !== k);
+  save(); refresh(); open(t.dataset.id);
+});
+
+$('#shade').onclick = close;
+document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+$('#q').addEventListener('input', e => { qs = e.target.value; cards(); });
+
+/* ==================== INICIO ==================== */
+buildNav();
+buildChips();
+refresh();
+</script>
+</body>
+</html>
