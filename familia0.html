@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Procesos de familia en simple: resumen gráfico de los arts. 705 a 723 del CCyC</title>
+<meta name="description" content="Resumen gráfico y en lenguaje sencillo del Título VIII, Procesos de familia (arts. 705 a 723) del Código Civil y Comercial comentado, Tomo II.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500..800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F2F5F9;--surface:#fff;--ink:#1C2230;--muted:#586075;--line:#DCE2EC;--on:#fff;
+--c1:#2563C9;--c2:#0F7B63;--c3:#B8480E;--c4:#7B3FC7;--c5:#B5205A;--c6:#0E7490;
+--fd:"Fraunces",Georgia,"Times New Roman",serif;--fb:"Source Sans 3",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--r:16px}
+@media (prefers-color-scheme:dark){:root{--paper:#12151D;--surface:#1A1F2B;--ink:#ECEEF4;--muted:#A7AEC0;--line:#2B3242;--on:#12151D;
+--c1:#7DB0FF;--c2:#55D3B2;--c3:#FFA169;--c4:#BE9BFF;--c5:#FF8DB4;--c6:#5CD0EE}}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:1.0625rem/1.65 var(--fb);-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--fd);margin:0;line-height:1.1;letter-spacing:-.015em;text-wrap:balance}
+p{margin:0 0 1em}
+:focus-visible{outline:3px solid var(--c1);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:var(--paper);padding:10px 16px;border-radius:10px;z-index:50}
+.skip:focus{left:12px}
+.s1{--ac:var(--c1)}.s2{--ac:var(--c2)}.s3{--ac:var(--c3)}.s4{--ac:var(--c4)}.s5{--ac:var(--c5)}.s6{--ac:var(--c6)}
+.s1,.s2,.s3,.s4,.s5,.s6{--t:color-mix(in srgb,var(--ac) 13%,var(--surface));--d:color-mix(in srgb,var(--ac) 78%,var(--ink))}
+.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 90%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top-in{max-width:1120px;margin:0 auto;display:flex;align-items:center;gap:18px;padding:10px 24px}
+.brand{font-family:var(--fd);font-weight:700;white-space:nowrap}
+.nav{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav a{display:inline-flex;align-items:center;gap:8px;padding:7px 13px;border-radius:999px;color:var(--muted);text-decoration:none;font-weight:600;font-size:.92rem;white-space:nowrap}
+.nav a:hover{color:var(--ink);background:var(--surface)}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--ac)}
+.hero{padding:56px 0 40px}
+.kicker{color:var(--muted);font-size:.95rem;font-weight:600;max-width:60ch;margin-bottom:18px}
+h1{font-weight:800;font-size:clamp(2.2rem,5.4vw,4rem);line-height:1.02;letter-spacing:-.03em;max-width:18ch;margin-bottom:22px}
+.lead{font-size:1.18rem;max-width:62ch;color:var(--muted)}
+.lead strong{color:var(--ink)}
+.stats{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 0;padding:0;list-style:none}
+.stats li{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px 18px;font-size:.95rem}
+.stats b{font-family:var(--fd);font-size:1.5rem;margin-right:6px}
+.band{padding:64px 0}
+.band.alt{background:var(--surface);border-block:1px solid var(--line)}
+.sec{font-weight:800;font-size:clamp(1.7rem,3.4vw,2.5rem);letter-spacing:-.025em;margin-bottom:10px}
+.sub{color:var(--muted);max-width:64ch;margin-bottom:30px}
+.route{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.route.four{grid-template-columns:repeat(4,1fr)}
+.route a,.route .t{display:flex;flex-direction:column;gap:6px;height:100%;padding:18px;border-radius:var(--r);background:var(--ac);color:var(--on);text-decoration:none}
+.route a:hover{transform:translateY(-2px)}
+.route .k{font-size:.82rem;font-weight:700;opacity:.9}
+.route h3{font-size:1.15rem;color:inherit}
+.route p{margin:0;font-size:.9rem;line-height:1.45;opacity:.95}
+/* gráficos */
+.flow{list-style:none;margin:0;padding:0;display:flex;gap:0;align-items:stretch}
+.flow li{flex:1;position:relative;background:var(--t);border:2px solid var(--ac);border-radius:var(--r);padding:16px 18px;margin-right:34px}
+.flow li:last-child{margin-right:0}
+.flow li:not(:last-child)::after{content:"";position:absolute;right:-30px;top:50%;width:26px;height:26px;margin-top:-13px;background:var(--ac);clip-path:polygon(0 25%,55% 25%,55% 0,100% 50%,55% 100%,55% 75%,0 75%)}
+.flow b{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--ac);color:var(--on);font-family:var(--fd);margin-bottom:8px}
+.flow h3{font-size:1.05rem;margin-bottom:4px;color:var(--d)}
+.flow p{margin:0;font-size:.92rem;line-height:1.5}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.box{border-radius:var(--r);padding:22px 24px;background:var(--t);border:2px solid var(--ac)}
+.box h3{color:var(--d);font-size:1.3rem;margin-bottom:12px}
+.box ul{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.box li{padding:5px 14px;border-radius:999px;background:var(--ac);color:var(--on);font-weight:600;font-size:.92rem}
+.box p{margin:12px 0 0;font-size:.97rem}
+.cmp{width:100%;border-collapse:separate;border-spacing:0;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.cmp th,.cmp td{padding:14px 20px;text-align:left;vertical-align:top;border-top:1px solid var(--line);font-size:.98rem;line-height:1.55}
+.cmp thead th{border-top:0;font-family:var(--fd);font-size:1.1rem;color:var(--on);background:var(--c3)}
+.cmp tbody th{width:26%;font-size:.98rem}
+.cmp td.hl{background:color-mix(in srgb,var(--c3) 10%,var(--surface));font-weight:600}
+.scroll{overflow-x:auto}
+/* buscador */
+.tools{position:sticky;top:57px;z-index:15;background:var(--paper);padding:14px 0;border-bottom:1px solid var(--line)}
+.tools .wrap{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.tools input{flex:1 1 260px;font:inherit;padding:11px 16px;border-radius:12px;border:2px solid var(--line);background:var(--surface);color:var(--ink)}
+.tools input:focus{border-color:var(--c1);outline:0}
+.count{color:var(--muted);font-size:.9rem}
+/* capítulos */
+.art-head{display:grid;grid-template-columns:auto 1fr;gap:4px 28px;align-items:end;margin-bottom:30px}
+.numeral{grid-row:span 2;font-family:var(--fd);font-weight:800;font-size:clamp(4.5rem,11vw,8rem);line-height:.8;letter-spacing:-.05em;color:var(--ac)}
+.art-head h2{font-weight:800;font-size:clamp(1.8rem,3.6vw,2.7rem);letter-spacing:-.025em}
+.tagline{color:var(--muted);font-size:1.1rem;max-width:56ch;margin:0}
+.rng{display:inline-block;margin-top:8px;font-size:.88rem;font-weight:700;color:var(--d);background:var(--t);border-radius:999px;padding:2px 12px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-top:6px solid var(--ac);border-radius:var(--r);padding:22px 24px;display:flex;flex-direction:column;gap:12px}
+.alt .card{background:var(--paper)}
+.card .hd{display:flex;align-items:center;gap:14px}
+.n{flex:none;min-width:56px;text-align:center;padding:6px 10px;border-radius:12px;background:var(--ac);color:var(--on);font-family:var(--fd);font-weight:800;font-size:1.35rem}
+.card h3{font-size:1.25rem;line-height:1.2}
+.card p{margin:0;font-size:.99rem;line-height:1.6}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}
+.chips span{padding:4px 12px;border-radius:999px;background:var(--t);color:var(--d);font-weight:600;font-size:.85rem;line-height:1.35}
+.empty{display:none;color:var(--muted);padding:24px 0}
+.take{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 40px}
+.take li{display:grid;grid-template-columns:40px 1fr;gap:14px;align-items:start}
+.take li::before{content:"✓";width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--ink);color:var(--paper);font-family:var(--fd);font-weight:800}
+.foot{padding:48px 0 64px;color:var(--muted);font-size:.92rem}
+.foot p{max-width:80ch}
+@media (max-width:960px){.route,.route.four{grid-template-columns:repeat(2,1fr)}.grid,.take,.duo{grid-template-columns:1fr}.flow{flex-direction:column;gap:34px}.flow li{margin-right:0}.flow li:not(:last-child)::after{right:auto;left:50%;top:auto;bottom:-30px;margin:0 0 0 -13px;transform:rotate(90deg)}}
+@media (max-width:760px){.band{padding:48px 0}.brand{display:none}.wrap,.top-in{padding-inline:18px}.route,.route.four{grid-template-columns:1fr}.art-head{grid-template-columns:1fr}.numeral{grid-row:auto}.cmp{min-width:640px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+@media print{.top,.tools,.skip{display:none}body{background:#fff}.band{padding:24px 0}.card{break-inside:avoid}}
+</style>
+</head>
+<body>
+<a class="skip" href="#panorama">Saltar al contenido</a>
+<header class="top"><div class="top-in">
+  <div class="brand">Procesos de familia, en simple</div>
+  <nav class="nav" aria-label="Secciones de la página">
+    <a href="#panorama">Panorama</a>
+    <a class="s1" href="#p1"><i class="dot"></i>Disposiciones generales</a>
+    <a class="s2" href="#p2"><i class="dot"></i>Acciones de estado</a>
+    <a class="s3" href="#p3"><i class="dot"></i>Competencia</a>
+    <a class="s4" href="#p4"><i class="dot"></i>Medidas provisionales</a>
+    <a href="#esencial">Lo esencial</a>
+  </nav>
+</div></header>
+
+<main>
+<section id="panorama">
+  <div class="hero"><div class="wrap">
+    <p class="kicker">Código Civil y Comercial de la Nación comentado, Tomo II. Libro Segundo: Relaciones de familia. Título VIII: Procesos de familia</p>
+    <h1>En un juicio de familia, el juez escucha, acompaña y protege.</h1>
+    <p class="lead">Resumen gráfico, en lenguaje sencillo, del <strong>Título VIII: Procesos de familia</strong> (arts. 705 a 723). Responde: <strong>¿qué reglas especiales tienen estos juicios?</strong>, <strong>¿ante qué juez se presentan?</strong> y <strong>¿qué puede ordenar el juez con urgencia mientras dura el trámite?</strong></p>
+    <ul class="stats"><li><b>19</b>artículos</li><li><b>4</b>capítulos</li><li><b>6</b>principios que guían todo el proceso (art. 706)</li></ul>
+  </div></div>
+
+  <div class="band alt"><div class="wrap">
+    <h2 class="sec">El recorrido del título</h2>
+    <p class="sub">Cuatro capítulos: las reglas generales, las acciones sobre el estado de familia, el juez competente y las medidas urgentes. Tocá uno para ir a sus artículos.</p>
+    <ol class="route four">
+      <li class="s1"><a href="#p1"><span class="k">Arts. 705 a 711</span><h3>Disposiciones generales</h3><p>Principios, derecho a ser oído, reserva del expediente y prueba.</p></a></li>
+      <li class="s2"><a href="#p2"><span class="k">Arts. 712 a 715</span><h3>Acciones de estado de familia</h3><p>Las acciones sobre el lugar que cada uno ocupa en la familia.</p></a></li>
+      <li class="s3"><a href="#p3"><span class="k">Arts. 716 a 720</span><h3>Reglas de competencia</h3><p>Qué juez interviene según el tipo de conflicto.</p></a></li>
+      <li class="s4"><a href="#p4"><span class="k">Arts. 721 a 723</span><h3>Medidas provisionales</h3><p>Decisiones urgentes sobre personas y bienes durante el juicio.</p></a></li>
+    </ol>
+  </div></div>
+
+  <div class="band"><div class="wrap">
+    <h2 class="sec">Los seis principios del proceso de familia</h2>
+    <p class="sub">El artículo 706 los enumera sin jerarquía entre ellos: ninguno vale más que otro. Si en un caso se prioriza uno, los demás no desaparecen.</p>
+    <ol class="route">
+      <li class="s1"><div class="t"><span class="k">1</span><h3>Tutela judicial efectiva</h3><p>Acceso real a la justicia y una sentencia que se cumpla, en tiempo útil.</p></div></li>
+      <li class="s2"><div class="t"><span class="k">2</span><h3>Inmediación</h3><p>El juez tiene contacto directo y personal con las personas.</p></div></li>
+      <li class="s3"><div class="t"><span class="k">3</span><h3>Buena fe y lealtad</h3><p>Las partes dicen la verdad y no usan el juicio para trabar o dilatar.</p></div></li>
+      <li class="s4"><div class="t"><span class="k">4</span><h3>Oficiosidad</h3><p>El juez impulsa el trámite y puede ordenar pruebas por sí mismo.</p></div></li>
+      <li class="s5"><div class="t"><span class="k">5</span><h3>Oralidad</h3><p>Se trabaja en audiencias, hablando cara a cara.</p></div></li>
+      <li class="s6"><div class="t"><span class="k">6</span><h3>Acceso limitado al expediente</h3><p>Solo lo ven las partes y quienes intervienen. Protege la intimidad.</p></div></li>
+    </ol>
+  </div></div>
+
+  <div class="band alt"><div class="wrap">
+    <h2 class="sec">Estado de familia vs. derechos de dinero</h2>
+    <p class="sub">Las acciones sobre el estado de familia (ser hijo, estar casado, etc.) tienen reglas especiales. Los derechos de dinero que derivan de ese estado no (arts. 712 y 713).</p>
+    <div class="duo">
+      <div class="box s2"><h3>Acciones de estado</h3><ul><li>No se renuncian</li><li>No prescriben</li><li>Son personales</li><li>No se transmiten por herencia (salvo que la ley lo diga)</li></ul><p>Solo se extinguen en los casos y formas que la ley establece.</p></div>
+      <div class="box s3"><h3>Derechos patrimoniales derivados</h3><ul><li>Sí prescriben</li></ul><p>Los derechos económicos que nacen del estado de familia pueden perderse por el paso del tiempo.</p></div>
+    </div>
+  </div></div>
+
+  <div class="band"><div class="wrap">
+    <h2 class="sec">¿Ante qué juez se presenta cada caso?</h2>
+    <p class="sub">El Código fija el juez competente según el tipo de conflicto (arts. 716 a 720). En casi todos los casos, elige quien demanda.</p>
+    <div class="scroll"><table class="cmp">
+      <thead><tr><th scope="col">Tipo de caso</th><th scope="col">Juez competente</th><th scope="col">Art.</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Derechos de niños, niñas y adolescentes</th><td class="hl">El del lugar donde la persona menor de edad tiene su centro de vida.</td><td>716</td></tr>
+        <tr><th scope="row">Divorcio o nulidad de matrimonio</th><td>El del último domicilio conyugal o el del demandado, a elección de quien demanda. Si piden juntos, el de cualquiera de los cónyuges.</td><td>717</td></tr>
+        <tr><th scope="row">Uniones convivenciales</th><td>El del último domicilio convivencial o el del demandado, a elección de quien demanda.</td><td>718</td></tr>
+        <tr><th scope="row">Alimentos o pensiones compensatorias entre cónyuges o convivientes</th><td>El del último domicilio conyugal o convivencial, el del beneficiario, el del demandado o el del lugar donde deba cumplirse la obligación, a elección de quien demanda.</td><td>719</td></tr>
+        <tr><th scope="row">Filiación</th><td>El del domicilio del demandado, salvo que quien demande sea menor de edad o tenga capacidad restringida.</td><td>720</td></tr>
+      </tbody>
+    </table></div>
+  </div></div>
+
+  <div class="band alt"><div class="wrap">
+    <h2 class="sec">Medidas urgentes en el divorcio o la nulidad</h2>
+    <p class="sub">Mientras el juicio avanza, el juez puede tomar decisiones provisionales sobre las personas (art. 721) y sobre los bienes (art. 722). Se aplican también a las uniones convivenciales (art. 723).</p>
+    <ol class="flow">
+      <li class="s4"><b>1</b><h3>Hay urgencia</h3><p>Se pueden pedir incluso antes de presentar la demanda.</p></li>
+      <li class="s4"><b>2</b><h3>Se presenta la acción</h3><p>Divorcio o nulidad de matrimonio.</p></li>
+      <li class="s4"><b>3</b><h3>El juez ordena medidas</h3><p>Vivienda, alimentos, cuidado de los hijos, resguardo de bienes.</p></li>
+      <li class="s4"><b>4</b><h3>Con plazo</h3><p>Las medidas sobre bienes deben fijar cuánto duran.</p></li>
+    </ol>
+  </div></div>
+</section>
+
+<div class="tools"><div class="wrap">
+  <label class="sr-only" for="q">Buscar en los artículos</label>
+  <input id="q" type="search" placeholder="Buscar: oficiosidad, centro de vida, testigos, art. 716…" autocomplete="off">
+  <span class="count" id="cnt" aria-live="polite"></span>
+</div></div>
+
+<div id="arts"></div>
+<p class="empty wrap" id="none">No hay artículos que coincidan con la búsqueda.</p>
+
+<section id="esencial" class="band alt"><div class="wrap">
+  <h2 class="sec">Lo esencial en seis ideas</h2>
+  <p class="sub">Si solo te quedás con esto, ya tenés el esquema del título.</p>
+  <ol class="take">
+    <li><span><strong>Reglas propias:</strong> los juicios de familia se guían por principios especiales y se tramitan ante jueces especializados con apoyo de equipos multidisciplinarios (arts. 705 y 706).</span></li>
+    <li><span><strong>Niños y personas con capacidad restringida</strong> tienen derecho a ser oídos y su opinión se valora según su discernimiento (art. 707).</span></li>
+    <li><span><strong>El expediente es reservado:</strong> solo acceden las partes, sus abogados y los auxiliares designados (art. 708).</span></li>
+    <li><span><strong>El juez impulsa el trámite,</strong> la prueba es amplia y flexible, y pesa más sobre quien está en mejores condiciones de probar (arts. 709 y 710).</span></li>
+    <li><span><strong>Las acciones de estado</strong> no se renuncian ni prescriben, y ningún matrimonio es nulo sin sentencia (arts. 712 a 715).</span></li>
+    <li><span><strong>Para los niños, el juez es el de su centro de vida;</strong> y ante la urgencia, el juez puede ordenar medidas provisionales (arts. 716 y 721 a 723).</span></li>
+  </ol>
+</div></section>
+</main>
+
+<footer class="foot"><div class="wrap">
+  <p><strong>Fuente:</strong> Código Civil y Comercial de la Nación comentado, Tomo II (Infojus - SAIJ), Título VIII: Procesos de familia, arts. 705 a 723.</p>
+  <p>Resumen didáctico en lenguaje sencillo. No reemplaza el texto de la ley ni el asesoramiento profesional: para citar o litigar, consultá el artículo completo.</p>
+</div></footer>
+
+<script>
+const P=[
+{id:1,t:"Disposiciones generales",r:"Arts. 705 a 711",g:"Las reglas básicas que valen para todos los procesos de familia.",a:[
+[705,"Ámbito de aplicación","Las reglas de este título se aplican a los procesos en materia de familia, sin perjuicio de lo que la ley disponga para casos específicos (por ejemplo, las leyes sobre violencia familiar o protección de niños).",["Se aplica a todo juicio de familia","Leyes especiales siguen vigentes"]],
+[706,"Principios generales","El proceso respeta seis principios: tutela judicial efectiva, inmediación, buena fe y lealtad, oficiosidad, oralidad y acceso limitado al expediente. Además, se debe facilitar el acceso a la justicia (en especial de personas vulnerables) y la solución pacífica de los conflictos; los jueces deben ser especializados y contar con apoyo multidisciplinario; y si hay niños o adolescentes, se prioriza su interés superior.",["6 principios","Jueces especializados","Interés superior del niño"]],
+[707,"Participación de niños y personas con capacidad restringida","Los niños, niñas y adolescentes, y las personas mayores con capacidad restringida, tienen derecho a ser oídos en todos los procesos que los afectan directamente. Su opinión se tiene en cuenta según su grado de discernimiento y el tema que se discute.",["Derecho a ser oído","Según su discernimiento"]],
+[708,"Acceso limitado al expediente","Solo pueden ver el expediente las partes, sus representantes y abogados, y los auxiliares designados. Si otro juzgado lo pide como prueba, se envía si la finalidad lo justifica y se garantiza su reserva.",["Intimidad protegida","Excepción: prueba en otro juzgado"]],
+[709,"Principio de oficiosidad","El impulso del proceso está a cargo del juez, que puede ordenar pruebas por su cuenta. No se aplica en asuntos exclusivamente económicos entre personas capaces.",["El juez impulsa","Prueba de oficio","No en temas solo económicos"]],
+[710,"Principios relativos a la prueba","La prueba es libre, amplia y flexible. La carga de probar recae, en definitiva, en quien está en mejores condiciones de hacerlo.",["Libertad de prueba","Quien puede probar mejor"]],
+[711,"Testigos","Los parientes y allegados de las partes pueden ser ofrecidos como testigos. El juez puede no admitir la declaración de menores de edad, ni la de parientes que se niegan a declarar por motivos fundados.",["Parientes y allegados","El juez puede no admitirlos"]]]},
+{id:2,t:"Acciones de estado de familia",r:"Arts. 712 a 715",g:"Las acciones que afirman, cambian o extinguen el lugar de una persona en la familia.",a:[
+[712,"Irrenunciabilidad e imprescriptibilidad","Las acciones de estado de familia no se pueden renunciar y no prescriben, salvo que la ley establezca su extinción. En cambio, los derechos patrimoniales que derivan del estado de familia sí prescriben.",["No se renuncian","No prescriben","Lo patrimonial sí prescribe"]],
+[713,"Inherencia personal","Estas acciones son personales: solo las ejerce su titular y no pueden ejercerse por subrogación (otra persona en su lugar). Se transmiten por causa de muerte únicamente en los casos que la ley establece.",["Solo el titular","No por subrogación"]],
+[714,"Caducidad de la nulidad del matrimonio por muerte de un cónyuge","Después de la muerte de un cónyuge ya no se puede pedir la nulidad del matrimonio, salvo tres excepciones: (a) un cónyuge contra el siguiente matrimonio de su pareja; (b) el cónyuge sobreviviente que se casó ignorando que el vínculo anterior seguía vigente; (c) cuando sea necesaria para determinar el derecho del demandante y la nulidad absoluta la invoquen descendientes o ascendientes. Si la pide el Ministerio Público, solo puede hacerlo en vida de ambos esposos.",["Regla: ya no se puede","3 excepciones","Ministerio Público: en vida de ambos"]],
+[715,"Sentencia de nulidad","Ningún matrimonio puede considerarse nulo sin una sentencia que lo anule, dictada en un proceso iniciado por una parte legitimada.",["Sin sentencia, no hay nulidad"]]]},
+{id:3,t:"Reglas de competencia",r:"Arts. 716 a 720",g:"Qué juez interviene según el tipo de conflicto familiar.",a:[
+[716,"Derechos de niños, niñas y adolescentes","En los procesos sobre responsabilidad parental, guarda, cuidado, comunicación, alimentos, adopción y otros que decidan sobre derechos de niños o modifiquen lo resuelto en otra jurisdicción, es competente el juez del lugar donde el niño tiene su centro de vida: donde pasó legítimamente la mayor parte de su existencia.",["Centro de vida","Interés superior del niño"]],
+[717,"Divorcio y nulidad del matrimonio","Para el divorcio, la nulidad y las acciones conexas o sobre los efectos de la sentencia, es competente el juez del último domicilio conyugal o el del demandado, a elección de quien demanda; o el de cualquiera de los cónyuges si piden juntos. Si uno de los cónyuges está en concurso o quiebra, la liquidación del régimen patrimonial la hace el juez del proceso colectivo.",["Elige quien demanda","Presentación conjunta","Concurso o quiebra"]],
+[718,"Uniones convivenciales","En los conflictos derivados de las uniones convivenciales, es competente el juez del último domicilio convivencial o el del demandado, a elección de quien demanda.",["Último domicilio convivencial","O el del demandado"]],
+[719,"Alimentos y pensiones compensatorias entre cónyuges o convivientes","A elección de quien demanda, puede intervenir el juez del último domicilio conyugal o convivencial, del domicilio del beneficiario, del demandado o del lugar donde deba cumplirse la obligación alimentaria.",["4 opciones","Elige quien demanda"]],
+[720,"Acción de filiación","La regla es el juez del domicilio del demandado. La excepción es cuando quien demanda es una persona menor de edad o con capacidad restringida (ver el art. 716).",["Regla: domicilio del demandado","Excepción: menores y capacidad restringida"]]]},
+{id:4,t:"Medidas provisionales",r:"Arts. 721 a 723",g:"Decisiones urgentes del juez mientras dura el divorcio o la nulidad.",a:[
+[721,"Medidas sobre las personas","Una vez iniciada la acción de nulidad o de divorcio, o antes si hay urgencia, el juez puede regular las relaciones personales entre los cónyuges y con los hijos durante el proceso. Por ejemplo: decidir quién sigue usando la vivienda familiar (con inventario de lo que retira quien se va), fijar una renta por el uso exclusivo de la vivienda, ordenar la entrega de objetos personales, y disponer alimentos y cuidado de los hijos y alimentos para el cónyuge.",["Vivienda familiar","Alimentos","Cuidado de los hijos","Antes de demandar si hay urgencia"]],
+[722,"Medidas sobre los bienes","A pedido de parte, y también antes de la demanda si hay urgencia, el juez debe disponer medidas de seguridad para evitar que la administración o disposición de bienes por uno de los cónyuges ponga en peligro o defraude los derechos patrimoniales del otro, cualquiera sea el régimen patrimonial. También puede ordenar medidas para individualizar bienes o derechos de los cónyuges. La decisión debe fijar un plazo de duración.",["Evitar fraude","Buscar bienes","Con plazo de duración"]],
+[723,"Ámbito de aplicación","Las medidas de los arts. 721 y 722 también se aplican a las uniones convivenciales, en cuanto sea pertinente.",["Se extiende a convivientes"]]]}
+];
+const root=document.getElementById("arts");
+root.innerHTML=P.map((p,i)=>`<section id="p${p.id}" class="band s${p.id}${i%2?"":" alt"}"><div class="wrap">
+<div class="art-head"><div class="numeral" aria-hidden="true">${p.id}</div><h2>${p.t}</h2><p class="tagline">${p.g}<br><span class="rng">${p.r}</span></p></div>
+<div class="grid">${p.a.map(a=>`<article class="card" id="art${a[0]}" data-t="${(a[0]+" "+a[1]+" "+a[2]+" "+a[3].join(" ")).toLowerCase()}"><div class="hd"><span class="n">${a[0]}</span><h3>${a[1]}</h3></div><p>${a[2]}</p><div class="chips">${a[3].map(c=>`<span>${c}</span>`).join("")}</div></article>`).join("")}</div></div></section>`).join("");
+const q=document.getElementById("q"),cnt=document.getElementById("cnt"),none=document.getElementById("none");
+function f(){const v=q.value.trim().toLowerCase().replace(/^art\.?\s*/,"");let tot=0;
+document.querySelectorAll("#arts section").forEach(s=>{let n=0;s.querySelectorAll(".card").forEach(c=>{const ok=!v||c.dataset.t.includes(v);c.style.display=ok?"":"none";if(ok)n++});s.style.display=n?"":"none";tot+=n});
+cnt.textContent=tot+" de 19 artículos";none.style.display=tot?"none":"block"}
+q.addEventListener("input",f);f();
+</script>
+</body>
+</html>
