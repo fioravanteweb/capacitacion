@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Procesos de Ejecución en Misiones (Arts. 467 a 575) explicado en simple</title>
+<meta name="description" content="Guía gráfica y en lenguaje sencillo de los Procesos de Ejecución del Código Procesal de Misiones: ejecución de sentencias, juicio ejecutivo y ejecuciones especiales.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500..800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F2F5F9;--surface:#fff;--ink:#1C2230;--muted:#586075;--line:#DCE2EC;--on:#fff;
+--c1:#2563C9;--c2:#0F7B63;--c3:#B8480E;--c4:#7B3FC7;--c5:#B5205A;--c6:#0E7490;
+--fd:"Fraunces",Georgia,"Times New Roman",serif;--fb:"Source Sans 3",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--r:16px}
+@media (prefers-color-scheme:dark){:root{--paper:#12151D;--surface:#1A1F2B;--ink:#ECEEF4;--muted:#A7AEC0;--line:#2B3242;--on:#12151D;
+--c1:#7DB0FF;--c2:#55D3B2;--c3:#FFA169;--c4:#BE9BFF;--c5:#FF8DB4;--c6:#5CD0EE}}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:1.0625rem/1.65 var(--fb);-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--fd);margin:0;line-height:1.1;letter-spacing:-.015em;text-wrap:balance}
+p{margin:0 0 1em}
+:focus-visible{outline:3px solid var(--c1);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:var(--paper);padding:10px 16px;border-radius:10px;z-index:50}
+.skip:focus{left:12px}
+.s1{--ac:var(--c1)}.s2{--ac:var(--c2)}.s3{--ac:var(--c3)}.s4{--ac:var(--c4)}.s5{--ac:var(--c5)}.s6{--ac:var(--c6)}
+.s1,.s2,.s3,.s4,.s5,.s6{--t:color-mix(in srgb,var(--ac) 13%,var(--surface));--d:color-mix(in srgb,var(--ac) 78%,var(--ink))}
+.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 90%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+.top-in{max-width:1120px;margin:0 auto;display:flex;align-items:center;gap:18px;padding:10px 24px}
+.brand{font-family:var(--fd);font-weight:700;white-space:nowrap}
+.nav{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav a{display:inline-flex;align-items:center;gap:8px;padding:7px 13px;border-radius:999px;color:var(--muted);text-decoration:none;font-weight:600;font-size:.92rem;white-space:nowrap}
+.nav a:hover{color:var(--ink);background:var(--surface)}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--ac)}
+.hero{padding:56px 0 40px}
+.kicker{color:var(--muted);font-size:.95rem;font-weight:600;max-width:64ch;margin-bottom:18px}
+h1{font-weight:800;font-size:clamp(2.2rem,5.4vw,4rem);line-height:1.02;letter-spacing:-.03em;max-width:20ch;margin-bottom:22px}
+.lead{font-size:1.18rem;max-width:62ch;color:var(--muted)}
+.lead strong{color:var(--ink)}
+.stats{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 0;padding:0;list-style:none}
+.stats li{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px 18px;font-size:.95rem}
+.stats b{font-family:var(--fd);font-size:1.5rem;margin-right:6px}
+.band{padding:64px 0}
+.band.alt{background:var(--surface);border-block:1px solid var(--line)}
+.sec{font-weight:800;font-size:clamp(1.7rem,3.4vw,2.5rem);letter-spacing:-.025em;margin-bottom:10px}
+.sub{color:var(--muted);max-width:64ch;margin-bottom:30px}
+.route{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px}
+.route.four{grid-template-columns:repeat(3,1fr)}
+.route a,.route .t{display:flex;flex-direction:column;gap:6px;height:100%;padding:18px;border-radius:var(--r);background:var(--ac);color:var(--on);text-decoration:none}
+.route a:hover{transform:translateY(-2px)}
+.route .k{font-size:.82rem;font-weight:700;opacity:.9}
+.route h3{font-size:1.15rem;color:inherit}
+.route p{margin:0;font-size:.9rem;line-height:1.45;opacity:.95}
+.flow{list-style:none;margin:0;padding:0;display:flex;align-items:stretch}
+.flow li{flex:1;position:relative;background:var(--t);border:2px solid var(--ac);border-radius:var(--r);padding:16px 18px;margin-right:34px}
+.flow li:last-child{margin-right:0}
+.flow li:not(:last-child)::after{content:"";position:absolute;right:-30px;top:50%;width:26px;height:26px;margin-top:-13px;background:var(--ac);clip-path:polygon(0 25%,55% 25%,55% 0,100% 50%,55% 100%,55% 75%,0 75%)}
+.flow b{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--ac);color:var(--on);font-family:var(--fd);margin-bottom:8px}
+.flow h3{font-size:1.05rem;margin-bottom:4px;color:var(--d)}
+.flow p{margin:0;font-size:.92rem;line-height:1.5}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.box{border-radius:var(--r);padding:22px 24px;background:var(--t);border:2px solid var(--ac)}
+.box h3{color:var(--d);font-size:1.3rem;margin-bottom:12px}
+.box ul{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.box li{padding:5px 14px;border-radius:999px;background:var(--ac);color:var(--on);font-weight:600;font-size:.92rem}
+.box p{margin:12px 0 0;font-size:.97rem}
+.cmp{width:100%;border-collapse:separate;border-spacing:0;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.cmp th,.cmp td{padding:14px 20px;text-align:left;vertical-align:top;border-top:1px solid var(--line);font-size:.98rem;line-height:1.55}
+.cmp thead th{border-top:0;font-family:var(--fd);font-size:1.1rem;color:var(--on);background:var(--c3)}
+.cmp tbody th{width:30%}
+.cmp td.hl{background:color-mix(in srgb,var(--c3) 10%,var(--surface));font-weight:600}
+.scroll{overflow-x:auto}
+.art-head{display:grid;grid-template-columns:auto 1fr;gap:4px 28px;align-items:end;margin-bottom:30px}
+.numeral{grid-row:span 2;font-family:var(--fd);font-weight:800;font-size:clamp(4.5rem,11vw,8rem);line-height:.8;letter-spacing:-.05em;color:var(--ac)}
+.art-head h2{font-weight:800;font-size:clamp(1.8rem,3.6vw,2.7rem);letter-spacing:-.025em}
+.tagline{color:var(--muted);font-size:1.1rem;max-width:56ch;margin:0}
+.rng{display:inline-block;margin-top:8px;font-size:.88rem;font-weight:700;color:var(--d);background:var(--t);border-radius:999px;padding:2px 12px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-top:6px solid var(--ac);border-radius:var(--r);padding:22px 24px;display:flex;flex-direction:column;gap:12px}
+.alt .card{background:var(--paper)}
+.card .hd{display:flex;align-items:center;gap:14px}
+.n{flex:none;min-width:56px;text-align:center;padding:6px 10px;border-radius:12px;background:var(--ac);color:var(--on);font-family:var(--fd);font-weight:800;font-size:1.35rem}
+.card h3{font-size:1.25rem;line-height:1.2}
+.card p{margin:0;font-size:.99rem;line-height:1.6}
+.take{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 40px}
+.take li{display:grid;grid-template-columns:40px 1fr;gap:14px;align-items:start}
+.take li::before{content:"✓";width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--ink);color:var(--paper);font-family:var(--fd);font-weight:800}
+.foot{padding:48px 0 calc(64px + env(safe-area-inset-bottom,0px));color:var(--muted);font-size:.92rem}
+.foot p{max-width:80ch}
+@media (max-width:960px){.route.four{grid-template-columns:repeat(2,1fr)}.grid,.take,.duo{grid-template-columns:1fr}.flow{flex-direction:column;gap:34px}.flow li{margin-right:0}.flow li:not(:last-child)::after{right:auto;left:50%;top:auto;bottom:-30px;margin:0 0 0 -13px;transform:rotate(90deg)}}
+@media (max-width:760px){.band{padding:48px 0}.brand{display:none}.wrap,.top-in{padding-inline:18px}.route,.route.four{grid-template-columns:1fr}.art-head{grid-template-columns:1fr}.numeral{grid-row:auto}.cmp{min-width:560px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+@media print{.top,.skip{display:none}body{background:#fff}.band{padding:24px 0}.card{break-inside:avoid}}
+.n{white-space:nowrap;font-size:1rem}
+</style>
+</head>
+<body>
+<a class="skip" href="#panorama">Saltar al contenido</a>
+<header class="top"><div class="top-in">
+  <div class="brand">Ejecución y Ejecuciones, en simple</div>
+  <nav class="nav" aria-label="Secciones">
+    <a href="#panorama">Panorama</a>
+    <a class="s1" href="#p1"><i class="dot"></i>Sentencias</a>
+    <a class="s2" href="#p2"><i class="dot"></i>Juicio ejecutivo</a>
+    <a class="s3" href="#p3"><i class="dot"></i>Embargo y excepciones</a>
+    <a class="s4" href="#p4"><i class="dot"></i>Remate</a>
+    <a class="s5" href="#p5"><i class="dot"></i>Subasta</a>
+    <a class="s6" href="#p6"><i class="dot"></i>Ejecuciones especiales</a>
+    <a href="#esencial">Lo esencial</a>
+  </nav>
+</div></header>
+<main>
+<section id="panorama">
+  <div class="hero"><div class="wrap">
+    <p class="kicker">Ley XII – N.° 27 · Código Procesal Civil, Comercial, de Familia y Violencia Familiar de Misiones · Libro Tercero · Arts. 467 a 575</p>
+    <h1>Procesos de ejecución: de la sentencia firme al cobro forzado.</h1>
+    <p class="lead">Guía gráfica y en <strong>lenguaje sencillo</strong> de los Procesos de Ejecución del Código Procesal de Misiones. Responde: <strong>¿cómo se ejecuta una sentencia?</strong>, <strong>¿cómo funciona el juicio ejecutivo?</strong> y <strong>¿cómo se ejecutan hipotecas, prendas, créditos comerciales y fiscales?</strong></p>
+    <ul class="stats"><li><b>5</b>días para oponer excepciones</li><li><b>10</b>días para la sentencia de remate</li><li><b>2/3</b>de la tasación: base de inmuebles</li><li><b>5</b>días para apelar el remate</li></ul>
+  </div></div>
+
+  <div class="band alt"><div class="wrap">
+    <h2 class="sec">El recorrido de la ley</h2>
+    <p class="sub">Los arts. 467 a 575 agrupados en seis bloques temáticos. Tocá uno para ir a él.</p>
+    <ol class="route four">
+      <li class="s1"><a href="#p1"><span class="k">Arts. 467 a 488</span><h3>Ejecución de sentencias</h3><p>Sentencias provinciales, extranjeras y laudos arbitrales.</p></a></li>
+      <li class="s2"><a href="#p2"><span class="k">Arts. 489 a 499</span><h3>Juicio ejecutivo</h3><p>Procedencia, títulos y preparación de la vía ejecutiva.</p></a></li>
+      <li class="s3"><a href="#p3"><span class="k">Arts. 500 a 528</span><h3>Embargo y excepciones</h3><p>Intimación de pago, embargo, excepciones y sentencia de remate.</p></a></li>
+      <li class="s4"><a href="#p4"><span class="k">Arts. 529 a 542</span><h3>Cumplimiento del remate</h3><p>Liquidación, pago, martillero, edictos y posturas.</p></a></li>
+      <li class="s5"><a href="#p5"><span class="k">Arts. 543 a 564</span><h3>Subasta de bienes</h3><p>Muebles, inmuebles, pago, escrituración, nulidad y temeridad.</p></a></li>
+      <li class="s6"><a href="#p6"><span class="k">Arts. 565 a 575</span><h3>Ejecuciones especiales</h3><p>Hipotecaria, prendaria, comercial y fiscal.</p></a></li>
+    </ol>
+  </div></div>
+
+  <div class="band"><div class="wrap">
+    <h2 class="sec">El camino del cobro</h2>
+    <p class="sub">Cinco pasos, desde el título ejecutivo hasta el cobro efectivo.</p>
+    <ol class="flow">
+      <li class="s1"><b>1</b><h3>Título</h3><p>Sentencia firme, escritura, pagaré, cheque o crédito fiscal (arts. 468 y 492).</p></li>
+      <li class="s2"><b>2</b><h3>Preparación</h3><p>Reconocimiento de firma o deuda si el título no trae ejecución (art. 494).</p></li>
+      <li class="s3"><b>3</b><h3>Embargo</h3><p>Se intima el pago y se traban bienes suficientes (arts. 500 y 503).</p></li>
+      <li class="s4"><b>4</b><h3>Sentencia de remate</h3><p>Se resuelven las excepciones y se ordena llevar adelante la ejecución (art. 520).</p></li>
+      <li class="s5"><b>5</b><h3>Subasta y cobro</h3><p>Se rematan los bienes y se paga al acreedor (arts. 533 y ss.).</p></li>
+    </ol>
+  </div></div>
+
+  <div class="band alt"><div class="wrap">
+    <h2 class="sec">Los plazos de un vistazo</h2>
+    <p class="sub">Todo está pensado para ser ágil.</p>
+    <div class="scroll"><table class="cmp"><thead><tr><th>Paso</th><th>Plazo</th><th>Art.</th></tr></thead><tbody>
+      <tr><th>Opción por proceso de conocimiento</th><td>Al contestar la demanda</td><td>490</td></tr>
+      <tr><th>Caducidad de medidas preparatorias</th><td class="hl">15 días desde su realización</td><td>498</td></tr>
+      <tr><th>Oposición de excepciones</th><td class="hl">5 días desde la intimación de pago</td><td>511</td></tr>
+      <tr><th>Sentencia de remate (sin prueba)</th><td>10 días de contestado el traslado</td><td>517</td></tr>
+      <tr><th>Apelación de la sentencia de remate</th><td>5 días</td><td>523</td></tr>
+      <tr><th>Pago del precio de compra</th><td class="hl">5 días desde aprobado el remate</td><td>550</td></tr>
+      <tr><th>Nulidad del remate</th><td class="hl">5 días desde realizado</td><td>562</td></tr>
+      <tr><th>Promover el ordinario (fianza)</th><td>15 días</td><td>525, 561</td></tr>
+    </tbody></table></div>
+  </div></div>
+</section>
+
+<div id="arts"></div>
+
+<section id="esencial" class="band alt"><div class="wrap">
+  <h2 class="sec">Lo esencial</h2>
+  <p class="sub">Para quedarse con lo más importante.</p>
+  <ul class="take">
+    <li><span><b>La ejecución de sentencia es la regla.</b> Firme la sentencia y vencido el plazo, se ejecuta a instancia de parte (art. 467).</span></li>
+    <li><span><b>El título ejecutivo es la llave.</b> Sin instrumento público, privado reconocido o título con fuerza ejecutiva, no hay ejecución (art. 492).</span></li>
+    <li><span><b>El rebelde solo puede oponer prescripción.</b> Y debe justificar que la rebeldía se debió a causas que no pudo superar (art. 347).</span></li>
+    <li><span><b>Las excepciones del juicio ejecutivo son taxativas.</b> Solo las del art. 513; las demás quedan para el juicio ordinario posterior (art. 522).</span></li>
+    <li><span><b>La sentencia de remate ordena llevar adelante la ejecución.</b> Puede ser total o parcial (art. 520).</span></li>
+    <li><span><b>El martillero rinde cuentas en 3 días.</b> Si no lo hace, pierde la comisión (art. 534).</span></li>
+    <li><span><b>La base de inmuebles es 2/3 de la tasación.</b> El juez puede apartarse para evitar malventa (art. 548).</span></li>
+    <li><span><b>El ejecutado puede evitar la subasta</b> pagando capital, intereses, costas y una indemnización (art. 553).</span></li>
+    <li><span><b>Las ejecuciones especiales tienen reglas propias.</b> Hipotecaria, prendaria, comercial y fiscal tienen excepciones limitadas (arts. 567 a 575).</span></li>
+  </ul>
+</div></section>
+</main>
+<footer class="foot"><div class="wrap"><p>Resumen en lenguaje sencillo de los arts. 467 a 575 de la Ley XII – N.° 27 de la Provincia de Misiones. No reemplaza el texto de la ley ni el asesoramiento de un profesional del derecho.</p></div></footer>
+<script>
+const P=[
+{id:1,t:"Ejecución de sentencias",r:"Arts. 467 a 488",g:"Sentencias provinciales, extranjeras y laudos arbitrales: qué se ejecuta y cómo.",a:[
+["467","Resoluciones ejecutables","Consentida o ejecutoriada la sentencia de un tribunal judicial o arbitral, y vencido el plazo fijado, se procede a ejecutarla a instancia de parte. Puede ejecutarse parcialmente aunque se haya interpuesto recurso, por los importes de la parte firme. El título es un testimonio que expresa que recayó sentencia firme respecto del rubro que se pretende ejecutar."],
+["468","Aplicación a otros títulos","Las disposiciones de este título son aplicables a: 1) la ejecución de transacciones o acuerdos homologados; 2) la ejecución de multas procesales; 3) el cobro de honorarios regulados en concepto de costas."],
+["469","Competencia","Es juez competente para la ejecución: 1) el que pronunció la sentencia; 2) el de otra competencia territorial si así lo impone el objeto de la ejecución; 3) el que intervino en el proceso principal si media conexión directa entre causas sucesivas."],
+["470","Suma líquida. Embargo","Si la sentencia contiene condena al pago de cantidad líquida y determinada, o hay liquidación aprobada, a instancia de parte se procede al embargo de bienes conforme a las normas del juicio ejecutivo. Hay condena líquida siempre que de la sentencia se infiera el monto de la liquidación, aunque no esté expresado numéricamente."],
+["471","Liquidación","Cuando la sentencia condena al pago de cantidad ilíquida y el vencedor no presenta la liquidación dentro de 10 días desde que aquella es ejecutable, puede hacerlo el vencido. Presentada la liquidación se da traslado a la otra parte por 5 días."],
+["472","Conformidad. Objeciones","Expresada la conformidad por el deudor, o transcurrido el plazo sin contestar el traslado, se procede a la ejecución por la suma que resulta. Si media impugnación se aplican las normas de los incidentes (arts. 179 y ss.)."],
+["473","Citación de venta","Trabado el embargo se cita al deudor para la venta de los bienes embargados. Las excepciones deben oponerse y probarse dentro del quinto día."],
+["474","Excepciones","Solo se consideran legítimas las excepciones de: 1) falsedad de la ejecutoria; 2) prescripción de la ejecutoria; 3) pago; 4) quita, espera o remisión."],
+["475","Prueba","Las excepciones deben fundarse en hechos posteriores a la sentencia o laudo. Se prueban por las constancias del juicio o por documentos emanados del ejecutante, con exclusión de todo otro medio. Si no se acompañan los documentos, el juez debe rechazar la excepción sin sustanciarla."],
+["476","Resolución","Vencidos los 5 días sin que se deduzca oposición, se manda continuar la ejecución sin recurso alguno. Si se dedujo oposición, previo traslado al ejecutante por 5 días, el juez manda continuar la ejecución o levanta el embargo."],
+["477","Recursos","La resolución que desestima las excepciones es apelable en efecto devolutivo, siempre que el ejecutante dé fianza o caución suficiente. Todas las apelaciones admisibles en las diligencias para la ejecución de la sentencia se conceden en efecto diferido."],
+["478","Cumplimiento","Consentida o ejecutoriada la resolución que manda llevar adelante la ejecución, se procede según las reglas del cumplimiento de la sentencia de remate, hasta hacerse pago al acreedor."],
+["479","Adecuación de la ejecución","A pedido de parte el juez debe establecer las modalidades de la ejecución o ampliar o adecuar las que contiene la sentencia, dentro de los límites de esta."],
+["480","Condena a escriturar","La sentencia que condena al otorgamiento de escritura pública debe contener el apercibimiento de que si el obligado no cumple dentro del plazo fijado, el juez la suscribe por él y a su costa. La escritura se otorga ante el registro del escribano que propone el ejecutante."],
+["481","Condena a hacer","Si la sentencia contiene condena a hacer y la parte no cumple en el plazo, se hace a su costa o se le obliga a resarcir los daños y perjuicios, a elección del acreedor. Pueden imponerse sanciones conminatorias (art. 37)."],
+["482","Condena a no hacer","Si la sentencia condena a no hacer y el obligado la quebranta, el acreedor tiene opción para pedir que se repongan las cosas al estado anterior, a costa del deudor, o que se le indemnicen los daños y perjuicios."],
+["483","Condena a entregar cosas","Cuando la condena es de entregar alguna cosa, se libra mandamiento para desapoderar de ella al vencido, quien puede oponer las excepciones del art. 474. Si la condena no puede cumplirse, se le obliga a la entrega del equivalente de su valor, previa determinación, con los daños y perjuicios."],
+["484","Liquidación en casos especiales","Siempre que las liquidaciones o cuentas sean muy complicadas, de lenta y difícil justificación o requieran conocimientos especiales, deben someterse a la decisión de peritos árbitros o, si hay conformidad de partes, a la de amigables componedores. La liquidación de sociedades, incluida la determinación del carácter propio o ganancial de los bienes de la sociedad conyugal, se sustancia por juicio ordinario o incidente."],
+["485","Conversión en título ejecutorio","Las sentencias de tribunales extranjeros tienen fuerza ejecutoria en los términos de los tratados. Sin tratados, son ejecutables si: 1) la sentencia tiene autoridad de cosa juzgada en su Estado y emana de tribunal competente según las normas argentinas; 2) el demandado fue personalmente citado y se garantizó su defensa; 3) reúne los requisitos de autenticidad; 4) no afecta el orden público argentino; 5) no es incompatible con otra sentencia argentina."],
+["486","Competencia. Recaudos. Sustanciación","La ejecución de la sentencia extranjera se pide ante el juez de primera instancia que corresponde, acompañando su testimonio legalizado y traducido. Para el trámite del exequátur se aplican las normas de los incidentes. Si se dispone la ejecución, se procede como para las sentencias de tribunales argentinos."],
+["487","Eficacia de sentencia extranjera","Cuando en juicio se invoca la autoridad de una sentencia extranjera, esta solo tiene eficacia si reúne los requisitos del art. 485."],
+["488","Laudos de tribunales arbitrales extranjeros","Los laudos pronunciados por tribunales arbitrales extranjeros pueden ser ejecutados por el procedimiento de los arts. anteriores, siempre que: 1) se cumplan los recaudos del art. 485 y la prórroga de jurisdicción sea admisible; 2) las cuestiones objeto del compromiso no estén excluidas del arbitraje conforme al art. 784."]]},
+{id:2,t:"Juicio ejecutivo: disposiciones generales",r:"Arts. 489 a 499",g:"Cuándo procede, qué títulos autorizan y cómo se prepara la vía ejecutiva.",a:[
+["489","Procedencia","Se procede ejecutivamente siempre que, en virtud de un título que trae aparejada ejecución, se demanda por obligación exigible de dar cantidades líquidas de dinero, o fácilmente liquidables. Si la obligación está subordinada a condición o prestación, la vía ejecutiva procede si del título o de otro instrumento resulta que se cumplió la condición. Si la obligación es en moneda extranjera, la ejecución se promueve por el equivalente en moneda nacional."],
+["490","Opción por proceso de conocimiento","Si corresponde un proceso de ejecución y el actor opta por uno de conocimiento y hay oposición del demandado, el juez, atendiendo a las circunstancias, debe resolver cuál es la clase de proceso aplicable."],
+["491","Deuda parcialmente líquida","Si del título ejecutivo resulta una deuda de cantidad líquida y otra ilíquida, puede procederse ejecutivamente respecto de la primera."],
+["492","Títulos ejecutivos","Los títulos que traen aparejada ejecución son: 1) el instrumento público presentado en forma; 2) el instrumento privado suscrito por el obligado reconocido judicialmente o cuya firma está certificada por notario; 3) la confesión de deuda líquida y exigible prestada ante el juez competente; 4) la cuenta aprobada o reconocida; la letra de cambio, factura de crédito, vale o pagaré, cheque y constancia del saldo deudor de cuenta corriente bancaria; 5) el crédito por alquileres o arrendamientos de inmuebles; 6) los demás títulos con fuerza ejecutiva por ley."],
+["493","Crédito por expensas comunes","Constituye título ejecutivo el crédito por expensas comunes de edificios sujetos al régimen de propiedad horizontal. Con el escrito de promoción deben acompañarse certificados de deuda que reúnan los requisitos del reglamento de copropiedad."],
+["494","Preparación de la vía ejecutiva","Puede prepararse la acción ejecutiva pidiendo previamente: 1) que sean reconocidos los documentos que por sí solos no traen aparejada ejecución; 2) que en la ejecución por alquileres o arrendamientos, el demandado manifieste si es locatario y exhiba el último recibo; 3) que el juez señale el plazo para el pago, si el acto constitutivo no lo designa; 4) que el deudor reconozca el cumplimiento de la condición, si la deuda es condicional."],
+["495","Citación del deudor","La citación al demandado para el reconocimiento de firma se hace en la forma de los arts. 340 y 341, bajo apercibimiento de que si no comparece o no contesta categóricamente, se tiene por reconocido el documento o por confesados los hechos. El citado debe comparecer personalmente y formular la manifestación ante el juez; no puede ser reemplazada por escrito ni por gestor."],
+["496","Efectos del reconocimiento de la firma","Reconocida la firma del instrumento queda preparada la acción ejecutiva, aunque se niegue su contenido."],
+["497","Desconocimiento de la firma","Si el documento no es reconocido, el juez, a pedido del ejecutante y previo dictamen de un perito designado de oficio, debe declarar si la firma es auténtica. Si lo es, se procede según el art. 500, se impone al ejecutado las costas y una multa del 30% del monto de la deuda, que debe dar a embargo como requisito de admisibilidad de las excepciones."],
+["498","Caducidad de las medidas preparatorias","Se produce la caducidad de las medidas preparatorias del juicio ejecutivo, sin necesidad de declaración judicial, si no se deduce la demanda dentro de los 15 días de su realización. Si el reconocimiento es ficto, el plazo corre desde que la resolución que lo declara queda firme."],
+["499","Firma por autorización o a ruego","Si el instrumento privado fue firmado por autorización o a ruego del obligado, queda preparada la vía ejecutiva si, citado este, declara que otorgó la autorización o que es cierta la deuda. Si la autorización resulta de instrumento público, basta citar al autorizado para que reconozca la firma."]]},
+{id:3,t:"Embargo, excepciones y sentencia de remate",r:"Arts. 500 a 528",g:"Intimación de pago, traba de bienes, defensas del ejecutado y sentencia.",a:[
+["500","Intimación de pago y procedimiento para el embargo","El juez debe examinar cuidadosamente el instrumento y, si halla que es de los comprendidos en los arts. 492 y 493, y que se cumplen los presupuestos procesales, debe librar mandamiento de embargo. Con el mandamiento, el Oficial de Justicia requiere el pago al deudor. Si no se paga en el acto, procede a embargar bienes suficientes. El embargo se practica aunque el deudor no esté presente."],
+["501","Denegación de la ejecución","Es apelable la resolución que deniega la ejecución."],
+["502","Bienes en poder de un tercero","Si los bienes embargados se encuentran en poder de un tercero, se debe notificar a este en el día, personalmente o por cédula. Si el notificado paga indebidamente al deudor embargado, el juez hace efectiva su responsabilidad."],
+["503","Inhibición general","Si no se conocen bienes del deudor o los embargados resultan insuficientes, puede solicitarse contra el ejecutado inhibición general de vender o gravar sus bienes. La medida queda sin efecto si el deudor presenta bienes a embargo o da caución bastante."],
+["504","Orden de la traba. Perjuicios","El acreedor no puede exigir que el embargo recaiga sobre determinados bienes con perjuicio grave para el deudor, si existen otros disponibles. Si los bienes muebles embargados forman parte de un establecimiento comercial o industrial, o son de uso de la casa habitación, el deudor puede exonerarlos presentando otros bienes no gravados."],
+["505","Depositario","El Oficial de Justicia debe dejar los bienes embargados en poder de un depositario provisional, que puede ser el deudor si resulta conveniente, salvo que se encuentren en poder de un tercero y este requiera nombramiento a su favor."],
+["506","Deber de informar","Cuando las cosas embargadas son de difícil o costosa conservación o hay peligro de pérdida o desvalorización, el depositario debe poner el hecho oportunamente en conocimiento del juez."],
+["507","Embargo de inmuebles o muebles registrables","Si el embargo debe hacerse efectivo en bienes inmuebles o muebles registrables, basta su anotación en el registro. Los oficios o exhortos se libran dentro de las 48 horas de la providencia que ordena el embargo."],
+["508","Costas","Practicada la intimación, las costas del juicio son a cargo del deudor moroso, aunque pague en el acto de realizarse aquella."],
+["509","Ampliación anterior a la sentencia","Cuando durante el juicio ejecutivo y antes de pronunciarse sentencia vence algún nuevo plazo de la obligación, a pedido del actor puede ampliarse la ejecución por su importe, sin que el procedimiento retroceda. En cada caso de ampliación debe cumplirse con la intimación de pago."],
+["510","Ampliación posterior a la sentencia","Si durante el juicio, pero con posterioridad a la sentencia, vencen nuevos plazos o cuotas, la ejecución puede ampliarse pidiéndose que el deudor exhiba dentro del quinto día los recibos correspondientes o documentos que acrediten la extinción de la obligación."],
+["511","Intimación de pago. Oposición de excepciones","La intimación de pago importa la citación para oponer excepciones, debiendo dejarse al ejecutado copia de la diligencia, del escrito de iniciación y de los documentos acompañados. Las excepciones se proponen dentro de 5 días, en un solo escrito, conjuntamente con el ofrecimiento de prueba. No habiéndose opuesto excepciones dentro del plazo, el juez, sin otra sustanciación, debe pronunciar sentencia de remate."],
+["512","Trámites irrenunciables","Son irrenunciables la intimación de pago, la citación para oponer excepciones y la sentencia."],
+["513","Excepciones","Las únicas excepciones admisibles en el juicio ejecutivo son: 1) incompetencia; 2) falta de personería; 3) litispendencia; 4) falsedad o inhabilidad de título; 5) prescripción; 6) pago documentado, total o parcial; 7) compensación de crédito líquido; 8) quita, espera, remisión, novación, transacción, conciliación o compromiso documentados; 9) cosa juzgada. Las excepciones son inadmisibles si no se negó la existencia de la deuda."],
+["514","Nulidad de la ejecución","El ejecutado puede solicitar, dentro del plazo del art. 511, que se declare la nulidad de la ejecución. Puede fundarse únicamente en: 1) no haberse hecho legalmente la intimación de pago, siempre que en el acto de pedir la nulidad el ejecutado deposite la suma fijada u oponga excepciones; 2) incumplimiento de las normas para la preparación de la vía ejecutiva."],
+["515","Subsistencia del embargo","Si se anula el procedimiento ejecutivo o se declara la incompetencia, el embargo trabado se mantiene con carácter preventivo durante 15 días desde que la resolución queda firme. Se produce la caducidad automática si dentro de ese plazo no se reinicia la ejecución."],
+["516","Trámite","El juez debe desestimar sin sustanciación las excepciones que no son de las autorizadas por la ley, o que no se oponen en forma clara y concreta. Si se hallan cumplidos los requisitos, debe dar traslado de las excepciones al ejecutante por 5 días. No se hace declaración especial previa acerca de la admisibilidad de las excepciones."],
+["517","Excepciones de puro derecho. Falta de prueba","Si las excepciones son de puro derecho o se fundan exclusivamente en constancias del expediente, o no se ofreció prueba, el juez debe pronunciar sentencia dentro de 10 días de contestado el traslado."],
+["518","Prueba","Cuando se ofrece prueba que no consiste en constancias del expediente, el juez debe acordar un plazo común para producirla. Corresponde al ejecutado la carga de la prueba de los hechos en que funda las excepciones. Se aplican las normas del juicio sumarísimo supletoriamente."],
+["519","Sentencia","Producida la prueba se declara clausurado el período correspondiente; el juez debe pronunciar sentencia dentro de los 10 días."],
+["520","Sentencia de remate","La sentencia de remate solo puede determinar que se lleve adelante la ejecución, en todo o en parte, o su rechazo. En el primer caso, al ejecutado que litigó sin razón valedera u obstruyó el proceso se le impone una multa a favor del ejecutante, del 5% al 30% del importe de la deuda."],
+["521","Notificación al Defensor Oficial","Si el deudor con domicilio desconocido no se presentó, la sentencia se notifica al Defensor Oficial."],
+["522","Juicio ordinario posterior","Cualquiera sea la sentencia que recae en el juicio ejecutivo, el ejecutante o el ejecutado pueden promover el ordinario, una vez cumplidas las condenas impuestas. Toda defensa o excepción que por la ley no es admisible en el ejecutivo puede hacerse valer en el ordinario."],
+["523","Apelación","La sentencia de remate es apelable: 1) en el caso del art. 516 primer párrafo; 2) cuando las excepciones tramitaron como de puro derecho; 3) cuando se produjo prueba respecto de las opuestas; 4) cuando verse sobre puntos ajenos al ámbito natural del proceso o cause gravamen irreparable en el juicio ordinario posterior. También son apelables las regulaciones de honorarios."],
+["524","Efecto. Fianza","Cuando el ejecutante da fianza de responder de lo que percibe si la sentencia es revocada, el recurso se concede en efecto devolutivo. El juez establece la clase y el monto de la fianza. Si no se presta dentro de los 5 días de concedido el recurso, se eleva el expediente a la Cámara."],
+["525","Fianza requerida por el ejecutado","La fianza solo se hace extensiva al resultado del juicio ordinario cuando así lo requiere el ejecutado. Queda cancelada: 1) si el ejecutado no promueve el juicio dentro de los 15 días de haber sido otorgada; 2) si habiéndolo deducido dentro de dicho plazo, la sentencia es confirmada."],
+["526","Carácter. Plazo de las apelaciones","Las apelaciones en el juicio ejecutivo se conceden en efecto diferido, con excepción de las que proceden contra la sentencia de remate y la providencia que deniega la ejecución."],
+["527","Costas","Las costas del juicio ejecutivo son a cargo de la parte vencida, con excepción de las correspondientes a las pretensiones de la otra parte que fueron desestimadas."],
+["528","Límites. Modalidades de la ejecución","Durante el curso del proceso de ejecución, el juez puede de oficio o a pedido de parte, y si las circunstancias así lo aconsejan, fijar una audiencia para que comparezcan ejecutante y ejecutado con el objeto de establecer la forma más rápida y eficaz de satisfacer el crédito, procurando evitar perjuicios innecesarios."]]},
+{id:4,t:"Cumplimiento de la sentencia de remate",r:"Arts. 529 a 542",g:"Liquidación, pago, martillero, edictos y posturas: cómo se remata.",a:[
+["529","Ámbito","Si la subasta se dispone a requerimiento de propietario o de condómino y no en cumplimiento de una sentencia de condena, la operación se rige por las normas del derecho sustancial. Las reglas de este Código solo se aplican en lo que sean conciliables con aquellas."],
+["530","Recursos","Son inapelables, por el ejecutado, las resoluciones que se dictan durante el trámite de cumplimiento de la sentencia de remate, salvo las que se refieren a cuestiones que: 1) no pueden constituir objeto del juicio ordinario posterior; 2) debiendo ser objeto del ordinario, no obstante fueron debatidas en la etapa de cumplimiento por asentir el ejecutante; 3) se relacionen con el reconocimiento del carácter de parte; 4) en los casos de los arts. 523 inc. 4 y 561, primer y segundo párrafos."],
+["531","Embargo. Sumas de dinero. Liquidación. Pago inmediato","Es requisito del trámite de cumplimiento de la sentencia de remate la traba de embargo. Cuando el embargado es dinero, una vez firme la sentencia o dada la fianza del art. 524, el acreedor debe practicar liquidación de capital, intereses y costas; se da traslado al ejecutado y, aprobada la liquidación, se hace pago inmediato al acreedor."],
+["532","Adjudicación de títulos o acciones","Si se embargaron títulos o acciones que se cotizan oficialmente en los mercados de valores, el ejecutante puede pedir que se le den en pago al precio que tienen a la fecha de la resolución; si no se cotizan, se observa lo dispuesto por el art. 543."],
+["533","Martillero. Designación. Carácter. Remoción","Las cámaras provinciales de apelaciones deben abrir cada año un registro de martilleros con más de 2 años de antigüedad en la matrícula. De dicha lista se sortea el profesional a designar, quien debe aceptar el cargo dentro del tercer día de notificado. Es nombrado de oficio, salvo acuerdo de partes. No puede ser recusado; puede ser removido por causas graves. No puede delegar sus funciones, salvo autorización expresa del juez."],
+["534","Depósito de los importes. Rendición de cuentas","El martillero debe depositar las sumas recibidas y rendir cuentas del remate al Juzgado dentro de los 3 días de realizado. Si no lo hace oportunamente, sin justa causa, carece de derecho a cobrar comisión."],
+["535","Comisión. Anticipo de fondos","El martillero percibe la comisión que corresponde conforme al bien subastado. Si el remate se suspende o fracasa sin su culpa, el monto se fija por el juez según el trabajo realizado. Si se anula por su culpa, debe reintegrar la comisión dentro del tercer día de notificado."],
+["536","Edictos","El remate se anuncia por edictos que se publican por 2 días en el Boletín Oficial y en otro diario. Si se trata de bienes de escaso valor, solo se publican en el Boletín Oficial por 1 día. En los edictos se indica el Juzgado, Secretaría, número de expediente, nombres de las partes (si no se oponen), lugar, día, mes, año y hora de la subasta; se individualizan cantidades, estado y lugar de revisión; y se mencionan la seña y comisión."],
+["537","Propaganda. Inclusión indebida de otros bienes","La propaganda adicional es a cargo del ejecutante, salvo conformidad del ejecutado o que su costo no exceda el 2% de la base. No se pueden mencionar ni subastar bienes distintos de aquellos cuya venta fue ordenada judicialmente. Si la propaganda adicional se realiza a través de diarios, se aplica el art. 536 último párrafo."],
+["538","Preferencia para el remate","Si el bien está embargado en diversos procesos, la subasta se realiza en el que está más adelantado en su trámite, con prescindencia de la naturaleza o garantías de los créditos. La preferencia importa reconocer al acreedor que promovió el juicio la facultad de proponer martillero, si se le otorgó esa prerrogativa."],
+["539","Subasta progresiva","Si se dispuso la venta de varios bienes, el juez a pedido del ejecutado puede ordenar que la subasta se realice en distintas fechas y que se suspenda cuando el precio obtenido alcance a cubrir el crédito, intereses y costas."],
+["540","Posturas bajo sobre","Cualquiera sea la naturaleza de los bienes a subastar, a pedido de parte o de oficio el juez puede disponer que se admitan posturas en sobre cerrado, en las condiciones que fije, que deben indicarse en los edictos y, en su caso, en la propaganda. El Superior Tribunal o las cámaras pueden establecer reglas uniformes."],
+["541","Compra en comisión","El comprador debe indicar, dentro del tercer día de realizada la subasta, el nombre de su comitente, en escrito firmado por ambos. En su defecto, se lo tiene por adjudicatario definitivo. El comitente debe constituir domicilio en esa presentación."],
+["542","Regularidad del acto","Si existen motivos fundados y sin perjuicio de la facultad del juez para disponerlo de oficio, el ejecutante, el ejecutado o el martillero pueden solicitar al Juzgado la adopción de las medidas necesarias para proveer a la regularidad del remate y al mantenimiento del orden que asegure la libre oferta de los interesados."]]},
+{id:5,t:"Subasta de bienes, nulidad y temeridad",r:"Arts. 543 a 564",g:"Muebles, inmuebles, pago, escrituración, preferencias y nulidad.",a:[
+["543","Subasta de muebles o semovientes","Si el embargo recae en bienes muebles o semovientes, se observan las siguientes reglas: 1) se ordena su venta en remate, sin base, al contado o con facilidades de pago; 2) en la resolución que dispone la venta se requiere al deudor para que, en 5 días, manifieste si los bienes están prendados o embargados; 3) se puede ordenar el secuestro de las cosas; 4) si se trata de muebles registrables, se requiere informe a los registros; 5) la providencia que decreta la venta se comunica a los jueces embargantes y se notifica a los acreedores prendarios."],
+["544","Articulaciones infundadas. Entrega de los bienes","Al adjudicatario que plantea cuestiones manifiestamente improcedentes que demoran el pago del saldo del precio, se le impone la multa del art. 551. Pagado totalmente el precio, el martillero o la parte que corresponda debe entregar al comprador los bienes adquiridos."],
+["545","Embargos decretados por otros juzgados. Acreedores hipotecarios","Decretada la subasta se debe comunicar a los jueces embargantes e inhibientes. Se cita a los acreedores hipotecarios para que dentro del tercer día presenten sus títulos. Los de grado preferente, dentro del mismo plazo, pueden solicitar el aumento de la base hasta cubrir el importe de sus créditos."],
+["546","Recaudos","Antes de ordenar la subasta, el juez debe requerir informes: 1) sobre la deuda por impuestos, tasas y contribuciones; 2) sobre las deudas por expensas comunes, si es propiedad horizontal; 3) sobre las condiciones de dominio, embargo e inhibición. Los informes tienen una vigencia de 90 días. Asimismo, debe intimar al deudor para que en 3 días presente el título de propiedad."],
+["547","Designación del martillero. Lugar del remate","Cumplidos los recaudos del art. 546, se ordena la subasta, designando martillero en los términos del art. 533 y determinando la base. Se fija el lugar donde debe realizarse, que debe ser donde tramita la ejecución o el de ubicación del inmueble, según lo resuelve el juez. Se establece también el día y la hora."],
+["548","Base. Tasación","Si no existe acuerdo de partes, se fija como base los 2/3 de la valuación fiscal actualizada correspondiente al inmueble. A falta de valuación, el juez designa de oficio perito ingeniero, arquitecto o agrimensor para que realice la tasación; la base debe equivaler a las 2/3 partes de dicha tasación. El juez tiene la facultad de apartarse de la tasación o de lo estipulado por las partes, fijando la base en una suma que impida que los bienes sean mal vendidos."],
+["549","Domicilio del comprador","El martillero debe requerir al adjudicatario la constitución de domicilio en el lugar que corresponda al asiento del Juzgado. Si el comprador no lo constituye en ese acto y no lo denuncia oportunamente, se aplica el art. 41 en lo pertinente."],
+["550","Pago del precio. Suspensión del plazo","Dentro de los 5 días de aprobado el remate, el comprador debe depositar el importe del precio que corresponda abonar al contado. Si no lo hace y no invoca motivos fundados para obtener la suspensión del plazo, se debe ordenar nueva subasta en los términos del art. 554. La suspensión solo se concede cuando median circunstancias totalmente ajenas a la conducta del adquirente."],
+["551","Articulaciones infundadas del comprador","Al adjudicatario que plantea cuestiones manifiestamente improcedentes que demoran el pago del saldo del precio, se le impone una multa que puede ser del 5% al 10% del precio obtenido en el remate."],
+["552","Pedido de indisponibilidad de fondos","El comprador que realizó el depósito del importe del precio puede requerir su indisponibilidad hasta tanto se le otorgue la escritura, o se inscriba el bien a su nombre si se prescinde de aquella, salvo cuando la demora le es imputable. La indisponibilidad no rige respecto de los gastos de escrituración y pago de impuestos."],
+["553","Sobreseimiento del juicio","El ejecutado solo puede librar los bienes depositando el importe del capital y de lo presupuestado en concepto de intereses y costas, sin perjuicio de la liquidación que ulteriormente corresponda; asimismo, una suma a favor del comprador, integrada por la comisión del martillero, sellado del boleto y el equivalente a una vez y media del monto de la seña."],
+["554","Nueva subasta por incumplimiento del comprador","Cuando por culpa del postor, cuya oferta fue aceptada como definitiva en el acto de remate la venta no se formaliza, se debe ordenar nuevo remate. Dicho postor es responsable de la disminución real del precio, de los intereses acrecidos, de los gastos ocasionados y de las costas causadas."],
+["555","Falta de postores","Si fracasa el remate por falta de postores, se debe disponer otro, reduciendo la base en un 25%. Si tampoco existen postores, se ordena la venta sin limitación de precio."],
+["556","Perfeccionamiento de la venta","La venta judicial solo queda perfeccionada una vez aprobado el remate, pagado el precio o la parte que corresponda, si se otorgaron facilidades, y luego de realizada la tradición del inmueble a favor del comprador."],
+["557","Escrituración","La escritura de protocolización de las actuaciones es extendida por escribano sin que sea necesaria la comparecencia del ejecutado. El adquirente que solicita la escrituración toma a su cargo la realización de las diligencias tendientes a ella, pero no está obligado a soportar los gastos que corresponden a la otra parte."],
+["558","Levantamiento de medidas precautorias","Los embargos e inhibiciones se levantan al solo efecto de escriturar, con citación de los jueces que los decretaron. Una vez escriturado el bien, sin otro trámite, esas medidas cautelares se deben levantar definitivamente. Los embargos quedan transferidos al importe del precio."],
+["559","Desocupación del inmueble","No procede el desahucio de los ocupantes del inmueble subastado hasta tanto no se pague el saldo del precio y se haga la tradición. Las cuestiones que se suscitan con motivo de la desocupación se sustancian por el trámite de los incidentes, cuando la ilegitimidad de la ocupación aparece manifiesta."],
+["560","Preferencias","Mientras el ejecutante no esté totalmente desinteresado, las sumas depositadas no pueden aplicarse a otro destino, salvo que se trate de las costas de la ejecución, o del pago de otro acreedor preferente o privilegiado. Los gastos causados por el deudor para su defensa no tienen prelación. El defensor de ausentes no puede cobrar honorarios al ejecutado por su intervención."],
+["561","Liquidación. Pago. Fianza","Dentro de los 5 días contados desde que se pagó el precio o desde la aprobación del remate, el ejecutante debe presentar la liquidación del capital, intereses y costas; de ella se da traslado al ejecutado. Si el ejecutado lo pide, el ejecutante debe prestar fianza para percibir el capital y sus intereses. Dicha fianza queda cancelada si el deudor no promueve el proceso ordinario dentro de los 15 días desde que aquella se constituyó; en ese caso se impone al ejecutado una multa que no puede exceder del 25% del importe de la fianza."],
+["562","Nulidad de la subasta a pedido de parte","La nulidad del remate, a pedido de parte, solo puede plantearse hasta dentro del quinto día del realizado. El pedido debe ser desestimado in límine si las causas invocadas son manifiestamente inatendibles. Si el pedido es admisible, se confiere traslado por 5 días a las partes, al martillero y al adjudicatario."],
+["563","Nulidad de oficio","El juez debe decretar de oficio la nulidad de la subasta cuando las irregularidades de que ella adolece comprometen gravemente la actividad jurisdiccional; no puede hacerlo si decretó medidas que importan considerar válido el remate."],
+["564","Temeridad","Si el ejecutado provocó dilación innecesaria en el cumplimiento de la sentencia de remate, el juez le impone una multa, en los términos del art. 520, sobre la base del importe de la liquidación aprobada."]]},
+{id:6,t:"Ejecuciones especiales",r:"Arts. 565 a 575",g:"Hipotecaria, prendaria, comercial y fiscal: reglas propias.",a:[
+["565","Títulos que las autorizan","Los títulos que autorizan las ejecuciones especiales solo son aquellos que se mencionan expresamente en este Código o en otras leyes."],
+["566","Reglas aplicables","En las ejecuciones especiales se observa el procedimiento establecido para el juicio ejecutivo, con las siguientes modificaciones: 1) solo proceden las excepciones previstas en el capítulo siguiente o en la ley que crea el título; 2) solo se admite prueba que deba rendirse fuera de la circunscripción territorial del Juzgado cuando el juez, de acuerdo con las circunstancias, lo considera imprescindible."],
+["567","Ejecución hipotecaria: excepciones admisibles","Además de las excepciones procesales autorizadas por el art. 513 incs. 1, 2, 3, 4 y 9 y en el art. 514, el deudor puede oponer únicamente las de prescripción, pago total o parcial, quita, espera y remisión. Las cuatro últimas solo pueden probarse por instrumentos públicos o privados o actuaciones judiciales que deben presentarse en sus originales o testimoniadas. Dentro del plazo para oponer excepciones puede invocarse también la caducidad de la inscripción hipotecaria."],
+["568","Informe sobre condiciones del inmueble hipotecado","En la providencia que ordena la intimación de pago y la citación de remate, se debe disponer la anotación del embargo sobre el inmueble hipotecado y el libramiento de oficio al Registro de la Propiedad para que informe: 1) sobre las medidas cautelares y gravámenes que afectan al inmueble, con indicación del importe de los créditos, sus titulares y domicilios; 2) sobre las transferencias realizadas desde la constitución de la hipoteca."],
+["569","Tercer poseedor","Si del informe resulta que el deudor transfirió el inmueble hipotecado, dictada la sentencia de remate contra aquel, se debe intimar al tercer poseedor para que dentro del plazo de 5 días pague la deuda o haga abandono del inmueble, bajo apercibimiento de que la ejecución se seguirá también contra él."],
+["570","Prenda con registro","En la ejecución de prenda con registro solo proceden las excepciones enumeradas en el art. 513 incs. 1, 2, 3, 4, 6 y 9 y en el art. 514, y las sustanciales autorizadas por la ley de la materia."],
+["571","Prenda civil","En la ejecución de la prenda civil solo son oponibles las excepciones que se mencionan en el art. 567 primer párrafo. Son aplicables, en lo pertinente, las disposiciones que rigen la ejecución hipotecaria y la ejecución de prenda con registro."],
+["572","Ejecución comercial: procedencia","Procede la ejecución comercial para el cobro de: 1) fletes de transportes marítimos, terrestres y aéreos, acreditados con la póliza de fletamento o conocimiento o carta de porte o documento análogo, en su original, y en su caso el recibo de las mercaderías; 2) crédito por las vituallas suministradas para la provisión de los buques, justificado con las respectivas facturas valoradas, aprobadas por el capitán, consignatario o cargador."],
+["573","Ejecución comercial: excepciones admisibles","Solo son admisibles las excepciones previstas en el art. 513 incs. 1, 2, 3, 4 y 9 y en el art. 514 y las de prescripción, pago total o parcial, quita, espera y remisión. Las cuatro últimas solo pueden probarse por instrumentos públicos o privados o actuaciones judiciales que deben presentarse en sus originales o testimoniadas."],
+["574","Ejecución fiscal: procedencia","Procede la ejecución fiscal cuando se persigue el cobro de impuestos, patentes, tasas, retribuciones de servicios o mejoras, multas adeudadas a la administración pública, aportes y contribuciones al sistema provincial de previsión social y en los demás casos que las leyes establezcan. La forma del título y su fuerza ejecutiva son las determinadas por la legislación fiscal."],
+["575","Ejecución fiscal: procedimiento","La ejecución fiscal tramita conforme a las reglas que establece la ley que específicamente regula la materia impositiva u otro título al que también por ley se atribuye fuerza ejecutiva. A falta de tales disposiciones o en lo que ellas no prevean proceden las excepciones autorizadas en el art. 513 incs. 1, 2, 3 y 9 y en el art. 514 y las de falsedad material o inhabilidad extrínseca del título, falta de legitimación para obrar pasiva en el ejecutado, pago total o parcial, espera y prescripción. Las excepciones de pago y espera solo pueden probarse con documentos."]]}
+];
+document.getElementById("arts").innerHTML=P.map((p,i)=>`<section id="p${p.id}" class="band s${p.id}${i%2?"":" alt"}"><div class="wrap"><div class="art-head"><div class="numeral" aria-hidden="true">${p.id}</div><h2>${p.t}</h2><p class="tagline">${p.g}<br><span class="rng">${p.r}</span></p></div><div class="grid">${p.a.map(a=>`<article class="card"><div class="hd"><span class="n">Art. ${a[0]}</span><h3>${a[1]}</h3></div><p>${a[2]}</p></article>`).join("")}</div></div></section>`).join("");
+</script>
+</body>
+</html>
