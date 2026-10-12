@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ley 26.657 de Salud Mental en simple: resumen gráfico de los arts. 1 a 46</title>
+<meta name="description" content="Resumen gráfico y en lenguaje sencillo de la Ley Nacional de Salud Mental 26.657: derechos, internaciones voluntarias e involuntarias, órgano de revisión y cambios normativos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F4F7FC; --surface:#FFFFFF; --ink:#16213A; --muted:#55607C; --line:#DCE3F0;
+  --c22:#3D4FD9; --c22t:#E9ECFD; --c22d:#2A39B0;
+  --c23:#08806F; --c23t:#DDF3EE; --c23d:#05604F;
+  --c24:#C42A62; --c24t:#FCE5ED; --c24d:#9C1F4C;
+  --amber:#B7790A; --ambert:#FDF1D6;
+  --on:#FFFFFF;
+  --radius:18px;
+  --font-d:"Bricolage Grotesque","Segoe UI Variable Display","Segoe UI",system-ui,sans-serif;
+  --font-b:"Public Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#0E1424; --surface:#161E36; --ink:#E9EDF9; --muted:#A8B1CB; --line:#27304F;
+    --c22:#97A3FF; --c22t:#1F2757; --c22d:#B9C1FF;
+    --c23:#4DD6BE; --c23t:#0F3B36; --c23d:#8FE8D6;
+    --c24:#FF86AB; --c24t:#4A1A2F; --c24d:#FFB0C8;
+    --amber:#FFC24D; --ambert:#3F3010;
+    --on:#0E1424;
+  }
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-b);font-size:1.0625rem;line-height:1.65;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:var(--font-d);margin:0;line-height:1.12;letter-spacing:-.015em;text-wrap:balance}
+p{margin:0 0 1em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--c22);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:var(--paper);padding:10px 16px;border-radius:10px;z-index:50}
+.skip:focus{left:12px}
+.i{width:26px;height:26px;flex:none}
+.diagram{display:block;width:100%;height:auto}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- navegación ---------- */
+.top{position:sticky;top:0;z-index:20;background:var(--paper);background:color-mix(in srgb,var(--paper) 90%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top-in{max-width:1180px;margin:0 auto;display:flex;align-items:center;gap:20px;padding:10px 24px}
+.brand{font-family:var(--font-d);font-weight:800;font-size:1.08rem;white-space:nowrap}
+.nav{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav a{display:inline-flex;align-items:center;gap:8px;padding:8px 13px;border-radius:999px;color:var(--muted);text-decoration:none;font-weight:600;font-size:.92rem;white-space:nowrap}
+.nav a:hover{color:var(--ink);background:var(--surface)}
+.nav a.on{color:var(--ink);background:var(--surface);box-shadow:inset 0 0 0 1px var(--line)}
+.dot{width:10px;height:10px;border-radius:50%;display:inline-block}
+
+/* ---------- bandas ---------- */
+.band{--panel:var(--surface);padding:84px 0}
+.band.alt{--panel:var(--paper);background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.band h2.sec{font-weight:800;font-size:clamp(1.8rem,3.6vw,2.7rem);letter-spacing:-.025em;max-width:22ch;margin-bottom:12px}
+.band .sec-sub{color:var(--muted);max-width:64ch;font-size:1.08rem;margin-bottom:36px}
+
+/* ---------- hero ---------- */
+.hero{padding:52px 0 84px}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:56px;align-items:center}
+.kicker{margin:0 0 20px;color:var(--muted);font-size:.95rem;font-weight:500;max-width:46ch}
+h1{font-weight:800;font-size:clamp(2.5rem,5.6vw,4.3rem);line-height:1;letter-spacing:-.03em;max-width:15ch;margin-bottom:24px}
+.lead{font-size:1.2rem;max-width:54ch;color:var(--muted)}
+.lead strong{color:var(--ink)}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:13px 22px;border-radius:14px;font-family:var(--font-b);font-size:1rem;font-weight:700;line-height:1.2;text-decoration:none;cursor:pointer;border:2px solid var(--ink);background:transparent;color:var(--ink)}
+.btn.primary{background:var(--ink);color:var(--paper)}
+.btn:hover{transform:translateY(-1px)}
+.legend{list-style:none;margin:30px 0 0;padding:0;display:grid;gap:12px;max-width:56ch}
+.legend li{display:grid;grid-template-columns:18px 1fr;gap:12px;font-size:.98rem;line-height:1.5}
+.legend i{width:18px;height:18px;border-radius:50%;margin-top:3px}
+.hero-svg{max-width:470px;margin:0 auto}
+.hero-svg .ring{transform-box:fill-box;transform-origin:center;animation:grow .9s cubic-bezier(.2,.8,.2,1) both}
+.hero-svg .mid{animation-delay:.15s}
+.hero-svg .pop{transform-box:fill-box;transform-origin:center;animation:grow .6s cubic-bezier(.2,.8,.2,1) .7s both}
+@keyframes grow{from{opacity:0;transform:scale(.86)}to{opacity:1;transform:scale(1)}}
+.ring.out{fill:var(--c22t);stroke:var(--c22);stroke-width:3}
+.ring.mid{fill:var(--c23t);stroke:var(--c23);stroke-width:3}
+.ex{fill:var(--c24);stroke:var(--paper);stroke-width:4}
+.t{font-family:var(--font-d);fill:var(--ink)}
+.t.b{font-weight:800}
+.t.c22{fill:var(--c22d)} .t.c23{fill:var(--c23d)} .t.c24{fill:var(--c24d)}
+.t.w{fill:var(--on);font-weight:800}
+.t.m{fill:var(--muted)}
+
+/* ---------- recorrido en chevrones ---------- */
+.chev{list-style:none;margin:0;padding:0;display:grid;grid-auto-flow:column;grid-auto-columns:1fr}
+.chev>li{background:var(--bg);color:var(--fg);padding:26px 34px 26px 46px;margin-left:-16px;clip-path:polygon(0 0,calc(100% - 22px) 0,100% 50%,calc(100% - 22px) 100%,0 100%,22px 50%)}
+.chev>li:first-child{margin-left:0;padding-left:28px;clip-path:polygon(0 0,calc(100% - 22px) 0,100% 50%,calc(100% - 22px) 100%,0 100%)}
+.chev>li:last-child{padding-right:26px;clip-path:polygon(0 0,100% 0,100% 100%,0 100%,22px 50%)}
+.chev h3{font-size:1.2rem;margin-bottom:8px;color:inherit}
+.chev p{font-size:.95rem;line-height:1.5;margin:0 0 .6em;color:inherit}
+.chev .tag{display:inline-block;font-weight:700;font-size:.82rem;margin-bottom:10px;opacity:.9}
+.pills{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.pills span{background:color-mix(in srgb,var(--fg) 18%,transparent);border-radius:999px;padding:3px 11px;font-size:.84rem;font-weight:600;line-height:1.4}
+
+/* ---------- tabla comparativa ---------- */
+.cmp{width:100%;border-collapse:separate;border-spacing:0;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.cmp th,.cmp td{padding:16px 20px;text-align:left;vertical-align:top;border-top:1px solid var(--line);font-size:.98rem;line-height:1.55}
+.cmp thead th{border-top:0;font-family:var(--font-d);font-size:1.2rem;font-weight:800;padding:20px}
+.cmp thead .h22{background:var(--c22);color:var(--on)}
+.cmp thead .h23{background:var(--c23);color:var(--on)}
+.cmp thead th small{display:block;font-family:var(--font-b);font-weight:500;font-size:.85rem;opacity:.92;margin-top:2px}
+.cmp tbody th{width:19%;font-weight:700;color:var(--muted);font-size:.92rem}
+.cmp td.no{background:var(--c24t)}
+.cmp td.si{background:var(--c23t)}
+
+/* ---------- cabecera de cada artículo ---------- */
+.a22{--ac:var(--c22);--act:var(--c22t);--acd:var(--c22d)}
+.a23{--ac:var(--c23);--act:var(--c23t);--acd:var(--c23d)}
+.a24{--ac:var(--c24);--act:var(--c24t);--acd:var(--c24d)}
+.art-head{display:grid;grid-template-columns:auto 1fr;gap:6px 32px;align-items:end;margin-bottom:34px}
+.numeral{grid-row:span 2;font-family:var(--font-d);font-weight:800;font-size:clamp(5.5rem,14vw,10rem);line-height:.78;letter-spacing:-.06em;color:var(--ac)}
+.art-head h2{font-weight:800;font-size:clamp(1.9rem,4vw,3rem);letter-spacing:-.025em;align-self:end}
+.art-head .tagline{font-size:1.2rem;color:var(--muted);max-width:52ch;margin:0;align-self:start}
+.pages{display:inline-block;margin-top:10px;font-size:.88rem;color:var(--muted);font-weight:500}
+.law{margin:0;border-left:6px solid var(--ac);background:var(--panel);border-radius:0 14px 14px 0;padding:20px 24px;font-size:1.04rem;line-height:1.65;max-width:78ch}
+.law .lbl{display:block;font-family:var(--font-d);font-weight:800;color:var(--acd);font-size:.95rem;margin-bottom:6px}
+.law ol{margin:8px 0 0;padding-left:1.4em;list-style:lower-alpha}
+.simple{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;background:var(--act);border-radius:var(--radius);padding:22px 26px;margin-top:20px;max-width:78ch}
+.simple .badge{display:flex;align-items:center;gap:8px;font-family:var(--font-d);font-weight:800;color:var(--acd);white-space:nowrap}
+.simple .badge svg{width:22px;height:22px}
+.simple p{margin:0}
+
+/* ---------- bloques internos ---------- */
+.blk{margin-top:64px}
+.blk h3{font-weight:800;font-size:clamp(1.35rem,2.4vw,1.8rem);letter-spacing:-.02em;margin-bottom:8px}
+.blk .sub{color:var(--muted);max-width:66ch;margin-bottom:26px}
+.blk h4{font-size:1.1rem;font-weight:700}
+.note{font-size:.92rem;color:var(--muted)}
+
+/* reglas con iconos */
+.rules{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 40px}
+.rule{display:grid;grid-template-columns:54px 1fr;gap:16px;align-items:start}
+.rule .ico{width:54px;height:54px;border-radius:50%;background:var(--ac);color:var(--on);display:grid;place-items:center}
+.rule h4{margin:2px 0 4px}
+.rule p{margin:0;color:var(--muted);font-size:.98rem;line-height:1.55}
+
+/* euler */
+.split{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:44px;align-items:center}
+.eu-o{fill:var(--act);stroke:var(--ac);stroke-width:3}
+.eu-i{fill:var(--ac);fill-opacity:.2;stroke:var(--ac);stroke-width:3}
+.defs{display:grid;gap:18px}
+.def{padding-left:18px;border-left:5px solid var(--ac)}
+.def h4{margin-bottom:2px}
+.def p{margin:0;font-size:.98rem;line-height:1.55;color:var(--muted)}
+.def p strong{color:var(--ink)}
+.ex-tag{display:inline-block;margin-top:6px;font-size:.84rem;font-weight:700;color:var(--acd);background:var(--act);border-radius:999px;padding:2px 11px}
+
+/* chips */
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{padding:9px 16px;border-radius:999px;background:var(--act);color:var(--acd);font-weight:600;font-size:.95rem;line-height:1.35}
+.chip.line{background:transparent;border:2px solid var(--ac)}
+
+/* carriles */
+.lanes{display:grid;gap:16px}
+.lane{border-radius:var(--radius);padding:22px 24px;background:var(--panel);border:1px solid var(--line)}
+.lane h4{margin-bottom:14px}
+.lane.l22{--act:var(--c22t);--acd:var(--c22d)}
+.lane.l23{--act:var(--c23t);--acd:var(--c23d)}
+.lane-row{display:grid;grid-template-columns:1fr auto 1fr;gap:14px;align-items:stretch}
+.node{padding:14px 16px;border-radius:12px;background:var(--act);color:var(--acd);font-weight:600;font-size:.95rem;line-height:1.45;display:flex;align-items:center}
+.wall{width:12px;border-radius:6px;background:var(--c24)}
+.bridge{display:flex;align-items:center;justify-content:center;min-width:160px;background:linear-gradient(var(--c23),var(--c23)) center/100% 3px no-repeat}
+.bridge b{background:var(--c23);color:var(--on);padding:6px 14px;border-radius:999px;font-size:.85rem}
+.lane .why{margin:14px 0 0;font-size:.95rem;color:var(--muted)}
+
+/* árbol regla y excepciones */
+.tree-top{background:var(--ac);color:var(--on);border-radius:var(--radius);padding:26px 30px;font-family:var(--font-d);font-weight:800;font-size:clamp(1.25rem,2.4vw,1.75rem);line-height:1.2;text-align:center}
+.tree-branches{display:grid;grid-template-columns:1fr 1fr;padding-top:38px;
+  background:linear-gradient(var(--c24),var(--c24)) calc(25% - 1.5px) 0/3px 38px no-repeat,linear-gradient(var(--c24),var(--c24)) calc(75% - 1.5px) 0/3px 38px no-repeat}
+.branch{margin:0 10px;border:3px solid var(--c24);border-radius:var(--radius);padding:22px 24px;background:var(--panel)}
+.branch h4{color:var(--c24d);margin-bottom:8px}
+.branch p{margin:0 0 .6em;font-size:.98rem;line-height:1.55}
+.branch .note{margin:0}
+
+/* antes y ahora */
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.ba>div{border-radius:var(--radius);padding:26px}
+.ba .old{background:var(--panel);border:2px dashed var(--line)}
+.ba .new{background:var(--act)}
+.ba h4{font-size:1.2rem;margin-bottom:4px}
+.ba .when{display:block;font-size:.88rem;color:var(--muted);margin-bottom:16px;font-weight:500}
+.ba ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.ba li{padding-left:22px;position:relative;font-size:.98rem;line-height:1.55}
+.ba li::before{content:"";position:absolute;left:0;top:.6em;width:9px;height:9px;border-radius:50%;background:var(--muted)}
+.ba .new li::before{background:var(--ac)}
+.ba li b{display:block}
+
+/* dos paneles */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.pan{background:var(--panel);border:1px solid var(--line);border-top:6px solid var(--ac);border-radius:var(--radius);padding:26px}
+.pan h4{font-size:1.25rem;margin-bottom:10px}
+.pan p{font-size:.98rem;line-height:1.55}
+.pan .norms{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.pan .norms span{font-size:.84rem;font-weight:600;background:var(--act);color:var(--acd);border-radius:8px;padding:3px 10px}
+
+/* organismos */
+.orgs{display:grid;gap:14px}
+.org{display:grid;grid-template-columns:220px 1fr;gap:20px;padding:20px 22px;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius)}
+.org b{font-family:var(--font-d);color:var(--acd);line-height:1.2;font-size:1.08rem}
+.org b small{display:block;font-family:var(--font-b);font-weight:500;color:var(--muted);font-size:.82rem;margin-top:5px;line-height:1.35}
+.org p{margin:0;font-size:.98rem;line-height:1.55}
+.org p+p{margin-top:.5em}
+
+/* gradiente autonomía */
+.grad{display:flex;justify-content:space-between;gap:12px;border-radius:999px;padding:16px 26px;background:linear-gradient(90deg,var(--c23t),var(--c23));font-weight:700;font-size:.95rem;line-height:1.3}
+.grad span:first-child{color:var(--c23d)}
+.grad span:last-child{color:var(--on);text-align:right}
+
+/* escalera */
+.axis{display:flex;align-items:center;gap:14px;font-size:.88rem;font-weight:700;color:var(--muted);margin-bottom:12px}
+.axis i{flex:1;height:3px;background:linear-gradient(90deg,var(--c24t),var(--c24));border-radius:3px}
+.stairs{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;align-items:end}
+.stair{border-radius:var(--radius);padding:24px;display:flex;flex-direction:column}
+.stair h4{font-size:1.3rem;margin-bottom:8px;color:inherit}
+.stair p{font-size:.96rem;line-height:1.55;margin:0 0 .6em;color:inherit}
+.stair small{margin-top:auto;font-weight:700;font-size:.84rem}
+.s1{background:var(--c24t);color:var(--ink);min-height:200px}
+.s2{background:color-mix(in srgb,var(--c24) 45%,var(--c24t));color:var(--ink);min-height:270px}
+.s3{background:var(--c24);color:var(--on);min-height:350px}
+
+/* venn y cadenas */
+.venn-c{fill:var(--ac);fill-opacity:.22;stroke:var(--ac);stroke-width:3}
+.chain{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.chain li{display:flex;align-items:center;gap:8px;font-weight:700;font-family:var(--font-d);font-size:1.05rem;background:var(--act);color:var(--acd);border-radius:999px;padding:8px 18px}
+.chain li+li::before{content:"";width:8px;height:8px;border-right:2.5px solid var(--ac);border-top:2.5px solid var(--ac);transform:rotate(45deg);margin-right:4px}
+.neq{display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+.neq b{font-family:var(--font-d);font-size:1.5rem;color:var(--ac)}
+.bar-old1{fill:var(--line)} .bar-old2{fill:var(--muted);fill-opacity:.4}
+.bar-new1{fill:var(--c24t)} .bar-new2{fill:var(--c24)}
+
+/* balanza */
+.bal{display:grid;grid-template-columns:1fr 1.3fr 1fr;align-items:stretch}
+.bal>div{padding:24px;background:var(--panel);border:1px solid var(--line);font-size:.96rem;line-height:1.55}
+.bal h4{font-size:1.08rem;margin-bottom:8px;color:inherit}
+.bal p{margin:0}
+.bal>div:first-child{border-radius:var(--radius) 0 0 var(--radius)}
+.bal>div:last-child{border-radius:0 var(--radius) var(--radius) 0}
+.bal .mid{background:var(--ac);color:var(--on);border-color:var(--ac);border-radius:var(--radius);margin:-14px 0;z-index:1;display:flex;flex-direction:column;justify-content:center}
+.bal .mid h4{font-size:1.25rem}
+
+/* casos (art. 24) */
+.cases{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.case{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:26px;display:flex;flex-direction:column;gap:14px}
+.case .letter{width:44px;height:44px;border-radius:12px;background:var(--ac);color:var(--on);display:grid;place-items:center;font-family:var(--font-d);font-weight:800;font-size:1.4rem}
+.case h4{font-size:1.3rem}
+.case p{margin:0;font-size:.97rem;line-height:1.55}
+.case .who{background:var(--act);border-radius:12px;padding:12px 14px}
+.case .who b{display:block;color:var(--acd);font-size:.85rem;margin-bottom:2px}
+.case .fine{color:var(--muted);font-size:.9rem}
+
+/* representar y escuchar */
+.vs{display:grid;grid-template-columns:1fr auto 1fr;gap:18px;align-items:stretch}
+.vs>div{border-radius:var(--radius);padding:24px}
+.vs .old{background:var(--panel);border:2px dashed var(--line)}
+.vs .new{background:var(--act)}
+.vs .arrow{align-self:center;width:46px;height:46px;border-radius:50%;background:var(--ac);color:var(--on);display:grid;place-items:center;font-weight:800;font-size:1.3rem}
+.vs h4{margin-bottom:6px}
+.vs p{margin:0;font-size:.97rem;line-height:1.55}
+
+/* detalles desplegables */
+details.more{margin-top:28px;border:1px solid var(--line);border-radius:var(--radius);background:var(--panel)}
+details.more>summary{cursor:pointer;list-style:none;padding:16px 22px;font-weight:700;display:flex;align-items:center;gap:14px}
+details.more>summary::-webkit-details-marker{display:none}
+details.more>summary::before{content:"";width:9px;height:9px;border-right:3px solid var(--ac);border-bottom:3px solid var(--ac);transform:rotate(-45deg);transition:transform .2s;flex:none}
+details.more[open]>summary::before{transform:rotate(45deg)}
+details.more .in{padding:2px 24px 22px}
+details.more .in ul{margin:0;padding-left:1.25em;display:grid;gap:10px}
+details.more .in li{line-height:1.55;font-size:.98rem}
+
+/* lo esencial */
+.take{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 44px}
+.take li{display:grid;grid-template-columns:40px 1fr;gap:14px;align-items:start;font-size:1.02rem;line-height:1.5}
+.take .ck{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--k);color:var(--on)}
+.take .ck svg{width:22px;height:22px}
+.take small{display:block;color:var(--muted);font-size:.84rem;margin-top:2px}
+.t22{--k:var(--c22)} .t23{--k:var(--c23)} .t24{--k:var(--c24)}
+.next{margin-top:56px}
+.next h3{font-weight:800;font-size:1.5rem;margin-bottom:6px}
+.next p{color:var(--muted);max-width:62ch}
+.next .chip{background:var(--surface);border:1px solid var(--line);color:var(--ink)}
+
+/* glosario */
+.gloss{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 44px;margin:0}
+.gloss div{padding:16px 0;border-top:1px solid var(--line)}
+.gloss dt{font-family:var(--font-d);font-weight:700;font-size:1.08rem;margin-bottom:2px}
+.gloss dd{margin:0;color:var(--muted);font-size:.98rem;line-height:1.55}
+
+/* pie */
+.foot{padding:56px 0 72px;color:var(--muted);font-size:.92rem}
+.foot p{max-width:80ch}
+.foot strong{color:var(--ink)}
+
+/* ---------- responsive ---------- */
+@media (max-width:960px){
+  .hero-grid,.split,.duo,.ba,.cases,.rules,.take,.gloss{grid-template-columns:1fr}
+  .hero-grid{gap:36px}
+  .stairs{grid-template-columns:1fr;gap:10px}
+  .stair{min-height:0!important}
+  .s2{margin-left:24px}.s3{margin-left:48px}
+  .bal{grid-template-columns:1fr;gap:12px}
+  .bal>div,.bal>div:first-child,.bal>div:last-child{border-radius:var(--radius)}
+  .bal .mid{margin:0}
+  .vs{grid-template-columns:1fr}
+  .vs .arrow{transform:rotate(90deg);justify-self:center}
+}
+@media (max-width:860px){
+  .chev{grid-auto-flow:row}
+  .chev>li,.chev>li:first-child,.chev>li:last-child{margin:-14px 0 0;padding:28px 24px 38px;clip-path:polygon(0 0,50% 16px,100% 0,100% calc(100% - 18px),50% 100%,0 calc(100% - 18px))}
+  .chev>li:first-child{margin-top:0;padding-top:24px;clip-path:polygon(0 0,100% 0,100% calc(100% - 18px),50% 100%,0 calc(100% - 18px))}
+  .chev>li:last-child{padding-bottom:26px;clip-path:polygon(0 0,50% 16px,100% 0,100% 100%,0 100%)}
+}
+@media (max-width:760px){
+  .band{padding:60px 0}
+  .brand{display:none}
+  .wrap,.top-in{padding-left:18px;padding-right:18px}
+  .cmp thead{display:none}
+  .cmp,.cmp tbody,.cmp tr,.cmp th,.cmp td{display:block;width:100%}
+  .cmp tbody th{width:100%;background:var(--paper);padding:12px 18px}
+  .cmp td::before{content:attr(data-h);display:block;font-weight:700;font-size:.8rem;color:var(--muted);margin-bottom:2px}
+  .art-head{grid-template-columns:1fr;gap:6px}
+  .numeral{grid-row:auto;font-size:6.5rem}
+  .simple{grid-template-columns:1fr}
+  .lane-row{grid-template-columns:1fr}
+  .wall{width:auto;height:12px}
+  .bridge{min-height:52px;background:linear-gradient(var(--c23),var(--c23)) center/3px 100% no-repeat}
+  .tree-branches{grid-template-columns:1fr;padding-top:18px;background:none;gap:14px}
+  .branch{margin:0}
+  .org{grid-template-columns:1fr;gap:8px}
+  .grad{flex-direction:column;border-radius:var(--radius);gap:6px}
+  .grad span:last-child{text-align:left}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+}
+@media print{
+  .top,.hero-actions,.skip{display:none}
+  body{background:#fff}
+  .band{padding:28px 0;break-inside:avoid-page}
+  .hero-svg .ring,.hero-svg .pop{animation:none}
+}
+
+/* ---------- ampliación de la paleta y componentes de esta página ---------- */
+:root{--c3:#7A44D1;--c3t:#EFE6FB;--c3d:#5A2BA8;--c4:#0B72B5;--c4t:#DDEFFA;--c4d:#085789;--ambd:#7A5006}
+@media (prefers-color-scheme:dark){:root{--c3:#BD9BFF;--c3t:#2D1D4E;--c3d:#D8C4FF;--c4:#6CC4FF;--c4t:#0F3550;--c4d:#A9DCFF;--ambd:#FFD27A}}
+.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ck .i{stroke-width:2.4}
+.a31{--ac:var(--c22);--act:var(--c22t);--acd:var(--c22d)}
+.a34{--ac:var(--c23);--act:var(--c23t);--acd:var(--c23d)}
+.a38{--ac:var(--c24);--act:var(--c24t);--acd:var(--c24d)}
+.a41{--ac:var(--amber);--act:var(--ambert);--acd:var(--ambd)}
+.a43{--ac:var(--c3);--act:var(--c3t);--acd:var(--c3d)}
+.a44{--ac:var(--c4);--act:var(--c4t);--acd:var(--c4d)}
+.t31{--k:var(--c22)}.t34{--k:var(--c23)}.t38{--k:var(--c24)}.t41{--k:var(--amber)}.t43{--k:var(--c3)}.t44{--k:var(--c4)}
+.numeral.rg{font-size:clamp(3.6rem,9.5vw,6.8rem);line-height:.9;letter-spacing:-.05em}
+.cmp thead .h24{background:var(--c24);color:var(--on)}
+.tile{fill:var(--c23t);stroke:var(--c23);stroke-width:2}
+.tile.r{fill:var(--c24t);stroke:var(--c24);stroke-width:3}
+.apoyo{fill:none;stroke:var(--c22);stroke-width:4}
+.lane.l41{--act:var(--ambert);--acd:var(--ambd)}
+.a43 .s1{background:var(--c3t)}
+.a43 .s2{background:color-mix(in srgb,var(--c3) 45%,var(--c3t))}
+.a43 .s3{background:var(--c3)}
+.a43 .axis i{background:linear-gradient(90deg,var(--c3t),var(--c3))}
+@media (max-width:760px){.numeral.rg{font-size:4.2rem}}
+
+.tri-r{fill:var(--c22t);stroke:var(--c22);stroke-width:3}
+.tri-a{fill:var(--c23t);stroke:var(--c23);stroke-width:3}
+/* ---------- reloj de controles (línea de tiempo responsiva) ---------- */
+.tl{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:0 14px}
+.tl li{position:relative;padding:26px 6px 0 0;border-top:4px solid var(--ac);font-size:.95rem;line-height:1.5}
+.tl li::before{content:"";position:absolute;top:-10px;left:0;width:16px;height:16px;border-radius:50%;background:var(--ac);border:3px solid var(--paper)}
+.tl b{display:block;font-family:var(--font-d);font-size:1.35rem;color:var(--acd);margin-bottom:4px;line-height:1.1}
+.band:not(.alt) .tl li::before{border-color:var(--surface)}
+@media (max-width:960px){
+  .tl{grid-template-columns:1fr;gap:0}
+  .tl li{border-top:0;border-left:4px solid var(--ac);padding:0 0 24px 26px;margin-left:8px}
+  .tl li::before{top:2px;left:-11px}
+  .tl li:last-child{padding-bottom:0}
+}
+@media (max-width:760px){.numeral.rg{font-size:4.2rem}.stairs .stair{margin-left:0!important}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-flag" viewBox="0 0 24 24"><path d="M5 21V4M5 4h11l-2 4 2 4H5"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></symbol>
+  <symbol id="i-noteq" viewBox="0 0 24 24"><path d="M5 9h14M5 15h14M7 20L17 4"/></symbol>
+  <symbol id="i-half" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3v18"/><path d="M12 3a9 9 0 010 18z" fill="currentColor" stroke="none" opacity=".35"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.4-3.2 7.8-8 9-4.8-1.2-8-4.6-8-9V6z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></symbol>
+<symbol id="i-team" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20v-1a5 5 0 015-5h2a5 5 0 015 5v1"/><circle cx="17" cy="9" r="2.4"/><path d="M17.5 14.2A4 4 0 0121 18v1.5"/></symbol>
+</svg>
+<a class="skip" href="#panorama">Saltar al contenido</a>
+<header class="top"><div class="top-in">
+  <div class="brand">Salud mental, Internaciones</div>
+  <nav class="nav" aria-label="Secciones de la página">
+    <a href="#panorama">Panorama</a>
+    <a href="#quees"><i class="dot" style="background:var(--c22)"></i>Arts. 1-6</a>
+    <a href="#derechos"><i class="dot" style="background:var(--c23)"></i>Arts. 7-13</a>
+    <a href="#internar"><i class="dot" style="background:var(--c24)"></i>Arts. 14-19</a>
+    <a href="#invol"><i class="dot" style="background:var(--amber)"></i>Arts. 20-26</a>
+    <a href="#donde"><i class="dot" style="background:var(--c3)"></i>Arts. 27-30</a>
+    <a href="#control"><i class="dot" style="background:var(--c4)"></i>Arts. 31-46</a>
+    <a href="#esencial">Lo esencial</a>
+    <a href="#glosario">Glosario</a>
+  </nav>
+</div></header>
+
+<main>
+<section id="panorama">
+  <div class="hero band"><div class="wrap hero-grid">
+    <div>
+      <p class="kicker">Ley 26.657, Ley Nacional de Salud Mental. Sancionada el 25/11/2010 y publicada en el Boletín Oficial el 03/12/2010</p>
+      <h1>Salud mental-Internaciones</h1>
+      <p class="lead">Resumen gráfico de los <strong>46 artículos</strong> de la ley. Responde: <strong>¿qué derechos tiene una persona con padecimiento mental?</strong> y <strong>¿cuándo y cómo se la puede internar?</strong></p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#camino">Ver el recorrido</a>
+        <button class="btn" id="toggleAll" type="button">Abrir todos los detalles</button>
+      </div>
+      <ul class="legend">
+        <li><i style="background:var(--c22)"></i><span><strong>Índigo:</strong> qué protege la ley (arts. 1 a 6)</span></li>
+        <li><i style="background:var(--c23)"></i><span><strong>Verde:</strong> derechos y atención (arts. 7 a 13)</span></li>
+        <li><i style="background:var(--c24)"></i><span><strong>Rosa:</strong> internaciones (arts. 14 a 19)</span></li>
+        <li><i style="background:var(--amber)"></i><span><strong>Ocre:</strong> internación involuntaria (arts. 20 a 26)</span></li>
+        <li><i style="background:var(--c3)"></i><span><strong>Violeta:</strong> dónde se atiende (arts. 27 a 30)</span></li>
+        <li><i style="background:var(--c4)"></i><span><strong>Azul:</strong> quién controla (arts. 31 a 46)</span></li>
+      </ul>
+    </div>
+    <svg class="diagram hero-svg" viewBox="0 0 420 330" role="img" aria-labelledby="hsT hsD">
+      <title id="hsT">Primero la comunidad, la internación al final</title>
+      <desc id="hsD">Círculos encajados: familia y comunidad, atención ambulatoria y, en el centro más pequeño, la internación como último recurso.</desc>
+      <circle class="ring out" cx="210" cy="175" r="150"/>
+      <circle class="ring mid" cx="210" cy="230" r="95"/>
+      <circle class="ex pop" cx="210" cy="282" r="38"/>
+      <text class="t b c22" x="210" y="68" text-anchor="middle" font-size="18">Familia y comunidad</text>
+      <text class="t b c23" x="210" y="168" text-anchor="middle" font-size="16">Atención ambulatoria</text>
+      <text class="t w" x="210" y="287" text-anchor="middle" font-size="14">Internación</text>
+    </svg>
+  </div></div>
+
+  <div class="band alt" id="camino"><div class="wrap">
+    <h2 class="sec">El recorrido de una internación involuntaria</h2>
+    <p class="sec-sub">Es la situación más delicada de la ley. Desde la decisión del equipo de salud hasta el control del juez.</p>
+    <ol class="chev">
+      <li style="--bg:var(--c22);--fg:var(--on)"><span class="tag">Art. 20</span><h3>Hay un peligro real y cercano</h3><p>Para la persona o para otros, y no hay otra forma eficaz de tratarla.</p></li>
+      <li style="--bg:var(--c23);--fg:var(--on)"><span class="tag">Art. 21</span><h3>Se avisa al juez en 10 horas</h3><p>También al Órgano de Revisión.</p></li>
+      <li style="--bg:var(--c24);--fg:var(--on)"><span class="tag">Art. 21</span><h3>En 48 horas, todos los papeles</h3><p>Dictamen de dos profesionales y demás constancias.</p></li>
+      <li style="--bg:var(--ink);--fg:var(--paper)"><span class="tag">Art. 21</span><h3>El juez decide en 3 días</h3><p>Autoriza, pide más informes o la rechaza y la persona sale de inmediato.</p></li>
+    </ol>
+  </div></div>
+
+  <div class="band" id="comparacion"><div class="wrap">
+    <h2 class="sec">Internación voluntaria e involuntaria, cara a cara</h2>
+    <p class="sec-sub">Las dos formas de internarse que prevé la ley. La diferencia clave es si la persona está de acuerdo o no.</p>
+    <table class="cmp">
+      <thead><tr><th scope="col"><span class="sr-only">Aspecto</span></th><th scope="col" class="h22">Voluntaria<small>Arts. 16 y 18</small></th><th scope="col" class="h24">Involuntaria<small>Arts. 20 a 25</small></th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Quién acepta</th><td data-h="Voluntaria">La propia persona, con lucidez y comprensión.</td><td data-h="Involuntaria">No hay consentimiento: decide el equipo de salud.</td></tr>
+        <tr><th scope="row">Cuándo corresponde</th><td data-h="Voluntaria">Cuando aporta más beneficios que otras opciones en su entorno.</td><td data-h="Involuntaria">Solo con riesgo cierto e inminente para sí o para otros y sin otra alternativa.</td></tr>
+        <tr><th scope="row">¿Puede irse?</th><td data-h="Voluntaria">Sí, cuando quiera.</td><td data-h="Involuntaria">No. El alta la da el equipo, apenas cesa el riesgo.</td></tr>
+        <tr><th scope="row">Papel del juez</th><td data-h="Voluntaria">Se le avisa si pasan 60 días. En 5 días decide si sigue siendo voluntaria.</td><td data-h="Involuntaria">Se le avisa en 10 horas y controla la medida desde el inicio.</td></tr>
+      </tbody>
+    </table>
+  </div></div>
+</section>
+
+<!-- ============ ARTS. 1 A 6 ============ -->
+<section id="quees" class="band alt a31"><div class="wrap">
+  <div class="art-head">
+    <div class="numeral rg" aria-hidden="true">1-6</div>
+    <h2>Qué protege la ley</h2>
+    <p class="tagline">Asegura el derecho a la salud mental de todas las personas y que nadie pierda sus derechos por tener un padecimiento mental.<br><span class="pages">Artículos 1 a 6</span></p>
+  </div>
+  <blockquote class="law"><span class="lbl">Lo que dice la ley</span>Se debe partir de la presunción de capacidad de todas las personas. (art. 3)</blockquote>
+  <div class="simple"><div class="badge"><svg class="i" aria-hidden="true"><use href="#i-chat"/></svg>En simple</div><p>Se presume que toda persona es capaz. Tener un diagnóstico no alcanza para decir que alguien es peligroso o incapaz: eso solo se sabe con una evaluación de varios profesionales.</p></div>
+
+  <div class="blk">
+    <h3>Un diagnóstico no es una sentencia</h3>
+    <div class="vs">
+      <div class="old"><h4>Un diagnóstico</h4><p>No autoriza a suponer que la persona es peligrosa o incapaz.</p></div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="new"><h4>Una evaluación de varios profesionales</h4><p>Es lo único que puede mostrar si hay riesgo o incapacidad, <strong>caso por caso y en un momento determinado</strong> (art. 5).</p></div>
+    </div>
+  </div>
+
+  <div class="blk">
+    <h3>Lo que nunca alcanza, por sí solo, para un diagnóstico</h3>
+    <p class="sub">Art. 3: no se puede diagnosticar a alguien solo por alguna de estas razones.</p>
+    <div class="chips"><span class="chip">Su situación política o económica, o su grupo cultural, racial o religioso</span><span class="chip">Reclamos de su familia o de su trabajo</span><span class="chip">No pensar o vivir como la mayoría</span><span class="chip">Su elección o identidad sexual</span><span class="chip">Haber estado antes en tratamiento o internado</span></div>
+    <details class="more"><summary>Más detalle: adicciones, alcance y normas internacionales</summary><div class="in"><ul>
+      <li><strong>Adicciones (art. 4):</strong> forman parte de las políticas de salud mental. Quienes tienen un uso problemático de drogas, legales o ilegales, tienen los mismos derechos y garantías.</li>
+      <li><strong>Quiénes deben cumplirla (art. 6):</strong> todos los servicios de salud, públicos y privados, sin importar su forma jurídica.</li>
+      <li><strong>Normas internacionales (arts. 1 y 2):</strong> los tratados de derechos humanos tienen jerarquía constitucional. Las provincias pueden dar más protección, nunca menos. Los Principios de la ONU de 1991 forman parte de la ley.</li></ul></div></details>
+  </div>
+</div></section>
+
+<!-- ============ ARTS. 7 A 13 ============ -->
+<section id="derechos" class="band a34"><div class="wrap">
+  <div class="art-head">
+    <div class="numeral rg" aria-hidden="true">7-13</div>
+    <h2>Derechos y cómo debe ser la atención</h2>
+    <p class="tagline">Atención humana, con equipo de varias disciplinas, preferentemente fuera del hospital y siempre con consentimiento informado.<br><span class="pages">Artículos 7 a 13</span></p>
+  </div>
+  <blockquote class="law"><span class="lbl">Lo que dice la ley</span>Por principio rige el consentimiento informado para todo tipo de intervenciones, con las únicas excepciones y garantías establecidas en la presente ley. (art. 10)</blockquote>
+  <div class="simple"><div class="badge"><svg class="i" aria-hidden="true"><use href="#i-chat"/></svg>En simple</div><p>La persona decide sobre su tratamiento y le explican todo en forma clara, también con apoyos si tiene alguna discapacidad. Solo hay excepciones cuando la propia ley las prevé.</p></div>
+
+  <div class="blk">
+    <h3>Seis derechos que conviene recordar</h3>
+    <p class="sub">El art. 7 enumera dieciséis. Estos son los más cotidianos.</p>
+    <div class="rules">
+      <div class="rule"><div class="ico"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></div><div><h4>Decidir e informarse</h4><p>Puede decidir sobre su atención dentro de sus posibilidades y debe recibir información clara y comprensible.</p></div></div>
+      <div class="rule"><div class="ico"><svg class="i" aria-hidden="true"><use href="#i-half"/></svg></div><div><h4>El tratamiento que menos restrinja</h4><p>Se elige la alternativa que menos limite sus derechos y libertades, y que ayude a integrarla a su familia y comunidad.</p></div></div>
+      <div class="rule"><div class="ico"><svg class="i" aria-hidden="true"><use href="#i-team"/></svg></div><div><h4>Un equipo de varias disciplinas</h4><p>Psicología, psiquiatría, trabajo social, enfermería, terapia ocupacional y otras (art. 8).</p></div></div>
+      <div class="rule"><div class="ico"><svg class="i" aria-hidden="true"><use href="#i-lock"/></svg></div><div><h4>Intimidad y no discriminación</h4><p>Se respeta su vida privada y nadie puede discriminarla por un padecimiento mental actual o pasado.</p></div></div>
+      <div class="rule"><div class="ico"><svg class="i" aria-hidden="true"><use href="#i-flag"/></svg></div><div><h4>Medicación solo para curar</h4><p>Nunca como castigo, por conveniencia de otros o para reemplazar el acompañamiento. No se renueva en forma automática (art. 12).</p></div></div>
+      <div class="rule"><div class="ico"><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg></div><div><h4>Acompañada y con acceso a su historia</h4><p>Puede ir con quien elija. Ella, su abogado o un allegado que designe pueden ver su historia clínica.</p></div></div>
+    </div>
+  </div>
+
+  <div class="blk">
+    <h3>Atender cerca de la gente: el menú de la ley</h3>
+    <p class="sub">El art. 9 pide atender, preferentemente, fuera del hospital. El art. 11 impulsa estos dispositivos.</p>
+    <div class="chips"><span class="chip">Consultas ambulatorias</span><span class="chip">Hospitales de día</span><span class="chip">Casas de convivencia</span><span class="chip">Atención domiciliaria supervisada</span><span class="chip">Cooperativas de trabajo</span><span class="chip">Centros de capacitación laboral</span><span class="chip">Emprendimientos sociales</span><span class="chip">Hogares y familias sustitutas</span></div>
+    <details class="more"><summary>Más detalle: otros derechos y el equipo de salud</summary><div class="in"><ul>
+      <li>No ser objeto de investigaciones ni tratamientos experimentales sin consentimiento fehaciente.</li>
+      <li>No ser sometida a trabajos forzados. Si participa en laborterapia o trabajos comunitarios cuyos productos se comercializan, cobra una justa compensación.</li>
+      <li>Que el padecimiento mental no sea considerado un estado inmodificable.</li>
+      <li>Recibir o rechazar asistencia espiritual o religiosa, y conocer y preservar su identidad e historia.</li>
+      <li>Art. 13: cualquier profesional con título de grado puede ocupar cargos de conducción, y todo el equipo tiene derecho a capacitación permanente y a cuidar su propia salud.</li></ul></div></details>
+  </div>
+</div></section>
+
+<!-- ============ ARTS. 14 A 19 ============ -->
+<section id="internar" class="band alt a38"><div class="wrap">
+  <div class="art-head">
+    <div class="numeral rg" aria-hidden="true">14-19</div>
+    <h2>Internaciones: las reglas de base</h2>
+    <p class="tagline">La internación es un recurso de último momento: restrictivo, lo más breve posible y con los papeles en regla.<br><span class="pages">Artículos 14 a 19</span></p>
+  </div>
+  <blockquote class="law"><span class="lbl">Lo que dice la ley</span>La internación es considerada como un recurso terapéutico de carácter restrictivo. (art. 14)</blockquote>
+  <div class="simple"><div class="badge"><svg class="i" aria-hidden="true"><use href="#i-chat"/></svg>En simple</div><p>Solo se interna si hace más bien que cualquier otra opción cerca de su familia y su comunidad. Nunca se interna ni se prolonga la internación por falta de vivienda o por problemas sociales.</p></div>
+
+  <div class="blk">
+    <h3>Tres reglas para toda internación</h3>
+    <div class="cases">
+      <article class="case"><div class="letter">a</div><h4>Lo más breve posible</h4>
+        <div class="who"><b>Cómo se cuida</b>La evolución de la persona y cada intervención se anotan a diario en la historia clínica (art. 15).</div></article>
+      <article class="case"><div class="letter">b</div><h4>En 48 horas, tres requisitos</h4>
+        <div class="who"><b>Qué debe constar</b>Evaluación con la firma de dos profesionales (uno psicólogo o psiquiatra); búsqueda de datos de identidad y familia; consentimiento informado si corresponde (art. 16).</div></article>
+      <article class="case"><div class="letter">c</div><h4>Mantener los vínculos</h4>
+        <div class="who"><b>Con quién</b>Familiares, allegados, trabajo. Si está sola, la institución busca a su familia para facilitar su regreso (arts. 14 y 17).</div></article>
+    </div>
+  </div>
+
+  <div class="blk">
+    <h3>Si la persona acepta internarse</h3>
+    <p class="sub">El consentimiento solo vale mientras haya lucidez y comprensión (art. 16).</p>
+    <div class="vs">
+      <div class="old"><h4>Si la persona entiende</h4><p>La internación es voluntaria y <strong>puede irse cuando quiera</strong> (art. 18).</p></div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="new"><h4>Si deja de entender</h4><p>Por su salud o por los medicamentos: se la trata <strong>como internación involuntaria</strong>.</p></div>
+    </div>
+    <details class="more"><summary>Más detalle: 60 días y responsabilidad</summary><div class="in"><ul>
+      <li>Si una internación voluntaria pasa de 60 días corridos, el equipo avisa al Órgano de Revisión y al juez. En un máximo de 5 días el juez decide si sigue siendo voluntaria o pasa a ser involuntaria.</li>
+      <li>Si la internación se prolonga por motivos sociales, el juez ordena incluirla en programas sociales y dispositivos específicos y que salga cuanto antes.</li>
+      <li>Art. 19: el consentimiento obtenido con engaño (dolo) o no informar lo que la ley exige puede traer responsabilidad civil y penal al profesional y al director de la institución.</li></ul></div></details>
+  </div>
+</div></section>
+
+<!-- ============ ARTS. 20 A 26 ============ -->
+<section id="invol" class="band a41"><div class="wrap">
+  <div class="art-head">
+    <div class="numeral rg" aria-hidden="true">20-26</div>
+    <h2>Internación involuntaria</h2>
+    <p class="tagline">Sin consentimiento, solo como excepción y con control del juez desde las primeras horas.<br><span class="pages">Artículos 20 a 26</span></p>
+  </div>
+  <blockquote class="law"><span class="lbl">Lo que dice la ley</span>Sólo podrá realizarse cuando a criterio del equipo de salud mediare situación de riesgo cierto e inminente para sí o para terceros. (art. 20)</blockquote>
+  <div class="simple"><div class="badge"><svg class="i" aria-hidden="true"><use href="#i-chat"/></svg>En simple</div><p>Solo si hay un peligro real y cercano, para la persona o para otros, y no existe otra forma eficaz de tratarla. La decide el equipo de salud, pero el juez la controla.</p></div>
+
+  <div class="blk">
+    <h3>Tres requisitos (art. 20)</h3>
+    <div class="cases">
+      <article class="case"><div class="letter">a</div><h4>Dictamen de dos profesionales</h4>
+        <div class="who"><b>Quiénes</b>De distintas disciplinas, uno psicólogo o psiquiatra, sin parentesco, amistad ni vínculos económicos con la persona.</div></article>
+      <article class="case"><div class="letter">b</div><h4>No hay otra alternativa</h4>
+        <div class="who"><b>Qué se acredita</b>Que no existe otra forma eficaz de tratarla, y que los abordajes ambulatorios no son posibles.</div></article>
+      <article class="case"><div class="letter">c</div><h4>Informe de pasos previos</h4>
+        <div class="who"><b>Qué se informa</b>Qué se intentó antes, si se hizo algo.</div></article>
+    </div>
+  </div>
+
+  <div class="blk">
+    <h3>El reloj de los controles</h3>
+    <p class="sub">Los plazos que corren desde que empieza la internación (arts. 21, 24 y 25).</p>
+    <ol class="tl">
+      <li><b>10 horas</b>Se avisa al juez y al Órgano de Revisión.</li>
+      <li><b>48 horas</b>Se entregan todos los papeles del art. 20.</li>
+      <li><b>3 días</b>El juez autoriza, pide más informes o la niega: si la niega, la persona sale de inmediato.</li>
+      <li><b>7 días</b>El juez informa al Órgano de Revisión.</li>
+      <li><b>Cada 30 días</b>El juez pide informes para ver si la internación sigue siendo necesaria.</li>
+      <li><b>90 días</b>Tras el tercer informe, un equipo nuevo e independiente la vuelve a evaluar.</li>
+    </ol>
+    <p class="note" style="margin-top:14px">Si hay diferencia de criterio entre equipos, el juez elige siempre la opción que menos restrinja la libertad de la persona (art. 24).</p>
+  </div>
+
+  <div class="blk">
+    <h3>Defensa y alta</h3>
+    <div class="duo">
+      <div class="pan"><h4>Abogado desde el primer momento</h4><p>Si la persona no elige uno, el Estado se lo da. El abogado puede oponerse a la internación y pedir la salida en cualquier momento, y controlar el expediente (art. 22).</p></div>
+      <div class="pan"><h4>El alta la da el equipo de salud</h4><p>No necesita autorización del juez, pero sí debe informarle. Apenas cesa el riesgo, debe dar el alta o convertir la internación en voluntaria (art. 23).</p></div>
+    </div>
+    <details class="more"><summary>Más detalle: excepciones y menores de edad</summary><div class="in"><ul>
+      <li>El juez solo puede ordenar por sí mismo una internación involuntaria si, cumplidos los requisitos, el servicio de salud responsable de la cobertura se niega a hacerla (art. 21).</li>
+      <li>El art. 23 exceptúa las internaciones del art. 34 del Código Penal.</li>
+      <li>Art. 26: para menores de edad o personas declaradas incapaces rigen estas mismas reglas. Para niños, niñas y adolescentes, además, la normativa de protección integral de derechos.</li></ul></div></details>
+  </div>
+</div></section>
+
+<!-- ============ ARTS. 27 A 30 ============ -->
+<section id="donde" class="band alt a43"><div class="wrap">
+  <div class="art-head">
+    <div class="numeral rg" aria-hidden="true">27-30</div>
+    <h2>Dónde se atiende y cómo se cuida</h2>
+    <p class="tagline">Se terminan los manicomios y las internaciones se hacen en hospitales generales.<br><span class="pages">Artículos 27 a 30</span></p>
+  </div>
+  <blockquote class="law"><span class="lbl">Lo que dice la ley</span>Queda prohibida por la presente ley la creación de nuevos manicomios, neuropsiquiátricos o instituciones de internación monovalentes, públicos o privados. (art. 27)</blockquote>
+  <div class="simple"><div class="badge"><svg class="i" aria-hidden="true"><use href="#i-chat"/></svg>En simple</div><p>No se pueden abrir lugares nuevos que solo internen por salud mental. Los que ya existen se van cambiando por otros dispositivos, sin quitar derechos ni puestos al personal.</p></div>
+
+  <div class="blk">
+    <h3>De los manicomios a la comunidad</h3>
+    <div class="axis" aria-hidden="true"><span>Hoy</span><i></i><span>La meta</span></div>
+    <div class="stairs">
+      <div class="stair s1"><h4>Los que existen se adaptan</h4><p>Deben cumplir los objetivos de la ley. No se reduce personal ni se pierden derechos adquiridos.</p><small>Art. 27</small></div>
+      <div class="stair s2"><h4>No se crean nuevos</h4><p>Ni públicos ni privados.</p><small>Art. 27</small></div>
+      <div class="stair s3"><h4>Se sustituyen por alternativas</h4><p>Hospitales generales y dispositivos de base comunitaria.</p><small>Arts. 27 y 28</small></div>
+    </div>
+  </div>
+
+  <div class="blk">
+    <h3>Dos reglas importantes</h3>
+    <div class="duo">
+      <div class="pan"><h4>Hospitales generales</h4><p>Las internaciones de salud mental se hacen en hospitales generales, que deben tener los recursos. Rechazar a un paciente solo porque tiene un problema de salud mental es un acto discriminatorio (art. 28).</p></div>
+      <div class="pan"><h4>Denunciar es un deber</h4><p>Todo el equipo debe avisar al Órgano de Revisión y al juez si sospecha un trato indigno o inhumano, o una limitación indebida de la autonomía. Avisar al jefe no alcanza si sigue ocurriendo (art. 29).</p></div>
+    </div>
+    <details class="more"><summary>Más detalle: reserva de identidad y traslados</summary><div class="in"><ul>
+      <li>La denuncia puede hacerse con reserva de identidad, con resguardo del empleo, y no viola el secreto profesional.</li>
+      <li>Art. 30: derivar a la persona fuera de su comunidad solo corresponde si va a un lugar donde tiene más apoyo. Debe viajar con acompañante de su entorno, y si no hay consentimiento se informa al Órgano de Revisión.</li></ul></div></details>
+  </div>
+</div></section>
+
+<!-- ============ ARTS. 31 A 46 ============ -->
+<section id="control" class="band a44"><div class="wrap">
+  <div class="art-head">
+    <div class="numeral rg" aria-hidden="true">31-46</div>
+    <h2>Quién controla y qué cambia</h2>
+    <p class="tagline">Quién aplica la ley, quién la vigila y qué otras normas modifica.<br><span class="pages">Artículos 31 a 46</span></p>
+  </div>
+  <blockquote class="law"><span class="lbl">Lo que dice la ley</span>Créase en el ámbito del Ministerio Público de la Defensa el Órgano de Revisión con el objeto de proteger los derechos humanos de los usuarios de los servicios de salud mental. (art. 38)</blockquote>
+  <div class="simple"><div class="badge"><svg class="i" aria-hidden="true"><use href="#i-chat"/></svg>En simple</div><p>El Ministerio de Salud aplica la ley. Un organismo aparte, el Órgano de Revisión, vigila que se respeten los derechos de quienes usan los servicios de salud mental.</p></div>
+
+  <div class="blk">
+    <h3>Los actores y qué hace cada uno</h3>
+    <div class="orgs">
+      <div class="org"><b>Ministerio de Salud de la Nación<small>Autoridad de Aplicación. Arts. 31 a 37</small></b><div><p>Arma el Plan Nacional de Salud Mental y promueve que el presupuesto de salud mental llegue al menos al 10 % del total de salud (en 3 años).</p><p>Recomienda cómo formar profesionales, fija estándares para habilitar servicios, hace un censo nacional de internados (primero a los 180 días, luego cada 2 años) y promueve que las obras sociales cubran salud mental.</p></div></div>
+      <div class="org"><b>Órgano de Revisión<small>Arts. 38 a 40</small></b><div><p>Funciona en el Ministerio Público de la Defensa y lo integran Salud, Derechos Humanos, la Defensa, usuarios y familiares, profesionales y organizaciones de derechos humanos.</p><p>Supervisa las internaciones, controla que las involuntarias estén justificadas y no se alarguen, puede denunciar irregularidades y apelar decisiones del juez.</p></div></div>
+      <div class="org"><b>Provincias<small>Art. 41</small></b><div><p>La Nación firma convenios con las jurisdicciones: cooperación técnica y económica, capacitación de los equipos y áreas propias de salud mental.</p></div></div>
+      <div class="org"><b>Cambios al Código Civil<small>Arts. 42 y 43</small></b><div><p>Las declaraciones de incapacidad o inhabilitación necesitan un examen interdisciplinario, duran hasta 3 años y deben decir qué actos se limitan. Una persona declarada incapaz solo puede ser privada de su libertad si hay riesgo cierto e inminente, con control judicial.</p></div></div>
+      <div class="org"><b>Cierre<small>Arts. 44 a 46</small></b><div><p>Deroga la Ley 22.914 y establece que esta ley es de <strong>orden público</strong>: no se puede dejar de lado por acuerdo entre partes.</p></div></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- ============ LO ESENCIAL ============ -->
+<section id="esencial" class="band alt"><div class="wrap">
+  <h2 class="sec">Lo esencial en ocho ideas</h2>
+  <p class="sec-sub">El color indica el bloque de artículos, igual que en el resto de la página.</p>
+  <ul class="take">
+    <li class="t31"><span class="ck"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><span>Toda persona se presume capaz. Un diagnóstico no alcanza para decir que alguien es peligroso o incapaz.<small>Arts. 3 y 5</small></span></li>
+    <li class="t34"><span class="ck"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><span>Rige el consentimiento informado: la persona decide sobre su tratamiento y se le explica todo con claridad.<small>Arts. 7 y 10</small></span></li>
+    <li class="t34"><span class="ck"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><span>La atención la brinda un equipo de varias disciplinas, preferentemente fuera del hospital y con el tratamiento que menos restrinja.<small>Arts. 7 a 9</small></span></li>
+    <li class="t38"><span class="ck"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><span>La internación es un recurso de último momento, lo más breve posible y nunca por falta de vivienda.<small>Arts. 14 y 15</small></span></li>
+    <li class="t41"><span class="ck"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><span>La internación involuntaria exige peligro real y cercano, dos profesionales y aviso al juez en 10 horas.<small>Arts. 20 y 21</small></span></li>
+    <li class="t41"><span class="ck"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><span>El juez controla (3 días, 7 días, cada 30 días y a los 90 días). La persona tiene abogado desde el inicio.<small>Arts. 21 a 25</small></span></li>
+    <li class="t43"><span class="ck"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><span>No se crean nuevos manicomios y las internaciones se hacen en hospitales generales.<small>Arts. 27 y 28</small></span></li>
+    <li class="t44"><span class="ck"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span><span>El Órgano de Revisión vigila el cumplimiento de la ley, y el Ministerio de Salud es la autoridad que la aplica.<small>Arts. 31 y 38 a 40</small></span></li>
+  </ul>
+</div></section>
+
+<!-- ============ GLOSARIO ============ -->
+<section id="glosario" class="band"><div class="wrap">
+  <h2 class="sec">Glosario sin vueltas</h2>
+  <p class="sec-sub">Las palabras difíciles de la ley, explicadas en pocas líneas.</p>
+  <dl class="gloss">
+    <div><dt>Padecimiento mental</dt><dd>Sufrimiento o dificultad de salud mental. La ley protege a quien lo atraviesa y a todas las personas.</dd></div>
+    <div><dt>Presunción de capacidad</dt><dd>Se da por hecho que la persona puede decidir por sí misma, salvo que se pruebe otra cosa.</dd></div>
+    <div><dt>Consentimiento informado</dt><dd>La persona acepta un tratamiento después de que le explicaron de qué se trata y qué otras opciones hay.</dd></div>
+    <div><dt>Equipo interdisciplinario</dt><dd>Profesionales de distintas áreas que trabajan juntos: psicología, psiquiatría, trabajo social y otras.</dd></div>
+    <div><dt>Internación voluntaria</dt><dd>La persona acepta internarse y puede irse cuando quiera.</dd></div>
+    <div><dt>Internación involuntaria</dt><dd>Sin consentimiento de la persona, solo por peligro real y cercano, y con control del juez.</dd></div>
+    <div><dt>Riesgo cierto e inminente</dt><dd>Un peligro real, no imaginado, que puede ocurrir en forma cercana, para la persona o para otros.</dd></div>
+    <div><dt>Externación</dt><dd>La salida de la persona de la internación, es decir, el alta.</dd></div>
+    <div><dt>Órgano de Revisión</dt><dd>Organismo que vigila que se respeten los derechos de quienes usan los servicios de salud mental.</dd></div>
+    <div><dt>Autoridad de Aplicación</dt><dd>El organismo a cargo de poner en marcha la ley: el Ministerio de Salud de la Nación.</dd></div>
+    <div><dt>Monovalente</dt><dd>Institución que solo atiende un tipo de problema, como los manicomios. La ley prohíbe crear nuevos.</dd></div>
+    <div><dt>Orden público</dt><dd>Normas que no se pueden dejar de lado por acuerdo de las partes.</dd></div>
+  </dl>
+</div></section>
+</main>
+
+<footer class="foot"><div class="wrap">
+  <p><strong>Fuente.</strong> Ley 26.657, Ley Nacional de Salud Mental, sancionada el 25/11/2010, promulgada el 02/12/2010 y publicada en el Boletín Oficial el 03/12/2010. Texto tomado del PDF de la Defensoría General de la Nación (fuente Infoleg, versión del 09/08/2012).</p>
+  <p>Este resumen es una guía de estudio con fines didácticos: reformula la ley en lenguaje sencillo y no reemplaza el texto legal ni el asesoramiento profesional. La ley puede haber tenido modificaciones posteriores a la versión del PDF, por ejemplo los arts. 42 y 43, que se refieren al Código Civil anterior: conviene consultar el texto actualizado.</p>
+</div></footer>
+
+<script>
+(function(){
+  var btn=document.getElementById('toggleAll');
+  var all=function(){return Array.prototype.slice.call(document.querySelectorAll('details.more'));};
+  btn.addEventListener('click',function(){
+    var open=all().some(function(d){return !d.open;});
+    all().forEach(function(d){d.open=open;});
+    btn.textContent=open?'Cerrar todos los detalles':'Abrir todos los detalles';
+  });
+  window.addEventListener('beforeprint',function(){all().forEach(function(d){d.open=true;});});
+
+  var links=Array.prototype.slice.call(document.querySelectorAll('.nav a'));
+  var byId={};
+  links.forEach(function(a){byId[a.getAttribute('href').slice(1)]=a;});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){
+          links.forEach(function(l){l.classList.remove('on');});
+          if(byId[e.target.id]){byId[e.target.id].classList.add('on');}
+        }
+      });
+    },{rootMargin:'-40% 0px -55% 0px'});
+    Array.prototype.slice.call(document.querySelectorAll('main > section[id]')).forEach(function(s){io.observe(s);});
+  }
+})();
+</script>
+</body>
+</html>
