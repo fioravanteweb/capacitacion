@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Filiación en simple: resumen gráfico de los arts. 558 a 593 del CCyC</title>
+<meta name="description" content="Resumen gráfico y en lenguaje sencillo del Título V, Filiación (arts. 558 a 593) del Código Civil y Comercial comentado, Tomo II.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500..800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F2F5F9;--surface:#fff;--ink:#1C2230;--muted:#586075;--line:#DCE2EC;--on:#fff;
+--c1:#2563C9;--c2:#0F7B63;--c3:#B8480E;--c4:#7B3FC7;--c5:#B5205A;--c6:#0E7490;--c7:#5F7A12;--c8:#8A5A00;
+--fd:"Fraunces",Georgia,"Times New Roman",serif;--fb:"Source Sans 3",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--r:16px}
+@media (prefers-color-scheme:dark){:root{--paper:#12151D;--surface:#1A1F2B;--ink:#ECEEF4;--muted:#A7AEC0;--line:#2B3242;--on:#12151D;
+--c1:#7DB0FF;--c2:#55D3B2;--c3:#FFA169;--c4:#BE9BFF;--c5:#FF8DB4;--c6:#5CD0EE;--c7:#B6D86A;--c8:#F0C060}}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:1.0625rem/1.65 var(--fb);-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--fd);margin:0;line-height:1.1;letter-spacing:-.015em;text-wrap:balance}
+p{margin:0 0 1em}
+:focus-visible{outline:3px solid var(--c1);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:var(--paper);padding:10px 16px;border-radius:10px;z-index:50}
+.skip:focus{left:12px}
+.s1{--ac:var(--c1)}.s2{--ac:var(--c2)}.s3{--ac:var(--c3)}.s4{--ac:var(--c4)}.s5{--ac:var(--c5)}.s6{--ac:var(--c6)}.s7{--ac:var(--c7)}.s8{--ac:var(--c8)}
+.s1,.s2,.s3,.s4,.s5,.s6,.s7,.s8{--t:color-mix(in srgb,var(--ac) 13%,var(--surface));--d:color-mix(in srgb,var(--ac) 78%,var(--ink))}
+.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 90%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+.top-in{max-width:1120px;margin:0 auto;display:flex;align-items:center;gap:18px;padding:10px 24px}
+.brand{font-family:var(--fd);font-weight:700;white-space:nowrap}
+.nav{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav a{display:inline-flex;align-items:center;gap:8px;padding:7px 13px;border-radius:999px;color:var(--muted);text-decoration:none;font-weight:600;font-size:.92rem;white-space:nowrap}
+.nav a:hover{color:var(--ink);background:var(--surface)}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--ac)}
+.hero{padding:56px 0 40px}
+.kicker{color:var(--muted);font-size:.95rem;font-weight:600;max-width:60ch;margin-bottom:18px}
+h1{font-weight:800;font-size:clamp(2.2rem,5.4vw,4rem);line-height:1.02;letter-spacing:-.03em;max-width:18ch;margin-bottom:22px}
+.lead{font-size:1.18rem;max-width:62ch;color:var(--muted)}
+.lead strong{color:var(--ink)}
+.stats{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 0;padding:0;list-style:none}
+.stats li{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px 18px;font-size:.95rem}
+.stats b{font-family:var(--fd);font-size:1.5rem;margin-right:6px}
+.band{padding:64px 0}
+.band.alt{background:var(--surface);border-block:1px solid var(--line)}
+.sec{font-weight:800;font-size:clamp(1.7rem,3.4vw,2.5rem);letter-spacing:-.025em;margin-bottom:10px}
+.sub{color:var(--muted);max-width:64ch;margin-bottom:30px}
+.route{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.route.three{grid-template-columns:repeat(3,1fr)}
+.route a,.route .t{display:flex;flex-direction:column;gap:6px;height:100%;padding:18px;border-radius:var(--r);background:var(--ac);color:var(--on);text-decoration:none}
+.route a:hover{transform:translateY(-2px)}
+.route .k{font-size:.82rem;font-weight:700;opacity:.9}
+.route h3{font-size:1.15rem;color:inherit}
+.route p{margin:0;font-size:.9rem;line-height:1.45;opacity:.95}
+.flow{list-style:none;margin:0;padding:0;display:flex;align-items:stretch}
+.flow li{flex:1;position:relative;background:var(--t);border:2px solid var(--ac);border-radius:var(--r);padding:16px 18px;margin-right:34px}
+.flow li:last-child{margin-right:0}
+.flow li:not(:last-child)::after{content:"";position:absolute;right:-30px;top:50%;width:26px;height:26px;margin-top:-13px;background:var(--ac);clip-path:polygon(0 25%,55% 25%,55% 0,100% 50%,55% 100%,55% 75%,0 75%)}
+.flow b{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--ac);color:var(--on);font-family:var(--fd);margin-bottom:8px}
+.flow h3{font-size:1.05rem;margin-bottom:4px;color:var(--d)}
+.flow p{margin:0;font-size:.92rem;line-height:1.5}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.box{border-radius:var(--r);padding:22px 24px;background:var(--t);border:2px solid var(--ac)}
+.box h3{color:var(--d);font-size:1.3rem;margin-bottom:12px}
+.box ul{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.box li{padding:5px 14px;border-radius:999px;background:var(--ac);color:var(--on);font-weight:600;font-size:.92rem}
+.box p{margin:12px 0 0;font-size:.97rem}
+.cmp{width:100%;border-collapse:separate;border-spacing:0;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.cmp th,.cmp td{padding:14px 20px;text-align:left;vertical-align:top;border-top:1px solid var(--line);font-size:.98rem;line-height:1.55}
+.cmp thead th{border-top:0;font-family:var(--fd);font-size:1.1rem;color:var(--on);background:var(--c5)}
+.cmp tbody th{width:22%}
+.cmp td.hl{background:color-mix(in srgb,var(--c5) 10%,var(--surface));font-weight:600}
+.scroll{overflow-x:auto}
+.tools{position:sticky;top:57px;z-index:15;background:var(--paper);padding:14px 0;border-bottom:1px solid var(--line)}
+.tools .wrap{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.tools input{flex:1 1 260px;font:inherit;padding:11px 16px;border-radius:12px;border:2px solid var(--line);background:var(--surface);color:var(--ink)}
+.tools input:focus{border-color:var(--c1);outline:0}
+.count{color:var(--muted);font-size:.9rem}
+.art-head{display:grid;grid-template-columns:auto 1fr;gap:4px 28px;align-items:end;margin-bottom:30px}
+.numeral{grid-row:span 2;font-family:var(--fd);font-weight:800;font-size:clamp(4.5rem,11vw,8rem);line-height:.8;letter-spacing:-.05em;color:var(--ac)}
+.art-head h2{font-weight:800;font-size:clamp(1.8rem,3.6vw,2.7rem);letter-spacing:-.025em}
+.tagline{color:var(--muted);font-size:1.1rem;max-width:56ch;margin:0}
+.rng{display:inline-block;margin-top:8px;font-size:.88rem;font-weight:700;color:var(--d);background:var(--t);border-radius:999px;padding:2px 12px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-top:6px solid var(--ac);border-radius:var(--r);padding:22px 24px;display:flex;flex-direction:column;gap:12px}
+.alt .card{background:var(--paper)}
+.card .hd{display:flex;align-items:center;gap:14px}
+.n{flex:none;min-width:56px;text-align:center;padding:6px 10px;border-radius:12px;background:var(--ac);color:var(--on);font-family:var(--fd);font-weight:800;font-size:1.35rem}
+.card h3{font-size:1.25rem;line-height:1.2}
+.card p{margin:0;font-size:.99rem;line-height:1.6}
+.empty{display:none;color:var(--muted);padding:24px 0}
+.take{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 40px}
+.take li{display:grid;grid-template-columns:40px 1fr;gap:14px;align-items:start}
+.take li::before{content:"✓";width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--ink);color:var(--paper);font-family:var(--fd);font-weight:800}
+.foot{padding:48px 0 calc(64px + env(safe-area-inset-bottom,0px));color:var(--muted);font-size:.92rem}
+.foot p{max-width:80ch}
+@media (max-width:960px){.route,.route.three{grid-template-columns:repeat(2,1fr)}.grid,.take,.duo{grid-template-columns:1fr}.flow{flex-direction:column;gap:34px}.flow li{margin-right:0}.flow li:not(:last-child)::after{right:auto;left:50%;top:auto;bottom:-30px;margin:0 0 0 -13px;transform:rotate(90deg)}}
+@media (max-width:760px){.band{padding:48px 0}.brand{display:none}.wrap,.top-in{padding-inline:18px}.route,.route.three{grid-template-columns:1fr}.art-head{grid-template-columns:1fr}.numeral{grid-row:auto}.cmp{min-width:640px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+@media print{.top,.tools,.skip{display:none}body{background:#fff}.band{padding:24px 0}.card{break-inside:avoid}}
+</style>
+</head>
+<body>
+<a class="skip" href="#panorama">Saltar al contenido</a>
+<header class="top"><div class="top-in">
+  <div class="brand">Filiación, en simple</div>
+  <nav class="nav" aria-label="Secciones de la página">
+    <a href="#panorama">Panorama</a>
+    <a class="s1" href="#p1"><i class="dot"></i>Generales</a>
+    <a class="s2" href="#p2"><i class="dot"></i>TRHA</a>
+    <a class="s3" href="#p3"><i class="dot"></i>Maternidad</a>
+    <a class="s4" href="#p4"><i class="dot"></i>Matrimonial</a>
+    <a class="s5" href="#p5"><i class="dot"></i>Extramatrimonial</a>
+    <a class="s6" href="#p6"><i class="dot"></i>Acciones</a>
+    <a class="s7" href="#p7"><i class="dot"></i>Reclamación</a>
+    <a class="s8" href="#p8"><i class="dot"></i>Impugnación</a>
+    <a href="#esencial">Lo esencial</a>
+  </nav>
+</div></header>
+<main>
+<section id="panorama">
+  <div class="hero"><div class="wrap">
+    <p class="kicker">Código Civil y Comercial de la Nación comentado, Tomo II. Libro Segundo: Relaciones de familia. Título V: Filiación</p>
+    <h1>La filiación dice quiénes son los progenitores de una persona para la ley.</h1>
+    <p class="lead">Resumen gráfico, en lenguaje sencillo, del <strong>Título V: Filiación</strong> (arts. 558 a 593). Responde: <strong>¿cuáles son las fuentes de la filiación?</strong>, <strong>¿cómo se determina cada una?</strong> y <strong>¿quién puede reclamarla o impugnarla, y hasta cuándo?</strong></p>
+    <ul class="stats"><li><b>36</b>artículos</li><li><b>8</b>capítulos</li><li><b>3</b>fuentes de filiación</li><li><b>2</b>vínculos filiales como máximo</li></ul>
+  </div></div>
+
+  <div class="band alt"><div class="wrap">
+    <h2 class="sec">El recorrido del título</h2>
+    <p class="sub">Ocho capítulos, desde las fuentes hasta las acciones judiciales. Tocá uno para ir a sus artículos.</p>
+    <ol class="route">
+      <li class="s1"><a href="#p1"><span class="k">Arts. 558 y 559</span><h3>Disposiciones generales</h3><p>Fuentes, igualdad de efectos y certificado de nacimiento.</p></a></li>
+      <li class="s2"><a href="#p2"><span class="k">Arts. 560 a 564</span><h3>Reproducción asistida</h3><p>Consentimiento, voluntad procreacional y acceso a la información.</p></a></li>
+      <li class="s3"><a href="#p3"><span class="k">Art. 565</span><h3>Determinación de la maternidad</h3><p>Se prueba con el parto y la identidad del nacido.</p></a></li>
+      <li class="s4"><a href="#p4"><span class="k">Arts. 566 a 569</span><h3>Filiación matrimonial</h3><p>Presunción de filiación y formas de determinación.</p></a></li>
+      <li class="s5"><a href="#p5"><span class="k">Arts. 570 a 575</span><h3>Filiación extramatrimonial</h3><p>Reconocimiento, sus formas y sus caracteres.</p></a></li>
+      <li class="s6"><a href="#p6"><span class="k">Arts. 576 a 581</span><h3>Acciones: generales</h3><p>Imprescriptibilidad, prueba genética y competencia.</p></a></li>
+      <li class="s7"><a href="#p7"><span class="k">Arts. 582 a 587</span><h3>Reclamación</h3><p>Cómo el hijo reclama su filiación.</p></a></li>
+      <li class="s8"><a href="#p8"><span class="k">Arts. 588 a 593</span><h3>Impugnación</h3><p>Cómo y cuándo se puede cuestionar un vínculo.</p></a></li>
+    </ol>
+  </div></div>
+
+  <div class="band"><div class="wrap">
+    <h2 class="sec">Tres fuentes, los mismos efectos</h2>
+    <p class="sub">La filiación puede ser por naturaleza, por técnicas de reproducción humana asistida (TRHA) o por adopción. Todas producen los mismos efectos (art. 558).</p>
+    <ol class="route three">
+      <li class="s1"><div class="t"><span class="k">Fuente 1</span><h3>Por naturaleza</h3><p>Matrimonial o extramatrimonial. La maternidad surge del parto; el otro vínculo, de la presunción, el reconocimiento o una sentencia.</p></div></li>
+      <li class="s2"><div class="t"><span class="k">Fuente 2</span><h3>Por TRHA</h3><p>Decide la voluntad procreacional expresada en el consentimiento, no quién aportó los gametos.</p></div></li>
+      <li class="s4"><div class="t"><span class="k">Fuente 3</span><h3>Por adopción</h3><p>Con efectos de filiación cuando es plena. Se regula en el Título VI.</p></div></li>
+    </ol>
+  </div></div>
+
+  <div class="band alt"><div class="wrap">
+    <h2 class="sec">El camino de la filiación por TRHA</h2>
+    <p class="sub">Cuatro pasos. El dato genético queda en segundo plano (arts. 560 a 562 y 577).</p>
+    <ol class="flow">
+      <li class="s2"><b>1</b><h3>Consentimiento</h3><p>Previo, informado y libre. Se renueva en cada procedimiento (art. 560).</p></li>
+      <li class="s3"><b>2</b><h3>Protocolización</h3><p>Ante escribano o autoridad sanitaria. Se puede revocar hasta la concepción o implantación (art. 561).</p></li>
+      <li class="s4"><b>3</b><h3>Inscripción</h3><p>Es hijo de quien dio a luz y de quien también consintió (art. 562).</p></li>
+      <li class="s5"><b>4</b><h3>Vínculo firme</h3><p>No se puede impugnar ni reclamar vínculo con el donante (art. 577).</p></li>
+    </ol>
+  </div></div>
+
+  <div class="band"><div class="wrap">
+    <h2 class="sec">Plazos y cifras clave</h2>
+    <p class="sub">Los números que conviene recordar.</p>
+    <ol class="route">
+      <li class="s4"><div class="t"><span class="k">300 días</span><h3>Presunción matrimonial</h3><p>Se extiende hasta 300 días después de la demanda de divorcio o nulidad, la separación de hecho o la muerte (art. 566).</p></div></li>
+      <li class="s3"><div class="t"><span class="k">180 días</span><h3>Matrimonios sucesivos</h3><p>Define si el hijo se vincula con el primer o el segundo cónyuge (art. 568).</p></div></li>
+      <li class="s8"><div class="t"><span class="k">1 año</span><h3>Caducidad</h3><p>Plazo de la mayoría de las impugnaciones, salvo para el hijo (arts. 588 a 593).</p></div></li>
+      <li class="s6"><div class="t"><span class="k">2.º grado</span><h3>Prueba genética</h3><p>Si falta una parte, se usa material de parientes hasta el segundo grado (art. 579).</p></div></li>
+    </ol>
+  </div></div>
+
+  <div class="band alt"><div class="wrap">
+    <h2 class="sec">¿Cómo se determina la filiación por naturaleza?</h2>
+    <p class="sub">Reglas de los arts. 566 a 571.</p>
+    <div class="duo">
+      <div class="box s4"><h3>Matrimonial</h3><ul><li>Inscripción y prueba del matrimonio</li><li>Sentencia firme</li><li>Consentimiento TRHA inscripto</li></ul><p>Rige la presunción: se consideran hijos del o la cónyuge los nacidos después del matrimonio y hasta 300 días posteriores a su fin. Admite prueba en contrario.</p></div>
+      <div class="box s5"><h3>Extramatrimonial</h3><ul><li>Reconocimiento</li><li>Consentimiento TRHA</li><li>Sentencia de filiación</li></ul><p>El reconocimiento es irrevocable, no requiere aceptación del hijo y puede hacerse ante el Registro Civil, en instrumento o en un testamento.</p></div>
+    </div>
+  </div></div>
+
+  <div class="band"><div class="wrap">
+    <h2 class="sec">Reclamar o impugnar: quién y cuándo</h2>
+    <p class="sub">Resumen de los arts. 582, 590 y 593.</p>
+    <div class="scroll"><table class="cmp">
+      <thead><tr><th scope="col"></th><th scope="col">Reclamar la filiación</th><th scope="col">Impugnar la presunción</th><th scope="col">Impugnar el reconocimiento</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Quién</th><td class="hl">El hijo (sus herederos pueden continuar la acción en ciertos casos).</td><td>El o la cónyuge, el hijo, la madre y terceros con interés legítimo.</td><td>El hijo y terceros con interés legítimo.</td></tr>
+        <tr><th scope="row">Cuándo</th><td class="hl">En todo tiempo.</td><td>El hijo, en cualquier tiempo; los demás, dentro de un año.</td><td>El hijo, en cualquier tiempo; los demás, dentro de un año.</td></tr>
+        <tr><th scope="row">Con TRHA</th><td class="hl">No rige si hubo consentimiento.</td><td>No procede si hubo consentimiento.</td><td>No procede si hubo consentimiento.</td></tr>
+      </tbody>
+    </table></div>
+  </div></div>
+</section>
+
+<div class="tools"><div class="wrap">
+  <label class="sr-only" for="q">Buscar en los artículos</label>
+  <input id="q" type="search" placeholder="Buscar: presunción, consentimiento, prueba genética, art. 562…" autocomplete="off">
+  <span class="count" id="cnt" aria-live="polite"></span>
+</div></div>
+<div id="arts"></div>
+<p class="empty wrap" id="none">No hay artículos que coincidan con la búsqueda.</p>
+
+<section id="esencial" class="band alt"><div class="wrap">
+  <h2 class="sec">Lo esencial en seis ideas</h2>
+  <p class="sub">Si solo te quedás con esto, ya tenés el esquema del título.</p>
+  <ol class="take">
+    <li><span><strong>Tres fuentes, igual valor:</strong> naturaleza, TRHA y adopción producen los mismos efectos (art. 558).</span></li>
+    <li><span><strong>Máximo dos vínculos:</strong> nadie puede tener más de dos vínculos filiales (art. 558).</span></li>
+    <li><span><strong>En las TRHA manda la voluntad:</strong> el consentimiento inscripto determina la filiación, sin importar los gametos (arts. 562 y 575).</span></li>
+    <li><span><strong>La maternidad se prueba con el parto</strong> y la identidad del nacido (art. 565).</span></li>
+    <li><span><strong>Reclamar o impugnar no prescribe:</strong> el hijo puede hacerlo en todo tiempo (arts. 576 y 582).</span></li>
+    <li><span><strong>La prueba genética es clave:</strong> la negativa a realizarla es un indicio grave en contra (art. 579).</span></li>
+  </ol>
+</div></section>
+</main>
+<footer class="foot"><div class="wrap">
+  <p><strong>Fuente:</strong> Código Civil y Comercial de la Nación comentado, Tomo II (Infojus - SAIJ), Título V: Filiación, arts. 558 a 593.</p>
+  <p>Resumen didáctico en lenguaje sencillo. No reemplaza el texto de la ley ni el asesoramiento profesional: para citar o litigar, consultá el artículo completo.</p>
+</div></footer>
+
+<script>
+const P=[
+{id:1,t:"Disposiciones generales",r:"Arts. 558 y 559",g:"Las fuentes de la filiación y el certificado de nacimiento.",a:[
+[558,"Fuentes e igualdad de efectos","La filiación puede ser por naturaleza, por técnicas de reproducción humana asistida (TRHA) o por adopción. Todas surten los mismos efectos (en la adopción, la plena). Nadie puede tener más de dos vínculos filiales."],
+[559,"Certificado de nacimiento","El Registro Civil solo expide certificados que no revelen si la persona nació dentro del matrimonio, por TRHA o si fue adoptada."]]},
+{id:2,t:"Reproducción humana asistida",r:"Arts. 560 a 564",g:"El consentimiento como base del vínculo y el derecho a conocer el origen.",a:[
+[560,"Consentimiento en las TRHA","El centro de salud debe recabar el consentimiento previo, informado y libre, y renovarlo cada vez que se usan gametos o embriones."],
+[561,"Forma y requisitos","Se instrumenta con los requisitos de la ley especial y se protocoliza ante escribano o se certifica ante la autoridad sanitaria. Es revocable hasta la concepción o la implantación del embrión."],
+[562,"Voluntad procreacional","El nacido por TRHA es hijo de quien dio a luz y de quien también prestó el consentimiento, inscripto en el Registro Civil, sin importar quién aportó los gametos."],
+[563,"Derecho a la información","Si se usaron gametos de un tercero, ese dato debe constar en el legajo base de la inscripción del nacimiento."],
+[564,"Contenido de la información","A pedido del nacido por TRHA se pueden obtener del centro de salud los datos médicos relevantes del donante, o revelarse su identidad por razones fundadas que evalúa el juez."]]},
+{id:3,t:"Determinación de la maternidad",r:"Art. 565",g:"En la filiación por naturaleza, la madre es quien da a luz.",a:[
+[565,"Principio general","La maternidad se establece con la prueba del nacimiento y la identidad del nacido, según el certificado de quien atendió el parto. La inscripción se notifica a la madre, salvo que ella la pida o la denuncie su cónyuge."]]},
+{id:4,t:"Determinación de la filiación matrimonial",r:"Arts. 566 a 569",g:"La presunción que alcanza al o la cónyuge de quien da a luz.",a:[
+[566,"Presunción de filiación","Salvo prueba en contrario, se presumen hijos del o la cónyuge los nacidos después del matrimonio y hasta 300 días posteriores a la demanda de divorcio o nulidad, la separación de hecho o la muerte. No rige en TRHA si no prestó su consentimiento."],
+[567,"Separación de hecho","Aunque falte la presunción por la separación de hecho, el nacido se inscribe como hijo de ambos si los dos consienten. En TRHA, además, deben cumplirse los requisitos del consentimiento."],
+[568,"Matrimonios sucesivos","Nacido dentro de 300 días de disuelto el primer matrimonio: si fue dentro de 180 días del segundo, se presume hijo del primer cónyuge; si fue después, del segundo. Admite prueba en contrario."],
+[569,"Formas de determinación","Por la inscripción del nacimiento y la prueba del matrimonio; por sentencia firme; o, en TRHA, por el consentimiento inscripto en el Registro Civil."]]},
+{id:5,t:"Determinación de la filiación extramatrimonial",r:"Arts. 570 a 575",g:"Reconocimiento, consentimiento o sentencia.",a:[
+[570,"Principio general","Queda determinada por el reconocimiento, por el consentimiento a las TRHA o por la sentencia de filiación."],
+[571,"Formas del reconocimiento","Ante el Registro Civil al inscribir el nacimiento o después; en instrumento público o privado reconocido; o en actos de última voluntad, aunque sea de forma incidental."],
+[572,"Notificación del reconocimiento","El Registro Civil debe notificarlo a la madre y al hijo o su representante legal."],
+[573,"Caracteres del reconocimiento","Es irrevocable, no admite modalidades que alteren sus consecuencias y no requiere aceptación del hijo. Si el hijo ya murió, no da derechos sucesorios a quien lo reconoce, salvo posesión de estado."],
+[574,"Reconocimiento del hijo por nacer","Es posible, pero queda sujeto a que nazca con vida."],
+[575,"Determinación en las TRHA","Se deriva del consentimiento previo, informado y libre. Con gametos de terceros no se genera vínculo jurídico con ellos, salvo para los impedimentos matrimoniales, como en la adopción plena."]]},
+{id:6,t:"Acciones de filiación: disposiciones generales",r:"Arts. 576 a 581",g:"Reglas comunes a las acciones de reclamación e impugnación.",a:[
+[576,"Caracteres","El derecho a reclamar o impugnar la filiación no se extingue por prescripción ni por renuncia, pero los derechos patrimoniales ya adquiridos sí prescriben."],
+[577,"Inadmisibilidad de la demanda","Con consentimiento válido a las TRHA no se puede impugnar la filiación, ni reconocer o reclamar vínculo alguno con quien aportó los gametos."],
+[578,"Doble vínculo filial","Si se reclama una filiación que deja sin efecto otra ya establecida, hay que ejercer antes o a la vez la acción de impugnación."],
+[579,"Prueba genética","Se admite toda prueba, incluida la genética, de oficio o a pedido de parte. Si no se puede con una parte, se usa material de parientes hasta el segundo grado; si tampoco, la negativa es un indicio grave en contra."],
+[580,"Prueba genética post mortem","Si murió el presunto padre, se analiza material de sus dos progenitores. Si uno se niega o no puede, puede autorizarse la exhumación."],
+[581,"Competencia","Si actúa un menor o una persona con capacidad restringida, es competente el juez de su centro de vida o el del domicilio del demandado, a su elección."]]},
+{id:7,t:"Acciones de reclamación de filiación",r:"Arts. 582 a 587",g:"Cómo el hijo reclama el vínculo que no está determinado.",a:[
+[582,"Reglas generales","El hijo reclama su filiación matrimonial contra ambos cónyuges, o la extramatrimonial contra quienes crea sus progenitores (si murieron, contra sus herederos), en todo tiempo. Sus herederos pueden continuar la acción en ciertos casos. No rige en TRHA con consentimiento."],
+[583,"Solo está determinada la maternidad","Si el niño figura solo con filiación materna, el Registro Civil avisa al Ministerio Público, que procura determinar la paternidad. La madre declara bajo juramento el nombre del presunto padre."],
+[584,"Posesión de estado","Acreditada en juicio, vale como reconocimiento si no la desvirtúa la prueba del nexo genético."],
+[585,"Convivencia","La convivencia de la madre en la época de la concepción hace presumir el vínculo filial con su conviviente, salvo oposición fundada."],
+[586,"Alimentos provisorios","Durante el proceso, o incluso antes, el juez puede fijar alimentos provisorios contra el presunto progenitor."],
+[587,"Reparación del daño","El daño causado al hijo por la falta de reconocimiento es reparable, si se reúnen los requisitos de la responsabilidad civil."]]},
+{id:8,t:"Acciones de impugnación de filiación",r:"Arts. 588 a 593",g:"Cuándo y quién puede cuestionar un vínculo ya establecido.",a:[
+[588,"Impugnación de la maternidad","Se impugna por no ser la mujer la madre del hijo. Pueden hacerlo el hijo, la madre, el o la cónyuge y terceros con interés legítimo; caduca al año, salvo para el hijo. En TRHA no se puede invocar la falta de vínculo genético."],
+[589,"Impugnación de la filiación presumida","El o la cónyuge puede impugnar alegando que no puede ser el progenitor o que la filiación no debe mantenerse razonablemente, según las pruebas o el interés del niño. No basta la declaración de quien dio a luz."],
+[590,"Legitimación y caducidad","Pueden impugnar el o la cónyuge, el hijo, la madre y terceros con interés legítimo. El hijo, en cualquier tiempo; los demás, dentro de un año. Los herederos, solo si el plazo seguía corriendo."],
+[591,"Negación de la filiación","El o la cónyuge puede negar al hijo nacido dentro de los 180 días del matrimonio, en el plazo de un año. Se rechaza si sabía del embarazo al casarse o hubo posesión de estado."],
+[592,"Impugnación preventiva","Aun antes del nacimiento pueden impugnar el o la cónyuge, la madre y terceros con interés legítimo. Si se acoge, la inscripción posterior no presume la filiación del cónyuge."],
+[593,"Impugnación del reconocimiento","El hijo puede impugnarlo en cualquier tiempo; los terceros con interés legítimo, dentro de un año de conocer el reconocimiento o la duda sobre el vínculo."]]}
+];
+const root=document.getElementById("arts");
+root.innerHTML=P.map((p,i)=>`<section id="p${p.id}" class="band s${p.id}${i%2?"":" alt"}"><div class="wrap">
+<div class="art-head"><div class="numeral" aria-hidden="true">${p.id}</div><h2>${p.t}</h2><p class="tagline">${p.g}<br><span class="rng">${p.r}</span></p></div>
+<div class="grid">${p.a.map(a=>`<article class="card" id="art${a[0]}" data-t="${(a[0]+" "+a[1]+" "+a[2]).toLowerCase()}"><div class="hd"><span class="n">${a[0]}</span><h3>${a[1]}</h3></div><p>${a[2]}</p></article>`).join("")}</div></div></section>`).join("");
+const q=document.getElementById("q"),cnt=document.getElementById("cnt"),none=document.getElementById("none");
+function f(){const v=q.value.trim().toLowerCase().replace(/^art\.?\s*/,"");let tot=0;
+document.querySelectorAll("#arts section").forEach(s=>{let n=0;s.querySelectorAll(".card").forEach(c=>{const ok=!v||c.dataset.t.includes(v);c.style.display=ok?"":"none";if(ok)n++});s.style.display=n?"":"none";tot+=n});
+cnt.textContent=tot+" de 36 artículos";none.style.display=tot?"none":"block"}
+q.addEventListener("input",f);f();
+</script>
+</body>
+</html>
