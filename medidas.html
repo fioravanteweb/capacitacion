@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Prueba anticipada y medidas preliminares, en simple</title>
+<meta name="description" content="Resumen gráfico y en lenguaje sencillo de la prueba anticipada, las medidas preliminares y la intervención del Defensor y el Ministerio Público en el Código Procesal de Misiones.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500..800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F2F5F9;--surface:#fff;--ink:#1C2230;--muted:#586075;--line:#DCE2EC;--on:#fff;
+--c1:#2563C9;--c2:#0F7B63;--c3:#B8480E;--c4:#7B3FC7;--c5:#B5205A;--c6:#0E7490;
+--fd:"Fraunces",Georgia,"Times New Roman",serif;--fb:"Source Sans 3",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--r:16px}
+@media (prefers-color-scheme:dark){:root{--paper:#12151D;--surface:#1A1F2B;--ink:#ECEEF4;--muted:#A7AEC0;--line:#2B3242;--on:#12151D;
+--c1:#7DB0FF;--c2:#55D3B2;--c3:#FFA169;--c4:#BE9BFF;--c5:#FF8DB4;--c6:#5CD0EE}}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:1.0625rem/1.65 var(--fb);-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--fd);margin:0;line-height:1.1;letter-spacing:-.015em;text-wrap:balance}
+p{margin:0 0 1em}
+:focus-visible{outline:3px solid var(--c1);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:var(--paper);padding:10px 16px;border-radius:10px;z-index:50}
+.skip:focus{left:12px}
+.s1{--ac:var(--c1)}.s2{--ac:var(--c2)}.s3{--ac:var(--c3)}.s4{--ac:var(--c4)}.s5{--ac:var(--c5)}.s6{--ac:var(--c6)}
+.s1,.s2,.s3,.s4,.s5,.s6{--t:color-mix(in srgb,var(--ac) 13%,var(--surface));--d:color-mix(in srgb,var(--ac) 78%,var(--ink))}
+.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 90%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+.top-in{max-width:1120px;margin:0 auto;display:flex;align-items:center;gap:18px;padding:10px 24px}
+.brand{font-family:var(--fd);font-weight:700;white-space:nowrap}
+.nav{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav a{display:inline-flex;align-items:center;gap:8px;padding:7px 13px;border-radius:999px;color:var(--muted);text-decoration:none;font-weight:600;font-size:.92rem;white-space:nowrap}
+.nav a:hover{color:var(--ink);background:var(--surface)}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--ac)}
+.hero{padding:56px 0 40px}
+.kicker{color:var(--muted);font-size:.95rem;font-weight:600;max-width:64ch;margin-bottom:18px}
+h1{font-weight:800;font-size:clamp(2.2rem,5.4vw,4rem);line-height:1.02;letter-spacing:-.03em;max-width:20ch;margin-bottom:22px}
+.lead{font-size:1.18rem;max-width:62ch;color:var(--muted)}
+.lead strong{color:var(--ink)}
+.stats{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 0;padding:0;list-style:none}
+.stats li{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px 18px;font-size:.95rem}
+.stats b{font-family:var(--fd);font-size:1.5rem;margin-right:6px}
+.band{padding:64px 0}
+.band.alt{background:var(--surface);border-block:1px solid var(--line)}
+.sec{font-weight:800;font-size:clamp(1.7rem,3.4vw,2.5rem);letter-spacing:-.025em;margin-bottom:10px}
+.sub{color:var(--muted);max-width:64ch;margin-bottom:30px}
+.route{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px}
+.route.four{grid-template-columns:repeat(4,1fr)}
+.route a,.route .t{display:flex;flex-direction:column;gap:6px;height:100%;padding:18px;border-radius:var(--r);background:var(--ac);color:var(--on);text-decoration:none}
+.route a:hover{transform:translateY(-2px)}
+.route .k{font-size:.82rem;font-weight:700;opacity:.9}
+.route h3{font-size:1.15rem;color:inherit}
+.route p{margin:0;font-size:.9rem;line-height:1.45;opacity:.95}
+.flow{list-style:none;margin:0;padding:0;display:flex;align-items:stretch}
+.flow li{flex:1;position:relative;background:var(--t);border:2px solid var(--ac);border-radius:var(--r);padding:16px 18px;margin-right:34px}
+.flow li:last-child{margin-right:0}
+.flow li:not(:last-child)::after{content:"";position:absolute;right:-30px;top:50%;width:26px;height:26px;margin-top:-13px;background:var(--ac);clip-path:polygon(0 25%,55% 25%,55% 0,100% 50%,55% 100%,55% 75%,0 75%)}
+.flow b{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--ac);color:var(--on);font-family:var(--fd);margin-bottom:8px}
+.flow h3{font-size:1.05rem;margin-bottom:4px;color:var(--d)}
+.flow p{margin:0;font-size:.92rem;line-height:1.5}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.box{border-radius:var(--r);padding:22px 24px;background:var(--t);border:2px solid var(--ac)}
+.box h3{color:var(--d);font-size:1.3rem;margin-bottom:12px}
+.box ul{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.box li{padding:5px 14px;border-radius:999px;background:var(--ac);color:var(--on);font-weight:600;font-size:.92rem}
+.box p{margin:12px 0 0;font-size:.97rem}
+.cmp{width:100%;border-collapse:separate;border-spacing:0;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.cmp th,.cmp td{padding:14px 20px;text-align:left;vertical-align:top;border-top:1px solid var(--line);font-size:.98rem;line-height:1.55}
+.cmp thead th{border-top:0;font-family:var(--fd);font-size:1.1rem;color:var(--on);background:var(--c3)}
+.cmp tbody th{width:26%}
+.cmp td.hl{background:color-mix(in srgb,var(--c3) 10%,var(--surface));font-weight:600}
+.scroll{overflow-x:auto}
+.tools{position:sticky;top:57px;z-index:15;background:var(--paper);padding:14px 0;border-bottom:1px solid var(--line)}
+.tools .wrap{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.tools input{flex:1 1 260px;font:inherit;padding:11px 16px;border-radius:12px;border:2px solid var(--line);background:var(--surface);color:var(--ink)}
+.tools input:focus{border-color:var(--c1);outline:0}
+.count{color:var(--muted);font-size:.9rem}
+.art-head{display:grid;grid-template-columns:auto 1fr;gap:4px 28px;align-items:end;margin-bottom:30px}
+.numeral{grid-row:span 2;font-family:var(--fd);font-weight:800;font-size:clamp(4.5rem,11vw,8rem);line-height:.8;letter-spacing:-.05em;color:var(--ac)}
+.art-head h2{font-weight:800;font-size:clamp(1.8rem,3.6vw,2.7rem);letter-spacing:-.025em}
+.tagline{color:var(--muted);font-size:1.1rem;max-width:56ch;margin:0}
+.rng{display:inline-block;margin-top:8px;font-size:.88rem;font-weight:700;color:var(--d);background:var(--t);border-radius:999px;padding:2px 12px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-top:6px solid var(--ac);border-radius:var(--r);padding:22px 24px;display:flex;flex-direction:column;gap:12px}
+.alt .card{background:var(--paper)}
+.card .hd{display:flex;align-items:center;gap:14px}
+.n{flex:none;min-width:56px;text-align:center;padding:6px 10px;border-radius:12px;background:var(--ac);color:var(--on);font-family:var(--fd);font-weight:800;font-size:1.35rem}
+.card h3{font-size:1.25rem;line-height:1.2}
+.card p{margin:0;font-size:.99rem;line-height:1.6}
+.empty{display:none;color:var(--muted);padding:24px 0}
+.take{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 40px}
+.take li{display:grid;grid-template-columns:40px 1fr;gap:14px;align-items:start}
+.take li::before{content:"✓";width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--ink);color:var(--paper);font-family:var(--fd);font-weight:800}
+.foot{padding:48px 0 calc(64px + env(safe-area-inset-bottom,0px));color:var(--muted);font-size:.92rem}
+.foot p{max-width:80ch}
+@media (max-width:960px){.route.four{grid-template-columns:repeat(2,1fr)}.grid,.take,.duo{grid-template-columns:1fr}.flow{flex-direction:column;gap:34px}.flow li{margin-right:0}.flow li:not(:last-child)::after{right:auto;left:50%;top:auto;bottom:-30px;margin:0 0 0 -13px;transform:rotate(90deg)}}
+@media (max-width:760px){.band{padding:48px 0}.brand{display:none}.wrap,.top-in{padding-inline:18px}.route,.route.four{grid-template-columns:1fr}.art-head{grid-template-columns:1fr}.numeral{grid-row:auto}.cmp{min-width:560px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+@media print{.top,.tools,.skip{display:none}body{background:#fff}.band{padding:24px 0}.card{break-inside:avoid}}
+</style>
+</head>
+<body>
+<a class="skip" href="#panorama">Saltar al contenido</a>
+<header class="top"><div class="top-in">
+  <div class="brand">Prueba anticipada y medidas preliminares, en simple</div>
+  <nav class="nav" aria-label="Secciones de la página">
+    <a href="#panorama">Panorama</a>
+    <a class="s1" href="#p1"><i class="dot"></i>Medidas preliminares</a>
+    <a class="s2" href="#p2"><i class="dot"></i>Art. 329</a>
+    <a class="s3" href="#p3"><i class="dot"></i>Prueba anticipada</a>
+    <a class="s4" href="#p4"><i class="dot"></i>Art. 626</a>
+    <a class="s5" href="#p5"><i class="dot"></i>Defensor y M.P.</a>
+    <a href="#esencial">Lo esencial</a>
+  </nav>
+</div></header>
+<main>
+<section id="panorama">
+  <div class="hero"><div class="wrap">
+    <p class="kicker">Código Procesal Civil, Comercial, de Familia y Violencia Familiar de la Provincia de Misiones — Ley XII – N.º 27. Libro Primero, Título III, Capítulo II (Diligencias Preliminares) y Libro Segundo, Título II, Capítulo V (Prueba).</p>
+    <h1>Preparar el juicio y asegurar la prueba antes de que sea tarde.</h1>
+    <p class="lead">Resumen gráfico, en lenguaje sencillo, de las <strong>medidas preliminares</strong> (arts. 325 a 327 y 329), la <strong>prueba anticipada</strong> (arts. 328 y 330), el <strong>reconocimiento judicial en desalojo</strong> (art. 626) y la <strong>intervención del Defensor Oficial y del Ministerio Público</strong> en estos trámites.</p>
+    <ul class="stats"><li><b>11</b>medidas preliminares posibles (art. 325)</li><li><b>3</b>causales de prueba anticipada (art. 328)</li><li><b>30 días</b>para deducir la demanda tras la medida (art. 325)</li><li><b>5 días</b>para el reconocimiento en desalojo (art. 626)</li></ul>
+  </div></div>
+
+  <div class="band alt"><div class="wrap">
+    <h2 class="sec">El recorrido de esta guía</h2>
+    <p class="sub">Cinco bloques temáticos. Tocá uno para ir a sus artículos.</p>
+    <ol class="route">
+      <li class="s1"><a href="#p1"><span class="k">Arts. 325 a 327</span><h3>Medidas preliminares</h3><p>Qué se puede pedir antes de demandar y cómo se tramita.</p></a></li>
+      <li class="s2"><a href="#p2"><span class="k">Art. 329</span><h3>Pedido y resolución</h3><p>Requisitos, apelación y Defensor Oficial en urgencia.</p></a></li>
+      <li class="s3"><a href="#p3"><span class="k">Arts. 328 y 330</span><h3>Prueba anticipada</h3><p>Cuándo se puede producir prueba antes del juicio.</p></a></li>
+      <li class="s4"><a href="#p4"><span class="k">Art. 626</span><h3>Reconocimiento en desalojo</h3><p>La inspección judicial previa con Defensor Oficial.</p></a></li>
+      <li class="s5"><a href="#p5"><span class="k">Varios arts.</span><h3>Defensor y M.P.</h3><p>Cuándo y cómo intervienen en el proceso.</p></a></li>
+    </ol>
+  </div></div>
+
+  <div class="band"><div class="wrap">
+    <h2 class="sec">El camino de una medida preparatoria</h2>
+    <p class="sub">Cinco pasos, desde el pedido hasta la producción de la prueba.</p>
+    <ol class="flow">
+      <li class="s1"><b>1</b><h3>Pedido</h3><p>Escrito con nombre, domicilio del contrario y fundamentos (art. 329).</p></li>
+      <li class="s2"><b>2</b><h3>Resolución</h3><p>El Juez accede si estima justas las causas; si deniega, es apelable (art. 329).</p></li>
+      <li class="s3"><b>3</b><h3>Citación</h3><p>Se cita a la contraria, salvo urgencia: allí interviene el Defensor Oficial (art. 329).</p></li>
+      <li class="s4"><b>4</b><h3>Producción</h3><p>Se diligencia según la clase de prueba; la pericial, con perito único de oficio (art. 329).</p></li>
+      <li class="s5"><b>5</b><h3>Demanda</h3><p>Hay 30 días para deducir la demanda, salvo excepciones (art. 325).</p></li>
+    </ol>
+  </div></div>
+
+  <div class="band alt"><div class="wrap">
+    <h2 class="sec">Cifras clave</h2>
+    <p class="sub">Lo que conviene recordar de un vistazo.</p>
+    <ol class="route four">
+      <li class="s1"><div class="t"><span class="k">11 incisos</span><h3>Medidas</h3><p>Declaración jurada, exhibición, tutela, reconocimiento de mercaderías y más (art. 325).</p></div></li>
+      <li class="s2"><div class="t"><span class="k">30 días</span><h3>Caducidad</h3><p>Plazo para deducir la demanda tras la medida, con excepciones (art. 325).</p></div></li>
+      <li class="s3"><div class="t"><span class="k">3 causales</span><h3>Prueba anticipada</h3><p>Testigo anciano o enfermo, reconocimiento/pericia, e informes (art. 328).</p></div></li>
+      <li class="s4"><div class="t"><span class="k">5 días</span><h3>Reconocimiento</h3><p>Plazo para el reconocimiento judicial en desalojo (art. 626).</p></div></li>
+    </ol>
+  </div></div>
+
+  <div class="band"><div class="wrap">
+    <h2 class="sec">Medidas preliminares vs. prueba anticipada</h2>
+    <p class="sub">Dos figuras distintas, con lógicas distintas (arts. 325 y 328).</p>
+    <div class="scroll"><table class="cmp">
+      <thead><tr><th scope="col"></th><th scope="col">Medidas preliminares</th><th scope="col">Prueba anticipada</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">¿Para qué?</th><td class="hl">Preparar el juicio: obtener datos, documentos o declaraciones.</td><td>Asegurar prueba que podría perderse o ser muy difícil de producir.</td></tr>
+        <tr><th scope="row">¿Quién pide?</th><td>Quien pretende demandar o quien prevé que será demandado.</td><td>Quien es o será parte en un proceso de conocimiento.</td></tr>
+        <tr><th scope="row">¿Cuándo?</th><td>Antes del juicio.</td><td>Antes o después de trabada la litis, por razones de urgencia.</td></tr>
+        <tr><th scope="row">¿Qué se pide?</th><td>Las 11 medidas del art. 325.</td><td>Testigo, reconocimiento/pericia o informes (art. 328).</td></tr>
+      </tbody>
+    </table></div>
+  </div></div>
+
+  <div class="band alt"><div class="wrap">
+    <h2 class="sec">¿Quién interviene?</h2>
+    <p class="sub">En estos trámites pueden aparecer el Defensor Oficial y el Ministerio Público.</p>
+    <div class="duo">
+      <div class="box s5"><h3>Defensor Oficial</h3><ul><li>Urgencia (art. 329)</li><li>Desalojo (art. 626)</li><li>Demandado incierto (art. 344)</li><li>Deudor sin domicilio (art. 521)</li></ul><p>Interviene cuando no se puede citar a la contraria por urgencia, o cuando el demandado no tiene domicilio conocido.</p></div>
+      <div class="box s6"><h3>Ministerio Público</h3><ul><li>Asesor de Incapaces</li><li>Representante del Fisco</li><li>Ministerio Pupilar</li></ul><p>Interviene en causas que afectan a incapaces, en conflictos de competencia y en los casos que la ley expresamente lo prevé.</p></div>
+    </div>
+  </div></div>
+</section>
+
+<div class="tools"><div class="wrap">
+  <label class="sr-only" for="q">Buscar en los artículos</label>
+  <input id="q" type="search" placeholder="Buscar: preliminares, anticipada, 329, 626, defensor, ministerio…" autocomplete="off">
+  <span class="count" id="cnt" aria-live="polite"></span>
+</div></div>
+<div id="arts"></div>
+<p class="empty wrap" id="none">No hay artículos que coincidan con la búsqueda.</p>
+
+<section id="esencial" class="band alt"><div class="wrap">
+  <h2 class="sec">Lo esencial en seis ideas</h2>
+  <p class="sub">Si solo te quedás con esto, ya tenés el esquema.</p>
+  <ol class="take">
+    <li><span><strong>Medidas preliminares:</strong> preparan el juicio. Hay 11 tipos y 30 días para demandar después (art. 325).</span></li>
+    <li><span><strong>Art. 329:</strong> regula el pedido, la resolución, la apelación y la intervención del Defensor Oficial en urgencia.</span></li>
+    <li><span><strong>Prueba anticipada:</strong> asegura prueba que podría perderse. Tres causales: testigo, reconocimiento/pericia e informes (art. 328).</span></li>
+    <li><span><strong>Art. 626:</strong> en desalojo por cambio de destino, deterioro o intrusión, el Juez hace reconocimiento judicial con Defensor Oficial.</span></li>
+    <li><span><strong>Defensor Oficial:</strong> interviene en urgencia (art. 329), en desalojo (art. 626), con demandado incierto (art. 344) y deudor sin domicilio (art. 521).</span></li>
+    <li><span><strong>Ministerio Público:</strong> no es recusable y actúa en causas de incapaces, conflictos de competencia y en los casos que la ley prevé (art. 33).</span></li>
+  </ol>
+</div></section>
+</main>
+<footer class="foot"><div class="wrap">
+  <p><strong>Fuente:</strong> Código Procesal Civil, Comercial, de Familia y Violencia Familiar de la Provincia de Misiones (Ley XII – N.º 27). Arts. 325 a 330 y 626. La agrupación en cinco bloques es una organización didáctica de esta página.</p>
+  <p>Resumen didáctico en lenguaje sencillo. No reemplaza el texto de la ley ni el asesoramiento profesional: para citar o litigar, consultá el artículo completo.</p>
+</div></footer>
+
+<script>
+const P=[
+{id:1,t:"Medidas preliminares",r:"Arts. 325 a 327",g:"Qué se puede pedir antes de demandar y cómo se tramita.",a:[
+[325,"Enumeración y caducidad","El proceso de conocimiento puede prepararse pidiendo: 1) declaración jurada sobre la personalidad; 2) exhibición de cosa mueble; 3) exhibición de testamento; 4) títulos en caso de evicción; 5) documentos de la sociedad o comunidad; 6) que se exprese a qué título se ocupa la cosa; 7) nombramiento de tutor o curador; 8) constitución de domicilio si el demandado se ausenta; 9) práctica de una medida judicial; 10) citación para reconocer obligación de rendir cuentas; 11) reconocimiento de mercaderías. Salvo las excepciones, hay 30 días para deducir la demanda."],
+[326,"Declaración jurada","Se notifica por cédula con el interrogatorio. Si el requerido no responde, se tienen por ciertos los hechos afirmados, sin perjuicio de la prueba en contrario."],
+[327,"Exhibición de cosas e instrumentos","Se hace en el tiempo, modo y lugar que fija el Juez. Si el requerido no los tiene, debe indicar dónde están o quién los tiene."]]},
+{id:2,t:"Art. 329 — Pedido y resolución",r:"Art. 329",g:"Requisitos, trámite, apelación e intervención del Defensor Oficial.",a:[
+[329,"Pedido de medidas preliminares","En el escrito se indica el nombre de la futura parte contraria, su domicilio si se conoce y los fundamentos. El Juez accede si estima justas las causas; si deniega, la resolución es apelable. Si hay que practicar prueba, se cita a la contraria; si hay urgencia, interviene el Defensor Oficial. La pericial está a cargo de un perito único, de oficio."]]},
+{id:3,t:"Prueba anticipada",r:"Arts. 328 y 330",g:"Cuándo se puede producir prueba antes del juicio o durante él.",a:[
+[328,"Prueba anticipada","Quienes sean o vayan a ser parte en un proceso de conocimiento y teman que la prueba sea imposible o muy difícil de producir, pueden pedir: 1) declaración de testigo de edad avanzada, gravemente enfermo o próximo a ausentarse; 2) reconocimiento judicial o dictamen pericial para constatar documentos, cosas o lugares; 3) pedido de informes."],
+[330,"Después de trabada la litis","Solo procede por razones de urgencia de las indicadas en el art. 328, salvo la atribución del Juez del art. 36, inc. 4)."]]},
+{id:4,t:"Art. 626 — Reconocimiento en desalojo",r:"Art. 626",g:"Inspección judicial previa con asistencia del Defensor Oficial.",a:[
+[626,"Reconocimiento judicial","Cuando el desalojo se funda en cambio de destino, deterioro del inmueble, intrusión, obras nocivas o uso abusivo o deshonesto, el Juez debe hacer un reconocimiento judicial dentro de los 5 días de la primera providencia, con asistencia del Defensor Oficial. No es necesaria la diligencia si la causal consta en escritura pública acompañada en la oportunidad del art. 334."]]},
+{id:5,t:"Defensor y Ministerio Público",r:"Arts. 33, 344, 521, 661",g:"Cuándo y cómo intervienen estos funcionarios.",a:[
+[33,"Ministerio Público","Los funcionarios del Ministerio Público no pueden ser recusados. Si tienen motivo legítimo de excusación, lo manifiestan al Juez o Tribunal, que puede separarlos de la causa y dar intervención a quien deba subrogarlos."],
+[344,"Demandado incierto","Si vencido el plazo de los edictos no comparece el citado, se nombra al Defensor Oficial para que lo represente en el juicio y, en su caso, recurra de la sentencia."],
+[521,"Notificación al Defensor Oficial","Si el deudor con domicilio desconocido no se presentó, la sentencia se notifica al Defensor Oficial."],
+[661,"Incapacidad","En los procesos de declaración de incapacidad intervienen un Asesor de Incapaces y un representante del Ministerio Público Fiscal."]]}
+];
+const root=document.getElementById("arts");
+root.innerHTML=P.map((p,i)=>`<section id="p${p.id}" class="band s${p.id}${i%2?"":" alt"}"><div class="wrap">
+<div class="art-head"><div class="numeral" aria-hidden="true">${p.id}</div><h2>${p.t}</h2><p class="tagline">${p.g}<br><span class="rng">${p.r}</span></p></div>
+<div class="grid">${p.a.map(a=>`<article class="card" id="art${a[0]}" data-t="${(a[0]+" "+a[1]+" "+a[2]).toLowerCase()}"><div class="hd"><span class="n">${a[0]}</span><h3>${a[1]}</h3></div><p>${a[2]}</p></article>`).join("")}</div></div></section>`).join("");
+const q=document.getElementById("q"),cnt=document.getElementById("cnt"),none=document.getElementById("none");
+function f(){const v=q.value.trim().toLowerCase().replace(/^art\.?\s*/,"");let tot=0;
+document.querySelectorAll("#arts section").forEach(s=>{let n=0;s.querySelectorAll(".card").forEach(c=>{const ok=!v||c.dataset.t.includes(v);c.style.display=ok?"":"none";if(ok)n++});s.style.display=n?"":"none";tot+=n});
+cnt.textContent=tot+" de 8 artículos";none.style.display=tot?"none":"block"}
+q.addEventListener("input",f);f();
+</script>
+</body>
+</html>
