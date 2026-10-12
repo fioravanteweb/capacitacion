@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>La Prueba en Misiones (Arts. 328 a 465) explicada en simple</title>
+<meta name="description" content="Guía gráfica y en lenguaje sencillo de la Prueba en el Código Procesal de Misiones: anticipada, documental, informes, testigos, peritos y reconocimiento judicial.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500..800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F2F5F9;--surface:#fff;--ink:#1C2230;--muted:#586075;--line:#DCE2EC;--on:#fff;
+--c1:#2563C9;--c2:#0F7B63;--c3:#B8480E;--c4:#7B3FC7;--c5:#B5205A;--c6:#0E7490;
+--fd:"Fraunces",Georgia,"Times New Roman",serif;--fb:"Source Sans 3",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--r:16px}
+@media (prefers-color-scheme:dark){:root{--paper:#12151D;--surface:#1A1F2B;--ink:#ECEEF4;--muted:#A7AEC0;--line:#2B3242;--on:#12151D;
+--c1:#7DB0FF;--c2:#55D3B2;--c3:#FFA169;--c4:#BE9BFF;--c5:#FF8DB4;--c6:#5CD0EE}}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:1.0625rem/1.65 var(--fb);-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--fd);margin:0;line-height:1.1;letter-spacing:-.015em;text-wrap:balance}
+p{margin:0 0 1em}
+:focus-visible{outline:3px solid var(--c1);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:var(--paper);padding:10px 16px;border-radius:10px;z-index:50}
+.skip:focus{left:12px}
+.s1{--ac:var(--c1)}.s2{--ac:var(--c2)}.s3{--ac:var(--c3)}.s4{--ac:var(--c4)}.s5{--ac:var(--c5)}.s6{--ac:var(--c6)}
+.s1,.s2,.s3,.s4,.s5,.s6{--t:color-mix(in srgb,var(--ac) 13%,var(--surface));--d:color-mix(in srgb,var(--ac) 78%,var(--ink))}
+.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 90%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+.top-in{max-width:1120px;margin:0 auto;display:flex;align-items:center;gap:18px;padding:10px 24px}
+.brand{font-family:var(--fd);font-weight:700;white-space:nowrap}
+.nav{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav a{display:inline-flex;align-items:center;gap:8px;padding:7px 13px;border-radius:999px;color:var(--muted);text-decoration:none;font-weight:600;font-size:.92rem;white-space:nowrap}
+.nav a:hover{color:var(--ink);background:var(--surface)}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--ac)}
+.hero{padding:56px 0 40px}
+.kicker{color:var(--muted);font-size:.95rem;font-weight:600;max-width:64ch;margin-bottom:18px}
+h1{font-weight:800;font-size:clamp(2.2rem,5.4vw,4rem);line-height:1.02;letter-spacing:-.03em;max-width:20ch;margin-bottom:22px}
+.lead{font-size:1.18rem;max-width:62ch;color:var(--muted)}
+.lead strong{color:var(--ink)}
+.stats{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 0;padding:0;list-style:none}
+.stats li{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px 18px;font-size:.95rem}
+.stats b{font-family:var(--fd);font-size:1.5rem;margin-right:6px}
+.band{padding:64px 0}
+.band.alt{background:var(--surface);border-block:1px solid var(--line)}
+.sec{font-weight:800;font-size:clamp(1.7rem,3.4vw,2.5rem);letter-spacing:-.025em;margin-bottom:10px}
+.sub{color:var(--muted);max-width:64ch;margin-bottom:30px}
+.route{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px}
+.route a,.route .t{display:flex;flex-direction:column;gap:6px;height:100%;padding:18px;border-radius:var(--r);background:var(--ac);color:var(--on);text-decoration:none}
+.route a:hover{transform:translateY(-2px)}
+.route .k{font-size:.82rem;font-weight:700;opacity:.9}
+.route h3{font-size:1.15rem;color:inherit}
+.route p{margin:0;font-size:.9rem;line-height:1.45;opacity:.95}
+.flow{list-style:none;margin:0;padding:0;display:flex;align-items:stretch}
+.flow li{flex:1;position:relative;background:var(--t);border:2px solid var(--ac);border-radius:var(--r);padding:16px 18px;margin-right:34px}
+.flow li:last-child{margin-right:0}
+.flow li:not(:last-child)::after{content:"";position:absolute;right:-30px;top:50%;width:26px;height:26px;margin-top:-13px;background:var(--ac);clip-path:polygon(0 25%,55% 25%,55% 0,100% 50%,55% 100%,55% 75%,0 75%)}
+.flow b{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--ac);color:var(--on);font-family:var(--fd);margin-bottom:8px}
+.flow h3{font-size:1.05rem;margin-bottom:4px;color:var(--d)}
+.flow p{margin:0;font-size:.92rem;line-height:1.5}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.box{border-radius:var(--r);padding:22px 24px;background:var(--t);border:2px solid var(--ac)}
+.box h3{color:var(--d);font-size:1.3rem;margin-bottom:12px}
+.box ul{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.box li{padding:5px 14px;border-radius:999px;background:var(--ac);color:var(--on);font-weight:600;font-size:.92rem}
+.box p{margin:12px 0 0;font-size:.97rem}
+.cmp{width:100%;border-collapse:separate;border-spacing:0;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.cmp th,.cmp td{padding:14px 20px;text-align:left;vertical-align:top;border-top:1px solid var(--line);font-size:.98rem;line-height:1.55}
+.cmp thead th{border-top:0;font-family:var(--fd);font-size:1.1rem;color:var(--on);background:var(--c3)}
+.cmp tbody th{width:30%}
+.cmp td.hl{background:color-mix(in srgb,var(--c3) 10%,var(--surface));font-weight:600}
+.scroll{overflow-x:auto}
+.art-head{display:grid;grid-template-columns:auto 1fr;gap:4px 28px;align-items:end;margin-bottom:30px}
+.numeral{grid-row:span 2;font-family:var(--fd);font-weight:800;font-size:clamp(4.5rem,11vw,8rem);line-height:.8;letter-spacing:-.05em;color:var(--ac)}
+.art-head h2{font-weight:800;font-size:clamp(1.8rem,3.6vw,2.7rem);letter-spacing:-.025em}
+.tagline{color:var(--muted);font-size:1.1rem;max-width:56ch;margin:0}
+.rng{display:inline-block;margin-top:8px;font-size:.88rem;font-weight:700;color:var(--d);background:var(--t);border-radius:999px;padding:2px 12px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-top:6px solid var(--ac);border-radius:var(--r);padding:22px 24px;display:flex;flex-direction:column;gap:12px}
+.alt .card{background:var(--paper)}
+.card .hd{display:flex;align-items:center;gap:14px}
+.n{flex:none;min-width:56px;text-align:center;padding:6px 10px;border-radius:12px;background:var(--ac);color:var(--on);font-family:var(--fd);font-weight:800;font-size:1.35rem}
+.card h3{font-size:1.25rem;line-height:1.2}
+.card p{margin:0;font-size:.99rem;line-height:1.6}
+.take{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 40px}
+.take li{display:grid;grid-template-columns:40px 1fr;gap:14px;align-items:start}
+.take li::before{content:"✓";width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--ink);color:var(--paper);font-family:var(--fd);font-weight:800}
+.foot{padding:48px 0 calc(64px + env(safe-area-inset-bottom,0px));color:var(--muted);font-size:.92rem}
+.foot p{max-width:80ch}
+@media (max-width:960px){.route{grid-template-columns:repeat(2,1fr)}.grid,.take,.duo{grid-template-columns:1fr}.flow{flex-direction:column;gap:34px}.flow li{margin-right:0}.flow li:not(:last-child)::after{right:auto;left:50%;top:auto;bottom:-30px;margin:0 0 0 -13px;transform:rotate(90deg)}}
+@media (max-width:760px){.band{padding:48px 0}.brand{display:none}.wrap,.top-in{padding-inline:18px}.route{grid-template-columns:1fr}.art-head{grid-template-columns:1fr}.numeral{grid-row:auto}.cmp{min-width:560px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+@media print{.top,.skip{display:none}body{background:#fff}.band{padding:24px 0}.card{break-inside:avoid}}
+.n{white-space:nowrap;font-size:1rem}
+</style>
+</head>
+<body>
+<a class="skip" href="#panorama">Saltar al contenido</a>
+<header class="top"><div class="top-in">
+  <div class="brand">La Prueba, en simple</div>
+  <nav class="nav" aria-label="Secciones">
+    <a href="#panorama">Panorama</a>
+    <a class="s1" href="#p1"><i class="dot"></i>Anticipada</a>
+    <a class="s2" href="#p2"><i class="dot"></i>Normas generales</a>
+    <a class="s3" href="#p3"><i class="dot"></i>Documental</a>
+    <a class="s4" href="#p4"><i class="dot"></i>Informes</a>
+    <a class="s5" href="#p5"><i class="dot"></i>Testigos</a>
+    <a class="s6" href="#p6"><i class="dot"></i>Peritos</a>
+    <a class="s1" href="#p7"><i class="dot"></i>Reconocimiento y conclusión</a>
+    <a href="#esencial">Lo esencial</a>
+  </nav>
+</div></header>
+<main>
+<section id="panorama">
+  <div class="hero"><div class="wrap">
+    <p class="kicker">Ley XII – N.° 27 · Código Procesal Civil, Comercial, de Familia y Violencia Familiar de Misiones · Libro Segundo, Título II, Capítulo V · Arts. 328 a 465</p>
+    <h1>La prueba: cómo se demuestran los hechos en el proceso civil.</h1>
+    <p class="lead">Guía gráfica y en <strong>lenguaje sencillo</strong> de la prueba en el proceso civil de Misiones. Responde: <strong>¿quién prueba qué?</strong>, <strong>¿cómo se produce cada medio?</strong> y <strong>¿qué pasa cuando se cierra la prueba?</strong></p>
+    <ul class="stats"><li><b>40</b>días máximo de prueba</li><li><b>8</b>testigos máximo por parte</li><li><b>15</b>días para el perito</li><li><b>6</b>días para alegar</li></ul>
+  </div></div>
+
+  <div class="band alt"><div class="wrap">
+    <h2 class="sec">El recorrido de la ley</h2>
+    <p class="sub">Los arts. 328 a 465 agrupados en siete bloques temáticos. Tocá uno para ir a él.</p>
+    <ol class="route">
+      <li class="s1"><a href="#p1"><span class="k">Arts. 328 a 331</span><h3>Prueba anticipada</h3><p>Cuando la prueba puede perderse: testigos, reconocimiento, informes.</p></a></li>
+      <li class="s2"><a href="#p2"><span class="k">Arts. 362 a 388</span><h3>Normas generales</h3><p>Audiencia preliminar, ofrecimiento, carga de la prueba, hechos nuevos.</p></a></li>
+      <li class="s3"><a href="#p3"><span class="k">Arts. 389 a 397</span><h3>Prueba documental</h3><p>Exhibición de documentos, cotejo, redargución de falsedad.</p></a></li>
+      <li class="s4"><a href="#p4"><span class="k">Arts. 398 a 405</span><h3>Informes y expedientes</h3><p>Informes a oficinas públicas, privadas y remisión de expedientes.</p></a></li>
+      <li class="s5"><a href="#p5"><span class="k">Arts. 406 a 436</span><h3>Testigos</h3><p>Quiénes pueden serlo, cómo se citan, cómo declaran.</p></a></li>
+      <li class="s6"><a href="#p6"><span class="k">Arts. 437 a 458</span><h3>Peritos</h3><p>Designación, puntos de pericia, dictamen, consultores técnicos.</p></a></li>
+      <li class="s1"><a href="#p7"><span class="k">Arts. 459 a 465</span><h3>Reconocimiento y conclusión</h3><p>Reconocimiento judicial, alegatos y llamamiento de autos.</p></a></li>
+    </ol>
+  </div></div>
+
+  <div class="band"><div class="wrap">
+    <h2 class="sec">El camino de la prueba</h2>
+    <p class="sub">Cinco etapas, desde la audiencia preliminar hasta el llamamiento de autos.</p>
+    <ol class="flow">
+      <li class="s1"><b>1</b><h3>Audiencia preliminar</h3><p>Se fijan los hechos a probar y se proveen las pruebas (art. 362).</p></li>
+      <li class="s2"><b>2</b><h3>Plazo de prueba</h3><p>Máximo 40 días. Comienza desde la audiencia (art. 369).</p></li>
+      <li class="s3"><b>3</b><h3>Producción</h3><p>Documental, informes, testigos y peritos en audiencias concentradas.</p></li>
+      <li class="s4"><b>4</b><h3>Alegatos</h3><p>Las partes alegan sobre el mérito en 6 días (art. 462).</p></li>
+      <li class="s5"><b>5</b><h3>Autos para sentencia</h3><p>Se cierra la discusión y el juez llama a sentencia (art. 463).</p></li>
+    </ol>
+  </div></div>
+
+  <div class="band alt"><div class="wrap">
+    <h2 class="sec">Los plazos de un vistazo</h2>
+    <p class="sub">Todo está pensado para concentrar la producción.</p>
+    <div class="scroll"><table class="cmp"><thead><tr><th>Paso</th><th>Plazo</th><th>Art.</th></tr></thead><tbody>
+      <tr><th>Ofrecimiento de prueba</th><td>Con demanda, contestación o reconvención</td><td>334</td></tr>
+      <tr><th>Audiencia preliminar</th><td class="hl">Dentro de 60 días de contestado el traslado</td><td>362</td></tr>
+      <tr><th>Plazo de prueba</th><td class="hl">Máximo 40 días</td><td>369</td></tr>
+      <tr><th>Ampliación del ofrecimiento</th><td>5 días desde la audiencia</td><td>362 inc. 6</td></tr>
+      <tr><th>Hechos nuevos</th><td class="hl">5 días desde la audiencia preliminar</td><td>367</td></tr>
+      <tr><th>Designación de perito</th><td>En la audiencia del art. 362</td><td>440</td></tr>
+      <tr><th>Dictamen del perito</th><td class="hl">15 días desde su designación</td><td>440</td></tr>
+      <tr><th>Presentación del alegato</th><td class="hl">6 días</td><td>462</td></tr>
+      <tr><th>Llamamiento de autos</th><td>Automático tras el alegato</td><td>463</td></tr>
+    </tbody></table></div>
+  </div></div>
+</section>
+
+<div id="arts"></div>
+
+<section id="esencial" class="band alt"><div class="wrap">
+  <h2 class="sec">Lo esencial</h2>
+  <p class="sub">Para quedarse con lo más importante.</p>
+  <ul class="take">
+    <li><span><b>Quien afirma, prueba.</b> La carga recae en quien invoca un hecho controvertido o una norma que el juez no debe conocer (art. 379).</span></li>
+    <li><span><b>La prueba es sobre los hechos articulados.</b> No se puede probar sobre hechos no invocados en los escritos (art. 366).</span></li>
+    <li><span><b>Solo 8 testigos por parte.</b> Los primeros 8; el resto puede ser examinado si es estrictamente necesario (art. 410).</span></li>
+    <li><span><b>Un solo perito por defecto.</b> Se designa de oficio y no se admiten consultores técnicos en incidentes (arts. 438 y 184).</span></li>
+    <li><span><b>El perito debe presentar su dictamen en 15 días.</b> Si no lo hace, puede ser removido y perder honorarios (arts. 440 y 450).</span></li>
+    <li><span><b>El juez puede ordenar prueba de oficio.</b> Para esclarecer la verdad de los hechos controvertidos (art. 36 inc. 4).</span></li>
+    <li><span><b>La negligencia se sanciona.</b> Si la prueba no se produce en plazo, se tiene por desistida (art. 386).</span></li>
+    <li><span><b>La sentencia se dicta tras los alegatos.</b> Se llama autos para sentencia y se cierra la discusión (art. 463).</span></li>
+  </ul>
+</div></section>
+</main>
+<footer class="foot"><div class="wrap"><p>Resumen en lenguaje sencillo de los arts. 328 a 465 de la Ley XII – N.° 27 de la Provincia de Misiones. No reemplaza el texto de la ley ni el asesoramiento de un profesional del derecho.</p></div></footer>
+<script>
+const P=[
+{id:1,t:"Prueba anticipada",r:"Arts. 328 a 331",g:"Cuando la prueba puede perderse o ser muy difícil de producir en el período ordinario.",a:[
+["328","Prueba anticipada","Los que sean o vayan a ser parte en un proceso de conocimiento y tengan motivos justificados para temer que la producción de sus pruebas pueda resultar imposible o muy dificultosa en el período de prueba, pueden solicitar que se produzcan anticipadamente: 1) la declaración de algún testigo de muy avanzada edad, gravemente enfermo o próximo a ausentarse del país; 2) el reconocimiento judicial o dictamen pericial para hacer constar la existencia de documentos, o el estado, calidad o condición de cosas o de lugares; 3) el pedido de informes."],
+["329","Pedido de medidas preliminares. Resolución y diligenciamiento","En el escrito en que se solicitan medidas preliminares se debe indicar el nombre de la futura parte contraria, su domicilio si es conocido y los fundamentos de la petición. El juez debe acceder a las pretensiones si estima justas las causas, repeliéndolas de oficio en caso contrario. La resolución es apelable únicamente cuando deniega la diligencia. Si ha de practicarse la prueba se debe citar a la contraria, salvo cuando resulta imposible por razón de urgencia, en cuyo caso debe intervenir el Defensor Oficial."],
+["330","Producción de prueba anticipada después de trabada la litis","Después de trabada la litis, la producción anticipada de prueba solo tiene lugar por las razones de urgencia indicadas en el art. 328, salvo la atribución conferida al juez por el art. 36 inc. 4)."],
+["331","Responsabilidad por incumplimiento","Cuando sin justa causa el interpelado no cumple la orden del juez en el plazo fijado, o da informaciones falsas o que pueden inducir a error, o destruye u oculta los instrumentos o cosas cuya exhibición o presentación se requieren, se le aplica una multa que no puede ser menor a la cuarta parte de un (1) Salario Mínimo, Vital y Móvil ni mayor a cuatro (4) Salarios Mínimos, Vitales y Móviles, debiendo graduarse en atención a las circunstancias personales del incumplidor."]]},
+{id:2,t:"Prueba: normas generales",r:"Arts. 362 a 388",g:"Audiencia preliminar, ofrecimiento, carga de la prueba, hechos nuevos y negligencia.",a:[
+["362","Audiencia preliminar","El juez debe citar a las partes a una audiencia dentro de los 60 días de cumplidos los actos del art. 360. En ella: 1) invita a conciliar; 2) decide si la cuestión es de puro derecho; 3) fija los hechos conducentes sobre los que versará la prueba; 4) recibe las manifestaciones sobre los hechos nuevos; 5) provee las pruebas admisibles y concentra la prueba de testigos; 6) si hay especiales exigencias probatorias, suspende la audiencia y las partes pueden ampliar el ofrecimiento dentro del quinto día."],
+["363","Oposición","Si alguna de las partes se opone a la apertura a prueba en la audiencia, el juez resuelve lo procedente luego de escuchar a la contraria. La resolución solo es apelable si declara la cuestión de puro derecho."],
+["364","Prescindencia","Si en la audiencia todas las partes manifiestan que no tienen prueba que producir, o que esta consiste únicamente en las constancias del expediente o en la documental ya agregada, la causa queda conclusa para definitiva y el juez llama autos para sentencia."],
+["365","Clausura del período de prueba","El período de prueba queda clausurado antes de su vencimiento, sin necesidad de declaración expresa, cuando todas quedan producidas, o las partes renuncian a las pendientes."],
+["366","Pertinencia y admisibilidad de la prueba","No pueden producirse pruebas sino sobre hechos que fueron articulados por las partes en sus escritos respectivos. No son admitidas las que son manifiestamente improcedentes, superfluas o meramente dilatorias."],
+["367","Hechos nuevos","Cuando con posterioridad a la contestación de la demanda o reconvención ocurre o llega a conocimiento de las partes algún hecho relacionado con la cuestión que se ventila, pueden alegarlo hasta 5 días después de notificada la audiencia del art. 362, acompañando la prueba documental y ofreciendo las demás. Del escrito se da traslado a la otra parte."],
+["368","Inapelabilidad","La resolución que admite el hecho nuevo es inapelable. La que lo rechaza es apelable en efecto diferido."],
+["369","Plazo de producción de prueba","El plazo de prueba debe ser fijado por el juez y no debe exceder de 40 días. Dicho plazo es común y comienza a correr a partir de la fecha de celebración de la audiencia preliminar del art. 362."],
+["370","Fijación y concentración de las audiencias","Las audiencias deben señalarse dentro del plazo de prueba y, en lo posible, simultáneamente en ambos cuadernos. Se deben concentrar en la misma fecha o en días sucesivos, teniendo en cuenta la naturaleza de las pruebas."],
+["371","Prueba a producir en el extranjero","La prueba que debe producirse fuera de la República debe ser ofrecida dentro del plazo o en la oportunidad pertinente. En el escrito se deben indicar las pruebas, expresando a qué hechos controvertidos se vinculan."],
+["372","Especificaciones","Si se trata de prueba testimonial, deben expresarse los nombres, profesión y domicilio de los testigos y acompañarse los interrogatorios. Si se requiere el testimonio de documentos, se deben mencionar los archivos o registros donde se encuentran."],
+["373","Inadmisibilidad","No se admite la prueba si en el escrito de ofrecimiento no se cumplen los requisitos de los arts. 371 y 372."],
+["374","Facultad de la contraparte. Deber del Juez","La parte contraria y el juez tienen, respectivamente, la facultad y el deber atribuidos por el art. 434."],
+["375","Prescindencia de prueba no esencial","Si producidas todas las demás pruebas queda pendiente en todo o en parte únicamente la que debe producirse fuera de la Provincia, y de la ya acumulada resulta que no es esencial, se debe pronunciar sentencia prescindiendo de ella. Puede ser considerada en segunda instancia si es agregada cuando la causa se encuentra en la alzada."],
+["376","Costas","Cuando solo una de las partes ofrece prueba a producir fuera de la Provincia y no la ejecuta oportunamente, son a su cargo las costas originadas por ese pedido."],
+["377","Continuidad del plazo de prueba","Salvo en los supuestos del art. 158, el plazo de prueba no se suspende."],
+["378","Constancias de expedientes judiciales","Cuando la prueba consiste en constancias de otros expedientes judiciales no terminados, la parte debe agregar los testimonios o certificados de las piezas pertinentes, sin perjuicio de la facultad del juez de requerir dichas constancias o los expedientes."],
+["379","Carga de la prueba","Incumbe la carga de la prueba a la parte que afirma la existencia de un hecho controvertido o de un precepto jurídico que el juez o el tribunal no tiene el deber de conocer. Cada una de las partes debe probar el presupuesto de hecho de la norma o normas que invoca como fundamento de su pretensión, defensa o excepción."],
+["380","Medios de prueba","La prueba debe producirse por los medios previstos expresamente por la ley y por los que el juez dispone, a pedido de parte o de oficio, siempre que no afecten la moral, la libertad personal de los litigantes o de terceros. Los medios de prueba no previstos se diligencian aplicando por analogía las disposiciones de los semejantes."],
+["381","Inapelabilidad","Son inapelables las resoluciones del juez sobre producción, denegación y sustanciación de las pruebas; si se niega alguna medida, la parte interesada puede solicitar a la Cámara que la diligencie cuando el expediente le es remitido."],
+["382","Cuadernos de prueba","En la audiencia del art. 362 el juez decide acerca de la conveniencia y/o necesidad de formar cuadernos separados de la prueba de cada parte."],
+["383","Prueba dentro del radio del Juzgado","Los jueces asisten a las actuaciones de prueba que deben practicarse fuera de la sede del Juzgado o Tribunal, pero dentro del radio urbano del lugar."],
+["384","Prueba fuera del radio del Juzgado","Cuando las actuaciones deben practicarse fuera del radio urbano, pero dentro de la Circunscripción Judicial, los jueces pueden trasladarse para recibirlas, o encomendar la diligencia a los de las respectivas localidades. Si se trata de un reconocimiento judicial, los jueces pueden trasladarse a cualquier lugar de la Provincia."],
+["385","Plazo para el libramiento y diligenciamiento de oficios y exhortos","Las partes, oportunamente, deben gestionar el libramiento de los oficios y exhortos, retirarlos para su diligenciamiento y hacer saber, cuando corresponde, en qué Juzgado y Secretaría queda radicado. Rigen las normas sobre caducidad de pruebas por negligencia."],
+["386","Negligencia","Las medidas de prueba deben ser pedidas, ordenadas y practicadas dentro del plazo. A los interesados incumbe urgir para que sean diligenciadas oportunamente. Si no lo son por omisión de las autoridades encargadas de recibirlas, pueden los interesados pedir que se practiquen antes de los alegatos."],
+["387","Prueba producida y agregada","Se debe desestimar el pedido de declaración de negligencia cuando la prueba se produce y agrega antes de vencido el plazo para contestarlo. También, y sin sustanciación alguna, si se acusa negligencia respecto de la prueba de testigos antes de la fecha y hora de la audiencia."],
+["388","Apreciación de la prueba","Salvo disposición legal en contrario, los jueces forman su convicción respecto de la prueba de conformidad con las reglas de la sana crítica. No tienen el deber de expresar en la sentencia la valoración de todas las pruebas producidas, sino únicamente de las que son esenciales y decisivas para el fallo."]]},
+{id:3,t:"Prueba documental",r:"Arts. 389 a 397",g:"Exhibición de documentos, cotejo, cuerpo de escritura y redargución de falsedad.",a:[
+["389","Exhibición de documentos","Las partes y los terceros en cuyo poder se encuentran documentos esenciales para la solución del litigio están obligados a exhibirlos o a designar el protocolo o archivo en que se hallan los originales. El juez ordena la exhibición de los documentos, sin sustanciación alguna, dentro del plazo que señala."],
+["390","Documentos en poder de una de las partes","Si el documento se encuentra en poder de una de las partes, se le debe intimar su presentación en el plazo que el juez determina. Cuando por otros elementos de juicio resulta manifiestamente verosímil su existencia y contenido, la negativa a presentarlo constituye una presunción en su contra."],
+["391","Documentos en poder de tercero","Si el documento que debe reconocerse se encuentra en poder de tercero, se le debe intimar para que lo presente. Si lo acompaña, puede solicitar su oportuna devolución dejando testimonio en el expediente. El requerido puede oponerse a su presentación si el documento es de su exclusiva propiedad y la exhibición puede ocasionarle perjuicio."],
+["392","Cotejo","Si el requerido niega la firma que se le atribuye o manifiesta no conocer la que se atribuye a otra persona, debe procederse a la comprobación del documento de acuerdo con lo establecido en los arts. 438 y siguientes."],
+["393","Indicación de documentos para el cotejo","En los escritos a que se refiere el art. 439 las partes deben indicar los documentos que han de servir para la pericia."],
+["394","Estado del documento","A pedido de parte, el Secretario debe certificar sobre el estado material del documento de cuya comprobación se trata, indicando las enmiendas, entrerrenglonaduras u otras particularidades que en él se advierten."],
+["395","Documentos indubitados","Si los interesados no se ponen de acuerdo en la elección de documentos para la pericia, el juez solo tiene por indubitados: 1) las firmas consignadas en documentos auténticos; 2) los documentos privados reconocidos en juicio; 3) el impugnado, en la parte en que fue reconocido como cierto; 4) las firmas registradas en establecimientos bancarios."],
+["396","Cuerpo de escritura","A falta de documentos indubitados, o siendo ellos insuficientes, el juez puede ordenar que la persona a quien se atribuye la letra forme un cuerpo de escritura al dictado y a requerimiento del perito. Si no comparece o se rehúsa escribir, sin justificar impedimento legítimo, se tiene por reconocido el documento."],
+["397","Redargución de falsedad","La redargución de falsedad de un instrumento público tramita por incidente que debe promoverse dentro del plazo de 10 días de realizada la impugnación, bajo apercibimiento de tenerla por desistida. Es inadmisible si no se indican los elementos y no se ofrecen las pruebas tendientes a demostrar la falsedad."]]},
+{id:4,t:"Prueba de informes y expedientes",r:"Arts. 398 a 405",g:"Informes a oficinas públicas y entidades privadas, y remisión de expedientes.",a:[
+["398","Procedencia","Los informes que se solicitan a las oficinas públicas, escribanos con registros y entidades privadas deben versar sobre hechos concretos, claramente individualizados, controvertidos en el proceso. Proceden únicamente respecto de actos o hechos que resultan de la documentación, archivo o registros contables del informante. Asimismo, puede requerirse a las oficinas públicas la remisión de expedientes, testimonios o certificados relacionados con el juicio."],
+["399","Sustitución o ampliación de otros medios probatorios","No es admisible el pedido de informes que manifiestamente tiende a sustituir o a ampliar otro medio de prueba que específicamente corresponde por ley o por la naturaleza de los hechos controvertidos. Cuando el requerimiento es procedente, el informe o remisión del expediente solo puede ser negado si existe justa causa de reserva o de secreto."],
+["400","Recaudos y plazos para la contestación","Las oficinas públicas no pueden establecer recaudos o requisitos para los oficios sin previa aprobación por el Poder Ejecutivo. Deben contestar el pedido de informes o remitir el expediente dentro de 20 días hábiles y las entidades privadas dentro de 10, salvo que la providencia que lo ordena fije otro plazo."],
+["401","Retardo","Si por circunstancias atendibles el requerimiento no puede ser cumplido en el plazo, se debe informar al Juzgado, antes del vencimiento de aquel, sobre las causas y la fecha en que se cumplirá. Cuando el juez advierte que determinada repartición pública, sin causa justificada, no cumple reiteradamente el deber de contestar oportunamente los informes, debe poner el hecho en conocimiento del Ministerio de Gobierno. A las entidades privadas que sin causa justificada no contestan oportunamente, se les impone una multa de hasta Pesos Cien ($100) por cada día de retardo."],
+["402","Atribuciones de los letrados patrocinantes","Los pedidos de informes, testimonios y certificados, así como los de remisión de expedientes ordenados en el juicio, deben ser requeridos por medio de oficios firmados, sellados y diligenciados por el letrado patrocinante con transcripción de la resolución que los ordena. Los oficios dirigidos a bancos, oficinas públicas o entidades privadas que tienen por único objeto acreditar el haber del juicio sucesorio, son presentados directamente por el abogado patrocinante."],
+["403","Compensación","Las entidades privadas que no son parte en el proceso, al presentar el informe y si los trabajos que deben efectuar para contestarlo implican gastos extraordinarios, pueden solicitar una compensación, que es fijada por el juez, previo traslado a las partes."],
+["404","Caducidad","Si vencido el plazo fijado para contestar el informe, la oficina pública o entidad privada no lo remite, se tendrá por desistida de esa prueba a la parte que la pidió, sin sustanciación alguna, si dentro de quinto día no solicita al juez la reiteración del oficio."],
+["405","Impugnación por falsedad","Sin perjuicio de la facultad de la otra parte de formular las peticiones tendientes a que los informes sean completos y ajustados a los hechos, en caso de impugnación por falsedad se debe requerir la exhibición de los asientos contables o de los documentos y antecedentes en que se funda la contestación. La impugnación solo puede ser formulada dentro de quinto día de notificada la providencia que ordena la agregación del informe."]]},
+{id:5,t:"Prueba de testigos",r:"Arts. 406 a 436",g:"Quiénes pueden ser testigos, cómo se citan, cómo declaran y qué límites hay.",a:[
+["406","Procedencia","Toda persona mayor de 14 años puede ser propuesta como testigo y tiene el deber de comparecer y declarar, salvo las excepciones establecidas por ley. Los testigos que tienen su domicilio fuera del lugar del asiento del Tribunal pero dentro de un radio de 70 kilómetros, están obligados a comparecer."],
+["407","Testigos excluidos","No pueden ser ofrecidos como testigos los consanguíneos o afines en línea directa de las partes, ni el cónyuge, aunque esté separado legalmente, salvo si se trata de reconocimiento de firmas."],
+["408","Oposición","Sin perjuicio de la facultad del juez de desestimar de oficio y sin sustanciación alguna el ofrecimiento de prueba testimonial que no sea admisible, las partes pueden formular oposición si indebidamente se la ordena."],
+["409","Ofrecimiento","Cuando las partes pretenden producir prueba de testigos, deben presentar una lista de ellos con expresión de sus nombres, profesión y domicilio. El interrogatorio puede reservarse por las partes hasta la audiencia en que deben presentarse los testigos."],
+["410","Número de testigos","Los testigos no pueden exceder de 8 por cada parte. Si se propone mayor número, se debe citar los 8 primeros, y luego de examinados, el juez, de oficio o a pedido de parte, puede disponer la recepción de otros testimonios entre los propuestos, si es estrictamente necesario."],
+["411","Audiencia","Si la prueba testimonial es admisible, el juez manda recibirla en la audiencia que señala, en las condiciones previstas en el art. 362. Cuando el número de los ofrecidos permite suponer la imposibilidad de que todos declaren en la misma fecha, se deben señalar tantas audiencias como sean necesarias en días seguidos. El Juzgado debe prever una audiencia supletoria con carácter de segunda citación."],
+["412","Caducidad de la prueba","A pedido de parte y sin sustanciación alguna, se debe tener por desistida del testigo a la parte que lo propuso si: 1) no activó la citación del testigo y este no compareció por esa razón; 2) no habiendo comparecido aquel a la primera audiencia, sin invocar causa justificada, no requiere oportunamente las medidas de compulsión necesarias; 3) fracasada la segunda audiencia por motivos no imputables a la parte, esta no solicita nueva audiencia dentro del quinto día."],
+["413","Forma de la citación","La citación a los testigos debe ser efectuada por cédula. Esta debe diligenciarse con 3 días de anticipación por lo menos, y en ella se transcribe la parte del art. 411 que se refiere a la obligación de comparecer y a su sanción."],
+["414","Carga de la citación","El testigo es citado por el Juzgado, salvo cuando la parte que lo propone asume la carga de hacerlo comparecer a la audiencia; en este caso, si el testigo no concurre sin justa causa, de oficio o a pedido de parte y sin sustanciación alguna se lo tiene por desistido."],
+["415","Inasistencia justificada","Además de las causas de justificación de la inasistencia librada a la apreciación judicial, lo son las siguientes: 1) si la citación es nula; 2) si el testigo es citado con intervalo menor al prescripto en el art. 413, salvo que la audiencia se anticipó por razones de urgencia."],
+["416","Testigo imposibilitado de comparecer","Si alguno de los testigos se halla imposibilitado de comparecer al Juzgado o tiene alguna otra razón atendible, es examinado en su casa, ante el Secretario, presentes o no las partes. La enfermedad debe justificarse con anticipación suficiente a la audiencia mediante certificado médico."],
+["417","Incomparecencia y falta de interrogatorio","Si la parte que ofrece testigo no concurre a la audiencia por sí o por apoderado y no deja interrogatorio, se la tendrá por desistida de aquel, sin sustanciación alguna."],
+["418","Pedido de explicaciones a las partes","Si las partes están presentes, el juez o el Secretario, en su caso, puede pedirles las explicaciones que estima necesarias sobre los hechos. Asimismo, las partes pueden formularse recíprocamente las preguntas que estiman convenientes."],
+["419","Orden de las declaraciones","Los testigos deben estar en lugar desde donde no puedan oír las declaraciones de los otros. Son llamados sucesiva y separadamente, alternándose, en lo posible, los del actor con los del demandado, a menos que el Juzgado establezca otro orden por razones especiales."],
+["420","Juramento o promesa de decir verdad","Antes de declarar, los testigos deben prestar juramento o formular promesa de decir verdad, a su elección, y deben ser informados de las consecuencias penales a que pueden dar lugar las declaraciones falsas o reticentes."],
+["421","Interrogatorio preliminar","Aunque las partes no lo pidan, los testigos son siempre preguntados: 1) por su nombre, edad, estado, profesión y domicilio; 2) si es pariente por consanguinidad o afinidad de alguna de las partes, y en qué grado; 3) si tiene interés directo o indirecto en el pleito; 4) si es amigo íntimo o enemigo; 5) si es dependiente, acreedor o deudor de alguno de los litigantes, o si tiene algún otro género de relación con ellos."],
+["422","Forma del examen. Acta","Los testigos deben ser libremente interrogados, por el juez o por quien lo reemplace legalmente, acerca de lo que saben sobre los hechos controvertidos. La parte contraria a la que ofrece el testigo, puede solicitar que se formulen las preguntas que son pertinentes. El juez puede modificar de oficio y sin recurso alguno el orden y los términos de los interrogatorios propuestos."],
+["423","Forma de las preguntas","Las preguntas no deben contener más de un hecho; deben ser claras y concretas; no se formulan las que están concebidas en términos afirmativos, sugieren la respuesta o son ofensivas o vejatorias."],
+["424","Negativa a responder","El testigo puede rehusarse a contestar las preguntas: 1) si la respuesta lo expone a enjuiciamiento penal o compromete su honor; 2) si no puede responder sin revelar un secreto profesional, militar, científico, artístico o industrial."],
+["425","Forma de las respuestas","El testigo debe contestar sin poder leer notas o apuntes, a menos que por la índole de la pregunta se le autorice. Debe siempre dar la razón de su dicho; si no lo hace, el juez debe exigir."],
+["426","Interrupción de la declaración","Al que interrumpe al testigo en su declaración puede imponérsele una multa de hasta el 25% de un (1) Salario Mínimo, Vital y Móvil. En caso de reiteración incurre en el doble de la multa sin perjuicio de las demás sanciones."],
+["427","Permanencia","Después que prestan su declaración, los testigos deben permanecer en la sala del Juzgado hasta que concluya la audiencia, a no ser que el juez disponga lo contrario."],
+["428","Careo","Se puede decretar el careo entre testigos o entre estos y las partes. Si por residir los testigos o las partes en diferentes lugares el careo es dificultoso o imposible, el juez puede disponer nuevas declaraciones por separado."],
+["429","Falso testimonio u otro delito","Si las declaraciones ofrecen indicios graves de falso testimonio u otro delito, el juez puede decretar la detención de los presuntos culpables, remitiéndolos a disposición del juez competente."],
+["430","Suspensión de la audiencia","Cuando no pueden examinarse todos los testigos el día señalado, el juez puede suspender el acto para continuarlo en los siguientes sin necesidad de nueva citación."],
+["431","Reconocimiento de lugares","Si el reconocimiento de algún sitio contribuye a la eficacia del testimonio, puede hacerse en él el examen de los testigos."],
+["432","Prueba de oficio","El juez puede disponer de oficio la declaración en el carácter de testigos, de personas mencionadas por las partes en los escritos de constitución del proceso o cuando, según resulta de otras pruebas producidas, tienen conocimiento de hechos que pueden gravitar en la decisión de la causa. Asimismo, puede ordenar que sean examinados nuevamente los ya interrogados."],
+["433","Testigos domiciliados fuera de la jurisdicción del Juzgado","En el escrito de ofrecimiento de prueba, la parte que presenta testigos que deben declarar fuera del lugar del juicio, debe acompañar el interrogatorio e indicar los nombres de las personas autorizadas para el trámite del exhorto u oficio."],
+["434","Depósito y examen de los interrogatorios","En el caso del art. 433 el interrogatorio queda a disposición de la parte contraria, quien en la oportunidad de contestar la demanda o reconvención puede proponer preguntas. El juez debe examinar los interrogatorios, pudiendo eliminar las preguntas superfluas y agregar las que considere pertinentes."],
+["435","Excepciones a la obligación de comparecer","Exceptúase de la obligación de comparecer a prestar declaración a los funcionarios que determina la Reglamentación del Superior Tribunal de Justicia. Dichos testigos deben declarar por escrito, con la manifestación de que lo hacen bajo juramento o promesa de decir verdad."],
+["436","Idoneidad de los testigos","Dentro del plazo de prueba las partes pueden alegar y probar acerca de la idoneidad de los testigos. El juez debe apreciar, según las reglas de la sana crítica, las circunstancias y motivos que corroboran o disminuyen la fuerza de las declaraciones."]]},
+{id:6,t:"Prueba de peritos",r:"Arts. 437 a 458",g:"Designación, puntos de pericia, dictamen, consultores técnicos y honorarios.",a:[
+["437","Procedencia","Es admisible la prueba pericial cuando la apreciación de los hechos controvertidos requiere conocimientos especiales en alguna ciencia, arte, industria o actividad técnica especializada."],
+["438","Perito. Consultores técnicos","La prueba pericial está a cargo de un perito único designado de oficio por el juez, salvo cuando una ley especial establece un régimen distinto. En el juicio por nulidad de testamento, el juez puede nombrar de oficio 3 peritos cuando por la importancia y complejidad del asunto lo considera conveniente. Cada parte tiene la facultad de designar un consultor técnico."],
+["439","Designación. Puntos de pericia","Al ofrecer la prueba pericial se debe indicar la especialización que ha de tener el perito y se proponen los puntos de pericia; si la parte ejerce la facultad de designar consultor técnico, debe indicar su nombre, profesión y domicilio. La otra parte, al contestar, puede formular la manifestación del art. 458 o proponer otros puntos."],
+["440","Determinación de los puntos de pericia. Plazo","Contestado el traslado del art. 439 o vencido el plazo, en la audiencia prevista en el art. 362 el juez designa el perito y fija los puntos de pericia, pudiendo agregar otros o eliminar los que considera improcedentes o superfluos, y señala el plazo dentro del cual el perito debe cumplir su cometido. Si la resolución no fija dicho plazo se entiende que es de 15 días."],
+["441","Reemplazo del consultor técnico. Honorarios","El consultor técnico puede ser reemplazado por la parte que lo designa; el reemplazante no puede pretender una intervención que importe retrogradar la práctica de la pericia. Los honorarios del consultor técnico integran la condena en costas."],
+["442","Acuerdo de partes","Antes de que el juez ejerza la facultad que le confiere el art. 440, las partes, de común acuerdo, pueden presentar un escrito proponiendo perito y puntos de pericia. Pueden, asimismo, designar consultores técnicos."],
+["443","Anticipo de gastos","Si el perito lo solicita dentro del tercer día de haber aceptado el cargo, y si corresponde por la índole de la pericia, la o las partes que ofrecen la prueba deben depositar la suma que el Juzgado fija para gastos de las diligencias. Dicho importe debe ser depositado dentro del quinto día. La falta de depósito dentro del plazo importa el desistimiento de la prueba."],
+["444","Idoneidad","Si la profesión está reglamentada, el perito debe tener título habilitante en la ciencia, arte, industria o actividad técnica especializada a que pertenecen las cuestiones acerca de las cuales debe expedirse. En caso contrario, o cuando no hay en el lugar del proceso perito con título habilitante, puede ser nombrada cualquier persona con conocimientos en la materia."],
+["445","Recusación","El perito puede ser recusado por justa causa, dentro del quinto día de la audiencia preliminar."],
+["446","Causales","Son causas de recusación del perito las previstas respecto de los jueces; también, la falta de título o incompetencia en la materia de que se trata, en el supuesto del art. 444, segundo párrafo."],
+["447","Trámite. Resolución","Deducida la recusación se hace saber al perito para que en el acto de la notificación o dentro del tercer día manifieste si es o no cierta la causal. Reconocido el hecho o guardado silencio, debe ser reemplazado; si lo niega, el incidente tramita por separado, sin interrumpir el curso del proceso. De la resolución no hay recurso pero esta circunstancia puede ser considerada por la alzada al resolver sobre lo principal."],
+["448","Reemplazo","En caso de ser admitida la recusación, el juez, de oficio, debe reemplazar al perito recusado, sin otra sustanciación."],
+["449","Aceptación del cargo","El perito acepta el cargo ante el Oficial Primero, dentro del tercer día de notificado de su designación; en el caso de no tener título habilitante, bajo juramento o promesa de desempeñar fielmente el cargo. Se lo cita por cédula u otro medio autorizado por este Código. Si el perito no acepta, o no concurre dentro del plazo fijado, el juez debe nombrar otro en su reemplazo, de oficio y sin otro trámite."],
+["450","Remoción","Debe ser removido el perito que, después de haber aceptado el cargo, renuncia sin motivo atendible, rehúsa dar su dictamen o no lo presenta oportunamente. El juez, de oficio, debe nombrar otro en su lugar y lo condena a pagar los gastos de las diligencias frustradas y los daños y perjuicios ocasionados a las partes. El reemplazado pierde el derecho a cobrar honorarios."],
+["451","Práctica de la pericia","La pericia está a cargo del perito designado por el juez. Los consultores técnicos, las partes y sus letrados pueden presenciar las operaciones técnicas que se realizan y formular las observaciones que consideran pertinentes."],
+["452","Presentación del dictamen","El perito debe presentar su dictamen por escrito, con copias para las partes. Debe contener la explicación detallada de las operaciones técnicas realizadas y de los principios científicos en que se funda. Los consultores técnicos de las partes dentro del plazo fijado al perito pueden presentar por separado sus respectivos informes."],
+["453","Traslado. Explicaciones. Nueva pericia","Del dictamen del perito se debe dar traslado a las partes, que se notifica por cédula. De oficio o a instancia de cualquiera de ellas, el juez puede ordenar que el perito dé las explicaciones que se consideran convenientes, en audiencia o por escrito. Si las explicaciones deben presentarse por escrito, las observaciones a las dadas por el perito pueden ser formuladas por los consultores técnicos o, en su defecto, por las partes dentro de quinto día. Cuando el juez lo estima necesario puede disponer que se practique otra pericia, o se perfeccione o amplíe la anterior."],
+["454","Dictamen inmediato","Cuando el objeto de la diligencia pericial es de tal naturaleza que permite al perito dictaminar inmediatamente, puede dar su informe por escrito o en audiencia; en el mismo acto los consultores técnicos pueden formular las observaciones pertinentes."],
+["455","Planos. Exámenes científicos. Reconstrucción de los hechos","De oficio o a pedido de parte, el juez puede ordenar: 1) ejecución de planos, relevamientos, reproducciones fotográficas, cinematográficas o de otra especie, de objetos, documentos o lugares; 2) exámenes científicos necesarios para el mejor esclarecimiento de los hechos controvertidos; 3) reconstrucción de hechos, para comprobar si se produjeron o pudieron realizarse de una manera determinada."],
+["456","Consultas científicas o técnicas","A petición de parte o de oficio, el juez puede requerir opinión a universidades, academias, corporaciones, institutos y entidades públicas o privadas de carácter científico o técnico, cuando el dictamen pericial requiera operaciones o conocimientos de alta especialización."],
+["457","Eficacia probatoria del dictamen","La fuerza probatoria del dictamen pericial es estimada por el juez teniendo en cuenta la competencia del perito, los principios científicos o técnicos en que se funda, la concordancia de su aplicación con las reglas de la sana crítica, las observaciones formuladas por los consultores técnicos o los letrados, conforme a los arts. 453 y 454, y los demás elementos de convicción que la causa ofrece."],
+["458","Impugnación. Desinterés. Cargo de los gastos y honorarios","Al contestar el traslado del art. 439, la parte contraria a la que ofrece la prueba pericial puede: 1) impugnar su procedencia por no corresponder conforme al art. 437; 2) manifestar que no tiene interés en la pericia y que se abstiene de participar en ella. Los jueces deben regular los honorarios de los peritos y demás auxiliares de la justicia conforme a los respectivos aranceles, debiendo adecuarlos, por debajo de sus topes mínimos inclusive, a las regulaciones que se practican en favor de los restantes profesionales intervinientes."]]},
+{id:7,t:"Reconocimiento judicial y conclusión de la causa",r:"Arts. 459 a 465",g:"Reconocimiento de lugares y cosas, alegatos y llamamiento de autos.",a:[
+["459","Medidas admisibles","El juez o Tribunal puede ordenar, de oficio o a pedido de parte: 1) el reconocimiento judicial de lugares o de cosas; 2) la concurrencia de peritos y testigos a dicho acto; 3) las medidas previstas en el art. 455. Al decretar el examen se debe individualizar lo que debe constituir su objeto y determinar el lugar, fecha y hora en que se realizará. Si hay urgencia, la notificación se debe hacer de oficio y con un día de anticipación."],
+["460","Forma de la diligencia","A la diligencia debe asistir el juez o los miembros del tribunal que este determina. Las partes pueden concurrir con sus representantes y letrados y formular las observaciones pertinentes, de las que se debe dejar constancia en acta."],
+["461","Alternativa","Cuando no hay mérito para recibir la causa a prueba, debe procederse con arreglo a lo establecido en el art. 361."],
+["462","Agregación de las pruebas. Alegatos","Producida la prueba, el Oficial Primero, sin necesidad de gestión alguna de los interesados, o sin sustanciarla si se hace, debe ordenar que se agregue al expediente. Cumplido este trámite, el Oficial Primero pone los autos en Secretaría para alegar; esta providencia se notifica personalmente o por cédula y una vez firme se debe entregar el expediente a los letrados por su orden y por el plazo de 6 días a cada uno, sin necesidad de petición escrita, para que presenten el escrito alegando sobre el mérito de la prueba. Transcurrido el plazo sin que el expediente sea devuelto, la parte que lo retiene pierde el derecho de alegar sin que se requiera intimación."],
+["463","Llamamiento de autos","Firme que quede la resolución que decide la cuestión como de puro derecho o transcurrido el plazo fijado en el art. 462, el Secretario, sin petición de parte, debe poner el expediente a despacho agregando los alegatos si se presentaron. El juez, acto continuo, debe llamar autos para sentencia."],
+["464","Efectos del llamamiento de autos","Desde el llamamiento de autos queda cerrada toda discusión y no pueden presentarse más escritos ni producirse más pruebas, salvo las que el juez disponga en los términos del art. 36 inc. 4). Estas deben ser ordenadas en un solo acto."],
+["465","Notificación de la sentencia","La sentencia debe ser notificada de oficio, dentro del tercer día. En la cédula se transcribe la parte dispositiva. Al litigante que lo pide, se le entrega una (1) copia simple de la sentencia, firmada por el Secretario o por el Oficial Primero."]]}
+];
+document.getElementById("arts").innerHTML=P.map((p,i)=>`<section id="p${p.id}" class="band s${p.id}${i%2?"":" alt"}"><div class="wrap"><div class="art-head"><div class="numeral" aria-hidden="true">${p.id}</div><h2>${p.t}</h2><p class="tagline">${p.g}<br><span class="rng">${p.r}</span></p></div><div class="grid">${p.a.map(a=>`<article class="card"><div class="hd"><span class="n">Art. ${a[0]}</span><h3>${a[1]}</h3></div><p>${a[2]}</p></article>`).join("")}</div></div></section>`).join("");
+</script>
+</body>
+</html>
