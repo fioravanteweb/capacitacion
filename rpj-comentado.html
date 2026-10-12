@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Régimen Penal Juvenil comentado: Ley 27.801 en simple</title>
+<meta name="description" content="Guía gráfica y en lenguaje sencillo de la Ley 27.801 de Régimen Penal Juvenil, según el análisis de la Defensoría de NNyA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500..800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F2F5F9;--surface:#fff;--ink:#1C2230;--muted:#586075;--line:#DCE2EC;--on:#fff;
+--c1:#2563C9;--c2:#0F7B63;--c3:#B8480E;--c4:#7B3FC7;--c5:#B5205A;--c6:#0E7490;
+--fd:"Fraunces",Georgia,"Times New Roman",serif;--fb:"Source Sans 3",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--r:16px}
+@media (prefers-color-scheme:dark){:root{--paper:#12151D;--surface:#1A1F2B;--ink:#ECEEF4;--muted:#A7AEC0;--line:#2B3242;--on:#12151D;
+--c1:#7DB0FF;--c2:#55D3B2;--c3:#FFA169;--c4:#BE9BFF;--c5:#FF8DB4;--c6:#5CD0EE}}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:1.0625rem/1.65 var(--fb);-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--fd);margin:0;line-height:1.1;letter-spacing:-.015em;text-wrap:balance}
+p{margin:0 0 1em}
+:focus-visible{outline:3px solid var(--c1);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:var(--paper);padding:10px 16px;border-radius:10px;z-index:50}
+.skip:focus{left:12px}
+.s1{--ac:var(--c1)}.s2{--ac:var(--c2)}.s3{--ac:var(--c3)}.s4{--ac:var(--c4)}.s5{--ac:var(--c5)}.s6{--ac:var(--c6)}
+.s1,.s2,.s3,.s4,.s5,.s6{--t:color-mix(in srgb,var(--ac) 13%,var(--surface));--d:color-mix(in srgb,var(--ac) 78%,var(--ink))}
+.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 90%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+.top-in{max-width:1120px;margin:0 auto;display:flex;align-items:center;gap:18px;padding:10px 24px}
+.brand{font-family:var(--fd);font-weight:700;white-space:nowrap}
+.nav{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav a{display:inline-flex;align-items:center;gap:8px;padding:7px 13px;border-radius:999px;color:var(--muted);text-decoration:none;font-weight:600;font-size:.92rem;white-space:nowrap}
+.nav a:hover{color:var(--ink);background:var(--surface)}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--ac)}
+.hero{padding:56px 0 40px}
+.kicker{color:var(--muted);font-size:.95rem;font-weight:600;max-width:64ch;margin-bottom:18px}
+h1{font-weight:800;font-size:clamp(2.2rem,5.4vw,4rem);line-height:1.02;letter-spacing:-.03em;max-width:20ch;margin-bottom:22px}
+.lead{font-size:1.18rem;max-width:62ch;color:var(--muted)}
+.lead strong{color:var(--ink)}
+.stats{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 0;padding:0;list-style:none}
+.stats li{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px 18px;font-size:.95rem}
+.stats b{font-family:var(--fd);font-size:1.5rem;margin-right:6px}
+.band{padding:64px 0}
+.band.alt{background:var(--surface);border-block:1px solid var(--line)}
+.sec{font-weight:800;font-size:clamp(1.7rem,3.4vw,2.5rem);letter-spacing:-.025em;margin-bottom:10px}
+.sub{color:var(--muted);max-width:64ch;margin-bottom:30px}
+.route{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px}
+.route.four{grid-template-columns:repeat(4,1fr)}
+.route a,.route .t{display:flex;flex-direction:column;gap:6px;height:100%;padding:18px;border-radius:var(--r);background:var(--ac);color:var(--on);text-decoration:none}
+.route a:hover{transform:translateY(-2px)}
+.route .k{font-size:.82rem;font-weight:700;opacity:.9}
+.route h3{font-size:1.15rem;color:inherit}
+.route p{margin:0;font-size:.9rem;line-height:1.45;opacity:.95}
+.flow{list-style:none;margin:0;padding:0;display:flex;align-items:stretch}
+.flow li{flex:1;position:relative;background:var(--t);border:2px solid var(--ac);border-radius:var(--r);padding:16px 18px;margin-right:34px}
+.flow li:last-child{margin-right:0}
+.flow li:not(:last-child)::after{content:"";position:absolute;right:-30px;top:50%;width:26px;height:26px;margin-top:-13px;background:var(--ac);clip-path:polygon(0 25%,55% 25%,55% 0,100% 50%,55% 100%,55% 75%,0 75%)}
+.flow b{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--ac);color:var(--on);font-family:var(--fd);margin-bottom:8px}
+.flow h3{font-size:1.05rem;margin-bottom:4px;color:var(--d)}
+.flow p{margin:0;font-size:.92rem;line-height:1.5}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.box{border-radius:var(--r);padding:22px 24px;background:var(--t);border:2px solid var(--ac)}
+.box h3{color:var(--d);font-size:1.3rem;margin-bottom:12px}
+.box ul{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.box li{padding:5px 14px;border-radius:999px;background:var(--ac);color:var(--on);font-weight:600;font-size:.92rem}
+.box p{margin:12px 0 0;font-size:.97rem}
+.cmp{width:100%;border-collapse:separate;border-spacing:0;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.cmp th,.cmp td{padding:14px 20px;text-align:left;vertical-align:top;border-top:1px solid var(--line);font-size:.98rem;line-height:1.55}
+.cmp thead th{border-top:0;font-family:var(--fd);font-size:1.1rem;color:var(--on);background:var(--c3)}
+.cmp tbody th{width:26%}
+.cmp td.hl{background:color-mix(in srgb,var(--c3) 10%,var(--surface));font-weight:600}
+.scroll{overflow-x:auto}
+.tools{position:sticky;top:57px;z-index:15;background:var(--paper);padding:14px 0;border-bottom:1px solid var(--line)}
+.tools .wrap{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.tools input{flex:1 1 260px;font:inherit;padding:11px 16px;border-radius:12px;border:2px solid var(--line);background:var(--surface);color:var(--ink)}
+.tools input:focus{border-color:var(--c1);outline:0}
+.count{color:var(--muted);font-size:.9rem}
+.art-head{display:grid;grid-template-columns:auto 1fr;gap:4px 28px;align-items:end;margin-bottom:30px}
+.numeral{grid-row:span 2;font-family:var(--fd);font-weight:800;font-size:clamp(4.5rem,11vw,8rem);line-height:.8;letter-spacing:-.05em;color:var(--ac)}
+.art-head h2{font-weight:800;font-size:clamp(1.8rem,3.6vw,2.7rem);letter-spacing:-.025em}
+.tagline{color:var(--muted);font-size:1.1rem;max-width:56ch;margin:0}
+.rng{display:inline-block;margin-top:8px;font-size:.88rem;font-weight:700;color:var(--d);background:var(--t);border-radius:999px;padding:2px 12px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-top:6px solid var(--ac);border-radius:var(--r);padding:22px 24px;display:flex;flex-direction:column;gap:12px}
+.alt .card{background:var(--paper)}
+.card .hd{display:flex;align-items:center;gap:14px}
+.n{flex:none;min-width:56px;text-align:center;padding:6px 10px;border-radius:12px;background:var(--ac);color:var(--on);font-family:var(--fd);font-weight:800;font-size:1.35rem}
+.card h3{font-size:1.25rem;line-height:1.2}
+.card p{margin:0;font-size:.99rem;line-height:1.6}
+.empty{display:none;color:var(--muted);padding:24px 0}
+.take{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 40px}
+.take li{display:grid;grid-template-columns:40px 1fr;gap:14px;align-items:start}
+.take li::before{content:"✓";width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--ink);color:var(--paper);font-family:var(--fd);font-weight:800}
+.foot{padding:48px 0 calc(64px + env(safe-area-inset-bottom,0px));color:var(--muted);font-size:.92rem}
+.foot p{max-width:80ch}
+@media (max-width:960px){.route.four{grid-template-columns:repeat(2,1fr)}.grid,.take,.duo{grid-template-columns:1fr}.flow{flex-direction:column;gap:34px}.flow li{margin-right:0}.flow li:not(:last-child)::after{right:auto;left:50%;top:auto;bottom:-30px;margin:0 0 0 -13px;transform:rotate(90deg)}}
+@media (max-width:760px){.band{padding:48px 0}.brand{display:none}.wrap,.top-in{padding-inline:18px}.route,.route.four{grid-template-columns:1fr}.art-head{grid-template-columns:1fr}.numeral{grid-row:auto}.cmp{min-width:560px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+@media print{.top,.tools,.skip{display:none}body{background:#fff}.band{padding:24px 0}.card{break-inside:avoid}}
+.n{white-space:nowrap;font-size:1rem}.bars{display:grid;gap:10px}.bar{display:grid;grid-template-columns:170px 1fr 100px;gap:12px;align-items:center;font-size:.95rem}.bar i{display:block;height:22px;border-radius:8px;background:var(--c2)}.bar.me i{background:var(--c5)}.bar span:last-child{font-weight:700}.bar.me span{font-weight:700}@media (max-width:760px){.bar{grid-template-columns:105px 1fr 70px;font-size:.85rem}}
+</style>
+</head>
+<body>
+<a class="skip" href="#panorama">Saltar al contenido</a>
+<header class="top"><div class="top-in">
+  <div class="brand">Penal Juvenil, en simple</div>
+  <nav class="nav" aria-label="Secciones">
+    <a href="#panorama">Panorama</a>
+    <a class="s1" href="#p1"><i class="dot"></i>Alternativas</a>
+    <a class="s2" href="#p2"><i class="dot"></i>Penas</a>
+    <a class="s3" href="#p3"><i class="dot"></i>Más duro que adultos</a>
+    <a class="s4" href="#p4"><i class="dot"></i>Inimputables y salud</a>
+    <a class="s5" href="#p5"><i class="dot"></i>Provincias</a>
+    <a href="#esencial">Lo esencial</a>
+  </nav>
+</div></header>
+<main>
+<section id="panorama">
+  <div class="hero"><div class="wrap">
+    <p class="kicker">Régimen Penal Juvenil comentado · Ley 27.801 (B.O. 9/2/2026, vigente desde septiembre de 2026) · Basado en el Documento Técnico de la Defensoría de los Derechos de las Niñas, Niños y Adolescentes</p>
+    <h1>La nueva ley penal juvenil, explicada: qué dice y por qué preocupa.</h1>
+    <p class="lead">Reemplaza al viejo Decreto-Ley 22.278, pero según la Defensoría <strong>no cumple los estándares internacionales</strong> (Convención sobre los Derechos del Niño, sentencia “Mendoza vs. Argentina”). Esta guía recorre los puntos clave en <strong>lenguaje sencillo</strong>.</p>
+    <ul class="stats"><li><b>14</b>años: nueva edad mínima (antes 16)</li><li><b>15</b>años: pena máxima de prisión</li><li><b>2/3</b>de la pena para la libertad condicional</li><li><b>180</b>días para que las provincias se adecuen</li></ul>
+  </div></div>
+
+  <div class="band alt"><div class="wrap">
+    <h2 class="sec">El recorrido de la guía</h2>
+    <p class="sub">Los nueve problemas que marca el informe, agrupados en cinco bloques. Tocá uno para ir a él.</p>
+    <ol class="route">
+      <li class="s1"><a href="#p1"><span class="k">Puntos 1</span><h3>Cárcel primero, alternativas casi imposibles</h3><p>Medidas alternativas, mediación y prisión preventiva.</p></a></li>
+      <li class="s2"><a href="#p2"><span class="k">Puntos 2 y 3</span><h3>Penas y accesorias</h3><p>Montos, plazos y sanciones extra.</p></a></li>
+      <li class="s3"><a href="#p3"><span class="k">Puntos 3 y 5</span><h3>Más duro que para adultos</h3><p>Edad, reincidencia, libertad condicional, víctima.</p></a></li>
+      <li class="s4"><a href="#p4"><span class="k">Puntos 4, 6 y 7</span><h3>Inimputables, peligrosidad y salud</h3><p>El juez invade tareas de salud y protección.</p></a></li>
+      <li class="s5"><a href="#p5"><span class="k">Puntos 8 y 9</span><h3>Provincias y técnica legal</h3><p>Costos, autonomía y redacción confusa.</p></a></li>
+    </ol>
+  </div></div>
+
+  <div class="band"><div class="wrap">
+    <h2 class="sec">Antes y después: lo que cambia</h2>
+    <p class="sub">Comparación entre el Decreto-Ley 22.278 (derogado) y la Ley 27.801.</p>
+    <div class="scroll"><table class="cmp"><thead><tr><th>Tema</th><th>Antes (22.278)</th><th>Ahora (27.801)</th></tr></thead><tbody>
+      <tr><th>Edad mínima</th><td>16 años</td><td class="hl">14 años (art. 1)</td></tr>
+      <tr><th>Delitos leves</th><td>No punibles (hasta 2 años de pena, multa o inhabilitación)</td><td class="hl">Todos son punibles: lesiones leves, amenazas, hurto, daños (art. 1)</td></tr>
+      <tr><th>Duda sobre la edad</th><td>Se presume la minoría de edad</td><td class="hl">Antes hay que reunir pruebas y pericias (art. 2)</td></tr>
+      <tr><th>Reincidencia</th><td>Prohibida para menores de 18</td><td class="hl">Las condenas previas cuentan (art. 5)</td></tr>
+      <tr><th>Al cumplir 18 años</th><td>Sigue el régimen juvenil</td><td class="hl">Traslado a cárcel de adultos (art. 30)</td></tr>
+    </tbody></table></div>
+  </div></div>
+
+  <div class="band alt"><div class="wrap">
+    <h2 class="sec">Libertad condicional: ¿más difícil para un adolescente?</h2>
+    <p class="sub">La ley fija un solo plazo (2/3 de la condena). Para penas cortas, un adulto sale antes.</p>
+    <div class="scroll"><table class="cmp"><thead><tr><th>Monto de pena</th><th>Adultos (Código Penal)</th><th>Niñas, niños y adolescentes</th></tr></thead><tbody>
+      <tr><th>Hasta 1 año</th><td>8 meses</td><td>8 meses</td></tr>
+      <tr><th>Entre 1 y 2 años</th><td>8 meses</td><td class="hl">1 año y 3 meses</td></tr>
+      <tr><th>Entre 2 y 3 años</th><td>8 meses</td><td class="hl">2 años</td></tr>
+      <tr><th>3 años o más</th><td>2/3 de la pena</td><td>2/3 de la pena</td></tr>
+      <tr><th>Perpetua</th><td>35 años</td><td>No aplica (está prohibida)</td></tr>
+    </tbody></table></div>
+    <p class="sub" style="margin-top:16px">Además se exige dictamen pericial favorable, conformidad del fiscal y opinión de la víctima: requisitos que los adultos no tienen.</p>
+  </div></div>
+
+  <div class="band"><div class="wrap">
+    <h2 class="sec">Pena máxima: Argentina frente a otros países</h2>
+    <p class="sub">Años máximos de privación de libertad para adolescentes. Una pena de 15 años a un chico de 14 significa recuperar la libertad a los 29: más de la mitad de su vida.</p>
+    <div class="bars" role="list">
+      <div class="bar me" role="listitem"><span>Argentina (Ley 27.801)</span><i style="width:100%"></i><span>15 años</span></div>
+      <div class="bar" role="listitem"><span>Chile (+16 años)</span><i style="width:66%"></i><span>10 años</span></div>
+      <div class="bar" role="listitem"><span>Uruguay</span><i style="width:66%"></i><span>10 años</span></div>
+      <div class="bar" role="listitem"><span>Alemania</span><i style="width:66%"></i><span>10 años</span></div>
+      <div class="bar" role="listitem"><span>Venezuela</span><i style="width:53%"></i><span>8 años</span></div>
+      <div class="bar" role="listitem"><span>España</span><i style="width:53%"></i><span>8 años</span></div>
+      <div class="bar" role="listitem"><span>Bolivia</span><i style="width:40%"></i><span>6 años</span></div>
+      <div class="bar" role="listitem"><span>Chile (-16 años)</span><i style="width:33%"></i><span>5 años</span></div>
+      <div class="bar" role="listitem"><span>Canadá</span><i style="width:20%"></i><span>2 a 3 años</span></div>
+      <div class="bar" role="listitem"><span>Reino Unido</span><i style="width:13%"></i><span>hasta 2 años</span></div>
+    </div>
+    <p class="sub" style="margin-top:18px">Dato extra: en 2023 Argentina tenía unos 4 homicidios cada 100.000 habitantes; Brasil (edad mínima 12) 19, Uruguay (13) 11, Paraguay (14) 7 y Chile (14) 6. Para la Defensoría, bajar la edad no reduce la violencia.</p>
+  </div></div>
+
+  <div class="band alt"><div class="wrap">
+    <h2 class="sec">El camino de un adolescente en el sistema</h2>
+    <p class="sub">Y dónde la Defensoría ve problemas en cada paso.</p>
+    <ol class="flow">
+      <li class="s1"><b>1</b><h3>Imputación</h3><p>Desde los 14 años, por cualquier delito, aun leve.</p></li>
+      <li class="s2"><b>2</b><h3>Cautelar</h3><p>Prisión preventiva de hasta 2 años, prorrogable 1 más.</p></li>
+      <li class="s3"><b>3</b><h3>Salida alternativa</h3><p>Oportunidad, mediación o prueba, con muchos requisitos y la víctima puede oponerse.</p></li>
+      <li class="s4"><b>4</b><h3>Pena</h3><p>Hasta 15 años de prisión, más penas accesorias.</p></li>
+      <li class="s5"><b>5</b><h3>Cumplimiento</h3><p>Libertad condicional restringida y traslado a cárcel adulta a los 18.</p></li>
+    </ol>
+  </div></div>
+</section>
+
+<div id="arts"></div>
+
+<section id="esencial" class="band alt"><div class="wrap">
+  <h2 class="sec">Lo esencial</h2>
+  <p class="sub">Para quedarse con lo más importante.</p>
+  <ul class="take">
+    <li><span><b>Falta de trato diferenciado.</b> La ley enuncia principios, pero en la práctica trata a los adolescentes igual o peor que a los adultos.</span></li>
+    <li><span><b>La cárcel es la regla.</b> Las alternativas existen, pero sus requisitos las vuelven casi inaplicables.</span></li>
+    <li><span><b>Castigo desproporcionado.</b> Hasta 15 años, penas accesorias y reparación económica como pena.</span></li>
+    <li><span><b>Derecho penal de autor.</b> Se mira la peligrosidad y la personalidad, no solo el hecho cometido.</span></li>
+    <li><span><b>Jueces con tareas de salud y protección.</b> Competencias que corresponden a otros organismos.</span></li>
+    <li><span><b>Riesgo internacional.</b> La Defensoría advierte que Argentina podría recibir una nueva condena.</span></li>
+  </ul>
+</div></section>
+</main>
+<footer class="foot"><div class="wrap"><p>Resumen en lenguaje sencillo del “Documento Técnico: Análisis de la Ley 27.801 – Régimen Penal Juvenil” de la Defensoría de los Derechos de las Niñas, Niños y Adolescentes. Refleja la posición crítica de ese organismo y no reemplaza el texto de la ley ni el asesoramiento de un profesional del derecho.</p></div></footer>
+<script>
+const P=[
+{id:1,t:"Cárcel primero, alternativas casi imposibles",r:"Arts. 7, 11, 12, 39, 41 a 43",g:"La excepción debería ser encerrar; la ley invierte la regla.",a:[
+["Art. 11","Alternativas a la prisión","Para delitos de hasta 3 años se aplican los criterios de la condena condicional de adultos (primer delito, personalidad, actitud posterior). Queda a decisión subjetiva del juez, sin pautas ni control de la defensa. De 3 a 10 años exige además un peritaje sobre la personalidad y la conformidad del fiscal, y excluye casos con “grave violencia”: conceptos vagos."],
+["Arts. 41 a 43","Oportunidad, mediación y suspensión del juicio","Solo para penas de hasta 6 años, cumpliendo los requisitos del art. 11 y otros propios. La víctima debe ser informada y puede oponerse, aunque perseguir o no es facultad exclusiva del fiscal. Se pierde el objetivo de evitar el contacto con la justicia penal."],
+["Arts. 7 y 39","Prisión preventiva","Se exige “riesgos procesales constatados” sin más detalle y se aplica la ley 24.390: 2 años, prorrogables a 3. Es un plazo excesivo para un adolescente, mayor incluso que el de las penas alternativas."]]},
+{id:2,t:"Penas y medidas accesorias",r:"Arts. 8, 12, 15, 17 a 20",g:"Montos largos, castigos extra y reglas poco claras.",a:[
+["Art. 19","Hasta 15 años de prisión","Un chico de 14 podría salir a los 29. El Comité de los Derechos del Niño y la Corte IDH piden penas breves, de último recurso y revisadas. La ley menciona una revisión “periódica” pero no fija cada cuánto."],
+["Arts. 15 y 20","Penas de hasta 3 años, sin aclarar si suman","Las penas no privativas duran hasta 3 años. No queda claro si ese tope es total o por cada medida, lo que podría extender la intervención penal sin límite."],
+["Art. 12","Prohibiciones que afectan su desarrollo","Prohibir ir a espectáculos, deportes o eventos culturales ignora que son espacios de formación de la identidad de un adolescente. La amonestación siempre va acompañada de otra pena."],
+["Art. 12 h)","Reparación integral como pena","La reparación del daño es plena y económica: casi imposible para un adolescente. Un adulto que repara puede extinguir la acción penal; el adolescente no solo no puede, sino que se la imponen como castigo. Los padres responden civilmente, pero en un juicio civil aparte."],
+["Arts. 8 y 18","Medidas complementarias y “otras medidas”","Incluyen estudiar, hacer deporte o atenderse en salud, derechos que el Estado debe garantizar siempre. El art. 18 habla de desarrollar “la conciencia de la gravedad del hecho”, algo vago y imposible de medir."]]},
+{id:3,t:"Más duro que para adultos",r:"Arts. 1, 2, 5, 6, 7, 19, 22, 30",g:"El plus de protección se transforma en un plus de castigo.",a:[
+["Art. 1","Edad mínima a 14 años","Baja de 16 a 14. El Comité recomendó mantener 16 y no bajarla. Además la ley dice que se es adulto a las 0 h del cumpleaños 18, mientras el Código Civil lo fija a las 24 h."],
+["Art. 1","Se castigan hasta los delitos leves","Peleas escolares, amenazas simples, hurto, daños o usurpación pueden investigarse penalmente. Contradice el principio de mínima intervención."],
+["Art. 2","Se dificulta la presunción de edad","Antes se presumía la minoría. Ahora el juez puede ordenar pruebas y pericias. El Comité indica que ante la duda no se debe considerar penalmente responsable."],
+["Art. 5","Vuelve la reincidencia","Antes las infracciones de menores no contaban al llegar a adulto. Ahora las condenas previas influyen en la pena."],
+["Art. 22","Prescripción más larga","Si interviene un profesional de salud mental, la prescripción se suspende. Como el tratamiento no tiene plazo, el proceso puede durar indefinidamente, más que para un adulto."],
+["Art. 30","Traslado automático a los 18","Se pasa a cárcel de adultos aunque la pena no termine, con riesgo de perder lo trabajado. El Comité pide que pueda terminar la pena en centros juveniles."],
+["Arts. 6, 7, 9, 11, 16, 19","Mayor peso de la víctima","Se la consulta para imponer penas, controlar la condena y dar la libertad condicional, más que cuando el acusado es adulto. La Defensoría ve discriminación por edad."]]},
+{id:4,t:"Inimputables, peligrosidad y salud",r:"Arts. 4, 5, 8, 9, 18, 24, 25, 33 a 36",g:"El juez penal asume tareas del sistema de salud y de protección.",a:[
+["Art. 24","Proceso sin límite para quienes no se castigan","Aunque un chico sea declarado inimputable, la investigación sigue sin plazo fijo. Podría alcanzar a niños muy pequeños, sin garantías plenas de defensa. La Defensoría propone cerrar el caso y derivar a otros organismos."],
+["Art. 25","Requisitos de peligrosidad","Para declarar inimputable (14 a 18 años) se ordena peritaje psicológico y psiquiátrico, informe ambiental y la verificación de si “existe riesgo de nuevos delitos”. A los adultos no se les exige. Pensar en delitos futuros no es punible: es derecho penal de autor."],
+["Arts. 35 y 36","Consumo problemático de drogas o alcohol","Jueces y fiscales evalúan y deciden sobre el consumo. Choca con la Ley de Salud Mental 26.657, que da esa tarea a equipos de salud y prioriza tratamientos ambulatorios."],
+["Arts. 5 m) y 9","Tutela y custodia a cargo del juez","El juez puede adoptar “medidas protectorias” y los organismos de niñez quedan como auxiliares. Según la Ley 26.061, esas medidas son administrativas y nunca pueden ser privativas de libertad."]]},
+{id:5,t:"Provincias, costos y técnica legal",r:"Arts. 49, 51, 52",g:"Obligaciones sin recursos y con redacción confusa.",a:[
+["Art. 52","180 días para adecuarse","Las provincias deben ajustar sus leyes procesales y normas administrativas. Para ello necesitan nuevas estructuras, personal y dispositivos que hoy no tienen."],
+["Art. 121 CN","Invasión de competencias","La ley define estructuras locales (Supervisor, dispositivos CAD, servicio comunitario, monitoreo electrónico) y requisitos procesales que corresponden a cada provincia. Habrá conflictos de competencia y más litigios."],
+["Costos","Más casos, mismo presupuesto","Bajar la edad y castigar delitos leves aumentará las causas. Si bien la Nación prevé fondos, el mayor gasto recaerá en las provincias."],
+["Art. 51","Alojamiento lejos de casa","Se permite alojar a adolescentes en otra provincia o a gran distancia, lo que afecta el vínculo familiar y el acceso a la defensa."],
+["Técnica legislativa","Redacción poco clara","Muchas remisiones al Código Penal y artículos contradictorios dificultan su lectura. Además, varias provincias ya tienen códigos juveniles más avanzados: aplicar la ley sería un retroceso."]]}
+];
+document.getElementById("arts").innerHTML=P.map((p,i)=>`<section id="p${p.id}" class="band s${p.id}${i%2?"":" alt"}"><div class="wrap"><div class="art-head"><div class="numeral" aria-hidden="true">${p.id}</div><h2>${p.t}</h2><p class="tagline">${p.g}<br><span class="rng">${p.r}</span></p></div><div class="grid">${p.a.map(a=>`<article class="card"><div class="hd"><span class="n">${a[0]}</span><h3>${a[1]}</h3></div><p>${a[2]}</p></article>`).join("")}</div></div></section>`).join("");
+</script>
+</body>
+</html>
