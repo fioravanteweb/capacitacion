@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>El Código Penal, en simple: los delitos y sus penas</title>
+<meta name="description" content="Resumen gráfico y en lenguaje sencillo del Libro Segundo del Código Penal de la Nación Argentina: delitos contra las personas, la libertad, la propiedad, la seguridad pública, el Estado y la fe pública.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500..800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F2F5F9;--surface:#fff;--ink:#1C2230;--muted:#586075;--line:#DCE2EC;--on:#fff;
+--c1:#2563C9;--c2:#0F7B63;--c3:#B8480E;--c4:#7B3FC7;--c5:#B5205A;--c6:#0E7490;
+--fd:"Fraunces",Georgia,"Times New Roman",serif;--fb:"Source Sans 3",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--r:16px}
+@media (prefers-color-scheme:dark){:root{--paper:#12151D;--surface:#1A1F2B;--ink:#ECEEF4;--muted:#A7AEC0;--line:#2B3242;--on:#12151D;
+--c1:#7DB0FF;--c2:#55D3B2;--c3:#FFA169;--c4:#BE9BFF;--c5:#FF8DB4;--c6:#5CD0EE}}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:1.0625rem/1.65 var(--fb);-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--fd);margin:0;line-height:1.1;letter-spacing:-.015em;text-wrap:balance}
+p{margin:0 0 1em}
+:focus-visible{outline:3px solid var(--c1);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:var(--paper);padding:10px 16px;border-radius:10px;z-index:50}
+.skip:focus{left:12px}
+.s1{--ac:var(--c1)}.s2{--ac:var(--c2)}.s3{--ac:var(--c3)}.s4{--ac:var(--c4)}.s5{--ac:var(--c5)}.s6{--ac:var(--c6)}
+.s1,.s2,.s3,.s4,.s5,.s6{--t:color-mix(in srgb,var(--ac) 13%,var(--surface));--d:color-mix(in srgb,var(--ac) 78%,var(--ink))}
+.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 90%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+.top-in{max-width:1120px;margin:0 auto;display:flex;align-items:center;gap:18px;padding:10px 24px}
+.brand{font-family:var(--fd);font-weight:700;white-space:nowrap}
+.nav{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav a{display:inline-flex;align-items:center;gap:8px;padding:7px 13px;border-radius:999px;color:var(--muted);text-decoration:none;font-weight:600;font-size:.92rem;white-space:nowrap}
+.nav a:hover{color:var(--ink);background:var(--surface)}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--ac)}
+.hero{padding:56px 0 40px}
+.kicker{color:var(--muted);font-size:.95rem;font-weight:600;max-width:64ch;margin-bottom:18px}
+h1{font-weight:800;font-size:clamp(2.2rem,5.4vw,4rem);line-height:1.02;letter-spacing:-.03em;max-width:20ch;margin-bottom:22px}
+.lead{font-size:1.18rem;max-width:62ch;color:var(--muted)}
+.lead strong{color:var(--ink)}
+.stats{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 0;padding:0;list-style:none}
+.stats li{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px 18px;font-size:.95rem}
+.stats b{font-family:var(--fd);font-size:1.5rem;margin-right:6px}
+.band{padding:64px 0}
+.band.alt{background:var(--surface);border-block:1px solid var(--line)}
+.sec{font-weight:800;font-size:clamp(1.7rem,3.4vw,2.5rem);letter-spacing:-.025em;margin-bottom:10px}
+.sub{color:var(--muted);max-width:64ch;margin-bottom:30px}
+.route{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px}
+.route.four{grid-template-columns:repeat(4,1fr)}
+.route a,.route .t{display:flex;flex-direction:column;gap:6px;height:100%;padding:18px;border-radius:var(--r);background:var(--ac);color:var(--on);text-decoration:none}
+.route a:hover{transform:translateY(-2px)}
+.route .k{font-size:.82rem;font-weight:700;opacity:.9}
+.route h3{font-size:1.15rem;color:inherit}
+.route p{margin:0;font-size:.9rem;line-height:1.45;opacity:.95}
+.flow{list-style:none;margin:0;padding:0;display:flex;align-items:stretch}
+.flow li{flex:1;position:relative;background:var(--t);border:2px solid var(--ac);border-radius:var(--r);padding:16px 18px;margin-right:34px}
+.flow li:last-child{margin-right:0}
+.flow li:not(:last-child)::after{content:"";position:absolute;right:-30px;top:50%;width:26px;height:26px;margin-top:-13px;background:var(--ac);clip-path:polygon(0 25%,55% 25%,55% 0,100% 50%,55% 100%,55% 75%,0 75%)}
+.flow b{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--ac);color:var(--on);font-family:var(--fd);margin-bottom:8px}
+.flow h3{font-size:1.05rem;margin-bottom:4px;color:var(--d)}
+.flow p{margin:0;font-size:.92rem;line-height:1.5}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.box{border-radius:var(--r);padding:22px 24px;background:var(--t);border:2px solid var(--ac)}
+.box h3{color:var(--d);font-size:1.3rem;margin-bottom:12px}
+.box ul{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.box li{padding:5px 14px;border-radius:999px;background:var(--ac);color:var(--on);font-weight:600;font-size:.92rem}
+.box p{margin:12px 0 0;font-size:.97rem}
+.cmp{width:100%;border-collapse:separate;border-spacing:0;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.cmp th,.cmp td{padding:14px 20px;text-align:left;vertical-align:top;border-top:1px solid var(--line);font-size:.98rem;line-height:1.55}
+.cmp thead th{border-top:0;font-family:var(--fd);font-size:1.1rem;color:var(--on);background:var(--c3)}
+.cmp tbody th{width:26%}
+.cmp td.hl{background:color-mix(in srgb,var(--c3) 10%,var(--surface));font-weight:600}
+.scroll{overflow-x:auto}
+.tools{position:sticky;top:57px;z-index:15;background:var(--paper);padding:14px 0;border-bottom:1px solid var(--line)}
+.tools .wrap{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.tools input{flex:1 1 260px;font:inherit;padding:11px 16px;border-radius:12px;border:2px solid var(--line);background:var(--surface);color:var(--ink)}
+.tools input:focus{border-color:var(--c1);outline:0}
+.count{color:var(--muted);font-size:.9rem}
+.art-head{display:grid;grid-template-columns:auto 1fr;gap:4px 28px;align-items:end;margin-bottom:30px}
+.numeral{grid-row:span 2;font-family:var(--fd);font-weight:800;font-size:clamp(4.5rem,11vw,8rem);line-height:.8;letter-spacing:-.05em;color:var(--ac)}
+.art-head h2{font-weight:800;font-size:clamp(1.8rem,3.6vw,2.7rem);letter-spacing:-.025em}
+.tagline{color:var(--muted);font-size:1.1rem;max-width:56ch;margin:0}
+.rng{display:inline-block;margin-top:8px;font-size:.88rem;font-weight:700;color:var(--d);background:var(--t);border-radius:999px;padding:2px 12px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-top:6px solid var(--ac);border-radius:var(--r);padding:22px 24px;display:flex;flex-direction:column;gap:12px}
+.alt .card{background:var(--paper)}
+.card .hd{display:flex;align-items:center;gap:14px}
+.n{flex:none;min-width:56px;text-align:center;padding:6px 10px;border-radius:12px;background:var(--ac);color:var(--on);font-family:var(--fd);font-weight:800;font-size:1.15rem;line-height:1.2}
+.card h3{font-size:1.25rem;line-height:1.2}
+.card p{margin:0;font-size:.99rem;line-height:1.6}
+.empty{display:none;color:var(--muted);padding:24px 0}
+.take{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 40px}
+.take li{display:grid;grid-template-columns:40px 1fr;gap:14px;align-items:start}
+.take li::before{content:"✓";width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--ink);color:var(--paper);font-family:var(--fd);font-weight:800}
+.foot{padding:48px 0 calc(64px + env(safe-area-inset-bottom,0px));color:var(--muted);font-size:.92rem}
+.foot p{max-width:80ch}
+@media (max-width:960px){.route.four{grid-template-columns:repeat(2,1fr)}.grid,.take,.duo{grid-template-columns:1fr}.flow{flex-direction:column;gap:34px}.flow li{margin-right:0}.flow li:not(:last-child)::after{right:auto;left:50%;top:auto;bottom:-30px;margin:0 0 0 -13px;transform:rotate(90deg)}}
+@media (max-width:760px){.band{padding:48px 0}.brand{display:none}.wrap,.top-in{padding-inline:18px}.route,.route.four{grid-template-columns:1fr}.art-head{grid-template-columns:1fr}.numeral{grid-row:auto}.cmp{min-width:560px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+@media print{.top,.tools,.skip{display:none}body{background:#fff}.band{padding:24px 0}.card{break-inside:avoid}}
+</style>
+</head>
+<body>
+<a class="skip" href="#panorama">Saltar al contenido</a>
+<header class="top"><div class="top-in">
+  <div class="brand">Código Penal, en simple</div>
+  <nav class="nav" aria-label="Secciones de la página">
+    <a href="#panorama">Panorama</a>
+    <a class="s1" href="#p1"><i class="dot"></i>Personas</a>
+    <a class="s2" href="#p2"><i class="dot"></i>Libertad</a>
+    <a class="s3" href="#p3"><i class="dot"></i>Propiedad</a>
+    <a class="s4" href="#p4"><i class="dot"></i>Seguridad</a>
+    <a class="s5" href="#p5"><i class="dot"></i>Estado</a>
+    <a class="s6" href="#p6"><i class="dot"></i>Fe pública</a>
+    <a href="#esencial">Lo esencial</a>
+  </nav>
+</div></header>
+<main>
+<section id="panorama">
+  <div class="hero"><div class="wrap">
+    <p class="kicker">Código Penal de la Nación Argentina. Libro Segundo: De los Delitos (arts. 79 a 313). Resumen en lenguaje sencillo.</p>
+    <h1>El Código Penal, en simple: los delitos y sus penas.</h1>
+    <p class="lead">Una guía en lenguaje claro de la <strong>parte especial</strong> del Código Penal argentino. Responde: <strong>¿qué conductas son delito?</strong>, <strong>¿qué bien protegen?</strong> y <strong>¿qué pena les corresponde?</strong></p>
+    <ul class="stats">
+      <li><b>65</b>artículos resumidos</li>
+      <li><b>13</b>títulos del Libro Segundo</li>
+      <li><b>6</b>bloques temáticos</li>
+      <li><b>25 años</b>máximo de prisión temporal</li>
+    </ul>
+  </div></div>
+
+  <div class="band alt"><div class="wrap">
+    <h2 class="sec">El recorrido</h2>
+    <p class="sub">Los delitos agrupados en seis bloques según el bien jurídico protegido. Tocá uno para ver sus artículos.</p>
+    <ol class="route">
+      <li class="s1"><a href="#p1"><span class="k">Arts. 79 a 139 bis</span><h3>Delitos contra las personas</h3><p>Vida, honor, integridad sexual y estado civil.</p></a></li>
+      <li class="s2"><a href="#p2"><span class="k">Arts. 140 a 161</span><h3>Delitos contra la libertad</h3><p>Libertad individual, domicilio, secretos, trabajo y prensa.</p></a></li>
+      <li class="s3"><a href="#p3"><span class="k">Arts. 162 a 185</span><h3>Delitos contra la propiedad</h3><p>Hurto, robo, extorsión, estafa, usurpación y daños.</p></a></li>
+      <li class="s4"><a href="#p4"><span class="k">Arts. 186 a 225</span><h3>Seguridad y orden público</h3><p>Incendios, armas, salud pública y asociaciones ilícitas.</p></a></li>
+      <li class="s5"><a href="#p5"><span class="k">Arts. 226 a 281 bis</span><h3>Estado y administración</h3><p>Rebelión, cohecho, malversación, prevaricato y encubrimiento.</p></a></li>
+      <li class="s6"><a href="#p6"><span class="k">Arts. 282 a 313</span><h3>Fe pública y economía</h3><p>Falsificación, fraudes, cheques, lavado y terrorismo.</p></a></li>
+    </ol>
+  </div></div>
+
+  <div class="band"><div class="wrap">
+    <h2 class="sec">El camino de un delito</h2>
+    <p class="sub">Cinco pasos, desde el hecho hasta la pena aplicable.</p>
+    <ol class="flow">
+      <li class="s1"><b>1</b><h3>El hecho</h3><p>Qué pasó: una muerte, un robo, una estafa, un abuso.</p></li>
+      <li class="s2"><b>2</b><h3>El bien afectado</h3><p>Qué se protegió: la vida, la libertad, la propiedad, la administración pública.</p></li>
+      <li class="s3"><b>3</b><h3>El tipo penal</h3><p>Qué artículo del Código describe esa conducta.</p></li>
+      <li class="s4"><b>4</b><h3>Las agravantes</h3><p>Si hubo armas, ensañamiento, vínculo, precio o abuso de autoridad.</p></li>
+      <li class="s5"><b>5</b><h3>La pena</h3><p>La escala que corresponde según el artículo y las circunstancias.</p></li>
+    </ol>
+  </div></div>
+
+  <div class="band alt"><div class="wrap">
+    <h2 class="sec">Cifras clave</h2>
+    <p class="sub">Lo que conviene recordar de un vistazo.</p>
+    <ol class="route four">
+      <li class="s1"><div class="t"><span class="k">Art. 79</span><h3>8 a 25 años</h3><p>Homicidio simple: la pena básica por matar a otra persona.</p></div></li>
+      <li class="s2"><div class="t"><span class="k">Art. 80</span><h3>Perpetua</h3><p>Homicidio agravado: femicidio, ensañamiento, alevosía, precio, etc.</p></div></li>
+      <li class="s3"><div class="t"><span class="k">Art. 166</span><h3>5 a 15 años</h3><p>Robo con armas: la pena se eleva un tercio si el arma es de fuego.</p></div></li>
+      <li class="s4"><div class="t"><span class="k">Art. 303</span><h3>3 a 10 años</h3><p>Lavado de activos: con multa de 2 a 10 veces el monto de la operación.</p></div></li>
+    </ol>
+  </div></div>
+
+  <div class="band"><div class="wrap">
+    <h2 class="sec">Los delitos contra la propiedad y sus penas</h2>
+    <p class="sub">La diferencia está en cómo se comete el hecho (arts. 162 a 172).</p>
+    <div class="scroll"><table class="cmp">
+      <thead><tr><th scope="col">Delito</th><th scope="col">Cómo se comete</th><th scope="col">Pena básica</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Hurto</th><td class="hl">Apoderarse sin violencia</td><td>1 mes a 2 años</td></tr>
+        <tr><th scope="row">Robo</th><td>Apoderarse con fuerza o violencia</td><td>1 mes a 6 años</td></tr>
+        <tr><th scope="row">Robo con armas</th><td>Con armas</td><td>5 a 15 años</td></tr>
+        <tr><th scope="row">Robo con homicidio</th><td>Con muerte</td><td>10 a 25 años</td></tr>
+        <tr><th scope="row">Extorsión</th><td>Obligar con intimidación</td><td>5 a 10 años</td></tr>
+        <tr><th scope="row">Estafa</th><td>Defraudar con engaño</td><td>1 mes a 6 años</td></tr>
+      </tbody>
+    </table></div>
+  </div></div>
+</section>
+
+<div class="tools"><div class="wrap">
+  <label class="sr-only" for="q">Buscar en los artículos</label>
+  <input id="q" type="search" placeholder="Buscar: homicidio, robo, abuso, cohecho, lavado, tortura…" autocomplete="off">
+  <span class="count" id="cnt" aria-live="polite"></span>
+</div></div>
+<div id="arts"></div>
+<p class="empty wrap" id="none">No hay artículos que coincidan con la búsqueda.</p>
+
+<section id="esencial" class="band alt"><div class="wrap">
+  <h2 class="sec">Lo esencial en seis ideas</h2>
+  <p class="sub">Si solo te quedás con esto, ya tenés el esquema del Libro Segundo.</p>
+  <ol class="take">
+    <li><span><strong>El Libro Segundo tipifica los delitos</strong> en 13 títulos según el bien jurídico protegido: personas, honor, integridad sexual, estado civil, libertad, propiedad, seguridad pública, orden público, seguridad de la Nación, poderes públicos, administración pública, fe pública y orden económico.</span></li>
+    <li><span><strong>El homicidio simple tiene pena de 8 a 25 años;</strong> el agravado (femicidio, ensañamiento, alevosía, precio) tiene perpetua (arts. 79 y 80).</span></li>
+    <li><span><strong>El abuso sexual tiene penas de 6 meses a 4 años</strong> que pueden llegar a 20 años si hay acceso carnal con agravantes (art. 119).</span></li>
+    <li><span><strong>El robo se distingue del hurto</strong> por la fuerza o violencia. Con armas la pena sube a 5-15 años, y con homicidio a 10-25 años (arts. 162, 164, 165 y 166).</span></li>
+    <li><span><strong>Los delitos contra la administración pública</strong> (cohecho, malversación, prevaricato) tienen penas de prisión e inhabilitación perpetua (arts. 256, 261 y 269).</span></li>
+    <li><span><strong>El lavado de activos y el financiamiento del terrorismo</strong> se castigan con prisión de 3 a 10 años y multas de 2 a 10 veces el monto de la operación (arts. 303 y 306).</span></li>
+  </ol>
+</div></section>
+</main>
+<footer class="foot"><div class="wrap">
+  <p><strong>Fuente:</strong> Código Penal de la Nación Argentina, Libro Segundo: De los Delitos (arts. 79 a 313). La agrupación en seis bloques es una organización didáctica de esta página.</p>
+  <p>Resumen didáctico en lenguaje sencillo. No reemplaza el texto de la ley ni el asesoramiento profesional: para citar o litigar, consultá el artículo completo.</p>
+</div></footer>
+
+<script>
+const P=[
+{id:1,t:"Delitos contra las personas",r:"Arts. 79 a 139 bis",g:"Los delitos que afectan la vida, el honor, la integridad sexual y el estado civil.",a:[
+["79","Homicidio simple","Se aplica reclusión o prisión de 8 a 25 años al que matare a otro, siempre que el Código no establezca otra pena."],
+["80","Homicidio agravado","Reclusión o prisión perpetua. Se aplica al que matare: a su ascendiente, descendiente, cónyuge, ex cónyuge o persona con quien mantiene o mantuvo relación de pareja; con ensañamiento, alevosía o veneno; por precio o promesa remuneratoria; por placer, codicia u odio racial, religioso o de género; con el concurso premeditado de dos o más personas; para preparar, facilitar u ocultar otro delito; a un miembro de las fuerzas de seguridad por su función; o a una mujer cuando el hecho sea perpetrado por un hombre y mediare violencia de género (femicidio)."],
+["81","Homicidio en emoción violenta","Reclusión de 3 a 6 años o prisión de 1 a 3 años. Se aplica al que matare a otro encontrándose en un estado de emoción violenta excusable, o al que, con el propósito de causar un daño en el cuerpo o la salud, produjere la muerte cuando el medio empleado no debía razonablemente ocasionarla."],
+["84","Homicidio culposo","Prisión de 1 a 5 años e inhabilitación especial de 5 a 10 años. Se aplica al que por imprudencia, negligencia, impericia en su arte o profesión, o inobservancia de los reglamentos o deberes a su cargo, causare a otro la muerte."],
+["89","Lesiones leves","Prisión de 1 mes a 1 año. Se aplica al que causare a otro, en el cuerpo o en la salud, un daño que no esté previsto en otra disposición del Código."],
+["90","Lesiones graves","Reclusión o prisión de 1 a 6 años. Se aplica si la lesión produjere una debilitación permanente de la salud, de un sentido, de un órgano, de un miembro o una dificultad permanente de la palabra, o si hubiere puesto en peligro la vida del ofendido, le hubiere inutilizado para el trabajo por más de un mes o le hubiere causado una deformación permanente del rostro."],
+["91","Lesiones gravísimas","Reclusión o prisión de 3 a 10 años. Se aplica si la lesión produjere una enfermedad mental o corporal cierta o probablemente incurable, la inutilidad permanente para el trabajo, la pérdida de un sentido, de un órgano, de un miembro, del uso de un órgano o miembro, de la palabra o de la capacidad de engendrar o concebir."],
+["106","Abandono de personas","Prisión de 2 a 6 años. Se aplica al que pusiere en peligro la vida o la salud de otro, sea colocándolo en situación de desamparo, sea abandonando a su suerte a una persona incapaz de valerse y a la que deba mantener o cuidar, o a la que el mismo autor haya incapacitado. La pena sube a 3 a 10 años si resulta grave daño en el cuerpo o la salud, y a 5 a 15 años si ocurre la muerte."],
+["109","Calumnias","Multa de 3.000 a 30.000 pesos. Se aplica al que imputare falsamente a una persona física determinada la comisión de un delito concreto y circunstanciado que dé lugar a la acción pública. No configuran calumnia las expresiones referidas a asuntos de interés público o las que no sean asertivas."],
+["110","Injurias","Multa de 1.500 a 20.000 pesos. Se aplica al que intencionalmente deshonrare o desacreditare a una persona física determinada. No configuran injuria las expresiones referidas a asuntos de interés público o las que no sean asertivas, ni los calificativos lesivos del honor cuando guardaren relación con un asunto de interés público."],
+["119","Abuso sexual","Reclusión o prisión de 6 meses a 4 años. Se aplica al que abusare sexualmente de una persona cuando esta fuera menor de 13 años o cuando mediare violencia, amenaza, abuso coactivo o intimidatorio de una relación de dependencia, de autoridad o de poder, o aprovechándose de que la víctima por cualquier causa no haya podido consentir libremente la acción. La pena sube a 4 a 10 años si el abuso, por su duración o circunstancias, hubiere configurado un sometimiento sexual gravemente ultrajante. Sube a 6 a 15 años si hubiere acceso carnal por vía anal, vaginal u oral. Y sube a 8 a 20 años si concurre alguna de las agravantes del cuarto párrafo: grave daño en la salud, autor ascendiente o encargado de la guarda, dos o más personas, armas, personal policial, o contra un menor de 18 años aprovechando la convivencia."],
+["120","Abuso sexual con menor de 16 años","Prisión o reclusión de 3 a 6 años. Se aplica al que realizare algunas de las acciones previstas en el segundo o tercer párrafo del art. 119 con una persona menor de 16 años, aprovechándose de su inmadurez sexual, en razón de la mayoría de edad del autor, su relación de preeminencia respecto de la víctima u otra circunstancia equivalente. La pena sube a 6 a 10 años si media alguna de las agravantes del art. 119."],
+["125","Corrupción de menores","Reclusión o prisión de 3 a 10 años. Se aplica al que promoviere o facilitare la corrupción de menores de 18 años, aunque mediare el consentimiento de la víctima. La pena sube a 6 a 15 años si la víctima fuera menor de 13 años, y a 10 a 15 años si mediare engaño, violencia, amenaza, abuso de autoridad o cualquier otro medio de intimidación o coerción, o si el autor fuera ascendiente, cónyuge, hermano, tutor o persona conviviente o encargada de su educación o guarda."],
+["128","Pornografía infantil","Prisión de 3 a 6 años. Se aplica al que produjere, financiare, ofreciere, comerciare, publicare, facilitare, divulgare o distribuyere, por cualquier medio, toda representación de un menor de 18 años dedicado a actividades sexuales explícitas o toda representación de sus partes genitales con fines predominantemente sexuales, al igual que el que organizare espectáculos en vivo de representaciones sexuales explícitas en que participaren dichos menores. Las escalas se elevan un tercio si la víctima fuere menor de 13 años."],
+["131","Grooming","Prisión de 6 meses a 4 años. Se aplica al que, por medio de comunicaciones electrónicas, telecomunicaciones o cualquier otra tecnología de transmisión de datos, contactare a una persona menor de edad con el propósito de cometer cualquier delito contra la integridad sexual de la misma."]
+]},
+{id:2,t:"Delitos contra la libertad",r:"Arts. 140 a 161",g:"Los delitos que afectan la libertad individual, el domicilio, los secretos, el trabajo, la reunión y la prensa.",a:[
+["140","Esclavitud y servidumbre","Reclusión o prisión de 4 a 15 años. Se aplica al que redujere a una persona a esclavitud o servidumbre, bajo cualquier modalidad, y al que la recibiere en tal condición para mantenerla en ella. También al que obligare a una persona a realizar trabajos o servicios forzados o a contraer matrimonio servil."],
+["141","Privación ilegal de libertad","Prisión o reclusión de 6 meses a 3 años. Se aplica al que ilegalmente privare a otro de su libertad personal."],
+["142 bis","Secuestro extorsivo","Prisión o reclusión de 5 a 15 años. Se aplica al que sustrajere, retuviere u ocultare a una persona con el fin de obligar a la víctima o a un tercero a hacer, no hacer o tolerar algo contra su voluntad. Si el autor lograre su propósito, el mínimo sube a 8 años. La pena sube a 10 a 25 años si la víctima es mujer embarazada, menor de 18 años o mayor de 70; si el hecho se comete contra un ascendiente, hermano, cónyuge o conviviente; si se causan lesiones graves o gravísimas; si la víctima es una persona discapacitada o enferma; si el agente es funcionario o miembro de una fuerza de seguridad; o si participan tres o más personas. La pena es de 15 a 25 años si resulta la muerte no querida, y perpetua si se causa intencionalmente la muerte."],
+["142 ter","Desaparición forzada","Prisión de 10 a 25 años e inhabilitación absoluta y perpetua. Se aplica al funcionario público o a la persona o miembro de un grupo de personas que, actuando con la autorización, el apoyo o la aquiescencia del Estado, privare de la libertad a una o más personas, cuando este accionar fuera seguido de la falta de información o de la negativa a reconocer dicha privación de libertad o de informar sobre el paradero de la persona. La pena es perpetua si resultare la muerte o si la víctima fuere mujer embarazada, menor de 18 años, mayor de 70 o persona con discapacidad."],
+["144 ter","Tortura","Reclusión o prisión de 8 a 25 años e inhabilitación absoluta y perpetua. Se aplica al funcionario público que impusiere a personas, legítima o ilegítimamente privadas de su libertad, cualquier clase de tortura. Igual pena se impone a particulares que ejecutaren los hechos. Si con motivo u ocasión de la tortura resultare la muerte, la pena es perpetua. Si se causare alguna de las lesiones del art. 91, la pena es de 10 a 25 años. Por tortura se entienden no solo los tormentos físicos, sino también la imposición de sufrimientos psíquicos graves."],
+["145 bis","Trata de personas","Prisión de 4 a 8 años. Se aplica al que ofreciere, captare, trasladare, recibiere o acogiere personas con fines de explotación, ya sea dentro del territorio nacional como desde o hacia otros países, aunque mediare el consentimiento de la víctima."],
+["145 ter","Trata de personas agravada","Prisión de 5 a 10 años. Se aplica en los supuestos del art. 145 bis cuando: mediare engaño, fraude, violencia, amenaza o cualquier otro medio de intimidación o coerción, abuso de autoridad o de una situación de vulnerabilidad, o concesión o recepción de pagos o beneficios; la víctima estuviere embarazada o fuere mayor de 70 años; la víctima fuera persona discapacitada, enferma o que no pueda valerse por sí misma; las víctimas fueren tres o más; en la comisión participaren tres o más personas; el autor fuere ascendiente, cónyuge, hermano, tutor o encargado de la guarda; o el autor fuere funcionario público o miembro de una fuerza de seguridad. La pena sube a 8 a 12 años si se logra consumar la explotación, y a 10 a 15 años si la víctima fuere menor de 18 años."],
+["146","Sustracción de menores","Prisión o reclusión de 5 a 15 años. Se aplica al que sustrajere a un menor de 10 años del poder de sus padres, tutor o persona encargada de él, y al que lo retuviere u ocultare."],
+["149 bis","Amenazas","Prisión de 6 meses a 2 años. Se aplica al que hiciere uso de amenazas para alarmar o amedrentar a una o más personas. La pena sube a 1 a 3 años si se emplearen armas o si las amenazas fueren anónimas. Y a 2 a 4 años si se usaren amenazas con el propósito de obligar a otro a hacer, no hacer o tolerar algo contra su voluntad."],
+["150","Violación de domicilio","Prisión de 6 meses a 2 años. Se aplica al que entrare en morada o casa de negocio ajena, en sus dependencias o en el recinto habitado por otro, contra la voluntad expresa o presunta de quien tenga derecho de excluirlo."],
+["153","Violación de correspondencia","Prisión de 15 días a 6 meses. Se aplica al que abriere o accediere indebidamente a una comunicación electrónica, una carta, un pliego cerrado, un despacho telegráfico, telefónico o de otra naturaleza, que no le esté dirigido; o se apoderare indebidamente de una comunicación, carta, pliego, despacho u otro papel privado; o indebidamente suprimiere o desviare de su destino una correspondencia o comunicación electrónica que no le esté dirigida. También al que indebidamente interceptare o captare comunicaciones electrónicas o telecomunicaciones provenientes de cualquier sistema de carácter privado o de acceso restringido."]
+]},
+{id:3,t:"Delitos contra la propiedad",r:"Arts. 162 a 185",g:"Hurto, robo, abigeato, extorsión, estafas, usurpación y daños.",a:[
+["162","Hurto","Prisión de 1 mes a 2 años. Se aplica al que se apoderare ilegítimamente de una cosa mueble, total o parcialmente ajena."],
+["163","Hurto agravado","Prisión de 1 a 6 años. Se aplica cuando el hurto fuere de productos separados del suelo o de máquinas, instrumentos de trabajo o productos agroquímicos dejados en el campo, o de alambres u otros elementos de los cercos; con ocasión de un incendio, explosión, inundación, naufragio, accidente, asonada o motín; con ganzúa, llave falsa o llave verdadera sustraída, hallada o retenida; con escalamiento; de mercaderías transportadas; o de vehículos dejados en la vía pública o en lugares de acceso público."],
+["164","Robo","Prisión de 1 mes a 6 años. Se aplica al que se apoderare ilegítimamente de una cosa mueble, total o parcialmente ajena, con fuerza en las cosas o con violencia física en las personas, sea que la violencia tenga lugar antes del robo para facilitarlo, en el acto de cometerlo o después de cometido para procurar su impunidad."],
+["165","Robo con homicidio","Reclusión o prisión de 10 a 25 años. Se aplica si con motivo u ocasión del robo resultare un homicidio."],
+["166","Robo con armas","Reclusión o prisión de 5 a 15 años. Se aplica si por las violencias ejercidas para realizar el robo se causare alguna de las lesiones de los arts. 90 y 91, o si el robo se cometiere con armas, o en despoblado y en banda. Si el arma utilizada fuera de fuego, la escala se eleva un tercio en su mínimo y máximo. Si se cometiere con un arma de fuego cuya aptitud para el disparo no pudiera acreditarse, o con un arma de utilería, la pena es de 3 a 10 años."],
+["167","Robo agravado","Reclusión o prisión de 3 a 10 años. Se aplica si se cometiere el robo en despoblado; en lugares poblados y en banda; con perforación o fractura de pared, cerco, techo o piso, puerta o ventana de un lugar habitado o sus dependencias inmediatas; o si concurriere alguna de las circunstancias del art. 163."],
+["167 ter","Abigeato","Prisión de 2 a 6 años. Se aplica al que se apoderare ilegítimamente de una o más cabezas de ganado mayor o menor, total o parcialmente ajeno, que se encontrare en establecimientos rurales o, en ocasión de su transporte, desde el momento de su carga hasta el de su destino o entrega. La pena sube a 3 a 8 años si el abigeato fuere de cinco o más cabezas y se utilizare un medio motorizado para su transporte."],
+["168","Extorsión","Reclusión o prisión de 5 a 10 años. Se aplica al que con intimidación o simulando autoridad pública o falsa orden de la misma, obligue a otro a entregar, enviar, depositar o poner a su disposición o a la de un tercero, cosas, dinero o documentos que produzcan efectos jurídicos. También al que por los mismos medios o con violencia, obligue a otro a suscribir o destruir documentos de obligación o de crédito."],
+["170","Secuestro extorsivo","Reclusión o prisión de 5 a 15 años. Se aplica al que sustrajere, retuviere u ocultare a una persona para sacar rescate. Si el autor lograre su propósito, el mínimo sube a 8 años. La pena sube a 10 a 25 años en los casos del art. 142 bis, y a 15 a 25 años si resulta la muerte no querida. La pena es perpetua si se causa intencionalmente la muerte."],
+["172","Estafa","Prisión de 1 mes a 6 años. Se aplica al que defraudare a otro con nombre supuesto, calidad simulada, falsos títulos, influencia mentida, abuso de confianza o aparentando bienes, crédito, comisión, empresa o negociación, o valiéndose de cualquier otro ardid o engaño."]
+]},
+{id:4,t:"Delitos contra la seguridad y el orden público",r:"Arts. 186 a 225",g:"Incendios, armas, seguridad del tránsito, salud pública, asociaciones ilícitas y seguridad de la Nación.",a:[
+["186","Incendio y estragos","Reclusión o prisión de 3 a 10 años. Se aplica al que causare incendio, explosión o inundación, si hubiere peligro común para los bienes. La pena sube a 3 a 15 años si hubiere peligro para un archivo público, biblioteca, museo, arsenal, astillero, fábrica de pólvora o parque de artillería, o si hubiere peligro de muerte para alguna persona. Sube a 8 a 20 años si el hecho fuere causa inmediata de la muerte de alguna persona."],
+["189 bis","Armas de fuego","La simple tenencia de armas de fuego de uso civil sin autorización se castiga con prisión de 6 meses a 2 años y multa de 1.000 a 10.000 pesos. Si las armas fueren de guerra, la pena es de 2 a 6 años de prisión. La portación de armas de uso civil sin autorización se castiga con prisión de 1 a 4 años. Si las armas fueren de guerra, la pena es de 3 años y 6 meses a 8 años y 6 meses. El acopio de armas, piezas o municiones sin autorización se castiga con reclusión o prisión de 4 a 10 años."],
+["193 bis","Pruebas de velocidad","Prisión de 6 meses a 3 años e inhabilitación especial para conducir por el doble del tiempo de la condena. Se aplica al conductor que creare una situación de peligro para la vida o la integridad física de las personas, mediante la participación en una prueba de velocidad o de destreza con un vehículo con motor, realizada sin la debida autorización. La misma pena se aplica a quien organizare o promocionare la conducta, y a quien posibilitare su realización entregando un vehículo de su propiedad o confiado a su custodia."],
+["200","Envenenar o adulterar aguas o alimentos","Reclusión o prisión de 3 a 10 años y multa de 10.000 a 200.000 pesos. Se aplica al que envenenare, adulterare o falsificare de un modo peligroso para la salud, aguas potables o sustancias alimenticias o medicinales destinadas al uso público o al consumo de una colectividad de personas. Si como consecuencia resultare la muerte de alguna persona, la pena es de 10 a 25 años; si resultaren lesiones gravísimas, de 3 a 15 años; y si resultaren lesiones graves, de 3 a 10 años."],
+["210","Asociación ilícita","Prisión o reclusión de 3 a 10 años. Se aplica al que tomare parte en una asociación o banda de tres o más personas destinada a cometer delitos, por el solo hecho de ser miembro de la asociación. Para los jefes u organizadores, el mínimo de la pena es de 5 años."],
+["210 bis","Asociación ilícita agravada","Reclusión o prisión de 5 a 20 años. Se aplica al que tomare parte, cooperare o ayudare a la formación o mantenimiento de una asociación ilícita destinada a cometer delitos cuando la acción contribuya a poner en peligro la vigencia de la Constitución Nacional, siempre que reúna por lo menos dos de estas características: estar integrada por diez o más individuos; poseer organización militar o de tipo militar; tener estructura celular; disponer de armas de guerra o explosivos de gran poder ofensivo; operar en más de una jurisdicción; estar compuesta por oficiales o suboficiales de las fuerzas armadas o de seguridad; tener notorias conexiones con otras organizaciones similares; o recibir apoyo, ayuda o dirección de funcionarios públicos."],
+["210 ter","Asociación ilícita con delitos específicos","Reclusión o prisión de 8 a 20 años. Se aplica al que tomare parte, cooperare o ayudare a la formación o mantenimiento de una asociación ilícita dedicada a cometer cualquiera de los delitos tipificados en las leyes 23.737, 25.188, 25.246, 26.683 y 27.447, y en los arts. 79, 80, 89, 90, 91, 92, 125, 126, 127, 128, 140, 141, 142, 142 bis, 145 bis, 145 ter, 146, 147, 164, 165, 166, 167, 167 bis, 168, 170, 189 bis, 259, 261, 265, 266, 267, 268, 268 (1), 268 (2), 277 y 279 del Código, aunque la organización no reúna las características del art. 210 bis."]
+]},
+{id:5,t:"Delitos contra el Estado y la administración pública",r:"Arts. 226 a 281 bis",g:"Rebelión, sedición, cohecho, malversación, prevaricato, falso testimonio y encubrimiento.",a:[
+["226","Rebelión","Prisión de 5 a 15 años. Se aplica a los que se alzaren en armas para cambiar la Constitución, deponer alguno de los poderes públicos del gobierno nacional, arrancarle alguna medida o concesión, o impedir aunque sea temporariamente el libre ejercicio de sus facultades constitucionales. Si el hecho se perpetra con el fin de cambiar de modo permanente el sistema democrático, suprimir la organización federal, eliminar la división de poderes, abrogar los derechos fundamentales o suprimir o menoscabar la independencia económica de la Nación, la pena es de 8 a 25 años."],
+["237","Atentado contra la autoridad","Prisión de 1 mes a 1 año. Se aplica al que empleare intimidación o fuerza contra un funcionario público o contra la persona que le prestare asistencia a requerimiento de aquel o en virtud de un deber legal, para exigirle la ejecución u omisión de un acto propio de sus funciones."],
+["239","Resistencia y desobediencia","Prisión de 15 días a 1 año. Se aplica al que resistiere o desobedeciere a un funcionario público en el ejercicio legítimo de sus funciones o a la persona que le prestare asistencia a requerimiento de aquel o en virtud de una obligación legal."],
+["246","Usurpación de autoridad","Prisión de 1 mes a 1 año e inhabilitación especial por doble tiempo. Se aplica al que asumiere o ejerciere funciones públicas sin título o nombramiento expedido por autoridad competente; al que continuare ejerciendo después de haber cesado por ministerio de la ley o de haber recibido comunicación oficial de su cesantía o suspensión; y al funcionario público que ejerciere funciones correspondientes a otro cargo."],
+["256","Cohecho","Prisión de 1 a 6 años e inhabilitación especial perpetua. Se aplica al funcionario público que, por sí o por persona interpuesta, recibiere dinero o cualquier otra dádiva o aceptare una promesa directa o indirecta para hacer, retardar u omitir un acto propio de sus funciones."],
+["260","Malversación de caudales","Inhabilitación especial de 1 mes a 3 años. Se aplica al funcionario público que diere a los caudales o efectos que administrare una aplicación diferente de aquella a que estuvieren destinados. Si de ello resultare daño o entorpecimiento del servicio, se impone además multa del 20 al 50 por ciento de la cantidad distraída."],
+["261","Sustracción de caudales","Reclusión o prisión de 2 a 10 años e inhabilitación absoluta perpetua. Se aplica al funcionario público que sustrajere caudales o efectos cuya administración, percepción o custodia le haya sido confiada por razón de su cargo. También al funcionario que empleare en provecho propio o de un tercero, trabajos o servicios pagados por una administración pública."],
+["265","Negociaciones incompatibles","Reclusión o prisión de 1 a 6 años e inhabilitación especial perpetua. Se aplica al funcionario público que, directamente, por persona interpuesta o por acto simulado, se interesare en miras de un beneficio propio o de un tercero, en cualquier contrato u operación en que intervenga en razón de su cargo. Se aplica también multa de 2 a 5 veces el valor del beneficio indebido pretendido u obtenido."],
+["266","Exacciones ilegales","Prisión de 1 a 4 años e inhabilitación especial de 1 a 5 años. Se aplica al funcionario público que, abusando de su cargo, solicitare, exigiere o hiciere pagar o entregar indebidamente, por sí o por interpuesta persona, una contribución, un derecho o una dádiva, o cobrase mayores derechos que los que corresponden. Se aplica también multa de 2 a 5 veces el monto de la exacción."],
+["268 (2)","Enriquecimiento ilícito","Prisión de 2 a 6 años, multa de 2 a 5 veces el valor del enriquecimiento, e inhabilitación absoluta perpetua. Se aplica al que, al ser debidamente requerido, no justificare la procedencia de un enriquecimiento patrimonial apreciable suyo o de persona interpuesta para disimularlo, ocurrido con posterioridad a la asunción de un cargo o empleo público y hasta 2 años después de haber cesado en su desempeño."],
+["269","Prevaricato","Multa de 3.000 a 75.000 pesos e inhabilitación absoluta perpetua. Se aplica al juez que dictare resoluciones contrarias a la ley expresa invocada por las partes o por el mismo, o citare para fundarlas hechos o resoluciones falsas. Si la sentencia fuere condenatoria en causa criminal, la pena es de 3 a 15 años de reclusión o prisión e inhabilitación absoluta perpetua."],
+["275","Falso testimonio","Prisión de 1 mes a 4 años. Se aplica al testigo, perito o intérprete que afirmare una falsedad o negare o callare la verdad, en todo o en parte, en su deposición, informe, traducción o interpretación, hecha ante la autoridad competente. Si el falso testimonio se cometiere en causa criminal en perjuicio del inculpado, la pena es de 1 a 10 años de reclusión o prisión."],
+["277","Encubrimiento","Prisión de 6 meses a 3 años. Se aplica al que, tras la comisión de un delito ejecutado por otro en el que no hubiera participado: ayudare a alguien a eludir las investigaciones de la autoridad o a sustraerse a la acción de esta; ocultare, alterare o hiciere desaparecer los rastros, pruebas o instrumentos del delito; adquiriere, recibiere u ocultare dinero, cosas o efectos provenientes de un delito; no denunciare la perpetración de un delito o no individualizare al autor o partícipe; o asegurare o ayudare al autor o partícipe a asegurar el producto o provecho del delito."],
+["280","Evasión","Prisión de 1 mes a 1 año. Se aplica al que hallándose legalmente detenido se evadiere por medio de violencia en las personas o fuerza en las cosas."]
+]},
+{id:6,t:"Delitos contra la fe pública y el orden económico",r:"Arts. 282 a 313",g:"Falsificación de moneda, documentos, fraudes al comercio, cheques sin fondos, lavado de activos y financiamiento del terrorismo.",a:[
+["282","Falsificación de moneda","Reclusión o prisión de 3 a 15 años. Se aplica al que falsificare moneda que tenga curso legal en la República y al que la introdujere, expendiere o pusiere en circulación."],
+["292","Falsificación de documentos","Reclusión o prisión de 1 a 6 años si se tratare de un instrumento público, y prisión de 6 meses a 2 años si se tratare de un instrumento privado. Se aplica al que hiciere en todo o en parte un documento falso o adultere uno verdadero, de modo que pueda resultar perjuicio. Si el documento falsificado o adulterado fuere de los destinados a acreditar la identidad de las personas o la titularidad del dominio o habilitación para circular de vehículos automotores, la pena es de 3 a 8 años."],
+["293","Inserción de declaraciones falsas","Reclusión o prisión de 1 a 6 años. Se aplica al que insertare o hiciere insertar en un instrumento público declaraciones falsas concernientes a un hecho que el documento deba probar, de modo que pueda resultar perjuicio. Si se tratase de documentos o certificados de identidad, la pena es de 3 a 8 años."],
+["300","Fraudes al comercio","Prisión de 6 meses a 2 años. Se aplica al que hiciere alzar o bajar el precio de las mercaderías por medio de noticias falsas, negociaciones fingidas o por reunión o coalición entre los principales tenedores de una mercancía o género, con el fin de no venderla o de no venderla sino a un precio determinado. También al fundador, director, administrador, liquidador o síndico de una sociedad anónima o cooperativa que a sabiendas publicare, certificare o autorizare un inventario, balance, cuenta de ganancias y pérdidas o informes falsos o incompletos."],
+["302","Cheques sin fondos","Prisión de 6 meses a 4 años e inhabilitación especial de 1 a 5 años. Se aplica al que dé en pago o entregue por cualquier concepto a un tercero un cheque sin tener provisión de fondos o autorización expresa para girar en descubierto, y no lo abonare en moneda nacional dentro de las 24 horas de habérsele comunicado la falta de pago. También al que dé en pago un cheque a sabiendas de que al tiempo de su presentación no podrá legalmente ser pagado; al que librare un cheque y diera contraorden para el pago fuera de los casos autorizados; y al que librare un cheque en formulario ajeno sin autorización."],
+["303","Lavado de activos","Prisión de 3 a 10 años y multa de 2 a 10 veces el monto de la operación. Se aplica al que convirtiere, transfiriere, administrare, vendiere, gravare, adquiriere, disimulare o de cualquier otro modo pusiere en circulación en el mercado, bienes u otros activos provenientes de un ilícito penal, con la consecuencia posible de que el origen de los bienes originarios o los subrogantes adquieran la apariencia de un origen lícito, y siempre que su valor supere la suma de 150 salarios mínimos, vitales y móviles al momento de los hechos. La pena se aumenta un tercio del máximo y la mitad del mínimo cuando el autor realizare el hecho con habitualidad o como miembro de una asociación o banda, o cuando el autor fuera funcionario público que hubiera cometido el hecho en ejercicio u ocasión de sus funciones."],
+["304","Sanciones a personas jurídicas","Cuando los hechos del art. 303 hubieren sido realizados en nombre, o con la intervención, o en beneficio de una persona de existencia ideal, se impondrán a la entidad las siguientes sanciones conjunta o alternativamente: multa de 2 a 10 veces el valor de los bienes objeto del delito; suspensión total o parcial de actividades, que no podrá exceder de 10 años; suspensión para participar en concursos o licitaciones estatales, que no podrá exceder de 10 años; cancelación de la personería cuando hubiese sido creada al solo efecto de la comisión del delito; pérdida o suspensión de los beneficios estatales; y publicación de un extracto de la sentencia condenatoria a costa de la persona jurídica."],
+["306","Financiamiento del terrorismo","Prisión de 5 a 15 años y multa de 2 a 10 veces el monto de la operación. Se aplica al que directa o indirectamente recolectare o proveyere bienes u otros activos, de fuente lícita o ilícita, con la intención de que se utilicen, o a sabiendas de que serán utilizados, en todo o en parte: para financiar la comisión de un delito con la finalidad establecida en el art. 41 quinquies; por una organización que cometa o intente cometer delitos con esa finalidad; por un individuo que cometa, intente cometer o participe de cualquier modo en la comisión de delitos con esa finalidad; para financiar el viaje o la logística de individuos o cosas a un Estado distinto al de su residencia; para financiar la provisión o recepción de entrenamiento para la comisión de delitos con esa finalidad; o para financiar la adquisición, elaboración, producción, desarrollo, posesión, suministro, exportación, importación, almacenamiento, transporte, transferencia o empleo de armas de destrucción masiva."],
+["307","Información privilegiada","Prisión de 1 a 4 años, multa equivalente al monto de la operación e inhabilitación especial de hasta 5 años. Se aplica al director, miembro de órgano de fiscalización, accionista, representante de accionista y todo el que por su trabajo, profesión o función dentro de una sociedad emisora, por sí o por persona interpuesta, suministrare o utilizare información privilegiada a la que hubiera tenido acceso en ocasión de su actividad, para la negociación, cotización, compra, venta o liquidación de valores negociables."]
+]}
+];
+const root=document.getElementById("arts");
+root.innerHTML=P.map((p,i)=>`<section id="p${p.id}" class="band s${p.id}${i%2?"":" alt"}"><div class="wrap">
+<div class="art-head"><div class="numeral" aria-hidden="true">${p.id}</div><h2>${p.t}</h2><p class="tagline">${p.g}<br><span class="rng">${p.r}</span></p></div>
+<div class="grid">${p.a.map(a=>`<article class="card" id="art${a[0].replace(/[^a-zA-Z0-9]/g,"")}" data-t="${(a[0]+" "+a[1]+" "+a[2]).toLowerCase()}"><div class="hd"><span class="n">${a[0]}</span><h3>${a[1]}</h3></div><p>${a[2]}</p></article>`).join("")}</div></div></section>`).join("");
+const q=document.getElementById("q"),cnt=document.getElementById("cnt"),none=document.getElementById("none");
+function f(){const v=q.value.trim().toLowerCase().replace(/^art\.?\s*/,"");let tot=0;
+document.querySelectorAll("#arts section").forEach(s=>{let n=0;s.querySelectorAll(".card").forEach(c=>{const ok=!v||c.dataset.t.includes(v);c.style.display=ok?"":"none";if(ok)n++});s.style.display=n?"":"none";tot+=n});
+cnt.textContent=tot+" artículos mostrados";none.style.display=tot?"none":"block"}
+q.addEventListener("input",f);f();
+</script>
+</body>
+</html>
