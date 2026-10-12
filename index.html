@@ -315,6 +315,7 @@ main{padding:0;max-width:100%;width:100%;display:flex;flex-direction:column}
 <script>
 /* ==================== DATOS ==================== */
 const A = {
+  def:['Defensor Oficial','#0F766E'],
   cap:['Capacidad personas','#1E3A8A'],
   fam:['Familia','#1D4ED8'],
   nin:['Niñez y adolescencia','#0E7490'],
@@ -325,34 +326,38 @@ const A = {
 };
 
 const C = [
+  {id:'def1', a:'def', t:'Defensor de Ausentes', url:'https://fioravanteweb.github.io/capacitacion/ausente'},
+  {id:'def2', a:'def', t:'Medidas preliminares', url:'https://fioravanteweb.github.io/capacitacion/medidas'},
   {id:'cap1', a:'cap', t:'Capacidad: principios generales', n:'CCyC, arts. 22 a 24', url:'https://fioravanteweb.github.io/capacitacion/capacidad1'},
   {id:'cap3', a:'cap', t:'Restricciones a la capacidad', n:'CCyC, arts. 31 a 50', url:'https://fioravanteweb.github.io/capacitacion/capacidad2'},
-{id:'cap2', a:'cap', t:'Salud Mental Internaciones', url:'https://fioravanteweb.github.io/capacitacion/saludmental'},
+  {id:'cap2', a:'cap', t:'Salud Mental Internaciones', url:'https://fioravanteweb.github.io/capacitacion/saludmental'},
   {id:'rep', a:'cap', t:'Representación y asistencia', n:'CCyC, arts. 100 a 103', url:'https://fioravanteweb.github.io/capacitacion/capacidad3'},
   {id:'tut', a:'cap', t:'Tutela', n:'CCyC, arts. 104 a 137', url:'https://fioravanteweb.github.io/capacitacion/capacidad4'},
-{id:'rp', a:'fam', t:'Adopcion', url:'https://fioravanteweb.github.io/capacitacion/adopcion'},
-{id:'rp4', a:'fam', t:'Alimentos', url:'https://fioravanteweb.github.io/capacitacion/alimentos'},
-{id:'rp1', a:'fam', t:'Filiacion', url:'https://fioravanteweb.github.io/capacitacion/filiacion'},
-{id:'rp5', a:'fam', t:'Comunicacion', url:'https://fioravanteweb.github.io/capacitacion/comunicacion'},
-{id:'rp2', a:'fam', t:'Procesos de Familia CCyC', url:'https://fioravanteweb.github.io/capacitacion/familia0'},  
-{id:'rp3', a:'fam', t:'Responsabilidad parental', n:'CCyC, arts. 638 a 704', url:'https://fioravanteweb.github.io/capacitacion/familia1'},
+  {id:'rp', a:'fam', t:'Adopcion', url:'https://fioravanteweb.github.io/capacitacion/adopcion'},
+  {id:'rp4', a:'fam', t:'Alimentos', url:'https://fioravanteweb.github.io/capacitacion/alimentos'},
+  {id:'rp1', a:'fam', t:'Filiacion', url:'https://fioravanteweb.github.io/capacitacion/filiacion'},
+  {id:'rp5', a:'fam', t:'Comunicacion', url:'https://fioravanteweb.github.io/capacitacion/comunicacion'},
+  {id:'rp2', a:'fam', t:'Procesos de Familia CCyC', url:'https://fioravanteweb.github.io/capacitacion/familia0'},
+  {id:'rp3', a:'fam', t:'Responsabilidad parental', n:'CCyC, arts. 638 a 704', url:'https://fioravanteweb.github.io/capacitacion/familia1'},
   {id:'div', a:'fam', t:'Disolución del matrimonio', n:'CCyC, arts. 435 a 445', url:'https://fioravanteweb.github.io/capacitacion/familia2'},
   {id:'ley16', a:'nin', t:'Protección integral de la niñez', n:'Ley II – N.º 16 (Misiones)', url:'https://fioravanteweb.github.io/capacitacion/nnya1'},
   {id:'ley52', a:'nin', t:'Defensor de los Derechos de Niños, Niñas y Adolescentes', n:'Ley IV – N.º 52 (Misiones)', url:'https://fioravanteweb.github.io/capacitacion/nnya2'},
   {id:'pj', a:'nin', t:'Régimen Penal Juvenil', n:'Ley 27.801', url:'https://fioravanteweb.github.io/capacitacion/penaljuvenil'},
   {id:'map', a:'pro', t:'Mapa del Código Procesal de Misiones', n:'Ley XII – N.º 27', url:'https://fioravanteweb.github.io/capacitacion/misiones1'},
-{id:'map1', a:'pro', t:'Reclamo de Filiacion Art 583 CCyC', url:'https://fioravanteweb.github.io/capacitacion/reclamofiliacion'},
-{id:'map2', a:'pro', t:'Comunicacion y Contacto', url:'https://fioravanteweb.github.io/capacitacion/cycontacto'},
-{id:'map3', a:'pro', t:'Guarda y Tutela', url:'https://fioravanteweb.github.io/capacitacion/guarda-tutela'},
-{id:'map4', a:'pro', t:'Cuidado Personal', url:'https://fioravanteweb.github.io/capacitacion/cuidadopersonal'},
+  {id:'map1', a:'pro', t:'Reclamo de Filiacion Art 583 CCyC', url:'https://fioravanteweb.github.io/capacitacion/reclamofiliacion'},
+  {id:'map2', a:'pro', t:'Comunicacion y Contacto', url:'https://fioravanteweb.github.io/capacitacion/cycontacto'},
+  {id:'map3', a:'pro', t:'Guarda y Tutela', url:'https://fioravanteweb.github.io/capacitacion/guarda-tutela'},
+  {id:'map4', a:'pro', t:'Cuidado Personal', url:'https://fioravanteweb.github.io/capacitacion/cuidadopersonal'},
   {id:'ali', a:'pro', t:'Juicio de alimentos', n:'Código Procesal, arts. 696 a 710', url:'https://fioravanteweb.github.io/capacitacion/misiones2'},
   {id:'dvm', a:'pro', t:'Juicio de divorcio', n:'Código Procesal, arts. 715 y 716', url:'https://fioravanteweb.github.io/capacitacion/misiones3'},
-{id:'dvm1', a:'pro', t:'Amparo', url:'https://fioravanteweb.github.io/capacitacion/amparo'},
+  {id:'dvm1', a:'pro', t:'Amparo', url:'https://fioravanteweb.github.io/capacitacion/amparo'},
   {id:'vio', a:'pro', t:'Violencia familiar', n:'Ley XIV – N.º 6 y arts. 655 a 658', url:'https://fioravanteweb.github.io/capacitacion/misiones4'},
   {id:'des', a:'pro', t:'Juicio de desalojo', n:'Código Procesal, arts. 623 a 635', url:'https://fioravanteweb.github.io/capacitacion/misiones5'},
   {id:'succ', a:'suc', t:'El proceso sucesorio', n:'CCyC, arts. 2335 a 2362', url:'https://fioravanteweb.github.io/capacitacion/sucesion1'},
   {id:'sucm', a:'suc', t:'Proceso sucesorio en Misiones', n:'Código Procesal, arts. 717 a 763', url:'https://fioravanteweb.github.io/capacitacion/sucesion2'},
   {id:'lab', a:'lab', t:'Modernización Laboral', n:'Ley 27.802', url:'https://fioravanteweb.github.io/capacitacion/laboral1'},
+  {id:'rpjcom0', a:'pen', t:'Principios generales', url:'https://fioravanteweb.github.io/capacitacion/cp-general'},
+  {id:'rpjcom1', a:'pen', t:'Delitos y Penas', url:'https://fioravanteweb.github.io/capacitacion/cp-especial'},
   {id:'rpjcom', a:'pen', t:'Régimen Penal Juvenil Comentado', url:'https://fioravanteweb.github.io/capacitacion/rpj-comentado'}
 ];
 
