@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Medidas Cautelares y Embargo Preventivo en Misiones (Arts. 196 a 243) explicado en simple</title>
+<meta name="description" content="Guía gráfica y en lenguaje sencillo de las medidas cautelares y el embargo preventivo del Código Procesal de Misiones: contracautela, caducidad, secuestro, intervención, inhibición, tutela anticipada.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500..800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F2F5F9;--surface:#fff;--ink:#1C2230;--muted:#586075;--line:#DCE2EC;--on:#fff;
+--c1:#2563C9;--c2:#0F7B63;--c3:#B8480E;--c4:#7B3FC7;--c5:#B5205A;--c6:#0E7490;
+--fd:"Fraunces",Georgia,"Times New Roman",serif;--fb:"Source Sans 3",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--r:16px}
+@media (prefers-color-scheme:dark){:root{--paper:#12151D;--surface:#1A1F2B;--ink:#ECEEF4;--muted:#A7AEC0;--line:#2B3242;--on:#12151D;
+--c1:#7DB0FF;--c2:#55D3B2;--c3:#FFA169;--c4:#BE9BFF;--c5:#FF8DB4;--c6:#5CD0EE}}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:1.0625rem/1.65 var(--fb);-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--fd);margin:0;line-height:1.1;letter-spacing:-.015em;text-wrap:balance}
+p{margin:0 0 1em}
+:focus-visible{outline:3px solid var(--c1);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:var(--paper);padding:10px 16px;border-radius:10px;z-index:50}
+.skip:focus{left:12px}
+.s1{--ac:var(--c1)}.s2{--ac:var(--c2)}.s3{--ac:var(--c3)}.s4{--ac:var(--c4)}.s5{--ac:var(--c5)}.s6{--ac:var(--c6)}
+.s1,.s2,.s3,.s4,.s5,.s6{--t:color-mix(in srgb,var(--ac) 13%,var(--surface));--d:color-mix(in srgb,var(--ac) 78%,var(--ink))}
+.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 90%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+.top-in{max-width:1120px;margin:0 auto;display:flex;align-items:center;gap:18px;padding:10px 24px}
+.brand{font-family:var(--fd);font-weight:700;white-space:nowrap}
+.nav{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav a{display:inline-flex;align-items:center;gap:8px;padding:7px 13px;border-radius:999px;color:var(--muted);text-decoration:none;font-weight:600;font-size:.92rem;white-space:nowrap}
+.nav a:hover{color:var(--ink);background:var(--surface)}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--ac)}
+.hero{padding:56px 0 40px}
+.kicker{color:var(--muted);font-size:.95rem;font-weight:600;max-width:64ch;margin-bottom:18px}
+h1{font-weight:800;font-size:clamp(2.2rem,5.4vw,4rem);line-height:1.02;letter-spacing:-.03em;max-width:20ch;margin-bottom:22px}
+.lead{font-size:1.18rem;max-width:62ch;color:var(--muted)}
+.lead strong{color:var(--ink)}
+.stats{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 0;padding:0;list-style:none}
+.stats li{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px 18px;font-size:.95rem}
+.stats b{font-family:var(--fd);font-size:1.5rem;margin-right:6px}
+.band{padding:64px 0}
+.band.alt{background:var(--surface);border-block:1px solid var(--line)}
+.sec{font-weight:800;font-size:clamp(1.7rem,3.4vw,2.5rem);letter-spacing:-.025em;margin-bottom:10px}
+.sub{color:var(--muted);max-width:64ch;margin-bottom:30px}
+.route{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px}
+.route a,.route .t{display:flex;flex-direction:column;gap:6px;height:100%;padding:18px;border-radius:var(--r);background:var(--ac);color:var(--on);text-decoration:none}
+.route a:hover{transform:translateY(-2px)}
+.route .k{font-size:.82rem;font-weight:700;opacity:.9}
+.route h3{font-size:1.15rem;color:inherit}
+.route p{margin:0;font-size:.9rem;line-height:1.45;opacity:.95}
+.flow{list-style:none;margin:0;padding:0;display:flex;align-items:stretch}
+.flow li{flex:1;position:relative;background:var(--t);border:2px solid var(--ac);border-radius:var(--r);padding:16px 18px;margin-right:34px}
+.flow li:last-child{margin-right:0}
+.flow li:not(:last-child)::after{content:"";position:absolute;right:-30px;top:50%;width:26px;height:26px;margin-top:-13px;background:var(--ac);clip-path:polygon(0 25%,55% 25%,55% 0,100% 50%,55% 100%,55% 75%,0 75%)}
+.flow b{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--ac);color:var(--on);font-family:var(--fd);margin-bottom:8px}
+.flow h3{font-size:1.05rem;margin-bottom:4px;color:var(--d)}
+.flow p{margin:0;font-size:.92rem;line-height:1.5}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.box{border-radius:var(--r);padding:22px 24px;background:var(--t);border:2px solid var(--ac)}
+.box h3{color:var(--d);font-size:1.3rem;margin-bottom:12px}
+.box ul{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.box li{padding:5px 14px;border-radius:999px;background:var(--ac);color:var(--on);font-weight:600;font-size:.92rem}
+.box p{margin:12px 0 0;font-size:.97rem}
+.cmp{width:100%;border-collapse:separate;border-spacing:0;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.cmp th,.cmp td{padding:14px 20px;text-align:left;vertical-align:top;border-top:1px solid var(--line);font-size:.98rem;line-height:1.55}
+.cmp thead th{border-top:0;font-family:var(--fd);font-size:1.1rem;color:var(--on);background:var(--c3)}
+.cmp tbody th{width:30%}
+.cmp td.hl{background:color-mix(in srgb,var(--c3) 10%,var(--surface));font-weight:600}
+.scroll{overflow-x:auto}
+.art-head{display:grid;grid-template-columns:auto 1fr;gap:4px 28px;align-items:end;margin-bottom:30px}
+.numeral{grid-row:span 2;font-family:var(--fd);font-weight:800;font-size:clamp(4.5rem,11vw,8rem);line-height:.8;letter-spacing:-.05em;color:var(--ac)}
+.art-head h2{font-weight:800;font-size:clamp(1.8rem,3.6vw,2.7rem);letter-spacing:-.025em}
+.tagline{color:var(--muted);font-size:1.1rem;max-width:56ch;margin:0}
+.rng{display:inline-block;margin-top:8px;font-size:.88rem;font-weight:700;color:var(--d);background:var(--t);border-radius:999px;padding:2px 12px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-top:6px solid var(--ac);border-radius:var(--r);padding:22px 24px;display:flex;flex-direction:column;gap:12px}
+.alt .card{background:var(--paper)}
+.card .hd{display:flex;align-items:center;gap:14px}
+.n{flex:none;min-width:56px;text-align:center;padding:6px 10px;border-radius:12px;background:var(--ac);color:var(--on);font-family:var(--fd);font-weight:800;font-size:1.35rem}
+.card h3{font-size:1.25rem;line-height:1.2}
+.card p{margin:0;font-size:.99rem;line-height:1.6}
+.take{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 40px}
+.take li{display:grid;grid-template-columns:40px 1fr;gap:14px;align-items:start}
+.take li::before{content:"✓";width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--ink);color:var(--paper);font-family:var(--fd);font-weight:800}
+.foot{padding:48px 0 calc(64px + env(safe-area-inset-bottom,0px));color:var(--muted);font-size:.92rem}
+.foot p{max-width:80ch}
+@media (max-width:960px){.route{grid-template-columns:repeat(2,1fr)}.grid,.take,.duo{grid-template-columns:1fr}.flow{flex-direction:column;gap:34px}.flow li{margin-right:0}.flow li:not(:last-child)::after{right:auto;left:50%;top:auto;bottom:-30px;margin:0 0 0 -13px;transform:rotate(90deg)}}
+@media (max-width:760px){.band{padding:48px 0}.brand{display:none}.wrap,.top-in{padding-inline:18px}.route{grid-template-columns:1fr}.art-head{grid-template-columns:1fr}.numeral{grid-row:auto}.cmp{min-width:560px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+@media print{.top,.skip{display:none}body{background:#fff}.band{padding:24px 0}.card{break-inside:avoid}}
+.n{white-space:nowrap;font-size:1rem}
+</style>
+</head>
+<body>
+<a class="skip" href="#panorama">Saltar al contenido</a>
+<header class="top"><div class="top-in">
+  <div class="brand">Cautelares y Embargo, en simple</div>
+  <nav class="nav" aria-label="Secciones">
+    <a href="#panorama">Panorama</a>
+    <a class="s1" href="#p1"><i class="dot"></i>Normas generales</a>
+    <a class="s2" href="#p2"><i class="dot"></i>Embargo preventivo</a>
+    <a class="s3" href="#p3"><i class="dot"></i>Secuestro e intervención</a>
+    <a class="s4" href="#p4"><i class="dot"></i>Inhibición y prohibiciones</a>
+    <a class="s5" href="#p5"><i class="dot"></i>Protección de personas</a>
+    <a class="s6" href="#p6"><i class="dot"></i>Tutela anticipada</a>
+    <a href="#esencial">Lo esencial</a>
+  </nav>
+</div></header>
+<main>
+<section id="panorama">
+  <div class="hero"><div class="wrap">
+    <p class="kicker">Ley XII – N.° 27 · Código Procesal Civil, Comercial, de Familia y Violencia Familiar de Misiones · Libro Primero, Título IV, Capítulo III · Arts. 196 a 243</p>
+    <h1>Medidas cautelares y embargo preventivo: asegurar el resultado del juicio.</h1>
+    <p class="lead">Guía gráfica y en <strong>lenguaje sencillo</strong> de las medidas cautelares en el proceso civil de Misiones. Responde: <strong>¿cuándo se piden?</strong>, <strong>¿qué exige el juez?</strong>, <strong>¿cómo se traban y se levantan?</strong> y <strong>¿qué pasa si se abusa?</strong></p>
+    <ul class="stats"><li><b>5</b>años de caducidad de embargos e inhibiciones</li><li><b>48 h</b>para levantar embargo indebido</li><li><b>10</b>días para demandar tras la medida previa</li><li><b>30%</b>máximo de recaudación del interventor</li></ul>
+  </div></div>
+
+  <div class="band alt"><div class="wrap">
+    <h2 class="sec">El recorrido de la ley</h2>
+    <p class="sub">Los arts. 196 a 243 agrupados en seis bloques temáticos. Tocá uno para ir a él.</p>
+    <ol class="route">
+      <li class="s1"><a href="#p1"><span class="k">Arts. 196 a 211</span><h3>Normas generales</h3><p>Presupuesto, prohibiciones, contracautela, caducidad y responsabilidad.</p></a></li>
+      <li class="s2"><a href="#p2"><span class="k">Arts. 212 a 223</span><h3>Embargo preventivo</h3><p>Cuándo procede, cómo se traba, prioridad y bienes inembargables.</p></a></li>
+      <li class="s3"><a href="#p3"><span class="k">Arts. 224 a 230</span><h3>Secuestro e intervención</h3><p>Secuestro de muebles, interventor recaudador e informante.</p></a></li>
+      <li class="s4"><a href="#p4"><span class="k">Arts. 231 a 236</span><h3>Inhibición y prohibiciones</h3><p>Inhibición general, anotación de litis, prohibición de innovar y contratar.</p></a></li>
+      <li class="s5"><a href="#p5"><span class="k">Arts. 237 a 240</span><h3>Protección de personas</h3><p>Guarda de personas vulnerables, incapaces y medidas complementarias.</p></a></li>
+      <li class="s6"><a href="#p6"><span class="k">Arts. 241 a 243</span><h3>Tutela anticipada</h3><p>Cuando la urgencia exige adelantar los efectos de la sentencia.</p></a></li>
+    </ol>
+  </div></div>
+
+  <div class="band"><div class="wrap">
+    <h2 class="sec">El camino de una cautelar</h2>
+    <p class="sub">Cinco etapas, desde el pedido hasta el cumplimiento y eventual responsabilidad.</p>
+    <ol class="flow">
+      <li class="s1"><b>1</b><h3>Pedido</h3><p>Se expresa el derecho, la medida, la norma y los requisitos (art. 196).</p></li>
+      <li class="s2"><b>2</b><h3>Contracautela</h3><p>El juez gradúa la caución según la verosimilitud (art. 202).</p></li>
+      <li class="s3"><b>3</b><h3>Decreto</h3><p>Se decreta sin audiencia de la contraria (art. 201).</p></li>
+      <li class="s4"><b>4</b><h3>Cumplimiento</h3><p>Se traba el embargo, secuestro o inhibición (arts. 216 y 231).</p></li>
+      <li class="s5"><b>5</b><h3>Caducidad o responsabilidad</h3><p>Se levanta si cesan los motivos o si hubo abuso (arts. 205 y 211).</p></li>
+    </ol>
+  </div></div>
+
+  <div class="band alt"><div class="wrap">
+    <h2 class="sec">Los plazos de un vistazo</h2>
+    <p class="sub">Todo está pensado para equilibrar la protección y la defensa.</p>
+    <div class="scroll"><table class="cmp"><thead><tr><th>Paso</th><th>Plazo</th><th>Art.</th></tr></thead><tbody>
+      <tr><th>Demandar tras medida previa</th><td class="hl">10 días desde la traba</td><td>210</td></tr>
+      <tr><th>Caducidad de embargos e inhibiciones</th><td class="hl">5 años desde la anotación</td><td>210</td></tr>
+      <tr><th>Levantamiento de embargo indebido</th><td class="hl">48 horas</td><td>223</td></tr>
+      <tr><th>Reinscripción de la inhibición</th><td>Antes del vencimiento de 5 años</td><td>231</td></tr>
+      <tr><th>Extinción de anotación de litis</th><td>5 años desde la inscripción</td><td>232</td></tr>
+      <tr><th>Reanudación tras suspensión</th><td>Según la resolución</td><td>155</td></tr>
+    </tbody></table></div>
+  </div></div>
+</section>
+
+<div id="arts"></div>
+
+<section id="esencial" class="band alt"><div class="wrap">
+  <h2 class="sec">Lo esencial</h2>
+  <p class="sub">Para quedarse con lo más importante.</p>
+  <ul class="take">
+    <li><span><b>Se piden antes o después de la demanda.</b> Salvo que la ley exija entablarla previamente (art. 196).</span></li>
+    <li><span><b>El juez puede exigir contracautela.</b> Salvo que el peticionario sea el Estado o tenga beneficio de litigar sin gastos (arts. 202 y 203).</span></li>
+    <li><span><b>No se pueden trabar sobre fondos de la Provincia ni de los municipios.</b> Y los bienes del Estado son inembargables (arts. 197 y 198).</span></li>
+    <li><span><b>Se decretan sin audiencia de la contraria.</b> Ningún incidente del destinatario puede detener su cumplimiento (art. 201).</span></li>
+    <li><span><b>Hay caducidad de pleno derecho.</b> Si se pidió antes del juicio, hay 10 días para demandar (art. 210).</span></li>
+    <li><span><b>El embargo preventivo tiene causales tasadas.</b> Las del art. 212 más los casos del art. 213 y 215.</span></li>
+    <li><span><b>El primer embargante tiene prioridad.</b> Salvo créditos privilegiados o concurso (art. 221).</span></li>
+    <li><span><b>Si se abusa de la cautelar, se responde por daños.</b> A pedido de la contraparte (art. 211).</span></li>
+    <li><span><b>La tutela anticipada es excepcional.</b> Exige convicción suficiente y urgencia extrema (art. 241).</span></li>
+  </ul>
+</div></section>
+</main>
+<footer class="foot"><div class="wrap"><p>Resumen en lenguaje sencillo de los arts. 196 a 243 de la Ley XII – N.° 27 de la Provincia de Misiones. No reemplaza el texto de la ley ni el asesoramiento de un profesional del derecho.</p></div></footer>
+<script>
+const P=[
+{id:1,t:"Medidas cautelares: normas generales",r:"Arts. 196 a 211",g:"Presupuesto, prohibiciones, contracautela, caducidad y responsabilidad.",a:[
+["196","Oportunidad y presupuesto","Las providencias cautelares pueden ser solicitadas antes o después de deducida la demanda, a menos que de la ley resulte que esta debe entablarse previamente. El escrito debe expresar el derecho que se pretende asegurar, la medida que se pide, la disposición de la ley en que se funda y el cumplimiento de los requisitos que corresponden a la medida requerida."],
+["197","Prohibición","No pueden ser objeto de medidas cautelares los fondos, rentas o créditos pertenecientes a la Provincia de Misiones, quedando comprendidos la Administración centralizada, organismos descentralizados, entidades autárquicas y empresas o sociedades con garantía del Estado Provincial. Tampoco los pertenecientes a los municipios, cuenten o no con Carta Orgánica Municipal. No pueden decretarse medidas cautelares que afecten, obstaculicen o perturben los recursos presupuestarios del Estado."],
+["198","Inembargabilidad de los bienes del estado","No son susceptibles de embargo preventivo: 1) los bienes de la Provincia de Misiones, comprendiendo los de la administración pública centralizada, organismos descentralizados, entidades autárquicas y empresas o sociedades con participación mayoritaria de la Provincia; 2) los bienes de los municipios, cuenten o no con Carta Orgánica Municipal. Los embargos preventivos obtenidos con anterioridad son levantados de oficio o a pedido de parte."],
+["199","Medida decretada por Juez incompetente","Los jueces deben abstenerse de decretar medidas precautorias cuando el conocimiento de la causa no es de su competencia. Sin embargo, la medida ordenada por un juez incompetente es válida siempre que sea dispuesta de conformidad con las prescripciones de este Capítulo, pero no prorroga su competencia. El juez que decreta la medida, inmediatamente después de requerido, remite las actuaciones al que es competente."],
+["200","Trámites previos","La información sumaria para obtener medidas precautorias puede ofrecerse acompañando el escrito en que se solicitan el interrogatorio de los testigos y la declaración de estos, ajustada a los arts. 420, 421 y 423 y firmada por ellos. Los testigos deben ratificarse en el acto de ser presentado dicho escrito o en primera audiencia. Las actuaciones permanecen reservadas hasta tanto se ejecutan las medidas."],
+["201","Cumplimiento y recursos","Las medidas precautorias se decretan y cumplen sin audiencia de la otra parte. Ningún incidente planteado por el destinatario de la medida puede detener su cumplimiento. Si el afectado no toma conocimiento de las medidas con motivo de su ejecución, se le notifican personalmente o por cédula dentro de los tres (3) días. La providencia que admite o deniega una medida cautelar es recurrible por vía de reposición; también es admisible la apelación, subsidiaria o directa. El recurso de apelación en caso de admitirse la medida se concede en efecto devolutivo."],
+["202","Contracautela","La medida precautoria solo puede decretarse bajo la responsabilidad de la parte que la solicita, quien debe dar caución por todas las costas y daños y perjuicios que puede ocasionar en los supuestos previstos en el primer párrafo del art. 211. En los casos de los arts. 213 incs. 2 y 3 y 215 incs. 2 y 3, la caución juratoria se entiende prestada en el pedido de medida cautelar. El juez gradúa la calidad y monto de la caución de acuerdo con la mayor o menor verosimilitud del derecho y las circunstancias del caso. Puede ofrecerse la garantía de instituciones bancarias o de personas de acreditada responsabilidad económica."],
+["203","Exención de la contracautela","No se exige caución si quien obtuvo la medida: 1) es la Nación, una Provincia, una de sus reparticiones, una municipalidad o persona que justifica ser reconocidamente abonada; 2) actúa con beneficio de litigar sin gastos."],
+["204","Mejora de la contracautela","En cualquier estado del proceso, la parte contra quien se hace efectiva una medida cautelar puede pedir que se mejore la caución probando sumariamente que es insuficiente. El juez resuelve previo traslado a la otra parte. La resolución queda notificada por ministerio de la ley."],
+["205","Carácter provisional","Las medidas cautelares subsisten mientras duran las circunstancias que las determinan. En cualquier momento en que estas cesan se puede requerir su levantamiento."],
+["206","Modificación","El acreedor puede pedir la ampliación, mejora o sustitución de la medida cautelar decretada, justificando que esta no cumple adecuadamente la función de garantía a que está destinada. El deudor puede requerir la sustitución de una medida cautelar por otra que le resulte menos perjudicial, siempre que esta garantice suficientemente el derecho del acreedor. Puede, asimismo, pedir la sustitución por otros bienes del mismo valor, o la reducción del monto por el cual la medida precautoria es trabada, si corresponde."],
+["207","Facultades del Juez","El juez, para evitar perjuicios o gravámenes innecesarios al titular de los bienes, puede disponer una medida precautoria distinta de la solicitada, o limitarla, teniendo en cuenta la importancia del derecho que se intenta proteger."],
+["208","Peligro de pérdida o desvalorización","Si hay peligro de pérdida o desvalorización de los bienes afectados o si su conservación es gravosa o difícil, a pedido de parte y previo traslado a la otra por un plazo breve, el juez puede ordenar la venta en la forma más conveniente, abreviando los trámites y habilitando días y horas."],
+["209","Establecimientos industriales o comerciales. Servicios públicos","Cuando la medida se traba sobre bienes muebles, mercaderías o materias primas, pertenecientes a establecimientos comerciales, fabriles o afines, que los necesitan para su funcionamiento, o afectadas a la prestación de servicios públicos, el juez puede autorizar la realización de los actos necesarios para no comprometer el proceso de fabricación, comercialización o prestación del servicio público."],
+["210","Caducidad","Se produce la caducidad de pleno derecho de las medidas cautelares que se ordenan y hacen efectivas antes del proceso, si tratándose de obligación exigible no se interpone la demanda dentro de los diez (10) días siguientes al de su traba, aunque la otra parte deduzca recurso. Las costas y los daños y perjuicios causados son a cargo de quien obtuvo la medida, y esta no puede proponerse nuevamente por la misma causa y como previa a la promoción del proceso. Las inhibiciones y embargos se extinguen a los cinco (5) años de la fecha de su anotación en el registro que corresponda, salvo que a petición de parte se reinscriban antes del vencimiento del plazo."],
+["211","Responsabilidad","Salvo en el caso de los arts. 212 inc. 1 y 215 cuando se disponga levantar una medida cautelar por cualquier motivo que demuestre que el requirente abusó o se excedió en el derecho que la ley otorga para obtenerla, la resolución lo debe condenar a pagar los daños y perjuicios si la otra parte lo solicitó. La determinación del monto se sustancia por el trámite de los incidentes o por juicio ordinario, según que las circunstancias hagan preferible uno u otro procedimiento a criterio del juez."]]},
+{id:2,t:"Embargo preventivo",r:"Arts. 212 a 223",g:"Cuándo procede, cómo se traba, prioridad del primer embargante y bienes inembargables.",a:[
+["212","Procedencia","Puede pedir embargo preventivo el acreedor de deuda en dinero o en especie que se halla en alguna de las condiciones siguientes: 1) que el deudor no tenga domicilio en la República; 2) que la existencia del crédito esté demostrada con instrumento público o privado atribuido al deudor, abonada la firma por información sumaria de dos (2) testigos; 3) que fundándose la acción en un contrato bilateral, se justifique su existencia en la misma forma del inciso 2, debiendo además probarse sumariamente el cumplimiento del contrato por parte del actor; 4) que la deuda esté justificada por libros de comercio llevados en debida forma por el actor, o resulte de boleto de corredor, o surja de la certificación realizada por contador público nacional en el supuesto de factura conformada; 5) que aún estando la deuda sujeta a condición o plazo, se acredite sumariamente que el deudor trata de enajenar, ocultar o transportar sus bienes, comprometiendo la garantía, o que disminuyó apreciablemente la solvencia del deudor."],
+["213","Otros casos","Pueden igualmente pedir el embargo preventivo: 1) el coheredero, el condómino o el socio, sobre los bienes de la herencia, del condominio o de la sociedad, si acreditan la verosimilitud del derecho y el peligro de la demora; 2) el propietario o locatario principal de predios urbanos o rústicos, respecto de las cosas afectadas a los privilegios que le reconoce la ley; 3) la persona a quien la ley reconoce privilegios sobre ciertos bienes muebles o inmuebles, siempre que el crédito se justifique en la forma del art. 212 inc. 2; 4) la persona que haya de demandar por acción reivindicatoria, petición de herencia, nulidad de testamento o simulación, mientras dure el juicio; 5) la persona que haya de demandar por daños y perjuicios ocasionados por accidente de tránsito, cuando el vehículo carece de cobertura de seguro contra terceros."],
+["214","Demanda por escrituración","Cuando se demanda el cumplimiento de un contrato de compraventa, si el derecho es verosímil el adquirente puede solicitar el embargo del bien objeto de aquel."],
+["215","Situaciones derivadas del proceso","Además de los supuestos contemplados en los artículos anteriores, durante el proceso puede decretarse el embargo preventivo: 1) en el caso del art. 63 (rebeldía); 2) en el caso del art. 358 inc. 1), cuando resulte verosímil el derecho alegado; 3) si quien lo solicita obtuvo sentencia favorable, aunque esté recurrida."],
+["216","Forma de la traba","En los casos en que debe efectuarse el embargo, se traba en la forma prescripta para el juicio ejecutivo. Se limita a los bienes necesarios para cubrir el crédito que se reclama y las costas. Mientras no se disponga el secuestro o la administración judicial de lo embargado, el deudor puede continuar en el uso normal de la cosa."],
+["217","Mandamiento","En el mandamiento se incluye siempre la autorización para que los funcionarios encargados de ejecutarlo soliciten el auxilio de la fuerza pública y el allanamiento de domicilio en caso de resistencia, y se deja constancia de la habilitación de día y hora y del lugar. Contiene, asimismo, la prevención de que el embargado debe abstenerse de cualquier acto respecto de los bienes objeto de la medida, que pueda causar la disminución de la garantía del crédito, bajo apercibimiento de las sanciones penales que corresponden."],
+["218","Suspensión","Los funcionarios encargados de la ejecución del embargo solo pueden suspenderlo cuando el deudor entrega la suma expresada en el mandamiento."],
+["219","Depósito","Si los bienes embargados son muebles, deben ser depositados a la orden judicial; pero si se trata de los de la casa en que vive el embargado y son susceptibles de embargo, aquel debe ser constituido en depositario de ellos, salvo que, por circunstancias especiales, no sea posible."],
+["220","Obligación del depositario","El depositario de objetos embargados a la orden judicial debe presentarlos dentro del día siguiente al de la intimación judicial. No puede eludir la entrega invocando el derecho de retención. Si no lo hace, el juez debe remitir los antecedentes al Tribunal Penal competente, y puede asimismo ordenar la detención del depositario hasta el momento en que dicho Tribunal comience a actuar."],
+["221","Prioridad del primer embargante","El acreedor que obtiene el embargo de bienes de su deudor, no afectados a créditos privilegiados, tiene derecho a cobrar íntegramente su crédito, intereses y costas, con preferencia a otros acreedores, salvo en el caso de concurso. Los embargos posteriores afectan únicamente el sobrante que queda después de pagados los créditos que obtuvieron embargos anteriores."],
+["222","Bienes inembargables","No se traba nunca embargo: 1) en el lecho cotidiano del deudor, de su mujer e hijos, en las ropas y muebles de su indispensable uso, ni en los instrumentos necesarios para la profesión, arte u oficio que ejerza; 2) sobre los sepulcros, salvo que el crédito corresponda a su precio de venta, construcción o suministro de materiales; 3) en los demás bienes exceptuados de embargo por ley. Ningún otro bien queda exceptuado."],
+["223","Levantamiento de oficio y en todo tiempo","El embargo indebidamente trabado sobre alguno de los bienes enumerados en el art. 222 es levantado de oficio o a pedido del deudor o de su cónyuge o hijos, dentro de las cuarenta y ocho (48) horas, aunque la resolución que lo decretó se halle consentida. El magistrado interviniente responde personalmente cuando excede del plazo establecido."]]},
+{id:3,t:"Secuestro e intervención judicial",r:"Arts. 224 a 230",g:"Secuestro de muebles, interventor recaudador e informante.",a:[
+["224","Secuestro: procedencia","Procede el secuestro de los bienes muebles o semovientes objeto del juicio, cuando el embargo no asegura por sí solo el derecho invocado por el solicitante, siempre que se presenten instrumentos que hagan verosímil el derecho cuya efectividad se quiere garantizar. Procede, asimismo, toda vez que sea indispensable proveer a la guarda o conservación de cosas para asegurar el resultado de la sentencia definitiva. Procede el secuestro de bienes muebles registrables cuando la inscripción del embargo que se ordena debe realizarse fuera del país."],
+["225","Intervención judicial: ámbito","Además de las medidas cautelares de intervención o administración judiciales autorizadas por las leyes sustanciales, que quedan sujetas al régimen establecido por ellas, pueden disponerse las que se regulan en los artículos siguientes."],
+["226","Interventor recaudador","A pedido del acreedor y a falta de otra medida cautelar eficaz o como complemento de la dispuesta, puede designarse a un interventor recaudador, si aquella debe recaer sobre bienes productores de rentas o frutos. Su función se limita exclusivamente a la recaudación de la parte embargada, sin injerencia alguna en la administración. El juez determina el monto de la recaudación, que no puede exceder del cincuenta por ciento (50%) de las entradas brutas; su importe debe ser depositado a la orden del Juzgado dentro del plazo que este determina."],
+["227","Interventor informante","De oficio o a petición de parte, el juez puede designar un interventor informante para que dé noticia acerca del estado de los bienes objeto del juicio o de las operaciones o actividades, con la periodicidad que se establece en la providencia que lo designa."],
+["228","Disposiciones comunes a toda clase de intervención","Cualquiera sea la fuente legal de la intervención judicial y en cuanto sea compatible con la respectiva regulación: 1) el juez debe apreciar su procedencia con criterio restrictivo; la resolución es dictada en la forma prescripta en el art. 162; 2) la designación debe recaer en persona que posea los conocimientos necesarios para desempeñarse atendiendo a la naturaleza de los bienes o actividades en que interviene; es, en su caso, persona ajena a la sociedad o asociación intervenida; 3) la providencia que designa al interventor determina la misión que debe cumplir y el plazo de duración, que solo puede prorrogarse por resolución fundada; 4) la contracautela se fija teniendo en consideración la clase de intervención, los perjuicios que puede irrogar y las costas; 5) los gastos extraordinarios son autorizados por el juez previo traslado a las partes, salvo cuando la demora puede ocasionar perjuicios."],
+["229","Deberes del interventor. Remoción","El interventor debe: 1) desempeñar personalmente el cargo con arreglo a las directivas que le imparte el juez; 2) presentar los informes periódicos que dispone el Juzgado y uno final, al concluir su cometido; 3) evitar la adopción de medidas que no son estrictamente necesarias para el cumplimiento de su función o que comprometen su imparcialidad respecto de las partes interesadas o pueden producirles daño o menoscabo. El interventor que no cumple eficazmente su cometido puede ser removido de oficio; si media pedido de parte, se da traslado a las demás y al interventor."],
+["230","Honorarios","El interventor solo percibe los honorarios a que tiene derecho una vez aprobado judicialmente el informe final de su gestión. Si su actuación debe prolongarse durante un plazo que a criterio del juez justifica el pago de anticipos, previo traslado a las partes, se fijan estos en adecuada proporción al eventual importe total de sus honorarios. Carece de derecho a cobrar honorarios el interventor removido del cargo por ejercicio abusivo; si la remoción se debe a negligencia, aquel derecho a honorarios o la proporción que corresponda es determinada por el juez. El pacto de honorarios celebrado por el interventor es nulo e importa ejercicio abusivo del cargo."]]},
+{id:4,t:"Inhibición, anotación y prohibiciones",r:"Arts. 231 a 236",g:"Inhibición general, anotación de litis, prohibición de innovar y de contratar.",a:[
+["231","Inhibición general de bienes","En todos los casos en que habiendo lugar a embargo este no puede hacerse efectivo por no conocerse bienes del deudor, o por no cubrir estos el importe del crédito reclamado, puede solicitarse contra aquel la inhibición general de vender o gravar sus bienes, la que se debe dejar sin efecto siempre que presente a embargo bienes suficientes o dé caución bastante. El que solicite la inhibición debe expresar el nombre, apellido y domicilio del deudor, así como todo otro dato que pueda individualizar al inhibido. La inhibición solo surte efecto desde la fecha de su anotación. No concede preferencia sobre las anotadas con posterioridad."],
+["232","Anotación de litis","Procede la anotación de litis cuando se deduce una pretensión que puede tener como consecuencia la modificación de una inscripción en el registro correspondiente y el derecho es verosímil. La anotación de litis se extingue a los cinco (5) años de la fecha de su inscripción en el registro que corresponda, salvo que a petición de parte se reinscriba antes del vencimiento del plazo, por orden del juez que entiende en el proceso."],
+["233","Prohibición de Innovar","Puede decretarse la prohibición de innovar en toda clase de juicio siempre que: 1) el derecho sea verosímil; 2) exista el peligro de que si se mantiene o altera en su caso, la situación de hecho o de derecho, la modificación pueda influir en la sentencia o convierta su ejecución en ineficaz o imposible; 3) la cautela no pueda obtenerse por medio de otra medida precautoria."],
+["234","Prohibición de contratar","Cuando por ley o contrato o para asegurar la ejecución forzada de los bienes objeto del juicio, procede la prohibición de contratar sobre determinados bienes, el juez ordena la medida. Individualiza lo que es objeto de la prohibición, disponiendo se inscriba en los registros correspondientes y se notifique a los interesados y a los terceros que mencione el solicitante. La medida queda sin efecto si quien la obtiene no deduce la demanda dentro del plazo de cinco (5) días de haber sido dispuesta, y en cualquier momento en que se demuestre su improcedencia."],
+["235","Medidas cautelares genéricas","Fuera de los casos previstos en los artículos precedentes, quien tiene fundado motivo para temer que durante el tiempo anterior al reconocimiento judicial de su derecho, este pueda sufrir un perjuicio inminente o irreparable, puede solicitar las medidas urgentes que, según las circunstancias, sean más aptas para asegurar provisionalmente el cumplimiento de la sentencia."],
+["236","Normas subsidiarias","Lo dispuesto en este capítulo respecto del embargo preventivo es aplicable al embargo ejecutivo, al ejecutorio, y a las demás medidas cautelares, en lo pertinente."]]},
+{id:5,t:"Protección de personas",r:"Arts. 237 a 240",g:"Guarda de personas vulnerables, incapaces y medidas complementarias.",a:[
+["237","Procedencia","Puede decretarse la guarda: 1) de personas mayores de 18 años en condición de vulnerabilidad, que son maltratados, abandonados o inducidos por otras personas a actos ilícitos o deshonestos o expuestos a graves riesgos físicos o morales; 2) de los incapaces mayores de dieciocho (18) años que son maltratados, abandonados o inducidos por sus curadores a actos ilícitos o deshonestos o expuestos a graves riesgos físicos o morales. Asimismo cuando los curadores están impedidos de ejercer sus funciones; 3) de los incapaces mayores de dieciocho (18) años que están en pleito con su curador y en el que se controvierte la curatela o sus efectos."],
+["238","Juez competente","La guarda es decretada por el juez del domicilio de la persona que ha de ser amparada, con intervención del Asesor de Menores e Incapaces. Cuando existe urgencia o circunstancias graves, se resuelve provisionalmente sin más trámite."],
+["239","Procedimiento","En los casos previstos en el art. 237 la petición puede ser deducida por cualquier persona, y formulada verbalmente ante el Asesor de Menores e Incapaces, en cuyo caso se labra acta con las menciones pertinentes, la que es remitida al Juzgado que corresponde."],
+["240","Medidas complementarias","Al disponer la medida, el juez ordena que se entreguen a la persona a favor de quien es ordenada, las ropas, útiles y muebles de su uso y profesión. Ordena, asimismo, que se le provea de alimentos por el plazo de treinta (30) días, a cuyo vencimiento quedan sin efecto si no se inicia el juicio correspondiente. La suma es fijada prudencialmente por el juez, previa vista a quien debe pagarlos y sin otro trámite."]]},
+{id:6,t:"Tutela anticipada",r:"Arts. 241 a 243",g:"Cuando la urgencia exige adelantar los efectos de la sentencia pretendida.",a:[
+["241","Procedencia","Sin que configure prejuzgamiento, el juez puede, a requerimiento fundado de quien tiene un interés legítimo y de manera excepcional, anticipar parcial o totalmente los efectos de la tutela pretendida en la demanda o en la reconvención, cuando concurren los siguientes extremos: 1) convicción suficiente sobre la probabilidad cierta del derecho que la sustenta; 2) urgencia de la medida en tal grado que de no ser adoptada de inmediato cause al peticionario la frustración del derecho a la salud o a la vida, o un daño irreparable equivalente; 3) otorgamiento de contracautela real suficiente, salvo en los casos en que el peticionario se encuentre legalmente exento de darla."],
+["242","Procedimiento. Efectos","Solicitada la tutela, el juez debe fijar una audiencia con carácter urgente, a la que deben ser citadas las partes interesadas notificándolas personalmente o por cédula, carta documento o acta notarial y se celebra con quienes comparecen. Concluida la audiencia, resuelve sin otra sustanciación. La resolución se notifica a las partes no comparecientes personalmente o por cédula. Si el solicitante o quien lo represente no comparece a la audiencia, la tutela debe ser rechazada y no puede ser solicitada con igual carácter en lo sucesivo."],
+["243","Modificación. Recursos","La tutela anticipada puede ser revocada o modificada al tiempo de la sentencia, o por vía de incidente durante la secuela del proceso si cambian las condiciones tenidas en cuenta para disponerla. Se consideran también al efecto las actitudes procesales de las partes, en cuanto de ellas surjan indicios de abuso del derecho de defensa o manifiesto propósito dilatorio. Si a pedido de parte, el juez considera que la medida es obtenida sin derecho o con abuso de derecho, debe declarar la responsabilidad del requirente, condenándolo a los daños y perjuicios. El régimen de cumplimiento y de recursos es el establecido para las medidas cautelares. Concedida o no la tutela el proceso prosigue hasta su finalización."]]}
+];
+document.getElementById("arts").innerHTML=P.map((p,i)=>`<section id="p${p.id}" class="band s${p.id}${i%2?"":" alt"}"><div class="wrap"><div class="art-head"><div class="numeral" aria-hidden="true">${p.id}</div><h2>${p.t}</h2><p class="tagline">${p.g}<br><span class="rng">${p.r}</span></p></div><div class="grid">${p.a.map(a=>`<article class="card"><div class="hd"><span class="n">Art. ${a[0]}</span><h3>${a[1]}</h3></div><p>${a[2]}</p></article>`).join("")}</div></div></section>`).join("");
+</script>
+</body>
+</html>
