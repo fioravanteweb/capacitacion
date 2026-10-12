@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Adopción en simple: resumen gráfico de los arts. 594 a 637 del CCyC</title>
+<meta name="description" content="Resumen gráfico y en lenguaje sencillo del Título VI, Adopción (arts. 594 a 637) del Código Civil y Comercial comentado, Tomo II.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500..800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F2F5F9;--surface:#fff;--ink:#1C2230;--muted:#586075;--line:#DCE2EC;--on:#fff;
+--c1:#2563C9;--c2:#0F7B63;--c3:#B8480E;--c4:#7B3FC7;--c5:#B5205A;--c6:#0E7490;
+--fd:"Fraunces",Georgia,"Times New Roman",serif;--fb:"Source Sans 3",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--r:16px}
+@media (prefers-color-scheme:dark){:root{--paper:#12151D;--surface:#1A1F2B;--ink:#ECEEF4;--muted:#A7AEC0;--line:#2B3242;--on:#12151D;
+--c1:#7DB0FF;--c2:#55D3B2;--c3:#FFA169;--c4:#BE9BFF;--c5:#FF8DB4;--c6:#5CD0EE}}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:1.0625rem/1.65 var(--fb);-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--fd);margin:0;line-height:1.1;letter-spacing:-.015em;text-wrap:balance}
+p{margin:0 0 1em}
+:focus-visible{outline:3px solid var(--c1);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:var(--paper);padding:10px 16px;border-radius:10px;z-index:50}
+.skip:focus{left:12px}
+.s1{--ac:var(--c1)}.s2{--ac:var(--c2)}.s3{--ac:var(--c3)}.s4{--ac:var(--c4)}.s5{--ac:var(--c5)}.s6{--ac:var(--c6)}
+.s1,.s2,.s3,.s4,.s5,.s6{--t:color-mix(in srgb,var(--ac) 13%,var(--surface));--d:color-mix(in srgb,var(--ac) 78%,var(--ink))}
+.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 90%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top-in{max-width:1120px;margin:0 auto;display:flex;align-items:center;gap:18px;padding:10px 24px}
+.brand{font-family:var(--fd);font-weight:700;white-space:nowrap}
+.nav{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav a{display:inline-flex;align-items:center;gap:8px;padding:7px 13px;border-radius:999px;color:var(--muted);text-decoration:none;font-weight:600;font-size:.92rem;white-space:nowrap}
+.nav a:hover{color:var(--ink);background:var(--surface)}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--ac)}
+.hero{padding:56px 0 40px}
+.kicker{color:var(--muted);font-size:.95rem;font-weight:600;max-width:60ch;margin-bottom:18px}
+h1{font-weight:800;font-size:clamp(2.2rem,5.4vw,4rem);line-height:1.02;letter-spacing:-.03em;max-width:18ch;margin-bottom:22px}
+.lead{font-size:1.18rem;max-width:62ch;color:var(--muted)}
+.lead strong{color:var(--ink)}
+.stats{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 0;padding:0;list-style:none}
+.stats li{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px 18px;font-size:.95rem}
+.stats b{font-family:var(--fd);font-size:1.5rem;margin-right:6px}
+.band{padding:64px 0}
+.band.alt{background:var(--surface);border-block:1px solid var(--line)}
+.sec{font-weight:800;font-size:clamp(1.7rem,3.4vw,2.5rem);letter-spacing:-.025em;margin-bottom:10px}
+.sub{color:var(--muted);max-width:64ch;margin-bottom:30px}
+.route{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.route.four{grid-template-columns:repeat(4,1fr)}
+.route a,.route .t{display:flex;flex-direction:column;gap:6px;height:100%;padding:18px;border-radius:var(--r);background:var(--ac);color:var(--on);text-decoration:none}
+.route a:hover{transform:translateY(-2px)}
+.route .k{font-size:.82rem;font-weight:700;opacity:.9}
+.route h3{font-size:1.15rem;color:inherit}
+.route p{margin:0;font-size:.9rem;line-height:1.45;opacity:.95}
+/* gráficos */
+.flow{list-style:none;margin:0;padding:0;display:flex;gap:0;align-items:stretch}
+.flow li{flex:1;position:relative;background:var(--t);border:2px solid var(--ac);border-radius:var(--r);padding:16px 18px;margin-right:34px}
+.flow li:last-child{margin-right:0}
+.flow li:not(:last-child)::after{content:"";position:absolute;right:-30px;top:50%;width:26px;height:26px;margin-top:-13px;background:var(--ac);clip-path:polygon(0 25%,55% 25%,55% 0,100% 50%,55% 100%,55% 75%,0 75%)}
+.flow b{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--ac);color:var(--on);font-family:var(--fd);margin-bottom:8px}
+.flow h3{font-size:1.05rem;margin-bottom:4px;color:var(--d)}
+.flow p{margin:0;font-size:.92rem;line-height:1.5}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.box{border-radius:var(--r);padding:22px 24px;background:var(--t);border:2px solid var(--ac)}
+.box h3{color:var(--d);font-size:1.3rem;margin-bottom:12px}
+.box ul{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.box li{padding:5px 14px;border-radius:999px;background:var(--ac);color:var(--on);font-weight:600;font-size:.92rem}
+.box p{margin:12px 0 0;font-size:.97rem}
+.cmp{width:100%;border-collapse:separate;border-spacing:0;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.cmp th,.cmp td{padding:14px 20px;text-align:left;vertical-align:top;border-top:1px solid var(--line);font-size:.98rem;line-height:1.55}
+.cmp thead th{border-top:0;font-family:var(--fd);font-size:1.1rem;color:var(--on);background:var(--c3)}
+.cmp tbody th{width:26%;font-size:.98rem}
+.cmp td.hl{background:color-mix(in srgb,var(--c3) 10%,var(--surface));font-weight:600}
+.scroll{overflow-x:auto}
+/* buscador */
+.tools{position:sticky;top:57px;z-index:15;background:var(--paper);padding:14px 0;border-bottom:1px solid var(--line)}
+.tools .wrap{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.tools input{flex:1 1 260px;font:inherit;padding:11px 16px;border-radius:12px;border:2px solid var(--line);background:var(--surface);color:var(--ink)}
+.tools input:focus{border-color:var(--c1);outline:0}
+.count{color:var(--muted);font-size:.9rem}
+/* capítulos */
+.art-head{display:grid;grid-template-columns:auto 1fr;gap:4px 28px;align-items:end;margin-bottom:30px}
+.numeral{grid-row:span 2;font-family:var(--fd);font-weight:800;font-size:clamp(4.5rem,11vw,8rem);line-height:.8;letter-spacing:-.05em;color:var(--ac)}
+.art-head h2{font-weight:800;font-size:clamp(1.8rem,3.6vw,2.7rem);letter-spacing:-.025em}
+.tagline{color:var(--muted);font-size:1.1rem;max-width:56ch;margin:0}
+.rng{display:inline-block;margin-top:8px;font-size:.88rem;font-weight:700;color:var(--d);background:var(--t);border-radius:999px;padding:2px 12px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-top:6px solid var(--ac);border-radius:var(--r);padding:22px 24px;display:flex;flex-direction:column;gap:12px}
+.alt .card{background:var(--paper)}
+.card .hd{display:flex;align-items:center;gap:14px}
+.n{flex:none;min-width:56px;text-align:center;padding:6px 10px;border-radius:12px;background:var(--ac);color:var(--on);font-family:var(--fd);font-weight:800;font-size:1.35rem}
+.card h3{font-size:1.25rem;line-height:1.2}
+.card p{margin:0;font-size:.99rem;line-height:1.6}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}
+.chips span{padding:4px 12px;border-radius:999px;background:var(--t);color:var(--d);font-weight:600;font-size:.85rem;line-height:1.35}
+.empty{display:none;color:var(--muted);padding:24px 0}
+.take{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 40px}
+.take li{display:grid;grid-template-columns:40px 1fr;gap:14px;align-items:start}
+.take li::before{content:"✓";width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--ink);color:var(--paper);font-family:var(--fd);font-weight:800}
+.foot{padding:48px 0 64px;color:var(--muted);font-size:.92rem}
+.foot p{max-width:80ch}
+@media (max-width:960px){.route,.route.four{grid-template-columns:repeat(2,1fr)}.grid,.take,.duo{grid-template-columns:1fr}.flow{flex-direction:column;gap:34px}.flow li{margin-right:0}.flow li:not(:last-child)::after{right:auto;left:50%;top:auto;bottom:-30px;margin:0 0 0 -13px;transform:rotate(90deg)}}
+@media (max-width:760px){.band{padding:48px 0}.brand{display:none}.wrap,.top-in{padding-inline:18px}.route,.route.four{grid-template-columns:1fr}.art-head{grid-template-columns:1fr}.numeral{grid-row:auto}.cmp{min-width:640px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+@media print{.top,.tools,.skip{display:none}body{background:#fff}.band{padding:24px 0}.card{break-inside:avoid}}
+</style>
+
+<body>
+<a class="skip" href="#panorama">Saltar al contenido</a>
+<header class="top"><div class="top-in">
+  <div class="brand">Adopción, en simple</div>
+  <nav class="nav" aria-label="Secciones de la página">
+    <a href="#panorama">Panorama</a>
+    <a class="s1" href="#p1"><i class="dot"></i>Generales</a>
+    <a class="s2" href="#p2"><i class="dot"></i>Adoptabilidad</a>
+    <a class="s3" href="#p3"><i class="dot"></i>Guarda</a>
+    <a class="s4" href="#p4"><i class="dot"></i>Juicio</a>
+    <a class="s5" href="#p5"><i class="dot"></i>Tipos</a>
+    <a class="s6" href="#p6"><i class="dot"></i>Nulidad</a>
+    <a href="#esencial">Lo esencial</a>
+  </nav>
+</div></header>
+<main>
+<section id="panorama">
+  <div class="hero"><div class="wrap">
+    <p class="kicker">Código Civil y Comercial de la Nación comentado, Tomo II. Libro Segundo: Relaciones de familia. Título VI: Adopción</p>
+    <h1>La adopción garantiza a un niño el derecho a vivir en familia.</h1>
+    <p class="lead">Resumen gráfico, en lenguaje sencillo, del <strong>Título VI: Adopción</strong> (arts. 594 a 637). Responde: <strong>¿quién puede adoptar y ser adoptado?</strong>, <strong>¿cuáles son los pasos hasta la sentencia?</strong> y <strong>¿qué diferencias hay entre adopción plena, simple y de integración?</strong></p>
+    <ul class="stats"><li><b>44</b>artículos</li><li><b>6</b>capítulos</li><li><b>10 años</b>edad desde la que se exige el consentimiento del niño</li></ul>
+  </div></div>
+
+  <div class="band alt"><div class="wrap">
+    <h2 class="sec">El recorrido del título</h2>
+    <p class="sub">Seis capítulos, desde el concepto hasta la inscripción. Tocá uno para ir a sus artículos.</p>
+    <ol class="route">
+      <li class="s1"><a href="#p1"><span class="k">Arts. 594 a 606</span><h3>Disposiciones generales</h3><p>Concepto, principios, quién puede adoptar y quién ser adoptado.</p></a></li>
+      <li class="s2"><a href="#p2"><span class="k">Arts. 607 a 610</span><h3>Declaración de adoptabilidad</h3><p>Cuándo un niño queda en condiciones de ser adoptado.</p></a></li>
+      <li class="s3"><a href="#p3"><span class="k">Arts. 611 a 614</span><h3>Guarda con fines de adopción</h3><p>Prohibición de entregas directas y elección de la familia.</p></a></li>
+      <li class="s4"><a href="#p4"><span class="k">Arts. 615 a 618</span><h3>Juicio de adopción</h3><p>Juez, partes, reglas y efecto de la sentencia.</p></a></li>
+      <li class="s5"><a href="#p5"><span class="k">Arts. 619 a 633</span><h3>Tipos de adopción</h3><p>Plena, simple y de integración, con sus efectos.</p></a></li>
+      <li class="s6"><a href="#p6"><span class="k">Arts. 634 a 637</span><h3>Nulidad e inscripción</h3><p>Cuándo la adopción es nula y dónde se registra.</p></a></li>
+    </ol>
+  </div></div>
+
+  <div class="band"><div class="wrap">
+    <h2 class="sec">El camino de una adopción</h2>
+    <p class="sub">Cinco pasos, siempre ante un juez y nunca por entrega directa de los padres o familiares (art. 611).</p>
+    <ol class="flow">
+      <li class="s2"><b>1</b><h3>Adoptabilidad</h3><p>El juez declara que el niño puede ser adoptado (arts. 607 a 610).</p></li>
+      <li class="s3"><b>2</b><h3>Guarda</h3><p>El juez elige a los adoptantes del registro. Dura hasta 6 meses (arts. 613 y 614).</p></li>
+      <li class="s4"><b>3</b><h3>Juicio</h3><p>Se inicia el proceso de adopción (arts. 616 y 617).</p></li>
+      <li class="s5"><b>4</b><h3>Sentencia</h3><p>Efecto retroactivo a la sentencia de guarda (art. 618).</p></li>
+      <li class="s6"><b>5</b><h3>Inscripción</h3><p>Se anota en el Registro Civil (art. 637).</p></li>
+    </ol>
+  </div></div>
+
+  <div class="band alt"><div class="wrap">
+    <h2 class="sec">Plazos clave</h2>
+    <p class="sub">Los números que conviene recordar.</p>
+    <ol class="route four">
+      <li class="s1"><div class="t"><span class="k">45 días</span><h3>Decisión de los padres</h3><p>La entrega voluntaria solo vale pasados 45 días del nacimiento (art. 607).</p></div></li>
+      <li class="s2"><div class="t"><span class="k">180 días</span><h3>Medidas excepcionales</h3><p>Si no dan resultado, el organismo dictamina sobre la adoptabilidad (art. 607).</p></div></li>
+      <li class="s3"><div class="t"><span class="k">90 días</span><h3>Decisión del juez</h3><p>Plazo máximo para resolver la adoptabilidad (art. 607).</p></div></li>
+      <li class="s4"><div class="t"><span class="k">6 meses</span><h3>Guarda</h3><p>Duración máxima de la guarda con fines de adopción (art. 614).</p></div></li>
+    </ol>
+  </div></div>
+
+  <div class="band"><div class="wrap">
+    <h2 class="sec">¿Quién puede adoptar?</h2>
+    <p class="sub">Reglas de los arts. 599 a 601.</p>
+    <div class="duo">
+      <div class="box s2"><h3>Pueden adoptar</h3><ul><li>Un matrimonio</li><li>Ambos de una unión convivencial</li><li>Una sola persona</li></ul><p>Con 16 años más que el adoptado (salvo si se adopta al hijo del cónyuge o conviviente), 5 años de residencia en el país (no se exige a argentinos ni naturalizados) y estar inscripto en el registro de adoptantes.</p></div>
+      <div class="box s3"><h3>No pueden adoptar</h3><ul><li>Menores de 25 años</li><li>Un ascendiente a su descendiente</li><li>Un hermano a su hermano</li></ul><p>La edad de 25 años no se exige si adopta junto con un cónyuge o conviviente que sí la cumple.</p></div>
+    </div>
+  </div></div>
+
+  <div class="band alt"><div class="wrap">
+    <h2 class="sec">Los tres tipos de adopción</h2>
+    <p class="sub">El juez otorga la plena o la simple según las circunstancias y el interés superior del niño (arts. 619 a 633).</p>
+    <div class="scroll"><table class="cmp">
+      <thead><tr><th scope="col"></th><th scope="col">Plena</th><th scope="col">Simple</th><th scope="col">De integración</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Qué es</th><td class="hl">El adoptado es hijo y se extinguen los vínculos con la familia de origen (subsisten los impedimentos matrimoniales).</td><td>El adoptado es hijo, pero no se crean vínculos con los parientes ni con el cónyuge del adoptante, salvo lo que el Código disponga.</td><td>Se adopta al hijo del cónyuge o conviviente.</td></tr>
+        <tr><th scope="row">Familia de origen</th><td class="hl">Se extinguen los vínculos.</td><td>No se extinguen los derechos y deberes de origen, pero la responsabilidad parental pasa a los adoptantes.</td><td>Se mantiene siempre el vínculo con el progenitor de origen.</td></tr>
+        <tr><th scope="row">¿Se puede revocar?</th><td class="hl">No, es irrevocable.</td><td>Sí, por indignidad, por pedido justificado del adoptado mayor o por acuerdo con él.</td><td>Sí, por las mismas causas que la simple.</td></tr>
+      </tbody>
+    </table></div>
+  </div></div>
+</section>
+
+<div class="tools"><div class="wrap">
+  <label class="sr-only" for="q">Buscar en los artículos</label>
+  <input id="q" type="search" placeholder="Buscar: adoptabilidad, guarda, apellido, nulidad, art. 607…" autocomplete="off">
+  <span class="count" id="cnt" aria-live="polite"></span>
+</div></div>
+<div id="arts"></div>
+<p class="empty wrap" id="none">No hay artículos que coincidan con la búsqueda.</p>
+
+<section id="esencial" class="band alt"><div class="wrap">
+  <h2 class="sec">Lo esencial en seis ideas</h2>
+  <p class="sub">Si solo te quedás con esto, ya tenés el esquema del título.</p>
+  <ol class="take">
+    <li><span><strong>La adopción protege al niño:</strong> se otorga solo por sentencia judicial y lo emplaza como hijo (art. 594).</span></li>
+    <li><span><strong>El niño es escuchado:</strong> a partir de los 10 años se exige su consentimiento (arts. 595 y 617).</span></li>
+    <li><span><strong>Antes de adoptar</strong> hay que agotar la permanencia en la familia de origen; luego el juez declara la adoptabilidad (arts. 595 y 607).</span></li>
+    <li><span><strong>Las entregas directas están prohibidas:</strong> el juez elige a los adoptantes de la lista del registro (arts. 611 y 613).</span></li>
+    <li><span><strong>Hay tres tipos:</strong> plena, simple y de integración, con efectos distintos (arts. 619 a 633).</span></li>
+    <li><span><strong>El adoptado puede conocer sus orígenes</strong> y la adopción se inscribe en el Registro Civil (arts. 596 y 637).</span></li>
+  </ol>
+</div></section>
+</main>
+<footer class="foot"><div class="wrap">
+  <p><strong>Fuente:</strong> Código Civil y Comercial de la Nación comentado, Tomo II (Infojus - SAIJ), Título VI: Adopción, arts. 594 a 637.</p>
+  <p>Resumen didáctico en lenguaje sencillo. No reemplaza el texto de la ley ni el asesoramiento profesional: para citar o litigar, consultá el artículo completo.</p>
+</div></footer>
+
+<script>
+const P=[
+{id:1,t:"Disposiciones generales",r:"Arts. 594 a 606",g:"Qué es la adopción, qué principios la guían y quién puede adoptar o ser adoptado.",a:[
+[594,"Concepto","La adopción protege el derecho de niños y adolescentes a vivir en una familia que cubra sus necesidades afectivas y materiales cuando su familia de origen no puede hacerlo. Se otorga solo por sentencia judicial y lo emplaza como hijo."],
+[595,"Principios generales","Interés superior del niño, derecho a la identidad, agotar antes las posibilidades de quedarse en su familia de origen o ampliada, preservar los vínculos entre hermanos (adoptarlos juntos), conocer los orígenes y ser oído. Desde los 10 años se exige su consentimiento."],
+[596,"Derecho a conocer los orígenes","El adoptado con madurez suficiente puede conocer sus datos de origen y acceder al expediente. Si es menor, el juez puede disponer ayuda de equipos técnicos. Los adoptantes se comprometen a hacerle conocer su origen y el adolescente puede iniciar una acción propia, con abogado."],
+[597,"Quiénes pueden ser adoptados","Menores no emancipados declarados en situación de adoptabilidad o cuyos padres fueron privados de la responsabilidad parental. Excepcionalmente, un mayor de edad: el hijo del cónyuge o conviviente, o quien fue tratado como hijo siendo menor."],
+[598,"Pluralidad de adoptados","Se puede adoptar a varias personas, a la vez o sucesivamente. Tener hijos no impide adoptar, pero ellos deben ser oídos. Todos los hijos del adoptante, adoptivos o biológicos, son hermanos entre sí."],
+[599,"Quiénes pueden adoptar","Un matrimonio, ambos integrantes de una unión convivencial o una sola persona, con al menos 16 años más que el adoptado (salvo si se adopta al hijo del cónyuge o conviviente). Si los adoptantes mueren o la adopción se extingue, puede haber una nueva adopción."],
+[600,"Residencia e inscripción","Puede adoptar quien resida en el país desde 5 años antes de pedir la guarda (no se exige a argentinos ni naturalizados) y esté inscripto en el registro de adoptantes."],
+[601,"Restricciones","No puede adoptar quien no cumplió 25 años (salvo que su cónyuge o conviviente que adopta con él sí los tenga), un ascendiente a su descendiente, ni un hermano a su hermano, aunque sea unilateral."],
+[602,"Regla general para parejas","Las personas casadas o en unión convivencial solo pueden adoptar en forma conjunta."],
+[603,"Adopción unipersonal en pareja","Una persona casada o conviviente puede adoptar sola si su cónyuge o conviviente fue declarado incapaz o con capacidad restringida y no puede consentir, o si están separados de hecho."],
+[604,"Divorcio o cese de la unión","Quienes actuaron como madre o padre durante el matrimonio o la convivencia pueden adoptar juntos aun después de la ruptura. El juez valora cómo incide la ruptura en el interés del niño."],
+[605,"Fallecimiento de un guardador","Si uno de los guardadores muere antes de completarse el plazo, el juez puede otorgar la adopción al sobreviviente y crear vínculos con ambos. El niño lleva el apellido del adoptante, salvo pedido de agregar el de origen o el del fallecido."],
+[606,"Adopción por tutor","El tutor solo puede adoptar a su pupilo una vez extinguidas las obligaciones de la tutela."]]},
+{id:2,t:"Declaración judicial de la situación de adoptabilidad",r:"Arts. 607 a 610",g:"El paso previo: el juez declara que el niño puede ser adoptado.",a:[
+[607,"Supuestos","Se dicta si: (a) el niño no tiene filiación o sus padres fallecieron y se agotó la búsqueda de familiares (hasta 30 días, prorrogables por igual plazo); (b) los padres decidieron libre e informadamente la adopción, después de 45 días del nacimiento; (c) las medidas excepcionales no dieron resultado en 180 días. No procede si un familiar o referente afectivo ofrece asumir la guarda y es adecuado. El juez resuelve en máximo 90 días."],
+[608,"Sujetos del procedimiento","Intervienen como parte el niño (con abogado, si tiene madurez suficiente) y sus padres o representantes legales; además, el organismo administrativo y el Ministerio Público. El juez puede escuchar a parientes y referentes afectivos."],
+[609,"Reglas del procedimiento","Tramita ante el juez que controló las medidas excepcionales. Es obligatoria la entrevista personal del juez con los padres y con el niño. La sentencia debe remitir en máximo 10 días los legajos seleccionados por el registro de adoptantes para iniciar la guarda."],
+[610,"Equivalencia","La sentencia que priva de la responsabilidad parental equivale a la declaración de adoptabilidad."]]},
+{id:3,t:"Guarda con fines de adopción",r:"Arts. 611 a 614",g:"La convivencia previa, que decide el juez y no la familia de origen.",a:[
+[611,"Guarda de hecho. Prohibición","Está prohibida la entrega directa de niños en guarda por escritura pública, acto administrativo o por los padres o familiares. Si ocurre, el juez puede separar al niño del guardador, salvo que se pruebe que la elección se basa en un vínculo de parentesco. Ni la guarda de hecho ni la judicial o delegada cuentan para la adopción."],
+[612,"Competencia","El mismo juez que declara la adoptabilidad otorga de inmediato la guarda con fines de adopción."],
+[613,"Elección del guardador","El juez elige a los pretensos adoptantes de la lista del registro y convoca al organismo administrativo. Considera sus condiciones personales, edad, aptitudes, idoneidad para el cuidado y la educación, motivaciones y respeto por la identidad y el origen del niño. También cita al niño y valora su opinión."],
+[614,"Sentencia de guarda","Cumplidas las medidas anteriores, el juez dicta la sentencia de guarda. El plazo no puede exceder los 6 meses."]]},
+{id:4,t:"Juicio de adopción",r:"Arts. 615 a 618",g:"El proceso que termina con la sentencia de adopción.",a:[
+[615,"Competencia","Es competente el juez que otorgó la guarda o, a elección de los adoptantes, el del centro de vida del niño si el traslado se tuvo en cuenta en la guarda."],
+[616,"Inicio del proceso","Cumplido el período de guarda, el juez inicia el proceso de oficio, a pedido de parte o de la autoridad administrativa."],
+[617,"Reglas del procedimiento","Son parte los adoptantes y el adoptado (con abogado, si tiene madurez). El juez lo oye personalmente. Intervienen el Ministerio Público y el organismo administrativo. El mayor de 10 años debe consentir expresamente. Las audiencias son privadas y el expediente, reservado."],
+[618,"Efecto temporal de la sentencia","La adopción rige desde la fecha de la sentencia de guarda. Si se adopta al hijo del cónyuge o conviviente, desde que se inició la acción."]]},
+{id:5,t:"Tipos de adopción",r:"Arts. 619 a 633",g:"Plena, simple y de integración: qué cambia en cada una.",a:[
+[619,"Enumeración","El Código reconoce tres tipos: plena, simple y de integración."],
+[620,"Concepto","Plena: el adoptado es hijo y se extinguen los vínculos con su familia de origen (subsisten los impedimentos matrimoniales). Simple: es hijo, pero sin vínculos con los parientes ni el cónyuge del adoptante, salvo lo previsto. Integración: se adopta al hijo del cónyuge o conviviente."],
+[621,"Facultades judiciales","El juez otorga la plena o la simple según las circunstancias y el interés del niño. A pedido y con motivos fundados puede mantener vínculo con parientes de origen en la plena, o crear vínculo con parientes del adoptante en la simple, sin cambiar sucesión, responsabilidad parental ni impedimentos matrimoniales."],
+[622,"Conversión","A pedido de parte y por razones fundadas, el juez puede convertir una adopción simple en plena. Rige desde que la sentencia queda firme y para el futuro."],
+[623,"Prenombre del adoptado","Se respeta el prenombre. Excepcionalmente el juez puede modificarlo por razones fundadas en las reglas generales o porque el adoptado se siente identificado con otro."],
+[624,"Irrevocabilidad. Otros efectos","La adopción plena es irrevocable. La acción de filiación o el reconocimiento posterior solo valen para los derechos alimentarios y sucesorios, sin alterar sus demás efectos."],
+[625,"Pautas para la adopción plena","Se otorga preferentemente a niños huérfanos de padre y madre sin filiación. También cuando se declaró la adoptabilidad, los padres fueron privados de la responsabilidad parental o manifestaron ante el juez su decisión libre e informada."],
+[626,"Apellido en la adopción plena","Si adopta una persona, el hijo lleva su apellido (si tiene doble apellido, puede mantenerlo). Si adoptan en conjunto, rigen las reglas de los hijos matrimoniales. Por identidad, excepcionalmente se puede agregar o anteponer el apellido de origen. Se valora la opinión del adoptado."],
+[627,"Efectos de la adopción simple","Los derechos y deberes de origen no se extinguen, pero la responsabilidad parental pasa a los adoptantes. La familia de origen conserva el derecho de comunicación (salvo que perjudique al niño) y el adoptado puede reclamarle alimentos si los adoptantes no pueden darlos. Puede mantener el apellido de origen. La sucesión se rige por el Libro Quinto."],
+[628,"Filiación o reconocimiento posterior","Después de la adopción simple, el adoptado puede reclamar su filiación y ser reconocido, sin alterar los efectos del art. 627."],
+[629,"Revocación de la adopción simple","Es revocable por indignidad de adoptante o adoptado, por pedido justificado del adoptado mayor, o por acuerdo entre adoptante y adoptado mayor ante el juez. Rige desde que la sentencia queda firme y para el futuro. El adoptado pierde el apellido de adopción, aunque el juez puede autorizarlo a conservarlo."],
+[630,"Integración: efectos con el progenitor de origen","Siempre se mantiene el vínculo con el progenitor de origen que es cónyuge o conviviente del adoptante."],
+[631,"Integración: efectos con el adoptante","Si el adoptado tiene un solo vínculo de origen, se inserta en la familia del adoptante con los efectos de la plena. Si tiene doble vínculo de origen, se aplica el art. 621."],
+[632,"Reglas de la adopción de integración","Se escucha a los progenitores de origen (salvo causas graves). El adoptante no necesita estar inscripto en el registro, no rige la prohibición de guarda de hecho y no se exigen declaración de adoptabilidad, guarda previa ni que la familia de origen no pueda cuidarlo."],
+[633,"Revocación de la adopción de integración","Es revocable por las mismas causas que la adopción simple, aunque se haya otorgado como plena o simple."]]},
+{id:6,t:"Nulidad e inscripción",r:"Arts. 634 a 637",g:"Cuándo una adopción es nula y dónde se registra.",a:[
+[634,"Nulidades absolutas","Es absolutamente nula la adopción obtenida violando las reglas sobre: la edad del adoptado; la diferencia de edad; un hecho ilícito como antecedente; la adopción simultánea por más de una persona (salvo cónyuges o convivientes); la adopción de descendientes o de hermanos; la declaración de adoptabilidad; la inscripción y aprobación del registro de adoptantes; y el consentimiento del niño mayor de 10 años (solo a pedido del adoptado)."],
+[635,"Nulidad relativa","Es relativamente nula la adopción obtenida violando las reglas sobre la edad mínima del adoptante, con vicios del consentimiento, o sin escuchar al niño (solo a pedido del adoptado)."],
+[636,"Normas supletorias","En lo no regulado aquí, rigen las reglas generales de nulidades del Libro Primero."],
+[637,"Inscripción","La adopción, su revocación, conversión y nulidad deben inscribirse en el Registro del Estado Civil y Capacidad de las Personas."]]}
+];
+const root=document.getElementById("arts");
+root.innerHTML=P.map((p,i)=>`<section id="p${p.id}" class="band s${p.id}${i%2?"":" alt"}"><div class="wrap">
+<div class="art-head"><div class="numeral" aria-hidden="true">${p.id}</div><h2>${p.t}</h2><p class="tagline">${p.g}<br><span class="rng">${p.r}</span></p></div>
+<div class="grid">${p.a.map(a=>`<article class="card" id="art${a[0]}" data-t="${(a[0]+" "+a[1]+" "+a[2]).toLowerCase()}"><div class="hd"><span class="n">${a[0]}</span><h3>${a[1]}</h3></div><p>${a[2]}</p></article>`).join("")}</div></div></section>`).join("");
+const q=document.getElementById("q"),cnt=document.getElementById("cnt"),none=document.getElementById("none");
+function f(){const v=q.value.trim().toLowerCase().replace(/^art\.?\s*/,"");let tot=0;
+document.querySelectorAll("#arts section").forEach(s=>{let n=0;s.querySelectorAll(".card").forEach(c=>{const ok=!v||c.dataset.t.includes(v);c.style.display=ok?"":"none";if(ok)n++});s.style.display=n?"":"none";tot+=n});
+cnt.textContent=tot+" de 44 artículos";none.style.display=tot?"none":"block"}
+q.addEventListener("input",f);f();
+</script>
+</body>
+</html>
