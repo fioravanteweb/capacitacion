@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Defensor Oficial, defensor de ausentes y Ministerio Público: guía gráfica del Código Procesal de Misiones (Ley XII – N.º 27)</title>
+<meta name="description" content="Guía gráfica y en lenguaje sencillo de todos los artículos de la Ley XII – N.º 27 (Código Procesal Civil, Comercial, de Familia y Violencia Familiar de Misiones) que nombran al Defensor Oficial, al defensor de ausentes y al Ministerio Público.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F4F7FC; --surface:#FFFFFF; --ink:#16213A; --muted:#55607C; --line:#DCE3F0;
+  --cdo:#3D4FD9; --cdot:#E9ECFD; --cdod:#2A39B0;
+  --cda:#08806F; --cdat:#DDF3EE; --cdad:#05604F;
+  --cmp:#C42A62; --cmpt:#FCE5ED; --cmpd:#9C1F4C;
+  --amber:#B7790A; --ambert:#FDF1D6;
+  --on:#FFFFFF;
+  --radius:18px;
+  --font-d:"Bricolage Grotesque","Segoe UI Variable Display","Segoe UI",system-ui,sans-serif;
+  --font-b:"Public Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#0E1424; --surface:#161E36; --ink:#E9EDF9; --muted:#A8B1CB; --line:#27304F;
+    --cdo:#97A3FF; --cdot:#1F2757; --cdod:#B9C1FF;
+    --cda:#4DD6BE; --cdat:#0F3B36; --cdad:#8FE8D6;
+    --cmp:#FF86AB; --cmpt:#4A1A2F; --cmpd:#FFB0C8;
+    --amber:#FFC24D; --ambert:#3F3010;
+    --on:#0E1424;
+  }
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-b);font-size:1.0625rem;line-height:1.65;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:var(--font-d);margin:0;line-height:1.12;letter-spacing:-.015em;text-wrap:balance}
+p{margin:0 0 1em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--cdo);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:var(--paper);padding:10px 16px;border-radius:10px;z-index:50}
+.skip:focus{left:12px}
+.i{width:26px;height:26px;flex:none}
+.diagram{display:block;width:100%;height:auto}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- navegación ---------- */
+.top{position:sticky;top:0;z-index:20;background:var(--paper);background:color-mix(in srgb,var(--paper) 90%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top-in{max-width:1180px;margin:0 auto;display:flex;align-items:center;gap:20px;padding:10px 24px}
+.brand{font-family:var(--font-d);font-weight:800;font-size:1.08rem;white-space:nowrap}
+.nav{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav a{display:inline-flex;align-items:center;gap:8px;padding:8px 13px;border-radius:999px;color:var(--muted);text-decoration:none;font-weight:600;font-size:.92rem;white-space:nowrap}
+.nav a:hover{color:var(--ink);background:var(--surface)}
+.nav a.on{color:var(--ink);background:var(--surface);box-shadow:inset 0 0 0 1px var(--line)}
+.dot{width:10px;height:10px;border-radius:50%;display:inline-block}
+
+/* ---------- bandas ---------- */
+.band{--panel:var(--surface);padding:84px 0}
+.band.alt{--panel:var(--paper);background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.band h2.sec{font-weight:800;font-size:clamp(1.8rem,3.6vw,2.7rem);letter-spacing:-.025em;max-width:22ch;margin-bottom:12px}
+.band .sec-sub{color:var(--muted);max-width:64ch;font-size:1.08rem;margin-bottom:36px}
+
+/* ---------- hero ---------- */
+.hero{padding:52px 0 84px}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:56px;align-items:center}
+.kicker{margin:0 0 20px;color:var(--muted);font-size:.95rem;font-weight:500;max-width:46ch}
+h1{font-weight:800;font-size:clamp(2.5rem,5.6vw,4.3rem);line-height:1;letter-spacing:-.03em;max-width:15ch;margin-bottom:24px}
+.lead{font-size:1.2rem;max-width:54ch;color:var(--muted)}
+.lead strong{color:var(--ink)}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:13px 22px;border-radius:14px;font-family:var(--font-b);font-size:1rem;font-weight:700;line-height:1.2;text-decoration:none;cursor:pointer;border:2px solid var(--ink);background:transparent;color:var(--ink)}
+.btn.primary{background:var(--ink);color:var(--paper)}
+.btn:hover{transform:translateY(-1px)}
+.legend{list-style:none;margin:30px 0 0;padding:0;display:grid;gap:12px;max-width:56ch}
+.legend li{display:grid;grid-template-columns:18px 1fr;gap:12px;font-size:.98rem;line-height:1.5}
+.legend i{width:18px;height:18px;border-radius:50%;margin-top:3px}
+.hero-svg{max-width:470px;margin:0 auto}
+.hero-svg .ring{transform-box:fill-box;transform-origin:center;animation:grow .9s cubic-bezier(.2,.8,.2,1) both}
+.hero-svg .mid{animation-delay:.15s}
+.hero-svg .pop{transform-box:fill-box;transform-origin:center;animation:grow .6s cubic-bezier(.2,.8,.2,1) .7s both}
+@keyframes grow{from{opacity:0;transform:scale(.86)}to{opacity:1;transform:scale(1)}}
+.ring.out{fill:var(--cdot);stroke:var(--cdo);stroke-width:3}
+.ring.mid{fill:var(--cdat);stroke:var(--cda);stroke-width:3}
+.ex{fill:var(--cmp);stroke:var(--paper);stroke-width:4}
+.t{font-family:var(--font-d);fill:var(--ink)}
+.t.b{font-weight:800}
+.t.cdo{fill:var(--cdod)} .t.cda{fill:var(--cdad)} .t.cmp{fill:var(--cmpd)}
+.t.w{fill:var(--on);font-weight:800}
+.t.m{fill:var(--muted)}
+
+/* ---------- recorrido en chevrones ---------- */
+.chev{list-style:none;margin:0;padding:0;display:grid;grid-auto-flow:column;grid-auto-columns:1fr}
+.chev>li{background:var(--bg);color:var(--fg);padding:26px 34px 26px 46px;margin-left:-16px;clip-path:polygon(0 0,calc(100% - 22px) 0,100% 50%,calc(100% - 22px) 100%,0 100%,22px 50%)}
+.chev>li:first-child{margin-left:0;padding-left:28px;clip-path:polygon(0 0,calc(100% - 22px) 0,100% 50%,calc(100% - 22px) 100%,0 100%)}
+.chev>li:last-child{padding-right:26px;clip-path:polygon(0 0,100% 0,100% 100%,0 100%,22px 50%)}
+.chev h3{font-size:1.2rem;margin-bottom:8px;color:inherit}
+.chev p{font-size:.95rem;line-height:1.5;margin:0 0 .6em;color:inherit}
+.chev .tag{display:inline-block;font-weight:700;font-size:.82rem;margin-bottom:10px;opacity:.9}
+.pills{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.pills span{background:color-mix(in srgb,var(--fg) 18%,transparent);border-radius:999px;padding:3px 11px;font-size:.84rem;font-weight:600;line-height:1.4}
+
+/* ---------- tabla comparativa ---------- */
+.cmp{width:100%;border-collapse:separate;border-spacing:0;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.cmp th,.cmp td{padding:16px 20px;text-align:left;vertical-align:top;border-top:1px solid var(--line);font-size:.98rem;line-height:1.55}
+.cmp thead th{border-top:0;font-family:var(--font-d);font-size:1.2rem;font-weight:800;padding:20px}
+.cmp thead .hdo{background:var(--cdo);color:var(--on)}
+.cmp thead .hda{background:var(--cda);color:var(--on)}
+.cmp thead th small{display:block;font-family:var(--font-b);font-weight:500;font-size:.85rem;opacity:.92;margin-top:2px}
+.cmp tbody th{width:19%;font-weight:700;color:var(--muted);font-size:.92rem}
+.cmp td.no{background:var(--cmpt)}
+.cmp td.si{background:var(--cdat)}
+
+/* ---------- cabecera de cada artículo ---------- */
+.sdo{--ac:var(--cdo);--act:var(--cdot);--acd:var(--cdod)}
+.sda{--ac:var(--cda);--act:var(--cdat);--acd:var(--cdad)}
+.smp{--ac:var(--cmp);--act:var(--cmpt);--acd:var(--cmpd)}
+.art-head{display:grid;grid-template-columns:auto 1fr;gap:6px 32px;align-items:end;margin-bottom:34px}
+.numeral{grid-row:span 2;font-family:var(--font-d);font-weight:800;font-size:clamp(5.5rem,14vw,10rem);line-height:.78;letter-spacing:-.06em;color:var(--ac)}
+.art-head h2{font-weight:800;font-size:clamp(1.9rem,4vw,3rem);letter-spacing:-.025em;align-self:end}
+.art-head .tagline{font-size:1.2rem;color:var(--muted);max-width:52ch;margin:0;align-self:start}
+.pages{display:inline-block;margin-top:10px;font-size:.88rem;color:var(--muted);font-weight:500}
+.law{margin:0;border-left:6px solid var(--ac);background:var(--panel);border-radius:0 14px 14px 0;padding:20px 24px;font-size:1.04rem;line-height:1.65;max-width:78ch}
+.law .lbl{display:block;font-family:var(--font-d);font-weight:800;color:var(--acd);font-size:.95rem;margin-bottom:6px}
+.law ol{margin:8px 0 0;padding-left:1.4em;list-style:lower-alpha}
+.simple{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;background:var(--act);border-radius:var(--radius);padding:22px 26px;margin-top:20px;max-width:78ch}
+.simple .badge{display:flex;align-items:center;gap:8px;font-family:var(--font-d);font-weight:800;color:var(--acd);white-space:nowrap}
+.simple .badge svg{width:22px;height:22px}
+.simple p{margin:0}
+
+/* ---------- bloques internos ---------- */
+.blk{margin-top:64px}
+.blk h3{font-weight:800;font-size:clamp(1.35rem,2.4vw,1.8rem);letter-spacing:-.02em;margin-bottom:8px}
+.blk .sub{color:var(--muted);max-width:66ch;margin-bottom:26px}
+.blk h4{font-size:1.1rem;font-weight:700}
+.note{font-size:.92rem;color:var(--muted)}
+
+/* reglas con iconos */
+.rules{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 40px}
+.rule{display:grid;grid-template-columns:54px 1fr;gap:16px;align-items:start}
+.rule .ico{width:54px;height:54px;border-radius:50%;background:var(--ac);color:var(--on);display:grid;place-items:center}
+.rule h4{margin:2px 0 4px}
+.rule p{margin:0;color:var(--muted);font-size:.98rem;line-height:1.55}
+
+/* euler */
+.split{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:44px;align-items:center}
+.eu-o{fill:var(--act);stroke:var(--ac);stroke-width:3}
+.eu-i{fill:var(--ac);fill-opacity:.2;stroke:var(--ac);stroke-width:3}
+.defs{display:grid;gap:18px}
+.def{padding-left:18px;border-left:5px solid var(--ac)}
+.def h4{margin-bottom:2px}
+.def p{margin:0;font-size:.98rem;line-height:1.55;color:var(--muted)}
+.def p strong{color:var(--ink)}
+.ex-tag{display:inline-block;margin-top:6px;font-size:.84rem;font-weight:700;color:var(--acd);background:var(--act);border-radius:999px;padding:2px 11px}
+
+/* chips */
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{padding:9px 16px;border-radius:999px;background:var(--act);color:var(--acd);font-weight:600;font-size:.95rem;line-height:1.35}
+.chip.line{background:transparent;border:2px solid var(--ac)}
+
+/* carriles */
+.lanes{display:grid;gap:16px}
+.lane{border-radius:var(--radius);padding:22px 24px;background:var(--panel);border:1px solid var(--line)}
+.lane h4{margin-bottom:14px}
+.lane.ldo{--act:var(--cdot);--acd:var(--cdod)}
+.lane.lda{--act:var(--cdat);--acd:var(--cdad)}
+.lane-row{display:grid;grid-template-columns:1fr auto 1fr;gap:14px;align-items:stretch}
+.node{padding:14px 16px;border-radius:12px;background:var(--act);color:var(--acd);font-weight:600;font-size:.95rem;line-height:1.45;display:flex;align-items:center}
+.wall{width:12px;border-radius:6px;background:var(--cmp)}
+.bridge{display:flex;align-items:center;justify-content:center;min-width:160px;background:linear-gradient(var(--cda),var(--cda)) center/100% 3px no-repeat}
+.bridge b{background:var(--cda);color:var(--on);padding:6px 14px;border-radius:999px;font-size:.85rem}
+.lane .why{margin:14px 0 0;font-size:.95rem;color:var(--muted)}
+
+/* árbol regla y excepciones */
+.tree-top{background:var(--ac);color:var(--on);border-radius:var(--radius);padding:26px 30px;font-family:var(--font-d);font-weight:800;font-size:clamp(1.25rem,2.4vw,1.75rem);line-height:1.2;text-align:center}
+.tree-branches{display:grid;grid-template-columns:1fr 1fr;padding-top:38px;
+  background:linear-gradient(var(--cmp),var(--cmp)) calc(25% - 1.5px) 0/3px 38px no-repeat,linear-gradient(var(--cmp),var(--cmp)) calc(75% - 1.5px) 0/3px 38px no-repeat}
+.branch{margin:0 10px;border:3px solid var(--cmp);border-radius:var(--radius);padding:22px 24px;background:var(--panel)}
+.branch h4{color:var(--cmpd);margin-bottom:8px}
+.branch p{margin:0 0 .6em;font-size:.98rem;line-height:1.55}
+.branch .note{margin:0}
+
+/* antes y ahora */
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.ba>div{border-radius:var(--radius);padding:26px}
+.ba .old{background:var(--panel);border:2px dashed var(--line)}
+.ba .new{background:var(--act)}
+.ba h4{font-size:1.2rem;margin-bottom:4px}
+.ba .when{display:block;font-size:.88rem;color:var(--muted);margin-bottom:16px;font-weight:500}
+.ba ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.ba li{padding-left:22px;position:relative;font-size:.98rem;line-height:1.55}
+.ba li::before{content:"";position:absolute;left:0;top:.6em;width:9px;height:9px;border-radius:50%;background:var(--muted)}
+.ba .new li::before{background:var(--ac)}
+.ba li b{display:block}
+
+/* dos paneles */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.pan{background:var(--panel);border:1px solid var(--line);border-top:6px solid var(--ac);border-radius:var(--radius);padding:26px}
+.pan h4{font-size:1.25rem;margin-bottom:10px}
+.pan p{font-size:.98rem;line-height:1.55}
+.pan .norms{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.pan .norms span{font-size:.84rem;font-weight:600;background:var(--act);color:var(--acd);border-radius:8px;padding:3px 10px}
+
+/* organismos */
+.orgs{display:grid;gap:14px}
+.org{display:grid;grid-template-columns:220px 1fr;gap:20px;padding:20px 22px;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius)}
+.org b{font-family:var(--font-d);color:var(--acd);line-height:1.2;font-size:1.08rem}
+.org b small{display:block;font-family:var(--font-b);font-weight:500;color:var(--muted);font-size:.82rem;margin-top:5px;line-height:1.35}
+.org p{margin:0;font-size:.98rem;line-height:1.55}
+.org p+p{margin-top:.5em}
+
+/* gradiente autonomía */
+.grad{display:flex;justify-content:space-between;gap:12px;border-radius:999px;padding:16px 26px;background:linear-gradient(90deg,var(--cdat),var(--cda));font-weight:700;font-size:.95rem;line-height:1.3}
+.grad span:first-child{color:var(--cdad)}
+.grad span:last-child{color:var(--on);text-align:right}
+
+/* escalera */
+.axis{display:flex;align-items:center;gap:14px;font-size:.88rem;font-weight:700;color:var(--muted);margin-bottom:12px}
+.axis i{flex:1;height:3px;background:linear-gradient(90deg,var(--cmpt),var(--cmp));border-radius:3px}
+.stairs{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;align-items:end}
+.stair{border-radius:var(--radius);padding:24px;display:flex;flex-direction:column}
+.stair h4{font-size:1.3rem;margin-bottom:8px;color:inherit}
+.stair p{font-size:.96rem;line-height:1.55;margin:0 0 .6em;color:inherit}
+.stair small{margin-top:auto;font-weight:700;font-size:.84rem}
+.s1{background:var(--cmpt);color:var(--ink);min-height:200px}
+.s2{background:color-mix(in srgb,var(--cmp) 45%,var(--cmpt));color:var(--ink);min-height:270px}
+.s3{background:var(--cmp);color:var(--on);min-height:350px}
+
+/* venn y cadenas */
+.venn-c{fill:var(--ac);fill-opacity:.22;stroke:var(--ac);stroke-width:3}
+.chain{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.chain li{display:flex;align-items:center;gap:8px;font-weight:700;font-family:var(--font-d);font-size:1.05rem;background:var(--act);color:var(--acd);border-radius:999px;padding:8px 18px}
+.chain li+li::before{content:"";width:8px;height:8px;border-right:2.5px solid var(--ac);border-top:2.5px solid var(--ac);transform:rotate(45deg);margin-right:4px}
+.neq{display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+.neq b{font-family:var(--font-d);font-size:1.5rem;color:var(--ac)}
+.bar-old1{fill:var(--line)} .bar-old2{fill:var(--muted);fill-opacity:.4}
+.bar-new1{fill:var(--cmpt)} .bar-new2{fill:var(--cmp)}
+
+/* balanza */
+.bal{display:grid;grid-template-columns:1fr 1.3fr 1fr;align-items:stretch}
+.bal>div{padding:24px;background:var(--panel);border:1px solid var(--line);font-size:.96rem;line-height:1.55}
+.bal h4{font-size:1.08rem;margin-bottom:8px;color:inherit}
+.bal p{margin:0}
+.bal>div:first-child{border-radius:var(--radius) 0 0 var(--radius)}
+.bal>div:last-child{border-radius:0 var(--radius) var(--radius) 0}
+.bal .mid{background:var(--ac);color:var(--on);border-color:var(--ac);border-radius:var(--radius);margin:-14px 0;z-index:1;display:flex;flex-direction:column;justify-content:center}
+.bal .mid h4{font-size:1.25rem}
+
+/* casos (art. 24) */
+.cases{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.case{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:26px;display:flex;flex-direction:column;gap:14px}
+.case .letter{width:44px;height:44px;border-radius:12px;background:var(--ac);color:var(--on);display:grid;place-items:center;font-family:var(--font-d);font-weight:800;font-size:1.4rem}
+.case h4{font-size:1.3rem}
+.case p{margin:0;font-size:.97rem;line-height:1.55}
+.case .who{background:var(--act);border-radius:12px;padding:12px 14px}
+.case .who b{display:block;color:var(--acd);font-size:.85rem;margin-bottom:2px}
+.case .fine{color:var(--muted);font-size:.9rem}
+
+/* representar y escuchar */
+.vs{display:grid;grid-template-columns:1fr auto 1fr;gap:18px;align-items:stretch}
+.vs>div{border-radius:var(--radius);padding:24px}
+.vs .old{background:var(--panel);border:2px dashed var(--line)}
+.vs .new{background:var(--act)}
+.vs .arrow{align-self:center;width:46px;height:46px;border-radius:50%;background:var(--ac);color:var(--on);display:grid;place-items:center;font-weight:800;font-size:1.3rem}
+.vs h4{margin-bottom:6px}
+.vs p{margin:0;font-size:.97rem;line-height:1.55}
+
+/* detalles desplegables */
+details.more{margin-top:28px;border:1px solid var(--line);border-radius:var(--radius);background:var(--panel)}
+details.more>summary{cursor:pointer;list-style:none;padding:16px 22px;font-weight:700;display:flex;align-items:center;gap:14px}
+details.more>summary::-webkit-details-marker{display:none}
+details.more>summary::before{content:"";width:9px;height:9px;border-right:3px solid var(--ac);border-bottom:3px solid var(--ac);transform:rotate(-45deg);transition:transform .2s;flex:none}
+details.more[open]>summary::before{transform:rotate(45deg)}
+details.more .in{padding:2px 24px 22px}
+details.more .in ul{margin:0;padding-left:1.25em;display:grid;gap:10px}
+details.more .in li{line-height:1.55;font-size:.98rem}
+
+/* lo esencial */
+.take{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 44px}
+.take li{display:grid;grid-template-columns:40px 1fr;gap:14px;align-items:start;font-size:1.02rem;line-height:1.5}
+.take .ck{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--k);color:var(--on)}
+.take .ck svg{width:22px;height:22px}
+.take small{display:block;color:var(--muted);font-size:.84rem;margin-top:2px}
+.tdo{--k:var(--cdo)} .tda{--k:var(--cda)} .tmp{--k:var(--cmp)}
+.next{margin-top:56px}
+.next h3{font-weight:800;font-size:1.5rem;margin-bottom:6px}
+.next p{color:var(--muted);max-width:62ch}
+.next .chip{background:var(--surface);border:1px solid var(--line);color:var(--ink)}
+
+/* glosario */
+.gloss{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 44px;margin:0}
+.gloss div{padding:16px 0;border-top:1px solid var(--line)}
+.gloss dt{font-family:var(--font-d);font-weight:700;font-size:1.08rem;margin-bottom:2px}
+.gloss dd{margin:0;color:var(--muted);font-size:.98rem;line-height:1.55}
+
+/* pie */
+.foot{padding:56px 0 72px;color:var(--muted);font-size:.92rem}
+.foot p{max-width:80ch}
+.foot strong{color:var(--ink)}
+
+/* ---------- responsive ---------- */
+@media (max-width:960px){
+  .hero-grid,.split,.duo,.ba,.cases,.rules,.take,.gloss{grid-template-columns:1fr}
+  .hero-grid{gap:36px}
+  .stairs{grid-template-columns:1fr;gap:10px}
+  .stair{min-height:0!important}
+  .s2{margin-left:24px}.s3{margin-left:48px}
+  .bal{grid-template-columns:1fr;gap:12px}
+  .bal>div,.bal>div:first-child,.bal>div:last-child{border-radius:var(--radius)}
+  .bal .mid{margin:0}
+  .vs{grid-template-columns:1fr}
+  .vs .arrow{transform:rotate(90deg);justify-self:center}
+}
+@media (max-width:860px){
+  .chev{grid-auto-flow:row}
+  .chev>li,.chev>li:first-child,.chev>li:last-child{margin:-14px 0 0;padding:28px 24px 38px;clip-path:polygon(0 0,50% 16px,100% 0,100% calc(100% - 18px),50% 100%,0 calc(100% - 18px))}
+  .chev>li:first-child{margin-top:0;padding-top:24px;clip-path:polygon(0 0,100% 0,100% calc(100% - 18px),50% 100%,0 calc(100% - 18px))}
+  .chev>li:last-child{padding-bottom:26px;clip-path:polygon(0 0,50% 16px,100% 0,100% 100%,0 100%)}
+}
+@media (max-width:760px){
+  .band{padding:60px 0}
+  .brand{display:none}
+  .wrap,.top-in{padding-left:18px;padding-right:18px}
+  .cmp thead{display:none}
+  .cmp,.cmp tbody,.cmp tr,.cmp th,.cmp td{display:block;width:100%}
+  .cmp tbody th{width:100%;background:var(--paper);padding:12px 18px}
+  .cmp td::before{content:attr(data-h);display:block;font-weight:700;font-size:.8rem;color:var(--muted);margin-bottom:2px}
+  .art-head{grid-template-columns:1fr;gap:6px}
+  .numeral{grid-row:auto;font-size:6.5rem}
+  .simple{grid-template-columns:1fr}
+  .lane-row{grid-template-columns:1fr}
+  .wall{width:auto;height:12px}
+  .bridge{min-height:52px;background:linear-gradient(var(--cda),var(--cda)) center/3px 100% no-repeat}
+  .tree-branches{grid-template-columns:1fr;padding-top:18px;background:none;gap:14px}
+  .branch{margin:0}
+  .org{grid-template-columns:1fr;gap:8px}
+  .grad{flex-direction:column;border-radius:var(--radius);gap:6px}
+  .grad span:last-child{text-align:left}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+}
+@media print{
+  .top,.hero-actions,.skip{display:none}
+  body{background:#fff}
+  .band{padding:28px 0;break-inside:avoid-page}
+  .hero-svg .ring,.hero-svg .pop{animation:none}
+}
+
+
+/* =====================================================================
+   COMPONENTES PROPIOS DE ESTA PÁGINA
+   ===================================================================== */
+.hmp{background:var(--cmp);color:var(--on)}
+.law p{margin:0 0 .7em}
+.law p:last-child{margin:0}
+.law .cite{display:block;margin-top:10px;font-size:.84rem;color:var(--muted);font-weight:600}
+.lead em,.sec-sub em{font-style:normal;font-weight:700;color:var(--ink)}
+
+h1{max-width:19ch;font-size:clamp(2.2rem,4.8vw,3.5rem)}
+
+/* aviso */
+.callout{margin:30px 0 0;max-width:56ch;border-left:6px solid var(--amber);background:var(--ambert);border-radius:0 14px 14px 0;padding:16px 20px;font-size:.96rem;line-height:1.55}
+.callout b{display:block;font-family:var(--font-d);font-size:.98rem;margin-bottom:4px}
+
+/* hero: nodo central y satélites */
+.hero-svg .core{fill:var(--surface);stroke:var(--ink);stroke-width:3}
+.hero-svg .ln{stroke:var(--muted);stroke-opacity:.55;stroke-width:3.5;stroke-dasharray:1 8;stroke-linecap:round}
+.hero-svg .sat{transform-box:fill-box;transform-origin:center;animation:grow .6s cubic-bezier(.2,.8,.2,1) .35s both}
+.hero-svg .sat.b{animation-delay:.5s}.hero-svg .sat.c{animation-delay:.65s}
+.hero-svg .n-do{fill:var(--cdo);stroke:var(--paper);stroke-width:5}
+.hero-svg .n-da{fill:var(--cda);stroke:var(--paper);stroke-width:5}
+.hero-svg .n-mp{fill:var(--cmp);stroke:var(--paper);stroke-width:5}
+
+/* nombres del Código como chips con referencia */
+.chips.names .chip{display:inline-flex;flex-direction:column;gap:1px;border-radius:16px;padding:10px 16px}
+.chips.names .chip small{font-weight:500;font-size:.78rem;opacity:.9;line-height:1.35}
+
+/* tarjetas (2 columnas) con desplegable */
+.cases.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.case .art-tag{display:inline-flex;align-items:center;gap:8px;font-size:.84rem;font-weight:700;color:var(--acd);background:var(--act);border-radius:999px;padding:3px 12px;align-self:flex-start}
+.case details.more{margin-top:auto}
+.case details.more>summary{padding:12px 16px;font-size:.92rem}
+.case details.more .in{padding:0 18px 16px}
+.case details.more .in p{margin:0 0 .6em;font-size:.93rem;line-height:1.55}
+.case details.more .in p:last-child{margin:0}
+
+/* línea de tiempo */
+.track{list-style:none;margin:0;padding:0;position:relative;display:grid;gap:14px}
+.track::before{content:"";position:absolute;left:23px;top:10px;bottom:10px;width:4px;border-radius:4px;background:var(--line)}
+.step{position:relative;display:grid;grid-template-columns:48px minmax(0,1fr);gap:16px;align-items:start}
+.step .dn{position:relative;z-index:1;width:48px;height:48px;border-radius:50%;background:var(--paper);border:3px solid var(--line);display:grid;place-items:center;font-family:var(--font-d);font-weight:800;font-size:1.05rem;color:var(--muted)}
+.band.alt .step .dn{background:var(--surface)}
+.step .bx{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:16px 22px}
+.step h4{margin:0 0 4px;font-size:1.1rem}
+.step p{margin:0;font-size:.97rem;line-height:1.55}
+.step .meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.step .meta span{font-size:.82rem;font-weight:700;border-radius:999px;padding:2px 11px;background:var(--paper);color:var(--muted);border:1px solid var(--line)}
+.step.mp .dn{background:var(--ac);border-color:var(--ac);color:var(--on)}
+.step.mp .bx{border-color:var(--ac);box-shadow:inset 6px 0 0 var(--ac)}
+.step.mp .meta span{background:var(--act);color:var(--acd);border-color:transparent}
+.key{display:flex;flex-wrap:wrap;gap:18px;margin:0 0 22px;font-size:.92rem;color:var(--muted);font-weight:600}
+.key span{display:inline-flex;align-items:center;gap:8px}
+.key i{width:16px;height:16px;border-radius:50%;display:inline-block}
+
+/* comparación de reglas */
+.vs.three{grid-template-columns:1fr auto 1fr}
+.vs .tag{display:inline-block;font-size:.82rem;font-weight:700;color:var(--acd);background:var(--act);border-radius:999px;padding:2px 11px;margin-bottom:8px}
+.vs .old .tag{background:var(--paper);color:var(--muted);border:1px solid var(--line)}
+.vs .quote{margin:10px 0 0;font-size:.92rem;color:var(--muted);font-style:italic;line-height:1.5}
+
+/* árbol (recolor por sección) */
+.tree-branches{background:linear-gradient(var(--ac),var(--ac)) calc(25% - 1.5px) 0/3px 38px no-repeat,linear-gradient(var(--ac),var(--ac)) calc(75% - 1.5px) 0/3px 38px no-repeat}
+.branch{border-color:var(--ac)}
+.branch h4{color:var(--acd)}
+
+/* gráfico de barras */
+.bars{display:grid;gap:12px;margin:0;padding:0;list-style:none}
+.bar-row{display:grid;grid-template-columns:minmax(150px,250px) minmax(0,1fr) 44px;gap:16px;align-items:center}
+.bar-row .lb{font-weight:600;font-size:.95rem;line-height:1.3}
+.bar-row .lb small{display:block;font-weight:500;color:var(--muted);font-size:.8rem;margin-top:2px}
+.bar-track{display:flex;height:36px;border-radius:10px;overflow:hidden;background:var(--paper);border:1px solid var(--line)}
+.band.alt .bar-track{background:var(--surface)}
+.seg{display:grid;place-items:center;color:var(--on);font-weight:800;font-size:.9rem;font-family:var(--font-d);min-width:0;border-right:2px solid var(--panel)}
+.seg.do{background:var(--cdo)}.seg.da{background:var(--cda)}.seg.mp{background:var(--cmp)}
+.bar-row .tot{font-family:var(--font-d);font-weight:800;text-align:right;font-size:1.05rem}
+.bars-key{display:flex;flex-wrap:wrap;gap:20px;margin-top:20px;font-size:.92rem;font-weight:600;color:var(--muted)}
+.bars-key span{display:inline-flex;align-items:center;gap:8px}
+.bars-key i{width:16px;height:16px;border-radius:5px;display:inline-block}
+
+/* índice con buscador */
+.tools{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-bottom:12px}
+.search{flex:1 1 280px;position:relative}
+.search svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);width:20px;height:20px;color:var(--muted);pointer-events:none}
+.search input{width:100%;padding:13px 16px 13px 44px;border-radius:14px;border:2px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-size:1rem}
+.search input::placeholder{color:var(--muted)}
+.fchips{display:flex;flex-wrap:wrap;gap:8px}
+.fchip{border:2px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:8px 15px;font:700 .9rem/1.2 var(--font-b);cursor:pointer;display:inline-flex;align-items:center;gap:8px}
+.fchip:hover{border-color:var(--ink)}
+.fchip[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.count{margin:0 0 16px;color:var(--muted);font-size:.92rem;font-weight:600}
+.idx{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.row{display:grid;grid-template-columns:96px minmax(0,1fr) 230px;gap:6px 22px;padding:16px 20px;background:var(--surface);border:1px solid var(--line);border-left:6px solid var(--rc);border-radius:14px}
+.row[hidden]{display:none}
+.row.do{--rc:var(--cdo);--rt:var(--cdot);--rd:var(--cdod)}
+.row.da{--rc:var(--cda);--rt:var(--cdat);--rd:var(--cdad)}
+.row.mp{--rc:var(--cmp);--rt:var(--cmpt);--rd:var(--cmpd)}
+.row .num{font-family:var(--font-d);font-weight:800;font-size:1.3rem;line-height:1.1;color:var(--rd)}
+.row .num a{text-decoration:none}
+.row .num a:hover{text-decoration:underline}
+.row .num small{display:block;font-family:var(--font-b);font-weight:600;font-size:.76rem;color:var(--muted);margin-top:3px}
+.row h4{font-size:1.02rem;font-weight:700;margin-bottom:3px}
+.row p{margin:0;font-size:.94rem;line-height:1.5;color:var(--muted)}
+.row .tg{display:inline-block;font-size:.8rem;font-weight:700;background:var(--rt);color:var(--rd);border-radius:999px;padding:2px 11px;margin-bottom:6px}
+.row .wh{font-size:.84rem;color:var(--muted);line-height:1.45}
+.empty{padding:24px;border:2px dashed var(--line);border-radius:14px;color:var(--muted);text-align:center;font-weight:600}
+.empty[hidden]{display:none}
+
+/* nota al pie de bloque */
+.fn{margin-top:18px;font-size:.92rem;color:var(--muted);max-width:76ch}
+
+@media (max-width:1320px){
+  .brand{display:none}
+}
+@media (max-width:960px){
+  .cases.two,.vs.three{grid-template-columns:1fr}
+  .row{grid-template-columns:1fr}
+  .row .num{display:flex;align-items:baseline;gap:10px}
+}
+@media (max-width:760px){
+  .tree-branches{background:none}
+  .bar-row{grid-template-columns:minmax(0,1fr) 40px;gap:6px 12px}
+  .bar-row .lb{grid-column:1/-1}
+  .step{grid-template-columns:40px minmax(0,1fr);gap:12px}
+  .step .dn{width:40px;height:40px;font-size:.95rem}
+  .track::before{left:18px}
+  .step .bx{padding:14px 16px}
+}
+@media print{
+  .tools,.fchips,.search{display:none}
+  .row[hidden]{display:grid!important}
+}
+
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.4-3.2 7.8-8 9-4.8-1.2-8-4.6-8-9V6z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+  <symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 4v16M7 20h10M5 7h14"/><path d="M5 7l-3 7a3.4 3.4 0 006 0zM19 7l-3 7a3.4 3.4 0 006 0z"/></symbol>
+  <symbol id="i-coin" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9.5 9.5h4a1.5 1.5 0 010 3h-3a1.5 1.5 0 000 3h4"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></symbol>
+</svg>
+
+<a class="skip" href="#panorama">Saltar al contenido</a>
+
+<header class="top">
+  <div class="top-in">
+    <div class="brand">Defensa y Ministerio Público</div>
+    <nav class="nav" aria-label="Secciones de la página">
+      <a href="#panorama">Panorama</a>
+      <a href="#defensor-oficial"><i class="dot" style="background:var(--cdo)"></i>Defensor Oficial</a>
+      <a href="#defensor-ausentes"><i class="dot" style="background:var(--cda)"></i>Defensor de ausentes</a>
+      <a href="#ministerio-publico"><i class="dot" style="background:var(--cmp)"></i>Ministerio Público</a>
+      <a href="#indice">Índice</a>
+      <a href="#esencial">Lo esencial</a>
+      <a href="#glosario">Glosario</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section id="panorama">
+
+  <div class="hero band">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="kicker">Ley XII – N.º 27: Código Procesal Civil, Comercial, de Familia y Violencia Familiar de la Provincia de Misiones</p>
+        <h1>Defensor Oficial, defensor de ausentes y Ministerio Público</h1>
+        <p class="lead">Guía gráfica, en lenguaje sencillo, de <strong>todos los artículos</strong> del Código que nombran a estas figuras. Responde tres preguntas: <strong>¿cuándo interviene cada una?</strong>, <strong>¿qué hace en ese momento?</strong> y <strong>¿en qué plazos?</strong></p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#camino">Ver el recorrido</a>
+          <a class="btn" href="#indice">Buscar un artículo</a>
+          <button class="btn" id="toggleAll" type="button">Abrir todos los detalles</button>
+        </div>
+        <ul class="legend">
+          <li><i style="background:var(--cdo)"></i><span><strong>Defensor Oficial, 7 artículos.</strong> Actúa por quien no tiene recursos, no aparece en el juicio o no puede ser citado.</span></li>
+          <li><i style="background:var(--cda)"></i><span><strong>Defensor de ausentes, 3 artículos.</strong> Se lo cita cuando la otra parte no se encuentra en el lugar.</span></li>
+          <li><i style="background:var(--cmp)"></i><span><strong>Ministerio Público y figuras afines, 30 artículos.</strong> Recibe vistas, comparece o dictamina cuando hay menores, incapaces, familia, herencias y recursos ante el Superior Tribunal.</span></li>
+        </ul>
+        <div class="callout"><b>Antes de leer</b>El Código no tiene un capítulo que defina a estas figuras ni su organización. Solo dice <em>cuándo y cómo intervienen</em> en el proceso, y eso es lo que resume esta guía.</div>
+      </div>
+
+      <svg class="diagram hero-svg" viewBox="0 0 420 420" role="img" aria-labelledby="hsT hsD">
+        <title id="hsT">Esquema de las tres figuras</title>
+        <desc id="hsD">Un círculo central representa el proceso judicial. De él parten tres círculos: el Defensor Oficial con siete artículos, el defensor de ausentes con tres artículos y el Ministerio Público con treinta artículos.</desc>
+        <line class="ln" x1="210" y1="215" x2="210" y2="86"/>
+        <line class="ln" x1="210" y1="215" x2="92" y2="318"/>
+        <line class="ln" x1="210" y1="215" x2="328" y2="318"/>
+        <circle class="core" cx="210" cy="215" r="74"/>
+        <text class="t b" x="210" y="206" text-anchor="middle" font-size="20">Proceso</text>
+        <text class="t b" x="210" y="229" text-anchor="middle" font-size="20">judicial</text>
+        <text class="t m" x="210" y="252" text-anchor="middle" font-size="12">Ley XII – N.º 27</text>
+        <g class="sat">
+          <circle class="n-do" cx="210" cy="64" r="52"/>
+          <text class="t w" x="210" y="58" text-anchor="middle" font-size="15">Defensor</text>
+          <text class="t w" x="210" y="75" text-anchor="middle" font-size="15">Oficial</text>
+          <text class="t w" x="210" y="92" text-anchor="middle" font-size="11" style="font-weight:600">7 artículos</text>
+        </g>
+        <g class="sat b">
+          <circle class="n-da" cx="82" cy="326" r="52"/>
+          <text class="t w" x="82" y="314" text-anchor="middle" font-size="14">Defensor</text>
+          <text class="t w" x="82" y="330" text-anchor="middle" font-size="14">de ausentes</text>
+          <text class="t w" x="82" y="347" text-anchor="middle" font-size="11" style="font-weight:600">3 artículos</text>
+        </g>
+        <g class="sat c">
+          <circle class="n-mp" cx="338" cy="326" r="52"/>
+          <text class="t w" x="338" y="314" text-anchor="middle" font-size="14">Ministerio</text>
+          <text class="t w" x="338" y="330" text-anchor="middle" font-size="14">Público</text>
+          <text class="t w" x="338" y="347" text-anchor="middle" font-size="11" style="font-weight:600">30 artículos</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <div class="band alt" id="camino">
+    <div class="wrap">
+      <h2 class="sec">El camino cuando la persona demandada no aparece</h2>
+      <p class="sec-sub">Es el caso en que la ley describe con más detalle la tarea del Defensor Oficial. Así se ordena en el juicio ordinario (arts. 147 a 149 y 344).</p>
+      <ol class="chev">
+        <li style="--bg:var(--ink);--fg:var(--paper)">
+          <span class="tag">Art. 147</span>
+          <h3>Se ignora dónde está</h3>
+          <p>La parte debe declarar <strong>bajo juramento</strong> que hizo gestiones sin éxito para conocer el domicilio. Si resulta falso, se anula a su costa lo actuado después y se le impone una multa.</p>
+        </li>
+        <li style="--bg:var(--ink);--fg:var(--paper)">
+          <span class="tag">Arts. 344, 148 y 149</span>
+          <h3>Se publican edictos</h3>
+          <p>Dos días, en el <strong>Boletín Oficial</strong> y en un diario de mayor circulación. La resolución se tiene por notificada al día siguiente de la última publicación.</p>
+          <div class="pills"><span>2 días</span></div>
+        </li>
+        <li style="--bg:var(--cdo);--fg:var(--on)">
+          <span class="tag">Art. 344</span>
+          <h3>Si no comparece, se nombra al Defensor Oficial</h3>
+          <p>Vencido el plazo de los edictos, el Defensor Oficial <strong>lo representa en el juicio</strong>.</p>
+        </li>
+        <li style="--bg:var(--cdo);--fg:var(--on)">
+          <span class="tag">Art. 344</span>
+          <h3>Qué debe hacer el Defensor</h3>
+          <p>Tratar de que <strong>el interesado se entere</strong> de que existe el juicio y, en su caso, <strong>recurrir la sentencia</strong>.</p>
+        </li>
+      </ol>
+      <p class="fn">En el juicio ejecutivo el camino es parecido: el embargo se practica aunque el deudor no esté, y si se ignora su domicilio se cita por edictos una sola vez y se nombra al Defensor Oficial (art. 500, inc. 2). La sentencia, además, se notifica al Defensor Oficial (art. 521).</p>
+    </div>
+  </div>
+
+  <div class="band" id="comparacion">
+    <div class="wrap">
+      <h2 class="sec">Tres nombres, tres maneras de intervenir</h2>
+      <p class="sec-sub">El Código usa estas expresiones en artículos distintos. No las define ni dice si dos de ellas designan a la misma persona: por eso esta guía las muestra tal como aparecen.</p>
+      <table class="cmp">
+        <thead>
+          <tr>
+            <th scope="col"><span class="sr-only">Aspecto</span></th>
+            <th scope="col" class="hdo">Defensor Oficial<small>7 artículos</small></th>
+            <th scope="col" class="hda">Defensor de ausentes<small>3 artículos</small></th>
+            <th scope="col" class="hmp">Ministerio Público y figuras afines<small>30 artículos</small></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Cómo lo nombra la ley</th>
+            <td data-h="Defensor Oficial">«Defensor Oficial» (y «defensor oficial» en el art. 85).</td>
+            <td data-h="Defensor de ausentes">«Defensor de ausentes».</td>
+            <td data-h="Ministerio Público y figuras afines">«Ministerio Público», «Ministerio Público Fiscal», «Ministerio Pupilar», «Asesor de Menores e Incapaces», «Asesor de Incapaces», «Procurador General» y «Fiscales de Cámara».</td>
+          </tr>
+          <tr>
+            <th scope="row">Dónde aparece</th>
+            <td data-h="Defensor Oficial">Arts. 85, 329, 344, 358, 500, 521 y 626. El art. 53 dice «defensor» sin más.</td>
+            <td data-h="Defensor de ausentes">Arts. 560, 805 y 807. Los arts. 316 y 746 mencionan a los ausentes sin nombrar al defensor.</td>
+            <td data-h="Ministerio Público y figuras afines">Desde el art. 33 hasta el art. 815, en cinco Libros del Código (I, V, VI, VIII y IX).</td>
+          </tr>
+          <tr>
+            <th scope="row">Cuándo interviene</th>
+            <td data-h="Defensor Oficial">Beneficio de litigar sin gastos, urgencia en medidas preliminares, demandado o deudor con domicilio ignorado que no comparece, y desalojo.</td>
+            <td data-h="Defensor de ausentes">Cuando hay que citar a la otra parte para reconocer o vender mercaderías y no se encuentra en el lugar.</td>
+            <td data-h="Ministerio Público y figuras afines">Incapacidad e inhabilitación, guarda, familia, sucesiones y recursos o conflictos ante el Superior Tribunal.</td>
+          </tr>
+          <tr>
+            <th scope="row">Qué hace en el proceso</th>
+            <td data-h="Defensor Oficial">Representa y defiende (arts. 85 y 344), asiste a un acto (art. 626), interviene (art. 329) y recibe la notificación de la sentencia (art. 521).</td>
+            <td data-h="Defensor de ausentes">Es citado para controlar el acto y formular protestas escritas (art. 805) o para el remate (art. 807).</td>
+            <td data-h="Ministerio Público y figuras afines">Recibe vistas, comparece a audiencias, es parte (art. 681), es oído (Procurador General) y promueve la ejecución de multas mientras el Superior Tribunal no designe a otros funcionarios (art. 35).</td>
+          </tr>
+          <tr>
+            <th scope="row">Dato particular</th>
+            <td class="si" data-h="Defensor Oficial">No tiene la carga de responder categóricamente a los hechos de la demanda (art. 358).</td>
+            <td class="si" data-h="Defensor de ausentes">No puede cobrar honorarios al ejecutado por su intervención (art. 560).</td>
+            <td class="si" data-h="Ministerio Público y figuras afines">Sus funcionarios no pueden ser recusados (art. 33) y deben cumplir los plazos (art. 160).</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="band alt" id="donde">
+    <div class="wrap">
+      <h2 class="sec">Dónde aparece cada figura en el Código</h2>
+      <p class="sec-sub">Cantidad de artículos que nombran expresamente a cada figura, por Libro. Los Libros VII y X no las mencionan.</p>
+      <ul class="bars">
+<li class="bar-row"><div class="lb">Libro I<small>Disposiciones generales</small></div><div class="bar-track" role="img" aria-label="Libro I: Defensor Oficial 1, Ministerio Público 8"><div class="seg do" style="width:7.14%" title="Defensor Oficial: 1">1</div><div class="seg mp" style="width:57.14%" title="Ministerio Público: 8">8</div></div><div class="tot">9</div></li>
+<li class="bar-row"><div class="lb">Libro II<small>Procesos de conocimiento</small></div><div class="bar-track" role="img" aria-label="Libro II: Defensor Oficial 3"><div class="seg do" style="width:21.43%" title="Defensor Oficial: 3">3</div></div><div class="tot">3</div></li>
+<li class="bar-row"><div class="lb">Libro III<small>Procesos de ejecución</small></div><div class="bar-track" role="img" aria-label="Libro III: Defensor Oficial 2, Defensor de ausentes 1"><div class="seg do" style="width:14.29%" title="Defensor Oficial: 2">2</div><div class="seg da" style="width:7.14%" title="Defensor de ausentes: 1">1</div></div><div class="tot">3</div></li>
+<li class="bar-row"><div class="lb">Libro IV<small>Procesos especiales</small></div><div class="bar-track" role="img" aria-label="Libro IV: Defensor Oficial 1"><div class="seg do" style="width:7.14%" title="Defensor Oficial: 1">1</div></div><div class="tot">1</div></li>
+<li class="bar-row"><div class="lb">Libro V<small>Procesos de familia y violencia familiar</small></div><div class="bar-track" role="img" aria-label="Libro V: Ministerio Público 14"><div class="seg mp" style="width:100.00%" title="Ministerio Público: 14">14</div></div><div class="tot">14</div></li>
+<li class="bar-row"><div class="lb">Libro VI<small>Proceso sucesorio</small></div><div class="bar-track" role="img" aria-label="Libro VI: Ministerio Público 4"><div class="seg mp" style="width:28.57%" title="Ministerio Público: 4">4</div></div><div class="tot">4</div></li>
+<li class="bar-row"><div class="lb">Libro VIII<small>Procesos voluntarios</small></div><div class="bar-track" role="img" aria-label="Libro VIII: Defensor de ausentes 2, Ministerio Público 1"><div class="seg da" style="width:14.29%" title="Defensor de ausentes: 2">2</div><div class="seg mp" style="width:7.14%" title="Ministerio Público: 1">1</div></div><div class="tot">3</div></li>
+<li class="bar-row"><div class="lb">Libro IX<small>Declaración de inconstitucionalidad y conflicto de poderes</small></div><div class="bar-track" role="img" aria-label="Libro IX: Ministerio Público 3"><div class="seg mp" style="width:21.43%" title="Ministerio Público: 3">3</div></div><div class="tot">3</div></li>
+      </ul>
+      <div class="bars-key" aria-hidden="true">
+        <span><i style="background:var(--cdo)"></i>Defensor Oficial</span>
+        <span><i style="background:var(--cda)"></i>Defensor de ausentes</span>
+        <span><i style="background:var(--cmp)"></i>Ministerio Público y figuras afines</span>
+      </div>
+      <p class="fn">No se cuentan los arts. 53, 316 y 746, que dicen «defensor» sin más o mencionan a los ausentes, ni los arts. 342 y 811, que nombran al Fiscal de Estado (figura que esta guía no desarrolla).</p>
+    </div>
+  </div>
+</section>
+
+<section id="defensor-oficial" class="band sdo">
+  <div class="wrap">
+    <div class="art-head">
+      <div class="numeral" aria-hidden="true">01</div>
+      <h2>Defensor Oficial</h2>
+      <p class="tagline">Interviene cuando alguien no tiene recursos, no aparece en el juicio o no puede ser citado.<br><span class="pages">Artículos 85, 329, 344, 358, 500, 521 y 626 (y el art. 53)</span></p>
+    </div>
+
+    <blockquote class="law"><span class="lbl">Lo que dice la ley</span><p>Si vencido el plazo de los edictos no comparece el citado, se debe nombrar al Defensor Oficial para que lo represente en el juicio. El Defensor debe tratar de hacer llegar a conocimiento del interesado la existencia del juicio y, en su caso, recurrir de la sentencia.</p><span class="cite">Art. 344, p. 87 del PDF</span></blockquote>
+
+    <div class="simple"><div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-chat"/></svg> En simple</div><p>Si no se sabe dónde está la persona demandada y no se presenta después de los edictos, el juicio no se detiene: el juez nombra al Defensor Oficial para que la represente. Su tarea no es solo estar presente: debe procurar que el interesado se entere del juicio y, si corresponde, recurrir la sentencia.</p></div>
+
+    <div class="blk">
+      <h3>Ocho momentos en que la ley lo nombra</h3>
+      <p class="sub">Cada tarjeta explica el artículo en pocas líneas y permite abrir el texto literal. Las letras siguen el orden del Código.</p>
+      <div class="cases two">
+<article class="case" id="a85"><div class="letter" aria-hidden="true">A</div><span class="art-tag">Art. 85 · Defensa del beneficiario</span><h4>Defiende a quien litiga sin recursos</h4><p>Quien carece de recursos puede pedir el <strong>beneficio de litigar sin gastos</strong> antes de la demanda o en cualquier estado del proceso (art. 78). Si lo obtiene, su representación y defensa las asume el Defensor Oficial.</p><div class="who"><b>Una elección</b>El beneficiario puede preferir un abogado o procurador de la matrícula. En ese caso, cualquiera sea el monto del asunto, el poder se puede dar por acta ante el Oficial Primero.</div><p class="fine">Libro I · Beneficio de litigar sin gastos · p. 24 del PDF</p><details class="more"><summary>Ver el texto de la ley</summary><div class="in"><p>La representación y defensa del beneficiario debe ser asumida por el defensor oficial, salvo si aquél desea hacerse patrocinar o representar por abogado o procurador de la matrícula; en este último caso, cualquiera sea el monto del asunto, el mandato que confiere puede hacerse por acta labrada ante el Oficial Primero.</p></div></details></article>
+<article class="case" id="a329"><div class="letter" aria-hidden="true">B</div><span class="art-tag">Art. 329 · Medidas preliminares</span><h4>Interviene cuando la urgencia impide citar</h4><p>Si para una medida preliminar hay que producir prueba, se debe citar a la parte contraria. Cuando eso resulta imposible <strong>por razón de urgencia</strong>, interviene el Defensor Oficial.</p><div class="who"><b>Regla y excepción</b>Regla: se cita a la contraria. Excepción: urgencia que lo impide. En ese caso, interviene el Defensor Oficial.</div><p class="fine">Libro II · Diligencias preliminares · p. 83 del PDF</p><details class="more"><summary>Ver el texto de la ley</summary><div class="in"><p>Si ha de practicarse la prueba se debe citar a la contraria, salvo cuando resulta imposible por razón de urgencia, en cuyo caso debe intervenir el Defensor Oficial.</p></div></details></article>
+<article class="case" id="a344"><div class="letter" aria-hidden="true">C</div><span class="art-tag">Art. 344 · Domicilio ignorado</span><h4>Representa a quien no aparece</h4><p>Si no se sabe dónde está la persona demandada y no comparece después de los edictos, el juicio sigue con el Defensor Oficial como su representante. Debe procurar que el interesado se entere y, si corresponde, <strong>recurrir la sentencia</strong>.</p><div class="who"><b>Plazo de los edictos</b>Dos días, en la forma de los arts. 147, 148 y 149.</div><p class="fine">Libro II · Citación del demandado · p. 87 del PDF</p><details class="more"><summary>Ver el texto de la ley</summary><div class="in"><p>La citación a personas inciertas o cuyo domicilio o residencia se ignora se debe hacer por edictos publicados por dos (2) días en la forma prescripta por los Artículos 147,148 y 149. Si vencido el plazo de los edictos no comparece el citado, se debe nombrar al Defensor Oficial para que lo represente en el juicio. El Defensor debe tratar de hacer llegar a conocimiento del interesado la existencia del juicio y, en su caso, recurrir de la sentencia.</p></div></details></article>
+<article class="case" id="a358"><div class="letter" aria-hidden="true">D</div><span class="art-tag">Art. 358 · Contestación de la demanda</span><h4>No tiene la carga de responder categóricamente</h4><p>Quien contesta una demanda debe reconocer o negar cada hecho, los documentos y las cartas o telegramas. El Defensor Oficial está <strong>exceptuado</strong>: puede reservar su respuesta definitiva para después de producida la prueba.</p><div class="who"><b>También exceptuado</b>El demandado que interviene como sucesor a título universal de quien participó en los hechos o suscribió los documentos.</div><p class="fine">Libro II · Contestación a la demanda y reconvención · p. 91 del PDF</p><details class="more"><summary>Ver el texto de la ley</summary><div class="in"><p>1) reconocer o negar categóricamente cada uno de los hechos expuestos en la demanda, la autenticidad de los documentos acompañados que se le atribuyen y la recepción de las cartas y telegramas a él dirigidos cuyas copias se acompañan.</p><p>No están sujetos al cumplimiento de la carga mencionada en el párrafo precedente, el Defensor Oficial y el demandado que interviene en el proceso como sucesor a título universal de quien participó en los hechos o suscribió los documentos o recibió las cartas o telegramas, quienes pueden reservar su respuesta definitiva para después de producida la prueba;</p></div></details></article>
+<article class="case" id="a500"><div class="letter" aria-hidden="true">E</div><span class="art-tag">Art. 500, inc. 2 · Juicio ejecutivo</span><h4>Embargo con domicilio ignorado</h4><p>El embargo se practica aunque el deudor no esté presente, y se le hace saber dentro de los <strong>tres días</strong> siguientes. Si se ignora su domicilio, se lo cita por edictos (una sola vez) y se nombra al Defensor Oficial.</p><div class="who"><b>Plazo de los edictos</b>Una sola publicación (en el juicio ordinario, dos días).</div><p class="fine">Libro III · Embargo y excepciones · p. 122 del PDF</p><details class="more"><summary>Ver el texto de la ley</summary><div class="in"><p>2) el embargo se practica aún cuando el deudor no está presente, de lo que se debe dejar constancia. En este caso, se le hace saber dentro de los tres (3) días siguientes al de la traba. Si se ignora su domicilio, se debe nombrar al Defensor Oficial, previa citación por edictos que se publican por una sola vez;</p></div></details></article>
+<article class="case" id="a521"><div class="letter" aria-hidden="true">F</div><span class="art-tag">Art. 521 · Juicio ejecutivo</span><h4>Recibe la notificación de la sentencia</h4><p>Cuando el deudor tiene domicilio desconocido y no se presentó, la sentencia <strong>se notifica al Defensor Oficial</strong>.</p><div class="who"><b>Mismo hilo que el art. 500</b>El art. 500 lo nombra al embargar; el art. 521 lo hace destinatario de la sentencia.</div><p class="fine">Libro III · Embargo y excepciones · p. 127 del PDF</p><details class="more"><summary>Ver el texto de la ley</summary><div class="in"><p>Si el deudor con domicilio desconocido no se presentó, la sentencia se notifica al Defensor Oficial.</p></div></details></article>
+<article class="case" id="a626"><div class="letter" aria-hidden="true">G</div><span class="art-tag">Art. 626 · Desalojo</span><h4>Asiste al reconocimiento judicial en el desalojo</h4><p>En desalojos por cambio de destino, deterioro, intrusión, obras nocivas o uso abusivo o deshonesto, el juez realiza <strong>antes del traslado de la demanda</strong> un reconocimiento judicial, dentro de los cinco días de la primera providencia, con asistencia del Defensor Oficial. Igual previsión rige para la causal de los arts. 1206 y 1219, inc. b), del Código Civil y Comercial de la Nación.</p><div class="who"><b>Cuándo no hace falta</b>Si la causal consta en escritura pública celebrada con arreglo a la ley y se la acompaña en la oportunidad del art. 334.</div><p class="fine">Libro IV · Desalojo · p. 152 del PDF</p><details class="more"><summary>Ver el texto de la ley</summary><div class="in"><p>Cuando el desalojo se funda en las causales de: cambio de destino, deterioro del inmueble, intrusión, obras nocivas o uso abusivo o deshonesto, el Juez debe realizar antes del traslado de la demanda un reconocimiento judicial dentro de los cinco (5) días de dictada la primera providencia, con asistencia del Defensor Oficial.</p><p>Igual previsión debe tomarse cuando se da la causal prevista en los Artículos 1206 y 1219 inciso b) del Código Civil y Comercial de la Nación.</p><p>No es necesaria la diligencia judicial, cuando la causal invocada consta en escritura pública celebrada con arreglo a la ley, y ésta se acompaña en la oportunidad prevista en el Artículo 334.</p></div></details></article>
+<article class="case" id="a53"><div class="letter" aria-hidden="true">H</div><span class="art-tag">Art. 53, inc. 5 · Cesación de la representación</span><h4>Un «defensor» cuando muere o se incapacita el poderdante</h4><p>Si el poderdante muere o se incapacita, el juez fija un plazo para que los interesados se presenten. Si no se conocen sus domicilios, se los cita por edictos dos días y, si no comparecen, la ley prevé <strong>nombrarles defensor</strong>.</p><div class="who"><b>Una aclaración</b>Aquí la ley dice «defensor» sin más: no aclara si se trata del Defensor Oficial.</div><p class="fine">Libro I · Representación procesal · p. 17 del PDF</p><details class="more"><summary>Ver el texto de la ley</summary><div class="in"><p>Mientras tanto, comprobado el deceso o la incapacidad, el Juez debe señalar un plazo para que los interesados concurran a estar a derecho, citándolos directamente si se conocen sus domicilios, o por edictos durante dos (2) días consecutivos, si no son conocidos, bajo apercibimiento de continuar el juicio en rebeldía en el primer caso y de nombrarles defensor en el segundo.</p></div></details></article>
+      </div>
+    </div>
+
+    <div class="blk" id="beneficio">
+      <h3>El beneficio de litigar sin gastos, paso a paso</h3>
+      <p class="sub">El art. 85 es el que dice quién defiende a quien lo obtiene. Estos son los artículos que lo rodean (capítulo VI, arts. 78 a 86).</p>
+      <div class="rules">
+        <div class="rule"><div class="ico"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-user"/></svg></div><div><h4>Quién puede pedirlo (art. 78)</h4><p>Quienes carecen de recursos, antes de presentar la demanda o en cualquier estado del proceso. Tener lo indispensable para subsistir no impide el beneficio.</p></div></div>
+        <div class="rule"><div class="ico"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-doc"/></svg></div><div><h4>Qué debe contener (art. 79)</h4><p>Los hechos en que se funda, la necesidad de reclamar o defender derechos propios, del cónyuge o de hijos menores, el proceso de que se trate y la prueba de que no puede obtener recursos.</p></div></div>
+        <div class="rule"><div class="ico"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-scale"/></svg></div><div><h4>Cómo se resuelve (arts. 80 a 82)</h4><p>Se produce la prueba a la mayor brevedad y se da traslado por <strong>5 días comunes</strong>. El juez acuerda el beneficio total o parcialmente, o lo deniega. La resolución no causa estado. Si se prueba la falsedad de los hechos, hay multa.</p></div></div>
+        <div class="rule"><div class="ico"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-coin"/></svg></div><div><h4>Qué efectos tiene (arts. 83 y 84)</h4><p>Mientras se resuelve, la solicitud y las presentaciones de ambas partes están exentas de impuestos y sellado. Quien lo obtiene queda exento, total o parcialmente, de costas y gastos <strong>hasta que mejore de fortuna</strong>; si vence en el pleito, paga las costas de su defensa hasta un tercio de lo que recibe.</p></div></div>
+      </div>
+      <ul class="chain" style="margin-top:26px" aria-label="Recorrido del beneficio">
+        <li>Art. 78: pedido</li><li>Art. 79: requisitos</li><li>Arts. 80 y 81: prueba y traslado</li><li>Art. 81: resolución</li><li>Art. 85: defensa</li>
+      </ul>
+    </div>
+
+    <div class="blk" id="regla358">
+      <h3>La excepción del art. 358</h3>
+      <p class="sub">Contestar una demanda exige tomar posición sobre cada hecho. El Defensor Oficial tiene un tratamiento distinto.</p>
+      <div class="vs">
+        <div class="old">
+          <span class="tag">Regla general</span>
+          <h4>Responder punto por punto</h4>
+          <p>Reconocer o negar categóricamente cada hecho, los documentos y las cartas o telegramas.</p>
+          <p class="quote">El silencio, las respuestas evasivas o la negativa meramente general pueden estimarse como reconocimiento de la verdad de los hechos.</p>
+        </div>
+        <div class="arrow" aria-hidden="true">→</div>
+        <div class="new">
+          <span class="tag">Defensor Oficial</span>
+          <h4>Puede reservar su respuesta</h4>
+          <p>No está sujeto a esa carga. Puede dejar su respuesta definitiva para <strong>después de producida la prueba</strong>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="defensor-ausentes" class="band alt sda">
+  <div class="wrap">
+    <div class="art-head">
+      <div class="numeral" aria-hidden="true">02</div>
+      <h2>Defensor de ausentes</h2>
+      <p class="tagline">Se lo cita cuando la otra parte no se encuentra en el lugar.<br><span class="pages">Artículos 560, 805 y 807 (y menciones a los ausentes en los arts. 316 y 746)</span></p>
+    </div>
+
+    <blockquote class="law"><span class="lbl">Lo que dice la ley</span><p>Para el acto de reconocimiento y al solo efecto de controlarlo y formular las protestas escritas que considera pertinentes, debe citar a la otra parte, si se encuentra en el lugar, o al defensor de ausentes, en su caso, con la habilitación de día y hora.</p><span class="cite">Art. 805, p. 193 del PDF</span></blockquote>
+
+    <div class="simple"><div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-chat"/></svg> En simple</div><p>Antes de hacer un acto que puede afectar a la otra parte (reconocer unas mercaderías o rematarlas), la ley manda citarla. Si está en el lugar, se cita a ella. Si no, se cita al defensor de ausentes para que controle lo que ocurre y pueda dejar sus protestas por escrito.</p></div>
+
+    
+    <div class="blk" id="a805">
+      <h3>¿A quién se cita? Reconocimiento y venta de mercaderías</h3>
+      <p class="sub">Los arts. 805 y 807 usan la misma fórmula: se cita a la otra parte <em>si se encuentra en el lugar</em>; si no, al defensor de ausentes, «en su caso».</p>
+      <div class="tree-top">Acto: reconocimiento de mercaderías (art. 805) o remate por cuenta del comprador (art. 807)</div>
+      <div class="tree-branches">
+        <div class="branch">
+          <h4>La otra parte se encuentra en el lugar</h4>
+          <p>Se cita a la otra parte.</p>
+          <p class="note">En el reconocimiento, la citación es con habilitación de día y hora.</p>
+        </div>
+        <div class="branch">
+          <h4>No se encuentra en el lugar</h4>
+          <p>Se cita al <strong>defensor de ausentes</strong>, «en su caso».</p>
+          <p class="note">En el reconocimiento, lo hace para controlar el acto y formular las protestas escritas que considere pertinentes.</p>
+        </div>
+      </div>
+      <details class="more">
+        <summary>Ver el texto de los arts. 805 y 807</summary>
+        <div class="in">
+          <p>Para el acto de reconocimiento y al solo efecto de controlarlo y formular las protestas escritas que considera pertinentes, debe citar a la otra parte, si se encuentra en el lugar, o al defensor de ausentes, en su caso, con la habilitación de día y hora.</p>
+          <p>Cuando la ley autoriza al vendedor a efectuar la venta de mercaderías por cuenta del comprador, el Tribunal decreta el remate público con citación de aquél, si se encuentra en el lugar, o del defensor de ausentes, en su caso, sin determinar si la venta es o no por cuenta del comprador.</p>
+          <p class="note">Art. 805, p. 193 del PDF, y art. 807, p. 193 del PDF. Libro VIII · Procesos voluntarios · Reconocimiento, adquisición y venta de mercaderías.</p>
+        </div>
+      </details>
+    </div>
+    
+    <div class="blk" id="a316">
+      <h3>Dos reglas que mencionan a los ausentes</h3>
+      <p class="sub">Estos artículos no nombran al defensor de ausentes. Se incluyen porque muestran cómo trata el Código a las personas ausentes que no tienen quién las represente.</p>
+      <div class="duo">
+        <div class="pan">
+          <h4>Caducidad de la instancia (art. 316)</h4>
+          <p>La caducidad opera también contra el Estado, los menores y quienes no tienen la libre administración de sus bienes. <strong>No se aplica</strong> a los incapaces o ausentes que carecen de representación legal en el juicio.</p>
+          <div class="norms"><span>Art. 316</span><span>Libro I</span><span>p. 79 del PDF</span></div>
+        </div>
+        <div class="pan" id="a746">
+          <h4>Inventario definitivo (art. 746)</h4>
+          <p>Con conformidad de las partes puede admitirse el inventario que presentan los interesados, <strong>a menos que existan incapaces o ausentes</strong>.</p>
+          <div class="norms"><span>Art. 746</span><span>Libro VI · Proceso sucesorio</span><span>p. 180 del PDF</span></div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="blk" id="a560">
+      <h3>Una regla sobre honorarios</h3>
+      <div class="defs">
+        <div class="def">
+          <h4>Art. 560: sin honorarios a cargo del ejecutado</h4>
+          <p>En el juicio ejecutivo, <strong>el defensor de ausentes no puede cobrar honorarios al ejecutado</strong> por su intervención. La regla está en el artículo que ordena las preferencias para aplicar lo depositado.</p>
+          <span class="ex-tag">Libro III · Juicio ejecutivo · Cumplimiento de la sentencia de remate · p. 138 del PDF</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="ministerio-publico" class="band smp">
+  <div class="wrap">
+    <div class="art-head">
+      <div class="numeral" aria-hidden="true">03</div>
+      <h2>Ministerio Público y figuras afines</h2>
+      <p class="tagline">Recibe vistas, comparece o dictamina donde hay menores, incapaces, familia, herencias y recursos extraordinarios.<br><span class="pages">30 artículos, del 33 al 815</span></p>
+    </div>
+
+    <blockquote class="law"><span class="lbl">Lo que dice la ley</span><p>El Ministerio Público y los funcionarios que a cualquier título intervienen en el proceso están sometidos a las reglas precedentes y deben expedirse o ejercer sus derechos dentro de los plazos fijados.</p><span class="cite">Art. 160, p. 43 del PDF</span></blockquote>
+
+    <div class="simple"><div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-chat"/></svg> En simple</div><p>Los funcionarios del Ministerio Público no pueden ser recusados, pero están sometidos a las reglas de plazos como cualquier otro funcionario que interviene en el proceso. Según el tema del juicio, el Código lo nombra de distintas maneras y le asigna papeles distintos: ser parte, ser citado a una audiencia, recibir una vista o ser oído.</p></div>
+
+    <div class="blk" id="nombres">
+      <h3>Siete nombres en el texto</h3>
+      <p class="sub">El Código no explica cómo se relacionan entre sí. Esta guía los agrupa porque, como el Ministerio Público, se les da vista, comparecen o son oídos en el proceso.</p>
+      <div class="chips names">
+        <span class="chip">Ministerio Público<small>Arts. 33, 160, 667, 668, 670, 681, 711, 713, 715, 716, 721 y 802</small></span>
+        <span class="chip">Ministerio Público Fiscal<small>Arts. 35, 661 y 666</small></span>
+        <span class="chip">Ministerio Pupilar<small>Arts. 652, 698, 744, 759 y 760</small></span>
+        <span class="chip">Asesor de Menores e Incapaces<small>Arts. 238, 239, 671 y 677</small></span>
+        <span class="chip">Asesor de Incapaces<small>Arts. 661, 666, 667 y 668</small></span>
+        <span class="chip">Procurador General<small>Arts. 136, 290, 303, 812, 814 y 815</small></span>
+        <span class="chip">Fiscales de Cámara<small>Art. 136</small></span>
+      </div>
+    </div>
+
+    <div class="blk" id="reglas">
+      <h3>Reglas generales para sus funcionarios</h3>
+      <p class="sub">Están en el Libro I y valen sin importar el tipo de juicio.</p>
+      <div class="rules" id="a33">
+        <div class="rule"><div class="ico"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-shield"/></svg></div><div><h4>No pueden ser recusados (art. 33)</h4><p>Las partes no pueden pedir que se aparte a un funcionario del Ministerio Público. Si él tiene un motivo legítimo para excusarse, debe decirlo al juez o tribunal, que puede separarlo y dar intervención a quien debe subrogarlo.</p></div></div>
+        <div class="rule"><div class="ico"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-clock"/></svg></div><div><h4>Deben cumplir los plazos (art. 160)</h4><p>Como los demás funcionarios que intervienen en el proceso, deben expedirse o ejercer sus derechos dentro de los plazos fijados.</p></div></div>
+        <div id="a35" style="display:contents"><div class="rule"><div class="ico"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-scale"/></svg></div><div><h4>Ejecución de multas (art. 35)</h4><p>Hasta que el Superior Tribunal determine quiénes promueven la ejecución de las multas, esa atribución corresponde a los representantes del Ministerio Público Fiscal. No ejecutarlas dentro de los 30 días de firme la resolución, el retardo o el abandono injustificado se consideran faltas graves.</p></div></div></div>
+        <div id="a136" style="display:contents"><div class="rule"><div class="ico"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-mail"/></svg></div><div><h4>Notificaciones (art. 136)</h4><p>Los funcionarios judiciales quedan notificados al recibir el expediente en su despacho y deben devolverlo en tres días. El Procurador General y los Fiscales de Cámara quedan exceptuados: se notifican personalmente en su despacho.</p></div></div></div>
+      </div>
+      <details class="more" id="a160">
+        <summary>Ver el texto de los arts. 33, 35, 136 y 160</summary>
+        <div class="in">
+          <p>Los funcionarios del Ministerio Público no pueden ser recusados. Si tienen algún motivo legítimo de excusación, deben manifestarlo al Juez o Tribunal y éstos pueden separarlos de la causa, dando intervención a quien debe subrogarlos.</p><p>Hasta tanto dicho tribunal determine quienes deben ser los funcionarios que deben promover la ejecución de las multas, esa atribución corresponde a los representantes del Ministerio Público Fiscal ante las respectivas jurisdicciones. La falta de ejecución dentro de los treinta (30) días de quedar firme la resolución que las impuso, el retardo en el trámite o el abandono injustificado de éste, son considerados faltas graves.</p><p>Los funcionarios judiciales quedan notificados el día de la recepción del expediente en su despacho. Deben devolverlo dentro del tercer día, bajo apercibimiento de las medidas disciplinarias a que haya lugar.</p><p>Exceptúase de las disposiciones contenidas en el párrafo precedente al Procurador General del Superior Tribunal de Justicia y a los Fiscales de Cámara, quienes son notificados personalmente en su despacho.</p><p>El Ministerio Público y los funcionarios que a cualquier título intervienen en el proceso están sometidos a las reglas precedentes y deben expedirse o ejercer sus derechos dentro de los plazos fijados.</p>
+          <p class="note">Art. 33 (p. 9), art. 35 (p. 10), art. 136 (p. 36) y art. 160 (p. 43) del PDF.</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="blk" id="incapacidad">
+      <h3>Declaración de incapacidad: dónde intervienen</h3>
+      <p class="sub">Es el proceso donde más veces aparecen el Asesor de Incapaces y el Ministerio Público. Los pasos marcados con color son los que los nombran (arts. 659 a 671).</p>
+      <div class="key" aria-hidden="true"><span><i style="background:var(--cmp)"></i>Intervienen el Asesor o el Ministerio Público</span><span><i style="background:var(--line)"></i>Otros pasos</span></div>
+      <ol class="track">
+<li class="step" id="a659"><div class="dn" aria-hidden="true">1</div><div class="bx"><h4>Se pide la declaración</h4><p>Quien la pide se presenta ante el juez competente, expone los hechos y acompaña un certificado médico o historia clínica sobre la salud mental del presunto incapaz y el riesgo para sí o para terceros. Si no puede, el juez pide la opinión de un especialista de salud pública, que se expide en 48 horas.</p><div class="meta"><span>Arts. 659 y 660</span><span>p. 161</span></div></div></li>
+<li class="step mp" id="a661"><div class="dn" aria-hidden="true">2</div><div class="bx"><h4>El juez ordena cuatro cosas</h4><p>Traslado de la demanda al presunto incapaz por <strong>5 días</strong>; nombramiento de un <strong>curador provisional</strong> (abogado de la matrícula); remisión a un equipo interdisciplinario; e <strong>intervención de un Asesor de Incapaces y de un representante del Ministerio Público Fiscal</strong>.</p><div class="meta"><span>Art. 661</span><span>p. 162</span></div></div></li>
+<li class="step" id="a662"><div class="dn" aria-hidden="true">3</div><div class="bx"><h4>Prueba</h4><p>Hasta <strong>30 días</strong>. El equipo interdisciplinario informa sobre diagnóstico, pronóstico, actos que puede ejercer por sí mismo y posibilidad de administrar sus bienes, entre otros puntos. El juez toma conocimiento personal y directo del presunto incapaz en una audiencia.</p><div class="meta"><span>Arts. 662 y 665</span><span>p. 162</span></div></div></li>
+<li class="step mp" id="a666"><div class="dn" aria-hidden="true">4</div><div class="bx"><h4>Traslado y vistas</h4><p>Traslado por <strong>5 días</strong> al denunciante, al presunto incapaz y al curador provisional. Con su resultado, <strong>se da vista al Asesor de Incapaces y al representante del Ministerio Público Fiscal</strong>.</p><div class="meta"><span>Art. 666</span><span>p. 163</span></div></div></li>
+<li class="step mp" id="a667"><div class="dn" aria-hidden="true">5</div><div class="bx"><h4>Sentencia</h4><p>Se dicta dentro de <strong>15 días</strong> desde las vistas al Ministerio Público. Puede declarar la incapacidad o restringir la capacidad (con la mínima afectación) y designa al curador definitivo. Si ordena internación, <strong>el curador y el Asesor de Incapaces</strong> visitan al internado y presentan informes cada 30 días.</p><div class="meta"><span>Art. 667</span><span>p. 163</span></div></div></li>
+<li class="step mp" id="a670"><div class="dn" aria-hidden="true">6</div><div class="bx"><h4>Notificación</h4><p>Al incapaz o restringido, por acta ante el actuario; al denunciante y al curador provisional, personalmente o por cédula; y <strong>a los representantes del Ministerio Público en sus respectivos despachos</strong>.</p><div class="meta"><span>Art. 670</span><span>p. 164</span></div></div></li>
+<li class="step mp" id="a671"><div class="dn" aria-hidden="true">7</div><div class="bx"><h4>Apelación y consulta</h4><p>La apelación se interpone dentro de <strong>5 días</strong>, con efecto devolutivo. Si se declara la incapacidad y no se apela, se eleva en consulta: la Cámara resuelve en <strong>10 días, previa vista al Asesor de Menores e Incapaces</strong>.</p><div class="meta"><span>Art. 671</span><span>p. 164</span></div></div></li>
+<li class="step mp" id="a668"><div class="dn" aria-hidden="true">8</div><div class="bx"><h4>Si luego cesa la incapacidad</h4><p>Si se comprueba el restablecimiento total (con informe del equipo interdisciplinario), el juez fija una audiencia con <strong>presencia obligatoria del Asesor de Incapaces</strong>; se da traslado al curador por 5 días y, <strong>previa vista a los representantes del Ministerio Público</strong>, se dicta sentencia dentro de 15 días.</p><div class="meta"><span>Art. 668</span><span>p. 164</span></div></div></li>
+      </ol>
+      <p class="fn">La restricción de la capacidad y la inhabilitación siguen el mismo trámite especial (art. 674). Las cuestiones entre el inhabilitado y el curador se tramitan por incidentes, con intervención del Asesor de Menores e Incapaces (art. 677).</p>
+    </div>
+
+    <div class="blk" id="familia">
+      <h3>Familia y menores</h3>
+      <p class="sub">Cada fila indica qué figura nombra el artículo y qué papel le asigna.</p>
+      <div class="orgs">
+<div class="org" id="a237"><b>Guarda<small>Arts. 237 a 239 · Libro I · pp. 61 y 62</small></b><div><p>La guarda se decreta con <strong>intervención del Asesor de Menores e Incapaces</strong> (art. 238). Cualquier persona puede pedirla, también verbalmente ante el Asesor: se labra acta y se la remite al Juzgado (art. 239).</p><p>Si hay urgencia o circunstancias graves, se resuelve provisionalmente sin más trámite. Procede, entre otros casos, respecto de personas mayores de 18 años en condición de vulnerabilidad (art. 237).</p></div></div>
+<div class="org" id="a652"><b>Autorización para comparecer en juicio<small>Art. 652 · Libro V · p. 159</small></b><div><p>Si el interesado, <strong>o el Ministerio Pupilar a su instancia</strong>, pide autorización para comparecer en juicio y ejercer actos jurídicos, se cita a una audiencia dentro del tercer día, con el representante del Ministerio Pupilar. Al menor autorizado se le nombra tutor especial.</p></div></div>
+<div class="org" id="a698"><b>Alimentos<small>Art. 698 · Libro V · p. 169</small></b><div><p>A la audiencia preliminar deben comparecer las partes y, <strong>si corresponde, el representante del Ministerio Pupilar</strong>. El juez procura un acuerdo directo y, si se logra, lo homologa en ese acto y pone fin al juicio.</p></div></div>
+<div class="org" id="a711"><b>Autorización para contraer matrimonio<small>Art. 711 · Libro V · p. 172</small></b><div><p>Se tramita en juicio verbal, privado y meramente informativo, con intervención del interesado, de quien debe darla y <strong>del representante del Ministerio Público</strong>. Igual trámite tiene la licencia judicial para el matrimonio de menores o incapaces sin padres, tutores o curadores.</p></div></div>
+<div class="org" id="a713"><b>Tutela y curatela<small>Art. 713 · Libro V · p. 172</small></b><div><p>El nombramiento de tutor o curador, y la confirmación del que hicieron los padres, se hace a solicitud del interesado <strong>o del Ministerio Público</strong>, sin forma de juicio, salvo que alguien pretenda tener derecho a ser nombrado.</p></div></div>
+<div class="org" id="a715"><b>Divorcio y nulidad de matrimonio<small>Arts. 715 y 716 · Libro V · p. 173</small></b><div><p>En la providencia que ordena el traslado de la demanda, el juez fija una audiencia a la que comparecen las partes y, en su caso, <strong>el representante del Ministerio Público</strong> (art. 715).</p><p>Solo se da vista a los representantes del Ministerio Público en tres casos: tras contestada la demanda o la reconvención, vencido el plazo de alegatos, y cuando se plantea una cuestión vinculada a la representación que ejercen; en el último, la vista se da por resolución fundada (art. 716).</p></div></div>
+<div class="org" id="a681"><b>Restitución de menores<small>Art. 681 · Libro V · p. 166</small></b><div><p><strong>El Ministerio Público es parte</strong> en el proceso de restitución de menores o de restauración del régimen de comunicación afectado. Pueden iniciar la acción los padres, tutores, guardadores y las instituciones a quienes se atribuyó la custodia del menor.</p></div></div>
+<div class="org" id="a677"><b>Inhabilitación<small>Art. 677 · Libro V · p. 165</small></b><div><p>Las cuestiones entre el inhabilitado y el curador se sustancian por incidentes, <strong>con intervención del Asesor de Menores e Incapaces</strong>.</p></div></div>
+      </div>
+    </div>
+
+    <div class="blk" id="sucesiones">
+      <h3>Sucesiones y otros actos</h3>
+      <p class="sub">El art. 721 dice cuándo cesa el Ministerio Público; los arts. 744, 759 y 760 mencionan al Ministerio Pupilar cuando hay incapaces. El Código no aclara cómo se articulan, así que aquí se muestran por separado.</p>
+      <div class="duo" id="a721">
+        <div class="pan">
+          <h4>Cuándo deja de intervenir el Ministerio Público (art. 721, inc. 1)</h4>
+          <p>Cesa de intervenir una vez que ocurre alguno de estos hechos:</p>
+          <div class="norms"><span>Testamento aprobado</span><span>Declaratoria de herederos dictada</span><span>Herencia reputada vacante</span></div>
+          <p class="note" style="margin-top:12px">Libro VI · Proceso sucesorio · Disposiciones generales · p. 174 del PDF</p>
+        </div>
+        <div class="pan" id="a744">
+          <h4>Dónde aparece el Ministerio Pupilar</h4>
+          <p><strong>Inventario (art. 744):</strong> la denuncia de bienes puede sustituir al inventario, con su conformidad, si existen incapaces.</p>
+          <div id="a759" style="display:contents"><p><strong>Partición (art. 759):</strong> se le da vista, si corresponde, antes de que el juez apruebe la cuenta particionaria. La aprobación procede, sin recurso, «salvo que viole normas sobre división de la herencia o existan incapaces que puedan resultar perjudicados».</p>
+          <p><strong>Oposición (art. 760):</strong> se lo cita, en su caso, a la audiencia con las partes y el partidor.</p></div>
+          <p class="note">Libro VI · pp. 180 y 183 del PDF</p>
+        </div>
+      </div>
+      <div class="orgs" style="margin-top:22px">
+<div class="org" id="a802"><b>Segunda copia de escritura pública<small>Art. 802 · Libro VIII · p. 192</small></b><div><p>Cuando su otorgamiento requiere autorización judicial, se otorga previa citación de quienes participaron en la escritura, <strong>o del Ministerio Público en su defecto</strong>. Si hay oposición, se sigue el trámite del juicio sumarísimo.</p></div></div>
+      </div>
+    </div>
+
+    <div class="blk" id="superior">
+      <h3>Ante el Superior Tribunal: el Procurador General</h3>
+      <p class="sub">Aquí la ley nombra al Procurador General y a los Fiscales de Cámara. En el conflicto de poderes, el Código fija un plazo expreso para su dictamen: cinco días (art. 815).</p>
+      <div class="orgs">
+<div class="org" id="a290"><b>Recursos extraordinarios<small>Art. 290 · Libro I · p. 73</small></b><div><p>Llegado el expediente al Superior Tribunal, éste examina si el recurso fue interpuesto en término, si la sentencia es definitiva y si se cumplió con el depósito y las demás prescripciones legales. Si declara admisible el recurso, <strong>corre vista al Procurador General si corresponde</strong>.</p></div></div>
+<div class="org" id="a303"><b>Recurso de inconstitucionalidad<small>Art. 303 · Libro I · p. 76</small></b><div><p>Se aplican las reglas de los recursos extraordinarios en lo que corresponda y <strong>debe oírse al Procurador General</strong>.</p></div></div>
+<div class="org" id="a812"><b>Declaración de inconstitucionalidad<small>Art. 812 · Libro IX · p. 194</small></b><div><p>Contestado el traslado o vencido el plazo, el Presidente ordena las medidas probatorias. Concluida la causa para definitiva, <strong>se oye al Procurador General</strong> y se dicta la providencia de autos.</p></div></div>
+<div class="org" id="a814"><b>Conflicto de poderes<small>Arts. 814 y 815 · Libro IX · p. 195</small></b><div><p>El Superior Tribunal resuelve las causas de competencia entre los poderes públicos de la Provincia <strong>previo dictamen del Procurador General</strong>, que debe expedirse en <strong>5 días</strong>. El Tribunal resuelve de inmediato.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="indice" class="band alt">
+  <div class="wrap">
+    <h2 class="sec">Índice de artículos</h2>
+    <p class="sec-sub">Los 43 artículos del Código que nombran a estas figuras o a los ausentes. Escriba un número, una palabra o el nombre de una figura; también puede filtrar por figura.</p>
+    <div class="tools">
+      <div class="search">
+        <svg class="si" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-search"/></svg>
+        <input id="q" type="search" placeholder="Buscar: 344, edictos, curador, alimentos…" aria-label="Buscar en el índice de artículos" autocomplete="off">
+      </div>
+      <div class="fchips" role="group" aria-label="Filtrar por figura">
+        <button class="fchip" type="button" data-f="all" aria-pressed="true">Todas</button>
+        <button class="fchip" type="button" data-f="do" aria-pressed="false"><i class="dot" style="background:var(--cdo)"></i>Defensor Oficial</button>
+        <button class="fchip" type="button" data-f="da" aria-pressed="false"><i class="dot" style="background:var(--cda)"></i>Defensor de ausentes</button>
+        <button class="fchip" type="button" data-f="mp" aria-pressed="false"><i class="dot" style="background:var(--cmp)"></i>Ministerio Público</button>
+      </div>
+    </div>
+    <p class="count" id="count" aria-live="polite"></p>
+    <ul class="idx" id="idx">
+<li class="row do" data-f="do" data-art="53"><div class="num"><a href="#a53">Art. 53</a><small>p. 17 del PDF</small></div><div><span class="tg">«defensor» (sin más)</span><h4>Cesación de la representación</h4><p>Si tras la muerte o incapacidad del poderdante no se conocen los domicilios de los interesados, se los cita por edictos y, si no comparecen, la ley prevé nombrarles defensor.</p></div><div class="wh">Libro I · Disposiciones generales<br>Representación procesal</div></li>
+<li class="row do" data-f="do" data-art="85"><div class="num"><a href="#a85">Art. 85</a><small>p. 24 del PDF</small></div><div><span class="tg">Defensor Oficial</span><h4>Defensa del beneficiario</h4><p>Quien obtiene el beneficio de litigar sin gastos es representado y defendido por el defensor oficial, salvo que prefiera abogado o procurador de la matrícula.</p></div><div class="wh">Libro I · Disposiciones generales<br>Beneficio de litigar sin gastos</div></li>
+<li class="row do" data-f="do" data-art="329"><div class="num"><a href="#a329">Art. 329</a><small>p. 83 del PDF</small></div><div><span class="tg">Defensor Oficial</span><h4>Pedido de medidas preliminares</h4><p>Si es imposible citar a la parte contraria por razón de urgencia, interviene el Defensor Oficial.</p></div><div class="wh">Libro II · Procesos de conocimiento<br>Diligencias preliminares</div></li>
+<li class="row do" data-f="do" data-art="344"><div class="num"><a href="#a344">Art. 344</a><small>p. 87 del PDF</small></div><div><span class="tg">Defensor Oficial</span><h4>Demandado incierto o con domicilio o residencia ignorados</h4><p>Vencido el plazo de los edictos sin que comparezca el citado, se nombra al Defensor Oficial para que lo represente en el juicio y procure que se entere de él.</p></div><div class="wh">Libro II · Procesos de conocimiento<br>Citación del demandado</div></li>
+<li class="row do" data-f="do" data-art="358"><div class="num"><a href="#a358">Art. 358</a><small>p. 91 del PDF</small></div><div><span class="tg">Defensor Oficial</span><h4>Contenido y requisitos (contestación de la demanda)</h4><p>No tiene la carga de reconocer o negar categóricamente los hechos y documentos: puede reservar su respuesta definitiva para después de la prueba.</p></div><div class="wh">Libro II · Procesos de conocimiento<br>Contestación a la demanda y reconvención</div></li>
+<li class="row do" data-f="do" data-art="500"><div class="num"><a href="#a500">Art. 500</a><small>p. 122 del PDF</small></div><div><span class="tg">Defensor Oficial</span><h4>Intimación de pago y procedimiento para el embargo</h4><p>Si se ignora el domicilio del deudor, se lo cita por edictos (una sola vez) y se nombra al Defensor Oficial.</p></div><div class="wh">Libro III · Procesos de ejecución<br>Embargo y excepciones</div></li>
+<li class="row do" data-f="do" data-art="521"><div class="num"><a href="#a521">Art. 521</a><small>p. 127 del PDF</small></div><div><span class="tg">Defensor Oficial</span><h4>Notificación al Defensor Oficial</h4><p>Si el deudor con domicilio desconocido no se presentó, la sentencia se notifica al Defensor Oficial.</p></div><div class="wh">Libro III · Procesos de ejecución<br>Embargo y excepciones</div></li>
+<li class="row do" data-f="do" data-art="626"><div class="num"><a href="#a626">Art. 626</a><small>p. 152 del PDF</small></div><div><span class="tg">Defensor Oficial</span><h4>Reconocimiento judicial (desalojo)</h4><p>En ciertos desalojos, el reconocimiento judicial previo al traslado de la demanda se realiza con asistencia del Defensor Oficial.</p></div><div class="wh">Libro IV · Procesos especiales<br>Desalojo</div></li>
+<li class="row da" data-f="da" data-art="316"><div class="num"><a href="#a316">Art. 316</a><small>p. 79 del PDF</small></div><div><span class="tg">Menciona a los ausentes</span><h4>Contra quienes se opera (caducidad de la instancia)</h4><p>La caducidad no se aplica a los incapaces o ausentes que carecen de representación legal en el juicio.</p></div><div class="wh">Libro I · Disposiciones generales<br>Caducidad de la instancia</div></li>
+<li class="row da" data-f="da" data-art="560"><div class="num"><a href="#a560">Art. 560</a><small>p. 138 del PDF</small></div><div><span class="tg">Defensor de ausentes</span><h4>Preferencias</h4><p>El defensor de ausentes no puede cobrar honorarios al ejecutado por su intervención.</p></div><div class="wh">Libro III · Procesos de ejecución<br>Cumplimiento de la sentencia de remate</div></li>
+<li class="row da" data-f="da" data-art="746"><div class="num"><a href="#a746">Art. 746</a><small>p. 180 del PDF</small></div><div><span class="tg">Menciona a los ausentes</span><h4>Inventario definitivo</h4><p>Con conformidad de las partes puede admitirse el inventario que presentan los interesados, salvo que existan incapaces o ausentes.</p></div><div class="wh">Libro VI · Proceso sucesorio<br>Inventario y avalúo</div></li>
+<li class="row da" data-f="da" data-art="805"><div class="num"><a href="#a805">Art. 805</a><small>p. 193 del PDF</small></div><div><span class="tg">Defensor de ausentes</span><h4>Reconocimiento de mercaderías</h4><p>Para controlar el acto y formular protestas escritas, se cita a la otra parte, si se encuentra en el lugar, o al defensor de ausentes, en su caso.</p></div><div class="wh">Libro VIII · Procesos voluntarios<br>Reconocimiento, adquisición y venta de mercaderías</div></li>
+<li class="row da" data-f="da" data-art="807"><div class="num"><a href="#a805">Art. 807</a><small>p. 193 del PDF</small></div><div><span class="tg">Defensor de ausentes</span><h4>Venta de mercaderías por cuenta del comprador</h4><p>El remate público se decreta con citación del comprador, si se encuentra en el lugar, o del defensor de ausentes, en su caso.</p></div><div class="wh">Libro VIII · Procesos voluntarios<br>Reconocimiento, adquisición y venta de mercaderías</div></li>
+<li class="row mp" data-f="mp" data-art="33"><div class="num"><a href="#a33">Art. 33</a><small>p. 9 del PDF</small></div><div><span class="tg">Ministerio Público</span><h4>Ministerio Público</h4><p>Sus funcionarios no pueden ser recusados. Si tienen motivo legítimo de excusación, el juez o tribunal puede separarlos de la causa y dar intervención a quien debe subrogarlos.</p></div><div class="wh">Libro I · Disposiciones generales<br>Recusaciones y excusaciones</div></li>
+<li class="row mp" data-f="mp" data-art="35"><div class="num"><a href="#a35">Art. 35</a><small>p. 10 del PDF</small></div><div><span class="tg">Ministerio Público Fiscal</span><h4>Facultades disciplinarias</h4><p>Hasta que el Superior Tribunal determine quiénes promueven la ejecución de las multas, esa atribución corresponde a los representantes del Ministerio Público Fiscal.</p></div><div class="wh">Libro I · Disposiciones generales<br>Deberes y facultades de los jueces</div></li>
+<li class="row mp" data-f="mp" data-art="136"><div class="num"><a href="#a136">Art. 136</a><small>p. 36 del PDF</small></div><div><span class="tg">Procurador General · Fiscales de Cámara</span><h4>Notificación personal o por cédula</h4><p>El Procurador General del Superior Tribunal y los Fiscales de Cámara son notificados personalmente en su despacho.</p></div><div class="wh">Libro I · Disposiciones generales<br>Notificaciones</div></li>
+<li class="row mp" data-f="mp" data-art="160"><div class="num"><a href="#a160">Art. 160</a><small>p. 43 del PDF</small></div><div><span class="tg">Ministerio Público</span><h4>Extensión a los funcionarios públicos</h4><p>El Ministerio Público debe expedirse o ejercer sus derechos dentro de los plazos fijados.</p></div><div class="wh">Libro I · Disposiciones generales<br>El tiempo de los actos procesales</div></li>
+<li class="row mp" data-f="mp" data-art="238"><div class="num"><a href="#a237">Art. 238</a><small>p. 61 del PDF</small></div><div><span class="tg">Asesor de Menores e Incapaces</span><h4>Juez competente (guarda)</h4><p>La guarda se decreta con intervención del Asesor de Menores e Incapaces.</p></div><div class="wh">Libro I · Disposiciones generales<br>Medidas cautelares</div></li>
+<li class="row mp" data-f="mp" data-art="239"><div class="num"><a href="#a237">Art. 239</a><small>p. 62 del PDF</small></div><div><span class="tg">Asesor de Menores e Incapaces</span><h4>Procedimiento (guarda)</h4><p>La petición puede formularse verbalmente ante el Asesor; se labra acta y se la remite al Juzgado que corresponde.</p></div><div class="wh">Libro I · Disposiciones generales<br>Medidas cautelares</div></li>
+<li class="row mp" data-f="mp" data-art="290"><div class="num"><a href="#a290">Art. 290</a><small>p. 73 del PDF</small></div><div><span class="tg">Procurador General</span><h4>Examen preliminar (recursos extraordinarios)</h4><p>Si el recurso es admisible, se corre vista al Procurador General si corresponde.</p></div><div class="wh">Libro I · Disposiciones generales<br>Recursos extraordinarios</div></li>
+<li class="row mp" data-f="mp" data-art="303"><div class="num"><a href="#a303">Art. 303</a><small>p. 76 del PDF</small></div><div><span class="tg">Procurador General</span><h4>Resoluciones recurribles (recurso de inconstitucionalidad)</h4><p>Debe oírse al Procurador General.</p></div><div class="wh">Libro I · Disposiciones generales<br>Recursos extraordinarios</div></li>
+<li class="row mp" data-f="mp" data-art="652"><div class="num"><a href="#a652">Art. 652</a><small>p. 159 del PDF</small></div><div><span class="tg">Ministerio Pupilar</span><h4>Autorización para comparecer en juicio y ejercer actos jurídicos</h4><p>Audiencia dentro del tercer día con el representante del Ministerio Pupilar; al menor autorizado se le nombra tutor especial.</p></div><div class="wh">Libro V · Familia y violencia familiar<br>Reglas de procedimiento</div></li>
+<li class="row mp" data-f="mp" data-art="661"><div class="num"><a href="#a661">Art. 661</a><small>p. 162 del PDF</small></div><div><span class="tg">Asesor de Incapaces · Ministerio Público Fiscal</span><h4>Trámite o sustanciación (declaración de incapacidad)</h4><p>El juez ordena la intervención de un Asesor de Incapaces y de un representante del Ministerio Público Fiscal.</p></div><div class="wh">Libro V · Familia y violencia familiar<br>Declaración de incapacidad y de inhabilitación</div></li>
+<li class="row mp" data-f="mp" data-art="666"><div class="num"><a href="#a666">Art. 666</a><small>p. 163 del PDF</small></div><div><span class="tg">Asesor de Incapaces · Ministerio Público Fiscal</span><h4>Traslado (declaración de incapacidad)</h4><p>Después del traslado de cinco días se da vista al Asesor de Incapaces y al representante del Ministerio Público Fiscal.</p></div><div class="wh">Libro V · Familia y violencia familiar<br>Declaración de incapacidad y de inhabilitación</div></li>
+<li class="row mp" data-f="mp" data-art="667"><div class="num"><a href="#a667">Art. 667</a><small>p. 163 del PDF</small></div><div><span class="tg">Ministerio Público · Asesor de Incapaces</span><h4>Sentencia (declaración de incapacidad)</h4><p>Se dicta en 15 días desde las vistas al Ministerio Público. Si hay internación, el curador y el Asesor visitan al internado y presentan informes cada 30 días.</p></div><div class="wh">Libro V · Familia y violencia familiar<br>Declaración de incapacidad y de inhabilitación</div></li>
+<li class="row mp" data-f="mp" data-art="668"><div class="num"><a href="#a668">Art. 668</a><small>p. 164 del PDF</small></div><div><span class="tg">Ministerio Público · Asesor de Incapaces</span><h4>Verificación (cese de la incapacidad)</h4><p>Audiencia con presencia obligatoria del Asesor de Incapaces y vista a los representantes del Ministerio Público antes de la sentencia.</p></div><div class="wh">Libro V · Familia y violencia familiar<br>Declaración de incapacidad y de inhabilitación</div></li>
+<li class="row mp" data-f="mp" data-art="670"><div class="num"><a href="#a670">Art. 670</a><small>p. 164 del PDF</small></div><div><span class="tg">Ministerio Público</span><h4>Notificación (sentencia de incapacidad)</h4><p>La sentencia se notifica a los representantes del Ministerio Público en sus respectivos despachos.</p></div><div class="wh">Libro V · Familia y violencia familiar<br>Declaración de incapacidad y de inhabilitación</div></li>
+<li class="row mp" data-f="mp" data-art="671"><div class="num"><a href="#a671">Art. 671</a><small>p. 164 del PDF</small></div><div><span class="tg">Asesor de Menores e Incapaces</span><h4>Apelación (declaración de incapacidad)</h4><p>Si se declara la incapacidad y no se apela, se eleva en consulta: la Cámara resuelve en 10 días previa vista al Asesor.</p></div><div class="wh">Libro V · Familia y violencia familiar<br>Declaración de incapacidad y de inhabilitación</div></li>
+<li class="row mp" data-f="mp" data-art="677"><div class="num"><a href="#a677">Art. 677</a><small>p. 165 del PDF</small></div><div><span class="tg">Asesor de Menores e Incapaces</span><h4>Divergencias entre el inhabilitado y el curador</h4><p>Se sustancian por incidentes, con intervención del Asesor de Menores e Incapaces.</p></div><div class="wh">Libro V · Familia y violencia familiar<br>Declaración de incapacidad y de inhabilitación</div></li>
+<li class="row mp" data-f="mp" data-art="681"><div class="num"><a href="#a681">Art. 681</a><small>p. 166 del PDF</small></div><div><span class="tg">Ministerio Público</span><h4>Legitimación (restitución de menores)</h4><p>El Ministerio Público es parte en el proceso de restitución de menores o de restauración del régimen de comunicación.</p></div><div class="wh">Libro V · Familia y violencia familiar<br>Proceso de restitución de menores y restauración del régimen de comunicación</div></li>
+<li class="row mp" data-f="mp" data-art="698"><div class="num"><a href="#a698">Art. 698</a><small>p. 169 del PDF</small></div><div><span class="tg">Ministerio Pupilar</span><h4>Audiencia preliminar (alimentos)</h4><p>A la audiencia deben comparecer las partes y, si corresponde, el representante del Ministerio Pupilar.</p></div><div class="wh">Libro V · Familia y violencia familiar<br>Alimentos y litisexpensas</div></li>
+<li class="row mp" data-f="mp" data-art="711"><div class="num"><a href="#a711">Art. 711</a><small>p. 172 del PDF</small></div><div><span class="tg">Ministerio Público</span><h4>Trámite (autorización para contraer matrimonio)</h4><p>Juicio verbal, privado y meramente informativo, con intervención del interesado, de quien debe darla y del representante del Ministerio Público.</p></div><div class="wh">Libro V · Familia y violencia familiar<br>Autorización para contraer matrimonio</div></li>
+<li class="row mp" data-f="mp" data-art="713"><div class="num"><a href="#a713">Art. 713</a><small>p. 172 del PDF</small></div><div><span class="tg">Ministerio Público</span><h4>Trámite (tutela y curatela)</h4><p>El nombramiento de tutor o curador se hace a solicitud del interesado o del Ministerio Público, sin forma de juicio.</p></div><div class="wh">Libro V · Familia y violencia familiar<br>Tutela. Curatela</div></li>
+<li class="row mp" data-f="mp" data-art="715"><div class="num"><a href="#a715">Art. 715</a><small>p. 173 del PDF</small></div><div><span class="tg">Ministerio Público</span><h4>Deber de los jueces (divorcio y nulidad de matrimonio)</h4><p>En la audiencia que fija el juez al ordenar el traslado de la demanda comparece, en su caso, el representante del Ministerio Público.</p></div><div class="wh">Libro V · Familia y violencia familiar<br>Divorcio. Nulidad de matrimonio</div></li>
+<li class="row mp" data-f="mp" data-art="716"><div class="num"><a href="#a715">Art. 716</a><small>p. 173 del PDF</small></div><div><span class="tg">Ministerio Público</span><h4>Vista (divorcio y nulidad de matrimonio)</h4><p>Solo se le da vista en tres casos: contestada la demanda o la reconvención, vencido el plazo de alegatos y ante cuestiones vinculadas a su representación.</p></div><div class="wh">Libro V · Familia y violencia familiar<br>Divorcio. Nulidad de matrimonio</div></li>
+<li class="row mp" data-f="mp" data-art="721"><div class="num"><a href="#a721">Art. 721</a><small>p. 174 del PDF</small></div><div><span class="tg">Ministerio Público</span><h4>Intervención de interesados (sucesiones)</h4><p>Cesa de intervenir una vez aprobado el testamento, dictada la declaratoria de herederos o reputada vacante la herencia.</p></div><div class="wh">Libro VI · Proceso sucesorio<br>Disposiciones generales</div></li>
+<li class="row mp" data-f="mp" data-art="744"><div class="num"><a href="#a744">Art. 744</a><small>p. 180 del PDF</small></div><div><span class="tg">Ministerio Pupilar</span><h4>Inventario y avalúo judiciales</h4><p>Las partes pueden sustituir el inventario por la denuncia de bienes, con conformidad del Ministerio Pupilar si existen incapaces.</p></div><div class="wh">Libro VI · Proceso sucesorio<br>Inventario y avalúo</div></li>
+<li class="row mp" data-f="mp" data-art="759"><div class="num"><a href="#a759">Art. 759</a><small>p. 183 del PDF</small></div><div><span class="tg">Ministerio Pupilar</span><h4>Presentación de la cuenta particionaria</h4><p>Se le da vista, si corresponde, antes de que el juez apruebe la cuenta particionaria.</p></div><div class="wh">Libro VI · Proceso sucesorio<br>Partición y adjudicación</div></li>
+<li class="row mp" data-f="mp" data-art="760"><div class="num"><a href="#a759">Art. 760</a><small>p. 183 del PDF</small></div><div><span class="tg">Ministerio Pupilar</span><h4>Trámite de la oposición (partición)</h4><p>Si hay oposición, el juez cita a audiencia a las partes, al Ministerio Pupilar, en su caso, y al partidor.</p></div><div class="wh">Libro VI · Proceso sucesorio<br>Partición y adjudicación</div></li>
+<li class="row mp" data-f="mp" data-art="802"><div class="num"><a href="#a802">Art. 802</a><small>p. 192 del PDF</small></div><div><span class="tg">Ministerio Público</span><h4>Segunda copia de escritura pública</h4><p>Se otorga previa citación de quienes participaron en la escritura, o del Ministerio Público en su defecto.</p></div><div class="wh">Libro VIII · Procesos voluntarios<br>Copia y renovación de títulos</div></li>
+<li class="row mp" data-f="mp" data-art="812"><div class="num"><a href="#a812">Art. 812</a><small>p. 194 del PDF</small></div><div><span class="tg">Procurador General</span><h4>Medidas probatorias (inconstitucionalidad)</h4><p>Concluida la causa para definitiva, se oye al Procurador General y se dicta la providencia de autos.</p></div><div class="wh">Libro IX · Inconstitucionalidad y conflicto de poderes<br>Declaración de inconstitucionalidad</div></li>
+<li class="row mp" data-f="mp" data-art="814"><div class="num"><a href="#a814">Art. 814</a><small>p. 195 del PDF</small></div><div><span class="tg">Procurador General</span><h4>Tribunal competente (conflicto de poderes)</h4><p>El Superior Tribunal resuelve a la vista de los antecedentes y previo dictamen del Procurador General.</p></div><div class="wh">Libro IX · Inconstitucionalidad y conflicto de poderes<br>Conflicto de poderes</div></li>
+<li class="row mp" data-f="mp" data-art="815"><div class="num"><a href="#a814">Art. 815</a><small>p. 195 del PDF</small></div><div><span class="tg">Procurador General</span><h4>Resolución (conflicto de poderes)</h4><p>El Procurador General debe expedirse en el plazo de cinco días y el Superior Tribunal resolver de inmediato.</p></div><div class="wh">Libro IX · Inconstitucionalidad y conflicto de poderes<br>Conflicto de poderes</div></li>
+    </ul>
+    <p class="empty" id="empty" hidden>No hay artículos que coincidan con la búsqueda.</p>
+  </div>
+</section>
+
+<section id="esencial" class="band">
+  <div class="wrap">
+    <h2 class="sec">Lo esencial en diez ideas</h2>
+    <p class="sec-sub">Para repasar antes de abrir el Código. El color indica la figura: azul, Defensor Oficial; verde, defensor de ausentes; rosa, Ministerio Público.</p>
+    <ul class="take">
+<li class="tdo"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-check"/></svg></span><span>El Defensor Oficial aparece en siete artículos<small>Arts. 85, 329, 344, 358, 500, 521 y 626. El art. 53 dice «defensor» sin más.</small></span></li>
+<li class="tdo"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-check"/></svg></span><span>Si se ignora el domicilio: primero edictos, después el Defensor<small>Art. 344 (edictos dos días) y art. 500, inc. 2 (una sola vez).</small></span></li>
+<li class="tdo"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-check"/></svg></span><span>Quien litiga sin gastos puede ser defendido por el Defensor Oficial o elegir abogado<small>Art. 85.</small></span></li>
+<li class="tdo"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-check"/></svg></span><span>El Defensor Oficial no tiene que responder categóricamente<small>Puede reservar su respuesta hasta después de la prueba (art. 358).</small></span></li>
+<li class="tda"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-check"/></svg></span><span>El defensor de ausentes se cita cuando la otra parte no está en el lugar<small>Arts. 805 y 807.</small></span></li>
+<li class="tda"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-check"/></svg></span><span>No puede cobrar honorarios al ejecutado por su intervención<small>Art. 560.</small></span></li>
+<li class="tmp"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-check"/></svg></span><span>El Ministerio Público no puede ser recusado y debe cumplir los plazos<small>Arts. 33 y 160.</small></span></li>
+<li class="tmp"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-check"/></svg></span><span>En la incapacidad intervienen el Asesor de Incapaces y el Ministerio Público Fiscal<small>Arts. 661 y 666. La sentencia se dicta en 15 días desde las vistas (art. 667).</small></span></li>
+<li class="tmp"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-check"/></svg></span><span>En alimentos, autorización para comparecer y sucesiones aparece el Ministerio Pupilar<small>Arts. 652, 698, 744, 759 y 760.</small></span></li>
+<li class="tmp"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-check"/></svg></span><span>Ante el Superior Tribunal se oye al Procurador General<small>Arts. 290, 303, 812, 814 y 815. En el conflicto de poderes, debe expedirse en 5 días.</small></span></li>
+    </ul>
+    <div class="next">
+      <h3>Para seguir leyendo en el Código</h3>
+      <p>Artículos vinculados que conviene tener a mano junto con esta guía.</p>
+      <div class="chips">
+        <span class="chip">Edictos: arts. 147 a 149</span>
+        <span class="chip">Beneficio de litigar sin gastos: arts. 78 a 86</span>
+        <span class="chip">Declaración de incapacidad: arts. 659 a 673</span>
+        <span class="chip">Inhabilitación: arts. 674 a 678</span>
+        <span class="chip">Competencia de los Juzgados de Familia: art. 641</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="glosario" class="band alt">
+  <div class="wrap">
+    <h2 class="sec">Glosario sin vueltas</h2>
+    <p class="sec-sub">Las palabras difíciles de esta guía, explicadas en pocas líneas.</p>
+    <dl class="gloss">
+<div><dt>Defensor Oficial</dt><dd>Figura que el Código nombra para representar o asistir en situaciones concretas del proceso (arts. 85, 329, 344, 358, 500, 521 y 626). El Código no la define: dice cuándo interviene.</dd></div>
+<div><dt>Defensor de ausentes</dt><dd>Nombre que el Código usa en los arts. 560, 805 y 807 para la figura a la que se cita cuando la otra parte no se encuentra en el lugar.</dd></div>
+<div><dt>Ministerio Público</dt><dd>Nombre general con que el Código se refiere a funcionarios que intervienen, reciben vistas o son parte en ciertos procesos. Cambia según el tema: Fiscal, Pupilar, Asesor.</dd></div>
+<div><dt>Ministerio Público Fiscal</dt><dd>Nombre que el Código usa en los arts. 35, 661 y 666: ejecución de multas y proceso de incapacidad.</dd></div>
+<div><dt>Ministerio Pupilar</dt><dd>Nombre con que el Código llama al representante que interviene cuando hay menores o incapaces (arts. 652, 698, 744, 759 y 760).</dd></div>
+<div><dt>Asesor de Menores e Incapaces / Asesor de Incapaces</dt><dd>Figuras que intervienen en guarda, inhabilitación y declaración de incapacidad (arts. 238, 239, 661, 666 a 668, 671 y 677).</dd></div>
+<div><dt>Procurador General</dt><dd>Funcionario ante el Superior Tribunal de Justicia a quien se corre vista o se oye en recursos extraordinarios, inconstitucionalidad y conflicto de poderes.</dd></div>
+<div><dt>Fiscales de Cámara</dt><dd>Mencionados en el art. 136: se notifican personalmente en su despacho, junto con el Procurador General.</dd></div>
+<div><dt>Edicto</dt><dd>Aviso público que reemplaza la notificación personal cuando se trata de personas inciertas o con domicilio ignorado (arts. 147 a 149).</dd></div>
+<div><dt>Beneficio de litigar sin gastos</dt><dd>Exención total o parcial de costas y gastos judiciales para quien carece de recursos (arts. 78 a 86).</dd></div>
+<div><dt>Recusación</dt><dd>Pedido para apartar de una causa a un juez o funcionario por una causa legal. El art. 33 la excluye para el Ministerio Público.</dd></div>
+<div><dt>Excusación</dt><dd>Apartamiento de la causa a pedido del propio funcionario, por un motivo legítimo.</dd></div>
+<div><dt>Subrogar</dt><dd>Reemplazar a quien se aparta: el art. 33 prevé dar intervención a quien debe subrogar al funcionario.</dd></div>
+<div><dt>Vista</dt><dd>Traslado de las actuaciones a una parte o a un funcionario para que se expida o responda.</dd></div>
+<div><dt>Curador provisional</dt><dd>Abogado de la matrícula nombrado al iniciarse el proceso de incapacidad; sus funciones duran hasta que se discierna la curatela definitiva o se desestima la demanda (art. 661).</dd></div>
+<div><dt>Equipo interdisciplinario</dt><dd>Un médico psiquiatra, un médico legista, un licenciado en psicología y un licenciado en trabajo social (art. 661).</dd></div>
+<div><dt>Restricción de la capacidad</dt><dd>Limitación de ciertos actos que fija la sentencia cuando no se verifica una incapacidad total (art. 667).</dd></div>
+<div><dt>Guarda</dt><dd>Medida de amparo que decreta el juez respecto de ciertas personas mayores de 18 años (arts. 237 a 239).</dd></div>
+<div><dt>Consulta</dt><dd>Revisión por la Cámara de la sentencia que declara una incapacidad y no fue apelada (art. 671).</dd></div>
+<div><dt>Caducidad de la instancia</dt><dd>Modo anormal de terminar el proceso. El art. 316 dice contra quiénes opera y a quiénes no se aplica.</dd></div>
+<div><dt>Tutor especial</dt><dd>Se nombra al menor al que se autoriza a estar en juicio (art. 652).</dd></div>
+<div><dt>Declaratoria de herederos y herencia vacante</dt><dd>Hitos del proceso sucesorio que ponen fin a la intervención del Ministerio Público (art. 721).</dd></div>
+    </dl>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p><strong>Fuente.</strong> Ley XII – N.º 27, Código Procesal Civil, Comercial, de Familia y Violencia Familiar de la Provincia de Misiones (PDF de 195 páginas). Las citas de «Lo que dice la ley» reproducen el texto del PDF y las páginas indicadas son las de ese archivo.</p>
+    <p>Esta guía es un material de estudio con fines didácticos: reformula el texto en lenguaje sencillo y no reemplaza la ley ni el asesoramiento profesional. Se limita a lo que dice el Código procesal; la organización y las funciones generales del Defensor Oficial y del Ministerio Público se rigen por otras normas que no forman parte del PDF analizado.</p>
+  </div>
+</footer>
+
+<script>
+
+(function(){
+  /* abrir / cerrar todos los detalles */
+  var btn=document.getElementById('toggleAll');
+  var all=function(){return Array.prototype.slice.call(document.querySelectorAll('details.more'));};
+  if(btn){btn.addEventListener('click',function(){
+    var open=all().some(function(d){return !d.open;});
+    all().forEach(function(d){d.open=open;});
+    btn.textContent=open?'Cerrar todos los detalles':'Abrir todos los detalles';
+  });}
+  window.addEventListener('beforeprint',function(){all().forEach(function(d){d.open=true;});});
+
+  /* si se llega por un ancla, abrir el detalle que la contiene */
+  function openFor(hash){
+    if(!hash||hash.length<2){return;}
+    var el=document.getElementById(hash.slice(1));
+    if(!el){return;}
+    var d=el.closest?el.closest('details.more'):null;
+    if(d){d.open=true;}
+    if(el.tagName==='DETAILS'){el.open=true;}
+  }
+  window.addEventListener('hashchange',function(){openFor(location.hash);});
+  openFor(location.hash);
+
+  /* navegación: sección activa */
+  var links=Array.prototype.slice.call(document.querySelectorAll('.nav a'));
+  var byId={};
+  links.forEach(function(a){byId[a.getAttribute('href').slice(1)]=a;});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){
+          links.forEach(function(l){l.classList.remove('on');});
+          if(byId[e.target.id]){byId[e.target.id].classList.add('on');}
+        }
+      });
+    },{rootMargin:'-40% 0px -55% 0px'});
+    Array.prototype.slice.call(document.querySelectorAll('main > section[id]')).forEach(function(s){io.observe(s);});
+  }
+
+  /* índice: búsqueda y filtro */
+  var q=document.getElementById('q'), list=document.getElementById('idx');
+  if(q&&list){
+    var rows=Array.prototype.slice.call(list.children);
+    var chips=Array.prototype.slice.call(document.querySelectorAll('.fchip'));
+    var count=document.getElementById('count'), empty=document.getElementById('empty');
+    var fig='all';
+    var fold=function(s){return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');};
+    rows.forEach(function(r){r._t=fold(r.textContent+' '+r.getAttribute('data-art'));});
+    function apply(){
+      var terms=fold(q.value).split(/\s+/).filter(Boolean), shown=0;
+      rows.forEach(function(r){
+        var ok=(fig==='all'||r.getAttribute('data-f')===fig)&&terms.every(function(t){return r._t.indexOf(t)>-1;});
+        r.hidden=!ok; if(ok){shown++;}
+      });
+      count.textContent='Mostrando '+shown+' de '+rows.length+' artículos';
+      empty.hidden=shown!==0;
+    }
+    q.addEventListener('input',apply);
+    chips.forEach(function(c){c.addEventListener('click',function(){
+      fig=c.getAttribute('data-f');
+      chips.forEach(function(x){x.setAttribute('aria-pressed',x===c?'true':'false');});
+      apply();
+    });});
+    apply();
+  }
+})();
+
+</script>
+</body>
+</html>
