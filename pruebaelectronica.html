@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Prueba electrónica en juicios civiles (Argentina) explicada fácil</title>
+<meta name="description" content="Guía gráfica y en lenguaje sencillo sobre la prueba electrónica en el proceso civil argentino: correos, WhatsApp, cadena de custodia y valoración.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500..800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F2F5F9;--surface:#fff;--ink:#1C2230;--muted:#586075;--line:#DCE2EC;--on:#fff;
+--c1:#2563C9;--c2:#0F7B63;--c3:#B8480E;--c4:#7B3FC7;--c5:#B5205A;--c6:#0E7490;
+--fd:"Fraunces",Georgia,"Times New Roman",serif;--fb:"Source Sans 3",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--r:16px}
+@media (prefers-color-scheme:dark){:root{--paper:#12151D;--surface:#1A1F2B;--ink:#ECEEF4;--muted:#A7AEC0;--line:#2B3242;--on:#12151D;
+--c1:#7DB0FF;--c2:#55D3B2;--c3:#FFA169;--c4:#BE9BFF;--c5:#FF8DB4;--c6:#5CD0EE}}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:1.0625rem/1.65 var(--fb);-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--fd);margin:0;line-height:1.1;letter-spacing:-.015em;text-wrap:balance}
+p{margin:0 0 1em}
+:focus-visible{outline:3px solid var(--c1);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:var(--paper);padding:10px 16px;border-radius:10px;z-index:50}
+.skip:focus{left:12px}
+.s1{--ac:var(--c1)}.s2{--ac:var(--c2)}.s3{--ac:var(--c3)}.s4{--ac:var(--c4)}.s5{--ac:var(--c5)}.s6{--ac:var(--c6)}
+.s1,.s2,.s3,.s4,.s5,.s6{--t:color-mix(in srgb,var(--ac) 13%,var(--surface));--d:color-mix(in srgb,var(--ac) 78%,var(--ink))}
+.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 90%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+.top-in{max-width:1120px;margin:0 auto;display:flex;align-items:center;gap:18px;padding:10px 24px}
+.brand{font-family:var(--fd);font-weight:700;white-space:nowrap}
+.nav{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav a{display:inline-flex;align-items:center;gap:8px;padding:7px 13px;border-radius:999px;color:var(--muted);text-decoration:none;font-weight:600;font-size:.92rem;white-space:nowrap}
+.nav a:hover{color:var(--ink);background:var(--surface)}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--ac)}
+.hero{padding:56px 0 40px}
+.kicker{color:var(--muted);font-size:.95rem;font-weight:600;max-width:64ch;margin-bottom:18px}
+h1{font-weight:800;font-size:clamp(2.2rem,5.4vw,4rem);line-height:1.02;letter-spacing:-.03em;max-width:22ch;margin-bottom:22px}
+.lead{font-size:1.18rem;max-width:62ch;color:var(--muted)}
+.lead strong{color:var(--ink)}
+.stats{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 0;padding:0;list-style:none}
+.stats li{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px 18px;font-size:.95rem}
+.stats b{font-family:var(--fd);font-size:1.5rem;margin-right:6px}
+.band{padding:64px 0}
+.band.alt{background:var(--surface);border-block:1px solid var(--line)}
+.sec{font-weight:800;font-size:clamp(1.7rem,3.4vw,2.5rem);letter-spacing:-.025em;margin-bottom:10px}
+.sub{color:var(--muted);max-width:64ch;margin-bottom:30px}
+.route{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px}
+.route.six{grid-template-columns:repeat(3,1fr)}
+.route a,.route .t{display:flex;flex-direction:column;gap:6px;height:100%;padding:18px;border-radius:var(--r);background:var(--ac);color:var(--on);text-decoration:none}
+.route a:hover{transform:translateY(-2px)}
+.route .k{font-size:.82rem;font-weight:700;opacity:.9}
+.route h3{font-size:1.15rem;color:inherit}
+.route p{margin:0;font-size:.9rem;line-height:1.45;opacity:.95}
+.flow{list-style:none;margin:0;padding:0;display:flex;align-items:stretch}
+.flow li{flex:1;position:relative;background:var(--t);border:2px solid var(--ac);border-radius:var(--r);padding:16px 18px;margin-right:34px}
+.flow li:last-child{margin-right:0}
+.flow li:not(:last-child)::after{content:"";position:absolute;right:-30px;top:50%;width:26px;height:26px;margin-top:-13px;background:var(--ac);clip-path:polygon(0 25%,55% 25%,55% 0,100% 50%,55% 100%,55% 75%,0 75%)}
+.flow b{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--ac);color:var(--on);font-family:var(--fd);margin-bottom:8px}
+.flow h3{font-size:1.05rem;margin-bottom:4px;color:var(--d)}
+.flow p{margin:0;font-size:.92rem;line-height:1.5}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.box{border-radius:var(--r);padding:22px 24px;background:var(--t);border:2px solid var(--ac)}
+.box h3{color:var(--d);font-size:1.3rem;margin-bottom:12px}
+.box ul{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.box li{padding:5px 14px;border-radius:999px;background:var(--ac);color:var(--on);font-weight:600;font-size:.92rem}
+.box p{margin:12px 0 0;font-size:.97rem}
+.cmp{width:100%;border-collapse:separate;border-spacing:0;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.cmp th,.cmp td{padding:14px 20px;text-align:left;vertical-align:top;border-top:1px solid var(--line);font-size:.98rem;line-height:1.55}
+.cmp thead th{border-top:0;font-family:var(--fd);font-size:1.1rem;color:var(--on);background:var(--c3)}
+.cmp tbody th{width:26%}
+.cmp td.hl{background:color-mix(in srgb,var(--c3) 10%,var(--surface));font-weight:600}
+.scroll{overflow-x:auto}
+.tools{position:sticky;top:57px;z-index:15;background:var(--paper);padding:14px 0;border-bottom:1px solid var(--line)}
+.tools .wrap{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.tools input{flex:1 1 260px;font:inherit;padding:11px 16px;border-radius:12px;border:2px solid var(--line);background:var(--surface);color:var(--ink)}
+.tools input:focus{border-color:var(--c1);outline:0}
+.count{color:var(--muted);font-size:.9rem}
+.art-head{display:grid;grid-template-columns:auto 1fr;gap:4px 28px;align-items:end;margin-bottom:30px}
+.numeral{grid-row:span 2;font-family:var(--fd);font-weight:800;font-size:clamp(4.5rem,11vw,8rem);line-height:.8;letter-spacing:-.05em;color:var(--ac)}
+.art-head h2{font-weight:800;font-size:clamp(1.8rem,3.6vw,2.7rem);letter-spacing:-.025em}
+.tagline{color:var(--muted);font-size:1.1rem;max-width:56ch;margin:0}
+.rng{display:inline-block;margin-top:8px;font-size:.88rem;font-weight:700;color:var(--d);background:var(--t);border-radius:999px;padding:2px 12px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-top:6px solid var(--ac);border-radius:var(--r);padding:22px 24px;display:flex;flex-direction:column;gap:12px}
+.alt .card{background:var(--paper)}
+.card .hd{display:flex;align-items:center;gap:14px}
+.n{flex:none;min-width:56px;text-align:center;padding:6px 10px;border-radius:12px;background:var(--ac);color:var(--on);font-family:var(--fd);font-weight:800;font-size:1.35rem}
+.card h3{font-size:1.25rem;line-height:1.2}
+.card p{margin:0;font-size:.99rem;line-height:1.6}
+.empty{display:none;color:var(--muted);padding:24px 0}
+.take{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 40px}
+.take li{display:grid;grid-template-columns:40px 1fr;gap:14px;align-items:start}
+.take li::before{content:"✓";width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--ink);color:var(--paper);font-family:var(--fd);font-weight:800}
+.foot{padding:48px 0 calc(64px + env(safe-area-inset-bottom,0px));color:var(--muted);font-size:.92rem}
+.foot p{max-width:80ch}
+@media (max-width:960px){.route.six{grid-template-columns:repeat(2,1fr)}.grid,.take,.duo{grid-template-columns:1fr}.flow{flex-direction:column;gap:34px}.flow li{margin-right:0}.flow li:not(:last-child)::after{right:auto;left:50%;top:auto;bottom:-30px;margin:0 0 0 -13px;transform:rotate(90deg)}}
+@media (max-width:760px){.band{padding:48px 0}.brand{display:none}.wrap,.top-in{padding-inline:18px}.route,.route.six{grid-template-columns:1fr}.art-head{grid-template-columns:1fr}.numeral{grid-row:auto}.cmp{min-width:560px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+@media print{.top,.tools,.skip{display:none}body{background:#fff}.band{padding:24px 0}.card{break-inside:avoid}}
+.n{white-space:nowrap;font-size:1rem}
+</style>
+</head>
+<body>
+<a class="skip" href="#panorama">Saltar al contenido</a>
+<header class="top"><div class="top-in">
+  <div class="brand">Prueba electrónica, en simple</div>
+  <nav class="nav" aria-label="Secciones">
+    <a href="#panorama">Panorama</a>
+    <a class="s1" href="#p1"><i class="dot"></i>La prueba</a>
+    <a class="s2" href="#p2"><i class="dot"></i>Prueba electrónica</a>
+    <a class="s3" href="#p3"><i class="dot"></i>Documentos</a>
+    <a class="s4" href="#p4"><i class="dot"></i>Correo y WhatsApp</a>
+    <a class="s5" href="#p5"><i class="dot"></i>Formas y custodia</a>
+    <a class="s6" href="#p6"><i class="dot"></i>Propuestas</a>
+    <a href="#esencial">Lo esencial</a>
+  </nav>
+</div></header>
+<main>
+<section id="panorama">
+  <div class="hero"><div class="wrap">
+    <p class="kicker">Artículo de Diego Oscar Mirkouski · Revista Pensamiento Penal (ISSN 1853-4554), agosto de 2023, N.º 480 · Prueba electrónica en el proceso civil argentino</p>
+    <h1>Los correos y los WhatsApp también son prueba en un juicio civil.</h1>
+    <p class="lead">Guía gráfica y en <strong>lenguaje sencillo</strong> sobre cómo se usan los mensajes, correos y archivos digitales como prueba en un juicio civil en Argentina. Responde: <strong>¿qué son?</strong>, <strong>¿cómo se guardan sin que se rompan?</strong> y <strong>¿cómo los mira el juez?</strong></p>
+    <ul class="stats"><li><b>3</b>elementos del documento electrónico</li><li><b>3</b>garantías que debe cumplir</li><li><b>4</b>formas de presentarla</li><li><b>2</b>medios estrella: correo y WhatsApp</li></ul>
+  </div></div>
+
+  <div class="band alt"><div class="wrap">
+    <h2 class="sec">El recorrido del artículo</h2>
+    <p class="sub">Seis bloques temáticos. Tocá uno para ir a él.</p>
+    <ol class="route six">
+      <li class="s1"><a href="#p1"><span class="k">Bloque 1</span><h3>La prueba en general</h3><p>Qué es probar, principios, carga y valoración.</p></a></li>
+      <li class="s2"><a href="#p2"><span class="k">Bloque 2</span><h3>La prueba electrónica</h3><p>Qué es, su naturaleza y sus características.</p></a></li>
+      <li class="s3"><a href="#p3"><span class="k">Bloque 3</span><h3>Documentos electrónicos</h3><p>Concepto, partes, firma y requisitos.</p></a></li>
+      <li class="s4"><a href="#p4"><span class="k">Bloque 4</span><h3>Correo y WhatsApp</h3><p>Qué dice la ley y qué dicen los jueces.</p></a></li>
+      <li class="s5"><a href="#p5"><span class="k">Bloque 5</span><h3>Formas y custodia</h3><p>Cómo se presenta y cómo se protege la prueba.</p></a></li>
+      <li class="s6"><a href="#p6"><span class="k">Bloque 6</span><h3>Propuestas y conclusión</h3><p>Qué falta y qué se puede mejorar.</p></a></li>
+    </ol>
+  </div></div>
+
+  <div class="band"><div class="wrap">
+    <h2 class="sec">El camino de una prueba electrónica</h2>
+    <p class="sub">Cuatro pasos, desde conseguirla hasta que el juez la valora.</p>
+    <ol class="flow">
+      <li class="s1"><b>1</b><h3>Conseguirla</h3><p>Capturar el correo, el chat o el archivo. Sin violar derechos.</p></li>
+      <li class="s2"><b>2</b><h3>Guardarla</h3><p>Sacar su huella digital (hash) para que no se pueda modificar.</p></li>
+      <li class="s3"><b>3</b><h3>Presentarla</h3><p>Con captura, documento, acta notarial o el propio dispositivo.</p></li>
+      <li class="s4"><b>4</b><h3>Valorarla</h3><p>El juez mira si es auténtica, íntegra y lícita.</p></li>
+    </ol>
+  </div></div>
+
+  <div class="band alt"><div class="wrap">
+    <h2 class="sec">Papel contra digital</h2>
+    <p class="sub">Las diferencias clave que explican por qué la prueba electrónica es especial.</p>
+    <div class="scroll"><table class="cmp"><thead><tr><th>Aspecto</th><th>Documento en papel</th><th>Documento electrónico</th></tr></thead><tbody>
+      <tr><th>Se puede tocar</th><td>Sí, es físico.</td><td class="hl">No, es intangible: solo se ve en una pantalla.</td></tr>
+      <tr><th>Firma</th><td>Manuscrita o sello.</td><td class="hl">Digital o electrónica (no siempre está).</td></tr>
+      <tr><th>Se modifica</th><td>Se nota con peritaje.</td><td class="hl">Se puede alterar sin dejar rastro visible.</td></tr>
+      <tr><th>Se copia</th><td>La copia se distingue del original.</td><td class="hl">Original y copia son idénticos: difícil distinguir.</td></tr>
+      <tr><th>Cómo se protege</th><td>Con firma y sello.</td><td class="hl">Con huella digital (hash) y cadena de custodia.</td></tr>
+      <tr><th>Riesgo principal</th><td>Falsificación de firma.</td><td class="hl">Alteración, borrado o suplantación de identidad.</td></tr>
+    </tbody></table></div>
+  </div></div>
+</section>
+
+<div id="arts"></div>
+
+<section id="esencial" class="band alt"><div class="wrap">
+  <h2 class="sec">Lo esencial</h2>
+  <p class="sub">Para quedarse con lo más importante.</p>
+  <ul class="take">
+    <li><span><b>Los correos y WhatsApp sí son prueba.</b> Los jueces los aceptan como principio de prueba por escrito cuando son verosímiles.</span></li>
+    <li><span><b>Hay que guardar la huella digital.</b> El hash demuestra que el archivo no fue modificado.</span></li>
+    <li><span><b>Presentar el dispositivo es clave.</b> Aportar el celular o la computadora permite al juez controlar la prueba.</span></li>
+    <li><span><b>No vale si se obtuvo ilegalmente.</b> Si se violó la intimidad o el secreto de las comunicaciones, la prueba se excluye.</span></li>
+    <li><span><b>Entre las partes no hay secretos.</b> Si el mensaje fue enviado entre quienes litigan, se puede usar en juicio.</span></li>
+    <li><span><b>Falta una ley integral.</b> El país no tiene una normativa específica y completa sobre prueba electrónica.</span></li>
+  </ul>
+</div></section>
+</main>
+<footer class="foot"><div class="wrap"><p>Resumen en lenguaje sencillo del artículo “La prueba electrónica en el proceso civil” de Diego Oscar Mirkouski (Revista Pensamiento Penal, agosto 2023, N.º 480). No reemplaza el texto original ni el asesoramiento de un profesional del derecho.</p></div></footer>
+<script>
+const P=[
+{id:1,t:"La prueba en general",r:"Sección I · Nociones preliminares",g:"Antes de hablar de computadoras y celulares, conviene entender qué es probar en un juicio.",a:[
+["Concepto","¿Qué es probar?","La Real Academia Española dice que prueba es una razón, argumento o instrumento para mostrar la verdad o falsedad de algo. En Derecho, probar es demostrar que un hecho existió o no. La prueba también es la actividad procesal que busca crear convicción en el juez."],
+["Claves","Cuatro palabras clave","Objeto: lo que se quiere probar (los hechos). Fuente: de dónde sale el conocimiento. Medio: el vehículo que la ley permite usar. Elemento: el dato concreto que se obtiene del medio."],
+["Principios","Principios generales","Necesidad (lo alegado debe probarse), unidad (se mira en conjunto), comunidad (la prueba es del proceso, no de quien la aportó), contradicción (la otra parte debe poder discutirla), legalidad (prueba ilícita no vale), inmediación (el juez debe ver de cerca), oralidad, originalidad y publicidad."],
+["Objeto","Objeto y hechos","Se prueban los hechos. El art. 377 del CPCCN dice que la carga de la prueba recae sobre quien afirma la existencia de un hecho controvertido. No todo hecho es objeto de prueba: solo los que importan para resolver el conflicto."],
+["Hechos","Hechos objeto de prueba","Hecho articulado: el que las partes introducen en sus escritos (art. 364 CPCCN). Hecho controvertido y conducente: el afirmado por una parte y no admitido por la otra, y que sirve para resolver el conflicto."],
+["Exentos","Hechos exentos de prueba","No se prueban: el hecho notorio (conocido por todos), el presumido por ley, el admitido expresamente, el no afirmado y aquel cuya prueba prohíbe la ley."],
+["Carga","Carga de la prueba","Quien afirma un hecho debe probarlo. El art. 377 CPCCN lo dice. El art. 1734 del CCyCN agrega que la carga de probar los factores de atribución y las circunstancias eximentes corresponde a quien los alega: el actor prueba los hechos constitutivos y el demandado los impeditivos y extintivos."],
+["Momentos","Momentos y valoración","Tres momentos: introductorio (ofrecer la prueba), diligenciamiento (producirla) y valoración (el juez la evalúa). Sistemas de valoración: prueba legal o tasada (la ley fija el valor), libre apreciación (el juez evalúa con libertad) y sana crítica (el juez combina lógica, experiencia y psicología)."]]},
+{id:2,t:"La prueba electrónica",r:"Sección II · En el proceso civil",g:"La información que vive en computadoras, celulares y servidores.",a:[
+["Aclaración","Libertad de prueba","El art. 378 del CPCCN dice que la prueba debe producirse por los medios previstos en la ley y por los que el juez disponga, a pedido de parte o de oficio, siempre que no afecten la moral, la libertad personal de los litigantes o de terceros, o no estén expresamente prohibidos. Los medios no previstos se aplican por analogía o los fija el juez."],
+["Concepto","¿Qué es la prueba electrónica?","Según Sanchís Crespo Carolina, es la información contenida en un dispositivo electrónico a través del cual se adquiere el conocimiento de un hecho controvertido, ya sea por convencimiento psicológico o por fijación legal."],
+["Naturaleza","Naturaleza jurídica","Según Carlos Christian Sueiro, la prueba electrónica tiene una naturaleza totalmente distinta a la prueba física: es intangible, latente, volátil y frágil o altamente sensible en su integridad e inalterabilidad."],
+["Objeto","Objeto de la prueba electrónica","Según Vaninetti, es cualquier registro generado dentro de un sistema informático (computadoras, smartphones, tablets, CDs, DVD, pen drives) o lógico, empleado para crear, generar, enviar, recibir, procesar, remitir o guardar registros, producto de la intervención humana o semejante."],
+["Intangible","Característica: intangible","Puede parecer una ventaja que sea reproducible, pero su facilidad de copiado imposibilita distinguir originales de copias. Tiene un elemento material (el soporte) y un elemento inmaterial e intangible (el archivo)."],
+["Volátil","Característica: volátil y destruible","Su fácil reproducción las hace manipulables: la información puede ser modificada o alterada por expertos sin que se detecte, si no se toman medidas de seguridad y una cadena de custodia. Las evidencias digitales pueden borrarse intencionalmente o no."],
+["Intrusiva","Característica: intrusiva","La producción de la prueba digital puede entrometerse en la vida privada de las personas, afectando derechos como la intimidad, el secreto de las comunicaciones o la protección de datos personales."],
+["Ejemplos","Ejemplos de prueba electrónica","Registros en planillas de cálculo, correos electrónicos, registros de navegación por Internet, bases de datos, documentos electrónicos, mensajes de WhatsApp, capturas de pantalla, entre otros."]]},
+{id:3,t:"Documentos electrónicos",r:"Sección III · Concepto y garantías",g:"Cómo se arma un documento digital y qué garantías debe cumplir.",a:[
+["Concepto","¿Qué es un documento electrónico?","Según Falcón, es el creado sobre un ordenador, grabado en un soporte informático y que puede ser reproducido. La ley 25.506 (sancionada en noviembre de 2001, reglamentada por decreto 2628/2002 y modificada por ley 27.446 en 2018) dice en su art. 6 que es la representación digital de actos o hechos, con independencia del soporte, y que satisface el requerimiento de escritura."],
+["Elementos","Tres elementos","Según Quadri: contenido (los datos o información), continente (el soporte: informáticos u ópticos) y grafía (el código en que está escrito, con el medio por el que se trasladan los signos y el lenguaje)."],
+["Garantía 1","Garantía: autenticidad","Es la correspondencia entre el autor aparente y el autor real. En el documento electrónico se identifica el ordenador desde el que se envía, pero no quién es el remitente. Hay que demostrar la autoría mediante la fecha de generación, identificación del autor, etc."],
+["Garantía 2","Garantía: integridad","Hay que verificar que el documento no fue modificado. En el papel se coteja con peritaje; en el electrónico se necesita una pericia informática. El documento firmado digitalmente garantiza la integridad; el resto no. Por eso se usa la huella digital o hash."],
+["Garantía 3","Garantía: licitud","La licitud se relaciona con la forma de obtención. El art. 318 del CCyCN autoriza el uso de medios electrónicos como prueba, pero protegiendo la confidencialidad de la correspondencia (art. 18 CN) y la intimidad (art. 19 CN). Si se viola un derecho fundamental, la prueba se excluye por nulidad."],
+["Firma digital","Firma digital","Es un conjunto de datos asociados a un documento electrónico que garantiza la identidad del firmante y la integridad del mensaje, mediante un procedimiento matemático. Se basa en un certificado de clave pública emitido por una autoridad certificante licenciada. Los documentos con firma digital se presumen auténticos, salvo prueba en contrario."],
+["Firma electrónica","Firma electrónica","Es cualquier conjunto de datos utilizado por el signatario como su signo de identificación, pero que no cumple los requisitos legales de la firma digital. Los documentos sin firma digital no se presumen auténticos y presentan dificultades para asignarles validez probatoria."],
+["Triple test","Requisitos de admisibilidad","Salvo que haya firma digital, un triple test debe superarse: autenticidad (quién lo hizo), integridad (no fue modificado) y licitud (se obtuvo legalmente). Según Gabet, es el test de verificación de autenticidad, integridad y licitud del documento electrónico."]]},
+{id:4,t:"Correo y WhatsApp",r:"Sección IV · Registros en particular",g:"Qué dice la ley y qué decidieron los jueces sobre estos mensajes.",a:[
+["Correo concepto","¿Qué es el correo electrónico?","La RAE lo relaciona con el sistema de transmisión de mensajes por computadora a través de redes informáticas. La Resolución 333/2001 de la Secretaría de Comunicaciones dice en su art. 1 que es toda correspondencia, mensaje, archivo, dato u otra información electrónica que se transmite a una o más personas por medio de una red de interconexión entre computadoras. Su art. 2 agrega que se equipara a la correspondencia epistolar."],
+["Correo caract","Características del correo","Electrónico (usa medios electrónicos), asíncrono (no necesita sincronía), ubicuo (permite acceso desde distintos lugares), digital (información digitalizada) e informático (relacionado con tecnologías de la información)."],
+["Correo equip","Equiparación y protección","El correo electrónico se equipara a la correspondencia epistolar. Por el art. 18 CN, es inviolable. Por el art. 75 inc. 22 CN, también está protegido por tratados internacionales: Declaración Americana, Declaración Universal, Convención Americana, Pactos Internacionales, Convención sobre los Derechos del Niño y Convención sobre los Derechos de las Personas con Discapacidad."],
+["Correo clases","Clases de correos","Según Molina Quiroga: 1) con firma y certificado digital (se presume válido salvo prueba en contrario); 2) con firma electrónica (si se desconoce, corresponde a quien la invoca acreditar su validez); 3) mensajes simples sin firmar (los más comunes, no se presumen auténticos). El instrumento privado puede prescindir de la firma si por otros medios se determina la autoría y autenticidad."],
+["Correo juris","Los correos en la justicia","La Cámara Nacional de Apelaciones en lo Comercial dijo que las constancias de correos electrónicos, por carecer de firma digital, no se equiparan a instrumentos privados, pero se pueden presentar en juicio como principio de prueba por escrito. En Skillmedia SRL c/ Estudio ML SA (2007) se dijo que no es posible negar valor probatorio a un correo cuando su contenido aparece verosímil y se pondera con las restantes pruebas y la sana crítica."],
+["WhatsApp concepto","¿Qué es WhatsApp?","Es un servicio de mensajería instantánea multiplataforma (propiedad de Facebook Inc.), utilizado masivamente en el mundo bajo el esquema freeware. Permite enviar mensajes de texto, hacer llamadas de voz y video, y enviar imágenes, videos y documentos."],
+["WhatsApp acredit","Acreditación de WhatsApp","En la demanda se debe transcribir íntegramente los mensajes con horarios. Se deben detallar: datos del titular de la cuenta, número de teléfono y compañía, código IMEI del dispositivo, datos del receptor y si los mensajes fueron vistos (tilde azul)."],
+["WhatsApp juris","WhatsApp en la justicia","Los mensajes de WhatsApp se consideran correspondencia. Si el que los presenta es parte de la conversación (envió o recibió), se pueden usar en juicio, salvo que sean confidenciales. La Sala Tercera de la Cámara de Apelaciones de Mendoza dijo que si la prueba es presentada por el titular del aparato y él es parte de la comunicación, no se discute su legalidad. La Cámara de Morón (2021) rechazó un acta notarial labrada sin intervención de la contraria porque condiciona la defensa del otro."]]},
+{id:5,t:"Formas y custodia",r:"Secciones V y VI · Acreditación y cadena",g:"Las maneras de llevar la prueba electrónica al expediente y cómo protegerla.",a:[
+["Capturas","Capturas de pantalla","Es la metodología más utilizada por los letrados: una reproducción fotográfica de la conversación. Es rápida y sencilla, pero la más débil porque se puede editar con facilidad."],
+["Documento","Documento electrónico con hash","Se acompaña el archivo original y su huella digital o hash. Según Carrasco Mayans, el hash es una cadena alfanumérica hexadecimal generada por un algoritmo que identifica de manera inequívoca el documento: el menor cambio se detecta. Bender agrega que el valor del hash es único para cada conjunto de datos."],
+["Acta","Acta notarial","Las actas ante escribano público son el segundo medio más elegido. Deben confeccionarse correctamente: el notario debe detallar los pasos de informática forense (adquisición, preservación, obtención y presentación) y, si se puede, contar con un perito informático que incluya datos filiatorios, identificación de los medios, plataforma, procedimiento, nombre del archivo, algoritmo de autenticación y resultado (hash)."],
+["Dispositivo","Aportar el dispositivo","Es de vital importancia aportar el dispositivo móvil como instrumental, con sus elementos de carga y todo complemento necesario para su uso, a fin de conservar y proteger la prueba."],
+["Custodia","¿Qué es la cadena de custodia?","Según Ramírez, es el procedimiento documentado que permite constatar la identidad, integridad y autenticidad de los vestigios o indicios de un hecho relevante, desde que son encontrados hasta que se aportan al proceso como pruebas."],
+["Principios","Principios de la cadena","Inalterabilidad de la información, aptitud técnica de quien lleva adelante los actos, documentación del proceso y cumplimiento de las normas aplicables."],
+["Buenas","Buenas prácticas","Según Vaninetti: plasmar todo en un acta con testigos, emplear guantes, fotografiar o filmar todo, enumerar los elementos informáticos, catalogarlos en una planilla, autenticar y duplicar la prueba con una copia completa, y resguardar el material en bolsas antiestáticas debidamente intervenidas."],
+["Hash","El hash, en simple","Es como la huella digital de un archivo. Si alguien cambia aunque sea un bit, la huella cambia por completo. Así se sabe si el documento fue alterado y se pueden hacer duplicados que se correspondan con el original."]]},
+{id:6,t:"Propuestas y conclusión",r:"Secciones VII y VIII · Medidas de acción",g:"Qué falta y qué se puede hacer para mejorar el sistema.",a:[
+["Capacitar","Capacitar a la gente de justicia","Formar de manera permanente a quienes trabajan en la justicia, Ministerio Público Fiscal, Ministerio Público de la Defensa y demás operadores judiciales en la temática de la prueba electrónica."],
+["Protocolo","Protocolo de custodia","Elaborar un protocolo de custodia de la prueba electrónica en los procesos, sujeto a actualización periódica."],
+["Reforma","Reforma legal integral","Existe una dispersión normativa: al no estar sistematizado, se debe recurrir a diversas normas según el problema. Se propone una reforma legal integral que ordene la materia."],
+["Políticas","Políticas públicas","Implementar políticas públicas que promuevan un mayor nivel de conocimiento de la prueba electrónica en la sociedad."],
+["Conclusión 1","Son documentos","Los registros o soportes electrónicos constituyen verdaderos documentos porque recogen expresiones del pensamiento humano o de un hecho y las incorporan a su contenido, lo que los hace capaces de acreditar la realidad de un suceso."],
+["Conclusión 2","Libertad de prueba","El derecho procesal moderno se erige sobre el principio de libertad o amplitud de prueba: las partes pueden usar todos los medios a su alcance, siempre que no estén prohibidos. El art. 378 CPCCN permite ampliar los medios probatorios para probar situaciones que requieran un encuadre procesal particular."],
+["Conclusión 3","Entre partes no hay secretos","La prohibición del art. 318 CCyCN (confidencialidad de la correspondencia) no rige entre las partes en litigio: no hay secretos entre ellas. Si el mensaje fue remitido entre las partes en conflicto, no se puede alegar confidencialidad y puede ser usado en juicio."],
+["Conclusión 4","Falta seguridad jurídica","Argentina no cuenta con una normativa específica sobre incorporación, admisión y valoración de la prueba electrónica. Hay dispersión normativa y falta de información. De nada sirve la verdad de un hecho si la prueba se obtuvo ilícitamente o se aportó incorrectamente. Los Estados deben adecuar sus leyes para brindar seguridad jurídica."]]}
+];
+document.getElementById("arts").innerHTML=P.map((p,i)=>`<section id="p${p.id}" class="band s${p.id}${i%2?"":" alt"}"><div class="wrap"><div class="art-head"><div class="numeral" aria-hidden="true">${p.id}</div><h2>${p.t}</h2><p class="tagline">${p.g}<br><span class="rng">${p.r}</span></p></div><div class="grid">${p.a.map(a=>`<article class="card"><div class="hd"><span class="n">${a[0]}</span><h3>${a[1]}</h3></div><p>${a[2]}</p></article>`).join("")}</div></div></section>`).join("");
+</script>
+</body>
+</html>
