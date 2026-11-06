@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Los Procesos Especiales, explicados fácil</title>
+<style>
+:root{--bg:#f6f7fb;--card:#fff;--ink:#16213a;--mut:#5a6785;--line:#e3e7f1;--a:#0c8599;--a2:#3b5bdb;--ok:#12a37f;--warn:#f08c00;--soft:#e3f6f9;--sh:0 8px 24px rgba(30,45,90,.08);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1424;--card:#161e35;--ink:#e8ecfa;--mut:#9ba7c8;--line:#27315a;--a:#3bc9db;--a2:#7c96ff;--ok:#3ed1a8;--warn:#ffb340;--soft:#14304a;--sh:0 8px 24px rgba(0,0,0,.35)}}
+:root[data-theme="dark"]{--bg:#0e1424;--card:#161e35;--ink:#e8ecfa;--mut:#9ba7c8;--line:#27315a;--a:#3bc9db;--a2:#7c96ff;--ok:#3ed1a8;--warn:#ffb340;--soft:#14304a;--sh:0 8px 24px rgba(0,0,0,.35)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:21}
+nav{max-width:1080px;margin:auto;display:flex;gap:6px;overflow-x:auto;padding:10px 16px;scrollbar-width:none}
+nav a{white-space:nowrap;text-decoration:none;color:var(--mut);font-size:14px;font-weight:600;padding:6px 12px;border-radius:99px}
+nav a:hover{background:var(--soft);color:var(--a)}
+main{max-width:1080px;margin:auto;padding:0 16px 60px}
+.hero{margin:28px 0 8px;padding:44px 28px;border-radius:28px;color:#fff;background:linear-gradient(135deg,#0b7285,#3b5bdb 65%,#7048e8);position:relative;overflow:hidden;box-shadow:var(--sh)}
+.hero::after{content:"🧭";position:absolute;right:-10px;bottom:-40px;font-size:200px;opacity:.15}
+.hero h1{font-size:clamp(28px,5vw,46px);line-height:1.15;margin:0 0 12px;max-width:640px}
+.hero p{max-width:600px;font-size:18px;margin:0 0 22px;opacity:.95}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chips span{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.3);padding:8px 14px;border-radius:14px;font-size:14px}
+.chips b{font-size:20px;display:block}
+section{margin-top:56px}
+.tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--a);background:var(--soft);padding:4px 10px;border-radius:99px}
+h2{font-size:clamp(24px,3.5vw,32px);margin:10px 0 8px;line-height:1.2}
+.lead{color:var(--mut);max-width:720px;margin:0 0 22px}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:var(--sh)}
+.card h3{margin:6px 0;font-size:18px}
+.card p{margin:0;color:var(--mut);font-size:15px}
+.ico{font-size:30px}
+.card.hl{border:2px solid var(--a);background:linear-gradient(var(--soft),var(--card))}
+.flow{display:grid;gap:10px;grid-template-columns:1fr;align-items:stretch}
+@media(min-width:760px){.flow{grid-template-columns:1fr auto 1fr auto 1fr}}
+.flow .arrow{align-self:center;text-align:center;font-size:26px;color:var(--a);transform:rotate(90deg)}
+@media(min-width:760px){.flow .arrow{transform:none}}
+.num{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--a);color:#fff;font-weight:700;font-size:14px}
+.pill{display:inline-block;font-size:13px;font-weight:700;padding:3px 10px;border-radius:99px;background:var(--soft);color:var(--a)}
+.note{margin-top:16px;padding:14px 18px;border-left:4px solid var(--warn);background:var(--card);border-radius:0 14px 14px 0;font-size:15px;color:var(--mut)}
+button{font:inherit;cursor:pointer}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 14px}
+.tabs button{flex:0 0 auto;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:16px;padding:10px 14px;font-size:14px;font-weight:600;text-align:center}
+.tabs button span{display:block;font-size:22px}
+.tabs button.on{border-color:var(--a);box-shadow:0 0 0 3px var(--soft);background:var(--soft)}
+#px h3{margin:0 0 6px;font-size:24px}
+#px .cols{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:14px}
+#px .box{background:var(--soft);border-radius:14px;padding:12px 16px}
+#px .box b{display:block;font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:var(--a);margin-bottom:4px}
+#px ul{margin:0;padding-left:18px;color:var(--mut);font-size:15px}
+#px .art{font-size:13px;color:var(--mut);margin-top:12px}
+.btns{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.btns button{border:1px solid var(--line);background:var(--card);color:var(--ink);padding:9px 14px;border-radius:12px;font-size:14px;text-align:left}
+.btns button.on{background:var(--a);color:#fff;border-color:var(--a)}
+#ans{min-height:64px;padding:16px;border-radius:16px;background:var(--soft);font-size:15px}
+.chart{display:grid;gap:16px}
+.row .lbl{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:14px;font-weight:600;margin-bottom:5px}
+.row .lbl span{color:var(--mut);font-weight:400}
+.track{height:14px;border-radius:9px;background:var(--line);overflow:hidden}
+.track i{display:block;height:100%;width:0;border-radius:9px;background:linear-gradient(90deg,var(--ok),var(--a),var(--a2));transition:width .9s cubic-bezier(.2,.8,.2,1)}
+.scale{display:flex;justify-content:space-between;font-size:12px;color:var(--mut);margin-top:6px}
+.steps{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));counter-reset:s}
+.steps .card{position:relative;padding-top:34px}
+.steps .card::before{counter-increment:s;content:counter(s);position:absolute;top:-12px;left:18px;width:30px;height:30px;border-radius:50%;background:var(--a);color:#fff;display:grid;place-items:center;font-weight:700;font-size:14px}
+.big{display:grid;gap:12px;margin-top:18px}
+.big .b{display:flex;align-items:center;gap:10px;font-size:14px}
+.big .b em{font-style:normal;width:120px;flex:0 0 auto;color:var(--mut)}
+.big .t{flex:1;height:18px;border-radius:9px;background:var(--line);overflow:hidden}
+.big .t i{display:block;height:100%;width:0;border-radius:9px;background:linear-gradient(90deg,var(--ok),var(--a));transition:width .9s cubic-bezier(.2,.8,.2,1)}
+.big strong{width:64px;flex:0 0 auto}
+details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 16px;margin:8px 0}
+summary{cursor:pointer;font-weight:700}
+details p{margin:8px 0 2px;color:var(--mut);font-size:15px}
+footer{margin-top:60px;padding:22px;border-radius:20px;background:var(--card);border:1px solid var(--line);font-size:14px;color:var(--mut)}
+footer p{margin:6px 0}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.track i,.big .t i{transition:none}}
+</style>
+</head>
+<body>
+<header class="top"><nav>
+<a href="#inicio">Inicio</a><a href="#que-son">¿Qué son?</a><a href="#explorador">Explorador</a><a href="#rapidez">Escala de trámite</a><a href="#interdictos">Interdictos</a><a href="#desalojo">Desalojo</a><a href="#fuerza">La decisión</a><a href="#glosario">Glosario</a>
+</nav></header>
+<main>
+<div class="hero" id="inicio">
+<h1>Los Procesos Especiales, explicados fácil</h1>
+<p>Son los juicios que la ley arma “a medida” para problemas muy típicos: que te saquen una propiedad, que no te rindan cuentas, que te ocupen un inmueble. Recorrelos módulo por módulo.</p>
+<div class="chips"><span><b>6 procesos</b>en el Libro IV del Código</span><span><b>1 año</b>para pedir ciertos interdictos</span><span><b>5, 10 o 90 días</b>para el lanzamiento en un desalojo</span></div>
+</div>
+
+<section id="que-son"><span class="tag">Módulo 1</span><h2>¿Qué es un proceso especial?</h2>
+<p class="lead">El juicio ordinario sirve para casi todo, pero hay conflictos tan repetidos que la ley prefirió darles un camino propio, con reglas más rápidas o más adecuadas.</p>
+<div class="flow">
+<div class="card"><span class="ico">🧩</span><h3>1. Un problema típico</h3><p>Por ejemplo: alguien te despoja de tu casa, un inquilino no paga, o un socio no rinde cuentas.</p></div>
+<div class="arrow">➜</div>
+<div class="card"><span class="ico">🛠️</span><h3>2. Reglas a medida</h3><p>La ley fija requisitos, plazos o pruebas propios. A veces el trámite es más corto, a veces tiene pasos extra.</p></div>
+<div class="arrow">➜</div>
+<div class="card hl"><span class="ico">🎯</span><h3>3. Solución adecuada</h3><p>Se llega a una decisión que resuelve ese problema concreto: devolver un bien, ordenar rendir cuentas, fijar límites.</p></div>
+</div>
+<div class="note"><b>Dato útil:</b> en el Código de Misiones (Ley XII N.º 27), el Libro IV agrupa los procesos especiales. Muchos “toman prestado” el trámite ordinario o el sumarísimo y le agregan detalles propios. Los procesos de familia, como la adopción, tienen su lugar en el Libro V.</div>
+</section>
+
+<section id="explorador"><span class="tag">Módulo 2</span><h2>Explorador de los seis procesos</h2>
+<p class="lead">Tocá cada uno para ver para qué sirve, un ejemplo, cómo tramita y qué tiene de particular.</p>
+<div class="tabs" id="tabs"></div>
+<div class="card" id="px"></div>
+</section>
+
+<section id="rapidez"><span class="tag">Módulo 3</span><h2>Escala de trámite: de directo a completo</h2>
+<p class="lead">Cuanto más larga es la barra, más completo y extenso es el trámite que la ley prevé para ese proceso.</p>
+<div class="chart card" id="chart"></div>
+<div class="scale" style="padding:0 20px"><span>Más directo</span><span>Más completo</span></div>
+</section>
+
+<section id="interdictos"><span class="tag">Módulo 4</span><h2>Interdictos: ¿cuál me corresponde?</h2>
+<p class="lead">Los interdictos protegen la posesión o la tenencia de una cosa. Hay cuatro. Elegí tu situación.</p>
+<div class="btns" id="cases"></div><div id="ans">Elegí una situación para ver qué interdicto corresponde.</div>
+<div class="grid" style="margin-top:16px">
+<div class="card"><span class="ico">⏳</span><h3>Hay un límite de tiempo</h3><p>Retener, recobrar y obra nueva no se pueden pedir después de un año desde los hechos (art. 591).</p></div>
+<div class="card"><span class="ico">🔁</span><h3>No cierran el tema para siempre</h3><p>La sentencia no impide que después se discutan los derechos de fondo con una acción real (art. 592).</p></div>
+</div>
+</section>
+
+<section id="desalojo"><span class="tag">Módulo 5</span><h2>Desalojo paso a paso</h2>
+<p class="lead">Sirve para recuperar un inmueble de quien lo ocupa y debe devolverlo: inquilinos, ocupantes precarios, intrusos y otros (art. 624). Tramita como juicio ordinario con reglas propias (art. 623).</p>
+<div class="steps">
+<div class="card"><h3>Demanda</h3><p>El dueño o quien tiene derecho a recuperar el inmueble demanda. Debe decir si hay sublocatarios u otros ocupantes (art. 628).</p></div>
+<div class="card"><h3>Mirada del juez</h3><p>En algunas causas, como uso abusivo o intrusión, el juez va al lugar antes del traslado, dentro de 5 días, con el Defensor Oficial (art. 626).</p></div>
+<div class="card"><h3>Entrega anticipada</h3><p>Contra intrusos, o por falta de pago, vencimiento o abandono, se puede pedir la entrega inmediata si el derecho es verosímil y se deja una garantía (arts. 625 y 627).</p></div>
+<div class="card"><h3>Prueba acotada</h3><p>Si el motivo es falta de pago o fin del contrato, solo se admite prueba documental y pericial (art. 632).</p></div>
+<div class="card"><h3>Sentencia</h3><p>Alcanza a todos los ocupantes, aunque no hayan sido nombrados ni se hayan presentado (art. 634).</p></div>
+<div class="card"><h3>Lanzamiento</h3><p>Es la salida efectiva del inmueble. El plazo depende de cada caso (art. 633).</p></div>
+</div>
+<h3 style="margin-top:28px">¿En cuántos días se ordena el lanzamiento?</h3>
+<div class="big card" id="big"></div>
+<div class="note"><b>Para tener en cuenta:</b> la demanda puede presentarse antes de que venza el plazo del contrato; en ese caso la sentencia se cumple cuando venza (art. 635).</div>
+</section>
+
+<section id="fuerza"><span class="tag">Módulo 6</span><h2>¿Qué fuerza tiene la decisión?</h2>
+<p class="lead">En los procesos especiales, no siempre la última palabra es definitiva. Depende del proceso.</p>
+<div class="grid">
+<div class="card hl"><span class="ico">🏠</span><h3>Interdictos</h3><p>Resuelven quién tiene el bien hoy. Los derechos de fondo pueden discutirse después en otro juicio.</p></div>
+<div class="card"><span class="ico">📐</span><h3>Mensura</h3><p>Mide el terreno. No afecta los derechos de dominio ni de posesión que cada dueño pueda tener (art. 603).</p></div>
+<div class="card"><span class="ico">⚡</span><h3>Medida autosatisfactiva</h3><p>Se cumple de inmediato. Quien la impugna elige: apelar o iniciar el proceso de conocimiento; elegida una vía, pierde la otra (art. 638).</p></div>
+<div class="card"><span class="ico">📊</span><h3>Rendición de cuentas</h3><p>Si la persona obligada no rinde cuentas en el plazo que fija el juez, se tienen por aprobadas las del actor, salvo que se pruebe que son inexactas (art. 596).</p></div>
+</div>
+<div class="note">Según la doctrina que explica Picchio, los juicios sumarios en sentido estricto dejan abierta la discusión en un juicio ordinario posterior; los “plenarios rápidos” cierran el tema con cosa juzgada material.</div>
+</section>
+
+<section id="glosario"><span class="tag">Módulo 7</span><h2>Glosario sin vueltas</h2>
+<details><summary>Posesión y tenencia</summary><p>Poseer es comportarse como dueño de una cosa. Tener (tenencia) es usarla reconociendo que pertenece a otro, como hace un inquilino.</p></details>
+<details><summary>Interdicto</summary><p>Juicio breve para proteger una situación de hecho sobre una cosa, sin discutir quién es el dueño.</p></details>
+<details><summary>Despojo</summary><p>Quitarle a alguien la cosa que poseía o tenía, con violencia o a escondidas.</p></details>
+<details><summary>Obra nueva</summary><p>Construcción recién empezada que perjudica a un inmueble vecino.</p></details>
+<details><summary>Rendición de cuentas</summary><p>Informe detallado de ingresos y gastos que debe presentar quien administró bienes o dinero de otro.</p></details>
+<details><summary>Mensura y deslinde</summary><p>La mensura mide un terreno. El deslinde fija sus límites con los vecinos; después se colocan mojones, que son las marcas físicas del límite (amojonamiento).</p></details>
+<details><summary>Agrimensor</summary><p>Profesional que mide terrenos y prepara los planos.</p></details>
+<details><summary>Caución</summary><p>Garantía que se deja para responder por los daños que una medida pueda causar si resulta injusta.</p></details>
+<details><summary>Lanzamiento</summary><p>Orden de sacar a quien ocupa un inmueble, con ayuda de la fuerza pública si hace falta.</p></details>
+<details><summary>Medida autosatisfactiva</summary><p>Orden urgente del juez que agota por sí misma lo que se pedía, sin juicio posterior obligatorio.</p></details>
+</section>
+
+<footer>
+<p><b>Fuentes:</b> Código Procesal Civil, Comercial, de Familia y Violencia Familiar de Misiones (Ley XII N.º 27), Libro IV, arts. 576 a 639; Picchio, D. B., “Los diferentes tipos de proceso”.</p>
+<p>Material educativo en lenguaje simple. Los plazos pueden cambiar con las reformas; para un caso concreto, consultá el texto vigente o a un profesional del derecho.</p>
+</footer>
+</main>
+<script>
+var P=[
+{i:"🏠",n:"Interdictos y acciones posesorias",u:"Proteger o recuperar la posesión o la tenencia de una cosa.",e:"Te sacaron la casa con violencia, o un vecino empezó una obra que invade tu terreno.",t:"Sumarísimo (acciones posesorias: ordinario)",l:["Hay cuatro interdictos: adquirir, retener, recobrar y obra nueva","La prueba se limita a la posesión, la perturbación o el despojo y su fecha","Retener, recobrar y obra nueva se piden dentro del año de los hechos"],a:"Arts. 576 a 593"},
+{i:"🚨",n:"Daño temido y reparaciones urgentes",u:"Evitar un daño grave e inminente que viene de un edificio o cosa.",e:"Una pared amenaza con caer sobre tu casa, o el vecino se niega a reparar una avería que te inunda.",t:"Sin forma de juicio",l:["El juez va al lugar y puede ordenar medidas de seguridad","Si interviene la autoridad administrativa, se archiva","Las resoluciones no se pueden apelar"],a:"Arts. 594 y 595"},
+{i:"📊",n:"Rendición de cuentas",u:"Exigir cuentas a quien administró bienes o dinero de otro, o que se aprueben las que presenta.",e:"Un administrador manejó tu herencia o tu consorcio y no presenta los números.",t:"Ordinario; incidente si la obligación está clara",l:["Se avisa con la advertencia de dar por aprobadas las cuentas del actor si no se contesta","Las partidas razonables sin recibo pueden darse por justificadas","Se puede reclamar el saldo reconocido sin esperar el final"],a:"Arts. 596 a 601"},
+{i:"📐",n:"Mensura y deslinde",u:"Medir un terreno y fijar sus límites con los vecinos.",e:"Los límites de tu campo se confundieron con los del vecino.",t:"Mensura por solicitud; deslinde judicial por ordinario",l:["La hace un agrimensor, con edictos por 3 días y aviso a los vecinos","Una oposición no impide la medición","Si nadie se opone, el juez nombra perito y se da traslado por 10 días"],a:"Arts. 602 a 619"},
+{i:"🤲",n:"División de cosas comunes",u:"Dividir un bien que pertenece a varias personas.",e:"Dos hermanos son dueños de un terreno y no se ponen de acuerdo en cómo repartirlo.",t:"Ordinario",l:["La sentencia decide, si se puede, cómo se divide","Después hay una audiencia para nombrar a un perito y acordar la forma","También se puede aprobar una división hecha por fuera del juicio"],a:"Arts. 620 a 622"},
+{i:"🔑",n:"Desalojo",u:"Recuperar un inmueble de quien lo ocupa y debe devolverlo.",e:"El inquilino no paga el alquiler o venció el contrato y no se va.",t:"Ordinario con modalidades propias",l:["Procede contra inquilinos, sublocatarios, intrusos y otros ocupantes","Puede haber entrega inmediata con garantía","El lanzamiento se ordena a los 5, 10 o 90 días, según el caso"],a:"Arts. 623 a 635"},
+{i:"⚡",n:"Medidas autosatisfactivas",u:"Obtener una solución urgente y puntual cuando es impostergable.",e:"Hace falta que cese ya una conducta ilegal y no existe otra vía para frenarla.",t:"Decreto directo o con una audiencia mínima",l:["El juez puede decretarla sin dar traslado","Puede exigir garantía","Se notifica en el día, hasta en días y horas inhábiles"],a:"Arts. 636 a 639"}
+];
+var tb=document.getElementById("tabs"),px=document.getElementById("px");
+function sh(k){[].forEach.call(tb.children,function(b,j){b.classList.toggle("on",j===k)});var x=P[k];
+px.innerHTML='<span class="pill">'+x.t+'</span><h3>'+x.i+" "+x.n+'</h3><p>'+x.u+'</p><div class="cols"><div class="box"><b>Un ejemplo</b><p>'+x.e+'</p></div><div class="box"><b>Lo particular</b><ul>'+x.l.map(function(s){return"<li>"+s+"</li>"}).join("")+'</ul></div></div><p class="art">Dónde está en el Código: '+x.a+'</p>'}
+P.forEach(function(x,k){var b=document.createElement("button");b.innerHTML="<span>"+x.i+"</span>"+x.n.split(" y ")[0];b.onclick=function(){sh(k)};tb.appendChild(b)});sh(0);
+var C=[
+{q:"Quiero la posesión de una cosa que nadie posee y tengo título",a:"<b>Interdicto de adquirir.</b> El juez examina el título y, si es suficiente, otorga la posesión o la tenencia, sin perjuicio de mejor derecho. Si otra persona también tiene título o posee el bien, la cuestión pasa a juicio ordinario (arts. 577 y 578)."},
+{q:"Alguien me perturba o amenaza en la cosa que ocupo",a:"<b>Interdicto de retener.</b> Se pide cuando uno tiene la posesión o tenencia actual y alguien la perturba con actos materiales o amenaza hacerlo. Tramita como juicio sumarísimo (arts. 580 y 581)."},
+{q:"Me sacaron la cosa con violencia o a escondidas",a:"<b>Interdicto de recobrar.</b> Procede si se tuvo la posesión o tenencia y hubo despojo con violencia o clandestinidad. Si el derecho es verosímil, el juez puede ordenar la restitución inmediata con una fianza (arts. 584 a 586)."},
+{q:"Un vecino empezó una obra que afecta mi inmueble",a:"<b>Interdicto de obra nueva.</b> El juez puede suspender la obra preventivamente. No se admite si la obra ya terminó o está por terminar. La sentencia puede disponer la suspensión definitiva o la destrucción, a costa del vencido (arts. 589 y 590)."}
+];
+var cs=document.getElementById("cases"),an=document.getElementById("ans");
+C.forEach(function(c){var b=document.createElement("button");b.textContent=c.q;b.onclick=function(){[].forEach.call(cs.children,function(x){x.classList.remove("on")});b.classList.add("on");an.innerHTML=c.a};cs.appendChild(b)});
+var R=[["Medida autosatisfactiva","Decreto directo",1],["Reparaciones urgentes y daño temido","Sin forma de juicio",1.5],["Interdictos de retener, recobrar y obra nueva","Sumarísimo",2.5],["Rendición de cuentas con base clara","Incidente",3],["Desalojo","Ordinario con reglas propias",4],["División de cosas comunes, deslinde y rendición","Ordinario",5]];
+var ch=document.getElementById("chart");ch.innerHTML=R.map(function(r){return'<div class="row"><div class="lbl">'+r[0]+' <span>'+r[1]+'</span></div><div class="track"><i data-w="'+r[2]/5*100+'"></i></div></div>'}).join("");
+var L=[["Sin título legítimo",5],["Con título legítimo (falta de pago, fin de contrato)",10],["Con título legítimo, en los demás casos",90]];
+var bg=document.getElementById("big");bg.innerHTML=L.map(function(r){return'<div style="margin:0"><div style="font-size:14px;font-weight:600;margin-bottom:4px">'+r[0]+'</div><div class="b"><div class="t"><i data-w="'+Math.max(r[1]/90*100,3)+'"></i></div><strong>'+r[1]+" días</strong></div></div>"}).join("");
+function grow(el){[].forEach.call(el.querySelectorAll("i[data-w]"),function(e){e.style.width=e.dataset.w+"%"})}
+[ch,bg].forEach(function(el){if("IntersectionObserver" in window){new IntersectionObserver(function(e,o){if(e[0].isIntersecting){grow(el);o.disconnect()}},{threshold:.2}).observe(el)}else{grow(el)}});
+</script>
+</body>
+</html>
