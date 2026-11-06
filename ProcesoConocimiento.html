@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>El Proceso de Conocimiento, explicado fácil</title>
+<style>
+:root{--bg:#f6f7fb;--card:#fff;--ink:#16213a;--mut:#5a6785;--line:#e3e7f1;--a:#3b5bdb;--a2:#7048e8;--ok:#12a37f;--warn:#f08c00;--soft:#eef1ff;--sh:0 8px 24px rgba(30,45,90,.08);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1426;--card:#171e36;--ink:#e8ecfa;--mut:#9ba7c8;--line:#27315a;--a:#7c96ff;--a2:#a98bff;--ok:#3ed1a8;--warn:#ffb340;--soft:#1e2748;--sh:0 8px 24px rgba(0,0,0,.35)}}
+:root[data-theme="dark"]{--bg:#0f1426;--card:#171e36;--ink:#e8ecfa;--mut:#9ba7c8;--line:#27315a;--a:#7c96ff;--a2:#a98bff;--ok:#3ed1a8;--warn:#ffb340;--soft:#1e2748;--sh:0 8px 24px rgba(0,0,0,.35)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:21}
+nav{max-width:1080px;margin:auto;display:flex;gap:6px;overflow-x:auto;padding:10px 16px;scrollbar-width:none}
+nav a{white-space:nowrap;text-decoration:none;color:var(--mut);font-size:14px;font-weight:600;padding:6px 12px;border-radius:99px}
+nav a:hover{background:var(--soft);color:var(--a)}
+main{max-width:1080px;margin:auto;padding:0 16px 60px}
+.hero{margin:28px 0 8px;padding:44px 28px;border-radius:28px;color:#fff;background:linear-gradient(135deg,#3b5bdb,#7048e8 60%,#c2255c);position:relative;overflow:hidden;box-shadow:var(--sh)}
+.hero::after{content:"⚖️";position:absolute;right:-10px;bottom:-40px;font-size:200px;opacity:.15}
+.hero h1{font-size:clamp(28px,5vw,46px);line-height:1.15;margin:0 0 12px;max-width:640px}
+.hero p{max-width:600px;font-size:18px;margin:0 0 22px;opacity:.95}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chips span{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.3);padding:8px 14px;border-radius:14px;font-size:14px}
+.chips b{font-size:20px;display:block}
+section{margin-top:56px}
+.tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--a);background:var(--soft);padding:4px 10px;border-radius:99px}
+h2{font-size:clamp(24px,3.5vw,32px);margin:10px 0 8px;line-height:1.2}
+.lead{color:var(--mut);max-width:720px;margin:0 0 22px}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:var(--sh)}
+.card h3{margin:6px 0;font-size:18px}
+.card p{margin:0;color:var(--mut);font-size:15px}
+.ico{font-size:30px}
+.card.hl{border:2px solid var(--a);background:linear-gradient(var(--soft),var(--card))}
+.flow{display:grid;gap:10px;grid-template-columns:1fr;align-items:stretch}
+@media(min-width:760px){.flow{grid-template-columns:1fr auto 1fr auto 1fr}}
+.flow .arrow{align-self:center;text-align:center;font-size:26px;color:var(--a);transform:rotate(90deg)}
+@media(min-width:760px){.flow .arrow{transform:none}}
+.num{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--a);color:#fff;font-weight:700;font-size:14px}
+.two{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.two ul{margin:10px 0 0;padding-left:20px;color:var(--mut);font-size:15px}
+.two li{margin:4px 0}
+.pill{display:inline-block;font-size:13px;font-weight:700;padding:3px 10px;border-radius:99px;background:var(--soft);color:var(--a)}
+.note{margin-top:16px;padding:14px 18px;border-left:4px solid var(--warn);background:var(--card);border-radius:0 14px 14px 0;font-size:15px;color:var(--mut)}
+.btns{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+button{font:inherit;cursor:pointer}
+.btns button{border:1px solid var(--line);background:var(--card);color:var(--ink);padding:9px 14px;border-radius:12px;font-size:14px}
+.btns button.on{background:var(--a);color:#fff;border-color:var(--a)}
+#ans{min-height:64px;padding:16px;border-radius:16px;background:var(--soft);font-size:15px}
+.steps{display:flex;gap:8px;overflow-x:auto;padding:6px 2px 14px}
+.steps button{flex:0 0 auto;min-width:112px;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:16px;padding:10px;text-align:center;font-size:13px;font-weight:600}
+.steps button .num{display:grid;margin:0 auto 6px;background:var(--line);color:var(--mut)}
+.steps button.on{border-color:var(--a);box-shadow:0 0 0 3px var(--soft)}
+.steps button.on .num,.steps button.done .num{background:var(--a);color:#fff}
+.bar{height:6px;border-radius:9px;background:var(--line);overflow:hidden;margin-bottom:14px}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--a),var(--a2));transition:width .4s}
+#panel h3{margin:0 0 6px;font-size:22px}
+#panel .when{margin:8px 0 12px}
+#panel .art{font-size:13px;color:var(--mut);margin-top:12px}
+.nav2{display:flex;justify-content:space-between;margin-top:14px}
+.nav2 button{background:var(--a);color:#fff;border:0;padding:9px 18px;border-radius:12px;font-weight:600}
+.nav2 button:disabled{opacity:.35;cursor:default}
+.chart{display:grid;gap:18px}
+.row .lbl{display:flex;justify-content:space-between;font-size:14px;font-weight:600;margin-bottom:5px}
+.row .lbl span{color:var(--mut);font-weight:400}
+.b{display:flex;align-items:center;gap:8px;margin:4px 0;font-size:13px}
+.b em{font-style:normal;width:84px;color:var(--mut);flex:0 0 auto}
+.b div{height:16px;border-radius:8px;min-width:4px;width:0;transition:width .9s cubic-bezier(.2,.8,.2,1)}
+.b strong{font-size:13px}
+.o{background:linear-gradient(90deg,var(--a),var(--a2))}.s{background:linear-gradient(90deg,var(--ok),#74d680)}
+.legend{display:flex;gap:16px;font-size:13px;color:var(--mut);margin-bottom:10px}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:4px;margin-right:6px;vertical-align:-1px}
+details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 16px;margin:8px 0}
+summary{cursor:pointer;font-weight:700}
+details p{margin:8px 0 2px;color:var(--mut);font-size:15px}
+footer{margin-top:60px;padding:22px;border-radius:20px;background:var(--card);border:1px solid var(--line);font-size:14px;color:var(--mut)}
+footer p{margin:6px 0}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.b div,.bar i{transition:none}}
+</style>
+</head>
+<body>
+<header class="top"><nav>
+<a href="#inicio">Inicio</a><a href="#que-es">¿Qué es?</a><a href="#familia">Tipos de proceso</a><a href="#caminos">Dos caminos</a><a href="#paso">Paso a paso</a><a href="#plazos">Plazos</a><a href="#sentencia">La sentencia</a><a href="#glosario">Glosario</a>
+</nav></header>
+<main>
+<div class="hero" id="inicio">
+<h1>El Proceso de Conocimiento, explicado fácil</h1>
+<p>Es el juicio en el que una persona le pide a un juez que decida quién tiene razón. Acá lo recorremos en módulos cortos, sin palabras difíciles.</p>
+<div class="chips"><span><b>15 días</b>para contestar una demanda</span><span><b>hasta 40 días</b>para producir prueba</span><span><b>2 caminos</b>en Misiones: ordinario y sumarísimo</span></div>
+</div>
+
+<section id="que-es"><span class="tag">Módulo 1</span><h2>¿Qué es un proceso de conocimiento?</h2>
+<p class="lead">“Conocer” significa que el juez se informa a fondo del problema: escucha a las dos partes, mira las pruebas y, al final, declara con certeza qué derecho existe y cuál no.</p>
+<div class="flow">
+<div class="card"><span class="ico">❓</span><h3>1. Hay una duda</h3><p>Dos personas no se ponen de acuerdo. Por ejemplo, alguien dice que le deben dinero y la otra persona lo niega.</p></div>
+<div class="arrow">➜</div>
+<div class="card"><span class="ico">🔎</span><h3>2. El juez investiga</h3><p>Cada parte cuenta su versión y presenta pruebas: documentos, testigos, peritos. Las dos son escuchadas.</p></div>
+<div class="arrow">➜</div>
+<div class="card hl"><span class="ico">✅</span><h3>3. Llega la certeza</h3><p>La sentencia dice quién tiene razón. Esa decisión es definitiva y obliga a ambas partes.</p></div>
+</div>
+<div class="note"><b>La clave:</b> en estos juicios, al comenzar, nadie sabe todavía quién tiene razón. Esa incertidumbre es lo que el proceso viene a resolver. En otros juicios, como los de ejecución, el derecho ya está claro y solo falta cobrarlo.</div>
+</section>
+
+<section id="familia"><span class="tag">Módulo 2</span><h2>El lugar del proceso de conocimiento</h2>
+<p class="lead">La ley no tiene un solo tipo de juicio porque no todos los problemas son iguales. Cada tipo sirve para algo distinto.</p>
+<div class="grid">
+<div class="card hl"><span class="ico">⚖️</span><h3>De conocimiento</h3><p>Se discute y se decide quién tiene razón. Ejemplo: una persona reclama un crédito que la otra niega.</p></div>
+<div class="card"><span class="ico">📄</span><h3>De ejecución</h3><p>El derecho ya consta en un documento y solo se busca que se cumpla. Ejemplo: cobrar un pagaré.</p></div>
+<div class="card"><span class="ico">🛡️</span><h3>Cautelares</h3><p>Protegen algo mientras dura el juicio. Ejemplo: evitar que alguien oculte sus bienes.</p></div>
+<div class="card"><span class="ico">🤝</span><h3>Voluntarios</h3><p>Las partes están de acuerdo y piden al juez que dé firmeza a una situación.</p></div>
+<div class="card"><span class="ico">🏛️</span><h3>Universales</h3><p>Se resuelven muchos reclamos juntos para repartir un conjunto de bienes. Ejemplo: sucesiones.</p></div>
+<div class="card"><span class="ico">👥</span><h3>Arbitrales</h3><p>Las partes eligen a personas de su confianza (árbitros) para que decidan, en lugar de un juez.</p></div>
+</div>
+</section>
+
+<section id="caminos"><span class="tag">Módulo 3</span><h2>Dos caminos: ordinario y sumarísimo</h2>
+<p class="lead">Dentro del proceso de conocimiento hay un camino largo y completo, y otro más corto. En ambos el juez termina decidiendo el fondo del asunto.</p>
+<div class="two">
+<div class="card hl"><span class="pill">Camino principal</span><h3>Juicio ordinario</h3><p>Es el juicio “modelo”. Se usa para todo lo que la ley no manda tramitar de otra forma.</p><ul><li>Plazos más largos y todas las pruebas posibles</li><li>Se pueden plantear defensas previas y reconvención</li><li>Hay alegatos antes de la sentencia</li></ul></div>
+<div class="card"><span class="pill" style="color:var(--ok)">Camino rápido</span><h3>Juicio sumarísimo</h3><p>Más corto, para casos urgentes o de muy poco monto.</p><ul><li>Casi todos los plazos son de 3 días</li><li>No hay defensas previas, reconvención ni alegatos</li><li>Solo se apela la sentencia final y las medidas de protección</li></ul></div>
+</div>
+<h3 style="margin-top:26px">¿Cuál camino le toca a cada caso?</h3>
+<div class="btns" id="cases"></div><div id="ans">Elegí una situación para ver qué camino corresponde.</div>
+<div class="note"><b>Para que no te confundas:</b> en libros y apuntes más antiguos aparece también el “juicio sumario”. La doctrina explica que los juicios llamados sumario y sumarísimo son en realidad procesos “plenarios rápidos”: tratan todo el conflicto, solo que con trámites más simples. El Código de Misiones (Ley XII N.º 27) regula hoy el ordinario y el sumarísimo, y el juez puede elegir el tipo de trámite cuando el valor reclamado no se puede medir en dinero (art. 322).</div>
+</section>
+
+<section id="paso"><span class="tag">Módulo 4</span><h2>Paso a paso del juicio ordinario</h2>
+<p class="lead">Tocá cada etapa para ver qué pasa, en cuánto tiempo y qué artículo del Código de Misiones lo regula.</p>
+<div class="bar"><i id="prog"></i></div>
+<div class="steps" id="steps"></div>
+<div class="card" id="panel"></div>
+<div class="nav2"><button id="prev">← Anterior</button><button id="next">Siguiente →</button></div>
+</section>
+
+<section id="plazos"><span class="tag">Módulo 5</span><h2>Gráfico de plazos: largo vs. rápido</h2>
+<p class="lead">Así se comparan los tiempos máximos que fija el Código en cada etapa (en días).</p>
+<div class="legend"><span><i class="o"></i>Ordinario</span><span><i class="s"></i>Sumarísimo</span></div>
+<div class="chart card" id="chart"></div>
+</section>
+
+<section id="sentencia"><span class="tag">Módulo 6</span><h2>La sentencia y su fuerza</h2>
+<p class="lead">No todas las sentencias “cierran” el tema para siempre. Depende de cuánto conoció el juez.</p>
+<div class="two">
+<div class="card hl"><span class="ico">🔒</span><h3>Cosa juzgada material</h3><p>Es la que producen el juicio ordinario y los plenarios rápidos. El tema ya no se puede volver a discutir en otro juicio. Si la parte perdedora no cumple, se puede ejecutar la sentencia.</p></div>
+<div class="card"><span class="ico">🔓</span><h3>Cosa juzgada formal</h3><p>La producen los juicios sumarios en sentido estricto, como el ejecutivo, los alimentos provisorios o los interdictos. El juez conoce solo una parte del problema, por eso después se puede iniciar un juicio ordinario para discutir el resto.</p></div>
+</div>
+<div class="note"><b>Un caso:</b> en el juicio ejecutivo, una vez cumplida la condena, cualquiera de las partes puede iniciar un juicio ordinario para plantear las defensas que no se admitieron antes (art. 522). Además, un acuerdo logrado en la audiencia preliminar y homologado por el juez tiene el mismo efecto que una sentencia firme: cosa juzgada material (art. 362).</div>
+</section>
+
+<section id="glosario"><span class="tag">Módulo 7</span><h2>Glosario sin vueltas</h2>
+<details><summary>Actor y demandado</summary><p>El actor es quien inicia el juicio y reclama. El demandado es la persona a quien se le reclama.</p></details>
+<details><summary>Demanda y contestación</summary><p>La demanda es el escrito que abre el juicio. La contestación es la respuesta del demandado.</p></details>
+<details><summary>Reconvención</summary><p>Es cuando el demandado, al contestar, hace su propio reclamo contra el actor en el mismo juicio.</p></details>
+<details><summary>Excepciones previas</summary><p>Defensas sobre cuestiones de forma o de fondo que se resuelven antes que el resto, como que el juez no es competente o que el tema ya fue juzgado.</p></details>
+<details><summary>Audiencia preliminar</summary><p>Reunión con el juez al comienzo de la etapa de prueba. Allí se intenta un acuerdo y se organiza qué se va a probar.</p></details>
+<details><summary>Prueba y alegatos</summary><p>La prueba son los elementos que demuestran los hechos. Los alegatos son un escrito final donde cada abogado explica qué se probó.</p></details>
+<details><summary>Autos para sentencia</summary><p>Resolución que cierra el debate: ya no se pueden presentar más escritos ni pruebas, y el juez pasa a redactar su sentencia.</p></details>
+<details><summary>Cosa juzgada</summary><p>Cualidad de una sentencia que ya no se puede discutir de nuevo. Es “material” cuando la decisión es definitiva y “formal” cuando admite un juicio posterior.</p></details>
+<details><summary>Plenario</summary><p>Proceso donde el juez conoce todo el conflicto, aunque el trámite sea corto.</p></details>
+</section>
+
+<footer>
+<p><b>Fuentes:</b> Picchio, D. B., “Los diferentes tipos de proceso”; Enciclopedia Jurídica, voz “Proceso de conocimiento”; Código Procesal Civil, Comercial, de Familia y Violencia Familiar de Misiones (Ley XII N.º 27), arts. 321 a 466.</p>
+<p>Material educativo en lenguaje simple. Los plazos y montos pueden cambiar con las reformas; para un caso concreto, consultá el texto vigente o a un profesional del derecho.</p>
+</footer>
+</main>
+<script>
+var S=[
+{t:"Demanda",p:"Sin plazo fijo",s:"Quien reclama escribe qué pasó, qué pide y por qué. Presenta los documentos que tenga y dice qué otras pruebas usará. El juez puede rechazarla de entrada si no cumple los requisitos.",a:"Arts. 332 a 338"},
+{t:"Traslado",p:"15 días (60 si es Nación, Provincia o Municipalidad)",s:"El juzgado avisa por cédula a la otra parte y le entrega copia de la demanda. Desde ahí corre el plazo para presentarse y contestar.",a:"Arts. 339 y 340"},
+{t:"Defensas previas",p:"Junto con la contestación",s:"Antes de entrar al fondo, la persona demandada puede plantear problemas como incompetencia del juez, falta de representación, litispendencia, cosa juzgada o prescripción. Se presentan todas en un mismo escrito.",a:"Arts. 347 y 348"},
+{t:"Contestación",p:"Dentro de los 15 días",s:"Se responde punto por punto: se reconoce o se niega cada hecho. Si quiere, el demandado contraataca con su propio reclamo (reconvención) y se le da traslado al actor.",a:"Arts. 358 a 360"},
+{t:"Audiencia preliminar",p:"Dentro de 60 días",s:"El juez reúne a las partes, las invita a llegar a un acuerdo y, si no lo logran, fija los hechos que hay que probar y decide qué pruebas se aceptan. Si solo hay una cuestión legal, pasa directo a sentencia.",a:"Arts. 361 y 362"},
+{t:"Prueba",p:"Hasta 40 días (plazo común)",s:"Cada parte demuestra lo que afirma con documentos, informes, testigos, peritos o inspecciones. En general, le toca probar a quien afirma un hecho discutido.",a:"Arts. 369, 379 y 380"},
+{t:"Alegatos",p:"6 días",s:"Terminada la prueba, cada abogado recibe el expediente para presentar, si lo desea, un escrito que resume qué se probó y por qué le corresponde ganar.",a:"Art. 462"},
+{t:"Autos para sentencia",p:"Sin plazo para las partes",s:"El juez cierra la discusión: no se aceptan más escritos ni pruebas, salvo medidas que él mismo ordene.",a:"Arts. 463 y 464"},
+{t:"Sentencia",p:"40 días (juez) o 60 días (tribunal de varios jueces)",s:"El juez decide quién tiene razón. La sentencia se notifica de oficio, dentro del tercer día. Si alguien no está de acuerdo, puede apelar; si quien perdió no cumple, se pide la ejecución.",a:"Arts. 465 y 467"}
+];
+var C=[
+{q:"Reclamo un monto de dinero que me deben",a:"<b>Juicio ordinario.</b> Es el camino general para los reclamos que no tienen un trámite especial (art. 321)."},
+{q:"Un particular me lesiona un derecho constitucional y necesito una solución urgente",a:"<b>Juicio sumarísimo.</b> Es el caso previsto para reparar con urgencia un perjuicio actual o inminente, siempre que no exista otro proceso específico (art. 323, inc. 2)."},
+{q:"El reclamo es por un valor muy bajo",a:"<b>Juicio sumarísimo.</b> El Código lo prevé cuando el valor cuestionado no excede el límite que fija el art. 323, inc. 1, que figura en el texto de la ley. Conviene verificar si hay actualizaciones."},
+{q:"El derecho no se puede medir en dinero",a:"<b>Lo decide el juez.</b> Puede elegir el tipo de trámite, de oficio o a pedido de las partes, y su decisión no se puede apelar (art. 322)."},
+{q:"Quiero que se declare que existe o no un derecho, sin pedir una condena",a:"<b>Acción meramente declarativa.</b> Sirve para terminar con una incertidumbre que ya causa perjuicio, si no hay otro medio legal inmediato (art. 324)."}
+];
+var cs=document.getElementById("cases"),ans=document.getElementById("ans");
+C.forEach(function(c,i){var b=document.createElement("button");b.textContent=c.q;b.onclick=function(){[].forEach.call(cs.children,function(x){x.classList.remove("on")});b.classList.add("on");ans.innerHTML=c.a};cs.appendChild(b)});
+var st=document.getElementById("steps"),pn=document.getElementById("panel"),pr=document.getElementById("prog"),cur=0;
+function show(i){cur=i;[].forEach.call(st.children,function(b,k){b.classList.toggle("on",k===i);b.classList.toggle("done",k<i)});
+var x=S[i];pn.innerHTML='<span class="tag">Etapa '+(i+1)+' de '+S.length+'</span><h3>'+x.t+'</h3><p>'+x.s+'</p><p class="when"><span class="pill">⏱ '+x.p+'</span></p><p class="art">Dónde está en el Código: '+x.a+'</p>';
+pr.style.width=((i+1)/S.length*100)+"%";document.getElementById("prev").disabled=i===0;document.getElementById("next").disabled=i===S.length-1;
+var on=st.children[i];if(on.scrollIntoView){st.scrollTo({left:on.offsetLeft-st.offsetWidth/2+on.offsetWidth/2,behavior:"smooth"})}}
+S.forEach(function(x,i){var b=document.createElement("button");b.innerHTML='<span class="num">'+(i+1)+'</span>'+x.t;b.onclick=function(){show(i)};st.appendChild(b)});
+document.getElementById("prev").onclick=function(){if(cur>0)show(cur-1)};
+document.getElementById("next").onclick=function(){if(cur<S.length-1)show(cur+1)};
+show(0);
+var D=[["Contestar la demanda",15,5],["Audiencia preliminar (máximo)",60,10],["Alegatos de las partes",6,0],["Sentencia del juez",40,10]];
+var ch=document.getElementById("chart"),h="";
+D.forEach(function(r){var m=60;h+='<div class="row"><div class="lbl">'+r[0]+'</div><div class="b"><em>Ordinario</em><div class="o" data-w="'+r[1]/m*100+'"></div><strong>'+r[1]+'</strong></div><div class="b"><em>Sumarísimo</em><div class="s" data-w="'+r[2]/m*100+'"></div><strong>'+(r[2]||"No hay")+'</strong></div></div>'});
+ch.innerHTML=h;
+function grow(){[].forEach.call(ch.querySelectorAll(".b div"),function(e){e.style.width=Math.max(+e.dataset.w,0.6)*0.78+"%"})}
+if("IntersectionObserver" in window){new IntersectionObserver(function(e,o){if(e[0].isIntersecting){grow();o.disconnect()}},{threshold:.25}).observe(ch)}else{grow()}
+</script>
+</body>
+</html>
