@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Los procesos de la Ley XII N.º 27, explicados fácil</title>
+<style>
+:root{--bg:#f6f8f6;--card:#fff;--ink:#17261d;--mut:#586a5f;--line:#e1e9e3;--a:#2b8a3e;--soft:#e9f7ec;--warn:#f08c00;--sh:0 8px 24px rgba(20,60,35,.08);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1712;--card:#15221a;--ink:#e6f0e9;--mut:#9db3a5;--line:#243629;--a:#51cf66;--soft:#16301f;--warn:#ffb340;--sh:0 8px 24px rgba(0,0,0,.35)}}
+:root[data-theme="dark"]{--bg:#0e1712;--card:#15221a;--ink:#e6f0e9;--mut:#9db3a5;--line:#243629;--a:#51cf66;--soft:#16301f;--warn:#ffb340;--sh:0 8px 24px rgba(0,0,0,.35)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:21}
+nav{max-width:1080px;margin:auto;display:flex;gap:6px;overflow-x:auto;padding:10px 16px;scrollbar-width:none}
+nav a{white-space:nowrap;text-decoration:none;color:var(--mut);font-size:14px;font-weight:600;padding:6px 12px;border-radius:99px}
+nav a:hover{background:var(--soft);color:var(--a)}
+main{max-width:1080px;margin:auto;padding:0 16px 60px}
+.hero{margin:28px 0 8px;padding:44px 28px;border-radius:28px;color:#fff;background:linear-gradient(135deg,#1b5e3a,#2b8a3e 55%,#c98a06);position:relative;overflow:hidden;box-shadow:var(--sh)}
+.hero::after{content:"📚";position:absolute;right:-10px;bottom:-40px;font-size:200px;opacity:.15}
+.hero h1{font-size:clamp(28px,5vw,46px);line-height:1.15;margin:0 0 12px;max-width:660px}
+.hero p{max-width:620px;font-size:18px;margin:0 0 22px;opacity:.95}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chips span{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.3);padding:8px 14px;border-radius:14px;font-size:14px}
+.chips b{font-size:20px;display:block}
+section{margin-top:56px}
+.tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--a);background:var(--soft);padding:4px 10px;border-radius:99px}
+h2{font-size:clamp(24px,3.5vw,32px);margin:10px 0 8px;line-height:1.2}
+.lead{color:var(--mut);max-width:740px;margin:0 0 22px}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:var(--sh)}
+.card h3{margin:6px 0;font-size:18px}
+.card p{margin:0;color:var(--mut);font-size:15px}
+.ico{font-size:30px}
+.pill{display:inline-block;font-size:13px;font-weight:700;padding:3px 10px;border-radius:99px;background:var(--soft);color:var(--a)}
+.note{margin-top:16px;padding:14px 18px;border-left:4px solid var(--warn);background:var(--card);border-radius:0 14px 14px 0;font-size:15px;color:var(--mut)}
+button{font:inherit;cursor:pointer}
+.map{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.map button{--c:#2b8a3e;text-align:left;border:1px solid var(--line);border-top:5px solid var(--c);background:var(--card);color:var(--ink);border-radius:16px;padding:12px 14px;box-shadow:var(--sh)}
+.map button small{display:block;color:var(--mut);font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
+.map button b{display:block;font-size:15px;line-height:1.3;margin-top:2px}
+.map button em{display:block;font-style:normal;font-size:12px;color:var(--mut);margin-top:4px}
+.map button.on{background:color-mix(in srgb,var(--c) 14%,var(--card));border-color:var(--c);box-shadow:0 0 0 3px color-mix(in srgb,var(--c) 25%,transparent)}
+#lp{margin-top:16px;border-top:6px solid var(--c,#2b8a3e)}
+#lp h3{font-size:24px;margin:8px 0 4px}
+#lp .types{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:14px}
+#lp .t{background:var(--soft);border-radius:14px;padding:12px 14px}
+#lp .t b{display:block;font-size:15px}
+#lp .t span{font-size:14px;color:var(--mut)}
+#lp .ex{margin-top:14px;padding:12px 16px;border-radius:14px;border:1px dashed var(--line);font-size:15px;color:var(--mut)}
+#lp .art{font-size:13px;color:var(--mut);margin-top:12px}
+.btns{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.btns button{border:1px solid var(--line);background:var(--card);color:var(--ink);padding:9px 14px;border-radius:12px;font-size:14px;text-align:left}
+.btns button.on{background:var(--a);color:#fff;border-color:var(--a)}
+#ans{min-height:64px;padding:16px;border-radius:16px;background:var(--soft);font-size:15px}
+.chart{display:grid;gap:12px}
+.b{display:grid;grid-template-columns:132px 1fr 46px;align-items:center;gap:10px;font-size:14px}
+@media(max-width:520px){.b{grid-template-columns:96px 1fr 40px;font-size:13px}}
+.b em{font-style:normal;color:var(--mut);font-weight:600}
+.b .t{height:18px;border-radius:9px;background:var(--line);overflow:hidden}
+.b .t i{display:block;height:100%;width:0;border-radius:9px;background:var(--c);transition:width .9s cubic-bezier(.2,.8,.2,1)}
+.b strong{text-align:right}
+details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 16px;margin:8px 0}
+summary{cursor:pointer;font-weight:700}
+details p{margin:8px 0 2px;color:var(--mut);font-size:15px}
+footer{margin-top:60px;padding:22px;border-radius:20px;background:var(--card);border:1px solid var(--line);font-size:14px;color:var(--mut)}
+footer p{margin:6px 0}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.b .t i{transition:none}}
+</style>
+</head>
+<body>
+<header class="top"><nav>
+<a href="#inicio">Inicio</a><a href="#mapa">Mapa del Código</a><a href="#toca">¿Qué proceso me toca?</a><a href="#peso">Gráfico</a><a href="#comunes">Herramientas comunes</a><a href="#glosario">Glosario</a>
+</nav></header>
+<main>
+<div class="hero" id="inicio">
+<h1>Los procesos de la Ley XII N.º 27, explicados fácil</h1>
+<p>La ley es el Código Procesal de Misiones: el manual que dice cómo se tramitan los juicios. Acá lo recorremos libro por libro, para entender qué tipo de proceso existe y para qué sirve cada uno.</p>
+<div class="chips"><span><b>10 libros</b>ordenados por tema</span><span><b>819 artículos</b>en total</span><span><b>Desde 2014</b>rige desde el 1.º de marzo</span></div>
+</div>
+
+<section id="mapa"><span class="tag">Módulo 1</span><h2>El Código en un vistazo</h2>
+<p class="lead">Cada libro agrupa un tipo de proceso. Tocá uno para ver qué contiene, un ejemplo y los artículos donde está.</p>
+<div class="map" id="map"></div>
+<div class="card" id="lp"></div>
+</section>
+
+<section id="toca"><span class="tag">Módulo 2</span><h2>¿Qué proceso me toca?</h2>
+<p class="lead">Elegí una situación cotidiana y mirá en qué libro del Código se resuelve.</p>
+<div class="btns" id="cases"></div><div id="ans">Elegí una situación para ver qué proceso corresponde.</div>
+<div class="note"><b>Regla de oro:</b> todo reclamo que no tenga un trámite propio se resuelve en juicio ordinario (art. 321). Los demás libros existen porque ciertos problemas necesitan reglas a medida.</div>
+</section>
+
+<section id="peso"><span class="tag">Módulo 3</span><h2>Gráfico: ¿cuánto espacio ocupa cada libro?</h2>
+<p class="lead">Cantidad de artículos que dedica la ley a cada libro. Los libros I y II suman 466 artículos: el 57% del Código.</p>
+<div class="chart card" id="chart"></div>
+</section>
+
+<section id="comunes"><span class="tag">Módulo 4</span><h2>Herramientas comunes a todos los procesos</h2>
+<p class="lead">El Libro I contiene piezas que se usan en cualquier juicio, sea del tipo que sea.</p>
+<div class="grid">
+<div class="card"><span class="ico">🧾</span><h3>Incidentes</h3><p>Cuestiones menores que surgen en medio del juicio y se resuelven aparte, sin frenar el proceso principal.</p></div>
+<div class="card"><span class="ico">🔗</span><h3>Acumulación de procesos</h3><p>Reunir juicios relacionados para que los resuelva un mismo juez y no haya sentencias contradictorias.</p></div>
+<div class="card"><span class="ico">🛡️</span><h3>Medidas cautelares</h3><p>Medidas que protegen un derecho mientras dura el juicio, como un embargo.</p></div>
+<div class="card"><span class="ico">🔁</span><h3>Recursos</h3><p>Formas de pedir que se revise una resolución. Los recursos extraordinarios son los que llegan al más alto nivel.</p></div>
+<div class="card"><span class="ico">🤝</span><h3>Terminar sin sentencia</h3><p>El juicio puede concluir por desistimiento (abandonar el reclamo), allanamiento (aceptar lo pedido), transacción o conciliación (acuerdos).</p></div>
+<div class="card"><span class="ico">⏰</span><h3>Caducidad de la instancia</h3><p>El juicio se extingue si las partes dejan pasar demasiado tiempo sin impulsarlo.</p></div>
+</div>
+</section>
+
+<section id="glosario"><span class="tag">Módulo 5</span><h2>Glosario sin vueltas</h2>
+<details><summary>Proceso de conocimiento</summary><p>Juicio en el que el juez decide quién tiene razón después de escuchar a las dos partes y revisar las pruebas.</p></details>
+<details><summary>Proceso de ejecución</summary><p>Juicio para hacer cumplir algo que ya está reconocido en un documento o en una sentencia, como cobrar una deuda.</p></details>
+<details><summary>Proceso voluntario</summary><p>Trámite en el que no hay conflicto entre partes: se acude al juez para que autorice o dé validez a algo.</p></details>
+<details><summary>Proceso arbitral</summary><p>Las partes eligen a árbitros de su confianza para que resuelvan el conflicto, en lugar de acudir a un juez.</p></details>
+<details><summary>Proceso sucesorio</summary><p>Trámite para determinar quiénes son los herederos de una persona fallecida y repartir sus bienes.</p></details>
+<details><summary>Título ejecutivo</summary><p>Documento que permite reclamar una deuda por la vía rápida, como un pagaré, un cheque o un contrato de alquiler.</p></details>
+<details><summary>Embargo y subasta</summary><p>El embargo reserva bienes del deudor para garantizar el pago. La subasta es la venta pública de esos bienes para cobrar.</p></details>
+<details><summary>Inconstitucionalidad</summary><p>Reclamo para que se declare que una ley u otra norma contradice la Constitución de la Provincia.</p></details>
+</section>
+
+<footer>
+<p><b>Fuente:</b> Ley XII N.º 27, Código Procesal Civil, Comercial, de Familia y Violencia Familiar de la Provincia de Misiones. Los números de artículos corresponden al texto que se usó para esta app.</p>
+<p>Material educativo en lenguaje simple. Los montos fijos se actualizan cada año por el Superior Tribunal de Justicia (art. 816). Para un caso concreto, consultá el texto vigente o a un profesional del derecho.</p>
+</footer>
+</main>
+<script>
+var B=[
+{n:"Libro I",t:"Disposiciones generales",c:"#868e96",k:320,r:"1 a 320",q:"Reglas que valen para todos los procesos: quién juzga, quiénes participan, cómo se hacen los trámites y cómo puede terminar un juicio.",y:[["Órgano judicial","Jueces: competencia, recusación y deberes."],["Partes","Quiénes intervienen en el juicio."],["Actos procesales","Escritos, notificaciones y plazos."],["Contingencias generales","Incidentes, acumulación, cautelares y recursos."],["Modos anormales de terminar","Desistimiento, allanamiento, transacción, conciliación y caducidad."]],e:"Una apelación o un embargo preventivo se rigen por este libro, sin importar el tipo de juicio."},
+{n:"Libro II",t:"Procesos de conocimiento",c:"#1c7ed6",k:146,r:"321 a 466",q:"Juicios donde el juez decide quién tiene razón. Es el camino general para casi cualquier reclamo.",y:[["Diligencias preliminares","Medidas previas a la demanda, como la prueba anticipada."],["Proceso ordinario","El modelo completo: demanda, defensa, prueba y sentencia."],["Proceso sumarísimo","Versión corta para casos urgentes o de poco valor."],["Acción meramente declarativa","Terminar con una duda sobre un derecho."]],e:"Alguien reclama un crédito que la otra persona niega: se tramita en juicio ordinario."},
+{n:"Libro III",t:"Procesos de ejecución",c:"#e8590c",k:109,r:"467 a 575",q:"Juicios para hacer cumplir lo que ya está reconocido, sin volver a discutir si el derecho existe.",y:[["Ejecución de sentencias","Cumplir una sentencia firme, de tribunales de Misiones o del extranjero."],["Juicio ejecutivo","Cobrar una deuda de dinero que consta en un título."],["Subasta","Venta pública de los bienes embargados."],["Ejecuciones especiales","Hipotecaria, prendaria, comercial y fiscal."]],e:"Alguien tiene un pagaré impago: lo cobra por juicio ejecutivo, con embargo de bienes."},
+{n:"Libro IV",t:"Procesos especiales",c:"#0c8599",k:64,r:"576 a 639",q:"Caminos a medida para conflictos típicos, con reglas propias.",y:[["Interdictos y posesorias","Proteger o recuperar la posesión de una cosa."],["Daño temido y reparaciones urgentes","Evitar un daño grave que viene de un edificio o cosa."],["Rendición de cuentas","Exigir las cuentas de una administración."],["Mensura y deslinde","Medir un terreno y fijar sus límites."],["División de cosas comunes","Repartir un bien de varias personas."],["Desalojo","Recuperar un inmueble de quien debe devolverlo."],["Medidas autosatisfactivas","Soluciones urgentes y puntuales."]],e:"Un inquilino no paga ni se va: se pide el desalojo."},
+{n:"Libro V",t:"Procesos de familia y violencia familiar",c:"#d6336c",k:77,r:"640 a 716",q:"Reglas para los conflictos de familia, con principios de protección, rapidez y oralidad.",y:[["Principios y reglas","Tutela judicial efectiva, inmediación, oralidad y celeridad. Antes de ciertas acciones hay una etapa de avenimiento."],["Adopción","Se rige por leyes propias."],["Violencia familiar","A cargo de un juez con competencia exclusiva."],["Incapacidad e inhabilitación","Procesos sobre la capacidad de las personas."],["Restitución de menores y comunicación","Restituir niños y restaurar el régimen de contacto."],["Alimentos y litisexpensas","Reclamos de ayuda económica y gastos del juicio."],["Voluntarios y divorcio","Autorización para casarse, tutela, curatela, divorcio y nulidad."]],e:"Una madre reclama alimentos para sus hijos: tramita por las normas de los procesos especiales de este libro."},
+{n:"Libro VI",t:"Proceso sucesorio",c:"#7048e8",k:47,r:"717 a 763",q:"Trámite para saber quiénes heredan a una persona fallecida y repartir sus bienes.",y:[["Sucesión ab intestato","Cuando no hay testamento."],["Sucesión testamentaria","Cuando hay testamento."],["Administración","Cuidado de los bienes durante el trámite."],["Inventario y avalúo","Listar los bienes y valuarlos."],["Partición y adjudicación","Repartir los bienes entre los herederos."],["Herencia vacante","Cuando no aparecen herederos."]],e:"Fallece un familiar: para iniciar, se presenta la partida de defunción y se justifica el carácter de parte legítima."},
+{n:"Libro VII",t:"Proceso arbitral",c:"#5f3dc4",k:38,r:"764 a 801",q:"Las partes eligen que decidan árbitros en lugar de un juez.",y:[["Juicio arbitral","Se puede pactar antes o después de iniciado el juicio, con algunas cuestiones excluidas."],["Amigables componedores","Arbitradores que deciden con equidad."],["Pericia arbitral","Resuelve solo cuestiones de hecho concretas."]],e:"Un contrato dice que los conflictos los decidirán árbitros: se sigue este libro."},
+{n:"Libro VIII",t:"Procesos voluntarios",c:"#2f9e44",k:6,r:"802 a 807",q:"Trámites sin conflicto, donde se pide al juez una autorización o una constancia.",y:[["Copia y renovación de títulos","Por ejemplo, la segunda copia de una escritura."],["Examen de libros por el socio","Hacer efectivo el derecho de ver los libros de la sociedad."],["Mercaderías","Reconocimiento, adquisición y venta."]],e:"Un socio quiere ver los libros de la sociedad: el juez lo ordena sin sustanciación."},
+{n:"Libro IX",t:"Inconstitucionalidad y conflicto de poderes",c:"#c92a2a",k:8,r:"808 a 815",q:"Procesos de carácter constitucional ante el más alto tribunal de la Provincia.",y:[["Declaración de inconstitucionalidad","Demandar que una norma contradice la Constitución de la Provincia."],["Conflicto de poderes","El Superior Tribunal resuelve conflictos de competencia entre poderes públicos."]],e:"Un decreto provincial contradice la Constitución: se plantea la inconstitucionalidad."},
+{n:"Libro X",t:"Disposiciones especiales",c:"#868e96",k:4,r:"816 a 819",q:"Cierre del Código.",y:[["Actualización de montos","El Superior Tribunal actualiza cada año las sumas fijas."],["Vigencia","Rige desde el 1.º de marzo de 2014 y se aplica a los juicios iniciados desde esa fecha."]],e:"Por eso, los montos que aparecen en el texto pueden estar actualizados."}
+];
+var mp=document.getElementById("map"),lp=document.getElementById("lp");
+function sh(i){[].forEach.call(mp.children,function(b,j){b.classList.toggle("on",j===i)});var x=B[i];lp.style.setProperty("--c",x.c);
+lp.innerHTML='<span class="pill" style="color:'+x.c+'">'+x.n+'</span><h3>'+x.t+'</h3><p>'+x.q+'</p><div class="types">'+x.y.map(function(y){return'<div class="t"><b>'+y[0]+'</b><span>'+y[1]+'</span></div>'}).join("")+'</div><div class="ex"><b>Ejemplo:</b> '+x.e+'</div><p class="art">Artículos '+x.r+'</p>'}
+B.forEach(function(x,i){var b=document.createElement("button");b.style.setProperty("--c",x.c);b.innerHTML="<small>"+x.n+"</small><b>"+x.t+"</b><em>"+x.k+" artículos</em>";b.onclick=function(){sh(i)};mp.appendChild(b)});sh(1);
+var C=[
+{q:"Me deben dinero y tengo un pagaré o un cheque",a:"<b>Juicio ejecutivo (Libro III).</b> Los pagarés, cheques y facturas con fuerza ejecutiva están entre los títulos que permiten cobrar por esta vía (art. 492). También el crédito por alquileres de inmuebles."},
+{q:"Me deben dinero, pero lo niegan y no tengo un título",a:"<b>Proceso de conocimiento (Libro II).</b> Un juez escucha a ambos y decide. Se tramita por juicio ordinario, el camino general (art. 321)."},
+{q:"Me sacaron la casa a la fuerza",a:"<b>Interdicto de recobrar (Libro IV).</b> Se tramita por juicio sumarísimo y debe pedirse dentro del año del despojo (arts. 584, 585 y 591)."},
+{q:"Mi inquilino no paga y no se va",a:"<b>Desalojo (Libro IV)</b> para recuperar el inmueble, que tramita como ordinario con reglas propias. Los alquileres adeudados pueden cobrarse por separado en juicio ejecutivo (Libro III, art. 492)."},
+{q:"Falleció un familiar y dejó bienes",a:"<b>Proceso sucesorio (Libro VI).</b> Se inicia con la partida de defunción y, si hay testamento, se presenta o se indica dónde está (art. 717)."},
+{q:"Necesito fijar alimentos para mis hijos",a:"<b>Libro V, alimentos y litisexpensas.</b> Tramita por las normas de los procesos especiales. Quien reclama debe acreditar el título en que se funda y denunciar, aunque sea de forma aproximada, el caudal de quien debe pagar (art. 696)."},
+{q:"Quiero divorciarme",a:"<b>Libro V, divorcio y nulidad de matrimonio.</b> Al dar traslado de la demanda, el juez fija una audiencia con las partes, donde intenta reconciliarlas y que se avengan sobre las cuestiones relacionadas (art. 715)."},
+{q:"Queremos que lo decidan árbitros",a:"<b>Proceso arbitral (Libro VII).</b> Cualquier cuestión puede someterse a árbitros, salvo las excluidas, y se puede pactar en el contrato o en un acto posterior (arts. 764 y 765)."},
+{q:"Una norma provincial contradice la Constitución de la Provincia",a:"<b>Inconstitucionalidad (Libro IX).</b> Se plantea ante el más alto tribunal de la Provincia, con un plazo para demandar (arts. 808 y 809)."}
+];
+var cs=document.getElementById("cases"),an=document.getElementById("ans");
+C.forEach(function(c){var b=document.createElement("button");b.textContent=c.q;b.onclick=function(){[].forEach.call(cs.children,function(x){x.classList.remove("on")});b.classList.add("on");an.innerHTML=c.a};cs.appendChild(b)});
+var ch=document.getElementById("chart");ch.innerHTML=B.map(function(x){return'<div class="b" style="--c:'+x.c+'"><em>'+x.n+'</em><div class="t"><i data-w="'+Math.max(x.k/320*100,2)+'"></i></div><strong>'+x.k+'</strong></div>'}).join("");
+function grow(){[].forEach.call(ch.querySelectorAll("i[data-w]"),function(e){e.style.width=e.dataset.w+"%"})}
+if("IntersectionObserver" in window){new IntersectionObserver(function(e,o){if(e[0].isIntersecting){grow();o.disconnect()}},{threshold:.2}).observe(ch)}else{grow()}
+</script>
+</body>
+</html>
