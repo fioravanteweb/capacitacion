@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Los Procesos de Ejecución, explicados fácil</title>
+<style>
+:root{--bg:#faf7f4;--card:#fff;--ink:#2a1a12;--mut:#6d5a4e;--line:#eee3da;--a:#d9480f;--a2:#f08c00;--soft:#fff0e6;--ok:#2b8a3e;--sh:0 8px 24px rgba(90,40,10,.09);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17110d;--card:#221913;--ink:#f3e9e2;--mut:#bfa99a;--line:#38291f;--a:#ff8a4c;--a2:#ffc247;--soft:#34211a;--ok:#5fd37a;--sh:0 8px 24px rgba(0,0,0,.4)}}
+:root[data-theme="dark"]{--bg:#17110d;--card:#221913;--ink:#f3e9e2;--mut:#bfa99a;--line:#38291f;--a:#ff8a4c;--a2:#ffc247;--soft:#34211a;--ok:#5fd37a;--sh:0 8px 24px rgba(0,0,0,.4)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:21}
+nav{max-width:1080px;margin:auto;display:flex;gap:6px;overflow-x:auto;padding:10px 16px;scrollbar-width:none}
+nav a{white-space:nowrap;text-decoration:none;color:var(--mut);font-size:14px;font-weight:600;padding:6px 12px;border-radius:99px}
+nav a:hover{background:var(--soft);color:var(--a)}
+main{max-width:1080px;margin:auto;padding:0 16px 60px}
+.hero{margin:28px 0 8px;padding:44px 28px;border-radius:28px;color:#fff;background:linear-gradient(135deg,#a63a0a,#d9480f 55%,#f08c00);position:relative;overflow:hidden;box-shadow:var(--sh)}
+.hero::after{content:"🔨";position:absolute;right:-10px;bottom:-40px;font-size:200px;opacity:.15}
+.hero h1{font-size:clamp(28px,5vw,46px);line-height:1.15;margin:0 0 12px;max-width:660px}
+.hero p{max-width:620px;font-size:18px;margin:0 0 22px;opacity:.95}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chips span{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.3);padding:8px 14px;border-radius:14px;font-size:14px}
+.chips b{font-size:20px;display:block}
+section{margin-top:56px}
+.tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--a);background:var(--soft);padding:4px 10px;border-radius:99px}
+h2{font-size:clamp(24px,3.5vw,32px);margin:10px 0 8px;line-height:1.2}
+.lead{color:var(--mut);max-width:740px;margin:0 0 22px}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:var(--sh)}
+.card h3{margin:6px 0;font-size:18px}
+.card p{margin:0;color:var(--mut);font-size:15px}
+.ico{font-size:30px}
+.card.hl{border:2px solid var(--a);background:linear-gradient(var(--soft),var(--card))}
+.flow{display:grid;gap:10px;grid-template-columns:1fr;align-items:stretch}
+@media(min-width:760px){.flow{grid-template-columns:1fr auto 1fr auto 1fr}}
+.flow .arrow{align-self:center;text-align:center;font-size:26px;color:var(--a);transform:rotate(90deg)}
+@media(min-width:760px){.flow .arrow{transform:none}}
+.num{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--a);color:#fff;font-weight:700;font-size:14px}
+.pill{display:inline-block;font-size:13px;font-weight:700;padding:3px 10px;border-radius:99px;background:var(--soft);color:var(--a)}
+.note{margin-top:16px;padding:14px 18px;border-left:4px solid var(--a2);background:var(--card);border-radius:0 14px 14px 0;font-size:15px;color:var(--mut)}
+button{font:inherit;cursor:pointer}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 14px}
+.tabs button{flex:0 0 auto;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:16px;padding:10px 14px;font-size:14px;font-weight:600;text-align:center}
+.tabs button span{display:block;font-size:22px}
+.tabs button.on{border-color:var(--a);box-shadow:0 0 0 3px var(--soft);background:var(--soft)}
+#px h3{margin:6px 0;font-size:24px}
+#px .cols{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:14px}
+#px .box{background:var(--soft);border-radius:14px;padding:12px 16px}
+#px .box b{display:block;font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:var(--a);margin-bottom:4px}
+#px ul{margin:0;padding-left:18px;color:var(--mut);font-size:15px}
+.art{font-size:13px;color:var(--mut);margin-top:12px}
+.btns{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.btns button{border:1px solid var(--line);background:var(--card);color:var(--ink);padding:9px 14px;border-radius:12px;font-size:14px;text-align:left}
+.btns button.on{background:var(--a);color:#fff;border-color:var(--a)}
+#ans{min-height:64px;padding:16px;border-radius:16px;background:var(--soft);font-size:15px}
+.steps{display:flex;gap:8px;overflow-x:auto;padding:6px 2px 14px}
+.steps button{flex:0 0 auto;min-width:108px;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:16px;padding:10px;text-align:center;font-size:13px;font-weight:600}
+.steps button .num{display:grid;margin:0 auto 6px;background:var(--line);color:var(--mut)}
+.steps button.on{border-color:var(--a);box-shadow:0 0 0 3px var(--soft)}
+.steps button.on .num,.steps button.done .num{background:var(--a);color:#fff}
+.bar{height:6px;border-radius:9px;background:var(--line);overflow:hidden;margin-bottom:14px}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--a),var(--a2));transition:width .4s}
+#panel h3{margin:6px 0;font-size:22px}
+.nav2{display:flex;justify-content:space-between;margin-top:14px}
+.nav2 button{background:var(--a);color:#fff;border:0;padding:9px 18px;border-radius:12px;font-weight:600}
+.nav2 button:disabled{opacity:.35;cursor:default}
+.chart{display:grid;gap:11px}
+.b{display:grid;grid-template-columns:minmax(120px,210px) 1fr 62px;align-items:center;gap:10px;font-size:14px}
+@media(max-width:560px){.b{grid-template-columns:110px 1fr 54px;font-size:13px}}
+.b em{font-style:normal;color:var(--mut);font-weight:600}
+.b .t{height:18px;border-radius:9px;background:var(--line);overflow:hidden}
+.b .t i{display:block;height:100%;width:0;border-radius:9px;background:linear-gradient(90deg,var(--a),var(--a2));transition:width .9s cubic-bezier(.2,.8,.2,1)}
+.b strong{text-align:right}
+.drop{display:grid;gap:10px;margin-top:16px}
+.drop div{display:flex;align-items:center;gap:10px;font-size:14px}
+.drop span{flex:0 0 150px;color:var(--mut);font-weight:600}
+@media(max-width:560px){.drop span{flex-basis:96px}}
+.drop i{display:block;height:24px;border-radius:8px;background:linear-gradient(90deg,var(--a),var(--a2));width:0;transition:width .9s cubic-bezier(.2,.8,.2,1);color:#fff;font-style:normal;font-size:12px;font-weight:700;line-height:24px;padding-left:8px;white-space:nowrap;overflow:hidden}
+details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 16px;margin:8px 0}
+summary{cursor:pointer;font-weight:700}
+details p{margin:8px 0 2px;color:var(--mut);font-size:15px}
+footer{margin-top:60px;padding:22px;border-radius:20px;background:var(--card);border:1px solid var(--line);font-size:14px;color:var(--mut)}
+footer p{margin:6px 0}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.b .t i,.drop i,.bar i{transition:none}}
+</style>
+</head>
+<body>
+<header class="top"><nav>
+<a href="#inicio">Inicio</a><a href="#que-es">¿Qué es?</a><a href="#tres">Tres caminos</a><a href="#ejecutivo">Juicio ejecutivo</a><a href="#excep">Defensas</a><a href="#subasta">Subasta</a><a href="#plazos">Plazos</a><a href="#toca">¿Qué vía me toca?</a><a href="#glosario">Glosario</a>
+</nav></header>
+<main>
+<div class="hero" id="inicio">
+<h1>Los Procesos de Ejecución, explicados fácil</h1>
+<p>Son los juicios para hacer cumplir lo que ya está decidido o escrito: cobrar un pagaré, ejecutar una sentencia firme, rematar un bien. Acá lo ves paso a paso y sin palabras difíciles.</p>
+<div class="chips"><span><b>Libro III</b>arts. 467 a 575 de la Ley XII N.º 27</span><span><b>5 días</b>para que el deudor oponga defensas</span><span><b>3 caminos</b>sentencias, ejecutivo y especiales</span></div>
+</div>
+
+<section id="que-es"><span class="tag">Módulo 1</span><h2>¿Qué es un proceso de ejecución?</h2>
+<p class="lead">En el proceso de conocimiento el juez decide quién tiene razón. En la ejecución, ese tema ya está claro porque hay un título o una sentencia, y lo que se busca es que se cumpla.</p>
+<div class="flow">
+<div class="card"><span class="ico">📄</span><h3>1. Hay un derecho claro</h3><p>Consta en una sentencia firme o en un título, como un pagaré, un cheque o un contrato de alquiler.</p></div>
+<div class="arrow">➜</div>
+<div class="card"><span class="ico">🔒</span><h3>2. Se aseguran bienes</h3><p>El juez ordena intimar el pago y, si el deudor no paga, embargar sus bienes.</p></div>
+<div class="arrow">➜</div>
+<div class="card hl"><span class="ico">💰</span><h3>3. Se cobra</h3><p>Si hace falta, los bienes se venden en subasta y con ese dinero se paga al acreedor.</p></div>
+</div>
+<div class="note"><b>Importante:</b> en la ejecución la defensa del deudor está muy limitada. No se discute el motivo de la deuda: solo se pueden plantear las defensas que la ley enumera. Si el acreedor prefiere, puede optar por un proceso de conocimiento; si el deudor se opone, el juez decide qué trámite corresponde (art. 490).</div>
+</section>
+
+<section id="tres"><span class="tag">Módulo 2</span><h2>Los tres caminos del Libro III</h2>
+<p class="lead">Tocá cada uno para ver para qué sirve, un ejemplo y sus rasgos principales.</p>
+<div class="tabs" id="tabs"></div>
+<div class="card" id="px"></div>
+</section>
+
+<section id="ejecutivo"><span class="tag">Módulo 3</span><h2>El juicio ejecutivo, paso a paso</h2>
+<p class="lead">Es la vía rápida para cobrar una deuda de dinero que consta en un título. Tocá cada etapa.</p>
+<div class="bar"><i id="prog"></i></div>
+<div class="steps" id="steps"></div>
+<div class="card" id="panel"></div>
+<div class="nav2"><button id="prev">← Anterior</button><button id="next">Siguiente →</button></div>
+</section>
+
+<section id="excep"><span class="tag">Módulo 4</span><h2>Qué puede alegar quien debe</h2>
+<p class="lead">En el juicio ejecutivo, el deudor solo puede oponer estas nueve defensas (art. 513). Cualquier otra se desestima sin trámite (art. 516).</p>
+<div class="grid" id="ex"></div>
+<div class="note"><b>No se pierde para siempre:</b> cualquiera sea el resultado, el acreedor o el deudor pueden iniciar después un juicio ordinario, cuando ya se cumplieron las condenas, para plantear lo que no se pudo discutir antes (art. 522). No sirve para quien no opuso defensas que sí podía plantear, ni para discutir de nuevo los hechos ya decididos.</div>
+</section>
+
+<section id="subasta"><span class="tag">Módulo 5</span><h2>La subasta: cómo se vende para pagar</h2>
+<p class="lead">Cuando lo embargado no es dinero, se vende en remate público. Estas son las reglas principales para un inmueble.</p>
+<div class="grid" id="sub"></div>
+<h3 style="margin-top:26px">¿Cuánto vale la base si nadie compra?</h3>
+<div class="drop card" id="drop"></div>
+<div class="note"><b>Ojo con el final:</b> el deudor puede liberar sus bienes depositando el capital más lo presupuestado para intereses y costas (art. 553). Y los ocupantes del inmueble rematado no pueden ser desalojados hasta que se pague el saldo y se entregue el bien (art. 559).</div>
+</section>
+
+<section id="plazos"><span class="tag">Módulo 6</span><h2>Gráfico: plazos clave de la ejecución</h2>
+<p class="lead">Los plazos principales que fija el Código en esta etapa, en días.</p>
+<div class="chart card" id="chart"></div>
+</section>
+
+<section id="toca"><span class="tag">Módulo 7</span><h2>¿Qué vía me toca?</h2>
+<p class="lead">Elegí una situación para ver cuál de los caminos corresponde.</p>
+<div class="btns" id="cases"></div><div id="ans">Elegí una situación para ver qué vía corresponde.</div>
+</section>
+
+<section id="glosario"><span class="tag">Módulo 8</span><h2>Glosario sin vueltas</h2>
+<details><summary>Título ejecutivo</summary><p>Documento que la ley considera suficiente para reclamar una deuda por la vía rápida, como un pagaré, un cheque, una escritura o un alquiler adeudado.</p></details>
+<details><summary>Intimación de pago</summary><p>Requerimiento formal que hace el Oficial de Justicia al deudor para que pague en el acto.</p></details>
+<details><summary>Embargo</summary><p>Orden judicial que reserva bienes del deudor para responder por la deuda. No los vende todavía: los deja afectados.</p></details>
+<details><summary>Excepción</summary><p>Defensa que plantea el deudor para frenar o cuestionar la ejecución.</p></details>
+<details><summary>Sentencia de remate</summary><p>Decisión del juez que manda seguir adelante con la ejecución o la rechaza.</p></details>
+<details><summary>Martillero y edictos</summary><p>El martillero conduce la subasta. Los edictos son avisos públicos que anuncian el remate.</p></details>
+<details><summary>Tradición</summary><p>Entrega material del inmueble al comprador. Hasta entonces la venta no queda perfeccionada.</p></details>
+<details><summary>Tercer poseedor</summary><p>Persona a quien el deudor transfirió un inmueble hipotecado. Debe pagar la deuda o abandonar el inmueble.</p></details>
+<details><summary>Inhibición general</summary><p>Medida que impide al deudor vender o gravar sus bienes cuando no se conocen bienes para embargar.</p></details>
+</section>
+
+<footer>
+<p><b>Fuente:</b> Ley XII N.º 27, Código Procesal Civil, Comercial, de Familia y Violencia Familiar de la Provincia de Misiones, Libro III, arts. 467 a 575.</p>
+<p>Material educativo en lenguaje simple. Los plazos y montos pueden cambiar con las reformas; para un caso concreto, consultá el texto vigente o a un profesional del derecho.</p>
+</footer>
+</main>
+<script>
+var P=[
+{i:"⚖️",n:"Ejecución de sentencias",t:"Título I",u:"Hacer cumplir una sentencia que quedó firme, o la parte firme de una sentencia.",e:"Una persona fue condenada a pagar y no lo hace: quien ganó pide la ejecución al mismo juez.",l:["Se ejecuta lo que está consentido o ejecutoriado, a pedido de parte","Si la suma es líquida, se embargan bienes; si no, primero se hace la liquidación","Defensas muy limitadas, basadas en hechos posteriores a la sentencia","También se ejecutan sentencias y laudos extranjeros, según tratados o requisitos"],a:"Arts. 467 a 488"},
+{i:"📄",n:"Juicio ejecutivo",t:"Título II",u:"Cobrar una deuda de dinero líquida y exigible que consta en un título.",e:"Alguien tiene un pagaré impago y quiere cobrarlo sin esperar un juicio largo.",l:["Se intima el pago y se embarga si no se paga","El deudor tiene 5 días para oponer defensas","La sentencia de remate manda seguir adelante la ejecución o la rechaza","Permite un juicio ordinario posterior"],a:"Arts. 489 a 564"},
+{i:"🏷️",n:"Ejecuciones especiales",t:"Título III",u:"Cobros con título propio: hipoteca, prenda, créditos comerciales y deudas con el Estado.",e:"Un banco ejecuta una hipoteca impaga, o la Provincia cobra un impuesto adeudado.",l:["Siguen el trámite del juicio ejecutivo con modificaciones","Solo valen los títulos que el Código u otras leyes mencionan","Tienen un listado propio y más acotado de defensas","Hay cuatro: hipotecaria, prendaria, comercial y fiscal"],a:"Arts. 565 a 575"}
+];
+var tb=document.getElementById("tabs"),px=document.getElementById("px");
+function sh(k){[].forEach.call(tb.children,function(b,j){b.classList.toggle("on",j===k)});var x=P[k];
+px.innerHTML='<span class="pill">'+x.t+'</span><h3>'+x.i+" "+x.n+'</h3><p>'+x.u+'</p><div class="cols"><div class="box"><b>Un ejemplo</b><p>'+x.e+'</p></div><div class="box"><b>Lo particular</b><ul>'+x.l.map(function(s){return"<li>"+s+"</li>"}).join("")+'</ul></div></div><p class="art">Dónde está en el Código: '+x.a+'</p>'}
+P.forEach(function(x,k){var b=document.createElement("button");b.innerHTML="<span>"+x.i+"</span>"+x.n;b.onclick=function(){sh(k)};tb.appendChild(b)});sh(1);
+var S=[
+{t:"Preparar la vía",p:"Opcional · 15 días para demandar",s:"Si el documento no es un título ejecutivo por sí solo, se puede pedir antes que el deudor reconozca su firma. En deudas de alquiler, se le pide que diga si es inquilino y muestre el último recibo. Si después de estas medidas no se presenta la demanda dentro de 15 días, caducan.",a:"Arts. 494 a 498"},
+{t:"Demanda",p:"Con un título ejecutivo",s:"Se reclama una deuda de dinero exigible y líquida, o fácil de liquidar. Entre los títulos están el instrumento público, el pagaré, el cheque, la factura de crédito, el crédito por alquileres y el crédito por expensas comunes con certificado de deuda.",a:"Arts. 489 a 493"},
+{t:"Intimación y embargo",p:"Intimación en el acto",s:"El juez examina el título y libra un mandamiento. El Oficial de Justicia pide el pago; si no se paga en el acto, embarga bienes suficientes. Si el deudor no está, igual se embarga y se le avisa dentro de los 3 días. Si se conocen pocos bienes, puede pedirse la inhibición general.",a:"Arts. 500 a 503"},
+{t:"Defensas",p:"5 días",s:"La intimación de pago sirve también como citación para oponer defensas. Se presentan en un solo escrito, junto con la prueba, dentro de 5 días. Solo valen las nueve excepciones que enumera la ley, y no se puede discutir el motivo de la deuda.",a:"Arts. 511 a 514"},
+{t:"Prueba",p:"Traslado de 5 días",s:"Si las defensas son válidas, el ejecutante contesta en 5 días y ofrece su prueba. Si solo se discute una cuestión legal o no hay prueba, el juez sentencia dentro de 10 días. Si hay prueba, se da un plazo común y quien opuso la defensa debe probarla.",a:"Arts. 516 a 519"},
+{t:"Sentencia de remate",p:"10 días",s:"El juez manda llevar adelante la ejecución, total o parcialmente, o la rechaza. Si el ejecutado actuó sin razón valedera o demoró el trámite, recibe una multa a favor del ejecutante, de entre el 5% y el 30% de la deuda.",a:"Art. 520"},
+{t:"Cobro",p:"Según los bienes",s:"Con la sentencia firme, si lo embargado es dinero, se liquida y se paga al acreedor. Si son otros bienes, se subastan. El ejecutante liquida capital, intereses y costas dentro de 5 días desde el pago del precio.",a:"Arts. 529 a 564"},
+{t:"Juicio posterior",p:"Cuando se cumplan las condenas",s:"Cualquiera sea el resultado, las partes pueden iniciar después un juicio ordinario para discutir lo que no se pudo plantear en el ejecutivo, con las limitaciones del art. 522.",a:"Art. 522"}
+];
+var st=document.getElementById("steps"),pn=document.getElementById("panel"),pr=document.getElementById("prog"),cur=0;
+function go(i){cur=i;[].forEach.call(st.children,function(b,k){b.classList.toggle("on",k===i);b.classList.toggle("done",k<i)});
+var x=S[i];pn.innerHTML='<span class="tag">Etapa '+(i+1)+' de '+S.length+'</span><h3>'+x.t+'</h3><p>'+x.s+'</p><p style="margin-top:10px"><span class="pill">⏱ '+x.p+'</span></p><p class="art">Dónde está en el Código: '+x.a+'</p>';
+pr.style.width=((i+1)/S.length*100)+"%";document.getElementById("prev").disabled=i===0;document.getElementById("next").disabled=i===S.length-1;
+var on=st.children[i];st.scrollTo({left:on.offsetLeft-st.offsetWidth/2+on.offsetWidth/2,behavior:"smooth"})}
+S.forEach(function(x,i){var b=document.createElement("button");b.innerHTML='<span class="num">'+(i+1)+'</span>'+x.t;b.onclick=function(){go(i)};st.appendChild(b)});
+document.getElementById("prev").onclick=function(){if(cur>0)go(cur-1)};document.getElementById("next").onclick=function(){if(cur<S.length-1)go(cur+1)};go(0);
+var X=[["Incompetencia","El juez no es el adecuado para el caso."],["Falta de personería","Quien litiga no tiene capacidad o representación suficiente."],["Litispendencia","Ya hay otro juicio en trámite por lo mismo."],["Falsedad o inhabilidad del título","El documento fue adulterado o no cumple las formas externas."],["Prescripción","El plazo para reclamar ya venció."],["Pago documentado","La deuda se pagó, total o parcialmente, y hay prueba escrita."],["Compensación","Se compensa con otro crédito líquido que consta en un título ejecutivo."],["Quita, espera, remisión y otros","Hay un perdón, plazo, novación, transacción o acuerdo documentado."],["Cosa juzgada","El tema ya fue resuelto por sentencia firme."]];
+document.getElementById("ex").innerHTML=X.map(function(x,i){return'<div class="card"><span class="num">'+(i+1)+'</span><h3>'+x[0]+'</h3><p>'+x[1]+'</p></div>'}).join("");
+var U=[["Embargo y subasta","El embargo es requisito del cumplimiento. Si lo embargado es dinero, se liquida y se paga; si no, se vende.","🔒"],["Martillero","Se elige de un registro que las cámaras abren cada año.","🔨"],["Edictos","El remate se anuncia por 2 días en el Boletín Oficial y en otro diario.","📰"],["Base","Sin acuerdo de las partes, la base es dos tercios de la valuación fiscal actualizada.","📏"],["Pago del precio","El comprador deposita el precio dentro de 5 días de aprobado el remate; si no, se hace una nueva subasta.","💳"],["Venta perfeccionada","Se completa con el remate aprobado, el precio pagado y la entrega del inmueble.","✅"],["Escritura","La hace un escribano, sin que sea necesaria la presencia del ejecutado.","✍️"],["Cuentas finales","El ejecutante liquida capital, intereses y costas dentro de 5 días del pago del precio.","🧮"]];
+document.getElementById("sub").innerHTML=U.map(function(x){return'<div class="card"><span class="ico">'+x[2]+'</span><h3>'+x[0]+'</h3><p>'+x[1]+'</p></div>'}).join("");
+var D=[["Primera subasta",67,"2/3 de la valuación fiscal"],["Segunda subasta",50,"Base reducida un 25%"],["Tercera subasta",4,"Sin límite de precio"]];
+document.getElementById("drop").innerHTML=D.map(function(x){return'<div><span>'+x[0]+'</span><i data-w="'+x[1]+'">'+x[2]+'</i></div>'}).join("");
+var K=[["Notificar el embargo si el deudor no estaba",3],["Defensas del deudor en el ejecutivo",5],["Traslado al ejecutante",5],["Pago del precio por el comprador",5],["Liquidación final del ejecutante",5],["Sentencia si es de puro derecho",10],["Liquidación del vencedor en ejecución de sentencia",10],["Caducidad de medidas preparatorias",15]];
+var ch=document.getElementById("chart");ch.innerHTML=K.map(function(x){return'<div class="b"><em>'+x[0]+'</em><div class="t"><i data-w="'+x[1]/15*100+'"></i></div><strong>'+x[1]+' días</strong></div>'}).join("");
+function grow(el){[].forEach.call(el.querySelectorAll("[data-w]"),function(e){e.style.width=e.dataset.w+"%"})}
+[ch,document.getElementById("drop")].forEach(function(el){if("IntersectionObserver" in window){new IntersectionObserver(function(e,o){if(e[0].isIntersecting){grow(el);o.disconnect()}},{threshold:.2}).observe(el)}else{grow(el)}});
+var C=[
+{q:"Me condenaron a pagar y quien ganó quiere cobrar",a:"<b>Ejecución de sentencia (Título I).</b> Se ejecuta ante el juez que dictó la sentencia, una vez consentida o ejecutoriada y vencido el plazo para cumplirla (arts. 467 y 469)."},
+{q:"Tengo un pagaré o un cheque sin pagar",a:"<b>Juicio ejecutivo (Título II).</b> El pagaré y el cheque son títulos ejecutivos cuando tienen fuerza ejecutiva según la ley (art. 492)."},
+{q:"Un inquilino me debe alquileres",a:"<b>Juicio ejecutivo (Título II).</b> El crédito por alquileres es título ejecutivo. Antes se puede pedir que el demandado diga si es inquilino y exhiba el último recibo (arts. 492 y 494)."},
+{q:"Un propietario no paga las expensas del consorcio",a:"<b>Juicio ejecutivo (Título II).</b> El crédito por expensas comunes es título ejecutivo, con certificados de deuda que cumplan lo que exige el reglamento de copropiedad (art. 493)."},
+{q:"Una deuda está garantizada con hipoteca",a:"<b>Ejecución hipotecaria (Título III).</b> Sigue el trámite del ejecutivo, con defensas más limitadas. Se anota el embargo en el inmueble y se pide un informe al Registro de la Propiedad (arts. 567 y 568)."},
+{q:"El Estado reclama impuestos o tasas adeudadas",a:"<b>Ejecución fiscal (Título III).</b> Se usa para cobrar impuestos, patentes, tasas, multas y aportes. La forma del título la fija la legislación fiscal (arts. 574 y 575)."},
+{q:"Tengo una sentencia dictada en otro país",a:"<b>Ejecución de sentencia extranjera (Título I).</b> Tiene fuerza ejecutoria según los tratados con el país de origen. Si no hay tratado, debe cumplir los requisitos del art. 485."}
+];
+var cs=document.getElementById("cases"),an=document.getElementById("ans");
+C.forEach(function(c){var b=document.createElement("button");b.textContent=c.q;b.onclick=function(){[].forEach.call(cs.children,function(x){x.classList.remove("on")});b.classList.add("on");an.innerHTML=c.a};cs.appendChild(b)});
+</script>
+</body>
+</html>
