@@ -1,0 +1,117 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Ley 24.660 en lenguaje simple</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Figtree:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#f3f5f9;--sf:#fff;--ink:#14213d;--mut:#586178;--ln:#dde2ec;--ac:#0f8b8d;--tint:#e4f3f3;--mk:#ffd166;--rd:#b4234a;--hd:#14213d;--hdi:#f3f5f9;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1424;--sf:#141d33;--ink:#e6ebf5;--mut:#9aa6c0;--ln:#26314e;--ac:#4fd1c5;--tint:#12303a;--mk:#8a6a12;--rd:#ff7a9c;--hd:#08101f;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0d1424;--sf:#141d33;--ink:#e6ebf5;--mut:#9aa6c0;--ln:#26314e;--ac:#4fd1c5;--tint:#12303a;--mk:#8a6a12;--rd:#ff7a9c;--hd:#08101f;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.6 Figtree,system-ui,sans-serif}
+h1,h2,h3,.n{font-family:Fraunces,Georgia,serif}
+.hd{background:var(--hd);color:var(--hdi);padding:2.2rem 1.25rem 1.8rem}.hd>*{max-width:70rem;margin:0 auto}
+h1{font-size:clamp(2.2rem,6vw,3.6rem);line-height:1.05;margin-bottom:.4rem;font-weight:800}
+.sub{font-size:1.15rem;margin-top:.2rem;max-width:40rem}.dt{color:#aab6d3;font-size:.9rem;margin-top:.6rem}.hd a{color:#7fe3d9}
+.wrap{max-width:70rem;margin:0 auto;padding:1.25rem;display:grid;grid-template-columns:15rem 1fr;gap:2rem;align-items:start}
+aside{position:sticky;top:1rem}aside h2{font-size:1.05rem;margin:0 0 .5rem}
+#nav{display:flex;flex-direction:column;gap:2px}
+.mod{display:flex;justify-content:space-between;gap:.5rem;text-align:left;border:0;background:none;color:var(--ink);font:inherit;font-size:.92rem;padding:.45rem .6rem;border-radius:6px;cursor:pointer}
+.mod small{color:var(--mut);white-space:nowrap}.mod:hover{background:var(--tint)}.mod.on{background:var(--ac);color:#fff}.mod.on small{color:#e9fffd}
+.bar{background:var(--sf);border:1px solid var(--ln);border-radius:12px;padding:.8rem}
+#q{width:100%;font:inherit;font-size:1.05rem;padding:.7rem .9rem;border:2px solid var(--ln);border-radius:8px;background:var(--bg);color:var(--ink)}
+#q:focus,select:focus,button:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid var(--ac);outline-offset:2px}
+.adv{margin-top:.6rem}.adv summary{cursor:pointer;font-weight:600;padding:.3rem 0}
+.g{display:grid;grid-template-columns:repeat(auto-fit,minmax(11rem,1fr));gap:.7rem;margin-top:.6rem}
+label{display:flex;flex-direction:column;font-size:.85rem;color:var(--mut);gap:.2rem}
+select,input[type=number]{font:inherit;padding:.45rem;border:1px solid var(--ln);border-radius:6px;background:var(--bg);color:var(--ink)}
+.ck{flex-direction:row;align-items:center;gap:.5rem;color:var(--ink)}
+.tgs{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:.35rem;align-items:center}
+.ch,.tg,.rb,#clr,#ex{font:inherit;font-size:.82rem;border:1px solid var(--ln);background:var(--sf);color:var(--ink);border-radius:99px;padding:.15rem .65rem;cursor:pointer}
+.ch.on,.tg.on{background:var(--ac);border-color:var(--ac);color:#fff}
+#clr,#ex{border-radius:6px;padding:.3rem .8rem}
+.row{display:flex;justify-content:space-between;align-items:center;margin:1rem 0 .2rem;color:var(--mut);font-size:.9rem;gap:.5rem}
+.a{display:grid;grid-template-columns:5rem 1fr;gap:1rem;padding:1.3rem 0;border-bottom:1px solid var(--ln)}
+.nb{text-align:right;color:var(--mut);font-size:.8rem;line-height:1}.n{display:block;font-size:2.4rem;font-weight:800;color:var(--ac);line-height:1.05;margin-top:.15rem}
+.a h3{font-size:1.3rem;margin:0 0 .4rem;line-height:1.25}
+.meta{display:flex;flex-wrap:wrap;gap:.35rem;margin-bottom:.7rem}.meta>span{font-size:.78rem;background:var(--sf);border:1px solid var(--ln);border-radius:6px;padding:.05rem .5rem;color:var(--mut)}
+.meta .dv{background:var(--rd);border-color:var(--rd);color:#fff}
+.k{margin:0 0 .6rem;background:var(--tint);border-left:4px solid var(--ac);border-radius:4px 12px 12px 4px;padding:.7rem .9rem}
+details>summary{cursor:pointer;color:var(--ac);font-weight:600}details[open]>summary{margin-bottom:.3rem}
+.x{margin:0;font-family:Fraunces,Georgia,serif;font-weight:600;font-size:1.02rem;line-height:1.7;max-width:46rem}
+.rf{margin-top:.7rem;font-size:.85rem;color:var(--mut);display:flex;flex-wrap:wrap;gap:.35rem;align-items:center}
+mark{background:var(--mk);color:inherit;border-radius:3px;padding:0 2px}
+.der h3,.der .n{color:var(--rd);text-decoration:line-through}
+.emp{padding:2.5rem 1rem;text-align:center;color:var(--mut)}
+.ft{font-size:.82rem;color:var(--mut);margin-top:1.5rem}.ft a{color:var(--ac)}
+@media(max-width:820px){.wrap{grid-template-columns:1fr;gap:1rem}aside{position:static}#nav{flex-direction:row;overflow-x:auto;padding-bottom:.4rem}.mod{white-space:nowrap;border:1px solid var(--ln);background:var(--sf)}.a{grid-template-columns:3.6rem 1fr;gap:.7rem}.n{font-size:1.8rem}}
+</style></head><body>
+<header class="hd"><h1>Ley 24.660</h1><p class="sub">Ejecución de la pena privativa de la libertad, explicada en lenguaje simple.</p><p class="dt">Sancionada el 19/06/1996 y promulgada el 08/07/1996. Incluye reformas hasta la Ley 27.802 (B.O. 6/3/2026). Fuente: <a href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/35000-39999/37872/texact.htm" target="_blank" rel="noopener">Infoleg</a>.</p></header>
+<div class="wrap"><aside><h2>Módulos de la ley</h2><nav id="nav" aria-label="Capítulos"></nav></aside>
+<main><div class="bar"><input id="q" type="search" placeholder="Buscar por texto, número o referencia: domiciliaria, 56 bis, Ley 27.375" aria-label="Buscar">
+<details class="adv"><summary>Filtros avanzados</summary><div class="g">
+<label>Buscar en<select id="sc"><option value="t">Todo</option><option value="x">Texto de la ley</option><option value="k">Explicación simple</option><option value="r">Referencias y número</option></select></label>
+<label>Coincidencia<select id="md"><option value="t">Todas las palabras</option><option value="a">Alguna palabra</option><option value="f">Frase exacta</option></select></label>
+<label>Capítulo<select id="cp"><option value="">Todos</option></select></label>
+<label>Modificado por<select id="mo"><option value="">Cualquiera</option></select></label>
+<label>Vigencia<select id="vg"><option value="">Todos</option><option value="v">Vigentes</option><option value="d">Derogados</option></select></label>
+<label>Artículo desde<input id="d" type="number" min="1" max="229"></label><label>Artículo hasta<input id="h" type="number" min="1" max="229"></label>
+<label class="ck"><input id="rf" type="checkbox">Solo con referencias</label>
+<div class="tgs"><span>Temas:</span><span id="tgs"></span><button id="clr" type="button">Limpiar todo</button></div></div></details></div>
+<div class="row"><span id="cnt" aria-live="polite"></span><button id="ex" type="button">Expandir textos</button></div>
+<div id="list"></div>
+<p class="ft">Los textos están condensados y las explicaciones son orientativas, no reemplazan el texto oficial ni el consejo de un abogado. Consultá siempre la norma completa en Infoleg.</p></main></div>
+<script>
+const CH={I:["I","Principios básicos","1 a 11 bis"],II:["II","Modalidades básicas","12 a 56"],IIb:["II bis","Excepciones","56 bis a 56 quinquies"],III:["III","Normas de trato","57 a 78"],IV:["IV","Disciplina","79 a 99"],V:["V","Conducta y concepto","100 a 104"],VI:["VI","Recompensas","105"],VII:["VII","Trabajo","106 a 132"],VIII:["VIII","Educación","133 a 142"],IX:["IX","Asistencia médica","143 a 152"],X:["X","Asistencia espiritual","153 a 157"],XI:["XI","Relaciones familiares y sociales","158 a 167"],XII:["XII","Asistencia social","168 a 171"],XIII:["XIII","Asistencia postpenitenciaria","172 a 173"],XIV:["XIV","Patronatos de liberados","174 a 175"],XV:["XV","Establecimientos","176 a 199"],XVI:["XVI","Personal","200 a 207"],XVII:["XVII","Contralor judicial","208 a 209"],XVIII:["XVIII","Sistema penitenciario nacional","210 en adelante"]};
+const D=[
+{n:"1",c:"I",t:"Finalidad de la ejecución de la pena",x:"La ejecución de la pena privativa de libertad, en todas sus modalidades, tiene por finalidad lograr que el condenado adquiera la capacidad de respetar y comprender la ley, así como también la gravedad de sus actos y de la sanción impuesta, procurando su adecuada reinserción social […] El régimen penitenciario deberá utilizar todos los medios de tratamiento interdisciplinario que resulten apropiados para la finalidad enunciada.",k:"La cárcel no es solo castigo: busca que la persona entienda la gravedad de lo que hizo y pueda volver a la sociedad sin volver a delinquir.",r:"Ley 27.375",m:"27.375",g:"reinserción tratamiento"},
+{n:"3",c:"I",t:"Control judicial permanente",x:"La ejecución de la pena privativa de libertad, en todas sus modalidades, estará sometida al permanente control judicial. El juez de ejecución o juez competente garantizará el cumplimiento de las normas constitucionales, los tratados internacionales ratificados por la República Argentina y los derechos de los condenados no afectados por la condena o por la ley.",k:"Un juez vigila siempre que la pena se cumpla respetando la Constitución y los derechos de la persona presa.",r:"Constitución Nacional",g:"juez derechos"},
+{n:"6",c:"I",t:"Progresividad del régimen",x:"El régimen penitenciario se basará en la progresividad, procurando limitar la permanencia del condenado en establecimientos cerrados y promoviendo en lo posible y conforme su evolución favorable su incorporación a instituciones abiertas, semiabiertas, o a secciones separadas regidas por el principio de autodisciplina […] La ausencia de ello será un obstáculo para el progreso en el cumplimiento de la pena y los beneficios que esta ley acuerda.",k:"Se avanza por etapas: cuanto mejor evoluciona y más participa la persona, más se flexibiliza el encierro. Sin participación, no hay avance.",r:"Ley 27.375",m:"27.375",g:"progresividad tratamiento"},
+{n:"11 bis",c:"I",t:"Derechos de la víctima",x:"La víctima tendrá derecho a ser informada y a expresar su opinión […] ante el juez de ejecución o juez competente, cuando se sustancie cualquier planteo en el que se pueda decidir la incorporación de la persona condenada a: salidas transitorias, semilibertad, libertad condicional, prisión domiciliaria, prisión discontinua o semidetención, libertad asistida o régimen preparatorio para su liberación. Incurrirá en falta grave el juez que incumpliere estas obligaciones.",k:"La víctima puede enterarse y opinar antes de que se conceda un beneficio al condenado. Si el juez no lo respeta, comete una falta grave.",r:"Ley 27.375",m:"27.375",g:"víctima juez beneficios"},
+{n:"12",c:"II",t:"Los cuatro períodos de la pena",x:"El régimen penitenciario aplicable al condenado, cualquiera fuere la pena impuesta, se caracterizará por su progresividad y constará de: a) período de observación; b) período de tratamiento; c) período de prueba; d) período de libertad condicional.",k:"Es el camino de la condena en cuatro etapas: observación, tratamiento, prueba y, al final, libertad condicional.",r:"art. 13; art. 14; art. 15; art. 28",g:"progresividad períodos"},
+{n:"16",c:"II",t:"Salidas transitorias",x:"Por el tiempo: hasta 12 horas, hasta 24 horas y, en casos excepcionales, hasta 72 horas. Por el motivo: afianzar lazos familiares y sociales, cursar estudios, o participar en programas de prelibertad. Por el nivel de confianza: acompañado por un empleado no uniformado, confiado a un familiar o persona responsable, o bajo palabra de honor. Siempre las supervisa un profesional del servicio social. [Texto condensado]",k:"Permisos para salir un tiempo del penal (12, 24 o 72 horas) para ver a la familia, estudiar o prepararse para egresar, con supervisión de un trabajador social.",r:"art. 17; Ley 27.375",m:"27.375",g:"salidas beneficios"},
+{n:"32",c:"II",t:"Prisión domiciliaria",x:"El juez de ejecución podrá disponer el cumplimiento de la pena en detención domiciliaria: a) al interno enfermo cuando la cárcel le impida recuperarse o tratar su dolencia; b) con enfermedad incurable en período terminal; c) discapacitado, cuando la cárcel implique un trato indigno, inhumano o cruel; d) mayor de setenta años; e) mujer embarazada; f) madre de un niño menor de cinco años o de una persona con discapacidad a su cargo. [Texto condensado]",k:"Casos en que se puede cumplir la condena en casa: enfermedad grave, discapacidad, más de 70 años, embarazo, o madres de niños menores de 5 años.",r:"art. 33; Ley 26.472; art. 10 Código Penal",m:"26.472",g:"domiciliaria salud mujeres"},
+{n:"54",c:"II",t:"Libertad asistida",x:"Permitirá al condenado por algún delito no incluido en el artículo 56 bis y sin la accesoria del artículo 52 del Código Penal, el egreso anticipado y su reintegro al medio libre tres meses antes del agotamiento de la pena temporal […] Se exige el grado máximo de conducta, informes favorables y un dispositivo electrónico de control. [Texto condensado]",k:"Salir 3 meses antes de que termine la condena, con conducta ejemplar, informes favorables y control electrónico. No aplica a los delitos más graves.",r:"art. 56 bis; art. 52 Código Penal; Ley 27.375",m:"27.375",g:"libertad beneficios"},
+{n:"56 bis",c:"IIb",t:"Delitos excluidos de los beneficios",x:"No podrán otorgarse los beneficios comprendidos en el período de prueba a los condenados por, entre otros: homicidios agravados (art. 80 del Código Penal), delitos contra la integridad sexual, secuestro extorsivo o privación ilegal de la libertad seguidos de muerte, tortura seguida de muerte, trata de personas, financiamiento del terrorismo y ciertos delitos de la ley 23.737 y del Código Aduanero. Tampoco podrán obtener prisión discontinua, semidetención ni libertad asistida. [Texto condensado]",k:"Lista de delitos graves que quedan afuera de las salidas, la semilibertad y la libertad asistida. Igual tienen un régimen preparatorio para la liberación.",r:"art. 80 Código Penal; Ley 23.737; art. 56 quáter; Ley 27.375",m:"27.375",g:"excepciones beneficios"},
+{n:"85",c:"IV",t:"Faltas disciplinarias graves",x:"Las infracciones disciplinarias se clasifican en leves, medias y graves. Son faltas graves, entre otras: evadirse o intentarlo; incitar o participar en movimientos para quebrantar el orden; poseer o traficar elementos electrónicos no autorizados, estupefacientes, alcohol o armas; retener, agredir o amenazar a funcionarios u otras personas; intimidar a otra persona; cometer un delito doloso. [Texto condensado]",k:"Define qué se considera falta grave: fugarse, tener armas, drogas o celulares no autorizados, amenazar o agredir, entre otras.",r:"art. 79",g:"disciplina faltas"},
+{n:"87",c:"IV",t:"Sanciones permitidas",x:"Sólo se podrá aplicar como sanción alguna de estas correcciones: amonestación; exclusión de actividades recreativas hasta 10 días; exclusión de la actividad común hasta 15 días; suspensión o restricción de derechos reglamentarios hasta 15 días; permanencia en alojamiento individual hasta 15 días o hasta 7 fines de semana; traslado a sección más rigurosa; traslado a otro establecimiento. [Texto condensado]",k:"Es una lista cerrada: no se puede aplicar otro castigo. Nunca se corta del todo la visita de un familiar directo.",r:"art. 89",g:"disciplina sanciones"},
+{n:"102",c:"V",t:"Escala de calificación",x:"La calificación de conducta y concepto será efectuada trimestralmente […] de conformidad con la siguiente escala: a) Ejemplar; b) Muy buena; c) Buena; d) Regular; e) Mala; f) Pésima.",k:"Cada 3 meses se califican la conducta y el concepto. Esas notas pesan para salidas y libertad condicional.",r:"art. 100; art. 101; art. 104",g:"conducta calificación"},
+{n:"117",c:"VII",t:"Organización del trabajo",x:"Artículo derogado por el art. 216 de la Ley 27.802 (B.O. 6/3/2026).",k:"Este artículo fue eliminado por la Ley 27.802, por lo tanto ya no rige.",r:"Ley 27.802",m:"27.802",g:"trabajo derogado",d:1},
+{n:"121",c:"VII",t:"Cómo se reparte el sueldo",x:"La retribución del trabajo del interno, deducidos los aportes a la seguridad social, se distribuirá así: 10 % para indemnizar los daños causados por el delito; 35 % para la prestación de alimentos; 25 % para costear los gastos que causare en el establecimiento; 30 % para formar un fondo propio que se le entregará a su salida.",k:"Del sueldo de quien trabaja preso: 10 % para reparar el daño, 35 % para alimentos de su familia, 25 % para su manutención y 30 % ahorrado para cuando salga.",r:"art. 111; art. 122",g:"trabajo salario"},
+{n:"133",c:"VIII",t:"Derecho a la educación",x:"Todas las personas privadas de su libertad tienen derecho a la educación pública. El Estado nacional, las provincias y la Ciudad Autónoma de Buenos Aires tienen la responsabilidad indelegable de proveer prioritariamente a una educación integral, permanente y de calidad […] Todos los internos deben completar la escolaridad obligatoria fijada en la ley.",k:"Estudiar es un derecho en todos los niveles, hasta la universidad, y es obligatorio terminar la escuela.",r:"Ley 26.695; Ley 26.206; Ley 24.521",m:"26.695",g:"educación derechos"},
+{n:"140",c:"VIII",t:"Estímulo educativo",x:"Los plazos requeridos para el avance a través de las distintas fases y períodos de la progresividad se reducirán para los internos que aprueben estudios: un mes por ciclo lectivo anual; dos meses por curso de formación profesional anual; dos por estudios primarios; tres por secundarios; tres por terciarios; cuatro por universitarios; dos por posgrado. Son acumulativos hasta un máximo de veinte meses. [Texto condensado]",k:"Estudiar acorta los tiempos para acceder a beneficios (no la condena misma), hasta 20 meses acumulados.",r:"Ley 26.695; Ley 26.206",m:"26.695",g:"educación plazos beneficios"},
+{n:"160",c:"XI",t:"Visitas, correspondencia y teléfonos",x:"Las visitas, la correspondencia y las comunicaciones telefónicas se ajustarán a las condiciones, oportunidad y supervisión que determinen los reglamentos […] Quedan prohibidas las comunicaciones telefónicas a través de equipos o terminales móviles. A tal fin se deberá instalar inhibidores en los pabellones o módulos de cada penal. La violación de esta prohibición será falta grave. [Texto condensado]",k:"Los celulares están prohibidos dentro del penal y usarlos es falta grave. Las visitas y llamadas se rigen por reglamento.",r:"art. 85; Ley 27.375",m:"27.375",g:"comunicaciones disciplina"},
+{n:"195",c:"XV",t:"Madres con hijos pequeños",x:"La interna podrá retener consigo a sus hijos menores de cuatro años. Cuando se encuentre justificado, se organizará un jardín maternal a cargo de personal calificado.",k:"Las madres presas pueden convivir con sus hijos hasta los 4 años, y puede haber un jardín maternal.",r:"art. 196",g:"mujeres niños"}];
+D.forEach(a=>{a.g=(a.g||"").split(" ");a.r=a.r||"";a.m=a.m||""});
+const $=i=>document.getElementById(i),N=s=>s.normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase(),T=new Set();let Q=[],O=false;
+function hl(s){if(!Q.length)return s;const n=N(s),re=new RegExp(Q.map(q=>q.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")).join("|"),"g");let o="",p=0,m;while((m=re.exec(n))){o+=s.slice(p,m.index)+"<mark>"+s.slice(m.index,m.index+m[0].length)+"</mark>";p=m.index+m[0].length}return o+s.slice(p)}
+function filt(){const q=N($("q").value.trim()),md=$("md").value,sc=$("sc").value,d=$("d").value,h=$("h").value;
+Q=q?(md=="f"?[q]:q.split(/\s+/)):[];
+return D.filter(a=>{const v=parseFloat(a.n);
+if($("cp").value&&a.c!=$("cp").value)return false;
+if($("mo").value&&(a.m||"orig")!=$("mo").value)return false;
+if($("vg").value=="v"&&a.d||$("vg").value=="d"&&!a.d)return false;
+if(d&&v<+d||h&&v>+h)return false;
+if($("rf").checked&&!a.r)return false;
+if(T.size&&![...T].every(t=>a.g.includes(t)))return false;
+if(!Q.length)return true;
+const f={t:[a.t,a.x,a.k,a.r,a.g.join(" "),"art. "+a.n,"artículo "+a.n],x:[a.t,a.x],k:[a.k],r:[a.r,"art. "+a.n]}[sc],hay=N(f.join(" "));
+return md=="a"?Q.some(t=>hay.includes(t)):Q.every(t=>hay.includes(t))})}
+const card=a=>{const c=CH[a.c],op=O||(Q.length&&Q.some(t=>N(a.x).includes(t)));
+return `<article class="a${a.d?" der":""}"><div class="nb">Art.<span class="n">${a.n}</span></div><div><h3>${hl(a.t)}</h3><div class="meta"><span>Capítulo ${c[0]}: ${c[1]}</span><span>${a.m?"Modificado por Ley "+a.m:"Texto original"}</span>${a.d?'<span class="dv">Derogado</span>':""}${a.g.map(t=>`<button class="tg${T.has(t)?" on":""}" data-t="${t}">#${t}</button>`).join("")}</div><p class="k"><b>En simple:</b> ${hl(a.k)}</p><details${op?" open":""}><summary>Texto del artículo</summary><p class="x">${hl(a.x)}</p></details>${a.r?`<div class="rf">Referencias: ${a.r.split("; ").map(r=>`<button class="rb" data-r="${r}">${r}</button>`).join("")}</div>`:""}</div></article>`};
+function R(){const L=filt(),cp=$("cp").value;
+$("cnt").textContent=`${L.length} de ${D.length} artículos cargados`;
+$("list").innerHTML=L.length?L.map(card).join(""):`<div class="emp">${cp&&!D.some(a=>a.c==cp)&&!$("q").value?"Este módulo todavía no tiene artículos cargados en esta versión.":"No hay resultados. Probá con otras palabras o usá Limpiar todo."}</div>`;
+document.querySelectorAll(".mod").forEach(b=>b.classList.toggle("on",b.dataset.c==cp));
+document.querySelectorAll(".ch").forEach(b=>b.classList.toggle("on",T.has(b.dataset.t)))}
+const cnt=k=>D.filter(a=>a.c==k).length;
+$("nav").innerHTML=`<button class="mod" data-c=""><span>Toda la ley</span><small>${D.length}</small></button>`+Object.keys(CH).map(k=>`<button class="mod" data-c="${k}" title="Artículos ${CH[k][2]}"><span>${CH[k][0]}. ${CH[k][1]}</span><small>${cnt(k)}</small></button>`).join("");
+$("cp").innerHTML+=Object.keys(CH).map(k=>`<option value="${k}">${CH[k][0]}. ${CH[k][1]}</option>`).join("");
+$("mo").innerHTML+=[...new Set(D.map(a=>a.m||"orig"))].map(m=>`<option value="${m}">${m=="orig"?"Texto original":"Ley "+m}</option>`).join("");
+$("tgs").innerHTML=[...new Set(D.flatMap(a=>a.g))].sort().map(t=>`<button class="ch" data-t="${t}">#${t}</button>`).join(" ");
+document.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;
+if(b.classList.contains("mod")){$("cp").value=b.dataset.c;R()}
+else if(b.dataset.t){T.has(b.dataset.t)?T.delete(b.dataset.t):T.add(b.dataset.t);R()}
+else if(b.dataset.r){$("q").value=b.dataset.r;$("sc").value="t";$("md").value="t";R();scrollTo({top:0,behavior:"smooth"})}
+else if(b.id=="clr"){document.querySelectorAll(".bar input,.bar select").forEach(i=>i.type=="checkbox"?i.checked=false:i.value=i.id=="sc"||i.id=="md"?"t":"");T.clear();R()}
+else if(b.id=="ex"){O=!O;b.textContent=O?"Contraer textos":"Expandir textos";R()}});
+document.querySelectorAll(".bar input,.bar select").forEach(i=>i.addEventListener("input",R));
+R();
+</script></body></html>
