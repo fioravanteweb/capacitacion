@@ -327,6 +327,8 @@ const A = {
   ele:['Derecho Electrónico','#7C3AED']
 };
 
+/* `o` = orden manual dentro de la materia (opcional).
+   Si no está, se ordena alfabéticamente por título. */
 const C = [
   {id:'def1', a:'def', t:'Defensor de Ausentes', url:'https://fioravanteweb.github.io/capacitacion/ausente'},
 {id:'def3', a:'def', t:'Defensor y Ministerio Publico', url:'https://fioravanteweb.github.io/capacitacion/defensor'},
@@ -362,10 +364,14 @@ const C = [
   {id:'vio', a:'pro', t:'Violencia familiar', n:'Ley XIV – N.º 6 y arts. 655 a 658', url:'https://fioravanteweb.github.io/capacitacion/misiones4'},
 {id:'des1', a:'pro', t:'Juicio Ejecutivo', url:'https://fioravanteweb.github.io/capacitacion/ejecutivo'},  
 {id:'des', a:'pro', t:'Juicio de desalojo', n:'Código Procesal, arts. 623 a 635', url:'https://fioravanteweb.github.io/capacitacion/misiones5'},
-  {id:'noc1', a:'noc', t:'En la Ley Procesal Misiones-Ley XII-27', url:'https://fioravanteweb.github.io/capacitacion/procesosLeyXII-27'},
-  {id:'noc2', a:'noc', t:'Proceso de Conocimiento', url:'https://fioravanteweb.github.io/capacitacion/ProcesoConocimiento'},
-  {id:'noc3', a:'noc', t:'Procesos de Ejecución', url:'https://fioravanteweb.github.io/capacitacion/ProcesosEjecucion'},
-  {id:'noc4', a:'noc', t:'Procesos Especiales', url:'https://fioravanteweb.github.io/capacitacion/ProcesosEspeciales'},
+  /* --- Nociones del Proceso (orden manual) --- */
+  {id:'noc1', a:'noc', o:1, t:'En la Ley Procesal Misiones-Ley XII-27', url:'https://fioravanteweb.github.io/capacitacion/procesosLeyXII-27'},
+  {id:'noc2', a:'noc', o:2, t:'Proceso de Conocimiento', url:'https://fioravanteweb.github.io/capacitacion/ProcesoConocimiento'},
+  {id:'noc3', a:'noc', o:3, t:'Procesos de Ejecución', url:'https://fioravanteweb.github.io/capacitacion/ProcesosEjecucion'},
+  {id:'noc4', a:'noc', o:4, t:'Procesos Especiales', url:'https://fioravanteweb.github.io/capacitacion/ProcesosEspeciales'},
+  {id:'noc5', a:'noc', o:5, t:'Prueba y Notificaciones', url:'https://fioravanteweb.github.io/capacitacion/prueba'},
+  {id:'noc6', a:'noc', o:6, t:'Recursos', url:'https://fioravanteweb.github.io/capacitacion/Recursos'},
+  {id:'noc7', a:'noc', o:7, t:'Finalización del Proceso', url:'https://fioravanteweb.github.io/capacitacion/finalizacion'},
   {id:'succ', a:'suc', t:'El proceso sucesorio', n:'CCyC, arts. 2335 a 2362', url:'https://fioravanteweb.github.io/capacitacion/sucesion1'},
   {id:'sucm', a:'suc', t:'Proceso sucesorio en Misiones', n:'Código Procesal, arts. 717 a 763', url:'https://fioravanteweb.github.io/capacitacion/sucesion2'},
 {id:'lab1', a:'lab', t:'Defensor del Trabajador', url:'https://fioravanteweb.github.io/capacitacion/defensalaboral'},
@@ -403,6 +409,13 @@ function stats(){
 }
 
 /* ==================== NAVEGACIÓN (ACORDEÓN) ==================== */
+/* Ordena por `o` si existe; si no, alfabéticamente por título */
+function ordenar(a, b){
+  const oa = a.o ?? 999, ob = b.o ?? 999;
+  if (oa !== ob) return oa - ob;
+  return a.t.localeCompare(b.t, 'es');
+}
+
 function buildNav(){
   let h = `<button class="nav-all" data-k="all" aria-pressed="true">
              <span>Todos los cursos</span><em>${C.length}</em>
@@ -410,7 +423,7 @@ function buildNav(){
 
   for (const k in A){
     const [nombre, color] = A[k];
-    const lista = C.filter(c => c.a === k).sort((a,b) => a.t.localeCompare(b.t,'es'));
+    const lista = C.filter(c => c.a === k).sort(ordenar);
     h += `<div class="acc" data-area="${k}">
             <button class="acc-head" data-head="${k}" aria-expanded="false" style="--c:${color}">
               <span>${nombre}</span><em>${lista.length}</em><b class="caret">▸</b>
