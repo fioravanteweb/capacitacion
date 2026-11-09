@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La prueba, las notificaciones y la rebeldía en Misiones · Guía en lenguaje claro</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f6fb;--card:#fff;--ink:#14202e;--mut:#5b6b7e;--line:#e3e8f0;--p:#0e7490;--p2:#6366f1;--soft:#ecf8fb;--warn:#fff7e0;--warnb:#d99a1f;--sh:0 1px 2px rgba(15,23,42,.05),0 10px 28px rgba(15,23,42,.07)}
+:root[data-theme=dark]{--bg:#0b1220;--card:#121b2d;--ink:#e6edf7;--mut:#93a4ba;--line:#22304a;--p:#22b8d6;--p2:#8b8ef5;--soft:#0f2433;--warn:#2b2312;--warnb:#d9a441;--sh:0 1px 2px #0006,0 10px 28px #0005}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0b1220;--card:#121b2d;--ink:#e6edf7;--mut:#93a4ba;--line:#22304a;--p:#22b8d6;--p2:#8b8ef5;--soft:#0f2433;--warn:#2b2312;--warnb:#d9a441;--sh:0 1px 2px #0006,0 10px 28px #0005}}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font:400 16px/1.65 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased}
+.wrap{max-width:1040px;margin:0 auto;padding:0 18px}
+header{position:relative;overflow:hidden;color:#fff;padding:54px 0 70px;background:radial-gradient(900px 400px at 85% -10%,#6366f1aa,transparent 60%),radial-gradient(700px 380px at 0 110%,#06b6d4aa,transparent 60%),linear-gradient(135deg,#0b2a43,#10304f 55%,#1b2a63)}
+.eyebrow{display:inline-block;font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;background:#ffffff1f;border:1px solid #ffffff33;backdrop-filter:blur(6px);padding:5px 12px;border-radius:99px;margin-bottom:16px}
+h1{font:700 clamp(1.8rem,4.6vw,3rem)/1.12 Fraunces,Georgia,serif;letter-spacing:-.02em;max-width:820px}
+header p.sub{margin-top:14px;max-width:680px;opacity:.88;font-size:1.05rem}
+.stats{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.stat{background:#ffffff17;border:1px solid #ffffff2b;backdrop-filter:blur(8px);border-radius:16px;padding:10px 18px}
+.stat b{display:block;font:700 1.5rem Fraunces,serif}.stat span{font-size:.8rem;opacity:.85}
+#theme{position:absolute;top:16px;right:18px;border:1px solid #ffffff44;background:#ffffff1a;color:#fff;width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:1.1rem}
+nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:saturate(1.6) blur(14px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:6px;overflow-x:auto;padding:10px 18px;scrollbar-width:none}
+nav button{flex:none;border:1px solid transparent;background:transparent;color:var(--mut);font:500 .9rem Inter,sans-serif;padding:9px 15px;border-radius:99px;cursor:pointer;transition:.2s}
+nav button:hover{background:var(--card);color:var(--ink)}
+nav button[aria-selected=true]{background:linear-gradient(135deg,var(--p),var(--p2));color:#fff;box-shadow:0 6px 16px #0e749044}
+main{margin-top:-34px;position:relative;padding-bottom:50px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:26px;box-shadow:var(--sh);padding:34px;animation:in .35s ease}
+.panel[hidden]{display:none}
+@keyframes in{from{opacity:0;transform:translateY(10px)}}
+h2{font:700 clamp(1.5rem,3.4vw,2.1rem)/1.2 Fraunces,Georgia,serif;letter-spacing:-.01em}
+h2 small{display:block;font:600 .75rem Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--p);margin-bottom:6px}
+h3{font:600 1.15rem Inter,sans-serif;margin:34px 0 12px;display:flex;align-items:center;gap:10px}
+h3:after{content:"";flex:1;height:1px;background:var(--line)}
+h4{font:600 .8rem Inter,sans-serif;text-transform:uppercase;letter-spacing:.08em;color:var(--p2);margin:22px 0 8px}
+.lead{margin:18px 0;padding:18px 22px;background:var(--soft);border-radius:18px;border:1px solid color-mix(in srgb,var(--p) 22%,transparent)}
+.lead p+p{margin-top:10px}
+.keys{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin:18px 0}
+.key{padding:14px 16px;border:1px solid var(--line);border-radius:16px;font-size:.93rem;font-weight:500;display:flex;gap:10px;align-items:flex-start;transition:.2s}
+.key:hover{transform:translateY(-2px);box-shadow:var(--sh)}
+.key i{flex:none;width:26px;height:26px;border-radius:9px;display:grid;place-items:center;font-style:normal;font-size:.8rem;color:#fff;background:linear-gradient(135deg,var(--p),var(--p2))}
+.note{margin:18px 0;padding:14px 18px;background:var(--warn);border-left:4px solid var(--warnb);border-radius:6px 14px 14px 6px;font-size:.93rem}
+.tools{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0 12px;align-items:center}
+.tools input{flex:1;min-width:200px;padding:10px 16px;border-radius:99px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:inherit;font-size:.92rem}
+.tools button{padding:9px 16px;border-radius:99px;border:1px solid var(--line);background:transparent;color:var(--ink);font:500 .85rem Inter,sans-serif;cursor:pointer}
+.tools button:hover{border-color:var(--p);color:var(--p)}
+.cita{border:1px solid var(--line);border-radius:16px;margin:10px 0;background:var(--card);transition:.2s}
+.cita[open]{box-shadow:var(--sh);border-color:color-mix(in srgb,var(--p) 40%,var(--line))}
+.cita summary{list-style:none;cursor:pointer;display:flex;gap:10px;align-items:center;flex-wrap:wrap;padding:13px 16px}
+.cita summary::-webkit-details-marker{display:none}
+.cita summary:after{content:"＋";margin-left:auto;color:var(--mut);font-size:1.1rem}
+.cita[open] summary:after{content:"−"}
+.art{font-size:.94rem}.art b{color:var(--p)}
+.badge{font-size:.7rem;font-weight:600;padding:3px 10px;border-radius:99px;white-space:nowrap;color:#fff}
+.b-c{background:#0e7490}.b-l{background:#b45309}.b-p{background:#9f1239}.b-v{background:#7c3aed}.b-d{background:#475569}
+.flag{font-size:.68rem;font-weight:600;padding:2px 9px;border-radius:99px;background:var(--warn);color:var(--warnb);border:1px solid var(--warnb)}
+.cita .body{padding:0 16px 16px}
+.cita .ley{font-size:.8rem;color:var(--mut);margin-bottom:8px}
+blockquote{padding:14px 18px;border-left:4px solid var(--p2);background:var(--bg);border-radius:4px 12px 12px 4px;font-size:.94rem}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;counter-reset:s;margin:12px 0}
+.step{position:relative;padding:16px 16px 16px 58px;border:1px solid var(--line);border-radius:16px;font-size:.92rem;counter-increment:s}
+.step:before{content:counter(s);position:absolute;left:14px;top:14px;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;font:700 .95rem Fraunces,serif;color:#fff;background:linear-gradient(135deg,var(--p),var(--p2))}
+.step b{display:block}
+.chart{margin:18px 0;border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.row{display:grid;grid-template-columns:150px 120px 1fr;gap:14px;align-items:center;padding:13px 18px;border-top:1px solid var(--line);font-size:.9rem}
+.row:first-child{border:0;background:var(--bg);font-size:.75rem;text-transform:uppercase;letter-spacing:.07em;color:var(--mut);font-weight:600}
+.meter{display:flex;gap:4px}.meter i{width:18px;height:8px;border-radius:4px;background:var(--line)}.meter i.on{background:linear-gradient(90deg,var(--p),var(--p2))}
+.row small{display:block;color:var(--mut)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:14px}
+.card{text-align:left;padding:18px;border:1px solid var(--line);border-radius:18px;background:var(--card);color:var(--ink);cursor:pointer;font:inherit;transition:.25s}
+.card:hover{transform:translateY(-4px);box-shadow:var(--sh);border-color:var(--p)}
+.card b{display:block;margin:6px 0 4px}.card span{font-size:.86rem;color:var(--mut)}.card em{font-style:normal;font-size:1.5rem}
+footer{text-align:center;color:var(--mut);font-size:.83rem;padding:10px 0 40px}
+@media(max-width:640px){.panel{padding:22px 16px;border-radius:20px}.row{grid-template-columns:1fr;gap:6px}header{padding:44px 0 62px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+@media print{nav,#theme,.tools{display:none}.panel[hidden]{display:block}header{background:#0b2a43!important}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<button id="theme" aria-label="Cambiar tema">🌓</button>
+<span class="eyebrow">Provincia de Misiones · Guía informativa</span>
+<h1>La prueba, las notificaciones y la rebeldía en los procesos judiciales</h1>
+<p class="sub">Explicado en lenguaje claro para personas que no son abogadas: fuero Civil, Comercial, Laboral, Penal, Familia y Violencia Familiar.</p>
+<div class="stats"><div class="stat"><b>7</b><span>temas</span></div><div class="stat"><b id="nc">0</b><span>artículos citados</span></div><div class="stat"><b>5</b><span>normas de Misiones</span></div></div>
+</div></header>
+<nav><div class="wrap" id="menu" role="tablist"></div></nav>
+<main class="wrap" id="main"></main>
+<footer class="wrap">Guía informativa · revisada en noviembre de 2026. No reemplaza el asesoramiento de un abogado o abogada.<br>Las citas marcadas “Verificar” o “Síntesis” deben contrastarse con el texto oficial vigente.</footer>
+
+<script>
+const L={c:["Código Procesal Civil, Comercial, de Familia y Violencia Familiar","Ley XII N.° 27"],l:["Código Procesal Laboral","Ley XIII N.° 2"],p:["Código Procesal Penal","Ley XIV N.° 13"],v:["Ley de Violencia Familiar","Ley XIV N.° 6"],d:["Ley de Derechos de las Personas Detenidas","Misiones"]};
+const C=(k,a,t,x,f)=>`<details class="cita"><summary><span class="badge b-${k}">${L[k][1]}</span><span class="art"><b>${a}</b> · ${t}</span>${f?`<span class="flag">${f=="s"?"Síntesis":"Verificar"}</span>`:""}</summary><div class="body"><p class="ley">${L[k][0]}${k=="v"?" (antes Ley 3325)":""} — Misiones</p><blockquote>${f=="s"?x:"“"+x+"”"}</blockquote></div></details>`;
+const lead=(...p)=>`<div class="lead">${p.map(x=>`<p>${x}</p>`).join("")}</div>`;
+const note=h=>`<div class="note">${h}</div>`;
+const steps=a=>`<div class="steps">${a.map(([t,d])=>`<div class="step"><b>${t}</b>${d}</div>`).join("")}</div>`;
+const M=[["Civil y Comercial",2,"Cada parte prueba lo que afirma","Dirige la prueba que piden las partes y puede disponer otras."],["Laboral",4,"Prueba de oficio e indicios","Muy activo: compensa que el trabajador tiene menos acceso a la prueba."],["Penal",3,"Libertad probatoria","Admite o rechaza prueba; solo valen medios lícitos."],["Familia",4,"Escucha y prueba preconstituida","Oye personalmente a niños, niñas y adolescentes."],["Violencia familiar",5,"Protección urgente","Dispone medidas cautelares sin esperar prueba compleja."]];
+const P=[
+{id:"civil",ic:"⚖️",label:"Civil y Comercial",title:"Fuero Civil y Comercial",key:["Cada parte prueba lo que afirma","Solo se prueban hechos discutidos por las partes","Se rechaza la prueba inútil o dilatoria"],
+body:()=>lead("<b>¿Qué significa “probar” en un juicio civil o comercial?</b> Si vas a juicio por una deuda, un contrato o una propiedad, tenés que llevar al juez los elementos que demuestren lo que afirmás. No alcanza con decir “es así”: hay que respaldarlo con documentos, testigos, pericias o cualquier otro medio útil.","La ley establece que <b>cada parte debe probar lo que afirma</b>. El juez solo acepta pruebas que tengan relación con el conflicto y que no sean inútiles ni se ofrezcan solo para demorar.")+"@K@"+
+C("c","Art. 366","Pertinencia y admisibilidad de la prueba","No pueden producirse pruebas sino sobre hechos que fueron articulados por las partes en sus escritos respectivos. No son admitidas las que son manifiestamente improcedentes, superfluas o meramente dilatorias.")+
+C("c","Art. 379","Carga de la prueba","Incumbe la carga de la prueba a la parte que afirma la existencia de un hecho controvertido o de un precepto jurídico que el Juez o el Tribunal no tiene el deber de conocer.")+
+C("c","Art. 380","Medios de prueba","La prueba deberá producirse por los medios previstos expresamente por la ley y por los que el juez disponga, a pedido de parte o de oficio, siempre que no afecten la moral, la libertad personal de los litigantes o de terceros, o no estén expresamente prohibidos para el caso. Los medios de prueba no previstos se diligenciarán ampliando por analogía las disposiciones de los que sean semejantes o, en su defecto, en la forma que establezca el juez.")},
+{id:"laboral",ic:"👷",label:"Laboral",title:"Fuero Laboral",key:["El juez puede ordenar prueba por su cuenta","Los indicios también son prueba","Compensa la desigualdad de acceso a documentos"],
+body:()=>lead("<b>En el trabajo, la prueba tiene una regla especial:</b> el juez puede ordenar por su cuenta las pruebas que considere necesarias, aunque las partes no las hayan pedido. Esto busca proteger al trabajador, que muchas veces tiene menos acceso a los documentos o testigos.","Además, los <b>indicios</b> (hechos pequeños que, en conjunto, muestran una situación) también valen como prueba. Por ejemplo, si el empleador no presenta los recibos de sueldo, eso puede perjudicarlo.")+"@K@"+
+C("l","Art. 93","Prueba de oficio","En cualquier estado o instancia del proceso el Juez o Tribunal puede decretar de oficio las medidas de prueba que considera convenientes, guarden o no relación con las ofrecidas por las partes…")+
+C("l","Art. 89","Prueba indiciaria","Las presunciones o indicios constituyen prueba suficiente si se fundan en hechos reales y probados, y por su número, precisión, gravedad y concordancia son aptos para formar la convicción del juez.")},
+{id:"penal",ic:"🔎",label:"Penal",title:"Fuero Penal",key:["Libertad de prueba: cualquier medio lícito","No hay lista cerrada de pruebas","Se rechaza lo evidentemente inútil"],
+body:()=>lead("<b>En lo penal rige la libertad de prueba:</b> cualquier hecho importante para el caso puede demostrarse con cualquier medio, siempre que sea lícito y no viole garantías constitucionales. No hay una lista cerrada de pruebas permitidas.","El tribunal puede rechazar pruebas <b>evidentemente impertinentes o superabundantes</b>, es decir, que no tienen relación con el caso o que repiten lo ya probado.")+"@K@"+
+C("p","Art. 214","Libertad y legalidad probatoria","Todos los hechos y circunstancias relacionadas con el objeto del proceso pueden ser acreditados por cualquier medio de prueba. No regirán respecto de ellos las limitaciones establecidas por las leyes civiles, con excepción de las relativas al estado civil de las personas. Además de los medios de prueba establecidos, se podrán utilizar otros siempre que no vulneren garantías constitucionales de las personas o afecten el sistema institucional. Las formas de admisión y producción se adecuarán a los medios de prueba previstos en este Código. Los elementos de prueba tendrán valor si han sido obtenidos por un medio lícito e incorporados al procedimiento conforme a las disposiciones de este Código.")+
+C("p","Art. 372","Admisión y rechazo de la prueba","El Presidente debe ordenar la recepción oportuna de las pruebas ofrecidas. El Tribunal puede rechazar, por auto, la prueba evidentemente impertinente o superabundante.")},
+{id:"familia",ic:"👨‍👩‍👧",label:"Familia",title:"Fuero de Familia",key:["Juez muy activo en la prueba","Niños, niñas y adolescentes son oídos personalmente","Se reutilizan informes y pericias previos"],
+body:()=>lead("<b>En familia, el juez tiene un papel muy activo:</b> no solo mira las pruebas que ofrecen las partes, sino que también debe escuchar a los niños, niñas y adolescentes involucrados y puede ordenar informes, pericias o cualquier medida que ayude a resolver el conflicto.","Muchas veces se usan <b>pruebas que ya existen</b> (informes escolares, diagnósticos médicos, pericias psicológicas) y se incorporan directamente al expediente.")+"@K@"+
+C("c","Art. 644","Normas generales del procedimiento de familia","En los juicios que se entablen en razón de la competencia establecida en el Artículo 641 del presente Código, a excepción de procedimientos especiales determinados en el presente libro, se deben observar las disposiciones del presente Código, que sean de aplicación. El niño, niña o adolescente y los miembros de la familia directamente vinculados deben ser oídos personalmente por el Juez.")+
+C("c","Art. 646","Prueba preconstituida","En caso de formarse una causa judicial, toda la documental, informes, diagnósticos, pericias, evaluaciones y demás elementos que se hayan producido con anterioridad deben ser agregados a dicha causa como prueba preconstituida, a los efectos del mérito y valoración…")},
+{id:"violencia",ic:"🛡️",label:"Violencia Familiar",title:"Violencia Familiar",key:["La prueba no es requisito para denunciar","Medidas urgentes desde el primer momento","El relato se confirma después, con el proceso"],
+body:()=>lead("<b>En violencia familiar, la prueba no es un requisito para denunciar.</b> La ley parte de la palabra de la víctima y de la situación de riesgo. El juez puede ordenar medidas urgentes de protección (como la exclusión del agresor del hogar o la prohibición de acercamiento) incluso sin pruebas complejas.","Con el correr del proceso se pueden sumar testimonios, informes psicológicos o sociales y otros elementos que ayuden a confirmar el relato, pero <b>la urgencia de la protección no depende de tener “pruebas” desde el primer momento</b>.")+"@K@"+
+C("v","Art. 4","Facultades del Juez","El Juez puede adoptar de oficio o a petición de la víctima las medidas cautelares que considere pertinentes para hacer cesar la situación de violencia y proteger a la persona denunciante.","v")+
+C("c","Art. 655","Violencia familiar","El Juez con competencia exclusiva en violencia familiar, entiende en los procesos tramitados por las causas establecidas en la Ley XIV – N.º 6 (Antes Ley 3325), sus complementarias o modificatorias, en los que pueden disponer o requerir la aplicación de programas o la intervención de las instituciones y centros destinados a la asistencia y atención de las víctimas de violencia familiar, a los fines de su contención, resguardo y recuperación.")+
+C("c","Art. 657","Medidas cautelares de extrema urgencia","En los casos en que la denuncia de violencia familiar requiera de medidas cautelares de extrema urgencia para la protección de las personas, el Juez de Paz local debe tomar las medidas que dispone la Ley XIV - N.° 6…")},
+{id:"notificaciones",ic:"📬",label:"Notificaciones y Domicilio",title:"Notificaciones y Domicilio",key:["Constituí domicilio dentro de la ciudad del juzgado","Declará también tu domicilio real","Si estás detenido, te notifican en Secretaría o en el lugar de detención"],
+body:()=>lead("<b>¿Qué es “constituir domicilio”?</b> Cuando empezás un juicio (o te defendés), la ley te pide que fijes un <b>domicilio legal o procesal</b> dentro de la ciudad donde funciona el juzgado. Ahí van a llegar las notificaciones por cédula. También tenés que denunciar tu <b>domicilio real</b>, que es donde vivís o donde está tu negocio.","Si no constituís domicilio, el juzgado puede tener por notificadas las resoluciones en la Secretaría, y eso puede hacerte perder plazos importantes.")+
+note("<b>Ojo:</b> en Familia y Violencia Familiar se aplican de manera supletoria las reglas generales del Código Procesal Civil y Comercial (Ley XII N.° 27), salvo que exista una norma especial para esas materias.")+
+"<h3>Cómo se realizan las notificaciones</h3>"+steps([["Personal","El interesado firma en el expediente, al pie de la diligencia. Se usa para resoluciones importantes (traslado de la demanda, sentencia, etc.)."],["Por cédula","Un funcionario entrega copia en el domicilio constituido o real. Si no encuentra a la persona, puede dejarla a otro adulto de la casa o fijarla en la puerta."],["Electrónica","Cada vez más usada: se realiza en el domicilio electrónico constituido, con firma digital."],["Por ministerio de ley","En el fuero laboral, muchas providencias quedan notificadas automáticamente los días martes y viernes (o el siguiente día hábil), sin necesidad de cédula."]])+
+"<h3>Caso especial: el destinatario está detenido</h3>"+lead("<b>Regla general:</b> si la persona a notificar está privada de su libertad, la notificación <b>no se practica en su domicilio</b>, sino <b>en la Secretaría del tribunal</b> o <b>en el lugar de detención</b>, según lo disponga el juez. Así se busca que el detenido conozca realmente las resoluciones que lo afectan.","<b>En el fuero penal, además,</b> cuando una persona es detenida las autoridades deben informar de inmediato al juez y al fiscal, y <b>avisar a un familiar o a la persona que el detenido indique</b> sobre su situación y el magistrado interviniente.")+
+"<h4>Penal</h4>"+C("p","Art. 143","Notificación al detenido (texto referido al “imputado”)","Si el imputado está detenido, es notificado en la Secretaría o en el lugar de su detención, según lo resuelva el Tribunal.","v")+
+C("p","Art. 193","Información y procedimiento","Los oficiales de la Policía Judicial deben informar inmediatamente al Juez de Instrucción y al Agente Fiscal de todos los delitos que llegan a su conocimiento. En todos los casos en que se detiene a una persona, máxime si lo es en carácter de incomunicada, las autoridades de prevención deben hacer saber tal situación y el nombre del magistrado interviniente, por cualquier medio fehaciente, al familiar o persona de su conocimiento que indica el detenido. El cumplimiento de la notificación debe constar en las actuaciones, en todos los casos.","v")+
+C("d","Art. 11","Derecho a recibir información","El derecho a recibir información sobre los derechos debe cumplirse a través de la notificación fehaciente por escrito y de manera verbal, con lenguaje claro y coloquial. Se notificará a la persona detenida sobre sus derechos, y sobre los medios que dispone para ejercerlos.")+
+"<h4>Laboral</h4><div class='lead'><p>El Código Procesal Laboral no contiene una norma específica para el destinatario detenido. Se aplican las reglas generales (por ministerio de ley, cédula en el domicilio constituido o real, o notificación electrónica) y, si hace falta, el juez puede disponer una modalidad alternativa para asegurar la comunicación efectiva.</p></div>"+
+C("l","Arts. 24 a 30","Régimen general de notificaciones","Art. 24: notificación por ministerio de ley. Art. 27: cédulas, domicilio real. Art. 28: cédulas, domicilio constituido. Art. 30: notificaciones electrónicas.","s")+
+note("<b>Recordatorio:</b> en violencia familiar, las medidas urgentes de protección pueden disponerse incluso antes de que se constituya formalmente el domicilio procesal, porque lo que está en juego es la seguridad de la víctima.")},
+{id:"rebeldia",ic:"⏳",label:"Contestación y Rebeldía",title:"Contestación y Rebeldía",key:["Contestar es responder a la demanda dentro del plazo","La rebeldía no significa perder el juicio automáticamente","El rebelde puede volver al proceso, pero este no retrocede"],
+body:()=>lead("<b>Contestar la demanda</b> es el paso en el que la persona demandada responde a lo que se le reclama: puede negar los hechos, oponer defensas o reconocer parte de lo que se dice. La ley fija un <b>plazo</b> para hacerlo; si se contesta después, hay <b>contestación fuera de término</b>.","Si la persona no contesta en plazo, no comparece o abandona el juicio, el juez puede <b>declararla en rebeldía</b>. Eso no implica perder el juicio de forma automática, pero el proceso sigue sin su participación activa y el juez puede tener por ciertos algunos hechos.","Si el domicilio del demandado es <b>desconocido</b> o no se lo encuentra tras intentar notificarlo (<b>notificación sin resultado</b>), la ley prevé la <b>notificación por edictos</b>; si aun así no comparece, se lo declara <b>rebelde</b> y se lo considera <b>ausente</b> del proceso.")+
+"<h3>Ruta típica en el fuero civil</h3>"+steps([["Traslado","Se notifica la demanda y se fija un plazo para contestar."],["Contestación","El demandado responde por escrito, dentro del plazo."],["Rebeldía","Sin respuesta ni comparecencia, se declara a pedido de la otra parte."],["Regreso","Si el rebelde comparece, es admitido como parte, sin retroceder el proceso."]])+
+"<h3>Civil y Comercial</h3><div class='lead'><p><b>Contestación:</b> el demandado debe contestar por escrito dentro del plazo fijado en el traslado de la demanda. Si no lo hace, se aplica el régimen de rebeldía.</p><p><b>Rebeldía:</b> se declara a pedido de la otra parte. El rebelde puede comparecer más adelante, pero el proceso no retrocede.</p></div>"+
+C("c","Art. 59","Rebeldía","La parte con domicilio conocido, debidamente citada, que no compareciere durante el plazo de la citación o abandonare el juicio después de haber comparecido, será declarada en rebeldía a pedido de la otra.")+
+C("c","Art. 62","Notificación de la sentencia al rebelde","La sentencia se hará saber al rebelde en la forma prescripta para la notificación de la providencia que declara la rebeldía.")+
+C("c","Art. 64","Comparecencia del rebelde","Si el rebelde compareciere en cualquier estado del juicio, será admitido como parte y, cesando el procedimiento en rebeldía, se entenderá con él la sustanciación, sin que esta pueda en ningún caso retrogradar.")+
+C("c","Art. 141","Notificación por cédula cuando no se halla a la persona","Cuando el notificador no encontrare a la persona a quien va a notificar, entregará el instrumento a otra persona de la casa, departamento u oficina, o al encargado del edificio, y procederá en la forma dispuesta en el artículo anterior. Si no pudiere entregarlo, lo fijará en la puerta de acceso correspondiente a esos lugares.")+
+"<h3>Laboral</h3><div class='lead'><p><b>Contestación:</b> el demandado debe contestar por escrito y ofrecer toda la prueba. El silencio o las respuestas evasivas pueden interpretarse como reconocimiento de los hechos.</p><p><b>Rebeldía:</b> si no contesta en plazo, se aplican las reglas de rebeldía del proceso laboral.</p></div>"+
+C("l","Art. 80","Contestación de la demanda y reconvención","b) reconocimiento o negativa expresa de cada hecho expuesto en la demanda. El silencio, las respuestas evasivas o la negativa general pueden estimarse como reconocimiento de la verdad de los hechos a que refieren; c) todas las excepciones y defensas formales y de fondo, ofreciendo y acompañando las pruebas pertinentes; d) ofrecimiento de toda la prueba, acompañando los instrumentos que obran en su poder…")+
+C("l","Art. 45","Rebeldía (remisión general)","No contestar el requerimiento para responder a la demanda lleva a que se declare la rebeldía de la parte.","s")+
+"<h3>Penal</h3><div class='lead'><p><b>Rebeldía:</b> se declara al imputado que, sin impedimento legítimo, no comparece a la citación judicial, se fuga del lugar de detención o se ausenta sin autorización del tribunal.</p><p><b>Notificación sin resultado / ausente:</b> si se ignora el domicilio, se notifica por edictos. Si aun así no comparece, se lo declara rebelde.</p></div>"+
+C("p","Art. 293","Casos en que procede la rebeldía","Debe ser declarado rebelde el imputado que sin grave y legítimo impedimento, no comparece a la citación judicial, o se fuga del establecimiento o lugar en que se halla detenido o se ausenta, sin licencia del Tribunal del lugar asignado para su residencia.")+
+C("p","Art. 156","Notificación por edictos","Cuando se ignora el lugar donde reside la persona que debe ser notificada, la resolución se hace saber por edictos que se publican durante cinco (5) días en el Boletín Oficial… así como el apercibimiento de que en caso de no hacerlo, debe ser declarado rebelde…")+
+C("p","Art. 163","Notificación (remisión)","Cuando no se encuentra a la persona a quien se debe correr vista, la resolución es notificada conforme a lo dispuesto en el Artículo 156 del presente Código. El término corre desde el día hábil siguiente.","v")+
+note("<b>Importante:</b> en el fuero penal la rebeldía tiene un régimen propio (art. 293 y siguientes) y no se aplican las reglas del fuero civil. Si el imputado está detenido y se fuga, también se lo declara rebelde.")}
+];
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const tabs=[{id:"inicio",ic:"🏠",label:"Inicio"},...P];
+$("#menu").innerHTML=tabs.map(t=>`<button role="tab" data-id="${t.id}" aria-selected="false">${t.ic} ${t.label}</button>`).join("");
+const home=`<section class="panel" id="p-inicio" hidden><h2><small>Empezá por acá</small>Mapa rápido de la guía</h2>
+${lead("Esta guía explica, sin tecnicismos, <b>cómo se prueba, cómo se notifica y qué pasa si no te presentás</b> en los distintos fueros de Misiones. Cada tema incluye un resumen y los artículos en los que se apoya; tocá una cita para leer el texto.")}
+<h3>Rol del juez en la prueba, por fuero</h3>
+<div class="chart"><div class="row"><span>Fuero</span><span>Iniciativa del juez</span><span>Idea central</span></div>${M.map(r=>`<div class="row"><b>${r[0]}</b><div class="meter" title="${r[1]} de 5">${[1,2,3,4,5].map(i=>`<i class="${i<=r[1]?"on":""}"></i>`).join("")}</div><div>${r[2]}<small>${r[3]}</small></div></div>`).join("")}</div>
+<p style="font-size:.8rem;color:var(--mut)">Lectura orientativa de la guía, no una clasificación legal.</p>
+<h3>Elegí un tema</h3><div class="cards">${P.map(p=>`<button class="card" data-go="${p.id}"><em>${p.ic}</em><b>${p.label}</b><span>${p.key[0]}</span></button>`).join("")}</div></section>`;
+$("#main").innerHTML=home+P.map(p=>{
+ const k=`<div class="keys">${p.key.map((t,i)=>`<div class="key"><i>${i+1}</i>${t}</div>`).join("")}</div>`;
+ const tools=`<div class="tools"><input type="search" placeholder="Filtrar artículos en este tema…" aria-label="Filtrar artículos"><button data-all="1">Expandir todo</button><button data-all="0">Contraer todo</button></div>`;
+ const b=p.body();const hasK=b.includes("@K@");
+ return `<section class="panel" id="p-${p.id}" hidden><h2><small>${p.ic} Resumen</small>${p.title}</h2>${hasK?"":k}${hasK?b.replace("@K@",k+tools):tools+b}</section>`}).join("");
+$("#nc").textContent=$$(".cita").length;
+function show(id){if(!tabs.some(t=>t.id==id))id="inicio";
+ $$(".panel").forEach(p=>p.hidden=p.id!="p-"+id);
+ $$("#menu button").forEach(b=>{const on=b.dataset.id==id;b.setAttribute("aria-selected",on);if(on)b.scrollIntoView({inline:"center",block:"nearest"})});
+ history.replaceState(null,"","#"+id)}
+$("#menu").addEventListener("click",e=>{const b=e.target.closest("button");if(b){show(b.dataset.id);scrollTo({top:$("nav").offsetTop,behavior:"smooth"})}});
+$("#main").addEventListener("click",e=>{const g=e.target.closest("[data-go]");if(g){show(g.dataset.go);scrollTo({top:$("nav").offsetTop})}
+ const a=e.target.closest("[data-all]");if(a)a.closest(".panel").querySelectorAll(".cita").forEach(d=>d.open=a.dataset.all=="1")});
+$("#main").addEventListener("input",e=>{if(e.target.type!="search")return;const q=e.target.value.toLowerCase();
+ e.target.closest(".panel").querySelectorAll(".cita").forEach(d=>d.style.display=d.textContent.toLowerCase().includes(q)?"":"none")});
+$("#theme").onclick=()=>{const r=document.documentElement,d=getComputedStyle(r).getPropertyValue("--bg").trim()=="#0b1220";r.dataset.theme=d?"light":"dark"};
+addEventListener("hashchange",()=>show(location.hash.slice(1)));
+show(location.hash.slice(1)||"inicio");
+</script>
+</body>
+</html>
