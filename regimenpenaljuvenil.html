@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Régimen Penal Juvenil</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:wght@600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F2F6FA;--sf:#fff;--ink:#0E2038;--mu:#4A5B73;--ln:#D5DEE9;--br:#0B7A75;--ob:#fff;--am:#E0A100;--gn:#23805A;--rd:#C8453B;color-scheme:light dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0C1624;--sf:#142236;--ink:#E9F0F8;--mu:#A5B4C8;--ln:#27394F;--br:#3CC4BA;--ob:#06242A;--gn:#5CD39B;--rd:#F0776C}}
+:root[data-theme=dark]{--bg:#0C1624;--sf:#142236;--ink:#E9F0F8;--mu:#A5B4C8;--ln:#27394F;--br:#3CC4BA;--ob:#06242A;--gn:#5CD39B;--rd:#F0776C}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 "Atkinson Hyperlegible",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","Atkinson Hyperlegible",system-ui,sans-serif;line-height:1.1;margin:0}
+.w{max-width:1040px;margin:0 auto;padding:0 20px}
+section{padding:48px 0}
+h1{font-size:clamp(2.4rem,7vw,4.4rem);font-weight:800;letter-spacing:-.03em;max-width:15ch}
+h2{font-size:clamp(1.6rem,4vw,2.3rem);font-weight:800;letter-spacing:-.02em;margin-bottom:10px}
+.lead{max-width:62ch;color:var(--mu);margin:16px 0 0}
+.card{background:var(--sf);border:1px solid var(--ln);border-radius:18px;padding:22px}
+:focus-visible{outline:3px solid var(--am);outline-offset:2px}
+.hero{padding:56px 0 24px}
+.age{margin-top:32px}.age h2{font-size:1.4rem}
+.bw{position:relative;margin-top:48px}
+.bar{display:flex;height:56px;border-radius:14px;overflow:hidden}
+.sg{display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.85rem;text-align:center;padding:0 6px;transform-origin:left;animation:g .9s cubic-bezier(.2,.7,.2,1) both}
+.s1{width:50%;background:repeating-linear-gradient(135deg,var(--ln) 0 8px,transparent 8px 16px);color:var(--mu)}
+.s2{width:33.333%;background:var(--br);color:var(--ob);animation-delay:.25s}
+.s3{width:16.667%;background:var(--ink);color:var(--bg);animation-delay:.5s}
+@keyframes g{from{transform:scaleX(0)}}
+.mk{position:absolute;top:-36px;bottom:0;width:0;border-left:3px solid var(--am);transition:left .25s;left:62.5%}
+.mk b{position:absolute;top:0;left:50%;transform:translateX(-50%);background:var(--am);color:#10223F;padding:2px 10px;border-radius:99px;font-size:.85rem;white-space:nowrap}
+input[type=range]{width:100%;margin:18px 0 6px;accent-color:var(--br)}
+#agt{margin:6px 0 0;min-height:4.8em;font-size:1.05rem}
+.goal{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.goal span{background:var(--sf);border:1px solid var(--ln);border-radius:99px;padding:6px 14px;font-size:.92rem}
+.lad{display:flex;gap:3px;height:64px;border-radius:14px;overflow:hidden}
+.lad>div{width:0;display:flex;align-items:center;justify-content:center;font:800 1.1rem "Bricolage Grotesque",sans-serif;color:var(--ob);transition:width 1.1s cubic-bezier(.2,.7,.2,1)}
+.l1{background:var(--gn)}.l2{background:var(--am);color:#10223F!important}.l3{background:var(--rd)}
+.in .l1{width:20%}.in .l2{width:46.667%}.in .l3{width:33.333%}
+.ax{display:flex;font-size:.85rem;color:var(--mu);margin-top:6px}
+.ax span:nth-child(1){width:20%}.ax span:nth-child(2){width:46.667%}.ax span:nth-child(3){width:33.333%}
+.g3{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:22px}
+.g3 .card{padding:18px;font-size:.98rem}.g3 h3{font-size:1.1rem;margin-bottom:6px}
+.ba{display:grid;gap:8px;grid-template-columns:1fr 1fr;padding:16px 0;border-bottom:1px solid var(--ln)}
+.ba strong{grid-column:1/-1;font:800 1.1rem "Bricolage Grotesque",sans-serif}
+.ba span{font-size:.98rem;color:var(--mu)}.ba span:last-child{color:var(--ink)}.ba em{font-style:normal;font-weight:700;display:block;font-size:.82rem;color:var(--br)}
+.tl{list-style:none;margin:22px 0 0;padding:0}
+.tl li{position:relative;padding:0 0 22px 28px;border-left:2px solid var(--ln);margin-left:6px}
+.tl li::before{content:"";position:absolute;left:-8px;top:4px;width:14px;height:14px;border-radius:50%;background:var(--br)}
+.tl b{display:block}
+.sb{margin:20px 0 14px}
+input[type=search]{width:100%;padding:15px 18px;border-radius:14px;border:1.5px solid var(--ln);background:var(--sf);color:var(--ink);font:inherit}
+.fl{margin:14px 0 0}.fl>p{margin:0 0 6px;font-size:.9rem;color:var(--mu)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1.5px solid var(--ln);background:var(--sf);color:var(--ink);padding:8px 14px;border-radius:99px;font:inherit;font-size:.95rem;cursor:pointer;transition:background .15s,color .15s}
+.chip[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+details{margin-top:14px}summary{cursor:pointer;font-weight:700}
+.bt{display:flex;justify-content:space-between;align-items:center;margin:18px 0 12px;font-size:.95rem;color:var(--mu)}
+.bt button,.em button{background:none;border:0;color:var(--br);font:inherit;font-weight:700;text-decoration:underline;cursor:pointer;padding:0}
+.gr{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(min(100%,310px),1fr));align-items:start}
+.cd{background:var(--sf);border:1px solid var(--ln);border-left:6px solid var(--c);border-radius:14px;padding:18px 18px 14px;cursor:pointer;animation:fi .3s both}
+@keyframes fi{from{opacity:0}}
+.tg{display:flex;align-items:center;gap:6px;font-size:.85rem;color:var(--mu)}.tg i{width:10px;height:10px;border-radius:50%;background:var(--c)}
+.cd h3{font-size:1.2rem;margin:6px 0}.cd h3 button{all:unset;cursor:pointer}
+.cd p{margin:0;font-size:.98rem}
+.dt{display:grid;grid-template-rows:0fr;transition:grid-template-rows .3s}.open .dt{grid-template-rows:1fr}
+.dt>div{overflow:hidden}.dt p{margin-top:10px;padding-top:10px;border-top:1px dashed var(--ln);color:var(--mu)}
+.dt small{display:block;margin-top:8px;font-size:.82rem}
+.mo{display:block;margin-top:8px;font-size:.85rem;font-weight:700;color:var(--br)}.open .mo{display:none}
+mark{background:color-mix(in srgb,var(--am) 45%,transparent);color:inherit;border-radius:3px;padding:0 2px}
+.em{padding:28px;text-align:center;color:var(--mu);grid-column:1/-1}
+footer{padding:36px 0 48px;color:var(--mu);font-size:.9rem;border-top:1px solid var(--ln)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style></head><body>
+<header class="hero"><div class="w">
+<h1>Régimen Penal Juvenil</h1>
+<p class="lead">La Ley 27.801 cambia cómo responde el Estado cuando un adolescente comete un delito. Aquí encuentras qué dice, a quién alcanza y qué efectos tiene, sin lenguaje técnico.</p>
+<div class="goal" aria-label="Objetivos de la ley"><span>Reinserción social</span><span>Educación y trabajo</span><span>Prevenir nuevos delitos</span><span>Proteger a víctimas y sociedad</span></div>
+<div class="card age"><h2>¿Qué pasa según la edad?</h2>
+<p class="lead" style="margin:6px 0 0">Mueve la barra. Lo que cuenta es la edad que tenía la persona al momento del hecho.</p>
+<div class="bw"><div class="bar"><div class="sg s1">Fuera del régimen juvenil</div><div class="sg s2">Régimen Penal Juvenil</div><div class="sg s3">18+</div></div><div class="mk" id="mk"><b id="mkv">15 años</b></div></div>
+<input id="ag" type="range" min="8" max="20" value="15" aria-label="Edad al momento del hecho">
+<p id="agt" aria-live="polite"></p></div>
+</div></header>
+
+<section><div class="w"><h2>La escala de respuestas</h2>
+<p class="lead">La respuesta depende de la pena que el Código Penal prevé para el delito. El encierro es siempre el último recurso.</p>
+<div class="rv" style="margin-top:24px"><div class="lad"><div class="l1">Sin encierro</div><div class="l2">Puede reemplazarse</div><div class="l3">Encierro</div></div>
+<div class="ax"><span>0 a 3 años</span><span>3 a 10 años</span><span>10 a 15 años (tope)</span></div></div>
+<div class="g3">
+<div class="card"><h3>Hasta 3 años de pena</h3>Corresponden medidas sin encierro, si se dan las condiciones de la condena condicional.</div>
+<div class="card"><h3>De 3 a 10 años</h3>El encierro puede reemplazarse por medidas sin encierro si no hubo muerte ni violencia grave, el joven no tiene condenas previas y hay informe pericial, acuerdo del fiscal y opinión de la víctima.</div>
+<div class="card"><h3>Más de 10 años</h3>Corresponde encierro en un centro especializado. Nunca puede superar 15 años y no existen penas perpetuas.</div></div></div></section>
+
+<section><div class="w"><h2>Antes y ahora</h2>
+<p class="lead">Lo más conocido es la baja de edad, pero cambian otras cosas importantes.</p>
+<div style="margin-top:14px">
+<div class="ba"><strong>Edad desde la que se responde</strong><span><em>Antes (ley 22.278)</em>16 años</span><span><em>Ahora</em>14 años</span></div>
+<div class="ba"><strong>Hechos leves (pena de hasta 2 años)</strong><span><em>Antes</em>No se castigaban (excusa absolutoria)</span><span><em>Ahora</em>Las fiscalías deben investigarlos</span></div>
+<div class="ba"><strong>Reducción de pena por tentativa</strong><span><em>Antes</em>Se aplicaba la escala reducida</span><span><em>Ahora</em>Eliminada: la pena va dentro de la escala penal, con los topes de esta ley</span></div>
+<div class="ba"><strong>Juicio en dos etapas (cesura)</strong><span><em>Antes</em>Primero la responsabilidad, luego un período de prueba y después la pena</span><span><em>Ahora</em>Eliminada</span></div>
+<div class="ba"><strong>Lugar de la víctima</strong><span><em>Antes</em>Rol marginal</span><span><em>Ahora</em>Sujeto con derechos: escucha, abogado gratuito y mediación</span></div></div>
+<ol class="tl"><li><b>9 de marzo de 2026</b>Se publica la ley en el Boletín Oficial.</li><li><b>4 de septiembre de 2026</b>El decreto 875/2026 la reglamenta para la justicia nacional y federal.</li><li><b>5 de septiembre de 2026</b>Entra en vigor, a los 180 días de su publicación.</li><li><b>Hasta 180 días después</b>Primera convocatoria pública para el registro de supervisores.</li></ol></div></section>
+
+<section><div class="w"><h2>Busca y filtra</h2>
+<p class="lead">Escribe una palabra, elige tu situación o un tema. Toca una tarjeta para ver el detalle.</p>
+<div class="sb"><input id="q" type="search" placeholder="Ej.: mediación, víctima, 15 años, privacidad…" aria-label="Buscar"></div>
+<div class="fl"><p>Mi situación</p><div class="chips" id="fa"></div></div>
+<div class="fl"><p>Tema</p><div class="chips" id="ft"></div></div>
+<details><summary>Filtros avanzados: por fuente</summary><div class="chips" id="fs" style="margin-top:10px"></div></details>
+<div class="bt"><span id="cnt" aria-live="polite"></span><button id="rs" type="button">Quitar filtros</button></div>
+<div class="gr" id="gr"></div></div></section>
+
+<footer><div class="w"><p><b>Fuentes:</b> presentación de Horacio J. Romero Villanueva; Moeykens (La Ley, 17/03/2026); Azcona y Peretti (La Ley, 12/03/2026); Cúneo Libarona (La Ley, 05/10/2026); Benavides (ADLA 2026-11).</p>
+<p>Resumen de divulgación basado únicamente en esos documentos. Las tarjetas de “Dudas y miradas” son opiniones de especialistas, no el texto de la ley. No reemplaza el texto legal ni el consejo de un abogado.</p></div></footer>
+
+<script>
+(()=>{
+const $=s=>document.querySelector(s),n=s=>s.normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
+const T={quien:["Quién y desde cuándo","#0B7A75"],cam:["Qué cambió","#B0447F"],der:["Derechos y garantías","#6A4CC9"],san:["Medidas y penas","#C8453B"],alt:["Salidas sin condena","#2E9E6B"],vic:["Víctimas y familias","#D99A00"],apl:["Cómo se aplica","#3B6FD4"],cri:["Dudas y miradas","#8A5A44"]};
+const A={"":"Todos",a:"Soy adolescente",v:"Soy víctima",f:"Soy familiar",j:"Trabajo en justicia"};
+const S={P:"Presentación de Romero Villanueva",M:"Moeykens",A:"Azcona y Peretti",C:"Cúneo Libarona",B:"Benavides"};
+const D=[
+["quien","afvj","PA","¿A quién se aplica?","A adolescentes desde los 14 años y hasta antes de cumplir 18, cuando se les atribuye un hecho que la ley penal considera delito.","La edad se cuenta al momento del hecho. La ley 27.801 reemplaza a la ley 22.278 de 1980, que empezaba a los 16 años."],
+["quien","afvj","A","¿Y si tiene menos de 14 años?","La ley no establece un régimen penal ni sanciones para quienes no cumplieron 14 años.","Azcona y Peretti entienden que fue una omisión expresa del legislador. Comentan que en lugares como Santa Fe o España el caso se deriva a organismos de protección, y advierten que así las víctimas pueden quedar sin respuesta."],
+["cam","afvj","AM","Qué cambió frente a la ley anterior","Bajó la edad de 16 a 14 años y se eliminaron la excusa absolutoria, la escala reducida de la tentativa y la cesura del juicio.","Los hechos leves antes no se castigaban; ahora las fiscalías deberán investigar, por ejemplo, hurtos, amenazas simples, daños o lesiones leves. Sin la escala de la tentativa, la pena se fija dentro de la escala del Código Penal, con los máximos de esta ley."],
+["der","afj","PAM","Derechos del adolescente desde el primer momento","Defensa especializada desde el primer acto, información clara, derecho a guardar silencio y a ser escuchado.","La defensa técnica no se puede renunciar. Jueces, fiscales y defensores deben explicarle cada paso en lenguaje claro. Si hay duda sobre su edad al momento del hecho, se presume que era menor. Toda restricción de derechos debe ser indispensable, proporcional y la menos dañina posible, y ante la duda se decide a favor del joven."],
+["der","avfj","PA","Privacidad e imagen","Está prohibido difundir nombre, fotos, videos, domicilio o escuela del adolescente, y el proceso es reservado.","Solo ven la causa las partes, la defensa, la víctima y organismos autorizados. La prohibición cede únicamente por órdenes fundadas de la justicia o la policía para ubicar a un adolescente evadido. También protege en conflictos digitales (contenidos íntimos sin consentimiento, ciberbullying), sea imputado o víctima. Incumplirla puede acarrear multa, decomiso y sanciones administrativas."],
+["der","ajf","PAM","Detención antes del juicio","Solo con resolución fundada que pruebe un riesgo concreto de fuga o de entorpecer la investigación, y se revisa periódicamente.","No puede ser automática. La ley fija controles periódicos para evitar detenciones largas sin condena firme."],
+["der","ajf","PA","Dónde se aloja si hay encierro","En lugares especiales, con personal capacitado, equipos técnicos y sin contacto con adultos detenidos.","Deben ofrecer educación, salud, capacitación laboral, deporte y cultura. Atención: las fuentes difieren. La presentación habla de una prohibición absoluta de cárceles de adultos, y Azcona y Peretti mencionan, para penas de más de 10 años, una sección separada de un establecimiento penitenciario de adultos."],
+["san","afvj","A","La escala según la gravedad","Hasta 3 años de pena: medidas sin encierro. De 3 a 10: encierro reemplazable. Más de 10: encierro especializado, máximo 15 años.","Se mira la pena que el Código Penal prevé para el delito. Para reemplazar el encierro (3 a 10 años) no debe haber muerte ni violencia grave, el joven no debe tener condenas ni procesos firmes en trámite, y se requiere dictamen pericial, conformidad del fiscal y escuchar a la víctima."],
+["san","afvj","PA","Medidas sin encierro","Amonestación, prohibiciones (contacto con la víctima, manejar, ir a ciertos lugares, salir del país), servicios comunitarios, tobillera y reparación del daño.","Salvo la amonestación y la reparación, duran como máximo 3 años. El juzgado controla el cumplimiento, con participación de la víctima si lo desea. Si se incumplen sin justificación, el juez debe pasar a una medida más severa."],
+["san","afvj","P","Medidas complementarias","Acompañan a la respuesta principal: supervisión, formación, deporte, tratamiento y prohibición de consumo.","Incluyen supervisión de equipos interdisciplinarios, programas educativos y de formación laboral, programas deportivos o culturales, tratamiento médico o psicológico y prohibición de consumir alcohol o drogas."],
+["san","afvj","PAC","Encierro: último recurso, sin perpetuas","Puede ser en el domicilio, en un instituto abierto o especializado, por el menor tiempo posible. Tope de 15 años.","Se prohíben la prisión y reclusión perpetuas, y el tope rige aunque se sumen varios hechos. Se puede pedir libertad condicional con dos tercios cumplidos. Si llega a los 18 con pena pendiente, el resto se cumple en un establecimiento de adultos, salvo que pida seguir en el espacio especializado hasta fin de ese año, si le sirve para un tratamiento o programa educativo o laboral."],
+["alt","avfj","PM","Criterio de oportunidad","En cualquier etapa, el fiscal puede dejar de perseguir el caso, total o parcialmente, si es de menor gravedad.","Condiciones: pena máxima de hasta 6 años; sin muerte, violencia grave ni delitos culposos con resultados muy graves; y sin condenas previas ni procesos avanzados. Se escucha a la víctima antes de decidir, y el caso puede derivarse a la justicia civil o a organismos de protección."],
+["alt","avfj","PAM","Mediación penal juvenil","Diálogo voluntario entre el adolescente y la víctima para resolver el conflicto sin seguir con el juicio.","Es confidencial, informal e imparcial. Pueden pedirla el fiscal, la víctima o el joven antes de la sentencia, en delitos con pena máxima de hasta 6 años. Sin consentimiento de la víctima no procede, y si el fiscal se opone, su oposición es vinculante. El juez debe aprobar el acuerdo; si se cumple, se extingue la acción penal y el proceso se cierra sin antecedentes punitivos."],
+["alt","afvj","AM","Suspensión del juicio a prueba (probation)","El proceso se detiene, sin condena, mientras el joven cumple reglas durante 1 a 3 años.","Procede en delitos con pena mínima de hasta 3 años, cuando la mediación no fue posible. Lo pide el joven y deben acordar el fiscal y la querella. Debe ofrecer reparar el daño en la medida de lo posible y entregar al Estado los bienes que se decomisarían. Se decide en audiencia oral, con la víctima escuchada."],
+["vic","vf","PACB","Derechos de la víctima","Puede ser escuchada, recibir asistencia psicológica y social, y tener abogado gratuito si no tiene recursos.","Se la escucha antes de decidir criterios de oportunidad, medidas sin encierro o libertades anticipadas, y se la informa del control de la condena. Si es menor de edad, interviene el abogado del niño."],
+["vic","v","B","Ayuda inmediata: CENAVID y línea 149","El Ministerio de Justicia ofrece un equipo de psicólogos y trabajadores sociales, con atención por el CENAVID y la línea gratuita 149, las 24 horas.","Orientan sobre el proceso, brindan contención y coordinan con la Defensoría General de la Nación el patrocinio gratuito. Esta reglamentación rige en el ámbito nacional y federal."],
+["vic","fv","PAM","Responsabilidad civil de los padres","Los progenitores responden civilmente por los daños causados por sus hijos, según el Código Civil y Comercial.","También puede reclamarse responsabilidad civil cuando el adolescente es declarado inimputable. Un autor advierte que no debe convertirse en presión económica para familias vulnerables."],
+["apl","ajf","ACB","El supervisor especializado","Profesional que acompaña al adolescente: se reúne con él cada semana e informa cada mes.","Tiene formación en psicología, trabajo social, pedagogía o áreas afines, y busca resolver problemas personales, familiares, de salud mental o de adicciones. No investiga el hecho: lo que el joven diga sobre el delito no puede usarse en su contra."],
+["apl","j","B","Quién la aplica: decreto 875/2026","Designó al Ministerio de Justicia como autoridad de aplicación en el ámbito nacional y federal.","Creó un Comité Interministerial (Justicia, Seguridad, Capital Humano y Salud) y una Mesa Federal voluntaria con las provincias. Cada provincia organiza su propio sistema. Los antecedentes juveniles van a una sección especial del Registro de Reincidencia, separada de la de adultos y con acceso solo autorizado."],
+["apl","j","A","Si se declara inimputable a un adolescente","No recibe sanciones, pero la investigación continúa.","Se requieren peritaje psicológico y psiquiátrico e informe ambiental. La investigación sigue para determinar el hecho y la posible intervención de otras personas."],
+["cri","j","MA","Fin de la cesura del juicio","Antes el juicio tenía dos etapas; ahora no. Se gana rapidez, pero se pierde un período de prueba.","Antes se decidía primero la responsabilidad y, tras un tiempo de trabajo con equipos técnicos, si correspondía pena. Azcona y Peretti señalan que ya no se puede declarar responsable sin castigar. Moeykens advirtió que la ley no prohibía anotar condenas juveniles en el registro; luego el decreto creó una sección separada."],
+["cri","j","M","Tutela juvenil y rol del juez","Un autor teme que el juez penal asuma tareas de protección social, propias de organismos administrativos.","La ley permite al juez ordenar medidas protectorias, incluso apartar al joven de su centro de vida. Moeykens lo ve en tensión con la ley 26.061 y con el sistema acusatorio."],
+["cri","j","AC","Presupuesto y plazos","Azcona y Peretti consideran insuficientes el presupuesto nacional y los 180 días.","La ley prevé casi 24 mil millones de pesos (unos U$S 17 millones). Advierten que la carga recaerá en las provincias y que, sin equipos técnicos, el sistema podría volverse solo punitivo. Cúneo Libarona también ve prioritario dotarlo de estructura y personal especializado."],
+["cri","j","M","Otros puntos que generan dudas","Edad límite a las 00:00 de los 18 años, reparación según los recursos y restricción de vínculos familiares.","El régimen termina a las 00:00 del día en que se cumplen 18, mientras el Código Civil lo hace al final de ese día. La reparación podría depender de la economía de la familia. Restringir vínculos para proteger a víctimas o testigos carece de criterios precisos. Además, la ley no nombra expresamente el interés superior del niño entre sus principios."],
+["cri","afvj","C","La mirada a favor","Para Cúneo Libarona, el sistema anterior no funcionaba y la ley termina con la impunidad ofreciendo además resocialización.","Fue ministro de Justicia y promotor de la reforma. Sostiene que el adolescente actual comprende lo que hace y que la ley equilibra los derechos de las víctimas con la educación del joven. Considera infundadas las críticas de ciertos grupos y cita un fallo de Lomas de Zamora (7/9/2026) que, a su juicio, cuestiona las condiciones de detención en Buenos Aires y no la ley."]];
+const st={q:"",au:"",tp:new Set(),sr:new Set()};
+function chips(id,o,f,sel){const b=$(id);Object.entries(o).forEach(([k,v])=>{const c=document.createElement("button");c.type="button";c.className="chip";c.dataset.k=k;c.textContent=Array.isArray(v)?v[0]:v;c.setAttribute("aria-pressed",sel&&sel(k)?"true":"false");c.onclick=()=>{f(k);render()};b.append(c)})}
+const tog=(s,k,id)=>{s.has(k)?s.delete(k):s.add(k);document.querySelectorAll(id+" .chip").forEach(c=>c.setAttribute("aria-pressed",s.has(c.dataset.k)))};
+chips("#fa",A,k=>{st.au=k;document.querySelectorAll("#fa .chip").forEach(c=>c.setAttribute("aria-pressed",c.dataset.k===k))},k=>k==="");
+chips("#ft",T,k=>tog(st.tp,k,"#ft"));chips("#fs",S,k=>tog(st.sr,k,"#fs"));
+function render(){
+const ws=n(st.q).split(/\s+/).filter(Boolean);
+const r=D.filter(d=>(!st.au||d[1].includes(st.au))&&(!st.tp.size||st.tp.has(d[0]))&&(!st.sr.size||[...st.sr].some(k=>d[2].includes(k)))&&ws.every(w=>n(d.slice(3).join(" ")).includes(w)));
+const re=ws.length?new RegExp("("+ws.map(w=>w.replace(/[.*+?^${}()|[\]\\]/g,"\\$&").replace(/[aeioun]/g,c=>({a:"[aáà]",e:"[eé]",i:"[ií]",o:"[oó]",u:"[uúü]",n:"[nñ]"}[c]))).join("|")+")","gi"):null;
+const h=t=>re?t.replace(re,"<mark>$1</mark>"):t;
+$("#cnt").textContent=r.length+" de "+D.length+" resultados";
+$("#gr").innerHTML=r.length?r.map(d=>`<article class="cd" style="--c:${T[d[0]][1]}"><span class="tg"><i></i>${T[d[0]][0]}</span><h3><button type="button" aria-expanded="false">${h(d[3])}</button></h3><p>${h(d[4])}</p><span class="mo">Ver detalle</span><div class="dt"><div><p>${h(d[5])}</p><small>Fuente: ${[...d[2]].map(k=>S[k]).join(", ")}</small></div></div></article>`).join(""):`<div class="em">No encontramos resultados con esos filtros. Prueba otra palabra o <button type="button" id="rs2">quita los filtros</button>.</div>`;
+const b=$("#rs2");if(b)b.onclick=reset}
+function reset(){st.q="";st.au="";st.tp.clear();st.sr.clear();$("#q").value="";document.querySelectorAll(".chip").forEach(c=>c.setAttribute("aria-pressed",c.closest("#fa")&&c.dataset.k===""?"true":"false"));render()}
+$("#q").oninput=e=>{st.q=e.target.value;render()};$("#rs").onclick=reset;
+$("#gr").onclick=e=>{const c=e.target.closest(".cd");if(!c)return;const o=c.classList.toggle("open");c.querySelector("button").setAttribute("aria-expanded",o)};
+const ag=$("#ag");function up(){const v=+ag.value;$("#mk").style.left=(v-8)/12*100+"%";$("#mkv").textContent=v+" años";$("#agt").textContent=v<14?"Menos de 14 años: la ley no establece sanciones ni un régimen penal propio para esta edad.":v<18?"Entre 14 y 17 años: se aplica el régimen penal juvenil, con derechos especiales, medidas educativas y respuestas graduales.":"18 años o más: ya no es adolescente para esta ley. Pero si el hecho ocurrió entre los 14 y los 17 años, igual se aplica el régimen juvenil."}
+ag.oninput=up;up();
+if("IntersectionObserver"in window){const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}}),{threshold:.3});document.querySelectorAll(".rv").forEach(e=>io.observe(e))}else document.querySelectorAll(".rv").forEach(e=>e.classList.add("in"));
+render();
+})();
+</script></body></html>
