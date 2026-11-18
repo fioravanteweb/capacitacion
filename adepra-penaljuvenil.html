@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ley 27.801 Régimen Penal Juvenil</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F5F6FA;--sf:#fff;--ink:#141B2D;--mu:#566078;--ln:#DCE0EC;--old:#2E4A9A;--new:#D92D4A;--ok:#10795D;--hd:'Bricolage Grotesque','Segoe UI',Arial,sans-serif;--bd:'Public Sans','Segoe UI',Arial,sans-serif;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0C111E;--sf:#151C2E;--ink:#EEF1F8;--mu:#9CA6BE;--ln:#26304A;--old:#8AA5FF;--new:#FF6F88;--ok:#3CCFA2;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0C111E;--sf:#151C2E;--ink:#EEF1F8;--mu:#9CA6BE;--ln:#26304A;--old:#8AA5FF;--new:#FF6F88;--ok:#3CCFA2;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.05rem/1.65 var(--bd)}
+.w{max-width:980px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--hd);line-height:1.08;margin:0;letter-spacing:-.02em}
+h2{font-size:clamp(1.7rem,4.5vw,2.5rem);font-weight:800}
+p{max-width:68ch}
+section{padding:64px 0 8px}
+.lead{color:var(--mu);margin:10px 0 28px}
+.hero{padding:48px 0 24px}
+.hero h1{font-size:clamp(2.3rem,8vw,4.8rem);font-weight:800}
+.hero h1 em{font-style:normal;color:var(--new);display:inline-block;min-width:1.2ch;transition:transform .4s}
+.hero h1 em.tick{transform:translateY(-6px) scale(1.08)}
+.by{color:var(--mu);font-size:.95rem;margin:18px 0 0}
+.rw{margin:34px 0 0}
+.rl{font:600 .92rem var(--bd);margin:0 0 6px;display:flex;gap:8px;align-items:center}
+.dot{width:12px;height:12px;border-radius:50%;display:inline-block}
+.tr{position:relative;height:38px;border-radius:99px;background:var(--ln);overflow:hidden;margin-bottom:16px}
+.fl{position:absolute;top:0;bottom:0;border-radius:99px;transition:left 1.5s cubic-bezier(.7,0,.2,1),width 1.5s cubic-bezier(.7,0,.2,1)}
+.fo{left:75%;width:25%;background:var(--old)}
+.fn{left:75%;width:25%;background:var(--new)}
+.go .fn{left:50%;width:50%}
+.ax{position:relative;height:22px;font-size:.82rem;color:var(--mu)}
+.ax span{position:absolute;transform:translateX(-50%)}
+.ax span:first-child{transform:none}.ax span:last-child{transform:translateX(-100%)}
+.cap{font-size:.9rem;color:var(--mu);margin-top:6px}
+.card{background:var(--sf);border:1px solid var(--ln);border-radius:18px;padding:24px}
+.sim{display:grid;gap:22px}
+.ctl label{font:600 .95rem var(--bd);display:block;margin-bottom:8px}
+.age{font:800 2.6rem var(--hd);color:var(--new)}
+input[type=range]{width:100%;accent-color:var(--new);height:30px}
+.seg{display:flex;flex-wrap:wrap;gap:8px}
+.seg button{font:500 .92rem var(--bd);padding:9px 14px;border-radius:99px;border:1.5px solid var(--ln);background:transparent;color:var(--ink);cursor:pointer;transition:all .2s}
+.seg button[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+:focus-visible{outline:3px solid var(--new);outline-offset:2px}
+.vd{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.v{border-radius:14px;padding:18px;border:2px solid var(--ln);transition:background .35s,border-color .35s}
+.v b{font:700 .88rem var(--bd);display:block;color:var(--mu)}
+.v strong{font:800 1.6rem var(--hd);display:block;margin:4px 0}
+.v.yes{border-color:var(--new);background:color-mix(in srgb,var(--new) 12%,transparent)}
+.v.yes strong{color:var(--new)}
+.v.no strong{color:var(--ok)}
+.v small{color:var(--mu);font-size:.88rem;display:block;line-height:1.4}
+.cmp{display:grid;grid-template-columns:1.1fr 1fr 1fr;border:1px solid var(--ln);border-radius:18px;overflow:hidden;background:var(--sf)}
+.cmp>div{padding:14px 16px;border-bottom:1px solid var(--ln);font-size:.96rem}
+.cmp .h{font:700 1rem var(--hd);color:#fff;border:0}
+.cmp .k{font-weight:600;background:color-mix(in srgb,var(--ln) 40%,transparent)}
+.cmp .h0{background:var(--ink);color:var(--bg)}.cmp .h1{background:var(--old)}.cmp .h2{background:var(--new)}
+:root[data-theme="dark"] .cmp .h1,:root[data-theme="dark"] .cmp .h2{color:#0C111E}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .cmp .h1,:root:not([data-theme="light"]) .cmp .h2{color:#0C111E}}
+.tl{position:relative;margin:0;padding:0 0 0 30px;list-style:none}
+.tl::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:3px;background:linear-gradient(var(--old),var(--new));border-radius:3px;transform-origin:top;transform:scaleY(0);transition:transform 1.6s ease}
+.tl.in::before{transform:scaleY(1)}
+.tl li{position:relative;padding:0 0 26px}
+.tl li::before{content:"";position:absolute;left:-30px;top:5px;width:19px;height:19px;border-radius:50%;background:var(--bg);border:4px solid var(--ink)}
+.tl li:last-child::before{border-color:var(--new)}
+.tl h3{font-size:1.2rem;font-weight:700}
+.tl p{margin:4px 0 0;color:var(--mu)}
+details{background:var(--sf);border:1px solid var(--ln);border-radius:16px;margin-bottom:12px;overflow:hidden}
+summary{cursor:pointer;padding:18px 20px;font:700 1.12rem var(--hd);display:flex;gap:12px;align-items:center;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";margin-left:auto;font-size:1.5rem;transition:transform .3s}
+details[open] summary::after{transform:rotate(45deg)}
+.ic{flex:none;width:36px;height:36px;border-radius:10px;background:var(--ink);color:var(--bg);display:grid;place-items:center;font-size:1rem}
+.db{padding:0 20px 20px;animation:op .35s ease}
+@keyframes op{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.mb{margin:12px 0}
+.mb .tr{height:26px;margin:4px 0 8px}
+.mb .fl{width:0;left:0;transition:width 1.2s ease}
+.in .mb .fl,.mb.in .fl{width:var(--w)}
+.cl{border-left:4px solid var(--new);padding:4px 0 4px 14px;color:var(--mu);margin:14px 0 0}
+.chip{display:inline-block;font:700 .85rem var(--bd);padding:4px 12px;border-radius:99px;background:var(--new);color:#fff;margin-right:6px}
+.pr{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.pr .card{padding:20px;transition:transform .25s}
+.pr .card:hover{transform:translateY(-4px)}
+.pr .e{font-size:1.9rem}
+.pr b{font:700 1.05rem var(--hd);display:block;margin:6px 0 2px}
+.pr span{color:var(--mu);font-size:.92rem;line-height:1.45;display:block}
+.fw{display:flex;flex-wrap:wrap;gap:10px;align-items:stretch}
+.fw>div{flex:1 1 170px;border-radius:16px;padding:16px;color:#fff;position:relative;font-size:.92rem;line-height:1.45}
+.fw b{font:800 1.1rem var(--hd);display:block;margin-bottom:4px}
+.fw>div:nth-child(1){background:#4B5675}.fw>div:nth-child(2){background:var(--old)}.fw>div:nth-child(3){background:var(--new)}.fw>div:nth-child(4){background:var(--ok)}
+:root[data-theme="dark"] .fw>div:nth-child(n+2){color:#0C111E}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .fw>div:nth-child(n+2){color:#0C111E}}
+.mx{display:grid;grid-template-columns:.6fr 1fr 1fr;gap:8px;margin-top:16px}
+.mx>div{padding:12px 14px;border-radius:12px;font-size:.92rem;line-height:1.45;background:var(--sf);border:1px solid var(--ln)}
+.mx .hd{font:700 .95rem var(--hd);background:none;border:0;padding:6px 4px}
+.mx .a{background:color-mix(in srgb,var(--old) 14%,transparent);border-color:transparent}
+.mx .b{background:color-mix(in srgb,var(--new) 14%,transparent);border-color:transparent}
+.mx .t{display:none;font-weight:700;margin-bottom:2px}
+@media(max-width:640px){.mx{grid-template-columns:1fr}.mx .t{display:block}.mx .x{display:none}}
+.ck label{display:flex;gap:12px;align-items:flex-start;padding:10px 4px;border-bottom:1px solid var(--ln);cursor:pointer}
+.ck input{accent-color:var(--ok);width:20px;height:20px;margin-top:2px;flex:none}
+.ck input:checked+span{color:var(--mu);text-decoration:line-through}
+footer{margin:64px 0 40px;color:var(--mu);font-size:.9rem;border-top:1px solid var(--ln);padding-top:20px}
+a{color:var(--new)}
+@media(max-width:640px){.vd{grid-template-columns:1fr}.cmp{grid-template-columns:1fr}.cmp .k{font-weight:700}.cmp .h0{display:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header class="hero"><div class="w">
+<p class="by">Análisis de ADePRA · Defensa Pública</p>
+<h1>Ley 27.801 comentario</h1>
+<p class="lead">La ley 27.801 reemplaza al decreto-ley 22.278. Esta guía junta tres fuentes: la mirada crítica de la Defensora Oficial María Raquel Ponzinibbio (ADePRA), una guía práctica de ST Abogados y la Recomendación 21 de la Defensoría de los Derechos de las Niñas, Niños y Adolescentes sobre cómo implementar la ley.</p>
+<div class="rw" id="hero" role="img" aria-label="Edad mínima de punibilidad: 16 años con la ley 22.278, 14 años con la ley 27.801">
+<p class="rl"><i class="dot" style="background:var(--old)"></i>Ley 22.278 · punible desde los 16</p>
+<div class="tr"><div class="fl fo"></div></div>
+<p class="rl"><i class="dot" style="background:var(--new)"></i>Ley 27.801 · punible desde los 14</p>
+<div class="tr"><div class="fl fn"></div></div>
+<div class="ax"><span style="left:0">10</span><span style="left:25%">12</span><span style="left:50%">14</span><span style="left:75%">16</span><span style="left:100%">18 años</span></div>
+</div>
+</div></header>
+
+<main class="w">
+<section id="sim">
+<h2>¿Se castigaría hoy a este adolescente?</h2>
+<p class="lead">Mové la edad y elegí la gravedad del delito para comparar ambas leyes.</p>
+<div class="card sim">
+<div class="ctl"><label for="ed">Edad al momento del hecho</label><div class="age"><span id="ev">15</span> años</div><input id="ed" type="range" min="10" max="18" value="15"></div>
+<div class="ctl"><label id="dl">Pena máxima del delito</label><div class="seg" role="group" aria-labelledby="dl" id="seg">
+<button aria-pressed="true" data-d="mas">Más de 2 años</button><button aria-pressed="false" data-d="hasta">Hasta 2 años</button><button aria-pressed="false" data-d="multa">Solo multa o inhabilitación</button></div></div>
+<div class="ctl"><label id="fl2">Fecha del hecho</label><div class="seg" role="group" aria-labelledby="fl2" id="segf"><button aria-pressed="true" data-f="des">Desde el 5 de septiembre de 2026</button><button aria-pressed="false" data-f="ant">Antes de esa fecha</button></div></div>
+<div class="vd"><div class="v" id="v1"></div><div class="v" id="v2"></div></div>
+<p class="cap" style="margin:0">Para hechos desde el 5 de septiembre de 2026 rige la ley 27.801; la 22.278 se muestra como comparación.</p>
+</div>
+</section>
+
+<section id="cmp">
+<h2>Antes y ahora, punto por punto</h2>
+<p class="lead">Así se comparan las dos leyes según el análisis de la autora.</p>
+<div class="cmp" id="tabla"></div>
+</section>
+
+<section id="alc">
+<h2>Qué cambia según la edad y la fecha del hecho</h2>
+<p class="lead">Según ST Abogados, no alcanza con saber cuántos años tiene hoy: importan la edad al hecho y la fecha en que ocurrió.</p>
+<div class="card mb"><p class="rl" style="margin:0">Publicada el 9 de marzo de 2026 · 180 días · vigente desde el 5 de septiembre de 2026</p><div class="tr" style="--w:100%"><div class="fl" style="background:var(--new)"></div></div><p class="cap" style="margin:0">Los hechos anteriores se analizan con el régimen anterior y la ley más benigna.</p></div>
+<div class="mx" id="mx"></div>
+<p class="cap">Quien hoy tiene 18 años o más, pero tenía 17 al hecho, sigue bajo el régimen que corresponde a ese hecho.</p>
+</section>
+
+<section id="ejes">
+<h2>Los cuatro ejes de la reforma</h2>
+<p class="lead">Abrí cada eje para ver qué cambia y cómo lo lee la autora.</p>
+<div id="ejesL"></div>
+</section>
+
+<section id="hist">
+<h2>Cómo llegamos hasta acá</h2>
+<p class="lead">De un sistema tutelar a los derechos del niño, y de ahí a una ley nacida de una emergencia.</p>
+<ol class="tl" id="tl"></ol>
+</section>
+
+<section id="fuero">
+<h2>¿Qué justicia interviene?</h2>
+<p class="lead">El lugar del hecho no decide por sí solo el fuero, y tampoco el domicilio de la familia.</p>
+<div class="pr" id="fu"></div>
+<h2 style="margin-top:44px;font-size:1.6rem">Garantías durante el proceso</h2>
+<div class="pr" id="ga" style="margin-top:16px"></div>
+</section>
+
+<section id="impl">
+<h2>¿Está lista la ley para aplicarse?</h2>
+<p class="lead">La Recomendación 21 de la Defensoría de los Derechos de las Niñas, Niños y Adolescentes (septiembre de 2026) pide condicionar la vigencia a un programa federal de implementación. Estas son sus alertas.</p>
+<div class="pr" id="al"></div>
+<h3 style="margin:40px 0 12px;font-size:1.3rem">El dinero previsto en el art. 51</h3>
+<div class="card mb"><p class="rl" style="margin:0">Total del primer ejercicio: $23.739 millones</p><div class="tr"><div class="fl" style="--w:13.2%;background:var(--old)"></div><div class="fl" style="left:13.2%;--w:86.8%;background:var(--new)"></div></div><p class="cap" style="margin:0"><b style="color:var(--old)">13%</b> Ministerio de Justicia ($3.132 millones) · <b style="color:var(--new)">87%</b> Defensoría General de la Nación ($20.607 millones). La Defensoría advierte que no se sabe qué gastos cubrirán esos fondos ni qué provincias accederán a ellos.</p></div>
+<h3 style="margin:40px 0 12px;font-size:1.3rem">Tope de prisión para adolescentes</h3>
+<div class="card mb" id="tp"></div>
+<p class="cap">Máximos para delitos graves o gravísimos según la nota 40 de la Recomendación. Chile fija 5 años para menores de 16. La Defensoría considera elevadas las penas de más de 10 años.</p>
+<h3 style="margin:40px 0 12px;font-size:1.3rem">Los estándares que pide, en cifras</h3>
+<div class="pr" id="nu"></div>
+<h3 style="margin:40px 0 12px;font-size:1.3rem">Sus seis recomendaciones</h3>
+<div id="rc"></div>
+<p class="cl">Dos alertas sobre la ejecución: con un tope de 15 años, quienes lleguen a la adultez (por ejemplo, a los 25) enfrentarán un escenario crítico, por eso se pide priorizar libertades anticipadas y arrestos domiciliarios. Además, el art. 19 exige más para la libertad condicional que a los adultos.</p>
+</section>
+
+<section id="fam">
+<h2>Si citan o detienen a un adolescente</h2>
+<p class="lead">Tildá lo que ya reunieron para la primera conversación con la defensa.</p>
+<div class="card"><div class="tr"><div class="fl" id="pg" style="left:0;width:0;background:var(--ok)"></div></div><p class="cap" id="pt" style="margin:-6px 0 8px"></p><div class="ck" id="ck"></div></div>
+<p class="cl">Una detención no equivale a condena. La decisión de declarar se prepara con el defensor, no se improvisa.</p>
+<h3 style="margin:36px 0 14px;font-size:1.3rem">Preguntas frecuentes</h3>
+<div id="fq"></div>
+</section>
+
+<section id="prop">
+<h2>Lo que propone la autora</h2>
+<p class="lead">En lugar de bajar la edad, apostar a una red de contención y no de represión.</p>
+<div class="pr" id="pr"></div>
+</section>
+
+<section id="res">
+<h2>Resumen gráfico</h2>
+<p class="lead">El recorrido completo en cuatro pasos.</p>
+<div class="fw">
+<div><b>Tutelar</b>Decreto-ley 22.278: el niño como objeto de protección. Punible desde los 16, con absolución de pena posible.</div>
+<div><b>Derechos</b>Convención (1989), jerarquía constitucional (1994), Maldonado y Observación General 24.</div>
+<div><b>Ley 27.801</b>Punible desde los 14, para todos los delitos, con escala de adultos y tope de 15 años.</div>
+<div><b>Alternativa</b>Escuela, clubes, salud, desjudicializar y penas no privativas de libertad.</div>
+</div>
+<p class="cl" style="margin-top:22px">Conclusión de la nota: la vida adolescente entra en un prisma punitivo y se perdió la chance de una ley acorde al derecho internacional de la infancia.</p>
+</section>
+
+<footer>
+<p>Fuente: <a href="https://adepra.org.ar/es-la-ley-27-801-un-regimen-penal-juvenil-que-tanto-esperabamos-y-deseabamos/" target="_blank" rel="noopener">ADePRA, nota de María Raquel Ponzinibbio</a> (integrante de la comisión directiva de ADEPRA y Defensora Oficial en el fuero penal juvenil de La Plata), 27 de octubre de 2026.</p>
+<p>Segunda fuente: <a href="https://stabogados.com.ar/defensa/defensa-penal-juvenil/" target="_blank" rel="noopener">Defensa penal juvenil, guía de ST Abogados (Selser, Testa &amp; Asoc.)</a>, versión del 15 de octubre de 2026, con normativa de CABA y PBA.</p>
+<p>Tercera fuente: Recomendación N.º 21 de la Defensoría de los Derechos de las Niñas, Niños y Adolescentes, septiembre de 2026 (documento PDF).</p>
+<p>La nota de ADePRA y la Recomendación 21 son posturas críticas; la guía de ST Abogados es información práctica. Ninguna reemplaza el texto de la ley ni constituye asesoramiento legal.</p>
+</footer>
+</main>
+
+<script>
+const $=s=>document.querySelector(s),H=(el,h)=>el.innerHTML=h;
+// Héroe: la edad baja de 16 a 14
+setTimeout(()=>{document.body.classList.add('go');const n=$('#n');[15,14].forEach((v,i)=>setTimeout(()=>{n.classList.add('tick');n.textContent=v;setTimeout(()=>n.classList.remove('tick'),300)},i*700+300))},600);
+// Simulador
+let d='mas',f='des';
+function sim(){
+ const a=+$('#ed').value;$('#ev').textContent=a;
+ const o=a>=16&&d==='mas',n=a>=14&&f==='des';
+ const put=(id,t,on,ok,no)=>{const e=$(id);e.className='v '+(on?'yes':'no');H(e,`<b>${t}</b><strong>${on?'Punible':'No punible'}</strong><small>${on?ok:no}</small>`)};
+ put('#v1','Ley 22.278',o,'Tiene 16 años o más y el delito supera los 2 años de pena máxima.',a<16?'Es menor de 16 años: no es punible.':'El delito no supera los 2 años de pena máxima.');
+ put('#v2','Ley 27.801',n,'Tenía 14 años o más al hecho y la ley alcanza a todos los delitos.',f==='ant'?'Hecho anterior al 5 de septiembre de 2026: la ampliación de punibilidad no es retroactiva y se compara la ley más benigna.':a<14?'Era menor de 14 años: queda fuera del ámbito sancionatorio, aunque se investiga el hecho y se protegen derechos. La autora advierte que las medidas de tutela podrían alcanzarlo.':'');
+}
+$('#ed').oninput=sim;
+$('#segf').onclick=e=>{const b=e.target.closest('button');if(!b)return;f=b.dataset.f;document.querySelectorAll('#segf button').forEach(x=>x.setAttribute('aria-pressed',x===b));sim()};
+$('#seg').onclick=e=>{const b=e.target.closest('button');if(!b)return;d=b.dataset.d;document.querySelectorAll('#seg button').forEach(x=>x.setAttribute('aria-pressed',x===b));sim()};
+sim();
+// Tabla comparativa
+const R=[["Edad desde la que se castiga","Desde los 16 años","Desde los 14 años"],
+["Delitos alcanzados","Solo los de pena máxima mayor a 2 años. Sin pena si era multa o inhabilitación.","Todos los delitos"],
+["Escala de pena","Pena reducida a la escala de la tentativa, o absolución de pena","Misma escala que los adultos, con tope de 15 años"],
+["Absolución de pena","Posible a los 18 años y tras al menos un año de tratamiento tutelar","Ya no está prevista"],
+["Mirada de fondo","Tutelar: el niño como objeto de protección","Punitiva y de riesgo social, con tutela juvenil a cargo del juez"]];
+H($('#tabla'),`<div class="h h0">Tema</div><div class="h h1">Ley 22.278</div><div class="h h2">Ley 27.801</div>`+R.map(r=>`<div class="k">${r[0]}</div><div>${r[1]}</div><div>${r[2]}</div>`).join(''));
+// Ejes
+const E=[["📏","1. Edad de punibilidad","Pasa de los 16 a los 14 años y de los delitos con pena mayor a 2 años a todos los delitos.",`<div class="mb"><div class="rl">Desde los 16 (ley 22.278)</div><div class="tr"><div class="fl" style="--w:50%;background:var(--old)"></div></div><div class="rl">Desde los 14 (ley 27.801)</div><div class="tr"><div class="fl" style="--w:100%;background:var(--new)"></div></div></div>`,"La Observación General 24 toma los 14 años como mínimo, pero pide no retroceder a los países que tenían una edad mayor. La autora ve una violación del principio de regresividad."],
+["⚖️","2. Misma escala penal que los adultos","Las escalas son las de adultos. Solo se limita el máximo: nunca puede superar los 15 años.",`<span class="chip">Tope: 15 años</span><span class="chip" style="background:var(--old)">Escala de adultos</span>`,"Según la autora, la neurociencia muestra que las áreas del cerebro que regulan emociones, evalúan riesgos y razonan moralmente maduran hacia el final de la adolescencia. Eso pide un reproche menor, como sostuvieron los fallos Maldonado y Catán."],
+["🚫","3. Desaparece la absolución de pena","Antes, tras un año de medidas socioeducativas, el juez podía no imponer pena. La ley 27.801 no prevé esa facultad.",`<span class="chip">Sin remisión</span>`,"Prevalece el fin retributivo de la pena aunque el adolescente se haya reintegrado. Además, la reiterancia puede llevar a la privación de libertad como primera opción."],
+["🧭","4. Un sistema tutelar basado en el riesgo","Vuelven ideas como la peligrosidad y el riesgo social. El juez puede ordenar medidas protectoras durante el proceso (art. 5 m y art. 9).",`<span class="chip">Tutela juvenil</span>`,"La autora teme que esos artículos sirvan para aplicar medidas de seguridad a menores de 14 años, aunque la ley sea para adolescentes de 14 a 18."]];
+H($('#ejesL'),E.map((e,i)=>`<details${i?'':' open'}><summary><span class="ic">${e[0]}</span>${e[1]}</summary><div class="db"><p style="margin-top:0">${e[2]}</p>${e[3]}<p class="cl">${e[4]}</p></div></details>`).join(''));
+// Línea de tiempo
+const T=[["Decreto-ley 22.278","Una de las pocas leyes que sobrevivieron del gobierno militar. Responde al viejo sistema tutelar."],
+["1989","Entra en vigor la Convención sobre los Derechos del Niño."],
+["1994","La Convención gana jerarquía constitucional (art. 75 inc. 22). Niñas, niños y adolescentes pasan a ser sujetos de derechos."],
+["Años de transición","El Comité del Niño y la Corte IDH (caso Mendoza c/ Argentina) piden una nueva ley. La Corte Suprema, en el fallo Maldonado, alinea el art. 4 con la Convención."],
+["9 de marzo y 5 de septiembre de 2026","La ley 27.801 se publica el 9 de marzo y rige desde el 5 de septiembre, cuando deja de regir el decreto-ley 22.278. Según la autora, nació de una emergencia de seguridad y no de un debate."],["Septiembre de 2026","En vísperas de la vigencia, la Defensoría de los Derechos de las Niñas, Niños y Adolescentes emite la Recomendación 21 y pide un programa federal de implementación."]];
+H($('#tl'),T.map(t=>`<li><h3>${t[0]}</h3><p>${t[1]}</p></li>`).join(''));
+// Propuestas
+const P=[["🏫","Inclusión escolar","Que los chicos estén en la escuela."],["⚽","Clubes y juego","Espacios deportivos y lúdicos."],["🩺","Salud mental","Instituciones y políticas de salud."],["🤝","Red de contención","Contención en los barrios, también frente a la droga."],["🧩","Desjudicializar","Resolver sin ir a la vía penal."],["🌱","Penas alternativas","En casos graves, penas no privativas de libertad."]];
+H($('#pr'),P.map(p=>`<div class="card"><div class="e">${p[0]}</div><b>${p[1]}</b><span>${p[2]}</span></div>`).join(''));
+// Edad × fecha
+const M=[["Menos de 14 años","No punible: la ley 22.278 excluía a menores de 16.","Fuera del ámbito sancionatorio. Se investiga el hecho y se protegen derechos, sin pena."],["14 o 15 años","No punible por la ley 22.278. La ampliación posterior no genera responsabilidad retroactiva.","Dentro de la ley especial. No hay condena automática: se revisan prueba y garantías."],["16 o 17 años","Rige el régimen anterior, que excluía ciertos delitos según acción y pena. Se compara la ley más benigna.","Dentro de la ley especial. Se revisan atribución, prueba, garantías y respuesta posible."]];
+H($('#mx'),`<div class="hd x"></div><div class="hd x">Hecho antes del 5/9/2026</div><div class="hd x">Hecho desde el 5/9/2026</div>`+M.map(m=>`<div class="hd">${m[0]}</div><div class="a"><b class="t">Antes del 5/9/2026</b>${m[1]}</div><div class="b"><b class="t">Desde el 5/9/2026</b>${m[2]}</div>`).join(''));
+// Fuero y garantías
+const cd=a=>a.map(p=>`<div class="card"><div class="e">${p[0]}</div><b>${p[1]}</b><span>${p[2]}</span></div>`).join('');
+H($('#fu'),cd([["🗺️","Provincia de Buenos Aires","Ley 13.634: Fuero de Responsabilidad Penal Juvenil, con fiscalías y defensorías especializadas y Juzgado de Garantías del Joven."],["🏙️","CABA (fuero local)","Ley 2451 y resoluciones 106 y 107/FG/26 del Ministerio Público local, con la UFEPJ como experiencia piloto."],["⚖️","Nacional y federal","Capítulo X de la ley 27.801. El Ministerio de Justicia es la autoridad de aplicación (Decreto 875/2026)."]]));
+H($('#ga'),cd([["🛡️","Defensa técnica","Asistencia eficaz desde el inicio y datos en lenguaje comprensible. La familia no reemplaza al defensor."],["👪","Familia y reserva","Se avisa a padres o responsables e interviene la asesoría tutelar. No se debe publicar nada que identifique al adolescente."],["🔓","Libertad con fundamento","Toda restricción exige motivación, riesgos procesales constatados, necesidad y proporcionalidad (art. 5). No hay salida automática."],["🏠","Alojamiento especializado","Si el encierro es indispensable, sin convivir con adultos y con salud y educación garantizadas (arts. 27 a 31)."]]));
+// Lista para la familia
+const C=["Autoridad interviniente, número de expediente o IPP y defensor asignado","Citación, acta o resolución, con fecha y próximo acto","Fecha del hecho y documento que acredite la edad que tenía entonces","Si está privado de libertad: lugar actual, hora inicial y traslados","Adulto responsable localizable y red de cuidado real","Necesidades urgentes de salud y medicación prescripta","Constancias de domicilio, estudio y, si corresponde, trabajo lícito","Documentos originales y datos de prueba que deban preservarse"];
+H($('#ck'),C.map(c=>`<label><input type="checkbox"><span>${c}</span></label>`).join(''));
+$('#ck').onchange=()=>{const n=document.querySelectorAll('#ck input:checked').length;$('#pg').style.width=n/C.length*100+'%';$('#pt').textContent=n+' de '+C.length+' listos'};$('#ck').onchange();
+const Q=[["¿Un adolescente de 15 años puede ser sometido a proceso?","Para hechos desde el 5 de septiembre de 2026, puede quedar dentro de la ley 27.801 (14 a 17 años al hecho), pero eso no es responsabilidad ni condena automática. Si el hecho fue anterior, la ampliación no se aplica retroactivamente."],["Hoy tiene 18 años, pero el hecho fue a los 17. ¿Qué cuenta?","Cuenta la edad al momento del hecho. Cumplir 18 después no lo convierte en un delito cometido como adulto."],["¿Tiene que declarar apenas lo llevan a una dependencia?","No. Tiene derecho a conocer la imputación, a la asistencia de su defensa y a no declarar contra sí mismo. Eso no habilita a ignorar una citación."],["No podemos pagar un abogado particular. ¿Qué hacemos?","El derecho de defensa no depende de contratar uno particular: se pide la intervención de la defensa pública del fuero que corresponda."]];
+H($('#fq'),Q.map(q=>`<details><summary>${q[0]}</summary><div class="db"><p style="margin-top:0">${q[1]}</p></div></details>`).join(''));
+// Recomendación 21
+H($('#al'),cd([["📈","Más adolescentes en el sistema","La ley amplía el universo de punibles y agrava problemas que ya existían con la ley anterior."],["🛏️","Sobrepoblación existente","Hay jurisdicciones con sobrepoblación crónica y condiciones inadecuadas, comprobadas en procesos judiciales."],["🧩","Un mapa desparejo","Solo la provincia de Buenos Aires tiene una ley especial de ejecución penal juvenil."],["🧭","Sin estrategia federal","A una semana de la vigencia, la Defensoría ve ausente un plan nacional coordinado y incipiente el provincial."]]));
+const TP=[["Argentina (ley 27.801)",15,"15 años",1],["Alemania",10,"10 años"],["Chile",10,"hasta 10 años"],["Uruguay",10,"10 años"],["España",8,"8 años"],["Venezuela",8,"8 años"],["Bolivia",6,"6 años"],["Canadá",3,"2 a 3 años"],["Reino Unido",2,"4 meses a 2 años"]];
+H($('#tp'),TP.map(t=>`<p class="rl">${t[0]} · ${t[2]}</p><div class="tr"><div class="fl" style="--w:${t[1]/15*100}%;background:var(${t[3]?'--new':'--old'})"></div></div>`).join(''));
+H($('#nu'),[["20","plazas como máximo por dispositivo de detención"],["6 m²","por persona en los dormitorios, sin contar el sanitario"],["4","personas como máximo por habitación"],["1 cada 4","personas alojadas para los baños, y para cuidadores u operadores, incluso de noche"],["20 h y 25 h","de clase por semana en primaria y en secundaria"],["24 h × 365","funcionamiento de los Centros de Admisión y Derivación"]].map(n=>`<div class="card"><div class="e" style="font:800 1.9rem var(--hd);color:var(--new)">${n[0]}</div><span>${n[1]}</span></div>`).join(''));
+const RC=[["Especialidad desde la aprehensión hasta el fin de la pena","Los dispositivos de detención deben depender de las carteras de niñez. Ningún adolescente puede alojarse con adultos, ni siquiera en módulos separados dentro de una cárcel de adultos. Al cumplir 18 debe continuar el abordaje especializado; la Defensoría dice que el art. 30 lo vulnera."],["Excepcionalidad de la judicialización y del encierro","Según la Defensoría, los arts. 11, 41, 42 y 43 convierten la privación de libertad en regla y las alternativas en excepción, con condiciones más duras que las de los adultos."],["Los jueces penales no deben tomar medidas de protección ni de salud mental","Los arts. 5 inc. m y 9 (tutela y custodia) y los arts. 35 y 36 (consumo problemático) chocan con las leyes 26.061 y 26.657 y dejan a los organismos de protección como meros auxiliares."],["Nada de comisarías","El ingreso debe ser por Centros de Admisión y Derivación: con personal de salud propio, equipos interdisciplinarios, coordinación con protección de la niñez y atención las 24 horas."],["Derechos y resocialización en el encierro","Proyecto institucional, protocolos escritos, requisas sin contacto táctil, régimen disciplinario sin aislamiento, personal especializado, salud, educación, contacto con la familia y dispositivos cerca de su comunidad."],["Plan individual de ejecución de la pena","Se diseña con el adolescente junto al organismo de niñez y lo supervisa un juzgado especializado, con revisiones periódicas del encierro."]];
+H($('#rc'),RC.map((r,i)=>`<details><summary><span class="ic">${i+1}</span>${r[0]}</summary><div class="db"><p style="margin-top:0">${r[1]}</p></div></details>`).join(''));
+// Barras y línea al entrar en pantalla
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.3});
+document.querySelectorAll('#tl,details,.mb').forEach(x=>io.observe(x));
+document.querySelectorAll('details').forEach(x=>x.addEventListener('toggle',()=>{const m=x.querySelector('.mb');if(m&&x.open)requestAnimationFrame(()=>m.classList.add('in'))}));
+</script>
+</body>
+</html>
